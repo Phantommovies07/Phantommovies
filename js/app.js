@@ -35,3 +35,41 @@ window.addEventListener('load', function() {
     loadMoviesFromJSON(); // Load from JSON instead of Firebase
     renderPage();
 });
+// Track movie views
+function trackMovieView(movieTitle, movieId) {
+    gtag('event', 'movie_view', {
+        'movie_title': movieTitle,
+        'movie_id': movieId,
+        'content_type': 'movie'
+    });
+}
+
+// Track search
+function trackSearch(searchTerm) {
+    gtag('event', 'search', {
+        'search_term': searchTerm
+    });
+}
+
+// Track movie play
+function trackMoviePlay(movieTitle) {
+    gtag('event', 'movie_play', {
+        'movie_title': movieTitle,
+        'engagement_type': 'play'
+    });
+}
+
+// Track genre filter
+function trackGenreFilter(genre) {
+    gtag('event', 'genre_filter', {
+        'genre': genre
+    });
+}
+
+// Add these to your existing functions
+// Example in openPlayer():
+function openPlayer(movie) {
+    // ... existing code ...
+    trackMovieView(movie.title, movie.id);
+    // ... rest of code ...
+}
