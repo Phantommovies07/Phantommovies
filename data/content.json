@@ -20,33 +20,12 @@
       "ratingSum": 0,
       "createdAt": "2026-07-08T11:21:17.580Z",
       "updatedAt": "2026-07-08T11:21:17.580Z"
-    },
-    {
-      "id": "001",
-      "title": "Neon Void",
-      "poster": "https://example.com/poster.jpg",
-      "banner": "https://example.com/banner.jpg",
-      "description": "A cyberpunk odyssey through the digital underworld where reality itself is questioned.",
-      "genre": "Sci-Fi",
-      "year": 2025,
-      "rating": 8.7,
-      "duration": "2h 04m",
-      "streamLink": "https://streaming-link.com/movie",
-      "trailerLink": "https://youtube.com/watch?v=...",
-      "badge": "4K",
-      "featured": true,
-      "active": true,
-      "views": 9600,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "createdAt": "2025-01-15T10:30:00Z",
-      "updatedAt": "2025-01-15T10:30:00Z"
     }
   ],
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 2,
-    "lastUpdated": "2026-07-09T16:38:50.158Z"
+    "totalMovies": 1,
+    "lastUpdated": "2026-07-09T16:38:54.490Z"
   }
 }
