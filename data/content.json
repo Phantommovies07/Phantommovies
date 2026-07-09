@@ -1,0 +1,73 @@
+{
+  "movies": [
+    {
+      "id": "1783523191395",
+      "title": "abc",
+      "genre": "Action",
+      "year": 1923,
+      "duration": "3h 2m",
+      "rating": 8.5,
+      "badge": "HOT",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
+      "banner": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
+      "streamLink": "https://gdshare.top/download/246982d46ee44b0b97195c6c7835dde0/",
+      "trailerLink": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
+      "description": "best movie",
+      "featured": true,
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-07-08T15:06:31.395Z",
+      "updatedAt": "2026-07-08T15:06:31.395Z"
+    },
+    {
+      "id": "1783509677580",
+      "title": "Blast",
+      "genre": "Action",
+      "year": 2026,
+      "duration": "3h 2m",
+      "rating": 7.4,
+      "badge": "NEW",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
+      "banner": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
+      "streamLink": "https://gdshare.top/download/246982d46ee44b0b97195c6c7835dde0/",
+      "trailerLink": "",
+      "description": "Downlaod At Your Choice 😁❤",
+      "featured": false,
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-07-08T11:21:17.580Z",
+      "updatedAt": "2026-07-08T11:21:17.580Z"
+    },
+    {
+      "id": "001",
+      "title": "Neon Void",
+      "poster": "https://example.com/poster.jpg",
+      "banner": "https://example.com/banner.jpg",
+      "description": "A cyberpunk odyssey through the digital underworld where reality itself is questioned.",
+      "genre": "Sci-Fi",
+      "year": 2025,
+      "rating": 8.7,
+      "duration": "2h 04m",
+      "streamLink": "https://streaming-link.com/movie",
+      "trailerLink": "https://youtube.com/watch?v=...",
+      "badge": "4K",
+      "featured": true,
+      "active": true,
+      "views": 9600,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2025-01-15T10:30:00Z",
+      "updatedAt": "2025-01-15T10:30:00Z"
+    }
+  ],
+  "settings": {
+    "siteName": "Phantom Movies",
+    "siteDescription": "Stream unlimited movies & shows",
+    "totalMovies": 3,
+    "lastUpdated": "2026-07-08T15:06:31.395Z"
+  }
+}

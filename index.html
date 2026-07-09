@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Phantom Movies - Stream Unlimited Movies & Shows</title>
+<meta name="description" content="Stream thousands of blockbusters, indie gems, and exclusive originals in stunning 4K quality.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XND5TTDN7Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XND5TTDN7Z', {
+    'send_page_view': true
+  });
+</script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"/>
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-logo">PHANTOM<span>MOVIES</span></div>
+  <div class="loading-bar"><div class="loading-fill"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Navigation -->
+<nav id="mainNav">
+ <div class="logo" onclick="scrollTo(0,0)">
+   <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
+ </div>
+ <ul class="nav-links">
+   <li><a onclick="scrollTo(0,800)">Browse</a></li>
+   <li><a onclick="scrollTo(0,1400)">Trending</a></li>
+   <li><a onclick="scrollTo(0,2000)">Categories</a></li>
+ </ul>
+ <div class="nav-right">
+   <div class="search-wrap">
+     <span class="search-icon-s">🔍</span>
+     <input class="search-input" id="searchInput" type="text" placeholder="Search movies..."/>
+     <div class="search-results" id="searchResults"></div>
+   </div>
+ </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+ <div class="hero-bg"></div>
+ <div class="hero-content">
+   <div class="hero-tag">Now Streaming</div>
+   <h1>WATCH<br>WITHOUT<br><em>limits</em></h1>
+   <p class="hero-desc">Stream thousands of blockbusters, indie gems, and exclusive originals in stunning quality — anytime, anywhere.</p>
+   <div class="hero-actions">
+     <button class="btn-primary" onclick="scrollTo(0,800)">
+       <span class="play-ico"></span> Start Watching
+     </button>
+   </div>
+   <div class="hero-stats">
+     <div class="stat">
+       <div class="stat-num" id="heroCount">0+</div>
+       <div class="stat-label">Movies & Shows</div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<!-- Featured Movie -->
+<div class="featured fade-in" id="featuredSection">
+ <div class="feat-poster" id="featPosterEl"></div>
+ <div class="feat-info">
+   <div class="feat-tag">⭐ Featured</div>
+   <div class="feat-title" id="featTitle">LOADING...</div>
+   <p class="feat-desc" id="featDesc">Loading...</p>
+   <div class="feat-actions">
+     <button class="btn-primary" onclick="watchFeatured()">
+       <span class="play-ico"></span> Watch Now
+     </button>
+   </div>
+ </div>
+</div>
+
+<!-- Movies Section -->
+<section id="movies">
+ <div class="sec-header">
+   <div class="sec-title">POPULAR <span>NOW</span></div>
+ </div>
+ 
+ <!-- Genre Filter -->
+ <div class="genre-row" id="genreRow">
+   <div class="genre-pill active" data-genre="All">All</div>
+   <div class="genre-pill" data-genre="Action">Action</div>
+   <div class="genre-pill" data-genre="Sci-Fi">Sci-Fi</div>
+   <div class="genre-pill" data-genre="Horror">Horror</div>
+   <div class="genre-pill" data-genre="Drama">Drama</div>
+   <div class="genre-pill" data-genre="Comedy">Comedy</div>
+   <div class="genre-pill" data-genre="Thriller">Thriller</div>
+   <div class="genre-pill" data-genre="Animation">Animation</div>
+   <div class="genre-pill" data-genre="Romance">Romance</div>
+ </div>
+ 
+ <!-- Movie Grid -->
+ <div class="movie-grid fade-in" id="movieGrid">
+   <div class="empty-state">🎬 Loading movies...</div>
+ </div>
+</section>
+
+<!-- Footer -->
+<footer>
+ <div class="footer-grid">
+   <div class="footer-brand">
+     <div class="logo">
+       <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
+     </div>
+     <p>Your portal to cinematic worlds. Stream thousands of movies in stunning 4K quality.</p>
+   </div>
+   <div class="footer-col">
+     <h4>Browse</h4>
+     <ul>
+       <li><a onclick="scrollTo(0,800)">Popular</a></li>
+       <li><a onclick="scrollTo(0,1400)">Trending</a></li>
+       <li><a onclick="scrollTo(0,2000)">Categories</a></li>
+     </ul>
+   </div>
+   <div class="footer-col">
+     <h4>Company</h4>
+     <ul>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Blog</a></li>
+       <li><a href="admin.html">Admin Panel</a></li>
+     </ul>
+   </div>
+   <div class="footer-col">
+     <h4>Legal</h4>
+     <ul>
+       <li><a href="#">Privacy</a></li>
+       <li><a href="#">Terms</a></li>
+       <li><a href="#">Contact</a></li>
+     </ul>
+   </div>
+ </div>
+ <div class="footer-bottom">
+   <p class="footer-copy">© 2025 <span>Phantom Movies</span>. All rights reserved.</p>
+ </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
