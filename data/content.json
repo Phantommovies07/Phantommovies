@@ -103,33 +103,12 @@
       "ratingSum": 0,
       "createdAt": "2026-07-22T12:41:13.009Z",
       "updatedAt": "2026-07-22T12:41:13.037Z"
-    },
-    {
-      "id": "1783509677580",
-      "title": "Blast",
-      "genre": "Action",
-      "year": 2026,
-      "duration": "3h 2m",
-      "rating": 7.4,
-      "badge": "NEW",
-      "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
-      "banner": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
-      "streamLink": "https://gdshare.top/download/246982d46ee44b0b97195c6c7835dde0/",
-      "trailerLink": "",
-      "description": "Downlaod At Your Choice 😁❤",
-      "featured": false,
-      "active": true,
-      "views": 0,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "createdAt": "2026-07-08T11:21:17.580Z",
-      "updatedAt": "2026-07-08T11:21:17.580Z"
     }
   ],
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 3,
-    "lastUpdated": "2026-08-02T13:52:56.024Z"
+    "totalMovies": 2,
+    "lastUpdated": "2026-08-02T13:53:02.624Z"
   }
 }
