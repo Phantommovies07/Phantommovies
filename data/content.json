@@ -68,6 +68,11 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 3,
-    "lastUpdated": "2026-07-08T15:06:31.395Z"
+    "lastUpdated": "2026-08-04T18:12:42.940Z",
+    "siteBaseUrl": "",
+    "request": {
+      "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
+      "buttonText": "📩 Request on Telegram"
+    }
   }
 }
