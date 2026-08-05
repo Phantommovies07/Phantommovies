@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /js/github-api.js
+Allow: /
+
+Sitemap: /sitemap.xml

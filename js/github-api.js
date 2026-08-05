@@ -14,17 +14,21 @@ class GitHubAPI {
         this.repo = repo;
         this.token = token;
         
-        // Save to localStorage
+        // Save only non-sensitive fields persistently.
+        // Token is session-only for better security.
         localStorage.setItem('gh_username', username);
         localStorage.setItem('gh_repo', repo);
-        localStorage.setItem('gh_token', token);
+        sessionStorage.setItem('gh_token', token);
+        localStorage.removeItem('gh_token');
     }
 
     // Load credentials from localStorage
     loadCredentials() {
         this.username = localStorage.getItem('gh_username') || '';
         this.repo = localStorage.getItem('gh_repo') || '';
-        this.token = localStorage.getItem('gh_token') || '';
+        this.token = sessionStorage.getItem('gh_token') || '';
+        // Remove legacy persistent token if an older version saved it.
+        localStorage.removeItem('gh_token');
         
         return !!(this.username && this.repo && this.token);
     }
@@ -34,6 +38,7 @@ class GitHubAPI {
         localStorage.removeItem('gh_username');
         localStorage.removeItem('gh_repo');
         localStorage.removeItem('gh_token');
+        sessionStorage.removeItem('gh_token');
         this.username = '';
         this.repo = '';
         this.token = '';
