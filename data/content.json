@@ -68,7 +68,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 3,
-    "lastUpdated": "2026-08-05T16:40:23.949Z",
+    "lastUpdated": "2026-08-05T16:41:56.088Z",
     "ads": {
       "enabled": true,
       "clickAd": {
@@ -82,11 +82,11 @@
       "homeGrid": "",
       "moviePlayerTop": "",
       "movieDownloads": "",
-      "seriesPlayerTop": "",
+      "seriesPlayerTop": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30704156.effectivecpmnetwork.com/f2d9c93f47619b211c9be8f0dbc1ad5e/invoke.js\"></script>\n<div id=\"container-f2d9c93f47619b211c9be8f0dbc1ad5e\"></div>\n",
       "seriesDownloads": "",
       "floatingBottom": "",
       "popup": "<script src=\"https://pl30704155.effectivecpmnetwork.com/a8/52/1c/a8521c6b2bdb2fdef07e5e6ab7dda395.js\"></script>\n",
-      "updatedAt": "2026-08-05T16:40:23.274Z"
+      "updatedAt": "2026-08-05T16:41:55.179Z"
     }
   }
 }
