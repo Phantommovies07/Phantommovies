@@ -1603,3 +1603,149 @@ body.light-theme .slide-overlay span { background: rgba(255,255,255,.78); }
             var(--black);
     }
 }
+
+/* ─── REVERT MOBILE HERO BACKGROUND SYNC ───
+   User preference: no movie image as hero background. Keep clean premium dark space. */
+@media (max-width: 768px) {
+    .hero,
+    body.light-theme .hero {
+        background: var(--black) !important;
+    }
+
+    .hero-content::after {
+        display: none !important;
+    }
+
+    .hero-bg {
+        opacity: 1;
+        background: radial-gradient(ellipse 75% 45% at 78% 18%, rgba(91, 196, 245, 0.10) 0%, transparent 60%),
+                    linear-gradient(to bottom, var(--black) 0%, var(--dark) 58%, var(--black) 100%) !important;
+    }
+
+    body.light-theme .hero-bg {
+        background: radial-gradient(ellipse 75% 45% at 78% 18%, rgba(42, 122, 170, 0.12) 0%, transparent 60%),
+                    linear-gradient(to bottom, #f7fbff 0%, #edf3f9 58%, #f7fbff 100%) !important;
+    }
+
+    .hero-slider-wrap {
+        margin-top: 22px;
+    }
+
+    .hero-slider {
+        min-height: 178px;
+        aspect-ratio: 16 / 9;
+        border-radius: 14px;
+    }
+}
+
+/* ─── MOBILE HERO SPOTLIGHT CARDS (fills empty space without background image) ─── */
+.mobile-spotlight-stack {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-spotlight-stack {
+        display: block;
+        position: absolute;
+        top: 112px;
+        right: 18px;
+        width: 150px;
+        height: 210px;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .spotlight-card {
+        position: absolute;
+        width: 92px;
+        height: 132px;
+        border-radius: 13px;
+        overflow: hidden;
+        border: 1px solid rgba(91,196,245,.22);
+        background: rgba(255,255,255,.05);
+        box-shadow: 0 18px 40px rgba(0,0,0,.45), 0 0 22px rgba(91,196,245,.10);
+        padding: 0;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    .spotlight-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .spotlight-1 {
+        right: 0;
+        top: 0;
+        transform: rotate(6deg);
+        z-index: 3;
+    }
+
+    .spotlight-2 {
+        right: 48px;
+        top: 34px;
+        transform: rotate(-7deg) scale(.88);
+        z-index: 2;
+        opacity: .78;
+    }
+
+    .spotlight-3 {
+        right: 5px;
+        top: 84px;
+        transform: rotate(10deg) scale(.74);
+        z-index: 1;
+        opacity: .50;
+    }
+
+    .spotlight-glow {
+        position: absolute;
+        right: 12px;
+        top: 28px;
+        width: 130px;
+        height: 130px;
+        background: radial-gradient(circle, rgba(91,196,245,.24), transparent 68%);
+        filter: blur(8px);
+        z-index: 0;
+    }
+
+    .hero-content {
+        max-width: 78%;
+    }
+
+    .hero-desc {
+        max-width: 92vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .mobile-spotlight-stack {
+        top: 112px;
+        right: 10px;
+        width: 112px;
+        height: 170px;
+        opacity: .95;
+    }
+
+    .spotlight-card {
+        width: 70px;
+        height: 104px;
+        border-radius: 10px;
+    }
+
+    .spotlight-2 { right: 38px; top: 28px; }
+    .spotlight-3 { right: 4px; top: 68px; }
+
+    .hero-content {
+        max-width: 82%;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-spotlight-stack {
+        opacity: .55;
+        transform: scale(.82);
+        transform-origin: top right;
+    }
+}
