@@ -203,11 +203,13 @@ function renderHeroSlider() {
 
     slider.innerHTML = slides.map((m, index) => {
         const banner = m.banner || m.poster || '';
-        return `<div class="hero-slide ${index === 0 ? 'active' : ''}" data-id="${m.id}" onclick="openMoviePageById('${m.id}')">
+        return `<div class="hero-slide ${index === 0 ? 'active' : ''}" data-id="${m.id}" data-banner="${banner}" onclick="openMoviePageById('${m.id}')">
             ${banner ? `<img src="${banner}" alt="${m.title}">` : '<div class="slide-fallback">🎬</div>'}
             <div class="slide-overlay"><span>${m.type === 'series' ? 'Series' : 'Movie'}</span></div>
         </div>`;
     }).join('');
+
+    setHeroMobileBackground(slides[0]?.banner || slides[0]?.poster || '');
 
     if (heroSlideTimer) clearInterval(heroSlideTimer);
     heroSlideTimer = setInterval(() => moveHeroSlide(1), 4200);
@@ -220,6 +222,13 @@ function moveHeroSlide(direction) {
     slides[heroSlideIndex]?.classList.remove('active');
     heroSlideIndex = (heroSlideIndex + direction + slides.length) % slides.length;
     slides[heroSlideIndex].classList.add('active');
+    setHeroMobileBackground(slides[heroSlideIndex].dataset.banner || '');
+}
+
+function setHeroMobileBackground(url) {
+    const hero = document.querySelector('.hero');
+    if (!hero || !url) return;
+    hero.style.setProperty('--hero-mobile-bg', `url('${String(url).replace(/'/g, "%27")}')`);
 }
 
 function openMoviePageById(id) {
