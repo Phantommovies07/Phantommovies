@@ -770,6 +770,7 @@ function resetMovieForm() {
     document.getElementById('active').checked = true;
     if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = 'published';
     if (document.getElementById('trending')) document.getElementById('trending').checked = false;
+    if (document.getElementById('heroSlide')) document.getElementById('heroSlide').checked = false;
     document.getElementById('streamLinksContainer').innerHTML = '';
     document.getElementById('downloadOptionsContainer').innerHTML = '';
     document.getElementById('seasonsContainer').innerHTML = '';
@@ -815,6 +816,7 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         description: document.getElementById('description').value.trim(),
         featured: document.getElementById('featured').checked,
         trending: document.getElementById('trending').checked,
+        heroSlide: document.getElementById('heroSlide')?.checked || false,
         status: document.getElementById('contentStatus')?.value || 'published',
         active: (document.getElementById('contentStatus')?.value || 'published') === 'published'
     };
@@ -895,7 +897,7 @@ async function loadMovies() {
             return `
             <div class="movie-item">
                 <div class="movie-info">
-                    <h3>${movie.title} ${movie.featured ? '⭐' : ''} ${movie.trending ? '🔥' : ''}</h3>
+                    <h3>${movie.title} ${movie.featured ? '⭐' : ''} ${movie.trending ? '🔥' : ''} ${movie.heroSlide ? '🖼️' : ''}</h3>
                     <p>${type} • ${movie.genre} • ${movie.year} • ${movie.views || 0} views • ${streamCount}${downloadCount}</p>
                 </div>
                 <div class="movie-actions">
@@ -978,6 +980,7 @@ function populateFormForEdit(item) {
     setInputValue('description', item.description || '');
     if (document.getElementById('featured')) document.getElementById('featured').checked = !!item.featured;
     if (document.getElementById('trending')) document.getElementById('trending').checked = !!item.trending;
+    if (document.getElementById('heroSlide')) document.getElementById('heroSlide').checked = !!item.heroSlide;
     if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = item.status || (item.active === false ? 'hidden' : 'published');
     if (document.getElementById('active')) document.getElementById('active').checked = item.active !== false;
 

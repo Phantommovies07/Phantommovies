@@ -140,6 +140,7 @@ function afterMoviesLoaded() {
     renderMovies(allMovies);
     setupRequestButton();
     initThemeToggle();
+    initSearchToggle();
     loadAndRenderAds('home');
     
     // Track with GA4
@@ -193,7 +194,8 @@ function renderHeroSlider() {
     const slider = document.getElementById('heroSlider');
     if (!slider) return;
 
-    const slides = getTrendingMovies(6);
+    const manualSlides = allMovies.filter(m => m.heroSlide);
+    const slides = (manualSlides.length ? manualSlides : getTrendingMovies(6)).slice(0, 6);
     if (!slides.length) {
         slider.innerHTML = '<div class="empty-state">No trending titles yet</div>';
         return;
@@ -276,6 +278,20 @@ function setupRequestButton() {
     }
 }
 
+
+function initSearchToggle() {
+    const wrap = document.querySelector('.search-wrap');
+    const btn = document.getElementById('searchToggle');
+    const input = document.getElementById('searchInput');
+    if (!wrap || !btn || !input || btn.dataset.ready === '1') return;
+    btn.dataset.ready = '1';
+    btn.addEventListener('click', () => {
+        wrap.classList.toggle('open');
+        if (wrap.classList.contains('open')) setTimeout(() => input.focus(), 50);
+    });
+    input.addEventListener('focus', () => wrap.classList.add('open'));
+}
+
 // ─── THEME TOGGLE ───
 function initThemeToggle() {
     const btn = document.getElementById('themeToggle');
@@ -335,6 +351,7 @@ function movieCard(m, forceTrendingBadge = false) {
 // ─── GENRE FILTER ───
 document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle();
+    initSearchToggle();
     const genreRow = document.getElementById('genreRow');
     
     if (genreRow) {
