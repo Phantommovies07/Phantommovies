@@ -39,14 +39,14 @@
       "description": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
       "featured": true,
       "trending": true,
-      "heroSlide": false,
+      "heroSlide": true,
       "status": "published",
       "active": true,
       "views": 0,
       "ratingCount": 0,
       "ratingSum": 0,
       "createdAt": "2026-08-07T16:43:20.597Z",
-      "updatedAt": "2026-08-07T17:41:15.435Z"
+      "updatedAt": "2026-08-07T17:41:24.593Z"
     },
     {
       "id": "1783523191395",
@@ -116,7 +116,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 4,
-    "lastUpdated": "2026-08-07T17:41:15.435Z",
+    "lastUpdated": "2026-08-07T17:41:24.593Z",
     "ads": {
       "enabled": false,
       "clickAd": {
