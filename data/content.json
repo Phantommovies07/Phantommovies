@@ -1,6 +1,54 @@
 {
   "movies": [
     {
+      "id": "1786121000597",
+      "type": "movie",
+      "title": "Spider-Man: Brand New Day",
+      "genre": "Science Fiction",
+      "year": 2026,
+      "duration": "2h 25m",
+      "rating": 7.9,
+      "badge": "HOT",
+      "poster": "https://image.tmdb.org/t/p/w500/iPOn6DinuVyLY17YM9mKuPofV08.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/K1DGJQav",
+      "streams": [
+        {
+          "name": "HD",
+          "url": "https://short.azonahub.biz/embed/K1DGJQav"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.6GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/QbSXiM5m",
+          "color": "#d21414"
+        },
+        {
+          "quality": "Pre HD",
+          "size": "8.1GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/K1DGJQav",
+          "color": "#37df16"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
+      "featured": true,
+      "trending": true,
+      "heroSlide": true,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-08-07T16:43:20.597Z",
+      "updatedAt": "2026-08-07T16:43:20.598Z"
+    },
+    {
       "id": "1783523191395",
       "title": "abc",
       "genre": "Action",
@@ -67,8 +115,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 3,
-    "lastUpdated": "2026-08-05T16:41:56.088Z",
+    "totalMovies": 4,
+    "lastUpdated": "2026-08-07T16:43:20.598Z",
     "ads": {
       "enabled": true,
       "clickAd": {
