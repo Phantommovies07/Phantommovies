@@ -1524,3 +1524,82 @@ body.light-theme .slide-overlay span { background: rgba(255,255,255,.78); }
     .featured { margin: 42px 4% 0; }
     .search-results { position: fixed; left: 4%; right: 4%; top: 68px; }
 }
+
+/* ─── MOBILE HERO FILL / CINEMATIC BACKDROP ─── */
+@media (max-width: 768px) {
+    .hero {
+        position: relative;
+        background:
+            linear-gradient(90deg, rgba(5,8,16,0.97) 0%, rgba(5,8,16,0.86) 48%, rgba(5,8,16,0.35) 100%),
+            var(--hero-mobile-bg, none) right top / auto 58% no-repeat,
+            var(--black);
+    }
+
+    body.light-theme .hero {
+        background:
+            linear-gradient(90deg, rgba(247,251,255,0.97) 0%, rgba(247,251,255,0.82) 50%, rgba(247,251,255,0.35) 100%),
+            var(--hero-mobile-bg, none) right top / auto 58% no-repeat,
+            var(--black);
+    }
+
+    .hero-bg {
+        opacity: .75;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 4;
+        padding-top: 6px;
+    }
+
+    .hero-content::after {
+        content: '';
+        position: absolute;
+        right: -18px;
+        top: 20px;
+        width: 42%;
+        height: 220px;
+        background: radial-gradient(circle, rgba(91,196,245,.20), transparent 62%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .hero-slider-wrap {
+        margin-top: 24px;
+        position: relative;
+        z-index: 4;
+    }
+
+    .hero-slider-head {
+        margin-bottom: 10px;
+    }
+
+    .hero-slider {
+        min-height: 155px;
+        box-shadow: 0 18px 45px rgba(0,0,0,.34), 0 0 22px rgba(91,196,245,.10);
+    }
+
+    .hero-stats {
+        margin-top: 24px;
+        background: rgba(255,255,255,.025);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero {
+        background:
+            linear-gradient(90deg, rgba(5,8,16,0.98) 0%, rgba(5,8,16,0.88) 58%, rgba(5,8,16,0.48) 100%),
+            var(--hero-mobile-bg, none) right 80px / auto 45% no-repeat,
+            var(--black);
+    }
+
+    body.light-theme .hero {
+        background:
+            linear-gradient(90deg, rgba(247,251,255,0.98) 0%, rgba(247,251,255,0.88) 58%, rgba(247,251,255,0.48) 100%),
+            var(--hero-mobile-bg, none) right 80px / auto 45% no-repeat,
+            var(--black);
+    }
+}
