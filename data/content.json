@@ -90,27 +90,6 @@
       "updatedAt": "2026-08-07T17:41:24.593Z"
     },
     {
-      "id": "1783523191395",
-      "title": "abc",
-      "genre": "Action",
-      "year": 1923,
-      "duration": "3h 2m",
-      "rating": 8.5,
-      "badge": "HOT",
-      "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
-      "banner": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
-      "streamLink": "https://gdshare.top/download/246982d46ee44b0b97195c6c7835dde0/",
-      "trailerLink": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Blast_2026_poster.jpg/250px-Blast_2026_poster.jpg",
-      "description": "best movie",
-      "featured": true,
-      "active": true,
-      "views": 0,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "createdAt": "2026-07-08T15:06:31.395Z",
-      "updatedAt": "2026-07-08T15:06:31.395Z"
-    },
-    {
       "id": "1783509677580",
       "title": "Blast",
       "genre": "Action",
@@ -135,8 +114,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 4,
-    "lastUpdated": "2026-08-08T08:00:46.754Z",
+    "totalMovies": 3,
+    "lastUpdated": "2026-08-08T08:00:54.076Z",
     "ads": {
       "enabled": false,
       "clickAd": {
