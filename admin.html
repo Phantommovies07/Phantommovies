@@ -789,7 +789,7 @@
                 <div class="panel-title-row">
                     <div>
                         <h3>💰 Ads Management</h3>
-                        <p class="helper-text compact-helper">Adsterra units: Native Banner, Popunder/Social Bar, Direct Link aur sticky/banner placements.</p>
+                        <p class="helper-text compact-helper">Monetag + Adsterra units: head scripts, native banners, popunder/social bar, direct link aur sticky/banner placements.</p>
                     </div>
                     <button type="button" class="btn-small btn-secondary" onclick="togglePanel('adsBody')">Open / Close</button>
                 </div>
@@ -798,6 +798,31 @@
                 <div class="checkbox-group">
                     <input type="checkbox" id="adsEnabled" checked>
                     <label for="adsEnabled">Ads Enabled</label>
+                </div>
+
+                <div class="dynamic-section">
+                    <div class="dynamic-header"><label>🌐 Global Head Codes</label></div>
+                    <p class="helper-text">Monetag/Adsterra ke jo codes “paste below &lt;head&gt;” bolte hain, yahan paste karo. Ye har public page ke head me auto-load honge.</p>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Monetag MultiTag / Head Code</label>
+                            <textarea id="adMonetagHead" placeholder="Paste Monetag MultiTag / OnClick / In-Page Push / Vignette script here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Adsterra Social Bar / Popunder Head Code</label>
+                            <textarea id="adAdsterraHead" placeholder="Paste Adsterra Social Bar / Popunder script here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Monetag Separate MultiTag Code</label>
+                            <textarea id="adMonetagMultitag" placeholder="Optional: Monetag MultiTag code if separate..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Adsterra Social Bar Separate Code</label>
+                            <textarea id="adAdsterraSocialBar" placeholder="Optional: Adsterra Social Bar code if separate..."></textarea>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="dynamic-section">

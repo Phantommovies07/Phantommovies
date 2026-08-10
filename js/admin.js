@@ -76,6 +76,10 @@ function logout() {
 function getAdsFormData() {
     return {
         enabled: document.getElementById('adsEnabled')?.checked !== false,
+        monetagHead: document.getElementById('adMonetagHead')?.value || '',
+        monetagMultitag: document.getElementById('adMonetagMultitag')?.value || '',
+        adsterraHead: document.getElementById('adAdsterraHead')?.value || '',
+        adsterraSocialBar: document.getElementById('adAdsterraSocialBar')?.value || '',
         clickAd: {
             enabled: document.getElementById('clickAdEnabled')?.checked || false,
             url: document.getElementById('clickAdUrl')?.value.trim() || '',
@@ -103,6 +107,10 @@ function setAdsFormData(ads = {}) {
     if (document.getElementById('clickAdFrequency')) document.getElementById('clickAdFrequency').value = clickAd.frequency || 'session';
     if (document.getElementById('clickAdDownloads')) document.getElementById('clickAdDownloads').checked = clickAd.applyDownloads !== false;
     if (document.getElementById('clickAdStreams')) document.getElementById('clickAdStreams').checked = !!clickAd.applyStreams;
+    setTextareaValue('adMonetagHead', ads.monetagHead || '');
+    setTextareaValue('adMonetagMultitag', ads.monetagMultitag || '');
+    setTextareaValue('adAdsterraHead', ads.adsterraHead || '');
+    setTextareaValue('adAdsterraSocialBar', ads.adsterraSocialBar || '');
     setTextareaValue('adHomeTop', ads.homeTop || '');
     setTextareaValue('adHomeGrid', ads.homeGrid || '');
     setTextareaValue('adMoviePlayerTop', ads.moviePlayerTop || '');
