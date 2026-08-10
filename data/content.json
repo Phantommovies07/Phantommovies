@@ -94,11 +94,11 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 2,
-    "lastUpdated": "2026-08-10T11:36:35.770Z",
+    "lastUpdated": "2026-08-10T11:47:26.650Z",
     "ads": {
       "enabled": true,
       "monetagHead": "<script>(function(s){s.dataset.zone='11545380',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>",
-      "monetagMultitag": "",
+      "monetagMultitag": "<script src=\"https://quge5.com/88/tag.min.js\" data-zone=\"268833\" async data-cfasync=\"false\"></script>",
       "adsterraHead": "",
       "adsterraSocialBar": "",
       "clickAd": {
@@ -116,7 +116,7 @@
       "seriesDownloads": "",
       "floatingBottom": "",
       "popup": "",
-      "updatedAt": "2026-08-10T11:36:34.855Z"
+      "updatedAt": "2026-08-10T11:47:25.121Z"
     }
   }
 }
