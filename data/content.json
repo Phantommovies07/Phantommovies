@@ -149,12 +149,12 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 3,
-    "lastUpdated": "2026-08-11T16:41:24.238Z",
+    "lastUpdated": "2026-08-11T17:05:19.614Z",
     "ads": {
       "enabled": true,
       "monetagHead": "",
       "monetagMultitag": "",
-      "adsterraHead": "<script src=\"https://pl30704157.effectivecpmnetwork.com/95/63/bb/9563bbfc2cf9c38c15128f5ce708c0d5.js\"></script>\n",
+      "adsterraHead": "<script src=\"https://pl30704157.effectivecpmnetwork.com/95/63/bb/9563bbfc2cf9c38c15128f5ce708c0d5.js\"></script>",
       "adsterraSocialBar": "\n",
       "clickAd": {
         "enabled": true,
@@ -165,13 +165,16 @@
       },
       "homeTop": "",
       "homeGrid": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30704156.effectivecpmnetwork.com/f2d9c93f47619b211c9be8f0dbc1ad5e/invoke.js\"></script>\n<div id=\"container-f2d9c93f47619b211c9be8f0dbc1ad5e\"></div>\n\n",
+      "homeBottom": "",
       "moviePlayerTop": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30704156.effectivecpmnetwork.com/f2d9c93f47619b211c9be8f0dbc1ad5e/invoke.js\"></script>\n<div id=\"container-f2d9c93f47619b211c9be8f0dbc1ad5e\"></div>\n",
       "movieDownloads": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30704156.effectivecpmnetwork.com/f2d9c93f47619b211c9be8f0dbc1ad5e/invoke.js\"></script>\n<div id=\"container-f2d9c93f47619b211c9be8f0dbc1ad5e\"></div>\n",
+      "movieBottom": "",
       "seriesPlayerTop": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30704156.effectivecpmnetwork.com/f2d9c93f47619b211c9be8f0dbc1ad5e/invoke.js\"></script>\n<div id=\"container-f2d9c93f47619b211c9be8f0dbc1ad5e\"></div>\n",
       "seriesDownloads": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30704156.effectivecpmnetwork.com/f2d9c93f47619b211c9be8f0dbc1ad5e/invoke.js\"></script>\n<div id=\"container-f2d9c93f47619b211c9be8f0dbc1ad5e\"></div>\n",
+      "seriesBottom": "",
       "floatingBottom": "",
       "popup": "<script src=\"https://pl30704155.effectivecpmnetwork.com/a8/52/1c/a8521c6b2bdb2fdef07e5e6ab7dda395.js\"></script>\n",
-      "updatedAt": "2026-08-11T16:41:23.768Z"
+      "updatedAt": "2026-08-11T17:05:18.634Z"
     },
     "siteBaseUrl": "",
     "request": {
