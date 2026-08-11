@@ -1,6 +1,61 @@
 {
   "movies": [
     {
+      "id": "1786428400743",
+      "type": "series",
+      "title": "India's Got Latent Season 2",
+      "genre": "Comedy",
+      "year": 2026,
+      "duration": "1h 0m/ep",
+      "rating": 8.7,
+      "badge": "NEW",
+      "poster": "https://image.tmdb.org/t/p/w500/8jcdd5HqW4nhF2upVGFS0KJ6hdY.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/3qS74RxSO4K9TaxSSHPHc1vCGFW.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/87r7OJu4",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Bonus Episode",
+          "episodes": [
+            {
+              "episodeNumber": 2,
+              "title": "Ft. Badshah, Saurabh Joshi, Rajat Sood , Harssh Limbachiyaa",
+              "duration": "40m",
+              "streams": [
+                {
+                  "name": "HD+",
+                  "url": "https://short.azonahub.biz/embed/87r7OJu4"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p",
+                  "size": "915MB",
+                  "server": "Fast Server",
+                  "url": "https://short.azonahub.biz/file/87r7OJu4",
+                  "color": "#ff0000"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "trailerLink": "",
+      "description": "Samay Raina and the guest judges hilariously critique the untapped, undeniably entertaining \"latent\" talents of aspiring performers, testing their self-awareness with a unique scoring system.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": true,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-08-11T06:06:40.743Z",
+      "updatedAt": "2026-08-11T06:06:40.743Z"
+    },
+    {
       "id": "1786124723331",
       "type": "movie",
       "title": "Siddharth Roy",
@@ -93,8 +148,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 2,
-    "lastUpdated": "2026-08-11T05:50:38.089Z",
+    "totalMovies": 3,
+    "lastUpdated": "2026-08-11T06:06:40.743Z",
     "ads": {
       "enabled": true,
       "monetagHead": "<script>(function(s){s.dataset.zone='11545380',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>",
