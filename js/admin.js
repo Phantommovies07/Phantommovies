@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addDownloadOption();
     toggleContentType();
     restorePanelStates();
+    initSimpleAdBuilder();
 
     if (githubAPI.loadCredentials()) {
         showContentSection();
@@ -89,10 +90,13 @@ function getAdsFormData() {
         },
         homeTop: document.getElementById('adHomeTop')?.value || '',
         homeGrid: document.getElementById('adHomeGrid')?.value || '',
+        homeBottom: document.getElementById('adHomeBottom')?.value || '',
         moviePlayerTop: document.getElementById('adMoviePlayerTop')?.value || '',
         movieDownloads: document.getElementById('adMovieDownloads')?.value || '',
+        movieBottom: document.getElementById('adMovieBottom')?.value || '',
         seriesPlayerTop: document.getElementById('adSeriesPlayerTop')?.value || '',
         seriesDownloads: document.getElementById('adSeriesDownloads')?.value || '',
+        seriesBottom: document.getElementById('adSeriesBottom')?.value || '',
         floatingBottom: document.getElementById('adFloatingBottom')?.value || '',
         popup: document.getElementById('adPopup')?.value || '',
         updatedAt: new Date().toISOString()
@@ -113,10 +117,13 @@ function setAdsFormData(ads = {}) {
     setTextareaValue('adAdsterraSocialBar', ads.adsterraSocialBar || '');
     setTextareaValue('adHomeTop', ads.homeTop || '');
     setTextareaValue('adHomeGrid', ads.homeGrid || '');
+    setTextareaValue('adHomeBottom', ads.homeBottom || '');
     setTextareaValue('adMoviePlayerTop', ads.moviePlayerTop || '');
     setTextareaValue('adMovieDownloads', ads.movieDownloads || '');
+    setTextareaValue('adMovieBottom', ads.movieBottom || '');
     setTextareaValue('adSeriesPlayerTop', ads.seriesPlayerTop || '');
     setTextareaValue('adSeriesDownloads', ads.seriesDownloads || '');
+    setTextareaValue('adSeriesBottom', ads.seriesBottom || '');
     setTextareaValue('adFloatingBottom', ads.floatingBottom || '');
     setTextareaValue('adPopup', ads.popup || '');
 }
@@ -1166,5 +1173,125 @@ async function checkBrokenLinks() {
         showAlert('contentAlert', `❌ Link check error: ${error.message}`, 'error');
     } finally {
         showSpinner(false);
+    }
+}
+
+// ─── SIMPLE ADS BUILDER ───
+const SIMPLE_AD_TYPES = {
+    monetag: [
+        { value: 'monetag_multitag', label: 'MultiTag: OnClick + Push + IPP + Vignette', kind: 'head', recommended: ['monetagHead'] },
+        { value: 'monetag_onclick', label: 'OnClick / Popunder Script', kind: 'head', recommended: ['monetagHead'] },
+        { value: 'monetag_ipp', label: 'In-Page Push Script', kind: 'head', recommended: ['monetagHead'] },
+        { value: 'monetag_vignette', label: 'Vignette Banner Script', kind: 'head', recommended: ['monetagHead'] },
+        { value: 'monetag_direct', label: 'Direct Link / SmartLink URL', kind: 'url', recommended: ['clickAd'] }
+    ],
+    adsterra: [
+        { value: 'adsterra_socialbar', label: 'Social Bar / Popunder Script', kind: 'head', recommended: ['adsterraHead'] },
+        { value: 'adsterra_native', label: 'Native Banner Code', kind: 'body', recommended: ['homeGrid', 'movieDownloads', 'seriesDownloads', 'homeBottom'] },
+        { value: 'adsterra_banner', label: 'Display Banner Code', kind: 'body', recommended: ['homeTop', 'moviePlayerTop', 'seriesPlayerTop', 'homeBottom'] },
+        { value: 'adsterra_direct', label: 'Direct Link URL', kind: 'url', recommended: ['clickAd'] }
+    ],
+    custom: [
+        { value: 'custom_head', label: 'Head Script Code', kind: 'head', recommended: ['monetagHead'] },
+        { value: 'custom_body', label: 'Body Banner / Native Code', kind: 'body', recommended: ['homeGrid', 'movieDownloads', 'seriesDownloads'] },
+        { value: 'custom_url', label: 'Click / Direct Link URL', kind: 'url', recommended: ['clickAd'] }
+    ]
+};
+
+const SIMPLE_AD_PLACEMENTS = {
+    monetagHead: { label: 'Global Head Code', desc: 'Har public page ke <head> me load hoga', target: 'adMonetagHead' },
+    adsterraHead: { label: 'Adsterra Global Head', desc: 'Social Bar/Popunder ke liye best', target: 'adAdsterraHead' },
+    homeTop: { label: 'Home Top Banner', desc: 'Hero section ke neeche', target: 'adHomeTop' },
+    homeGrid: { label: 'Home Native/Grid Ad', desc: 'Movie grid ke upar', target: 'adHomeGrid' },
+    homeBottom: { label: 'Home Bottom Ad', desc: 'Footer/request section ke aas-paas', target: 'adHomeBottom' },
+    moviePlayerTop: { label: 'Movie Player Top', desc: 'Movie player ke upar', target: 'adMoviePlayerTop' },
+    movieDownloads: { label: 'Movie Download Area', desc: 'Download buttons ke upar', target: 'adMovieDownloads' },
+    movieBottom: { label: 'Movie Bottom Ad', desc: 'Movie page ke bottom me', target: 'adMovieBottom' },
+    seriesPlayerTop: { label: 'Series Player Top', desc: 'Series player ke upar', target: 'adSeriesPlayerTop' },
+    seriesDownloads: { label: 'Series Download Area', desc: 'Episode download area ke upar', target: 'adSeriesDownloads' },
+    seriesBottom: { label: 'Series Bottom Ad', desc: 'Series page ke bottom me', target: 'adSeriesBottom' },
+    clickAd: { label: 'Download/Stream Click Ad', desc: 'Direct link click ad system', target: 'clickAdUrl' }
+};
+
+function initSimpleAdBuilder() {
+    updateSimpleAdTypeOptions();
+}
+
+function updateSimpleAdTypeOptions() {
+    const network = document.getElementById('simpleAdNetwork')?.value || 'monetag';
+    const typeSelect = document.getElementById('simpleAdType');
+    if (!typeSelect) return;
+    typeSelect.innerHTML = (SIMPLE_AD_TYPES[network] || []).map(t => `<option value="${t.value}">${t.label}</option>`).join('');
+    updateSimpleAdPlacements();
+}
+
+function getSimpleAdType() {
+    const network = document.getElementById('simpleAdNetwork')?.value || 'monetag';
+    const value = document.getElementById('simpleAdType')?.value || '';
+    return (SIMPLE_AD_TYPES[network] || []).find(t => t.value === value) || SIMPLE_AD_TYPES[network][0];
+}
+
+function updateSimpleAdPlacements() {
+    const type = getSimpleAdType();
+    const box = document.getElementById('simpleAdPlacements');
+    const label = document.getElementById('simpleAdCodeLabel');
+    if (!box || !type) return;
+
+    if (label) label.textContent = type.kind === 'url' ? 'Direct Link URL' : 'Ad Code / Script';
+
+    let keys = [];
+    if (type.kind === 'head') keys = type.recommended;
+    else if (type.kind === 'url') keys = ['clickAd'];
+    else keys = ['homeTop','homeGrid','homeBottom','moviePlayerTop','movieDownloads','movieBottom','seriesPlayerTop','seriesDownloads','seriesBottom'];
+
+    box.innerHTML = keys.map(key => {
+        const p = SIMPLE_AD_PLACEMENTS[key];
+        const checked = type.recommended.includes(key) ? 'checked' : '';
+        return `<label class="placement-option">
+            <input type="checkbox" class="simple-placement" value="${key}" ${checked}>
+            <div><strong>${p.label}</strong><span>${p.desc}</span></div>
+        </label>`;
+    }).join('');
+}
+
+function appendOrReplaceField(targetId, code) {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    if (el.value.trim() && !confirm(`${targetId} me already code hai. Replace karna hai? Cancel karoge to new code niche add hoga.`)) {
+        el.value = el.value.trim() + '\n\n' + code;
+    } else {
+        el.value = code;
+    }
+}
+
+function applySimpleAdSetup() {
+    const code = document.getElementById('simpleAdCode')?.value.trim() || '';
+    const type = getSimpleAdType();
+    if (!code) {
+        showAlert('contentAlert', '❌ Ad code/direct link paste karo', 'error');
+        return;
+    }
+    const selected = Array.from(document.querySelectorAll('.simple-placement:checked')).map(i => i.value);
+    if (!selected.length) {
+        showAlert('contentAlert', '❌ At least one placement select karo', 'error');
+        return;
+    }
+
+    selected.forEach(key => {
+        if (key === 'clickAd') {
+            const url = document.getElementById('clickAdUrl');
+            if (url) url.value = code;
+            const enabled = document.getElementById('clickAdEnabled');
+            if (enabled) enabled.checked = true;
+            return;
+        }
+        const placement = SIMPLE_AD_PLACEMENTS[key];
+        if (placement) appendOrReplaceField(placement.target, code);
+    });
+
+    if (type.kind !== 'url') {
+        showAlert('contentAlert', `✅ ${type.label} selected placements me apply ho gaya. Ab Save Ads Settings dabao.`, 'success');
+    } else {
+        showAlert('contentAlert', '✅ Direct link click ad me apply ho gaya. Ab Save Ads Settings dabao.', 'success');
     }
 }

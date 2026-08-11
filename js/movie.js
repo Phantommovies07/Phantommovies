@@ -259,6 +259,7 @@ async function loadAndRenderAds(page) {
         if (page === 'movie') {
             insertAdBefore('#playerBox', 'ad-movie-player-top', ads.moviePlayerTop);
             insertAdBefore('.download-grid', 'ad-movie-downloads', ads.movieDownloads);
+            insertAdAfter('.movie-detail-content', 'ad-movie-bottom', ads.movieBottom);
         }
 
         renderFloatingAd(ads.floatingBottom);
@@ -285,6 +286,12 @@ function insertAdBefore(selector, id, code) {
     const target = document.querySelector(selector);
     const slot = createAdSlot(id, code);
     if (target && slot && !slot.parentElement) target.insertAdjacentElement('beforebegin', slot);
+}
+
+function insertAdAfter(selector, id, code) {
+    const target = document.querySelector(selector);
+    const slot = createAdSlot(id, code);
+    if (target && slot && !slot.parentElement) target.insertAdjacentElement('afterend', slot);
 }
 
 function executeAdScripts(container) {

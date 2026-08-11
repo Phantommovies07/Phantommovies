@@ -584,6 +584,7 @@ async function loadAndRenderAds(page) {
         if (page === 'home') {
             insertAdAfter('.hero', 'ad-home-top', ads.homeTop);
             insertAdBefore('#movieGrid', 'ad-home-grid', ads.homeGrid);
+            insertAdBefore('#requestSection', 'ad-home-bottom', ads.homeBottom);
         }
 
         renderFloatingAd(ads.floatingBottom);

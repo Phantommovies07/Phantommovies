@@ -483,6 +483,25 @@
         }
         .bulk-tools textarea { min-height: 110px; }
 
+        .placement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px;
+        }
+        .placement-option {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .placement-option input { width: auto; margin-top: 3px; }
+        .placement-option strong { display:block; font-size:13px; }
+        .placement-option span { display:block; color:var(--muted); font-size:12px; margin-top:2px; }
+
+
         /* Compact / Fast Admin Mode */
         .quick-admin-bar {
             display: grid;
@@ -800,6 +819,38 @@
                     <label for="adsEnabled">Ads Enabled</label>
                 </div>
 
+                <div class="dynamic-section simple-ad-builder">
+                    <div class="dynamic-header"><label>⚡ Simple Ad Setup</label></div>
+                    <p class="helper-text">Ad type select karo, code/link paste karo, suitable places choose karo, phir Apply dabao. System automatically correct ad slots me code fill kar dega.</p>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Ad Network</label>
+                            <select id="simpleAdNetwork" onchange="updateSimpleAdTypeOptions()">
+                                <option value="monetag">Monetag</option>
+                                <option value="adsterra">Adsterra</option>
+                                <option value="custom">Custom HTML/Script</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ad Type</label>
+                            <select id="simpleAdType" onchange="updateSimpleAdPlacements()"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label id="simpleAdCodeLabel">Ad Code / Direct Link</label>
+                        <textarea id="simpleAdCode" placeholder="Paste ad code or direct link here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Suitable Places</label>
+                        <div class="placement-grid" id="simpleAdPlacements"></div>
+                    </div>
+                    <div class="settings-actions">
+                        <button type="button" onclick="applySimpleAdSetup()">✅ Apply to Selected Places</button>
+                        <button type="button" class="btn-secondary" onclick="togglePanel('advancedAdsBody')">Advanced Manual Slots</button>
+                    </div>
+                </div>
+
+                <div class="collapsible-body collapsed" id="advancedAdsBody">
                 <div class="dynamic-section">
                     <div class="dynamic-header"><label>🌐 Global Head Codes</label></div>
                     <p class="helper-text">Monetag/Adsterra ke jo codes “paste below &lt;head&gt;” bolte hain, yahan paste karo. Ye har public page ke head me auto-load honge.</p>
@@ -866,6 +917,10 @@
                         <textarea id="adHomeGrid" placeholder="Paste ad code here..."></textarea>
                     </div>
                     <div class="form-group">
+                        <label class="ad-slot-label">Bottom Banner / Native <span>Home page footer ke upar</span></label>
+                        <textarea id="adHomeBottom" placeholder="Paste bottom banner/native code here..."></textarea>
+                    </div>
+                    <div class="form-group">
                         <label class="ad-slot-label">Adsterra Banner/Native <span>Movie player ke upar</span></label>
                         <textarea id="adMoviePlayerTop" placeholder="Paste ad code here..."></textarea>
                     </div>
@@ -874,12 +929,20 @@
                         <textarea id="adMovieDownloads" placeholder="Paste ad code here..."></textarea>
                     </div>
                     <div class="form-group">
+                        <label class="ad-slot-label">Movie Bottom Ad <span>Movie page bottom/footer ke upar</span></label>
+                        <textarea id="adMovieBottom" placeholder="Paste bottom ad code here..."></textarea>
+                    </div>
+                    <div class="form-group">
                         <label class="ad-slot-label">Adsterra Banner/Native <span>Series player ke upar</span></label>
                         <textarea id="adSeriesPlayerTop" placeholder="Paste ad code here..."></textarea>
                     </div>
                     <div class="form-group">
                         <label class="ad-slot-label">Adsterra Native Banner <span>Episode downloads ke upar</span></label>
                         <textarea id="adSeriesDownloads" placeholder="Paste ad code here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="ad-slot-label">Series Bottom Ad <span>Series page bottom/footer ke upar</span></label>
+                        <textarea id="adSeriesBottom" placeholder="Paste bottom ad code here..."></textarea>
                     </div>
                     <div class="form-group">
                         <label class="ad-slot-label">Adsterra 320x50 / Sticky Banner <span>Mobile bottom sticky</span></label>
@@ -891,6 +954,7 @@
                     </div>
                 </div>
 
+                </div>
                 <div class="settings-actions">
                     <button type="button" onclick="saveAdsSettings()">💾 Save Ads Settings</button>
                     <button type="button" class="btn-secondary" onclick="clearAdsSettings()">🧹 Clear All Ad Codes</button>

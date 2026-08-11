@@ -295,6 +295,7 @@ async function loadAndRenderAds(page) {
         if (page === 'series') {
             insertAdBefore('#seriesPlayerBox', 'ad-series-player-top', ads.seriesPlayerTop);
             insertAdBefore('#episodeDownloads', 'ad-series-downloads', ads.seriesDownloads);
+            insertAdAfter('.movie-detail-content', 'ad-series-bottom', ads.seriesBottom);
         }
 
         renderFloatingAd(ads.floatingBottom);
@@ -321,6 +322,12 @@ function insertAdBefore(selector, id, code) {
     const target = document.querySelector(selector);
     const slot = createAdSlot(id, code);
     if (target && slot && !slot.parentElement) target.insertAdjacentElement('beforebegin', slot);
+}
+
+function insertAdAfter(selector, id, code) {
+    const target = document.querySelector(selector);
+    const slot = createAdSlot(id, code);
+    if (target && slot && !slot.parentElement) target.insertAdjacentElement('afterend', slot);
 }
 
 function executeAdScripts(container) {
