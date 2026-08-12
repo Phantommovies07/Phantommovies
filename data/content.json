@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1786554197716",
+      "type": "movie",
+      "title": "Dhoondte Reh Jaaoge",
+      "genre": "Comedy",
+      "year": 2009,
+      "duration": "2h 15m",
+      "rating": 4.6,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/6BhThM04qrtnQGsUXJYBU2reD1G.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/umeyQ6db8Q8FL9a9z0qJEP3bzW1.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/PZpHAdNk",
+      "streams": [
+        {
+          "name": "HD",
+          "url": "https://short.azonahub.biz/embed/PZpHAdNk"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3.6GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/PZpHAdNk",
+          "color": "#eb5f14"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Anand Pawar (Kunal Khemu) and Raj Chopra (Paresh Rawal) are perhaps the two most extreme individuals that have walked the city of Mumbai. While Anand is an idealist chartered accountant, Raj is an idle film producer.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-08-12T17:03:17.716Z",
+      "updatedAt": "2026-08-12T17:03:17.716Z"
+    },
+    {
       "id": "1786428400743",
       "type": "series",
       "title": "India's Got Latent Season 2",
@@ -148,8 +189,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 3,
-    "lastUpdated": "2026-08-12T16:49:37.024Z",
+    "totalMovies": 4,
+    "lastUpdated": "2026-08-12T17:03:17.716Z",
     "ads": {
       "enabled": true,
       "monetagHead": "",
