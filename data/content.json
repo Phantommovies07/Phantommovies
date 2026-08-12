@@ -149,13 +149,13 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 3,
-    "lastUpdated": "2026-08-12T16:47:05.074Z",
+    "lastUpdated": "2026-08-12T16:48:38.382Z",
     "ads": {
       "enabled": true,
       "monetagHead": "",
       "monetagMultitag": "",
       "adsterraHead": "<script src=\"https://pl30704157.effectivecpmnetwork.com/95/63/bb/9563bbfc2cf9c38c15128f5ce708c0d5.js\"></script>",
-      "adsterraSocialBar": "\n",
+      "adsterraSocialBar": "\n<script>(function(s){s.dataset.zone='11563119',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>",
       "clickAd": {
         "enabled": true,
         "url": "https://www.effectivecpmnetwork.com/ezzf2f3ck?key=75e4d6f2fbba36b33b494678b4596b95",
@@ -174,7 +174,7 @@
       "seriesBottom": "",
       "floatingBottom": "",
       "popup": "<script src=\"https://pl30704155.effectivecpmnetwork.com/a8/52/1c/a8521c6b2bdb2fdef07e5e6ab7dda395.js\"></script>\n<script src=\"https://pl30704155.effectivecpmnetwork.com/a8/52/1c/a8521c6b2bdb2fdef07e5e6ab7dda395.js\"></script>\n",
-      "updatedAt": "2026-08-12T16:47:03.896Z"
+      "updatedAt": "2026-08-12T16:48:37.457Z"
     },
     "siteBaseUrl": "",
     "request": {
