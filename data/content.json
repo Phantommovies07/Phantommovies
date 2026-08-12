@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1786554302150",
+      "type": "movie",
+      "title": "Main Vaapas Aaunga",
+      "genre": "Romance",
+      "year": 2026,
+      "duration": "2h 47m",
+      "rating": 6.7,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/wHTNsZxvlfRAndc52hGlbdCUXKS.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/bWw9PuPH6vFXlezBoHZ6D9XBhQW.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/BY4GEpPR",
+      "streams": [
+        {
+          "name": "HD",
+          "url": "https://short.azonahub.biz/embed/BY4GEpPR"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3.2GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/BY4GEpPR",
+          "color": "#ffd70f"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Haunted by a childhood romance and recollections of love lost during the 1947 Partition of India, 95-year-old Ishar Singh Grewal shares his story with his grandson Nirvair, the past unfolding through memories of migration, longing, and a romance that endures across generations.",
+      "featured": true,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-08-12T17:05:02.150Z",
+      "updatedAt": "2026-08-12T17:05:02.150Z"
+    },
+    {
       "id": "1786554197716",
       "type": "movie",
       "title": "Dhoondte Reh Jaaoge",
@@ -189,8 +230,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 4,
-    "lastUpdated": "2026-08-12T17:03:17.716Z",
+    "totalMovies": 5,
+    "lastUpdated": "2026-08-12T17:05:02.150Z",
     "ads": {
       "enabled": true,
       "monetagHead": "",
