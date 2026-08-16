@@ -189,11 +189,11 @@
       "badge": "HOT",
       "poster": "https://image.tmdb.org/t/p/w500/iPOn6DinuVyLY17YM9mKuPofV08.jpg",
       "banner": "https://image.tmdb.org/t/p/w1280/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
-      "streamLink": "https://short.azonahub.biz/embed/K1DGJQav",
+      "streamLink": "https://short.azonahub.biz/embed/QbSXiM5m",
       "streams": [
         {
           "name": "HD",
-          "url": "https://short.azonahub.biz/embed/K1DGJQav"
+          "url": "https://short.azonahub.biz/embed/QbSXiM5m"
         }
       ],
       "downloads": [
@@ -224,14 +224,14 @@
       "ratingCount": 0,
       "ratingSum": 0,
       "createdAt": "2026-08-07T16:43:20.597Z",
-      "updatedAt": "2026-08-07T17:41:24.593Z"
+      "updatedAt": "2026-08-16T07:28:15.112Z"
     }
   ],
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 5,
-    "lastUpdated": "2026-08-16T07:16:31.926Z",
+    "lastUpdated": "2026-08-16T07:28:15.112Z",
     "ads": {
       "enabled": true,
       "monetagHead": "",
