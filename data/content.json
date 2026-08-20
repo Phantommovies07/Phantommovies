@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1787249920689",
+      "type": "movie",
+      "title": "The Railway Men - The Untold Story of Bhopal 1984",
+      "genre": "Drama",
+      "year": 2023,
+      "duration": "",
+      "rating": 8.1,
+      "badge": "EXCLUSIVE",
+      "poster": "https://image.tmdb.org/t/p/w500/kOYlMHtNSqnf1FgsoK1JJypfkrY.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/s7dpEDsAan8mvC5cikvWidOupsO.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/lCoeel8Nrv75wrv1",
+      "streams": [
+        {
+          "name": "HD",
+          "url": "https://short.azonahub.biz/embed/lCoeel8Nrv75wrv1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3.1GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/lCoeel8Nrv75wrv1",
+          "color": "#12d97c"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "India, 1984. After a deadly gas leaks from a factory in Bhopal, brave railway workers risk their lives to save others in the face of an unspeakable disaster.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-08-20T18:18:40.689Z",
+      "updatedAt": "2026-08-20T18:18:40.689Z"
+    },
+    {
       "id": "1786554302150",
       "type": "movie",
       "title": "Main Vaapas Aaunga",
@@ -230,8 +271,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 5,
-    "lastUpdated": "2026-08-16T07:28:15.112Z",
+    "totalMovies": 6,
+    "lastUpdated": "2026-08-20T18:18:40.689Z",
     "ads": {
       "enabled": true,
       "monetagHead": "",
