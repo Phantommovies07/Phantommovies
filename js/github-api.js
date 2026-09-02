@@ -45,27 +45,70 @@ class GitHubAPI {
     }
 
     // Get authorization headers
+    // NOTE: 'Bearer' scheme is used (not 'token') on purpose.
+    // GitHub docs: "In most cases, you can use Authorization: Bearer or
+    // Authorization: token to pass a token."
+    // Classic PATs accept BOTH schemes, but fine-grained PATs return 403 when
+    // sent with the 'token' scheme. Using 'Bearer' makes both token types work.
     getHeaders() {
         return {
-            'Authorization': `token ${this.token}`,
+            'Authorization': `Bearer ${this.token}`,
             'Content-Type': 'application/json',
-            'Accept': 'application/vnd.github.v3+json'
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28'
         };
     }
 
-    // Verify authentication
+    // Verify authentication.
+    // Works with BOTH classic PATs and fine-grained PATs:
+    //   1. Try GET /user (classic PATs always allow this).
+    //   2. Fine-grained PATs are scoped to specific repos and may not be able
+    //      to read /user, so fall back to checking access to the repo itself.
     async verifyAuth() {
+        let userResponse;
         try {
-            const response = await fetch(`${this.baseURL}/user`, {
+            userResponse = await fetch(`${this.baseURL}/user`, {
                 headers: this.getHeaders()
             });
-            
-            if (!response.ok) {
-                throw new Error('Authentication failed');
+        } catch (networkError) {
+            throw new Error('GitHub se connect nahi ho paya. Internet check karo.');
+        }
+
+        if (userResponse.ok) {
+            return await userResponse.json();
+        }
+
+        // 401 = token galat / expired / revoke ho chuka hai. Koi fallback kaam nahi karega.
+        if (userResponse.status === 401) {
+            throw new Error('Token galat ya expire ho gaya hai. Naya token banao.');
+        }
+
+        // Fine-grained token ho sakta hai /user na padh paye — repo access se verify karo.
+        try {
+            const repoResponse = await fetch(
+                `${this.baseURL}/repos/${this.username}/${this.repo}`,
+                { headers: this.getHeaders() }
+            );
+
+            if (repoResponse.ok) {
+                const repo = await repoResponse.json();
+                return {
+                    login: (repo.owner && repo.owner.login) || this.username,
+                    name: repo.full_name || `${this.username}/${this.repo}`
+                };
             }
-            
-            return await response.json();
+
+            if (repoResponse.status === 404) {
+                throw new Error(
+                    `Repo "${this.username}/${this.repo}" nahi mila ya token ko uska access nahi hai. ` +
+                    'Fine-grained token me "Only select repositories" me ye repo select karo ' +
+                    'aur permission "Contents: Read and write" do.'
+                );
+            }
+
+            throw new Error('Authentication failed (HTTP ' + repoResponse.status + ')');
         } catch (error) {
+            if (error && error.message && error.message.indexOf('Repo "') === 0) throw error;
             throw new Error('Invalid GitHub credentials');
         }
     }

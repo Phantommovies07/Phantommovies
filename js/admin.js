@@ -916,8 +916,8 @@ async function loadMovies() {
                     <p>${type} • ${movie.genre} • ${movie.year} • ${movie.views || 0} views • ${streamCount}${downloadCount}</p>
                 </div>
                 <div class="movie-actions">
-                    <button class="btn-small btn-secondary" onclick="editMovie('${movie.id}')">Edit</button>
-                    <button class="btn-small btn-danger" onclick="deleteMovieConfirm('${movie.id}', '${String(movie.title).replace(/'/g, "\\'")}')">Delete</button>
+                    <button class="btn-small btn-secondary" data-admin-action="edit" data-id="${escapeAttr(movie.id)}">Edit</button>
+                    <button class="btn-small btn-danger" data-admin-action="delete" data-id="${escapeAttr(movie.id)}" data-title="${escapeAttr(movie.title)}">Delete</button>
                 </div>
             </div>`;
         }).join('');
@@ -932,6 +932,23 @@ async function loadMovies() {
 function deleteMovieConfirm(id, title) {
     if (confirm(`Delete "${title}"? This cannot be undone.`)) deleteMovie(id);
 }
+
+// Delegated click handler for the movie list Edit/Delete buttons.
+// We intentionally do NOT put user-controlled titles inside inline onclick="..."
+// attributes (that pattern is what CodeQL flagged as "incomplete string escaping").
+// Instead the buttons carry data-* attributes (escaped with escapeAttr) and a single
+// delegated listener reads them — values come back fully decoded and safe.
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-admin-action]');
+    if (!btn) return;
+    const action = btn.getAttribute('data-admin-action');
+    const id = btn.getAttribute('data-id') || '';
+    if (action === 'edit') {
+        editMovie(id);
+    } else if (action === 'delete') {
+        deleteMovieConfirm(id, btn.getAttribute('data-title') || '');
+    }
+});
 
 async function deleteMovie(id) {
     showSpinner(true);

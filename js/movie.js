@@ -25,9 +25,19 @@ function getYouTubeEmbed(url) {
     if (!url) return '';
     try {
         const u = new URL(url);
+        // Exact hostname match (not substring) to defeat CodeQL
+        // "incomplete-url-substring-sanitization" — a hostile host like
+        // "evil.com/youtube.com" must NOT be accepted.
+        const host = u.hostname.replace(/^www\./, '').toLowerCase();
         let id = '';
-        if (u.hostname.includes('youtu.be')) id = u.pathname.slice(1);
-        if (u.hostname.includes('youtube.com')) id = u.searchParams.get('v') || u.pathname.split('/embed/')[1] || '';
+        if (host === 'youtu.be') {
+            id = u.pathname.slice(1).split('/')[0] || '';
+        } else if (host === 'youtube.com' || host === 'm.youtube.com' || host === 'music.youtube.com') {
+            id = u.searchParams.get('v')
+                || (u.pathname.startsWith('/embed/') ? (u.pathname.split('/')[2] || '') : '');
+        }
+        // Only allow a well-formed YouTube video id before embedding.
+        if (id && !/^[A-Za-z0-9_-]{5,20}$/.test(id)) id = '';
         return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : '';
     } catch (_) {
         return '';

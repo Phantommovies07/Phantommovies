@@ -742,9 +742,14 @@
             
             <div class="form-group">
                 <label>GitHub Personal Access Token</label>
-                <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
-                <small style="color: var(--muted); font-size: 12px; display: block; margin-top: 8px;">
-                    Required permissions: repo (Full control of private repositories)
+                <input type="password" id="githubToken" placeholder="github_pat_... ya ghp_...">
+                <small style="color: var(--muted); font-size: 12px; display: block; margin-top: 8px; line-height: 1.6;">
+                    <strong style="color: var(--primary);">🔒 Safe option:</strong> Fine-grained token banao →
+                    Repository access: <strong>"Only select repositories"</strong> (sirf ye repo) →
+                    Permission: <strong>Contents: Read and write</strong> (bas itna hi).<br>
+                    Classic token bhi chalega (scope: <code>repo</code>), par wo aapke <strong>saare</strong> repos ka
+                    full control deta hai — public repo ke liye recommended nahi.<br>
+                    Token sirf is browser me save hota hai (sessionStorage), kabhi website par upload nahi hota.
                 </small>
             </div>
             
