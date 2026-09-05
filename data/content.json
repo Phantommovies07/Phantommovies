@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788612348554",
+      "type": "movie",
+      "title": "Mirzapur: The Movie",
+      "genre": "Action",
+      "year": 2026,
+      "duration": "3h 17m",
+      "rating": 5.5,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/jAt8u6MMIMnExmG6bN02EQyB0KR.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/nTkQBI8ldvPByIkxsemGxtKlr8E.jpg",
+      "streamLink": "https://short.azonahub.biz/z5txbrWYHlZajGqs",
+      "streams": [
+        {
+          "name": "Fast",
+          "url": "https://short.azonahub.biz/z5txbrWYHlZajGqs"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3.69GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/z5txbrWYHlZajGqs",
+          "color": "#cf1717"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "The battle for Mirzapur’s throne intensifies as old enemies resurface and a new threat emerges in the form of Babban Babua, a ruthless businessman from Jaisalmer with ambitions of his own. As the Tripathis face enemies from both the past and present, loyalties are tested while Guddu and Bablu Pandit fight to establish themselves in the power struggle for Mirzapur.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": true,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-05T12:45:48.554Z",
+      "updatedAt": "2026-09-05T12:45:48.554Z"
+    },
+    {
       "id": "1788611917865",
       "type": "movie",
       "title": "The Great Grand Superhero: Aliens Ka Aagman",
@@ -319,8 +360,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 7,
-    "lastUpdated": "2026-09-05T12:38:37.865Z",
+    "totalMovies": 8,
+    "lastUpdated": "2026-09-05T12:45:48.554Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
