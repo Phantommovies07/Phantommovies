@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788629789957",
+      "type": "movie",
+      "title": "The Runner",
+      "genre": "Thriller",
+      "year": 2026,
+      "duration": "1h 26m",
+      "rating": 6.3,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/ziXF8wIBguHNCeplNthUlDTCZP8.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/ou7agRKxxuGVHf8m",
+      "streams": [
+        {
+          "name": "HD",
+          "url": "https://short.azonahub.biz/embed/ou7agRKxxuGVHf8m"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "1.45GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/ou7agRKxxuGVHf8m",
+          "color": "#5bc4f5"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Maia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-05T17:36:29.957Z",
+      "updatedAt": "2026-09-05T17:36:29.957Z"
+    },
+    {
       "id": "1788624897963",
       "type": "movie",
       "title": "DC",
@@ -401,8 +442,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 9,
-    "lastUpdated": "2026-09-05T16:14:57.963Z",
+    "totalMovies": 10,
+    "lastUpdated": "2026-09-05T17:36:29.957Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
