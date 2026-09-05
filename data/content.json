@@ -1,6 +1,54 @@
 {
   "movies": [
     {
+      "id": "1788611917865",
+      "type": "movie",
+      "title": "The Great Grand Superhero: Aliens Ka Aagman",
+      "genre": "Comedy",
+      "year": 2026,
+      "duration": "1h 52m",
+      "rating": 6,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/6CYmHknTN2UGGhqQUZh4tqQ6fEr.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/2Lu1jb8kv93ciXYhmUlsj0E2RK1.jpg",
+      "streamLink": "https://short.azonahub.biz/pH8ZiyWiMkUIFrhX",
+      "streams": [
+        {
+          "name": "Fast",
+          "url": "https://short.azonahub.biz/pH8ZiyWiMkUIFrhX"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p",
+          "size": "985MB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/OzmpwmhMEiT6AA8Y",
+          "color": "#5bc4f5"
+        },
+        {
+          "quality": "1080p",
+          "size": "2.19GB",
+          "server": "HD+",
+          "url": "https://short.azonahub.biz/file/pH8ZiyWiMkUIFrhX",
+          "color": "#5bc4f5"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Follows a grandfather and grandson whose relationship transforms through the child's imagination when they encounter aliens.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-05T12:38:37.865Z",
+      "updatedAt": "2026-09-05T12:38:37.865Z"
+    },
+    {
       "id": "1787249920689",
       "type": "movie",
       "title": "The Railway Men - The Untold Story of Bhopal 1984",
@@ -271,8 +319,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 6,
-    "lastUpdated": "2026-08-29T14:06:50.703Z",
+    "totalMovies": 7,
+    "lastUpdated": "2026-09-05T12:38:37.865Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
