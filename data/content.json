@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788624897963",
+      "type": "movie",
+      "title": "DC",
+      "genre": "Romance",
+      "year": 2026,
+      "duration": "2h 22m",
+      "rating": 7.8,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/k9AwqfQ9wYtaGew8oZh6GBouvO2.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/9GmAODqkVdRvSgg5C4Vfeomi5Nj.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/MMkFUlOeSj7WlmOO",
+      "streams": [
+        {
+          "name": "Hd",
+          "url": "https://short.azonahub.biz/embed/MMkFUlOeSj7WlmOO"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3.05GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/MMkFUlOeSj7WlmOO",
+          "color": "#cd0a0a"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Rebel Devadas joins forces with Chandra in a dangerous world where passion and peril collide. Their turbulent alliance demands bloodshed and tests loyalties as survival becomes the ultimate stake in their fight.",
+      "featured": true,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-05T16:14:57.963Z",
+      "updatedAt": "2026-09-05T16:14:57.963Z"
+    },
+    {
       "id": "1788612348554",
       "type": "movie",
       "title": "Mirzapur: The Movie",
@@ -360,8 +401,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 8,
-    "lastUpdated": "2026-09-05T12:49:51.499Z",
+    "totalMovies": 9,
+    "lastUpdated": "2026-09-05T16:14:57.963Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
