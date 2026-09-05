@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788644447958",
+      "type": "movie",
+      "title": "Lenin",
+      "genre": "Action",
+      "year": 2026,
+      "duration": "2h 36m",
+      "rating": 6.2,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/rAHQviBq8Fxi20hNtHPGLnr4L0f.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/5P6jYac8MjxyIh0m9JO4K7MUeUc.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/F0J5VhAO1AzqhKui",
+      "streams": [
+        {
+          "name": "HD+",
+          "url": "https://short.azonahub.biz/embed/F0J5VhAO1AzqhKui"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3.86GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/F0J5VhAO1AzqhKui",
+          "color": "#fb04ce"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "In a village trapped by generations of bloodshed, a determined young man dares to challenge the traditions fueling an endless cycle of violence.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-05T21:40:47.958Z",
+      "updatedAt": "2026-09-05T21:40:47.959Z"
+    },
+    {
       "id": "1788637430912",
       "type": "movie",
       "title": "Dhamaal 4",
@@ -483,8 +524,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 11,
-    "lastUpdated": "2026-09-05T19:43:50.912Z",
+    "totalMovies": 12,
+    "lastUpdated": "2026-09-05T21:40:47.959Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
