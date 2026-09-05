@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788637430912",
+      "type": "movie",
+      "title": "Dhamaal 4",
+      "genre": "Comedy",
+      "year": 2026,
+      "duration": "2h 23m",
+      "rating": 3,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/oVij5aEEE6iI4PxB4i0CgKp8h0m.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/nC4xjCI9wRICnxf7Lu9k3F4PFk2.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/qr01GF8jchn8cWGD",
+      "streams": [
+        {
+          "name": "HD",
+          "url": "https://short.azonahub.biz/embed/qr01GF8jchn8cWGD"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.86GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/qr01GF8jchn8cWGD",
+          "color": "#46e40c"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "The Dhamaal boys are back for another treasure hunt, facing hilarious challenges in their quest for the Treasure of Life.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-05T19:43:50.912Z",
+      "updatedAt": "2026-09-05T19:43:50.912Z"
+    },
+    {
       "id": "1788629789957",
       "type": "movie",
       "title": "The Runner",
@@ -442,8 +483,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 10,
-    "lastUpdated": "2026-09-05T17:36:29.957Z",
+    "totalMovies": 11,
+    "lastUpdated": "2026-09-05T19:43:50.912Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
