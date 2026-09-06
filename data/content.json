@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788719836145",
+      "type": "movie",
+      "title": "Korean Kanakaraju",
+      "genre": "Horror",
+      "year": 2026,
+      "duration": "2h 45m",
+      "rating": 7,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/vUEb8v8W5ANRXhydogbmjXfRfni.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/qMcVNK71eq1oWWbAt62ZLEkEQnO.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/dTPwT79WcggD4Tsh",
+      "streams": [
+        {
+          "name": "Server 1",
+          "url": "https://short.azonahub.biz/embed/dTPwT79WcggD4Tsh"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "1.54GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/dTPwT79WcggD4Tsh",
+          "color": "#f31212"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Follows a Rayalaseema youth named Kanakaraju whose life upends when a vessel from Korea brings a spirit that possesses him, transforming him into Korean Kanakaraju.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-06T18:37:16.145Z",
+      "updatedAt": "2026-09-06T18:37:16.145Z"
+    },
+    {
       "id": "1788644447958",
       "type": "movie",
       "title": "Lenin",
@@ -524,8 +565,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 12,
-    "lastUpdated": "2026-09-05T21:40:47.959Z",
+    "totalMovies": 13,
+    "lastUpdated": "2026-09-06T18:37:16.145Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
