@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1788979669867",
+      "type": "movie",
+      "title": "Deep Water",
+      "genre": "Horror",
+      "year": 2026,
+      "duration": "1h 47m",
+      "rating": 7.1,
+      "badge": "EXCLUSIVE",
+      "poster": "https://image.tmdb.org/t/p/w500/ZWHxL2ETItcZzeVsVfs6gv3SZ7.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/szKv713FcUXx6hcfdY369vtkmzr.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/ATDlY6AZr7IJRwNe",
+      "streams": [
+        {
+          "name": "Server 1",
+          "url": "https://short.azonahub.biz/embed/ATDlY6AZr7IJRwNe"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "1.78GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/ATDlY6AZr7IJRwNe",
+          "color": "#f40b0b"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "A group of international passengers on a flight from Los Angeles to Shanghai is forced to make an emergency landing in shark-infested waters. The terrified group is forced to work together and overcome their differences if they hope to escape their sinking plane and the frenzy of sharks drawn to the wreckage.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-09T18:47:49.867Z",
+      "updatedAt": "2026-09-09T18:47:49.867Z"
+    },
+    {
       "id": "1788719836145",
       "type": "movie",
       "title": "Korean Kanakaraju",
@@ -565,8 +606,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 13,
-    "lastUpdated": "2026-09-06T18:37:16.145Z",
+    "totalMovies": 14,
+    "lastUpdated": "2026-09-09T18:47:49.867Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
