@@ -53,7 +53,7 @@
       "ratingCount": 0,
       "ratingSum": 0,
       "createdAt": "2026-09-11T07:35:22.817Z",
-      "updatedAt": "2026-09-11T07:35:22.817Z"
+      "updatedAt": "2026-09-11T07:41:19.608Z"
     },
     {
       "id": "1788979669867",
@@ -662,7 +662,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 15,
-    "lastUpdated": "2026-09-11T07:35:22.817Z",
+    "lastUpdated": "2026-09-11T07:41:19.608Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
