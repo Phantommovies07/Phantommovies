@@ -1,6 +1,61 @@
 {
   "movies": [
     {
+      "id": "1789112122817",
+      "type": "series",
+      "title": "Guns & Gulaabs",
+      "genre": "Comedy",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.4,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/yRSvwppi9u77UWGPrRgJoTfv5DR.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/6jJmcfqBnb4Kua7N1cFwJQFR0k2.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/HZwffYQOttS8ePi9",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1 Combined",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Season 1 cobined",
+              "duration": "51m",
+              "streams": [
+                {
+                  "name": "Season 1",
+                  "url": "https://short.azonahub.biz/embed/HZwffYQOttS8ePi9"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p",
+                  "size": "2.5GB",
+                  "server": "Fast Server",
+                  "url": "https://short.azonahub.biz/file/HZwffYQOttS8ePi9",
+                  "color": "#db0000"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "trailerLink": "",
+      "description": "In the cartel-run town of Gulaabgunj, an unprecedented opium deal pulls a big-city cop and a lovesick mechanic into its chaotic clutches.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-11T07:35:22.817Z",
+      "updatedAt": "2026-09-11T07:35:22.817Z"
+    },
+    {
       "id": "1788979669867",
       "type": "movie",
       "title": "Deep Water",
@@ -606,8 +661,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 14,
-    "lastUpdated": "2026-09-09T18:47:49.867Z",
+    "totalMovies": 15,
+    "lastUpdated": "2026-09-11T07:35:22.817Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
