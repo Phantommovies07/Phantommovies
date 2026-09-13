@@ -1,6 +1,61 @@
 {
   "movies": [
     {
+      "id": "1789321893351",
+      "type": "series",
+      "title": "The WONDERfools",
+      "genre": "Action & Adventure",
+      "year": 2026,
+      "duration": "1h 20m/ep",
+      "rating": 8.9,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/q5wfakAtbiO4dMss2N21vY1i128.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/810mXC0xkxXVtoKIPGGVgO9PuLh.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/9PVYeidwxAFpkHFm",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "The WONDERfools Combined",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Every Life Comes With a Surprise Twist",
+              "duration": "1h 8m",
+              "streams": [
+                {
+                  "name": "Server 1",
+                  "url": "https://short.azonahub.biz/embed/9PVYeidwxAFpkHFm"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p",
+                  "size": "3.68GB",
+                  "server": "Fast Server",
+                  "url": "https://short.azonahub.biz/file/9PVYeidwxAFpkHFm",
+                  "color": "#e2b308"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "trailerLink": "",
+      "description": "A goofy group of townies stumbles into superpowers and fights rising evil as doomsday panic grows in this wild, turn-of-the-century action comedy.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-13T17:51:33.351Z",
+      "updatedAt": "2026-09-13T17:51:33.351Z"
+    },
+    {
       "id": "1789112122817",
       "type": "series",
       "title": "Guns & Gulaabs",
@@ -661,8 +716,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 15,
-    "lastUpdated": "2026-09-11T07:42:12.259Z",
+    "totalMovies": 16,
+    "lastUpdated": "2026-09-13T17:51:33.351Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
