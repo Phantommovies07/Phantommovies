@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1789323574284",
+      "type": "movie",
+      "title": "Simmba",
+      "genre": "Action",
+      "year": 2018,
+      "duration": "2h 39m",
+      "rating": 6.2,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/3jUuzSymG3uzYM1cUaERsFSZT58.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/fGYTO7BJzKdgLB2CSjNvYISjZtE.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/ijGVOOEFtRApQGYD",
+      "streams": [
+        {
+          "name": "Server 1",
+          "url": "https://short.azonahub.biz/embed/ijGVOOEFtRApQGYD"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.72GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/ijGVOOEFtRApQGYD",
+          "color": "#5bc4f5"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "A corrupt police officer enjoys all the perks of being an immoral and unethical police officer until an event which transforms his life completely and forces him to choose the righteous path.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-13T18:19:34.284Z",
+      "updatedAt": "2026-09-13T18:19:34.284Z"
+    },
+    {
       "id": "1789321893351",
       "type": "series",
       "title": "The WONDERfools",
@@ -716,8 +757,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 16,
-    "lastUpdated": "2026-09-13T17:51:33.351Z",
+    "totalMovies": 17,
+    "lastUpdated": "2026-09-13T18:19:34.284Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
