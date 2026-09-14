@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1789407885025",
+      "type": "movie",
+      "title": "Vishwanath & Sons",
+      "genre": "Drama",
+      "year": 2026,
+      "duration": "2h 41m",
+      "rating": 7.4,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/f5yXF2vBOxZcPxvw1P7kXXqOVFV.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/nfNaAiiILjYRc2CKkId1ZfPTtlh.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/NCo76iRXlb6YkVVU",
+      "streams": [
+        {
+          "name": "Server 1",
+          "url": "https://short.azonahub.biz/embed/NCo76iRXlb6YkVVU"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "3GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/NCo76iRXlb6YkVVU",
+          "color": "#5bc4f5"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "A celebrated Olympian shooter travels to America looking for a donor to help his sick child — but unexpected romance complicates his search.",
+      "featured": true,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-14T17:44:45.025Z",
+      "updatedAt": "2026-09-14T17:44:45.025Z"
+    },
+    {
       "id": "1789323574284",
       "type": "movie",
       "title": "Simmba",
@@ -757,8 +798,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 17,
-    "lastUpdated": "2026-09-13T18:19:34.284Z",
+    "totalMovies": 18,
+    "lastUpdated": "2026-09-14T17:44:45.025Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
