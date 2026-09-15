@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1789493762297",
+      "type": "movie",
+      "title": "Pitt Siyapa",
+      "genre": "Comedy",
+      "year": 2026,
+      "duration": "2h 12m",
+      "rating": 0,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/4TqVnSza0mvSH6Oz6Z6ZLWtgwDd.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/1vC4Cy8YThzksYyqUZ3BI9YQ6W1.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/zNNY2GF8x243LVLp",
+      "streams": [
+        {
+          "name": "Server 1",
+          "url": "https://short.azonahub.biz/embed/zNNY2GF8x243LVLp"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.5GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/zNNY2GF8x243LVLp",
+          "color": "#ec0e0e"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Nimmi, a clever young woman, transforms her father's death into an unusual business running virtual funerals for NRIs. With her ragtag crew, she orchestrates chaotic send-offs until NRI Mickey arrives, sparking hilarious chaos and romance.",
+      "featured": true,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-15T17:36:02.297Z",
+      "updatedAt": "2026-09-15T17:36:02.297Z"
+    },
+    {
       "id": "1789407885025",
       "type": "movie",
       "title": "Vishwanath & Sons",
@@ -798,8 +839,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 18,
-    "lastUpdated": "2026-09-14T17:44:45.025Z",
+    "totalMovies": 19,
+    "lastUpdated": "2026-09-15T17:36:02.297Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
