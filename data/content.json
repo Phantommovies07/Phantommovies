@@ -1,6 +1,47 @@
 {
   "movies": [
     {
+      "id": "1789665325987",
+      "type": "movie",
+      "title": "Swapped",
+      "genre": "Adventure",
+      "year": 2026,
+      "duration": "1h 42m",
+      "rating": 8.9,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/zMwhWailP1WY7sb6AoE6b8ugoy.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/4ZzK63a0qXaLjiPV",
+      "streams": [
+        {
+          "name": "Server 1",
+          "url": "https://short.azonahub.biz/embed/4ZzK63a0qXaLjiPV"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.31GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/4ZzK63a0qXaLjiPV",
+          "color": "#5bc4f5"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a greater threat—one that could endanger not only their species, but the entire valley they call home.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-17T17:15:25.987Z",
+      "updatedAt": "2026-09-17T17:15:25.987Z"
+    },
+    {
       "id": "1789493762297",
       "type": "movie",
       "title": "Pitt Siyapa",
@@ -839,8 +880,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 19,
-    "lastUpdated": "2026-09-15T17:36:02.297Z",
+    "totalMovies": 20,
+    "lastUpdated": "2026-09-17T17:15:25.987Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
