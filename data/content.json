@@ -1,6 +1,61 @@
 {
   "movies": [
     {
+      "id": "1789668060577",
+      "type": "series",
+      "title": "Glory",
+      "genre": "Drama",
+      "year": 2026,
+      "duration": "",
+      "rating": 6.8,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/juAQ7fFQGu2n3A2gW5tfNub1cW8.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/o9rD068PXoATK5H5Z3W2sJ4fA60.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/lwSq49Ea99ExfOBo",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1 Combined",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Season 1 Combined",
+              "duration": "6h 9m",
+              "streams": [
+                {
+                  "name": "Server 1",
+                  "url": "https://short.azonahub.biz/embed/lwSq49Ea99ExfOBo"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p",
+                  "size": "3.5GB",
+                  "server": "Fast Server",
+                  "url": "https://short.azonahub.biz/file/lwSq49Ea99ExfOBo",
+                  "color": "#0df81c"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "trailerLink": "",
+      "description": "In a small-town boxing hub, two brothers investigate a shocking murder while navigating a troubled reunion with their father, a renowned coach.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-17T18:01:00.577Z",
+      "updatedAt": "2026-09-17T18:01:00.577Z"
+    },
+    {
       "id": "1789665325987",
       "type": "movie",
       "title": "Swapped",
@@ -880,8 +935,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 20,
-    "lastUpdated": "2026-09-17T17:15:25.987Z",
+    "totalMovies": 21,
+    "lastUpdated": "2026-09-17T18:01:00.577Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
