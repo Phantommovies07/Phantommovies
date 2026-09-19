@@ -46,6 +46,11 @@ function getCurrentEpisode() {
 }
 
 function normalizeStreams(episode) {
+    // COMBINED mode: sab episodes ek hi file me -> series-level streams use karo
+    if (currentSeries?.combined) {
+        return (Array.isArray(currentSeries.streams) ? currentSeries.streams : [])
+            .filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
+    }
     if (Array.isArray(episode?.streams) && episode.streams.length) {
         return episode.streams.filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
     }
@@ -53,6 +58,10 @@ function normalizeStreams(episode) {
 }
 
 function normalizeDownloads(episode) {
+    // COMBINED mode: series-level downloads use karo
+    if (currentSeries?.combined) {
+        return Array.isArray(currentSeries.downloads) ? currentSeries.downloads.filter(d => d && d.url) : [];
+    }
     return Array.isArray(episode?.downloads) ? episode.downloads.filter(d => d && d.url) : [];
 }
 
@@ -89,6 +98,7 @@ function renderSeries(series) {
                 <h1>${escapeHTML(series.title)}</h1>
                 <p class="detail-meta">${escapeHTML(meta)}</p>
                 <p class="detail-desc">${escapeHTML(series.description || 'No description available.')}</p>
+                ${series.combined ? '<p class="detail-meta" style="margin-top:6px;">🎞 Combined: sab episodes ek hi video file me hain.</p>' : ''}
 
                 <div class="series-browser">
                     <div class="series-tabs" id="seasonTabs"></div>

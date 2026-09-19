@@ -454,8 +454,8 @@ function toggleContentType() {
     const formTitle = document.getElementById('formTitle');
 
     if (type === 'series') {
-        movieBlock?.classList.add('hidden');
         seriesBlock?.classList.remove('hidden');
+        toggleCombined();   // combined ho to movie-links block dikhega, warna hidden
         if (formTitle) formTitle.textContent = 'Add New Series';
         if (!document.querySelector('.season-block')) addSeason();
     } else {
@@ -463,6 +463,16 @@ function toggleContentType() {
         seriesBlock?.classList.add('hidden');
         if (formTitle) formTitle.textContent = 'Add New Movie';
     }
+}
+
+// Combined-episode toggle: series mode me series-level stream/download block show/hide
+function toggleCombined() {
+    const type = document.getElementById('contentType')?.value || 'movie';
+    const movieBlock = document.getElementById('movieLinksBlock');
+    const combined = document.getElementById('combinedEpisodes')?.checked || false;
+    if (type !== 'series') return;
+    if (combined) movieBlock?.classList.remove('hidden');
+    else movieBlock?.classList.add('hidden');
 }
 
 // ─── IMAGE PREVIEWS ───
@@ -782,6 +792,8 @@ function escapeAttr(value) {
 
 function resetMovieForm() {
     document.getElementById('movieForm').reset();
+    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = false;
+    toggleCombined();
     document.getElementById('active').checked = true;
     if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = 'published';
     if (document.getElementById('trending')) document.getElementById('trending').checked = false;
@@ -808,8 +820,10 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const contentType = document.getElementById('contentType').value;
-    const streams = contentType === 'movie' ? collectStreams(document.getElementById('movieLinksBlock')) : [];
-    const downloads = contentType === 'movie' ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
+    const combined = contentType === 'series' && (document.getElementById('combinedEpisodes')?.checked || false);
+    const useTopLinks = contentType === 'movie' || combined;
+    const streams = useTopLinks ? collectStreams(document.getElementById('movieLinksBlock')) : [];
+    const downloads = useTopLinks ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
     const seasons = contentType === 'series' ? collectSeriesSeasons() : [];
     const firstEpisode = seasons[0]?.episodes?.[0];
 
@@ -823,7 +837,8 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         badge: document.getElementById('badge').value,
         poster: document.getElementById('poster').value.trim(),
         banner: document.getElementById('banner').value.trim(),
-        streamLink: contentType === 'movie' ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
+        combined: combined,
+        streamLink: useTopLinks ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
         streams: streams,
         downloads: downloads,
         seasons: seasons,
@@ -841,8 +856,8 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         return;
     }
 
-    if (contentType === 'movie' && streams.length === 0) {
-        showAlert('contentAlert', '❌ Movie ke liye at least one streaming link required hai', 'error');
+    if (useTopLinks && streams.length === 0) {
+        showAlert('contentAlert', `❌ ${combined ? 'Combined series' : 'Movie'} ke liye at least one streaming link required hai`, 'error');
         return;
     }
 
@@ -999,6 +1014,7 @@ async function editMovie(id) {
 function populateFormForEdit(item) {
     editingMovieId = item.id;
     setInputValue('contentType', item.type === 'series' ? 'series' : 'movie');
+    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = !!item.combined;
     toggleContentType();
     setInputValue('title', item.title || '');
     setSelectValue('genre', item.genre || 'Drama');
@@ -1026,6 +1042,11 @@ function populateFormForEdit(item) {
     if (item.type === 'series') {
         (item.seasons || []).forEach(season => addSeason(season));
         if (!(item.seasons || []).length) addSeason();
+        if (item.combined) {
+            const streams = item.streams && item.streams.length ? item.streams : (item.streamLink ? [{ name: 'Server 1', url: item.streamLink }] : [{}]);
+            streams.forEach(st => addStreamLink(st));
+            (item.downloads && item.downloads.length ? item.downloads : [{}]).forEach(dl => addDownloadOption(dl));
+        }
     } else {
         const streams = item.streams && item.streams.length ? item.streams : (item.streamLink ? [{ name: 'Server 1', url: item.streamLink }] : [{}]);
         streams.forEach(st => addStreamLink(st));
@@ -1310,5 +1331,114 @@ function applySimpleAdSetup() {
         showAlert('contentAlert', `✅ ${type.label} selected placements me apply ho gaya. Ab Save Ads Settings dabao.`, 'success');
     } else {
         showAlert('contentAlert', '✅ Direct link click ad me apply ho gaya. Ab Save Ads Settings dabao.', 'success');
+    }
+}
+
+// ═══════════════════════════════════════════════════
+// BULK QUICK ADD — TMDB auto-fill + one-click publish
+// Format per line: Title | stream | download | type(optional)
+// ═══════════════════════════════════════════════════
+async function tmdbAutoFill(title, type) {
+    const token = getTMDBToken();
+    const out = { genre: '', year: '', duration: '', rating: '', poster: '', banner: '', description: '' };
+    if (!token) return out;
+    try {
+        const kind = type === 'series' ? 'tv' : 'movie';
+        const sRes = await fetch(`https://api.themoviedb.org/3/search/${kind}?query=${encodeURIComponent(title)}&include_adult=false&language=en-US&page=1`, { headers: tmdbHeaders() });
+        if (!sRes.ok) return out;
+        const sData = await sRes.json();
+        const first = (sData.results || [])[0];
+        if (!first) return out;
+
+        const dRes = await fetch(`https://api.themoviedb.org/3/${kind}/${first.id}?language=en-US`, { headers: tmdbHeaders() });
+        if (!dRes.ok) return out;
+        const d = await dRes.json();
+
+        const date = kind === 'tv' ? d.first_air_date : d.release_date;
+        const runtime = kind === 'tv' ? (d.episode_run_time && d.episode_run_time[0]) : d.runtime;
+        out.genre = (d.genres && d.genres[0] && d.genres[0].name) || '';
+        out.year = date ? String(date).slice(0, 4) : '';
+        out.duration = runtime ? formatMinutes(runtime) : '';
+        out.rating = d.vote_average ? Number(d.vote_average).toFixed(1) : '';
+        out.poster = d.poster_path ? `${TMDB_IMAGE_BASE}w500${d.poster_path}` : '';
+        out.banner = d.backdrop_path ? `${TMDB_IMAGE_BASE}w1280${d.backdrop_path}` : out.poster;
+        out.description = d.overview || '';
+    } catch (e) { /* metadata fail ho to khali chhodo */ }
+    return out;
+}
+
+function qaLog(msg) {
+    const box = document.getElementById('quickAddLog');
+    if (box) box.textContent += msg + '\n';
+}
+
+async function runQuickAdd() {
+    const raw = (document.getElementById('quickAddInput')?.value || '').trim();
+    if (!raw) { showAlert('contentAlert', '❌ Pehle kam se kam ek line likho', 'error'); return; }
+    const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+    if (!lines.length) return;
+
+    const logBox = document.getElementById('quickAddLog');
+    if (logBox) logBox.textContent = '';
+    showSpinner(true);
+
+    const newMovies = [];
+    for (let i = 0; i < lines.length; i++) {
+        const parts = lines[i].split('|').map(p => p.trim());
+        const title = parts[0] || '';
+        const stream = parts[1] || '';
+        const download = parts[2] || '';
+        const type = (parts[3] || 'movie').toLowerCase() === 'series' ? 'series' : 'movie';
+
+        if (!title || !stream) { qaLog(`️ Line ${i + 1} skip (title/stream missing)`); continue; }
+
+        qaLog(`⏳ [${i + 1}/${lines.length}] "${title}" — TMDB fetch...`);
+        const meta = await tmdbAutoFill(title, type);
+
+        const now = new Date().toISOString();
+        const downloads = download ? [{ quality: '720p', size: '', server: 'ToxCloud', url: download, color: '' }] : [];
+        newMovies.push({
+            id: Date.now().toString() + i,
+            type, title,
+            genre: meta.genre || 'Action',
+            year: meta.year || '',
+            duration: type === 'series' && meta.duration ? `${meta.duration}/ep` : meta.duration,
+            rating: meta.rating || '',
+            badge: 'NEW',
+            poster: meta.poster, banner: meta.banner,
+            streamLink: stream,
+            streams: [{ name: 'ToxCloud', url: stream }],
+            downloads,
+            seasons: [],
+            trailerLink: '',
+            description: meta.description,
+            featured: false, trending: false, heroSlide: false,
+            status: 'published', active: true,
+            views: 0, createdAt: now, updatedAt: now
+        });
+        qaLog(`✅ "${title}" ready (${meta.genre || 'no genre'}, ${meta.year || 'no year'})`);
+    }
+
+    if (!newMovies.length) { showSpinner(false); showAlert('contentAlert', '❌ Koi valid line nahi mili', 'error'); return; }
+
+    try {
+        qaLog('💾 GitHub par save ho raha hai...');
+        const fileData = await githubAPI.getFile(githubAPI.contentPath);
+        const content = await githubAPI.getContent();
+        newMovies.forEach(m => content.movies.unshift(m));
+        content.settings = content.settings || {};
+        content.settings.totalMovies = content.movies.length;
+        content.settings.lastUpdated = new Date().toISOString();
+        await githubAPI.updateFile(githubAPI.contentPath, JSON.stringify(content, null, 2), `Bulk quick add: ${newMovies.length} items`, fileData ? fileData.sha : null);
+
+        qaLog(`🎉 ${newMovies.length} content publish ho gaye!`);
+        showAlert('contentAlert', `✅ ${newMovies.length} content publish ho gaye`, 'success');
+        document.getElementById('quickAddInput').value = '';
+        loadMovies();
+    } catch (e) {
+        qaLog('❌ Save fail: ' + e.message);
+        showAlert('contentAlert', `❌ Save fail: ${e.message}`, 'error');
+    } finally {
+        showSpinner(false);
     }
 }

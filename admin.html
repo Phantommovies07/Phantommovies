@@ -773,11 +773,36 @@
 
 
             <div class="quick-admin-bar">
+                <button type="button" onclick="togglePanel('quickAddBody')">⚡ Quick Add</button>
                 <button type="button" onclick="togglePanel('tmdbPanelBody')">🔎 TMDB Search</button>
                 <button type="button" onclick="togglePanel('siteSettingsBody')">⚙️ Site Settings</button>
                 <button type="button" onclick="togglePanel('adsBody')">💰 Ads</button>
                 <button type="button" onclick="checkBrokenLinks()">🔗 Link Check</button>
                 <button type="button" onclick="resetMovieForm()">＋ New Content</button>
+            </div>
+
+            <!-- ══ BULK QUICK ADD ══ -->
+            <div class="admin-panel-card compact-panel">
+                <div class="panel-title-row">
+                    <div>
+                        <h3>⚡ Bulk Quick Add</h3>
+                        <p class="helper-text compact-helper">Ek saath kai movies/series add karo — TMDB metadata auto-fill hoga, ek hi click me publish.</p>
+                    </div>
+                    <button type="button" class="btn-small btn-secondary" onclick="togglePanel('quickAddBody')">Open / Close</button>
+                </div>
+                <div class="collapsible-body collapsed" id="quickAddBody">
+                    <div class="form-group">
+                        <label>Har line me ek content (format neeche)</label>
+                        <textarea id="quickAddInput" rows="6"
+                            placeholder="Title | stream link | download link | movie&#10;Example:&#10;Blast 2026 | https://tox.cloud/v/abc | https://tox.cloud/d/abc | movie&#10;Money Heist | https://tox.cloud/v/xyz | https://tox.cloud/d/xyz | series"></textarea>
+                        <small style="color: var(--muted); font-size: 12px; display:block; margin-top:6px;">
+                            Format: <code>Title | stream | download | type</code> — type optional (default: movie).
+                            Download khali chhodna ho to <code>Title | stream | | movie</code> likho.
+                        </small>
+                    </div>
+                    <button type="button" class="btn-primary" onclick="runQuickAdd()">⚡ Auto-Fill TMDB + Publish All</button>
+                    <div id="quickAddLog" style="margin-top:12px; font-size:12px; color: var(--muted); white-space:pre-wrap;"></div>
+                </div>
             </div>
 
             <div class="admin-panel-card compact-panel">
@@ -1110,6 +1135,10 @@
                         <button type="button" class="btn-small btn-secondary" onclick="addSeason()">＋ Add Season</button>
                     </div>
                     <p class="helper-text">Season add karo, phir har season me episodes add karo. Har episode me apne stream/download links add ho sakte hain.</p>
+                    <label style="display:flex; align-items:center; gap:10px; margin:12px 0; padding:12px; background:var(--surface,#171722); border:1px solid var(--border,#2a2a3a); border-radius:10px; cursor:pointer;">
+                        <input type="checkbox" id="combinedEpisodes" onchange="toggleCombined()" style="width:18px;height:18px;">
+                        <span style="font-size:14px;">🎞 <strong>Combined Episodes</strong> — sab episodes <strong>EK video file</strong> me hain (single stream + download). Episode list sirf titles ke liye.</span>
+                    </label>
                     <div class="dynamic-section bulk-tools">
                         <div class="dynamic-header"><label>⚡ Bulk Episode Link Paste</label></div>
                         <p class="helper-text">Format examples:<br>S1E1 | Stream | Server 1 | https://link<br>S1E1 | Download | 720p | 900MB | https://link</p>
