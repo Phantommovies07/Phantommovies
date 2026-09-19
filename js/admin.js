@@ -454,8 +454,8 @@ function toggleContentType() {
     const formTitle = document.getElementById('formTitle');
 
     if (type === 'series') {
+        movieBlock?.classList.add('hidden');
         seriesBlock?.classList.remove('hidden');
-        toggleCombined();   // combined ho to movie-links block dikhega, warna hidden
         if (formTitle) formTitle.textContent = 'Add New Series';
         if (!document.querySelector('.season-block')) addSeason();
     } else {
@@ -463,16 +463,6 @@ function toggleContentType() {
         seriesBlock?.classList.add('hidden');
         if (formTitle) formTitle.textContent = 'Add New Movie';
     }
-}
-
-// Combined-episode toggle: series mode me series-level stream/download block show/hide
-function toggleCombined() {
-    const type = document.getElementById('contentType')?.value || 'movie';
-    const movieBlock = document.getElementById('movieLinksBlock');
-    const combined = document.getElementById('combinedEpisodes')?.checked || false;
-    if (type !== 'series') return;
-    if (combined) movieBlock?.classList.remove('hidden');
-    else movieBlock?.classList.add('hidden');
 }
 
 // ─── IMAGE PREVIEWS ───
@@ -792,8 +782,6 @@ function escapeAttr(value) {
 
 function resetMovieForm() {
     document.getElementById('movieForm').reset();
-    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = false;
-    toggleCombined();
     document.getElementById('active').checked = true;
     if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = 'published';
     if (document.getElementById('trending')) document.getElementById('trending').checked = false;
@@ -820,10 +808,8 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const contentType = document.getElementById('contentType').value;
-    const combined = contentType === 'series' && (document.getElementById('combinedEpisodes')?.checked || false);
-    const useTopLinks = contentType === 'movie' || combined;
-    const streams = useTopLinks ? collectStreams(document.getElementById('movieLinksBlock')) : [];
-    const downloads = useTopLinks ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
+    const streams = contentType === 'movie' ? collectStreams(document.getElementById('movieLinksBlock')) : [];
+    const downloads = contentType === 'movie' ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
     const seasons = contentType === 'series' ? collectSeriesSeasons() : [];
     const firstEpisode = seasons[0]?.episodes?.[0];
 
@@ -837,8 +823,7 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         badge: document.getElementById('badge').value,
         poster: document.getElementById('poster').value.trim(),
         banner: document.getElementById('banner').value.trim(),
-        combined: combined,
-        streamLink: useTopLinks ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
+        streamLink: contentType === 'movie' ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
         streams: streams,
         downloads: downloads,
         seasons: seasons,
@@ -856,8 +841,8 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         return;
     }
 
-    if (useTopLinks && streams.length === 0) {
-        showAlert('contentAlert', `❌ ${combined ? 'Combined series' : 'Movie'} ke liye at least one streaming link required hai`, 'error');
+    if (contentType === 'movie' && streams.length === 0) {
+        showAlert('contentAlert', '❌ Movie ke liye at least one streaming link required hai', 'error');
         return;
     }
 
@@ -1014,7 +999,6 @@ async function editMovie(id) {
 function populateFormForEdit(item) {
     editingMovieId = item.id;
     setInputValue('contentType', item.type === 'series' ? 'series' : 'movie');
-    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = !!item.combined;
     toggleContentType();
     setInputValue('title', item.title || '');
     setSelectValue('genre', item.genre || 'Drama');
@@ -1042,11 +1026,6 @@ function populateFormForEdit(item) {
     if (item.type === 'series') {
         (item.seasons || []).forEach(season => addSeason(season));
         if (!(item.seasons || []).length) addSeason();
-        if (item.combined) {
-            const streams = item.streams && item.streams.length ? item.streams : (item.streamLink ? [{ name: 'Server 1', url: item.streamLink }] : [{}]);
-            streams.forEach(st => addStreamLink(st));
-            (item.downloads && item.downloads.length ? item.downloads : [{}]).forEach(dl => addDownloadOption(dl));
-        }
     } else {
         const streams = item.streams && item.streams.length ? item.streams : (item.streamLink ? [{ name: 'Server 1', url: item.streamLink }] : [{}]);
         streams.forEach(st => addStreamLink(st));
