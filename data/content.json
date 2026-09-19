@@ -1,6 +1,61 @@
 {
   "movies": [
     {
+      "id": "1789804990648",
+      "type": "series",
+      "title": "Waiting Hai",
+      "genre": "Comedy",
+      "year": 2026,
+      "duration": "",
+      "rating": 0,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/6jBdFWwgKgkcrAGaDfTC9bpudaN.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/uzcQT7vywQd7owQvX7lNbwd00vU.jpg",
+      "streamLink": "https://short.azonahub.biz/embed/c4rNryRy49oYNNAt",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Season 1 Combined",
+              "duration": "6hr  aprx",
+              "streams": [
+                {
+                  "name": "Server 1",
+                  "url": "https://short.azonahub.biz/embed/c4rNryRy49oYNNAt"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p",
+                  "size": "2.64GB",
+                  "server": "Fast Server",
+                  "url": "https://short.azonahub.biz/file/c4rNryRy49oYNNAt",
+                  "color": "#fe1010"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "trailerLink": "",
+      "description": "Sugam joins the RPF and investigates a Tatkal scam. Hamza and Mama turn booking software into a business, facing rivalry and betrayal. Sugam arrests the agents and tracks Hamza, ending the scam before his escape to Dubai.",
+      "featured": true,
+      "trending": true,
+      "heroSlide": true,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-19T08:03:10.648Z",
+      "updatedAt": "2026-09-19T08:03:10.648Z"
+    },
+    {
       "id": "1789668060577",
       "type": "series",
       "title": "Glory",
@@ -935,8 +990,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 21,
-    "lastUpdated": "2026-09-18T19:41:31.774Z",
+    "totalMovies": 22,
+    "lastUpdated": "2026-09-19T08:03:10.649Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
