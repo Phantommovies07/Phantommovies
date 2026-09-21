@@ -45,12 +45,18 @@ function getCurrentEpisode() {
     return season?.episodes?.[currentEpisodeIndex] || null;
 }
 
+function seasonStreams(season) {
+    return (Array.isArray(season?.streams) ? season.streams : [])
+        .filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
+}
+
 function normalizeStreams(episode) {
-    // COMBINED mode: sab episodes ek hi file me -> series-level streams use karo
-    if (currentSeries?.combined) {
-        return (Array.isArray(currentSeries.streams) ? currentSeries.streams : [])
-            .filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
-    }
+    const season = getSeasons()[currentSeasonIndex];
+    // 1) SEASON-level combined: is season ke sab episodes ek file me
+    if (season?.combined) return seasonStreams(season);
+    // 2) SERIES-level combined: poori series ek file me
+    if (currentSeries?.combined) return seasonStreams(currentSeries);
+    // 3) Normal: per-episode streams
     if (Array.isArray(episode?.streams) && episode.streams.length) {
         return episode.streams.filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
     }
@@ -58,10 +64,9 @@ function normalizeStreams(episode) {
 }
 
 function normalizeDownloads(episode) {
-    // COMBINED mode: series-level downloads use karo
-    if (currentSeries?.combined) {
-        return Array.isArray(currentSeries.downloads) ? currentSeries.downloads.filter(d => d && d.url) : [];
-    }
+    const season = getSeasons()[currentSeasonIndex];
+    if (season?.combined) return Array.isArray(season.downloads) ? season.downloads.filter(d => d && d.url) : [];
+    if (currentSeries?.combined) return Array.isArray(currentSeries.downloads) ? currentSeries.downloads.filter(d => d && d.url) : [];
     return Array.isArray(episode?.downloads) ? episode.downloads.filter(d => d && d.url) : [];
 }
 
@@ -98,7 +103,7 @@ function renderSeries(series) {
                 <h1>${escapeHTML(series.title)}</h1>
                 <p class="detail-meta">${escapeHTML(meta)}</p>
                 <p class="detail-desc">${escapeHTML(series.description || 'No description available.')}</p>
-                ${series.combined ? '<p class="detail-meta" style="margin-top:6px;">🎞 Combined: sab episodes ek hi video file me hain.</p>' : ''}
+                ${(series.combined || (series.seasons || []).some(s => s.combined)) ? '<p class="detail-meta" style="margin-top:6px;">🎞 Combined: season ke sab episodes ek hi video file me hain.</p>' : ''}
 
                 <div class="series-browser">
                     <div class="series-tabs" id="seasonTabs"></div>

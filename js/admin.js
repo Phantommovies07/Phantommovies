@@ -454,8 +454,8 @@ function toggleContentType() {
     const formTitle = document.getElementById('formTitle');
 
     if (type === 'series') {
-        movieBlock?.classList.add('hidden');
         seriesBlock?.classList.remove('hidden');
+        toggleCombined();   // combined ho to movie-links block dikhega, warna hidden
         if (formTitle) formTitle.textContent = 'Add New Series';
         if (!document.querySelector('.season-block')) addSeason();
     } else {
@@ -463,6 +463,16 @@ function toggleContentType() {
         seriesBlock?.classList.add('hidden');
         if (formTitle) formTitle.textContent = 'Add New Movie';
     }
+}
+
+// Combined-episode toggle: series mode me series-level stream/download block show/hide
+function toggleCombined() {
+    const type = document.getElementById('contentType')?.value || 'movie';
+    const movieBlock = document.getElementById('movieLinksBlock');
+    const combined = document.getElementById('combinedEpisodes')?.checked || false;
+    if (type !== 'series') return;
+    if (combined) movieBlock?.classList.remove('hidden');
+    else movieBlock?.classList.add('hidden');
 }
 
 // ─── IMAGE PREVIEWS ───
@@ -647,6 +657,18 @@ function addSeason(data = {}) {
             </div>
             <button type="button" class="btn-small btn-danger" onclick="removeAnyRow(this)">Remove Season</button>
         </div>
+        <label style="display:flex; align-items:center; gap:8px; margin:10px 0; cursor:pointer;">
+            <input type="checkbox" class="season-combined" onchange="toggleSeasonCombined(this)">
+            🎞 <strong>Combined Season</strong> — is season ke sab episodes <strong>EK video file</strong> me
+        </label>
+        <div class="season-links" style="display:none;">
+            <div class="nested-actions">
+                <button type="button" class="btn-small btn-secondary" onclick="addSeasonStream(this)">＋ Add Season Stream</button>
+                <button type="button" class="btn-small btn-secondary" onclick="addSeasonDownload(this)">＋ Add Season Download</button>
+            </div>
+            <div class="season-streams"></div>
+            <div class="season-downloads"></div>
+        </div>
         <div class="nested-actions">
             <button type="button" class="btn-small btn-secondary" onclick="addEpisode(this)">＋ Add Episode</button>
         </div>
@@ -654,11 +676,55 @@ function addSeason(data = {}) {
     `;
     container.appendChild(block);
 
+    const addEpBtn = () => block.querySelector('button[onclick*="addEpisode"]');
     if (Array.isArray(data.episodes) && data.episodes.length) {
-        data.episodes.forEach(ep => addEpisode(block.querySelector('.nested-actions button'), ep));
+        data.episodes.forEach(ep => addEpisode(addEpBtn(), ep));
     } else {
-        addEpisode(block.querySelector('.nested-actions button'));
+        addEpisode(addEpBtn());
     }
+
+    // Combined season populate (edit mode)
+    if (data.combined) {
+        const cb = block.querySelector('.season-combined');
+        if (cb) { cb.checked = true; toggleSeasonCombined(cb); }
+        const sBtn = () => block.querySelector('button[onclick*="addSeasonStream"]');
+        const dBtn = () => block.querySelector('button[onclick*="addSeasonDownload"]');
+        (Array.isArray(data.streams) && data.streams.length ? data.streams : [{}]).forEach(st => addSeasonStream(sBtn(), st));
+        (Array.isArray(data.downloads) ? data.downloads : []).forEach(dl => addSeasonDownload(dBtn(), dl));
+    }
+}
+
+function toggleSeasonCombined(checkbox) {
+    const seasonBlock = checkbox.closest('.season-block');
+    const links = seasonBlock.querySelector('.season-links');
+    if (links) links.style.display = checkbox.checked ? 'block' : 'none';
+}
+
+function addSeasonStream(button, data = {}) {
+    const seasonBlock = button.closest('.season-block');
+    const container = seasonBlock.querySelector('.season-streams');
+    const row = document.createElement('div');
+    row.className = 'mini-row season-stream-row';
+    row.innerHTML = `
+        <div class="row-title">
+            <span>🎬 Season Stream (combined file)</span>
+            <button type="button" class="remove-row" onclick="removeAnyRow(this)">Remove</button>
+        </div>
+        <div class="row-grid-2">
+            <div class="form-group"><label>Server Name</label><input type="text" class="stream-name" placeholder="Server 1" value="${escapeAttr(data.name || '')}"></div>
+            <div class="form-group"><label>Stream URL</label><input type="url" class="stream-url" placeholder="https://example.com/season-combined" value="${escapeAttr(data.url || '')}"></div>
+        </div>
+    `;
+    container.appendChild(row);
+}
+
+function addSeasonDownload(button, data = {}) {
+    const seasonBlock = button.closest('.season-block');
+    const container = seasonBlock.querySelector('.season-downloads');
+    const row = createDownloadRow(data, 'season-download-row');
+    row.classList.remove('dynamic-row');
+    row.classList.add('mini-row');
+    container.appendChild(row);
 }
 
 function addEpisode(button, data = {}) {
@@ -734,6 +800,12 @@ function collectSeriesSeasons() {
     return Array.from(document.querySelectorAll('.season-block')).map(seasonBlock => {
         const seasonNumber = parseInt(seasonBlock.querySelector('.season-number').value) || 1;
         const title = seasonBlock.querySelector('.season-title').value.trim() || `Season ${seasonNumber}`;
+        const combined = seasonBlock.querySelector('.season-combined')?.checked || false;
+        const seasonStreams = Array.from(seasonBlock.querySelectorAll('.season-stream-row')).map((row, i) => ({
+            name: row.querySelector('.stream-name').value.trim() || `Server ${i + 1}`,
+            url: row.querySelector('.stream-url').value.trim()
+        })).filter(s => s.url);
+        const seasonDownloads = collectDownloads(seasonBlock, '.season-download-row');
         const episodes = Array.from(seasonBlock.querySelectorAll('.episode-block')).map(epBlock => {
             const episodeNumber = parseInt(epBlock.querySelector('.episode-number').value) || 1;
             const title = epBlock.querySelector('.episode-title').value.trim() || `Episode ${episodeNumber}`;
@@ -742,8 +814,8 @@ function collectSeriesSeasons() {
             const downloads = collectDownloads(epBlock, '.ep-download-row');
             return { episodeNumber, title, duration, streams, downloads };
         }).filter(ep => ep.streams.length > 0 || ep.downloads.length > 0 || ep.title);
-        return { seasonNumber, title, episodes };
-    }).filter(season => season.episodes.length > 0);
+        return { seasonNumber, title, combined, streams: seasonStreams, downloads: seasonDownloads, episodes };
+    }).filter(season => season.episodes.length > 0 || season.combined);
 }
 
 function collectEpisodeStreams(epBlock) {
@@ -782,6 +854,8 @@ function escapeAttr(value) {
 
 function resetMovieForm() {
     document.getElementById('movieForm').reset();
+    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = false;
+    toggleCombined();
     document.getElementById('active').checked = true;
     if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = 'published';
     if (document.getElementById('trending')) document.getElementById('trending').checked = false;
@@ -808,8 +882,10 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const contentType = document.getElementById('contentType').value;
-    const streams = contentType === 'movie' ? collectStreams(document.getElementById('movieLinksBlock')) : [];
-    const downloads = contentType === 'movie' ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
+    const combined = contentType === 'series' && (document.getElementById('combinedEpisodes')?.checked || false);
+    const useTopLinks = contentType === 'movie' || combined;
+    const streams = useTopLinks ? collectStreams(document.getElementById('movieLinksBlock')) : [];
+    const downloads = useTopLinks ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
     const seasons = contentType === 'series' ? collectSeriesSeasons() : [];
     const firstEpisode = seasons[0]?.episodes?.[0];
 
@@ -823,7 +899,8 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         badge: document.getElementById('badge').value,
         poster: document.getElementById('poster').value.trim(),
         banner: document.getElementById('banner').value.trim(),
-        streamLink: contentType === 'movie' ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
+        combined: combined,
+        streamLink: useTopLinks ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
         streams: streams,
         downloads: downloads,
         seasons: seasons,
@@ -841,8 +918,8 @@ document.getElementById('movieForm').addEventListener('submit', async (e) => {
         return;
     }
 
-    if (contentType === 'movie' && streams.length === 0) {
-        showAlert('contentAlert', '❌ Movie ke liye at least one streaming link required hai', 'error');
+    if (useTopLinks && streams.length === 0) {
+        showAlert('contentAlert', `❌ ${combined ? 'Combined series' : 'Movie'} ke liye at least one streaming link required hai`, 'error');
         return;
     }
 
@@ -999,6 +1076,7 @@ async function editMovie(id) {
 function populateFormForEdit(item) {
     editingMovieId = item.id;
     setInputValue('contentType', item.type === 'series' ? 'series' : 'movie');
+    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = !!item.combined;
     toggleContentType();
     setInputValue('title', item.title || '');
     setSelectValue('genre', item.genre || 'Drama');
@@ -1026,6 +1104,11 @@ function populateFormForEdit(item) {
     if (item.type === 'series') {
         (item.seasons || []).forEach(season => addSeason(season));
         if (!(item.seasons || []).length) addSeason();
+        if (item.combined) {
+            const streams = item.streams && item.streams.length ? item.streams : (item.streamLink ? [{ name: 'Server 1', url: item.streamLink }] : [{}]);
+            streams.forEach(st => addStreamLink(st));
+            (item.downloads && item.downloads.length ? item.downloads : [{}]).forEach(dl => addDownloadOption(dl));
+        }
     } else {
         const streams = item.streams && item.streams.length ? item.streams : (item.streamLink ? [{ name: 'Server 1', url: item.streamLink }] : [{}]);
         streams.forEach(st => addStreamLink(st));
