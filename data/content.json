@@ -1,6 +1,120 @@
 {
   "movies": [
     {
+      "id": "1790028429858",
+      "type": "series",
+      "title": "The Witcher",
+      "genre": "Sci-Fi & Fantasy",
+      "year": 2019,
+      "duration": "",
+      "rating": 7.9,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/AoGsDM02UVt0npBA8OvpDcZbaMi.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/foGkPxpw9h8zln81j63mix5B7m8.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Fast Server",
+              "url": "https://short.azonahub.biz/embed/BNAARPnuqw5bmVqp"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p",
+              "size": "1.2GB",
+              "server": "Fast Server",
+              "url": "https://short.azonahub.biz/file/BNAARPnuqw5bmVqp",
+              "color": "#f11e1e"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Fast Server",
+              "url": "https://short.azonahub.biz/embed/9OYW86UdG6sOPhvb"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p",
+              "size": "2.8GB",
+              "server": "Fast Server",
+              "url": "https://short.azonahub.biz/file/9OYW86UdG6sOPhvb",
+              "color": "#5bc4f5"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 3,
+          "title": "Season 3",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Fast Server",
+              "url": "https://short.azonahub.biz/embed/dIOL2lsPTmggbnmE"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p",
+              "size": "3.15GB",
+              "server": "Fast Server",
+              "url": "https://short.azonahub.biz/file/dIOL2lsPTmggbnmE",
+              "color": "#ff230a"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Fast Server",
+              "url": "https://short.azonahub.biz/embed/jkBCXN2u1K4EPNye"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p",
+              "size": "3.27GB",
+              "server": "Fast Server",
+              "url": "https://short.azonahub.biz/file/jkBCXN2u1K4EPNye",
+              "color": "#f31212"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "",
+      "description": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-21T22:07:09.858Z",
+      "updatedAt": "2026-09-21T22:07:09.859Z"
+    },
+    {
       "id": "1789804990648",
       "type": "series",
       "title": "Waiting Hai",
@@ -990,8 +1104,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 22,
-    "lastUpdated": "2026-09-19T08:03:10.649Z",
+    "totalMovies": 23,
+    "lastUpdated": "2026-09-21T22:07:09.859Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
