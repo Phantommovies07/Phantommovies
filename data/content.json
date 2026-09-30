@@ -95,7 +95,7 @@
               "size": "2.8GB",
               "server": "Fast Server",
               "url": "https://short.azonahub.biz/file/9OYW86UdG6sOPhvb",
-              "color": "#5bc4f5"
+              "color": "#faab00"
             }
           ],
           "episodes": []
@@ -154,7 +154,7 @@
       "ratingCount": 0,
       "ratingSum": 0,
       "createdAt": "2026-09-21T22:07:09.858Z",
-      "updatedAt": "2026-09-30T19:00:06.544Z"
+      "updatedAt": "2026-09-30T19:19:00.242Z"
     },
     {
       "id": "1789804990648",
@@ -1147,7 +1147,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 24,
-    "lastUpdated": "2026-09-30T19:00:06.544Z",
+    "lastUpdated": "2026-09-30T19:19:00.242Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
