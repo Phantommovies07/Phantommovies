@@ -160,7 +160,16 @@ function renderEpisodes() {
     if (!list) return;
 
     if (!episodes.length) {
-        list.innerHTML = '<div class="download-empty">No episodes added in this season.</div>';
+        // COMBINED season (no episode rows) -> single play button
+        if (season?.combined) {
+            list.innerHTML = `
+                <button class="episode-item active" onclick="playEpisode(0)">
+                    <strong>▶ Play ${escapeHTML(season.title || 'Season')} — Combined File</strong>
+                    <span>All episodes in one video</span>
+                </button>`;
+        } else {
+            list.innerHTML = '<div class="download-empty">No episodes added in this season.</div>';
+        }
         return;
     }
 
@@ -175,7 +184,24 @@ function renderEpisodes() {
 function playEpisode(index) {
     currentEpisodeIndex = index;
     const episode = getCurrentEpisode();
-    if (!episode) return;
+    const season = getSeasons()[currentSeasonIndex];
+
+    // COMBINED season bina episode rows ke -> season ki combined file play karo
+    if (!episode) {
+        if (season?.combined) {
+            currentStreams = seasonStreams(season);
+            const player = document.getElementById('seriesPlayerBox');
+            if (player) player.innerHTML = playerMarkup(
+                currentStreams[0]?.url || '',
+                currentSeries?.banner || currentSeries?.poster || '',
+                (season.title || 'Season') + ' — Combined'
+            );
+            document.querySelectorAll('.episode-item').forEach(btn => btn.classList.remove('active'));
+            renderStreamButtons();
+            renderEpisodeDownloads();
+        }
+        return;
+    }
 
     currentStreams = normalizeStreams(episode);
     const player = document.getElementById('seriesPlayerBox');
@@ -213,10 +239,13 @@ function switchSeriesStream(index) {
     handleClickAd('stream');
     const stream = currentStreams[index];
     const episode = getCurrentEpisode();
-    if (!stream || !episode) return;
-
+    const season = getSeasons()[currentSeasonIndex];
+    if (!stream) return;
+    // Combined season (episode rows na hon) par bhi server switch kaam kare
+    const title = (episode?.title) ||
+        (season?.combined ? (season.title || 'Season') + ' — Combined' : currentSeries.title);
     const player = document.getElementById('seriesPlayerBox');
-    if (player) player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', episode.title || currentSeries.title);
+    if (player) player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', title);
 
     document.querySelectorAll('.stream-server-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
 }
