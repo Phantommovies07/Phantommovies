@@ -1,6 +1,48 @@
 {
   "movies": [
     {
+      "id": "1790794761129",
+      "type": "movie",
+      "title": "Bajirao Mastani",
+      "genre": "History",
+      "year": 2015,
+      "duration": "2h 38m",
+      "rating": 7.2,
+      "badge": "",
+      "poster": "https://image.tmdb.org/t/p/w500/eXKHjELZAbF7cVd9fzYMhvSsXDI.jpg",
+      "banner": "https://image.tmdb.org/t/p/w1280/wqe6GXolmOtRTYxImtZQkKH35EA.jpg",
+      "combined": false,
+      "streamLink": "https://short.azonahub.biz/embed/AMmZ8r3c2z0Zr7yN",
+      "streams": [
+        {
+          "name": "Fast Server",
+          "url": "https://short.azonahub.biz/embed/AMmZ8r3c2z0Zr7yN"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.45GB",
+          "server": "Fast Server",
+          "url": "https://short.azonahub.biz/file/AMmZ8r3c2z0Zr7yN",
+          "color": "#e6c700"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "",
+      "description": "Peshwa Bajirao married to Kashibai, falls in love with Mastani, a warrior princess in distress. They struggle to make their love triumph amid opposition from his conservative family.",
+      "featured": true,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "createdAt": "2026-09-30T18:59:21.129Z",
+      "updatedAt": "2026-09-30T18:59:21.129Z"
+    },
+    {
       "id": "1790028429858",
       "type": "series",
       "title": "The Witcher",
@@ -1104,8 +1146,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 23,
-    "lastUpdated": "2026-09-21T22:07:09.859Z",
+    "totalMovies": 24,
+    "lastUpdated": "2026-09-30T18:59:21.129Z",
     "ads": {
       "enabled": false,
       "monetagHead": "",
