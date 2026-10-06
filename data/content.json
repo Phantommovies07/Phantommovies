@@ -1,6 +1,85 @@
 {
   "movies": [
     {
+      "id": "1791313328929",
+      "type": "movie",
+      "title": "Jawan",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGExNGI1NDktOWI2Mi00NDM3LWIxMmQtNTQxYTgzMzI0MTA1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGExNGI1NDktOWI2Mi00NDM3LWIxMmQtNTQxYTgzMzI0MTA1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15354916&tmdb_id=",
+      "streams": [
+        {
+          "name": "SuperEmbed HD",
+          "url": "https://multiembed.mov/?video_id=tt15354916&tmdb_id="
+        },
+        {
+          "name": "AutoEmbed Fast",
+          "url": "https://player.autoembed.cc/embed/movie/tt15354916"
+        },
+        {
+          "name": "EmbedSu VIP",
+          "url": "https://embed.su/embed/movie/tt15354916"
+        },
+        {
+          "name": "VidSrc CC",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15354916"
+        },
+        {
+          "name": "SmashyStream",
+          "url": "https://player.smashystream.com/movie/tt15354916"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "550.2MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/0601372688-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/8642836-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/463301481878419-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "20.8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/66455040954-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jawan+2023+trailer",
+      "description": "Jawan (2023) starring Shah Rukh Khan, Nayanthara.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15354916",
+      "createdAt": "2026-10-06T19:02:06.166142+00:00",
+      "updatedAt": "2026-10-06T19:02:06.166142+00:00"
+    },
+    {
       "id": "1791313136923",
       "type": "movie",
       "title": "Shaitaan",
@@ -1597,8 +1676,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 32,
-    "lastUpdated": "2026-10-06T18:58:50.619553+00:00",
+    "totalMovies": 33,
+    "lastUpdated": "2026-10-06T19:02:06.166190+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
