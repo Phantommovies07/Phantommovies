@@ -1,6 +1,136 @@
 {
   "movies": [
     {
+      "id": "1791299560661",
+      "type": "movie",
+      "title": "Vedaa",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTI0MmJkZTUtN2I4Yi00NjZkLWJhYjgtM2UxMWRjNzdjMGE4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTI0MmJkZTUtN2I4Yi00NjZkLWJhYjgtM2UxMWRjNzdjMGE4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidsrc.to/embed/movie/tt28153480",
+      "streams": [
+        {
+          "name": "VidSrc HD",
+          "url": "https://vidsrc.to/embed/movie/tt28153480"
+        },
+        {
+          "name": "VidSrc PRO",
+          "url": "https://vidsrc.xyz/embed/movie?imdb=tt28153480"
+        },
+        {
+          "name": "SuperEmbed",
+          "url": "https://multiembed.mov/?video_id=tt28153480"
+        },
+        {
+          "name": "EmbedSu",
+          "url": "https://embed.su/embed/movie/tt28153480"
+        },
+        {
+          "name": "AutoEmbed",
+          "url": "https://autoembed.co/movie/imdb/tt28153480"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.4GB",
+          "server": "VidSrc Fast Server",
+          "url": "https://vidsrc.to/embed/movie/tt28153480",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p",
+          "size": "1.2GB",
+          "server": "Fast Server 2",
+          "url": "https://vidsrc.xyz/embed/movie?imdb=tt28153480",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vedaa+2024+trailer",
+      "description": "Vedaa (2024) starring John Abraham, Sharvari.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28153480",
+      "createdAt": "2026-10-06T15:12:32.781182+00:00",
+      "updatedAt": "2026-10-06T15:12:32.781182+00:00"
+    },
+    {
+      "id": "1791299555207",
+      "type": "movie",
+      "title": "Street Fighter",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidsrc.to/embed/movie/tt27419420",
+      "streams": [
+        {
+          "name": "VidSrc HD",
+          "url": "https://vidsrc.to/embed/movie/tt27419420"
+        },
+        {
+          "name": "VidSrc PRO",
+          "url": "https://vidsrc.xyz/embed/movie?imdb=tt27419420"
+        },
+        {
+          "name": "SuperEmbed",
+          "url": "https://multiembed.mov/?video_id=tt27419420"
+        },
+        {
+          "name": "EmbedSu",
+          "url": "https://embed.su/embed/movie/tt27419420"
+        },
+        {
+          "name": "AutoEmbed",
+          "url": "https://autoembed.co/movie/imdb/tt27419420"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p",
+          "size": "2.4GB",
+          "server": "VidSrc Fast Server",
+          "url": "https://vidsrc.to/embed/movie/tt27419420",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p",
+          "size": "1.2GB",
+          "server": "Fast Server 2",
+          "url": "https://vidsrc.xyz/embed/movie?imdb=tt27419420",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Street+Fighter+2026+trailer",
+      "description": "Street Fighter (2026) starring Jason Momoa, Noah Centineo.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27419420",
+      "createdAt": "2026-10-06T15:12:32.781263+00:00",
+      "updatedAt": "2026-10-06T15:12:32.781263+00:00"
+    },
+    {
       "id": "1791295123589",
       "type": "movie",
       "title": "Stree 2",
@@ -1471,8 +1601,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 29,
-    "lastUpdated": "2026-10-06T14:37:39.551366+00:00",
+    "totalMovies": 31,
+    "lastUpdated": "2026-10-06T15:12:32.781283+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
