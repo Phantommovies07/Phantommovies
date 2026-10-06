@@ -19,6 +19,11 @@ except ImportError:
     print("[Error] 'requests' library is required. Install via: pip install requests")
     sys.exit(1)
 
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    BeautifulSoup = None
+
 # Default headers
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
@@ -44,13 +49,13 @@ def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[
     if not identifier:
         return "", []
 
-    primary_url = f"https://vidsrc.to/embed/movie/{identifier}"
+    primary_url = f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"
     servers = [
-        {"name": "VidSrc HD", "url": f"https://vidsrc.to/embed/movie/{identifier}"},
-        {"name": "VidSrc PRO", "url": f"https://vidsrc.xyz/embed/movie?imdb={imdb_id}" if imdb_id else f"https://vidsrc.xyz/embed/movie?tmdb={tmdb_id}"},
-        {"name": "SuperEmbed", "url": f"https://multiembed.mov/?video_id={imdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
-        {"name": "EmbedSu", "url": f"https://embed.su/embed/movie/{tmdb_id or imdb_id}"},
-        {"name": "AutoEmbed", "url": f"https://autoembed.co/movie/imdb/{imdb_id}" if imdb_id else f"https://autoembed.co/movie/tmdb/{tmdb_id}"}
+        {"name": "SuperEmbed HD", "url": primary_url},
+        {"name": "AutoEmbed Fast", "url": f"https://player.autoembed.cc/embed/movie/{tmdb_id or imdb_id}"},
+        {"name": "EmbedSu VIP", "url": f"https://embed.su/embed/movie/{tmdb_id or imdb_id}"},
+        {"name": "VidSrc CC", "url": f"https://vidsrc.cc/v2/embed/movie/{imdb_id or tmdb_id}"},
+        {"name": "SmashyStream", "url": f"https://player.smashystream.com/movie/{tmdb_id or imdb_id}"}
     ]
     return primary_url, servers
 
@@ -175,6 +180,92 @@ class TMDBEngine:
             print(f"  [TMDb] Feed error for {endpoint}: {e}")
         return movies
 
+class KMMoviesEngine:
+    """Scrapes verified movie download links (480p, 720p, 1080p, 4K) from KM Movies."""
+
+    BASE_SEARCH_URLS = [
+        'https://kmmovies.pics/?s={query}',
+        'https://kmmovies.baby/?s={query}'
+    ]
+
+    def search_movie_downloads(self, title: str, year: int = None) -> List[Dict]:
+        if not BeautifulSoup or not title:
+            return []
+
+        clean_title = re.sub(r'[^a-zA-Z0-9\s]', '', title).strip()
+        query = clean_title.replace(' ', '+')
+
+        article_url = None
+        for base in self.BASE_SEARCH_URLS:
+            search_url = base.format(query=query)
+            try:
+                resp = requests.get(search_url, headers=HEADERS, timeout=6)
+                if resp.status_code == 200:
+                    soup = BeautifulSoup(resp.text, 'html.parser')
+                    articles = soup.find_all('article')
+                    for art in articles:
+                        link_tag = art.find('a', href=True)
+                        header_tag = art.find(['h2', 'h3', 'h1']) or link_tag
+                        if link_tag and header_tag:
+                            text = header_tag.get_text(strip=True).lower()
+                            first_word = clean_title.split()[0].lower()
+                            if first_word in text:
+                                if year and str(year) in text:
+                                    article_url = link_tag['href']
+                                    break
+                                elif not article_url:
+                                    article_url = link_tag['href']
+                    if article_url:
+                        break
+            except Exception:
+                continue
+
+        if not article_url:
+            return []
+
+        try:
+            art_resp = requests.get(article_url, headers=HEADERS, timeout=6)
+            if art_resp.status_code != 200:
+                return []
+
+            soup = BeautifulSoup(art_resp.text, 'html.parser')
+            links = soup.find_all('a', href=True)
+
+            downloads = []
+            seen_qualities = set()
+            quality_order = [
+                ('2160p', '4K Ultra HD', '#8b5cf6'),
+                ('4k', '4K Ultra HD', '#8b5cf6'),
+                ('1080p', '1080p Full HD', '#10b981'),
+                ('720p', '720p HD', '#06b6d4'),
+                ('480p', '480p SD', '#ffd70f')
+            ]
+
+            for a in links:
+                raw_text = a.get_text(strip=True)
+                href = a['href']
+                if not href.startswith('http') or 'kmmovies' in href or 'category' in href:
+                    continue
+
+                for q_key, q_label, color in quality_order:
+                    if q_key in raw_text.lower() and q_key not in seen_qualities:
+                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', raw_text, re.IGNORECASE)
+                        size_str = size_match.group(1).upper() if size_match else ''
+
+                        downloads.append({
+                            "quality": q_label,
+                            "size": size_str,
+                            "server": "Fast Cloud",
+                            "url": href,
+                            "color": color
+                        })
+                        seen_qualities.add(q_key)
+                        break
+
+            return downloads
+        except Exception as e:
+            return []
+
 def load_content(path: str = CONTENT_FILE) -> Dict:
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as f:
@@ -231,22 +322,7 @@ def format_phantom_movie(m: Dict) -> Dict:
         "banner": banner,
         "streamLink": primary_stream,
         "streams": stream_servers,
-        "downloads": [
-            {
-                "quality": "1080p",
-                "size": "2.4GB",
-                "server": "VidSrc Fast Server",
-                "url": primary_stream,
-                "color": "#ffd70f"
-            },
-            {
-                "quality": "720p",
-                "size": "1.2GB",
-                "server": "Fast Server 2",
-                "url": stream_servers[1]["url"] if len(stream_servers) > 1 else primary_stream,
-                "color": "#06b6d4"
-            }
-        ],
+        "downloads": m.get("downloads", []), # Only real file downloads; never fake stream embed URLs
         "seasons": [],
         "trailerLink": trailer,
         "description": m.get("overview", f"Watch {m.get('title')} online in full HD with multiple streaming servers."),
@@ -299,6 +375,7 @@ def run_auto_sync(target_new_count: int = 5, tmdb_key: str = None) -> Dict:
     tmdb_key = tmdb_key or os.getenv("TMDB_API_KEY", "")
     tmdb = TMDBEngine(tmdb_key)
     imdb = IMDbSearchEngine()
+    km_engine = KMMoviesEngine()
 
     candidates = []
 
@@ -343,6 +420,12 @@ def run_auto_sync(target_new_count: int = 5, tmdb_key: str = None) -> Dict:
             continue
         if cand_imdb and cand_imdb in existing_imdb_ids:
             continue
+
+        # Try to extract genuine download links from KM Movies
+        real_dls = km_engine.search_movie_downloads(cand_title, cand.get("year"))
+        if real_dls:
+            cand["downloads"] = real_dls
+            print(f"    📦 Extracted {len(real_dls)} verified download links from KM Movies!")
 
         # Format and append
         phantom_movie = format_phantom_movie(cand)

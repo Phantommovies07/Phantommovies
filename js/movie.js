@@ -59,7 +59,7 @@ function playerMarkup(movie, streamUrl) {
     }
 
     if (streamLink) {
-        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen loading="lazy"></iframe>`;
+        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"></iframe>`;
     }
 
     if (trailerEmbed) {
@@ -72,19 +72,46 @@ function playerMarkup(movie, streamUrl) {
     </div>`;
 }
 
+// Active working embed providers (updated for modern mirrors)
+const DEFAULT_STREAM_PROVIDERS = [
+    { name: "SuperEmbed HD", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
+    { name: "AutoEmbed Fast", template: "https://player.autoembed.cc/embed/movie/{tmdb}" },
+    { name: "EmbedSu VIP", template: "https://embed.su/embed/movie/{tmdb}" },
+    { name: "VidSrc CC", template: "https://vidsrc.cc/v2/embed/movie/{imdb}" },
+    { name: "SmashyStream", template: "https://player.smashystream.com/movie/{tmdb}" }
+];
+
 function normalizeStreams(movie) {
-    if (Array.isArray(movie.streams) && movie.streams.length) {
-        return movie.streams.filter(item => item && item.url).map((item, index) => ({
+    const customStreams = Array.isArray(movie.streams) && movie.streams.length
+        ? movie.streams.filter(item => item && item.url).map((item, index) => ({
             name: item.name || item.label || `Server ${index + 1}`,
             url: item.url
-        }));
+        }))
+        : (movie.streamLink ? [{ name: 'Server 1', url: movie.streamLink }] : []);
+
+    // If the movie has a direct custom link (e.g. Azonahub / HubCloud), prioritize it
+    const isDirectCustom = customStreams.length > 0 && !customStreams[0].url.includes('vidsrc.to');
+
+    // Build dynamic servers if imdb_id or tmdb_id exists
+    const imdb = movie.imdb_id || '';
+    const tmdb = movie.tmdb_id || '';
+    const dynamicStreams = [];
+
+    if (imdb || tmdb) {
+        DEFAULT_STREAM_PROVIDERS.forEach(p => {
+            let u = p.template
+                .replace('{imdb}', encodeURIComponent(imdb || tmdb))
+                .replace('{tmdb}', encodeURIComponent(tmdb || imdb));
+            if (!customStreams.some(s => s.url === u)) {
+                dynamicStreams.push({ name: p.name, url: u });
+            }
+        });
     }
 
-    if (movie.streamLink) {
-        return [{ name: 'Server 1', url: movie.streamLink }];
+    if (isDirectCustom) {
+        return [...customStreams, ...dynamicStreams];
     }
-
-    return [];
+    return dynamicStreams.length ? dynamicStreams : customStreams;
 }
 
 function renderStreamButtons() {
@@ -118,14 +145,9 @@ function switchStream(index) {
 
 function normalizeDownloads(movie) {
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
-        return movie.downloads.filter(item => item && item.url);
+        // Exclude fake downloads (embed streams)
+        return movie.downloads.filter(item => item && item.url && !item.url.includes('/embed/') && !item.url.includes('vidsrc') && !item.url.includes('multiembed'));
     }
-
-    // Backward compatibility for old content.json entries.
-    if (movie.streamLink) {
-        return [{ quality: 'Default', size: '', server: 'Main Server', url: movie.streamLink }];
-    }
-
     return [];
 }
 

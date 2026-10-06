@@ -1,6 +1,78 @@
 {
   "movies": [
     {
+      "id": "1791313136923",
+      "type": "movie",
+      "title": "Shaitaan",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGI3YTcwNTgtMmY5Ny00M2Y0LWFjOWUtYjhkMzNjMjhmYjVkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGI3YTcwNTgtMmY5Ny00M2Y0LWFjOWUtYjhkMzNjMjhmYjVkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27744786&tmdb_id=",
+      "streams": [
+        {
+          "name": "SuperEmbed HD",
+          "url": "https://multiembed.mov/?video_id=tt27744786&tmdb_id="
+        },
+        {
+          "name": "AutoEmbed Fast",
+          "url": "https://player.autoembed.cc/embed/movie/tt27744786"
+        },
+        {
+          "name": "EmbedSu VIP",
+          "url": "https://embed.su/embed/movie/tt27744786"
+        },
+        {
+          "name": "VidSrc CC",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27744786"
+        },
+        {
+          "name": "SmashyStream",
+          "url": "https://player.smashystream.com/movie/tt27744786"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "406.7MB",
+          "server": "Fast Cloud",
+          "url": "https://new.magiclinks.lol/download-links-9631/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud",
+          "url": "https://new.magiclinks.lol/download-links-9632/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "Fast Cloud",
+          "url": "https://new.magiclinks.lol/download-links-9630/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Shaitaan+2024+trailer",
+      "description": "Shaitaan (2024) starring Ajay Devgn, Madhavan.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27744786",
+      "createdAt": "2026-10-06T18:58:50.602091+00:00",
+      "updatedAt": "2026-10-06T18:58:50.602091+00:00"
+    },
+    {
       "id": "1791299560661",
       "type": "movie",
       "title": "Vedaa",
@@ -34,22 +106,7 @@
           "url": "https://autoembed.co/movie/imdb/tt28153480"
         }
       ],
-      "downloads": [
-        {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt28153480",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt28153480",
-          "color": "#06b6d4"
-        }
-      ],
+      "downloads": [],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Vedaa+2024+trailer",
       "description": "Vedaa (2024) starring John Abraham, Sharvari.",
@@ -99,22 +156,7 @@
           "url": "https://autoembed.co/movie/imdb/tt27419420"
         }
       ],
-      "downloads": [
-        {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt27419420",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt27419420",
-          "color": "#06b6d4"
-        }
-      ],
+      "downloads": [],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Street+Fighter+2026+trailer",
       "description": "Street Fighter (2026) starring Jason Momoa, Noah Centineo.",
@@ -166,18 +208,32 @@
       ],
       "downloads": [
         {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt27510174",
+          "quality": "480p SD",
+          "size": "462.0MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/9631443133-2/",
           "color": "#ffd70f"
         },
         {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt27510174",
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/089852909-2/",
           "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/8403190623821-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "4.5GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/8431334-2/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -229,22 +285,7 @@
           "url": "https://autoembed.co/movie/imdb/tt27056012"
         }
       ],
-      "downloads": [
-        {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt27056012",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt27056012",
-          "color": "#06b6d4"
-        }
-      ],
+      "downloads": [],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Khel+Khel+Mein+2024+trailer",
       "description": "Khel Khel Mein (2024) starring Akshay Kumar, Taapsee Pannu.",
@@ -294,22 +335,7 @@
           "url": "https://autoembed.co/movie/imdb/tt15398776"
         }
       ],
-      "downloads": [
-        {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt15398776",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt15398776",
-          "color": "#06b6d4"
-        }
-      ],
+      "downloads": [],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Oppenheimer+2023+trailer",
       "description": "Oppenheimer (2023) starring Cillian Murphy, Emily Blunt.",
@@ -359,22 +385,7 @@
           "url": "https://autoembed.co/movie/imdb/tt15239678"
         }
       ],
-      "downloads": [
-        {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt15239678",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt15239678",
-          "color": "#06b6d4"
-        }
-      ],
+      "downloads": [],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dune:+Part+Two+2024+trailer",
       "description": "Dune: Part Two (2024) starring Timothée Chalamet, Zendaya.",
@@ -424,22 +435,7 @@
           "url": "https://autoembed.co/movie/imdb/tt0816692"
         }
       ],
-      "downloads": [
-        {
-          "quality": "1080p",
-          "size": "2.4GB",
-          "server": "VidSrc Fast Server",
-          "url": "https://vidsrc.to/embed/movie/tt0816692",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p",
-          "size": "1.2GB",
-          "server": "Fast Server 2",
-          "url": "https://vidsrc.xyz/embed/movie?imdb=tt0816692",
-          "color": "#06b6d4"
-        }
-      ],
+      "downloads": [],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Interstellar+2014+trailer",
       "description": "Interstellar (2014) starring Matthew McConaughey, Anne Hathaway.",
@@ -1601,8 +1597,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 31,
-    "lastUpdated": "2026-10-06T15:12:32.781283+00:00",
+    "totalMovies": 32,
+    "lastUpdated": "2026-10-06T18:58:50.619553+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
