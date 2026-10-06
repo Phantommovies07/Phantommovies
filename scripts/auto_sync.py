@@ -88,7 +88,7 @@ class IMDbSearchEngine:
                 cast = item.get("s", "")
                 poster = item.get("i", {}).get("imageUrl", "") if "i" in item else ""
 
-                if imdb_id and title:
+                if imdb_id and str(imdb_id).startswith("tt") and title:
                     return {
                         "imdb_id": imdb_id,
                         "tmdb_id": "",
