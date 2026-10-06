@@ -72,24 +72,33 @@ function playerMarkup(movie, streamUrl) {
     </div>`;
 }
 
-// Active working embed providers (updated for modern mirrors)
+// Whitelisted, stealth stream server providers (hiding underlying host identities)
+const SERVER_LABELS = ["Server 1 (HD)", "Server 2 (Fast)", "Server 3 (VIP)", "Server 4 (Ultra)", "Server 5 (Cloud)", "Server 6 (Backup)"];
+
+function cleanServerLabel(name, index) {
+    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub/i.test(name)) {
+        return SERVER_LABELS[index] || `Server ${index + 1}`;
+    }
+    return name;
+}
+
 const DEFAULT_STREAM_PROVIDERS = [
-    { name: "SuperEmbed HD", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
-    { name: "AutoEmbed Fast", template: "https://player.autoembed.cc/embed/movie/{tmdb}" },
-    { name: "EmbedSu VIP", template: "https://embed.su/embed/movie/{tmdb}" },
-    { name: "VidSrc CC", template: "https://vidsrc.cc/v2/embed/movie/{imdb}" },
-    { name: "SmashyStream", template: "https://player.smashystream.com/movie/{tmdb}" }
+    { name: "Server 1 (HD)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
+    { name: "Server 2 (Fast)", template: "https://player.autoembed.cc/embed/movie/{tmdb}" },
+    { name: "Server 3 (VIP)", template: "https://embed.su/embed/movie/{tmdb}" },
+    { name: "Server 4 (Ultra)", template: "https://vidsrc.cc/v2/embed/movie/{imdb}" },
+    { name: "Server 5 (Cloud)", template: "https://player.smashystream.com/movie/{tmdb}" }
 ];
 
 function normalizeStreams(movie) {
     const customStreams = Array.isArray(movie.streams) && movie.streams.length
         ? movie.streams.filter(item => item && item.url).map((item, index) => ({
-            name: item.name || item.label || `Server ${index + 1}`,
+            name: cleanServerLabel(item.name || item.label, index),
             url: item.url
         }))
-        : (movie.streamLink ? [{ name: 'Server 1', url: movie.streamLink }] : []);
+        : (movie.streamLink ? [{ name: 'Server 1 (HD)', url: movie.streamLink }] : []);
 
-    // If the movie has a direct custom link (e.g. Azonahub / HubCloud), prioritize it
+    // If the movie has a direct custom link, prioritize it
     const isDirectCustom = customStreams.length > 0 && !customStreams[0].url.includes('vidsrc.to');
 
     // Build dynamic servers if imdb_id or tmdb_id exists
@@ -98,7 +107,7 @@ function normalizeStreams(movie) {
     const dynamicStreams = [];
 
     if (imdb || tmdb) {
-        DEFAULT_STREAM_PROVIDERS.forEach(p => {
+        DEFAULT_STREAM_PROVIDERS.forEach((p, idx) => {
             let u = p.template
                 .replace('{imdb}', encodeURIComponent(imdb || tmdb))
                 .replace('{tmdb}', encodeURIComponent(tmdb || imdb));
@@ -108,11 +117,14 @@ function normalizeStreams(movie) {
         });
     }
 
-    if (isDirectCustom) {
-        return [...customStreams, ...dynamicStreams];
-    }
-    return dynamicStreams.length ? dynamicStreams : customStreams;
+    const merged = isDirectCustom ? [...customStreams, ...dynamicStreams] : (dynamicStreams.length ? dynamicStreams : customStreams);
+    // Final sanitization of all stream names to guarantee no third-party branding leaks
+    return merged.map((s, i) => ({
+        name: cleanServerLabel(s.name, i),
+        url: s.url
+    }));
 }
+
 
 function renderStreamButtons() {
     if (!currentStreams.length || currentStreams.length === 1) return '';

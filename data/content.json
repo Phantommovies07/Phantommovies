@@ -1,6 +1,409 @@
 {
   "movies": [
     {
+      "id": "1791324201294",
+      "type": "series",
+      "title": "Lanterns",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2ZjZDNlNDgtMjJlMy00NGRjLThlMGEtM2U4N2E4MDUwNjNmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2ZjZDNlNDgtMjJlMy00NGRjLThlMGEtM2U4N2E4MDUwNjNmXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt26545992&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt26545992/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt26545992/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt26545992/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt26545992?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "230MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lanterns-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lanterns-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "750MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lanterns-s01-1080p-10bit/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lanterns-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Lanterns+2026+trailer",
+      "description": "Lanterns (2026) starring Kyle Chandler, Aaron Pierre.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26545992",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:03:19.588457+00:00",
+      "updatedAt": "2026-10-06T22:03:19.588457+00:00"
+    },
+    {
+      "id": "1791324201826",
+      "type": "movie",
+      "title": "Prem Keetanu",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmMxZWQ4YjktMzMxYi00NTc4LThjNjktMjBiYjIyNDdiOWQzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmMxZWQ4YjktMzMxYi00NTc4LThjNjktMjBiYjIyNDdiOWQzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt44090550&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt44090550&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt44090550"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt44090550"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt44090550"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt44090550"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "442.1MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/565094798-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.0GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/0446561-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/243976606-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Prem+Keetanu+2026+trailer",
+      "description": "Prem Keetanu (2026) starring Veer Pahariya, Aafiya Syed.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt44090550",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:03:21.661322+00:00",
+      "updatedAt": "2026-10-06T22:03:21.661322+00:00"
+    },
+    {
+      "id": "1791324205941",
+      "type": "movie",
+      "title": "Drishyam: The Conclusion",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzJlNzY1MTQtM2VmMy00OWQ4LTk0ZDQtODZiODUwMWZkZWYyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzJlNzY1MTQtM2VmMy00OWQ4LTk0ZDQtODZiODUwMWZkZWYyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27050858&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt27050858&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt27050858"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt27050858"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27050858"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27050858"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "488.6MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/8676489123476-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/3194911278-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.7GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/4868057895329-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Drishyam:+The+Conclusion+2026+trailer",
+      "description": "Drishyam: The Conclusion (2026) starring Shriya Saran, Ishita Dutta.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27050858",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:03:23.919424+00:00",
+      "updatedAt": "2026-10-06T22:03:23.919424+00:00"
+    },
+    {
+      "id": "1791324132893",
+      "type": "movie",
+      "title": "Insidious: Out of the Further",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt32393988&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt32393988&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt32393988"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt32393988"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt32393988"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt32393988"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "439.6MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/773060407411990-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "727.1MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/043234425826218-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/3547120116365-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "9.45 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/363822392798535-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Insidious:+Out+of+the+Further+2026+trailer",
+      "description": "Insidious: Out of the Further (2026) starring Amelia Eve, Island Austin.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32393988",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:02:09.695335+00:00",
+      "updatedAt": "2026-10-06T22:02:09.695335+00:00"
+    },
+    {
+      "id": "1791324138037",
+      "type": "movie",
+      "title": "Spider-Man: Brand New Day",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt22084616&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt22084616&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt22084616"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt22084616"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt22084616"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt22084616"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "598.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/190273655-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1016.5MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/91598281891-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/69201441382-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "13.91 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/611285584-2/",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "27.75 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/4009357042-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Spider-Man:+Brand+New+Day+2026+trailer",
+      "description": "Spider-Man: Brand New Day (2026) starring Tom Holland, Zendaya.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt22084616",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:02:13.597083+00:00",
+      "updatedAt": "2026-10-06T22:02:13.597083+00:00"
+    },
+    {
       "id": "1791313328929",
       "type": "movie",
       "title": "Jawan",
@@ -14,23 +417,23 @@
       "streamLink": "https://multiembed.mov/?video_id=tt15354916&tmdb_id=",
       "streams": [
         {
-          "name": "SuperEmbed HD",
+          "name": "Server 1 (HD)",
           "url": "https://multiembed.mov/?video_id=tt15354916&tmdb_id="
         },
         {
-          "name": "AutoEmbed Fast",
+          "name": "Server 2 (Fast)",
           "url": "https://player.autoembed.cc/embed/movie/tt15354916"
         },
         {
-          "name": "EmbedSu VIP",
+          "name": "Server 3 (VIP)",
           "url": "https://embed.su/embed/movie/tt15354916"
         },
         {
-          "name": "VidSrc CC",
+          "name": "Server 4 (Ultra)",
           "url": "https://vidsrc.cc/v2/embed/movie/tt15354916"
         },
         {
-          "name": "SmashyStream",
+          "name": "Server 5 (Cloud)",
           "url": "https://player.smashystream.com/movie/tt15354916"
         }
       ],
@@ -93,23 +496,23 @@
       "streamLink": "https://multiembed.mov/?video_id=tt27744786&tmdb_id=",
       "streams": [
         {
-          "name": "SuperEmbed HD",
+          "name": "Server 1 (HD)",
           "url": "https://multiembed.mov/?video_id=tt27744786&tmdb_id="
         },
         {
-          "name": "AutoEmbed Fast",
+          "name": "Server 2 (Fast)",
           "url": "https://player.autoembed.cc/embed/movie/tt27744786"
         },
         {
-          "name": "EmbedSu VIP",
+          "name": "Server 3 (VIP)",
           "url": "https://embed.su/embed/movie/tt27744786"
         },
         {
-          "name": "VidSrc CC",
+          "name": "Server 4 (Ultra)",
           "url": "https://vidsrc.cc/v2/embed/movie/tt27744786"
         },
         {
-          "name": "SmashyStream",
+          "name": "Server 5 (Cloud)",
           "url": "https://player.smashystream.com/movie/tt27744786"
         }
       ],
@@ -165,23 +568,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt28153480",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt28153480"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt28153480"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt28153480"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt28153480"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt28153480"
         }
       ],
@@ -215,23 +618,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt27419420",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt27419420"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt27419420"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt27419420"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt27419420"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt27419420"
         }
       ],
@@ -265,23 +668,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt27510174",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt27510174"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt27510174"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt27510174"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt27510174"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt27510174"
         }
       ],
@@ -344,23 +747,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt27056012",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt27056012"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt27056012"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt27056012"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt27056012"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt27056012"
         }
       ],
@@ -394,23 +797,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt15398776",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt15398776"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt15398776"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt15398776"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt15398776"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt15398776"
         }
       ],
@@ -444,23 +847,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt15239678",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt15239678"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt15239678"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt15239678"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt15239678"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt15239678"
         }
       ],
@@ -494,23 +897,23 @@
       "streamLink": "https://vidsrc.to/embed/movie/tt0816692",
       "streams": [
         {
-          "name": "VidSrc HD",
+          "name": "Server 1 (HD)",
           "url": "https://vidsrc.to/embed/movie/tt0816692"
         },
         {
-          "name": "VidSrc PRO",
+          "name": "Server 2 (Fast)",
           "url": "https://vidsrc.xyz/embed/movie?imdb=tt0816692"
         },
         {
-          "name": "SuperEmbed",
+          "name": "Server 3 (VIP)",
           "url": "https://multiembed.mov/?video_id=tt0816692"
         },
         {
-          "name": "EmbedSu",
+          "name": "Server 4 (Ultra)",
           "url": "https://embed.su/embed/movie/tt0816692"
         },
         {
-          "name": "AutoEmbed",
+          "name": "Server 5 (Cloud)",
           "url": "https://autoembed.co/movie/imdb/tt0816692"
         }
       ],
@@ -552,7 +955,7 @@
           "combined": true,
           "streams": [
             {
-              "name": "Fast Server",
+              "name": "Server 1 (HD)",
               "url": "https://short.azonahub.biz/embed/BNAARPnuqw5bmVqp"
             }
           ],
@@ -573,7 +976,7 @@
           "combined": true,
           "streams": [
             {
-              "name": "Fast Server",
+              "name": "Server 1 (HD)",
               "url": "https://short.azonahub.biz/embed/9OYW86UdG6sOPhvb"
             }
           ],
@@ -594,7 +997,7 @@
           "combined": true,
           "streams": [
             {
-              "name": "Fast Server",
+              "name": "Server 1 (HD)",
               "url": "https://short.azonahub.biz/embed/dIOL2lsPTmggbnmE"
             }
           ],
@@ -615,7 +1018,7 @@
           "combined": true,
           "streams": [
             {
-              "name": "Fast Server",
+              "name": "Server 1 (HD)",
               "url": "https://short.azonahub.biz/embed/jkBCXN2u1K4EPNye"
             }
           ],
@@ -669,7 +1072,7 @@
               "duration": "6hr  aprx",
               "streams": [
                 {
-                  "name": "Server 1",
+                  "name": "Server 1 (HD)",
                   "url": "https://short.azonahub.biz/embed/c4rNryRy49oYNNAt"
                 }
               ],
@@ -724,7 +1127,7 @@
               "duration": "6h 9m",
               "streams": [
                 {
-                  "name": "Server 1",
+                  "name": "Server 1 (HD)",
                   "url": "https://short.azonahub.biz/embed/lwSq49Ea99ExfOBo"
                 }
               ],
@@ -768,7 +1171,7 @@
       "streamLink": "https://short.azonahub.biz/embed/4ZzK63a0qXaLjiPV",
       "streams": [
         {
-          "name": "Server 1",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/4ZzK63a0qXaLjiPV"
         }
       ],
@@ -809,7 +1212,7 @@
       "streamLink": "https://short.azonahub.biz/embed/zNNY2GF8x243LVLp",
       "streams": [
         {
-          "name": "Server 1",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/zNNY2GF8x243LVLp"
         }
       ],
@@ -850,7 +1253,7 @@
       "streamLink": "https://short.azonahub.biz/embed/NCo76iRXlb6YkVVU",
       "streams": [
         {
-          "name": "Server 1",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/NCo76iRXlb6YkVVU"
         }
       ],
@@ -891,7 +1294,7 @@
       "streamLink": "https://short.azonahub.biz/embed/ijGVOOEFtRApQGYD",
       "streams": [
         {
-          "name": "Server 1",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/ijGVOOEFtRApQGYD"
         }
       ],
@@ -943,7 +1346,7 @@
               "duration": "1h 8m",
               "streams": [
                 {
-                  "name": "Server 1",
+                  "name": "Server 1 (HD)",
                   "url": "https://short.azonahub.biz/embed/9PVYeidwxAFpkHFm"
                 }
               ],
@@ -998,7 +1401,7 @@
               "duration": "51m",
               "streams": [
                 {
-                  "name": "Season 1",
+                  "name": "Server 1 (HD)",
                   "url": "https://short.azonahub.biz/embed/HZwffYQOttS8ePi9"
                 }
               ],
@@ -1042,7 +1445,7 @@
       "streamLink": "https://short.azonahub.biz/embed/ATDlY6AZr7IJRwNe",
       "streams": [
         {
-          "name": "Server 1",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/ATDlY6AZr7IJRwNe"
         }
       ],
@@ -1083,7 +1486,7 @@
       "streamLink": "https://short.azonahub.biz/embed/dTPwT79WcggD4Tsh",
       "streams": [
         {
-          "name": "Server 1",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/dTPwT79WcggD4Tsh"
         }
       ],
@@ -1124,7 +1527,7 @@
       "streamLink": "https://short.azonahub.biz/embed/F0J5VhAO1AzqhKui",
       "streams": [
         {
-          "name": "HD+",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/F0J5VhAO1AzqhKui"
         }
       ],
@@ -1165,7 +1568,7 @@
       "streamLink": "https://short.azonahub.biz/embed/qr01GF8jchn8cWGD",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/qr01GF8jchn8cWGD"
         }
       ],
@@ -1206,7 +1609,7 @@
       "streamLink": "https://short.azonahub.biz/embed/ou7agRKxxuGVHf8m",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/ou7agRKxxuGVHf8m"
         }
       ],
@@ -1247,7 +1650,7 @@
       "streamLink": "https://short.azonahub.biz/embed/MMkFUlOeSj7WlmOO",
       "streams": [
         {
-          "name": "Hd",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/MMkFUlOeSj7WlmOO"
         }
       ],
@@ -1288,7 +1691,7 @@
       "streamLink": "https://short.azonahub.biz/z5txbrWYHlZajGqs",
       "streams": [
         {
-          "name": "Fast",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/z5txbrWYHlZajGqs"
         }
       ],
@@ -1329,7 +1732,7 @@
       "streamLink": "https://short.azonahub.biz/pH8ZiyWiMkUIFrhX",
       "streams": [
         {
-          "name": "Fast",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/pH8ZiyWiMkUIFrhX"
         }
       ],
@@ -1377,7 +1780,7 @@
       "streamLink": "https://short.azonahub.biz/embed/lCoeel8Nrv75wrv1",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/lCoeel8Nrv75wrv1"
         }
       ],
@@ -1418,7 +1821,7 @@
       "streamLink": "https://short.azonahub.biz/embed/BY4GEpPR",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/BY4GEpPR"
         }
       ],
@@ -1459,7 +1862,7 @@
       "streamLink": "https://short.azonahub.biz/embed/Dk3neRBO",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/Dk3neRBO"
         }
       ],
@@ -1511,7 +1914,7 @@
               "duration": "40m",
               "streams": [
                 {
-                  "name": "HD+",
+                  "name": "Server 1 (HD)",
                   "url": "https://short.azonahub.biz/embed/87r7OJu4"
                 }
               ],
@@ -1555,7 +1958,7 @@
       "streamLink": "https://short.azonahub.biz/embed/KQJice2m",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/KQJice2m"
         }
       ],
@@ -1596,7 +1999,7 @@
       "streamLink": "https://short.azonahub.biz/embed/QbSXiM5m",
       "streams": [
         {
-          "name": "HD",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/QbSXiM5m"
         }
       ],
@@ -1645,7 +2048,7 @@
       "streamLink": "https://short.azonahub.biz/embed/AMmZ8r3c2z0Zr7yN",
       "streams": [
         {
-          "name": "Fast Server",
+          "name": "Server 1 (HD)",
           "url": "https://short.azonahub.biz/embed/AMmZ8r3c2z0Zr7yN"
         }
       ],
@@ -1676,8 +2079,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 33,
-    "lastUpdated": "2026-10-06T19:02:06.166190+00:00",
+    "totalMovies": 38,
+    "lastUpdated": "2026-10-06T22:03:23.919424+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",

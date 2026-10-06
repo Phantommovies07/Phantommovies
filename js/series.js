@@ -45,23 +45,58 @@ function getCurrentEpisode() {
     return season?.episodes?.[currentEpisodeIndex] || null;
 }
 
+const SERVER_LABELS = ["Server 1 (HD)", "Server 2 (Fast)", "Server 3 (VIP)", "Server 4 (Ultra)", "Server 5 (Cloud)", "Server 6 (Backup)"];
+
+function cleanServerLabel(name, index) {
+    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub/i.test(name)) {
+        return SERVER_LABELS[index] || `Server ${index + 1}`;
+    }
+    return name;
+}
+
 function seasonStreams(season) {
     return (Array.isArray(season?.streams) ? season.streams : [])
-        .filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
+        .filter(s => s && s.url).map((s, i) => ({ name: cleanServerLabel(s.name, i), url: s.url }));
 }
 
 function normalizeStreams(episode) {
     const season = getSeasons()[currentSeasonIndex];
-    // 1) SEASON-level combined: is season ke sab episodes ek file me
-    if (season?.combined) return seasonStreams(season);
-    // 2) SERIES-level combined: poori series ek file me
-    if (currentSeries?.combined) return seasonStreams(currentSeries);
-    // 3) Normal: per-episode streams
-    if (Array.isArray(episode?.streams) && episode.streams.length) {
-        return episode.streams.filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
+    let raw = [];
+    if (season?.combined) raw = seasonStreams(season);
+    else if (currentSeries?.combined) raw = seasonStreams(currentSeries);
+    else if (Array.isArray(episode?.streams) && episode.streams.length) {
+        raw = episode.streams.filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
     }
-    return [];
+
+    // Dynamic TV embed fallbacks if tmdb or imdb is available
+    const imdb = currentSeries?.imdb_id || '';
+    const tmdb = currentSeries?.tmdb_id || '';
+    const sNum = season?.seasonNumber || (currentSeasonIndex + 1);
+    const eNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
+
+    const dynamicStreams = [];
+    if ((imdb || tmdb) && !season?.combined && !currentSeries?.combined) {
+        const tvProviders = [
+            { name: "Server 1 (HD)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
+            { name: "Server 2 (Fast)", url: `https://player.autoembed.cc/embed/tv/${tmdb || imdb}/${sNum}/${eNum}` },
+            { name: "Server 3 (VIP)", url: `https://embed.su/embed/tv/${tmdb || imdb}/${sNum}/${eNum}` },
+            { name: "Server 4 (Ultra)", url: `https://vidsrc.cc/v2/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` },
+            { name: "Server 5 (Cloud)", url: `https://player.smashystream.com/tv/${tmdb || imdb}?s=${sNum}&e=${eNum}` }
+        ];
+        tvProviders.forEach(p => {
+            if (!raw.some(r => r.url === p.url)) {
+                dynamicStreams.push(p);
+            }
+        });
+    }
+
+    const merged = raw.length ? [...raw, ...dynamicStreams] : dynamicStreams;
+    return merged.map((s, i) => ({
+        name: cleanServerLabel(s.name, i),
+        url: s.url
+    }));
 }
+
 
 function normalizeDownloads(episode) {
     const season = getSeasons()[currentSeasonIndex];
