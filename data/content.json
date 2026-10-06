@@ -1,6 +1,244 @@
 {
   "movies": [
     {
+      "id": "1791325356766",
+      "type": "series",
+      "title": "Red Queen",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjFjMGVmYjYtNDYwOC00ZThhLTk0NTQtMzZlMTI4MmRmNGQ0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjFjMGVmYjYtNDYwOC00ZThhLTk0NTQtMzZlMTI4MmRmNGQ0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt20883126&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt20883126/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt20883126/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt20883126/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt20883126?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "769.6MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/4762582-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/3545692871-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/44731201730201-2/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "32.89 GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/74403832-2/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt20883126&s=2&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt20883126/2/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt20883126/2/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt20883126/2/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt20883126?s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/red-queen-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/red-queen-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/red-queen-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/red-queen-s02-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Red+Queen+2024+trailer",
+      "description": "Red Queen (2024) starring Victoria Luengo, Hovik Keuchkerian.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt20883126",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:22:36.311212+00:00",
+      "updatedAt": "2026-10-06T22:22:36.311212+00:00"
+    },
+    {
+      "id": "1791325358277",
+      "type": "series",
+      "title": "Prefiero la Muerte",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGZjNzI3OTUtMzc0Ny00MDVhLWE2ZmYtYzAyYWI1ZTU0NzZiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGZjNzI3OTUtMzc0Ny00MDVhLWE2ZmYtYzAyYWI1ZTU0NzZiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt31841438&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt31841438?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "3.5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Prefiero+la+Muerte+2026+trailer",
+      "description": "Prefiero la Muerte (2026) starring Diego Bernal, Fernanda Castillo.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31841438",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:22:36.915549+00:00",
+      "updatedAt": "2026-10-06T22:22:36.915549+00:00"
+    },
+    {
       "id": "1791324201294",
       "type": "series",
       "title": "Lanterns",
@@ -2079,8 +2317,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 38,
-    "lastUpdated": "2026-10-06T22:03:23.919424+00:00",
+    "totalMovies": 40,
+    "lastUpdated": "2026-10-06T22:22:36.915598+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
