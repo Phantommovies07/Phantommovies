@@ -1,6 +1,429 @@
 {
   "movies": [
     {
+      "id": "1791326101923",
+      "type": "series",
+      "title": "Prefiero la Muerte",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGZjNzI3OTUtMzc0Ny00MDVhLWE2ZmYtYzAyYWI1ZTU0NzZiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGZjNzI3OTUtMzc0Ny00MDVhLWE2ZmYtYzAyYWI1ZTU0NzZiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt31841438&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt31841438?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "3.5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Prefiero+la+Muerte+2026+trailer",
+      "description": "Prefiero la Muerte (2026) starring Diego Bernal, Fernanda Castillo.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31841438",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:34:54.735308+00:00",
+      "updatedAt": "2026-10-06T22:34:54.735308+00:00"
+    },
+    {
+      "id": "1791326096393",
+      "type": "series",
+      "title": "Love Story",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjRjZGJlZDgtODkzMi00OTYzLWEwNzAtM2ZiNGZiMmMwMzA3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjRjZGJlZDgtODkzMi00OTYzLWEwNzAtM2ZiNGZiMmMwMzA3XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt15232564&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt15232564/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt15232564/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt15232564/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt15232564?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "500MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-1080p-10BIT/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Love+Story+2026+trailer",
+      "description": "Love Story (2026) starring Sarah Pidgeon, Paul Anthony Kelly.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15232564",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:34:55.190549+00:00",
+      "updatedAt": "2026-10-06T22:34:55.190549+00:00"
+    },
+    {
+      "id": "1791326096946",
+      "type": "series",
+      "title": "East of Eden",
+      "genre": "Tv Mini-Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmI2ODMyNjctZTA1MS00ODNhLWI3ZjAtMmE4MDE4OWRjMWZlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmI2ODMyNjctZTA1MS00ODNhLWI3ZjAtMmE4MDE4OWRjMWZlXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt21097264&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt21097264/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt21097264/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt21097264/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt21097264?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/east-of-eden-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/east-of-eden-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/east-of-eden-s01-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=East+of+Eden+2026+trailer",
+      "description": "East of Eden (2026) starring Florence Pugh, Christopher Abbott.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt21097264",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:34:55.688153+00:00",
+      "updatedAt": "2026-10-06T22:34:55.688153+00:00"
+    },
+    {
+      "id": "1791326101422",
+      "type": "movie",
+      "title": "The End of Oak Street",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDQ1MDhmZWQtNjdhOS00MGE0LTkxMTItN2Q4NjIyYzUzZmRlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDQ1MDhmZWQtNjdhOS00MGE0LTkxMTItN2Q4NjIyYzUzZmRlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27165187&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt27165187&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt27165187"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt27165187"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27165187"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27165187"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "428.6MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/570291064397813-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "742.3MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/2331477273741-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/05296601100-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "9.56 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1226288637-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+End+of+Oak+Street+2026+trailer",
+      "description": "The End of Oak Street (2026) starring Anne Hathaway, Ewan McGregor.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27165187",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:34:56.091107+00:00",
+      "updatedAt": "2026-10-06T22:34:56.091107+00:00"
+    },
+    {
+      "id": "1791326100636",
+      "type": "movie",
+      "title": "Pooja Meri Jaan",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYWExY2JhYWItM2NlZS00ZjBkLWFkOTEtN2NiMTc5YjU0NzI3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYWExY2JhYWItM2NlZS00ZjBkLWFkOTEtN2NiMTc5YjU0NzI3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt21378820&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt21378820&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt21378820"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt21378820"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt21378820"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt21378820"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "339.8MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/954971348578589-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "609.8MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/795349038-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/2212262-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "2654.54 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/36797591188-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Pooja+Meri+Jaan+2026+trailer",
+      "description": "Pooja Meri Jaan (2026) starring Huma Qureshi, Mrunal Thakur.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt21378820",
+      "tmdb_id": "",
+      "createdAt": "2026-10-06T22:34:56.746925+00:00",
+      "updatedAt": "2026-10-06T22:34:56.746925+00:00"
+    },
+    {
       "id": "1791325356766",
       "type": "series",
       "title": "Red Queen",
@@ -2317,8 +2740,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 40,
-    "lastUpdated": "2026-10-06T22:22:36.915598+00:00",
+    "totalMovies": 45,
+    "lastUpdated": "2026-10-06T22:34:56.746958+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
