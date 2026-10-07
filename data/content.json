@@ -1,6 +1,466 @@
 {
   "movies": [
     {
+      "id": "1791351464100",
+      "type": "movie",
+      "title": "The Butcher's Blade",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjNlMDM2OWItY2IxNC00YWI0LTgyNTUtNDQ0ZWRiMjliMjQ2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjNlMDM2OWItY2IxNC00YWI0LTgyNTUtNDQ0ZWRiMjliMjQ2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt39314786&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt39314786&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt39314786"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt39314786"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt39314786"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt39314786"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "265910 MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/7761593-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2653.09 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/57786695-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Butcher's+Blade+2026+trailer",
+      "description": "The Butcher's Blade (2026) starring Fengchao Liu, Liu Chao.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39314786",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T05:37:36.249030+00:00",
+      "updatedAt": "2026-10-07T05:37:36.249030+00:00"
+    },
+    {
+      "id": "1791351464162",
+      "type": "series",
+      "title": "Prefiero la Muerte",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGZjNzI3OTUtMzc0Ny00MDVhLWE2ZmYtYzAyYWI1ZTU0NzZiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGZjNzI3OTUtMzc0Ny00MDVhLWE2ZmYtYzAyYWI1ZTU0NzZiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt31841438&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt31841438/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt31841438?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "3.5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/i-would-rather-die-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Prefiero+la+Muerte+2026+trailer",
+      "description": "Prefiero la Muerte (2026) starring Diego Bernal, Fernanda Castillo.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31841438",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T05:37:37.974470+00:00",
+      "updatedAt": "2026-10-07T05:37:37.974470+00:00"
+    },
+    {
+      "id": "1791351463082",
+      "type": "series",
+      "title": "Love Story",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjRjZGJlZDgtODkzMi00OTYzLWEwNzAtM2ZiNGZiMmMwMzA3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjRjZGJlZDgtODkzMi00OTYzLWEwNzAtM2ZiNGZiMmMwMzA3XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt15232564&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt15232564/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt15232564/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt15232564/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt15232564?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "500MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-1080p-10BIT/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Love+Story+2026+trailer",
+      "description": "Love Story (2026) starring Sarah Pidgeon, Paul Anthony Kelly.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15232564",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T05:37:38.388807+00:00",
+      "updatedAt": "2026-10-07T05:37:38.388807+00:00"
+    },
+    {
+      "id": "1791351466372",
+      "type": "series",
+      "title": "Medusa",
+      "genre": "Tv Series",
+      "year": 2025,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmM3ZTQ0ZGUtY2QwZC00YTQ1LTk3ZmMtYmFiZDQ3NDVkMjZjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMmM3ZTQ0ZGUtY2QwZC00YTQ1LTk3ZmMtYmFiZDQ3NDVkMjZjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt35836959&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt35836959/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt35836959/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt35836959/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt35836959?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/50608258238300-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/967784960224-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "10GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/8758505265-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt35836959&s=2&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt35836959/2/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt35836959/2/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt35836959/2/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt35836959?s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "170MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/medusa-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "414.2MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/medusa-s02-720p/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "800MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/medusa-s02-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Medusa+2025+trailer",
+      "description": "Medusa (2025) starring Juana Acosta, Manolo Cardona.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt35836959",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T05:37:39.095804+00:00",
+      "updatedAt": "2026-10-07T05:37:39.095804+00:00"
+    },
+    {
+      "id": "1791351465667",
+      "type": "movie",
+      "title": "Sardar 2",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTMzNjZkODEtNjRiMS00MjFiLWE0YWYtOGQ5ZGVlODQ1NDVmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTMzNjZkODEtNjRiMS00MjFiLWE0YWYtOGQ5ZGVlODQ1NDVmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt28541577&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt28541577&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt28541577"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt28541577"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt28541577"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt28541577"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "584.3MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/045518636540818-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "968.7MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/06785049068322-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/845298674640-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "26522.70 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/607351737-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sardar+2+2026+trailer",
+      "description": "Sardar 2 (2026) starring Karthi, Ashika Ranganath.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28541577",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T05:37:39.503434+00:00",
+      "updatedAt": "2026-10-07T05:37:39.503434+00:00"
+    },
+    {
       "id": "1791326101923",
       "type": "series",
       "title": "Prefiero la Muerte",
@@ -2740,8 +3200,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 45,
-    "lastUpdated": "2026-10-06T22:34:56.746958+00:00",
+    "totalMovies": 50,
+    "lastUpdated": "2026-10-07T05:37:39.503494+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
