@@ -1,6 +1,877 @@
 {
   "movies": [
     {
+      "id": "1791417455655",
+      "type": "movie",
+      "title": "An Action Hero",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWUzNzljNjMtYTdiZS00MWQ2LWFkZWItYTM0MzVmZGFhYzNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWUzNzljNjMtYTdiZS00MWQ2LWFkZWItYTM0MzVmZGFhYzNjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15600222&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15600222&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15600222"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15600222"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15600222"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15600222"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=An+Action+Hero+2022+trailer",
+      "description": "An Action Hero (2022) starring Ayushmann Khurrana, Jaideep Ahlawat.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19424,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15600222",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:29.979155+00:00",
+      "updatedAt": "2026-10-07T23:57:29.979155+00:00"
+    },
+    {
+      "id": "1791417454032",
+      "type": "series",
+      "title": "Yeh Meri Family",
+      "genre": "Tv Series",
+      "year": 2018,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGE2M2U0NTUtNDc2MC00MThmLWI2NzctMGY2MjlmZmRmMDFhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGE2M2U0NTUtNDc2MC00MThmLWI2NzctMGY2MjlmZmRmMDFhXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt8595766&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt8595766/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt8595766/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt8595766/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt8595766?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Yeh+Meri+Family+2018+trailer",
+      "description": "Yeh Meri Family (2018) starring Hetal Gada, Rajesh Kumar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19716,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8595766",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:29.280255+00:00",
+      "updatedAt": "2026-10-07T23:57:29.280255+00:00"
+    },
+    {
+      "id": "1791417452329",
+      "type": "movie",
+      "title": "Vedam",
+      "genre": "Feature",
+      "year": 2010,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDgxZjE5NzYtMjY0Zi00ZDY4LWE0NTktN2QzOTM4ZGI5ODg3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDgxZjE5NzYtMjY0Zi00ZDY4LWE0NTktN2QzOTM4ZGI5ODg3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1649431&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1649431&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1649431"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1649431"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1649431"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1649431"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vedam+2010+trailer",
+      "description": "Vedam (2010) starring Allu Arjun, Anushka Shetty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19915,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1649431",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:28.718453+00:00",
+      "updatedAt": "2026-10-07T23:57:28.718453+00:00"
+    },
+    {
+      "id": "1791417450412",
+      "type": "movie",
+      "title": "Tezaab",
+      "genre": "Feature",
+      "year": 1988,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjI1ZWE0ZjAtMTk4My00ZDkzLTk5ZjItODUyZGQ0OTFhNjY2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjI1ZWE0ZjAtMTk4My00ZDkzLTk5ZjItODUyZGQ0OTFhNjY2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0096252&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0096252&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0096252"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0096252"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0096252"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0096252"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Tezaab+1988+trailer",
+      "description": "Tezaab (1988) starring Anil Kapoor, Madhuri Dixit.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10930,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0096252",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:28.301726+00:00",
+      "updatedAt": "2026-10-07T23:57:28.301726+00:00"
+    },
+    {
+      "id": "1791417450856",
+      "type": "movie",
+      "title": "Varisu",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDM4NDBkNGEtNzI2Yi00ODkwLTliNzAtODkwMmRhNTEzZmVlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDM4NDBkNGEtNzI2Yi00ODkwLTliNzAtODkwMmRhNTEzZmVlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt11998558&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt11998558&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt11998558"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt11998558"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt11998558"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11998558"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Varisu+2023+trailer",
+      "description": "Varisu (2023) starring Joseph Vijay, Rashmika Mandanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20075,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11998558",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:27.786600+00:00",
+      "updatedAt": "2026-10-07T23:57:27.786600+00:00"
+    },
+    {
+      "id": "1791417449460",
+      "type": "movie",
+      "title": "Qala",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGFjYTliNzAtOTRlYi00NjNkLThmMGMtMmNhZjUyM2UyYWZhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGFjYTliNzAtOTRlYi00NjNkLThmMGMtMmNhZjUyM2UyYWZhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt14428598&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt14428598&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt14428598"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt14428598"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt14428598"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt14428598"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Qala+2022+trailer",
+      "description": "Qala (2022) starring Triptii Dimri, Babil Khan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13318,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14428598",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:27.226892+00:00",
+      "updatedAt": "2026-10-07T23:57:27.226892+00:00"
+    },
+    {
+      "id": "1791417448040",
+      "type": "movie",
+      "title": "Rangasthalam",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjQxNjg4ZGUtNzViNS00Y2Q3LTlkOTUtZDFlNjc5NjE3Njc2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjQxNjg4ZGUtNzViNS00Y2Q3LTlkOTUtZDFlNjc5NjE3Njc2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt7392212&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt7392212&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt7392212"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt7392212"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt7392212"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7392212"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Rangasthalam+2018+trailer",
+      "description": "Rangasthalam (2018) starring Ram Charan, Samantha Ruth Prabhu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7353,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7392212",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:26.058466+00:00",
+      "updatedAt": "2026-10-07T23:57:26.058466+00:00"
+    },
+    {
+      "id": "1791417454625",
+      "type": "movie",
+      "title": "Mr. India",
+      "genre": "Feature",
+      "year": 1987,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzJiNjEyZGMtMWEyOC00YzI2LWE3MWMtZDNmMGU5MzRhMjYxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzJiNjEyZGMtMWEyOC00YzI2LWE3MWMtZDNmMGU5MzRhMjYxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0093578&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0093578&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0093578"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0093578"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0093578"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0093578"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mr.+India+1987+trailer",
+      "description": "Mr. India (1987) starring Anil Kapoor, Sridevi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12914,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0093578",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:25.529407+00:00",
+      "updatedAt": "2026-10-07T23:57:25.529407+00:00"
+    },
+    {
+      "id": "1791417453386",
+      "type": "movie",
+      "title": "Viduthalai: Part 1",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzFjYTE5MDctYzYwNS00MGQ3LThiMTgtZDgxMTJiYzlhYTdlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzFjYTE5MDctYzYwNS00MGQ3LThiMTgtZDgxMTJiYzlhYTdlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt11396310&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt11396310&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt11396310"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt11396310"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt11396310"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11396310"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Viduthalai:+Part+1+2023+trailer",
+      "description": "Viduthalai: Part 1 (2023) starring Soori, Vijay Sethupathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16849,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11396310",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:24.876876+00:00",
+      "updatedAt": "2026-10-07T23:57:24.876876+00:00"
+    },
+    {
+      "id": "1791417452867",
+      "type": "movie",
+      "title": "Mahanati",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmU3ZjM1NTgtYjc2Mi00YzNjLWE1OWQtMjk5MDM4MmU3ZjZjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmU3ZjM1NTgtYjc2Mi00YzNjLWE1OWQtMjk5MDM4MmU3ZjZjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt7465992&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt7465992&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt7465992"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt7465992"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt7465992"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7465992"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mahanati+2018+trailer",
+      "description": "Mahanati (2018) starring Keerthy Suresh, Dulquer Salmaan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16420,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7465992",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:24.265752+00:00",
+      "updatedAt": "2026-10-07T23:57:24.265752+00:00"
+    },
+    {
+      "id": "1791417453381",
+      "type": "movie",
+      "title": "Jaane Bhi Do Yaaro",
+      "genre": "Feature",
+      "year": 1983,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzhhN2NlZmQtZDFmMi00ODA3LThjNTQtMmFhMzViZDcxZWFkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzhhN2NlZmQtZDFmMi00ODA3LThjNTQtMmFhMzViZDcxZWFkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0085743&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0085743&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0085743"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0085743"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0085743"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0085743"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jaane+Bhi+Do+Yaaro+1983+trailer",
+      "description": "Jaane Bhi Do Yaaro (1983) starring Naseeruddin Shah, Ravi Baswani.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7204,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0085743",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:23.755059+00:00",
+      "updatedAt": "2026-10-07T23:57:23.755059+00:00"
+    },
+    {
+      "id": "1791417446352",
+      "type": "movie",
+      "title": "Gol Maal",
+      "genre": "Feature",
+      "year": 1979,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjc2ZGI2MTYtMjkzYi00NjMxLThmMmQtOGVkN2IxMjM4ZjlmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjc2ZGI2MTYtMjkzYi00NjMxLThmMmQtOGVkN2IxMjM4ZjlmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0079221&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0079221&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0079221"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0079221"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0079221"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0079221"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Gol+Maal+1979+trailer",
+      "description": "Gol Maal (1979) starring Amol Palekar, Utpal Dutt.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19660,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0079221",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:23.234557+00:00",
+      "updatedAt": "2026-10-07T23:57:23.234557+00:00"
+    },
+    {
+      "id": "1791417449266",
+      "type": "movie",
+      "title": "Guruvayoor Ambalanadayil",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDQxMzY4ODktYmY4Yy00YmI0LTlkNGYtMDE5NDQyMWY4OTU0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDQxMzY4ODktYmY4Yy00YmI0LTlkNGYtMDE5NDQyMWY4OTU0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt25400540&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt25400540&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt25400540"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt25400540"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt25400540"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt25400540"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Guruvayoor+Ambalanadayil+2024+trailer",
+      "description": "Guruvayoor Ambalanadayil (2024) starring Prithviraj Sukumaran, Basil Joseph.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13903,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt25400540",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:21.445807+00:00",
+      "updatedAt": "2026-10-07T23:57:21.445807+00:00"
+    },
+    {
+      "id": "1791417441575",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5675620&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt5675620?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 26230,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:12.903388+00:00",
+      "updatedAt": "2026-10-07T23:57:12.903388+00:00"
+    },
+    {
+      "id": "1791417436021",
+      "type": "movie",
+      "title": "Mandaadi",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjdjYjVkY2ItOGM4Yy00OGQ3LTg3ZDAtNmYzMWZkYzg3NGZhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjdjYjVkY2ItOGM4Yy00OGQ3LTg3ZDAtNmYzMWZkYzg3NGZhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt36596965&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt36596965&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt36596965"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt36596965"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt36596965"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt36596965"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "688.1MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/27753761662-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "969.5MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1820334084-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/591699610-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "116.37 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/73580332622627-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mandaadi+2026+trailer",
+      "description": "Mandaadi (2026) starring Soori, Mahima Nambiar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21944,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36596965",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T23:57:10.623569+00:00",
+      "updatedAt": "2026-10-07T23:57:10.623569+00:00"
+    },
+    {
       "id": "1791402015562",
       "type": "movie",
       "title": "Monica, O My Darling",
@@ -13233,8 +14104,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 207,
-    "lastUpdated": "2026-10-07T19:40:15.458402+00:00",
+    "totalMovies": 222,
+    "lastUpdated": "2026-10-07T23:57:30.029340+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
