@@ -124,6 +124,7 @@ function renderSeries(series) {
             <div class="detail-hero-bg" style="background-image:url('${escapeHTML(banner)}')"></div>
             <div class="watch-wrap">
                 <div class="player-box" id="seriesPlayerBox"></div>
+                <div id="seriesFailoverContainer"></div>
                 <div id="seriesStreamButtons"></div>
             </div>
         </section>
@@ -165,6 +166,86 @@ function renderSeries(series) {
             genre: series.genre || ''
         });
     }
+}
+
+let currentSeriesStreamIndex = 0;
+let seriesFailoverWatchdogTimer = null;
+let testedSeriesFailedUrls = new Set();
+
+function renderSeriesFailoverBar() {
+    const container = document.getElementById('seriesFailoverContainer');
+    if (!container) return;
+    if (!currentStreams || currentStreams.length <= 1) {
+        container.innerHTML = '';
+        return;
+    }
+    const activeStream = currentStreams[currentSeriesStreamIndex] || currentStreams[0];
+    container.innerHTML = `
+        <div class="stream-failover-bar" id="seriesFailoverBar">
+            <div class="failover-status">
+                <span class="failover-dot online" id="seriesFailoverDot"></span>
+                <span id="seriesFailoverText">⚡ Active: ${escapeHTML(activeStream ? activeStream.name : 'Server 1 (HD)')} (Auto-Failover On)</span>
+            </div>
+            <button type="button" class="failover-quick-btn" onclick="autoFailoverSeriesNext('manual')">Switch Server ↻</button>
+        </div>
+    `;
+}
+
+function updateSeriesFailoverStatus(message, isSwitching = false) {
+    const textEl = document.getElementById('seriesFailoverText');
+    const dotEl = document.getElementById('seriesFailoverDot');
+    if (textEl) textEl.textContent = message;
+    if (dotEl) {
+        dotEl.className = isSwitching ? 'failover-dot switching' : 'failover-dot online';
+    }
+}
+
+function startSeriesFailoverWatchdog(streamUrl, streamName) {
+    if (seriesFailoverWatchdogTimer) clearTimeout(seriesFailoverWatchdogTimer);
+
+    // 1. Pre-check: If multiple servers and domain is known/detected dead, switch immediately
+    if (currentStreams.length > 1 && streamUrl && !testedSeriesFailedUrls.has(streamUrl)) {
+        try {
+            const controller = new AbortController();
+            const preTimer = setTimeout(() => controller.abort(), 2200);
+            fetch(streamUrl, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
+                .then(() => clearTimeout(preTimer))
+                .catch(() => {
+                    clearTimeout(preTimer);
+                    testedSeriesFailedUrls.add(streamUrl);
+                    console.warn(`[Series Auto-Failover] Domain ${streamName} failed health pre-check. Auto-switching...`);
+                    autoFailoverSeriesNext('health_check');
+                });
+        } catch (_) {}
+    }
+
+    // 2. Timeout Watchdog: If embed is unresponsive or blank after 7s, auto-switch to next server
+    seriesFailoverWatchdogTimer = setTimeout(() => {
+        const iframe = document.querySelector('#seriesPlayerBox .stream-frame');
+        if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
+            if (currentStreams.length > 1 && currentSeriesStreamIndex === 0) {
+                console.log(`[Series Auto-Failover] Server 1 watchdog expired, switching to fast fallback...`);
+                autoFailoverSeriesNext('timeout');
+            }
+        }
+    }, 7000);
+}
+
+function autoFailoverSeriesNext(reason = 'auto') {
+    if (!currentStreams || currentStreams.length <= 1) return;
+    if (seriesFailoverWatchdogTimer) clearTimeout(seriesFailoverWatchdogTimer);
+
+    currentSeriesStreamIndex = (currentSeriesStreamIndex + 1) % currentStreams.length;
+    const nextStream = currentStreams[currentSeriesStreamIndex];
+
+    const reasonText = reason === 'manual' ? 'Switched to' : 'Auto-switched to';
+    updateSeriesFailoverStatus(`⚠️ ${reasonText} ${nextStream.name} (Live)...`, true);
+
+    switchSeriesStream(currentSeriesStreamIndex, true);
+
+    setTimeout(() => {
+        updateSeriesFailoverStatus(`⚡ Connected: ${nextStream.name} (Auto-Failover Active)`, false);
+    }, 1500);
 }
 
 function renderSeasonTabs() {
@@ -218,6 +299,7 @@ function renderEpisodes() {
 
 function playEpisode(index) {
     currentEpisodeIndex = index;
+    currentSeriesStreamIndex = 0;
     const episode = getCurrentEpisode();
     const season = getSeasons()[currentSeasonIndex];
 
@@ -232,8 +314,12 @@ function playEpisode(index) {
                 (season.title || 'Season') + ' — Combined'
             );
             document.querySelectorAll('.episode-item').forEach(btn => btn.classList.remove('active'));
+            renderSeriesFailoverBar();
             renderStreamButtons();
             renderEpisodeDownloads();
+            if (currentStreams[0]) {
+                startSeriesFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
+            }
         }
         return;
     }
@@ -243,8 +329,13 @@ function playEpisode(index) {
     if (player) player.innerHTML = playerMarkup(currentStreams[0]?.url || '', currentSeries.banner || currentSeries.poster || '', episode.title || currentSeries.title);
 
     document.querySelectorAll('.episode-item').forEach((btn, i) => btn.classList.toggle('active', i === index));
+    renderSeriesFailoverBar();
     renderStreamButtons();
     renderEpisodeDownloads();
+
+    if (currentStreams[0]) {
+        startSeriesFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
+    }
 
     if (typeof gtag !== 'undefined') {
         gtag('event', 'episode_play', {
@@ -266,23 +357,25 @@ function renderStreamButtons() {
     }
 
     wrap.innerHTML = `<div class="stream-server-row">${currentStreams.map((stream, index) => `
-        <button class="stream-server-btn ${index === 0 ? 'active' : ''}" onclick="switchSeriesStream(${index})">${escapeHTML(stream.name)}</button>
+        <button class="stream-server-btn ${index === currentSeriesStreamIndex ? 'active' : ''}" onclick="switchSeriesStream(${index})">${escapeHTML(stream.name)}</button>
     `).join('')}</div>`;
 }
 
-function switchSeriesStream(index) {
-    handleClickAd('stream');
+function switchSeriesStream(index, isFailover = false) {
+    if (!isFailover) handleClickAd('stream');
+    currentSeriesStreamIndex = index;
     const stream = currentStreams[index];
     const episode = getCurrentEpisode();
     const season = getSeasons()[currentSeasonIndex];
     if (!stream) return;
-    // Combined season (episode rows na hon) par bhi server switch kaam kare
+
     const title = (episode?.title) ||
         (season?.combined ? (season.title || 'Season') + ' — Combined' : currentSeries.title);
     const player = document.getElementById('seriesPlayerBox');
     if (player) player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', title);
 
-    document.querySelectorAll('.stream-server-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
+    document.querySelectorAll('#seriesStreamButtons .stream-server-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
+    startSeriesFailoverWatchdog(stream.url, stream.name);
 }
 
 function renderEpisodeDownloads() {

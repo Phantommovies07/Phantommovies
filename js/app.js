@@ -169,10 +169,16 @@ function setFeatured(m) {
 
 // ─── TRENDING HELPERS ───
 function getTrendingMovies(limit = 6) {
-    const tagged = allMovies.filter(m => m.trending || m.featured || ['HOT', 'NEW', '4K'].includes(String(m.badge || '').toUpperCase()));
+    const tagged = allMovies.filter(m => m.trending || m.featured || ['TRENDING', 'HOT', 'NEW', '4K'].includes(String(m.badge || '').toUpperCase()));
     const source = tagged.length ? tagged : allMovies;
     return [...source]
-        .sort((a, b) => (Number(b.views || 0) + Number(b.rating || 0) * 100) - (Number(a.views || 0) + Number(a.rating || 0) * 100))
+        .sort((a, b) => {
+            const aTrendBonus = (a.trending || String(a.badge || '').toUpperCase() === 'TRENDING') ? 500000 : 0;
+            const bTrendBonus = (b.trending || String(b.badge || '').toUpperCase() === 'TRENDING') ? 500000 : 0;
+            const aScore = aTrendBonus + Number(a.views || 0) + Number(a.rating || 0) * 100;
+            const bScore = bTrendBonus + Number(b.views || 0) + Number(b.rating || 0) * 100;
+            return bScore - aScore;
+        })
         .slice(0, limit);
 }
 
@@ -260,12 +266,15 @@ function bindMovieCards(scope = document) {
 function renderCategoryFilters() {
     const row = document.getElementById('genreRow');
     if (!row) return;
-    const genres = [...new Set(allMovies.map(m => m.genre).filter(Boolean))].sort();
+    const genres = [...new Set(allMovies.map(m => m.genre).filter(Boolean))].filter(g => !['Movie', 'Tv Series'].includes(g)).sort();
     const pills = [
         { label: 'All', filter: 'all' },
-        { label: 'Movies', filter: 'movie' },
-        { label: 'Series', filter: 'series' },
-        { label: 'Trending', filter: 'trending' },
+        { label: '🔥 Trending', filter: 'trending' },
+        { label: '🎬 Bollywood (New)', filter: 'bollywood_new' },
+        { label: '⚡ South (New)', filter: 'south_new' },
+        { label: '📺 Web Series & TV', filter: 'series' },
+        { label: '🏛️ Bollywood Classics', filter: 'bollywood_classic' },
+        { label: '🏆 South Classics', filter: 'south_classic' },
         ...genres.map(g => ({ label: g, genre: g }))
     ];
     row.innerHTML = pills.map((p, i) => `<div class="genre-pill ${i === 0 ? 'active' : ''}" data-filter="${p.filter || ''}" data-genre="${p.genre || ''}">${p.label}</div>`).join('');
@@ -277,6 +286,10 @@ function filterContent(pill) {
     if (filter === 'movie') return allMovies.filter(m => m.type !== 'series');
     if (filter === 'series') return allMovies.filter(m => m.type === 'series');
     if (filter === 'trending') return getTrendingMovies(100);
+    if (filter === 'bollywood_new') return allMovies.filter(m => m.category === 'bollywood_new' || (m.industry === 'Bollywood' && m.year >= 2022) || (m.tags && m.tags.includes('bollywood_new')));
+    if (filter === 'south_new') return allMovies.filter(m => m.category === 'south_new' || (m.industry === 'South' && m.year >= 2022) || (m.tags && m.tags.includes('south_new')));
+    if (filter === 'bollywood_classic') return allMovies.filter(m => m.category === 'bollywood_classic' || (m.industry === 'Bollywood' && m.year < 2022) || (m.tags && m.tags.includes('bollywood_classic')));
+    if (filter === 'south_classic') return allMovies.filter(m => m.category === 'south_classic' || (m.industry === 'South' && m.year < 2022) || (m.tags && m.tags.includes('south_classic')));
     if (genre) return allMovies.filter(m => m.genre === genre);
     return allMovies;
 }

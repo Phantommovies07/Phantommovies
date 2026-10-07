@@ -2,15 +2,27 @@ name: 🎬 Auto-Sync Movies to Phantom Movies
 
 on:
   schedule:
-    # Runs every 6 hours automatically (00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
+    # Runs every 4 hours automatically (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
+    - cron: '0 */4 * * *'
   workflow_dispatch:
     # Allows manual trigger anytime from GitHub UI / mobile app
     inputs:
-      movie_count:
-        description: 'Number of new movies to add'
+      category:
+        description: 'Category to ingest'
         required: false
-        default: '5'
+        default: 'all'
+        type: choice
+        options:
+          - 'all'
+          - 'bollywood_new'
+          - 'south_new'
+          - 'bollywood_classic'
+          - 'south_classic'
+          - 'series'
+      movie_count:
+        description: 'Number of new titles to add'
+        required: false
+        default: '15'
         type: string
 
 permissions:
@@ -42,10 +54,14 @@ jobs:
         run: |
           COUNT="${{ github.event.inputs.movie_count }}"
           if [ -z "$COUNT" ]; then
-            COUNT="5"
+            COUNT="15"
           fi
-          echo "Fetching $COUNT new movies..."
-          python scripts/auto_sync.py --count "$COUNT"
+          CATEGORY="${{ github.event.inputs.category }}"
+          if [ -z "$CATEGORY" ]; then
+            CATEGORY="all"
+          fi
+          echo "Fetching $COUNT new titles for category: $CATEGORY..."
+          python scripts/auto_sync.py --category "$CATEGORY" --count "$COUNT"
 
       - name: 🚀 Commit and Push to Main
         run: |

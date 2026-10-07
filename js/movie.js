@@ -126,34 +126,118 @@ function normalizeStreams(movie) {
 }
 
 
+let currentStreamIndex = 0;
+let failoverWatchdogTimer = null;
+let testedFailedUrls = new Set();
+
+function renderFailoverBar() {
+    if (!currentStreams || currentStreams.length <= 1) return '';
+    const activeStream = currentStreams[currentStreamIndex] || currentStreams[0];
+    return `
+        <div class="stream-failover-bar" id="streamFailoverBar">
+            <div class="failover-status">
+                <span class="failover-dot online" id="failoverDot"></span>
+                <span id="failoverText">⚡ Active: ${escapeHTML(activeStream ? activeStream.name : 'Server 1 (HD)')} (Auto-Failover On)</span>
+            </div>
+            <button type="button" class="failover-quick-btn" onclick="autoFailoverNext('manual')">Switch Server ↻</button>
+        </div>
+    `;
+}
+
+function updateFailoverStatus(message, isSwitching = false) {
+    const textEl = document.getElementById('failoverText');
+    const dotEl = document.getElementById('failoverDot');
+    if (textEl) textEl.textContent = message;
+    if (dotEl) {
+        dotEl.className = isSwitching ? 'failover-dot switching' : 'failover-dot online';
+    }
+}
+
+function startFailoverWatchdog(streamUrl, streamName) {
+    if (failoverWatchdogTimer) clearTimeout(failoverWatchdogTimer);
+
+    // 1. Pre-check: If we have multiple servers and domain is known to be dead, switch immediately
+    if (currentStreams.length > 1 && !testedFailedUrls.has(streamUrl)) {
+        try {
+            const controller = new AbortController();
+            const preTimer = setTimeout(() => controller.abort(), 2200);
+            fetch(streamUrl, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
+                .then(() => clearTimeout(preTimer))
+                .catch(() => {
+                    clearTimeout(preTimer);
+                    // Network / DNS failure detected
+                    testedFailedUrls.add(streamUrl);
+                    console.warn(`[Auto-Failover] Domain ${streamName} failed health pre-check. Auto-switching...`);
+                    autoFailoverNext('health_check');
+                });
+        } catch (_) {}
+    }
+
+    // 2. Timeout Watchdog: If embed is unresponsive or blank after 7s, auto-switch to next server
+    failoverWatchdogTimer = setTimeout(() => {
+        const iframe = document.querySelector('.stream-frame');
+        if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
+            // Check if user is still on this screen and hasn't manually switched
+            if (currentStreams.length > 1 && currentStreamIndex === 0) {
+                console.log(`[Auto-Failover] Server 1 watchdog expired, switching to fast fallback...`);
+                autoFailoverNext('timeout');
+            }
+        }
+    }, 7000);
+}
+
+function autoFailoverNext(reason = 'auto') {
+    if (!currentStreams || currentStreams.length <= 1) return;
+    if (failoverWatchdogTimer) clearTimeout(failoverWatchdogTimer);
+
+    const prevIndex = currentStreamIndex;
+    currentStreamIndex = (currentStreamIndex + 1) % currentStreams.length;
+    const nextStream = currentStreams[currentStreamIndex];
+
+    const reasonText = reason === 'manual' ? 'Switched to' : 'Auto-switched to';
+    updateFailoverStatus(`⚠️ ${reasonText} ${nextStream.name} (Live)...`, true);
+
+    switchStream(currentStreamIndex, true);
+
+    setTimeout(() => {
+        updateFailoverStatus(`⚡ Connected: ${nextStream.name} (Auto-Failover Active)`, false);
+    }, 1500);
+}
+
 function renderStreamButtons() {
     if (!currentStreams.length || currentStreams.length === 1) return '';
     return `<div class="stream-server-row">${currentStreams.map((stream, index) => `
-        <button class="stream-server-btn ${index === 0 ? 'active' : ''}" onclick="switchStream(${index})">${escapeHTML(stream.name)}</button>
+        <button class="stream-server-btn ${index === currentStreamIndex ? 'active' : ''}" onclick="switchStream(${index})">${escapeHTML(stream.name)}</button>
     `).join('')}</div>`;
 }
 
-function switchStream(index) {
-    handleClickAd('stream');
+function switchStream(index, isFailover = false) {
+    if (!isFailover) handleClickAd('stream');
     if (!currentMovie || !currentStreams[index]) return;
+
+    currentStreamIndex = index;
+    const stream = currentStreams[index];
 
     const player = document.getElementById('playerBox');
     if (player) {
-        player.innerHTML = playerMarkup(currentMovie, currentStreams[index].url);
+        player.innerHTML = playerMarkup(currentMovie, stream.url);
     }
 
     document.querySelectorAll('.stream-server-btn').forEach((btn, i) => {
         btn.classList.toggle('active', i === index);
     });
 
+    startFailoverWatchdog(stream.url, stream.name);
+
     if (typeof gtag !== 'undefined') {
         gtag('event', 'stream_server_switch', {
             movie_title: currentMovie.title,
             movie_id: currentMovie.id,
-            server: currentStreams[index].name
+            server: stream.name
         });
     }
 }
+
 
 function normalizeDownloads(movie) {
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
@@ -203,8 +287,10 @@ function renderMovie(movie) {
                 <div class="player-box" id="playerBox">
                     ${playerMarkup(movie, currentStreams[0] ? currentStreams[0].url : '')}
                 </div>
+                ${renderFailoverBar()}
                 ${renderStreamButtons()}
             </div>
+
         </section>
 
         <section class="movie-detail-content">
@@ -243,6 +329,10 @@ function renderMovie(movie) {
         });
     });
 
+    if (currentStreams[0]) {
+        startFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
+    }
+
     if (typeof gtag !== 'undefined') {
         gtag('event', 'movie_detail_view', {
             movie_title: movie.title,
@@ -251,6 +341,7 @@ function renderMovie(movie) {
         });
     }
 }
+
 
 function showError(message) {
     document.getElementById('movieDetail').innerHTML = `
