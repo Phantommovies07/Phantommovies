@@ -1,6 +1,398 @@
 {
   "movies": [
     {
+      "id": "1791378505347",
+      "type": "series",
+      "title": "Ishqa Ishqa",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDk5ODRmZWYtM2YwMS00ODk3LWE1MGYtYmEzMGRkMzU5OGQ1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDk5ODRmZWYtM2YwMS00ODk3LWE1MGYtYmEzMGRkMzU5OGQ1XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt47743267&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt47743267/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt47743267/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt47743267/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt47743267?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "100MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/ishqa-ishqa-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/ishqa-ishqa-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "800MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/ishqa-ishqa-s01-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ishqa+Ishqa+2026+trailer",
+      "description": "Ishqa Ishqa (2026) starring Helly Shah, Satyajeet Dubey.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt47743267",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T13:08:23.180280+00:00",
+      "updatedAt": "2026-10-07T13:08:23.180280+00:00"
+    },
+    {
+      "id": "1791378511565",
+      "type": "series",
+      "title": "Carrie",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTRhNGJmY2YtYjNmOC00ZTA4LThjMzktYTEwYTdkZDE0OTllXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTRhNGJmY2YtYjNmOC00ZTA4LThjMzktYTEwYTdkZDE0OTllXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt11540908&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt11540908/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt11540908/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt11540908/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt11540908?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/carrie-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/carrie-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/carrie-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/carrie-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Carrie+2026+trailer",
+      "description": "Carrie (2026) starring Summer H. Howell, Samantha Sloyan.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11540908",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T13:08:23.636707+00:00",
+      "updatedAt": "2026-10-07T13:08:23.636707+00:00"
+    },
+    {
+      "id": "1791378513358",
+      "type": "movie",
+      "title": "Vadhala",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDM3MGI5YjctZGIzMC00MWI4LWI1Y2ItYmFhN2FkZWZkMTJhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDM3MGI5YjctZGIzMC00MWI4LWI1Y2ItYmFhN2FkZWZkMTJhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt41874413&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt41874413&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt41874413"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt41874413"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt41874413"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt41874413"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "419.7MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/94155698573017-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "729.2MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/823736464061-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/481228105224-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vadhala+2026+trailer",
+      "description": "Vadhala (2026) starring Jagapathi Babu, Laya.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt41874413",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T13:08:24.167320+00:00",
+      "updatedAt": "2026-10-07T13:08:24.167320+00:00"
+    },
+    {
+      "id": "1791378511707",
+      "type": "movie",
+      "title": "Ronny - The ruler",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDVkYjYxZDQtZmZhOC00YTJhLWI0MWYtZjg1YzA0NjI1NzkzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDVkYjYxZDQtZmZhOC00YTJhLWI0MWYtZjg1YzA0NjI1NzkzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27960755&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt27960755&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt27960755"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt27960755"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27960755"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27960755"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "512.8MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/2427864-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "833.9MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/167074318-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.9GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/017354467-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ronny+-+The+ruler+2024+trailer",
+      "description": "Ronny - The ruler (2024) starring Dharmanna Kadur, Surya Kundapura.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27960755",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T13:08:24.931977+00:00",
+      "updatedAt": "2026-10-07T13:08:24.931977+00:00"
+    },
+    {
+      "id": "1791378513572",
+      "type": "movie",
+      "title": "Bombay Stories",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmViYjA1ODAtZmZiYy00NzJlLTk2MzQtOWE2NDE0YTc2ZTBlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmViYjA1ODAtZmZiYy00NzJlLTk2MzQtOWE2NDE0YTc2ZTBlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt42481138&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt42481138&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt42481138"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt42481138"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt42481138"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt42481138"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "666.1MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/291918679989-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "983.7MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/2688981029-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.1GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/216337279-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bombay+Stories+2026+trailer",
+      "description": "Bombay Stories (2026) starring Monica Aggarwal, Bilal Ahamad Bhagat.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 0,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt42481138",
+      "tmdb_id": "",
+      "createdAt": "2026-10-07T13:08:28.016498+00:00",
+      "updatedAt": "2026-10-07T13:08:28.016498+00:00"
+    },
+    {
       "id": "1791351464100",
       "type": "movie",
       "title": "The Butcher's Blade",
@@ -3200,8 +3592,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 50,
-    "lastUpdated": "2026-10-07T05:37:39.503494+00:00",
+    "totalMovies": 55,
+    "lastUpdated": "2026-10-07T13:08:28.016544+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
