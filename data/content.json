@@ -1,6 +1,917 @@
 {
   "movies": [
     {
+      "id": "1791471984009",
+      "type": "movie",
+      "title": "Padayappa",
+      "genre": "Feature",
+      "year": 1999,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWU1YjczOTctYmY2Ny00NDM5LTg5M2UtMGM5ZTVkNzY2YzA1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMWU1YjczOTctYmY2Ny00NDM5LTg5M2UtMGM5ZTVkNzY2YzA1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0213969&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0213969&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0213969"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0213969"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0213969"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0213969"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Padayappa+1999+trailer",
+      "description": "Padayappa (1999) starring Sivaji Ganesan, Rajinikanth.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13313,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0213969",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:18.383462+00:00",
+      "updatedAt": "2026-10-08T15:06:18.383462+00:00"
+    },
+    {
+      "id": "1791471983980",
+      "type": "movie",
+      "title": "Darr",
+      "genre": "Feature",
+      "year": 1993,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWJjZGZjMDItZTgzOS00Y2UwLThlZWEtN2QyNmE3NzgwZTM5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWJjZGZjMDItZTgzOS00Y2UwLThlZWEtN2QyNmE3NzgwZTM5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0109555&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0109555&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0109555"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0109555"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0109555"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0109555"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Darr+1993+trailer",
+      "description": "Darr (1993) starring Sunny Deol, Juhi Chawla.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21712,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0109555",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:17.818127+00:00",
+      "updatedAt": "2026-10-08T15:06:17.818127+00:00"
+    },
+    {
+      "id": "1791471981090",
+      "type": "movie",
+      "title": "Ravanasura",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTliNzAyOTUtNGY2Ny00ZDRjLTk2NjctMDVjOTFlNWE3OWJhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTliNzAyOTUtNGY2Ny00ZDRjLTk2NjctMDVjOTFlNWE3OWJhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15816190&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15816190&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15816190"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15816190"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15816190"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15816190"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ravanasura+2023+trailer",
+      "description": "Ravanasura (2023) starring Ravi Teja, Jayaram.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17042,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15816190",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:17.398155+00:00",
+      "updatedAt": "2026-10-08T15:06:17.398155+00:00"
+    },
+    {
+      "id": "1791471983341",
+      "type": "movie",
+      "title": "Selfiee",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGE4ODI5MjQtMmE3NC00NDVlLWJhNzAtNGZkMzlkZGZlNjFmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGE4ODI5MjQtMmE3NC00NDVlLWJhNzAtNGZkMzlkZGZlNjFmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15516726&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15516726&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15516726"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15516726"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15516726"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15516726"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Selfiee+2023+trailer",
+      "description": "Selfiee (2023) starring Akshay Kumar, Emraan Hashmi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7499,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15516726",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:16.837792+00:00",
+      "updatedAt": "2026-10-08T15:06:16.837792+00:00"
+    },
+    {
+      "id": "1791471978696",
+      "type": "series",
+      "title": "Hostel Daze",
+      "genre": "Tv Series",
+      "year": 2019,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWZlNWMxNDYtNTAzYi00OWFiLThhZDUtZGZkYWMyMzQ5ZGYyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWZlNWMxNDYtNTAzYi00OWFiLThhZDUtZGZkYWMyMzQ5ZGYyXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt11407524&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt11407524/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt11407524/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt11407524/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt11407524?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hostel+Daze+2019+trailer",
+      "description": "Hostel Daze (2019) starring Nikhil Vijay, Luv Vispute.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16701,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11407524",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:16.281728+00:00",
+      "updatedAt": "2026-10-08T15:06:16.281728+00:00"
+    },
+    {
+      "id": "1791471978666",
+      "type": "movie",
+      "title": "Indra",
+      "genre": "Feature",
+      "year": 2002,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzZlZDk5MzUtYTNkMy00YzcyLTg5Y2MtYzE5OWExMDVmYjk3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzZlZDk5MzUtYTNkMy00YzcyLTg5Y2MtYzE5OWExMDVmYjk3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0319557&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0319557&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0319557"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0319557"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0319557"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0319557"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Indra+2002+trailer",
+      "description": "Indra (2002) starring Chiranjeevi, Sonali Bendre.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6824,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0319557",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:15.729155+00:00",
+      "updatedAt": "2026-10-08T15:06:15.729155+00:00"
+    },
+    {
+      "id": "1791471980849",
+      "type": "movie",
+      "title": "Hum Aapke Hain Koun..!",
+      "genre": "Feature",
+      "year": 1994,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWFmZDQ5N2EtZDIzZC00NDRlLTkwNjktN2Q5NDQ2YjE5MDQyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOWFmZDQ5N2EtZDIzZC00NDRlLTkwNjktN2Q5NDQ2YjE5MDQyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0110076&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0110076&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0110076"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0110076"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0110076"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0110076"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hum+Aapke+Hain+Koun..!+1994+trailer",
+      "description": "Hum Aapke Hain Koun..! (1994) starring Madhuri Dixit, Salman Khan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18807,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0110076",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:15.333254+00:00",
+      "updatedAt": "2026-10-08T15:06:15.333254+00:00"
+    },
+    {
+      "id": "1791471980149",
+      "type": "movie",
+      "title": "Dasara",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzkxNmQ5NGItZDFiZi00MTFiLWFmZTktODAxODliZDkzZTY4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzkxNmQ5NGItZDFiZi00MTFiLWFmZTktODAxODliZDkzZTY4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15440322&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15440322&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15440322"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15440322"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15440322"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15440322"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dasara+2023+trailer",
+      "description": "Dasara (2023) starring Nani, Keerthy Suresh.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23686,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15440322",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:14.721340+00:00",
+      "updatedAt": "2026-10-08T15:06:14.721340+00:00"
+    },
+    {
+      "id": "1791471982849",
+      "type": "movie",
+      "title": "Shehzada",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWRiYTg2M2ItNDhkNS00ZDI3LWE2OGItM2VhZDE0ZjQ4ZWU0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWRiYTg2M2ItNDhkNS00ZDI3LWE2OGItM2VhZDE0ZjQ4ZWU0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt13130948&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt13130948&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt13130948"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt13130948"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt13130948"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt13130948"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Shehzada+2023+trailer",
+      "description": "Shehzada (2023) starring Kartik Aaryan, Kriti Sanon.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15249,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt13130948",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:14.224720+00:00",
+      "updatedAt": "2026-10-08T15:06:14.224720+00:00"
+    },
+    {
+      "id": "1791471975917",
+      "type": "series",
+      "title": "Flames",
+      "genre": "Tv Series",
+      "year": 2018,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzc5MmU0NTItMzg4Mi00ZjRiLTkyMGQtNDM4MzQ4NjYwNmIwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzc5MmU0NTItMzg4Mi00ZjRiLTkyMGQtNDM4MzQ4NjYwNmIwXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt7927936&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt7927936/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt7927936/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt7927936/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt7927936?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Flames+2018+trailer",
+      "description": "Flames (2018) starring Ritvik Sahore, Tanya Maniktala.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13195,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7927936",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:13.773316+00:00",
+      "updatedAt": "2026-10-08T15:06:13.773316+00:00"
+    },
+    {
+      "id": "1791471981708",
+      "type": "movie",
+      "title": "Simhadri",
+      "genre": "Feature",
+      "year": 2003,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDMwZTcyYjYtYzU4Mi00MGFkLThmODAtNDc3MzIzN2UzM2E5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDMwZTcyYjYtYzU4Mi00MGFkLThmODAtNDc3MzIzN2UzM2E5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0375066&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0375066&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0375066"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0375066"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0375066"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0375066"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Simhadri+2003+trailer",
+      "description": "Simhadri (2003) starring N.T. Rama Rao Jr., Bhoomika Chawla.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7438,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0375066",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:13.249362+00:00",
+      "updatedAt": "2026-10-08T15:06:13.249362+00:00"
+    },
+    {
+      "id": "1791471978819",
+      "type": "movie",
+      "title": "Baazigar",
+      "genre": "Feature",
+      "year": 1993,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzI3NTI1YjEtYTUyNy00MzUzLWJmMjktYjg2ZTM0M2RmMmNkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzI3NTI1YjEtYTUyNy00MzUzLWJmMjktYjg2ZTM0M2RmMmNkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0106333&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0106333&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0106333"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0106333"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0106333"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0106333"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Baazigar+1993+trailer",
+      "description": "Baazigar (1993) starring Shah Rukh Khan, Kajol.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20306,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0106333",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:12.648975+00:00",
+      "updatedAt": "2026-10-08T15:06:12.648975+00:00"
+    },
+    {
+      "id": "1791471966169",
+      "type": "movie",
+      "title": "Onslaught",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTNkNGZjOWItNTQ1Yy00ZGE4LWFhOTUtNmQyNDk1OTNkMTljXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTNkNGZjOWItNTQ1Yy00ZGE4LWFhOTUtNmQyNDk1OTNkMTljXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt32268691&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt32268691&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt32268691"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt32268691"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt32268691"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt32268691"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "452 MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/9471401528076-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "747 MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/9031269-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.59 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1875550487727-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Onslaught+2026+trailer",
+      "description": "Onslaught (2026) starring Adria Arjona, Dan Stevens.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9964,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32268691",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:02.798031+00:00",
+      "updatedAt": "2026-10-08T15:06:02.798031+00:00"
+    },
+    {
+      "id": "1791471965922",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5675620&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt5675620?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21410,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:06:02.430155+00:00",
+      "updatedAt": "2026-10-08T15:06:02.430155+00:00"
+    },
+    {
+      "id": "1791471966974",
+      "type": "series",
+      "title": "Below",
+      "genre": "Tv Mini-Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzRjZjU3NTktOTY5My00YTEzLTliYjAtMDNjYjhiN2MyYjllXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzRjZjU3NTktOTY5My00YTEzLTliYjAtMDNjYjhiN2MyYjllXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt35934755&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt35934755/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt35934755/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt35934755/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt35934755?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/below-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/below-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "800MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/below-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/below-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Below+2026+trailer",
+      "description": "Below (2026) starring Josh Hartnett, Mackenzie Davis.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 29285,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt35934755",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T15:05:59.909862+00:00",
+      "updatedAt": "2026-10-08T15:05:59.909862+00:00"
+    },
+    {
       "id": "1791433865802",
       "type": "movie",
       "title": "Vaathi",
@@ -14964,8 +15875,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 237,
-    "lastUpdated": "2026-10-08T04:31:05.214182+00:00",
+    "totalMovies": 252,
+    "lastUpdated": "2026-10-08T15:06:18.433620+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
