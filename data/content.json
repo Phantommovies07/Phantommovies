@@ -1,6 +1,924 @@
 {
   "movies": [
     {
+      "id": "1791493043820",
+      "type": "movie",
+      "title": "Gumraah",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTUyNmJjZDktYTdkMC00MmEyLWE2MzEtYjM5NzcwZTgzOGU3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTUyNmJjZDktYTdkMC00MmEyLWE2MzEtYjM5NzcwZTgzOGU3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt11905536&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt11905536&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt11905536"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt11905536"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt11905536"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11905536"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Gumraah+2023+trailer",
+      "description": "Gumraah (2023) starring Aditya Roy Kapoor, Mrunal Thakur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19941,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11905536",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:17.905494+00:00",
+      "updatedAt": "2026-10-08T20:57:17.905494+00:00"
+    },
+    {
+      "id": "1791493042027",
+      "type": "series",
+      "title": "SK Sir Ki Class",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTEzMDJjMWQtMmY3Zi00MzU0LTlhNmQtODk5MzJkNWVjYTM0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTEzMDJjMWQtMmY3Zi00MzU0LTlhNmQtODk5MzJkNWVjYTM0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt26750072&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt26750072/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt26750072/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt26750072/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt26750072?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=SK+Sir+Ki+Class+2023+trailer",
+      "description": "SK Sir Ki Class (2023) starring Abhilash Thapliyal, Gagan Arora.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9698,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26750072",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:17.279556+00:00",
+      "updatedAt": "2026-10-08T20:57:17.279556+00:00"
+    },
+    {
+      "id": "1791493045111",
+      "type": "movie",
+      "title": "Baasha",
+      "genre": "Feature",
+      "year": 1995,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWE4M2RlZTEtNGM0YS00NWIxLWFjNDEtOWJkMzY0MDQ0NTgwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWE4M2RlZTEtNGM0YS00NWIxLWFjNDEtOWJkMzY0MDQ0NTgwXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0139876&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0139876&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0139876"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0139876"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0139876"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0139876"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Baasha+1995+trailer",
+      "description": "Baasha (1995) starring Rajinikanth, Nagma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15484,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0139876",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:16.771521+00:00",
+      "updatedAt": "2026-10-08T20:57:16.771521+00:00"
+    },
+    {
+      "id": "1791493043153",
+      "type": "movie",
+      "title": "Satya",
+      "genre": "Feature",
+      "year": 1998,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTMwMjk3MzA2OF5BMl5BanBnXkFtZTcwNjU2ODgzMQ@@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTMwMjk3MzA2OF5BMl5BanBnXkFtZTcwNjU2ODgzMQ@@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0195231&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0195231&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0195231"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0195231"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0195231"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0195231"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Satya+1998+trailer",
+      "description": "Satya (1998) starring J.D. Chakravarthi, Manoj Bajpayee.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14245,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0195231",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:16.157861+00:00",
+      "updatedAt": "2026-10-08T20:57:16.157861+00:00"
+    },
+    {
+      "id": "1791493045147",
+      "type": "movie",
+      "title": "The Night Agent",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDU5ZjhhNWMtMjM2MC00OWNmLTlmYTMtOTQ5OTBlZjc2NTdhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDU5ZjhhNWMtMjM2MC00OWNmLTlmYTMtOTQ5OTBlZjc2NTdhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt13918776&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt13918776&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt13918776"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt13918776"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt13918776"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt13918776"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Night+Agent+2023+trailer",
+      "description": "The Night Agent (2023) starring Gabriel Basso, Fola Evans-Akingbola.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15025,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt13918776",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:15.726522+00:00",
+      "updatedAt": "2026-10-08T20:57:15.726522+00:00"
+    },
+    {
+      "id": "1791493037967",
+      "type": "movie",
+      "title": "Bheed",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmE1Y2VhZGUtMTk0OS00YzdiLThjZDQtYTlkZmJlYTljZDE3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmE1Y2VhZGUtMTk0OS00YzdiLThjZDQtYTlkZmJlYTljZDE3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15680228&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15680228&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15680228"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15680228"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15680228"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15680228"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bheed+2023+trailer",
+      "description": "Bheed (2023) starring Rajkummar Rao, Pankaj Kapur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15105,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15680228",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:15.519208+00:00",
+      "updatedAt": "2026-10-08T20:57:15.519208+00:00"
+    },
+    {
+      "id": "1791493044833",
+      "type": "series",
+      "title": "Sandeep Bhaiya",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWI4MGUzNmEtYjBjMy00MDM4LWE5NGItYTZlZTFlNjc3YWFiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWI4MGUzNmEtYjBjMy00MDM4LWE5NGItYTZlZTFlNjc3YWFiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt28227737&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt28227737/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt28227737/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt28227737/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt28227737?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sandeep+Bhaiya+2023+trailer",
+      "description": "Sandeep Bhaiya (2023) starring Sunny Hinduja, Deepali Gautam.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13871,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28227737",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:15.073790+00:00",
+      "updatedAt": "2026-10-08T20:57:15.073790+00:00"
+    },
+    {
+      "id": "1791493038766",
+      "type": "movie",
+      "title": "Muthu",
+      "genre": "Feature",
+      "year": 1995,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTc0M2I1MGQtNGY3NC00MjM4LWJiMjAtM2RmYmNjMzk3ZTk5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTc0M2I1MGQtNGY3NC00MjM4LWJiMjAtM2RmYmNjMzk3ZTk5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0140399&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0140399&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0140399"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0140399"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0140399"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0140399"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Muthu+1995+trailer",
+      "description": "Muthu (1995) starring Rajinikanth, Meena.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14529,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0140399",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:14.374367+00:00",
+      "updatedAt": "2026-10-08T20:57:14.374367+00:00"
+    },
+    {
+      "id": "1791493039616",
+      "type": "movie",
+      "title": "Kuch Kuch Hota Hai",
+      "genre": "Feature",
+      "year": 1998,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmQ0ZjliZTgtMjQ3NC00N2NiLTkxNjktY2VkOTQ2N2QyODNkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMmQ0ZjliZTgtMjQ3NC00N2NiLTkxNjktY2VkOTQ2N2QyODNkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0172684&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0172684&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0172684"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0172684"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0172684"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0172684"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kuch+Kuch+Hota+Hai+1998+trailer",
+      "description": "Kuch Kuch Hota Hai (1998) starring Shah Rukh Khan, Kajol.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8822,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0172684",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:13.931443+00:00",
+      "updatedAt": "2026-10-08T20:57:13.931443+00:00"
+    },
+    {
+      "id": "1791493037072",
+      "type": "movie",
+      "title": "Virupaksha",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjZmNDVhNTUtMzE0Zi00ZWZjLTllZjAtY2Q3MGQ1NDU0ZDhiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjZmNDVhNTUtMzE0Zi00ZWZjLTllZjAtY2Q3MGQ1NDU0ZDhiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt24059780&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt24059780&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt24059780"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt24059780"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt24059780"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt24059780"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Virupaksha+2023+trailer",
+      "description": "Virupaksha (2023) starring Sai Dharam Tej, Samyuktha Menon.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14873,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt24059780",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:13.304251+00:00",
+      "updatedAt": "2026-10-08T20:57:13.304251+00:00"
+    },
+    {
+      "id": "1791493042264",
+      "type": "movie",
+      "title": "Mrs. Chatterjee vs. Norway",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmMwMDM5ZmEtNzkyZi00MjY3LWJiMzMtMWVjMWYxMzFiMzIxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmMwMDM5ZmEtNzkyZi00MjY3LWJiMzMtMWVjMWYxMzFiMzIxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt14295590&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt14295590&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt14295590"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt14295590"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt14295590"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt14295590"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mrs.+Chatterjee+vs.+Norway+2023+trailer",
+      "description": "Mrs. Chatterjee vs. Norway (2023) starring Rani Mukerji, Jim Sarbh.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17927,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14295590",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:12.748878+00:00",
+      "updatedAt": "2026-10-08T20:57:12.748878+00:00"
+    },
+    {
+      "id": "1791493032507",
+      "type": "series",
+      "title": "Dhindora",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt14650074&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt14650074/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt14650074/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt14650074/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt14650074?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dhindora+2021+trailer",
+      "description": "Dhindora (2021) starring Bhuvan Bam, Gayatri Bhardwaj.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15143,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14650074",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:11.870423+00:00",
+      "updatedAt": "2026-10-08T20:57:11.870423+00:00"
+    },
+    {
+      "id": "1791493023150",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5675620&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt5675620?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17909,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:57:00.531740+00:00",
+      "updatedAt": "2026-10-08T20:57:00.531740+00:00"
+    },
+    {
+      "id": "1791493022145",
+      "type": "movie",
+      "title": "Epic - First Semester",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzRmMDQ1MjAtOWEwMi00YWMxLTg0YTQtZmRkMjM5MjgwYmZlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzRmMDQ1MjAtOWEwMi00YWMxLTg0YTQtZmRkMjM5MjgwYmZlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt35448218&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt35448218&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt35448218"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt35448218"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt35448218"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt35448218"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "525.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/762659986845062-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1019.7MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5124675252389-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/81045020179-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "26526.75 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/0932869400500-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Epic+-+First+Semester+2026+trailer",
+      "description": "Epic - First Semester (2026) starring Anand Deverakonda, Vaishnavi Chaitanya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16968,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt35448218",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:56:57.657317+00:00",
+      "updatedAt": "2026-10-08T20:56:57.657317+00:00"
+    },
+    {
+      "id": "1791493018268",
+      "type": "movie",
+      "title": "Khalifa",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWM2ZDY1MjQtN2RkZS00MWVmLWEzOWItZDIyZGNkNTQ3OWIwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMWM2ZDY1MjQtN2RkZS00MWVmLWEzOWItZDIyZGNkNTQ3OWIwXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt22797990&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt22797990&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt22797990"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt22797990"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt22797990"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt22797990"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "480.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5309397-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "805.2MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/033770390534145-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/015879249-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "26519.91 GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/51244680359877-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Khalifa+2026+trailer",
+      "description": "Khalifa (2026) starring Mohanlal, Prithviraj Sukumaran.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6444,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt22797990",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T20:56:56.699859+00:00",
+      "updatedAt": "2026-10-08T20:56:56.699859+00:00"
+    },
+    {
       "id": "1791471984009",
       "type": "movie",
       "title": "Padayappa",
@@ -15875,8 +16793,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 252,
-    "lastUpdated": "2026-10-08T15:06:18.433620+00:00",
+    "totalMovies": 267,
+    "lastUpdated": "2026-10-08T20:57:17.955642+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
