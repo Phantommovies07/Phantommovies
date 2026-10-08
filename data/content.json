@@ -1,6 +1,866 @@
 {
   "movies": [
     {
+      "id": "1791433865802",
+      "type": "movie",
+      "title": "Vaathi",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODhmMTFmNjMtZjMwOS00MjNlLWJkNzQtYTI0MjhiZDMzNzZmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODhmMTFmNjMtZjMwOS00MjNlLWJkNzQtYTI0MjhiZDMzNzZmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15427980&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15427980&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15427980"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15427980"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15427980"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15427980"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vaathi+2023+trailer",
+      "description": "Vaathi (2023) starring Dhanush, Sai Kumar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8721,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15427980",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:05.163995+00:00",
+      "updatedAt": "2026-10-08T04:31:05.163995+00:00"
+    },
+    {
+      "id": "1791433866046",
+      "type": "movie",
+      "title": "Mission Majnu",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjFjODc3NDktN2VmZS00YzQ5LWIwMDYtNDU5YWYxODY2ZGIzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjFjODc3NDktN2VmZS00YzQ5LWIwMDYtNDU5YWYxODY2ZGIzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt13131232&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt13131232&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt13131232"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt13131232"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt13131232"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt13131232"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mission+Majnu+2023+trailer",
+      "description": "Mission Majnu (2023) starring Sidharth Malhotra, Rashmika Mandanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24404,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt13131232",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:04.644093+00:00",
+      "updatedAt": "2026-10-08T04:31:04.644093+00:00"
+    },
+    {
+      "id": "1791433865704",
+      "type": "series",
+      "title": "College Romance",
+      "genre": "Tv Series",
+      "year": 2018,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjc5YWE0MDUtMmQ1NS00NTg2LThhY2MtYmViNzhkOTg4MThmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjc5YWE0MDUtMmQ1NS00NTg2LThhY2MtYmViNzhkOTg4MThmXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt8809646&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt8809646/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt8809646/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt8809646/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt8809646?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=College+Romance+2018+trailer",
+      "description": "College Romance (2018) starring Gagan Arora, Apoorva Arora.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20434,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8809646",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:04.083537+00:00",
+      "updatedAt": "2026-10-08T04:31:04.083537+00:00"
+    },
+    {
+      "id": "1791433867719",
+      "type": "movie",
+      "title": "Chatrapathi",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGFlYTI5NGMtYWQ0OS00NDRhLWEzMzItMGI0ODJiMjE5YzgxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGFlYTI5NGMtYWQ0OS00NDRhLWEzMzItMGI0ODJiMjE5YzgxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0843328&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0843328&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0843328"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0843328"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0843328"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0843328"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Chatrapathi+2005+trailer",
+      "description": "Chatrapathi (2005) starring Prabhas, Bhanupriya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14834,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0843328",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:03.352409+00:00",
+      "updatedAt": "2026-10-08T04:31:03.352409+00:00"
+    },
+    {
+      "id": "1791433865461",
+      "type": "movie",
+      "title": "Veera Simha Reddy",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTNlNjkwY2UtMGIxYy00MTM5LWE0YjktNGU5YzhkMmNiOTc4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTNlNjkwY2UtMGIxYy00MTM5LWE0YjktNGU5YzhkMmNiOTc4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15387190&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15387190&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15387190"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15387190"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15387190"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15387190"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Veera+Simha+Reddy+2023+trailer",
+      "description": "Veera Simha Reddy (2023) starring Nandamuri Balakrishna, Shruti Haasan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19511,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15387190",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:03.223587+00:00",
+      "updatedAt": "2026-10-08T04:31:03.223587+00:00"
+    },
+    {
+      "id": "1791433868110",
+      "type": "movie",
+      "title": "Kuttey",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDQyOWI0ZjctZTc0OS00NzBmLWE3NjAtYTU0ZjRhNDhiMThmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDQyOWI0ZjctZTc0OS00NzBmLWE3NjAtYTU0ZjRhNDhiMThmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15281704&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15281704&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15281704"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15281704"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15281704"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15281704"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kuttey+2023+trailer",
+      "description": "Kuttey (2023) starring Tabu, Arjun Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10973,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15281704",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:02.716338+00:00",
+      "updatedAt": "2026-10-08T04:31:02.716338+00:00"
+    },
+    {
+      "id": "1791433867554",
+      "type": "series",
+      "title": "TVF Tripling",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTA5MWYzNjEtYWZjZi00ZTM4LWE2OGUtY2Q0NjM4NmU2YzdmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTA5MWYzNjEtYWZjZi00ZTM4LWE2OGUtY2Q0NjM4NmU2YzdmXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt6005644&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt6005644/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt6005644/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt6005644/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt6005644?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=TVF+Tripling+2016+trailer",
+      "description": "TVF Tripling (2016) starring Sumeet Vyas, Maanvi Gagroo.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 25336,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6005644",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:02.053422+00:00",
+      "updatedAt": "2026-10-08T04:31:02.053422+00:00"
+    },
+    {
+      "id": "1791433863845",
+      "type": "movie",
+      "title": "Athadu",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzU5YmY2NzQtZTVhZS00ZDQyLWI1YTQtZTI4MzYxOTcxMmM3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzU5YmY2NzQtZTVhZS00ZDQyLWI1YTQtZTI4MzYxOTcxMmM3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0471571&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0471571&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0471571"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0471571"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0471571"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0471571"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Athadu+2005+trailer",
+      "description": "Athadu (2005) starring Mahesh Babu, Trisha Krishnan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7575,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0471571",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:01.503305+00:00",
+      "updatedAt": "2026-10-08T04:31:01.503305+00:00"
+    },
+    {
+      "id": "1791433870425",
+      "type": "movie",
+      "title": "Waltair Veerayya",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWRiYjBlMWUtOGFhNS00N2FmLWEzMDQtYjRjMmYzMjQyYzJlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWRiYjBlMWUtOGFhNS00N2FmLWEzMDQtYjRjMmYzMjQyYzJlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15281402&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15281402&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15281402"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15281402"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15281402"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15281402"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Waltair+Veerayya+2023+trailer",
+      "description": "Waltair Veerayya (2023) starring Chiranjeevi, Ravi Teja.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20577,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15281402",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:00.942907+00:00",
+      "updatedAt": "2026-10-08T04:31:00.942907+00:00"
+    },
+    {
+      "id": "1791433862444",
+      "type": "movie",
+      "title": "Cirkus",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTM2NDQ3ZjAtZWFlZC00NDNkLThhODktMjc3YTk3ZWQ1ZDM0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTM2NDQ3ZjAtZWFlZC00NDNkLThhODktMjc3YTk3ZWQ1ZDM0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt11112808&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt11112808&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt11112808"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt11112808"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt11112808"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11112808"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Cirkus+2022+trailer",
+      "description": "Cirkus (2022) starring Ranveer Singh, Varun Sharma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15832,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11112808",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:31:00.321439+00:00",
+      "updatedAt": "2026-10-08T04:31:00.321439+00:00"
+    },
+    {
+      "id": "1791433868575",
+      "type": "series",
+      "title": "TVF Pitchers",
+      "genre": "Tv Series",
+      "year": 2015,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDYxYTQxM2MtMDkxYi00ZjgzLTg0ODEtMWEzZjYzZTM5OGRiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDYxYTQxM2MtMDkxYi00ZjgzLTg0ODEtMWEzZjYzZTM5OGRiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt4742876&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt4742876/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt4742876/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt4742876/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt4742876?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=TVF+Pitchers+2015+trailer",
+      "description": "TVF Pitchers (2015) starring Naveen Kasturia, Arunabh Kumar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27731,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt4742876",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:30:59.770056+00:00",
+      "updatedAt": "2026-10-08T04:30:59.770056+00:00"
+    },
+    {
+      "id": "1791433861156",
+      "type": "movie",
+      "title": "Bommarillu",
+      "genre": "Feature",
+      "year": 2006,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTEzNTRmZWMtMjA3NS00ZmZlLTg2YmQtMTY3NjBkZWViMTQxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTEzNTRmZWMtMjA3NS00ZmZlLTg2YmQtMTY3NjBkZWViMTQxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0843326&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0843326&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0843326"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0843326"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0843326"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0843326"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bommarillu+2006+trailer",
+      "description": "Bommarillu (2006) starring Siddharth, Genelia Deshmukh.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9878,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0843326",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:30:59.231703+00:00",
+      "updatedAt": "2026-10-08T04:30:59.231703+00:00"
+    },
+    {
+      "id": "1791433861452",
+      "type": "movie",
+      "title": "Qayamat Se Qayamat Tak",
+      "genre": "Feature",
+      "year": 1988,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzBiMTJkMjMtNTQxZi00YzMwLTllN2UtM2UzNDE0ZWRmZmU2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzBiMTJkMjMtNTQxZi00YzMwLTllN2UtM2UzNDE0ZWRmZmU2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0095936&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0095936&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0095936"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0095936"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0095936"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0095936"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Qayamat+Se+Qayamat+Tak+1988+trailer",
+      "description": "Qayamat Se Qayamat Tak (1988) starring Aamir Khan, Juhi Chawla.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24567,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0095936",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:30:58.654119+00:00",
+      "updatedAt": "2026-10-08T04:30:58.654119+00:00"
+    },
+    {
+      "id": "1791433860205",
+      "type": "movie",
+      "title": "Thunivu",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWUwMzc3MTQtNDRlYi00MmUzLTllODktZDlhOTIyMmMyNWNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMWUwMzc3MTQtNDRlYi00MmUzLTllODktZDlhOTIyMmMyNWNjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15163652&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15163652&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15163652"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15163652"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15163652"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15163652"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Thunivu+2023+trailer",
+      "description": "Thunivu (2023) starring Ajith Kumar, Manju Warrier.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11144,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15163652",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:30:57.952939+00:00",
+      "updatedAt": "2026-10-08T04:30:57.952939+00:00"
+    },
+    {
+      "id": "1791433850043",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5675620&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt5675620?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10740,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-08T04:30:48.671193+00:00",
+      "updatedAt": "2026-10-08T04:30:48.671193+00:00"
+    },
+    {
       "id": "1791417455655",
       "type": "movie",
       "title": "An Action Hero",
@@ -14104,8 +14964,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 222,
-    "lastUpdated": "2026-10-07T23:57:30.029340+00:00",
+    "totalMovies": 237,
+    "lastUpdated": "2026-10-08T04:31:05.214182+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
