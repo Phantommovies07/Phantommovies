@@ -1,6 +1,956 @@
 {
   "movies": [
     {
+      "id": "1791543827471",
+      "type": "movie",
+      "title": "Brothers",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2ZlNTZkYTktMjlmNS00MDViLTg3YzktYTJlYjMwYjhkY2ZiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2ZlNTZkYTktMjlmNS00MDViLTg3YzktYTJlYjMwYjhkY2ZiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt6773088&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt6773088&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt6773088"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt6773088"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt6773088"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt6773088"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Brothers+2026+trailer",
+      "description": "Brothers (2026) starring Woody Harrelson, Matthew McConaughey.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20107,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6773088",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:44.002247+00:00",
+      "updatedAt": "2026-10-09T11:03:44.002247+00:00"
+    },
+    {
+      "id": "1791543829018",
+      "type": "movie",
+      "title": "Adipurush",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjA2ODRkMGUtNzUxNC00MmM5LTk3YjQtNTkxNTFlNzFiMjNiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjA2ODRkMGUtNzUxNC00MmM5LTk3YjQtNTkxNTFlNzFiMjNiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt12915716&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt12915716&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt12915716"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt12915716"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt12915716"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt12915716"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Adipurush+2023+trailer",
+      "description": "Adipurush (2023) starring Prabhas, Kriti Sanon.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13401,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12915716",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:43.833472+00:00",
+      "updatedAt": "2026-10-09T11:03:43.833472+00:00"
+    },
+    {
+      "id": "1791543831328",
+      "type": "series",
+      "title": "Aranyak",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjg3MDU1NGQtMWI5ZC00NGEwLTk3NGUtNWE2ZmFhYmM4OTIxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjg3MDU1NGQtMWI5ZC00NGEwLTk3NGUtNWE2ZmFhYmM4OTIxXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt14167344&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt14167344/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt14167344/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt14167344/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt14167344?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Aranyak+2021+trailer",
+      "description": "Aranyak (2021) starring Raveena Tandon, Parambrata Chattopadhyay.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24588,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14167344",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:43.274195+00:00",
+      "updatedAt": "2026-10-09T11:03:43.274195+00:00"
+    },
+    {
+      "id": "1791543825017",
+      "type": "movie",
+      "title": "Indian Summer",
+      "genre": "Feature",
+      "year": 1972,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGNmMTEyMTItMDIxZS00OGRiLTg3MWQtYjY3OTM3NzEwNGEyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGNmMTEyMTItMDIxZS00OGRiLTg3MWQtYjY3OTM3NzEwNGEyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0069120&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0069120&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0069120"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0069120"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0069120"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0069120"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Indian+Summer+1972+trailer",
+      "description": "Indian Summer (1972) starring Alain Delon, Giancarlo Giannini.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14758,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0069120",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:42.616795+00:00",
+      "updatedAt": "2026-10-09T11:03:42.616795+00:00"
+    },
+    {
+      "id": "1791543823684",
+      "type": "movie",
+      "title": "Devdas",
+      "genre": "Feature",
+      "year": 2002,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODM3ZDE2YjQtMTcyMi00NzdhLWEyYzUtMjIwNjFlNDlmNjgzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODM3ZDE2YjQtMTcyMi00NzdhLWEyYzUtMjIwNjFlNDlmNjgzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0238936&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0238936&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0238936"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0238936"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0238936"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0238936"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Devdas+2002+trailer",
+      "description": "Devdas (2002) starring Shah Rukh Khan, Aishwarya Rai Bachchan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9355,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0238936",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:42.434638+00:00",
+      "updatedAt": "2026-10-09T11:03:42.434638+00:00"
+    },
+    {
+      "id": "1791543831349",
+      "type": "movie",
+      "title": "Maamannan",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjdhOTg4NzMtMTY2MC00YmY0LWJiMWMtMTJkYzIzMWFmNTJmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjdhOTg4NzMtMTY2MC00YmY0LWJiMWMtMTJkYzIzMWFmNTJmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt20242416&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt20242416&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt20242416"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt20242416"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt20242416"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt20242416"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Maamannan+2023+trailer",
+      "description": "Maamannan (2023) starring Vadivelu, Fahadh Faasil.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9505,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt20242416",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:41.934013+00:00",
+      "updatedAt": "2026-10-09T11:03:41.934013+00:00"
+    },
+    {
+      "id": "1791543821720",
+      "type": "movie",
+      "title": "Sirf Ek Bandaa Kaafi Hai",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzMzMTY2NDktYjJkNC00MzQ3LWJlZWYtNzRiYzc1NTJkYTI1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzMzMTY2NDktYjJkNC00MzQ3LWJlZWYtNzRiYzc1NTJkYTI1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt24485052&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt24485052&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt24485052"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt24485052"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt24485052"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt24485052"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sirf+Ek+Bandaa+Kaafi+Hai+2023+trailer",
+      "description": "Sirf Ek Bandaa Kaafi Hai (2023) starring Abhijeet Lahiri, Ajay Soni.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5991,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt24485052",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:41.369602+00:00",
+      "updatedAt": "2026-10-09T11:03:41.369602+00:00"
+    },
+    {
+      "id": "1791543824989",
+      "type": "series",
+      "title": "Decoupled",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2RhNWNiYjYtYmQ1YS00NzJmLTlkYTctODA3ZDljNThjYzY3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2RhNWNiYjYtYmQ1YS00NzJmLTlkYTctODA3ZDljNThjYzY3XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt14167338&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt14167338/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt14167338/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt14167338/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt14167338?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Decoupled+2021+trailer",
+      "description": "Decoupled (2021) starring Madhavan, Surveen Chawla.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8402,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14167338",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:40.768530+00:00",
+      "updatedAt": "2026-10-09T11:03:40.768530+00:00"
+    },
+    {
+      "id": "1791543824862",
+      "type": "movie",
+      "title": "Kabhi Khushi Kabhie Gham...",
+      "genre": "Feature",
+      "year": 2001,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2MyZGVhNmMtY2JkNy00ZmIzLTkwOGItY2NiM2MyOGMxODkzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BN2MyZGVhNmMtY2JkNy00ZmIzLTkwOGItY2NiM2MyOGMxODkzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0248126&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0248126&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0248126"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0248126"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0248126"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0248126"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kabhi+Khushi+Kabhie+Gham...+2001+trailer",
+      "description": "Kabhi Khushi Kabhie Gham... (2001) starring Shah Rukh Khan, Kajol.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18146,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0248126",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:39.669748+00:00",
+      "updatedAt": "2026-10-09T11:03:39.669748+00:00"
+    },
+    {
+      "id": "1791543819694",
+      "type": "movie",
+      "title": "Por Thozhil",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjc1MDA2ZTgtYzkyMC00ZTcwLWEwNmUtYjM1MmZhYTc3YzgzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjc1MDA2ZTgtYzkyMC00ZTcwLWEwNmUtYjM1MmZhYTc3YzgzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27542289&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt27542289&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt27542289"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt27542289"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27542289"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27542289"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Por+Thozhil+2023+trailer",
+      "description": "Por Thozhil (2023) starring R. Sarathkumar, Lisha Chinnu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23453,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27542289",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:39.497620+00:00",
+      "updatedAt": "2026-10-09T11:03:39.497620+00:00"
+    },
+    {
+      "id": "1791543817132",
+      "type": "series",
+      "title": "The Court",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWU0ZTMwNzktZmViZS00NzQ0LWI3ZGItNzQ1ZThiN2Y0ZjI5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWU0ZTMwNzktZmViZS00NzQ0LWI3ZGItNzQ1ZThiN2Y0ZjI5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt44914967&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt44914967/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt44914967/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt44914967/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt44914967?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "112MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-court-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "150MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-court-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "500MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-court-s01-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Court+2026+trailer",
+      "description": "The Court (2026) starring Arjun Syam Gopan, VJ Kalyani.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13555,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt44914967",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:28.207047+00:00",
+      "updatedAt": "2026-10-09T11:03:28.207047+00:00"
+    },
+    {
+      "id": "1791543811553",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8116,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:26.332129+00:00",
+      "updatedAt": "2026-10-09T11:03:26.332129+00:00"
+    },
+    {
+      "id": "1791543811049",
+      "type": "movie",
+      "title": "Reporting Live",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTliNTdiOTQtNmNjNC00ZGRhLWExODYtMmRlNzM4YTFhZTM5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTliNTdiOTQtNmNjNC00ZGRhLWExODYtMmRlNzM4YTFhZTM5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt47657999&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt47657999&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt47657999"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt47657999"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt47657999"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt47657999"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "324.5MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/6369593-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "713.3MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/357774229397221-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1754754-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Reporting+Live+2026+trailer",
+      "description": "Reporting Live (2026) starring Deven Bhojani, Saswata Chatterjee.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6763,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt47657999",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:25.894036+00:00",
+      "updatedAt": "2026-10-09T11:03:25.894036+00:00"
+    },
+    {
+      "id": "1791543811916",
+      "type": "movie",
+      "title": "Animals",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmY3MmZiZjctOTgyYy00OGIxLTkwMDUtNDU3MGNkMGI3YWJlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZmY3MmZiZjctOTgyYy00OGIxLTkwMDUtNDU3MGNkMGI3YWJlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt31049299&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt31049299&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt31049299"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt31049299"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt31049299"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt31049299"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "393.6MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/6175423-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "740.2MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1958972-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/7274685-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Animals+2026+trailer",
+      "description": "Animals (2026) starring Ben Affleck, Kerry Washington.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16709,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31049299",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:25.482092+00:00",
+      "updatedAt": "2026-10-09T11:03:25.482092+00:00"
+    },
+    {
+      "id": "1791543811740",
+      "type": "series",
+      "title": "Least Eligible Bachelor",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt48242205&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt48242205/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt48242205/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt48242205/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt48242205?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "529.5MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/98650546623-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/6489810651133-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/631660907925-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Least+Eligible+Bachelor+None+trailer",
+      "description": "Least Eligible Bachelor (None) starring Harsha Chemudu, Hyper Aadi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18984,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt48242205",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T11:03:24.806521+00:00",
+      "updatedAt": "2026-10-09T11:03:24.806521+00:00"
+    },
+    {
       "id": "1791518094299",
       "type": "movie",
       "title": "IB 71",
@@ -17653,8 +18603,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 282,
-    "lastUpdated": "2026-10-09T03:54:47.598878+00:00",
+    "totalMovies": 297,
+    "lastUpdated": "2026-10-09T11:03:44.052412+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
