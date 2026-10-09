@@ -1,6 +1,866 @@
 {
   "movies": [
     {
+      "id": "1791518094299",
+      "type": "movie",
+      "title": "IB 71",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWMwNzlmZjQtMzFhZi00ZjUzLThmMmQtYzNkZGMxYTc4YWRhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOWMwNzlmZjQtMzFhZi00ZjUzLThmMmQtYzNkZGMxYTc4YWRhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15073166&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15073166&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15073166"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15073166"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15073166"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15073166"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=IB+71+2023+trailer",
+      "description": "IB 71 (2023) starring Vidyut Jammwal, Anupam Kher.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8354,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15073166",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:47.548723+00:00",
+      "updatedAt": "2026-10-09T03:54:47.548723+00:00"
+    },
+    {
+      "id": "1791518093820",
+      "type": "series",
+      "title": "Yeh Kaali Kaali Ankhein",
+      "genre": "Tv Series",
+      "year": 2022,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOThjYTBkNmItNDM5Mi00MjJjLTliMGMtMGYzYzI0Nzk2MTkxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOThjYTBkNmItNDM5Mi00MjJjLTliMGMtMGYzYzI0Nzk2MTkxXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt14160712&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt14160712/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt14160712/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt14160712/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt14160712?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Yeh+Kaali+Kaali+Ankhein+2022+trailer",
+      "description": "Yeh Kaali Kaali Ankhein (2022) starring Tahir Raj Bhasin, Shweta Tripathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27459,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14160712",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:47.200648+00:00",
+      "updatedAt": "2026-10-09T03:54:47.200648+00:00"
+    },
+    {
+      "id": "1791518090154",
+      "type": "movie",
+      "title": "Mohabbatein",
+      "genre": "Feature",
+      "year": 2000,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzY5M2RkYjMtYmFhNC00NzdmLTgxNTUtYTE3Yjc2NDhkYTcyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzY5M2RkYjMtYmFhNC00NzdmLTgxNTUtYTE3Yjc2NDhkYTcyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0213890&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0213890&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0213890"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0213890"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0213890"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0213890"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mohabbatein+2000+trailer",
+      "description": "Mohabbatein (2000) starring Amitabh Bachchan, Shah Rukh Khan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15830,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0213890",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:46.032922+00:00",
+      "updatedAt": "2026-10-09T03:54:46.032922+00:00"
+    },
+    {
+      "id": "1791518094141",
+      "type": "movie",
+      "title": "Pichaikkaran 2",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2RiZDBmNjktYjZlOS00NjEzLTg1YjUtN2FjOWE1MWI5ZjUwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2RiZDBmNjktYjZlOS00NjEzLTg1YjUtN2FjOWE1MWI5ZjUwXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt12782448&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt12782448&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt12782448"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt12782448"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt12782448"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt12782448"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Pichaikkaran+2+2023+trailer",
+      "description": "Pichaikkaran 2 (2023) starring Vijay Antony, Kavya Thapar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18074,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12782448",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:45.840175+00:00",
+      "updatedAt": "2026-10-09T03:54:45.840175+00:00"
+    },
+    {
+      "id": "1791518087350",
+      "type": "movie",
+      "title": "Afwaah",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGM1ZmI5NTctNWRhNi00ZjEyLTgzNjgtOGY5ZjBkMWFjZjE2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGM1ZmI5NTctNWRhNi00ZjEyLTgzNjgtOGY5ZjBkMWFjZjE2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15832148&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15832148&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15832148"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15832148"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15832148"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15832148"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Afwaah+2023+trailer",
+      "description": "Afwaah (2023) starring Sumeet Vyas, Nawazuddin Siddiqui.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21201,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15832148",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:45.266113+00:00",
+      "updatedAt": "2026-10-09T03:54:45.266113+00:00"
+    },
+    {
+      "id": "1791518093340",
+      "type": "series",
+      "title": "Half CA",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmU1ZGQxMmYtYTRiMC00MmJmLThjOWEtZTdiNDA3ZmJlNjZiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMmU1ZGQxMmYtYTRiMC00MmJmLThjOWEtZTdiNDA3ZmJlNjZiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt28285430&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt28285430/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt28285430/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt28285430/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt28285430?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Half+CA+2023+trailer",
+      "description": "Half CA (2023) starring Ahsaas Channa, Gyanendra Tripathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9117,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28285430",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:44.723261+00:00",
+      "updatedAt": "2026-10-09T03:54:44.723261+00:00"
+    },
+    {
+      "id": "1791518089222",
+      "type": "movie",
+      "title": "Thalapathi",
+      "genre": "Feature",
+      "year": 1991,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGMzNTIyZDktYWMxOS00YWIyLTllMDMtMjdkYTczZWZkODJiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGMzNTIyZDktYWMxOS00YWIyLTllMDMtMjdkYTczZWZkODJiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0101649&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0101649&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0101649"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0101649"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0101649"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0101649"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Thalapathi+1991+trailer",
+      "description": "Thalapathi (1991) starring Rajinikanth, Mammootty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6574,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0101649",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:44.155962+00:00",
+      "updatedAt": "2026-10-09T03:54:44.155962+00:00"
+    },
+    {
+      "id": "1791518088743",
+      "type": "movie",
+      "title": "Vaastav: The Reality",
+      "genre": "Feature",
+      "year": 1999,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDI0ZGMwNWEtNTE1Ny00YWI0LTgwNmQtMjgzMzIxNzkyYTVhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDI0ZGMwNWEtNTE1Ny00YWI0LTgwNmQtMjgzMzIxNzkyYTVhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0220832&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0220832&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0220832"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0220832"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0220832"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0220832"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vaastav:+The+Reality+1999+trailer",
+      "description": "Vaastav: The Reality (1999) starring Sanjay Dutt, Namrata Shirodkar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9453,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0220832",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:43.323457+00:00",
+      "updatedAt": "2026-10-09T03:54:43.323457+00:00"
+    },
+    {
+      "id": "1791518091268",
+      "type": "movie",
+      "title": "2018",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjBjYzVmOTAtMWI2NC00ODhiLTk4NDYtYmY3YmQxYmU2NTI5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjBjYzVmOTAtMWI2NC00ODhiLTk4NDYtYmY3YmQxYmU2NTI5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt9006564&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt9006564&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt9006564"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt9006564"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt9006564"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt9006564"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=2018+2023+trailer",
+      "description": "2018 (2023) starring Tovino Thomas, Kunchacko Boban.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15321,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9006564",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:42.633299+00:00",
+      "updatedAt": "2026-10-09T03:54:42.633299+00:00"
+    },
+    {
+      "id": "1791518084521",
+      "type": "movie",
+      "title": "Kisi Ka Bhai Kisi Ki Jaan",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDZlZDIxM2EtMDk1Ni00MTM3LTg2YjYtNzYxMTM3ZTU0NzU0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDZlZDIxM2EtMDk1Ni00MTM3LTg2YjYtNzYxMTM3ZTU0NzU0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt3679040&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt3679040&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt3679040"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt3679040"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt3679040"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt3679040"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kisi+Ka+Bhai+Kisi+Ki+Jaan+2023+trailer",
+      "description": "Kisi Ka Bhai Kisi Ki Jaan (2023) starring Salman Khan, Pooja Hegde.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7193,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt3679040",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:42.436849+00:00",
+      "updatedAt": "2026-10-09T03:54:42.436849+00:00"
+    },
+    {
+      "id": "1791518083711",
+      "type": "series",
+      "title": "Cubicles",
+      "genre": "Tv Series",
+      "year": 2019,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGZiOTYzYjktZmMwNS00MzM4LTk4ZDUtNDk1Njc3ZjlmNTU0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGZiOTYzYjktZmMwNS00MzM4LTk4ZDUtNDk1Njc3ZjlmNTU0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt11379698&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt11379698/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt11379698/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt11379698/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt11379698?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Cubicles+2019+trailer",
+      "description": "Cubicles (2019) starring Abhishek Chauhan, Niketan Sharma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 25024,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11379698",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:41.984294+00:00",
+      "updatedAt": "2026-10-09T03:54:41.984294+00:00"
+    },
+    {
+      "id": "1791518083057",
+      "type": "movie",
+      "title": "Nayakan",
+      "genre": "Feature",
+      "year": 1987,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgyNDFhMTgtM2Y5YS00MTczLWJmODktNTAzZGIyYWNjYmFjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgyNDFhMTgtM2Y5YS00MTczLWJmODktNTAzZGIyYWNjYmFjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0093603&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0093603&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0093603"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0093603"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0093603"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0093603"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Nayakan+1987+trailer",
+      "description": "Nayakan (1987) starring Kamal Haasan, Saranya Ponvannan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20078,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0093603",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:41.456119+00:00",
+      "updatedAt": "2026-10-09T03:54:41.456119+00:00"
+    },
+    {
+      "id": "1791518081671",
+      "type": "movie",
+      "title": "Sarfarosh",
+      "genre": "Feature",
+      "year": 1999,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzUxNzQ5MDYwMl5BMl5BanBnXkFtZTgwMjkwMTc5NTE@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzUxNzQ5MDYwMl5BMl5BanBnXkFtZTgwMjkwMTc5NTE@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0200087&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0200087&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0200087"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0200087"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0200087"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0200087"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sarfarosh+1999+trailer",
+      "description": "Sarfarosh (1999) starring Aamir Khan, Naseeruddin Shah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6955,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0200087",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:40.783843+00:00",
+      "updatedAt": "2026-10-09T03:54:40.783843+00:00"
+    },
+    {
+      "id": "1791518082378",
+      "type": "movie",
+      "title": "Custody",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDQ4YTk3NGYtOTJlYS00MTk3LTkwMDAtYjgwMDVkMjAzZTU3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDQ4YTk3NGYtOTJlYS00MTk3LTkwMDAtYjgwMDVkMjAzZTU3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt6002232&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt6002232&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt6002232"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt6002232"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt6002232"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt6002232"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Custody+2017+trailer",
+      "description": "Custody (2017) starring Denis Ménochet, Léa Drucker.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19038,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6002232",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:40.142897+00:00",
+      "updatedAt": "2026-10-09T03:54:40.142897+00:00"
+    },
+    {
+      "id": "1791518070380",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5675620&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt5675620/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt5675620?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19889,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T03:54:27.734413+00:00",
+      "updatedAt": "2026-10-09T03:54:27.734413+00:00"
+    },
+    {
       "id": "1791493043820",
       "type": "movie",
       "title": "Gumraah",
@@ -16793,8 +17653,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 267,
-    "lastUpdated": "2026-10-08T20:57:17.955642+00:00",
+    "totalMovies": 282,
+    "lastUpdated": "2026-10-09T03:54:47.598878+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
