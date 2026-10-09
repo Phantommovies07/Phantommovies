@@ -1,6 +1,903 @@
 {
   "movies": [
     {
+      "id": "1791568096241",
+      "type": "movie",
+      "title": "Alai Payuthey",
+      "genre": "Feature",
+      "year": 2000,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjU5ZjE0ODYtODBmZS00NWM2LTllZGYtOWQ1Y2NhZmExN2QyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjU5ZjE0ODYtODBmZS00NWM2LTllZGYtOWQ1Y2NhZmExN2QyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0242256&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0242256&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0242256"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0242256"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0242256"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0242256"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Alai+Payuthey+2000+trailer",
+      "description": "Alai Payuthey (2000) starring Madhavan, Shalini.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7825,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0242256",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:13.580646+00:00",
+      "updatedAt": "2026-10-09T17:48:13.580646+00:00"
+    },
+    {
+      "id": "1791568097631",
+      "type": "movie",
+      "title": "Koi... Mil Gaya",
+      "genre": "Feature",
+      "year": 2003,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjkwM2IyZmUtNjdmZi00MWY5LWFiZWYtM2E0NmU3ZjQ4OWUyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjkwM2IyZmUtNjdmZi00MWY5LWFiZWYtM2E0NmU3ZjQ4OWUyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0254481&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0254481&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0254481"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0254481"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0254481"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0254481"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Koi...+Mil+Gaya+2003+trailer",
+      "description": "Koi... Mil Gaya (2003) starring Rekha, Hrithik Roshan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22361,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0254481",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:13.057908+00:00",
+      "updatedAt": "2026-10-09T17:48:13.057908+00:00"
+    },
+    {
+      "id": "1791568100044",
+      "type": "movie",
+      "title": "Maaveeran",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZGMxMGZmZDItMjY5NC00OTVhLWE2MWEtNzJiZTU1NzI1MTllXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZGMxMGZmZDItMjY5NC00OTVhLWE2MWEtNzJiZTU1NzI1MTllXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt22543326&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt22543326&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt22543326"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt22543326"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt22543326"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt22543326"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Maaveeran+2023+trailer",
+      "description": "Maaveeran (2023) starring Sivakarthikeyan, Aditi Shankar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21552,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt22543326",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:12.645866+00:00",
+      "updatedAt": "2026-10-09T17:48:12.645866+00:00"
+    },
+    {
+      "id": "1791568098786",
+      "type": "movie",
+      "title": "Tarla",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzZlMjdkNTUtMDZkZS00NWFkLTg4M2EtZjRkNWNkNjZlNGY1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzZlMjdkNTUtMDZkZS00NWFkLTg4M2EtZjRkNWNkNjZlNGY1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27816768&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt27816768&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt27816768"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt27816768"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27816768"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27816768"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Tarla+2023+trailer",
+      "description": "Tarla (2023) starring Huma Qureshi, Hardik Thakkar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21442,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27816768",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:12.034169+00:00",
+      "updatedAt": "2026-10-09T17:48:12.034169+00:00"
+    },
+    {
+      "id": "1791568097825",
+      "type": "series",
+      "title": "Tabbar",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTE3MjdkMDktNTM1Ni00MmEzLThjOWQtNWRiMGIyN2RhYjNhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTE3MjdkMDktNTM1Ni00MmEzLThjOWQtNWRiMGIyN2RhYjNhXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt15404324&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt15404324/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt15404324/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt15404324/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt15404324?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Tabbar+2021+trailer",
+      "description": "Tabbar (2021) starring Pawan Malhotra, Supriya Pathak.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 29835,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15404324",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:11.605255+00:00",
+      "updatedAt": "2026-10-09T17:48:11.605255+00:00"
+    },
+    {
+      "id": "1791568096181",
+      "type": "movie",
+      "title": "Mudhalvan",
+      "genre": "Feature",
+      "year": 1999,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTJmNDJkNWItNzMwZS00MGE3LThmNDItODkzYzQ4YjQzYTY2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTJmNDJkNWItNzMwZS00MGE3LThmNDItODkzYzQ4YjQzYTY2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0220656&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0220656&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0220656"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0220656"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0220656"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0220656"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mudhalvan+1999+trailer",
+      "description": "Mudhalvan (1999) starring Arjun Sarja, Manisha Koirala.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8258,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0220656",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:11.037109+00:00",
+      "updatedAt": "2026-10-09T17:48:11.037109+00:00"
+    },
+    {
+      "id": "1791568099119",
+      "type": "movie",
+      "title": "Saathiya",
+      "genre": "Feature",
+      "year": 2002,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGZlOTQwMDAtMWFiMS00MDYzLTg0YTYtOGY2Y2I3ZDc4OTE3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGZlOTQwMDAtMWFiMS00MDYzLTg0YTYtOGY2Y2I3ZDc4OTE3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0330843&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0330843&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0330843"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0330843"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0330843"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0330843"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Saathiya+2002+trailer",
+      "description": "Saathiya (2002) starring Vivek Oberoi, Rani Mukerji.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8235,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0330843",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:10.551940+00:00",
+      "updatedAt": "2026-10-09T17:48:10.551940+00:00"
+    },
+    {
+      "id": "1791568097020",
+      "type": "movie",
+      "title": "Baby Do Die Do",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjQwMDg0NzctMTA4Zi00YzJhLTlmYTQtYmQ2MDI3YTM5NTg0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjQwMDg0NzctMTA4Zi00YzJhLTlmYTQtYmQ2MDI3YTM5NTg0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt37544992&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt37544992&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt37544992"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt37544992"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt37544992"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt37544992"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Baby+Do+Die+Do+2026+trailer",
+      "description": "Baby Do Die Do (2026) starring Huma Qureshi, Sikandar Kher.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6816,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37544992",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:10.025537+00:00",
+      "updatedAt": "2026-10-09T17:48:10.025537+00:00"
+    },
+    {
+      "id": "1791568091534",
+      "type": "movie",
+      "title": "Neeyat",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTNiZTIxZGUtMjZiNC00NzJjLTlhMDItMDA3YzUwMjUwMDBhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTNiZTIxZGUtMjZiNC00NzJjLTlhMDItMDA3YzUwMjUwMDBhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt21908676&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt21908676&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt21908676"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt21908676"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt21908676"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt21908676"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Neeyat+2023+trailer",
+      "description": "Neeyat (2023) starring Vidya Balan, Ram Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8118,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt21908676",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:09.902342+00:00",
+      "updatedAt": "2026-10-09T17:48:09.902342+00:00"
+    },
+    {
+      "id": "1791568097315",
+      "type": "series",
+      "title": "Mumbai Diaries",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDk4NDJmMGEtYzM0ZC00NmZkLTk4YjQtNGU0YmU2MmQ2MzYxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDk4NDJmMGEtYzM0ZC00NmZkLTk4YjQtNGU0YmU2MmQ2MzYxXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt12714854&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt12714854/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt12714854/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt12714854/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt12714854?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mumbai+Diaries+2021+trailer",
+      "description": "Mumbai Diaries (2021) starring Mohit Raina, Konkona Sen Sharma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12883,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12714854",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:09.397822+00:00",
+      "updatedAt": "2026-10-09T17:48:09.397822+00:00"
+    },
+    {
+      "id": "1791568093411",
+      "type": "movie",
+      "title": "Jeans",
+      "genre": "Feature",
+      "year": 1998,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjc3ODhlZGMtZmFhOS00NGEwLWI4ZWEtZDhlZjg5MWYxZDBjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjc3ODhlZGMtZmFhOS00NGEwLWI4ZWEtZDhlZjg5MWYxZDBjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0151121&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0151121&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0151121"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0151121"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0151121"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0151121"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jeans+1998+trailer",
+      "description": "Jeans (1998) starring Prashanth, Aishwarya Rai Bachchan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24873,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0151121",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:08.553910+00:00",
+      "updatedAt": "2026-10-09T17:48:08.553910+00:00"
+    },
+    {
+      "id": "1791568096883",
+      "type": "movie",
+      "title": "Company",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzBkNzUyYTAtZjQ5ZS00YzQ3LWE0ZjAtMjU4MGM3ODVkODBmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzBkNzUyYTAtZjQ5ZS00YzQ3LWE0ZjAtMjU4MGM3ODVkODBmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0772163&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0772163&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0772163"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0772163"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0772163"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0772163"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Company+2026+trailer",
+      "description": "Company (2026) starring Scoot McNairy, Adelaide Clemens.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5132,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0772163",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:48:08.152945+00:00",
+      "updatedAt": "2026-10-09T17:48:08.152945+00:00"
+    },
+    {
+      "id": "1791568084319",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8353,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:47:54.488151+00:00",
+      "updatedAt": "2026-10-09T17:47:54.488151+00:00"
+    },
+    {
+      "id": "1791568079524",
+      "type": "movie",
+      "title": "Adbhut",
+      "genre": "Tv Movie",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzdhNTdkYTItNmU1Ni00ZjM1LTg1N2MtZjRkY2I3NWFjOWJlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzdhNTdkYTItNmU1Ni00ZjM1LTg1N2MtZjRkY2I3NWFjOWJlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15560952&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15560952&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15560952"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15560952"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15560952"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15560952"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "460.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/740499921778-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "638.6MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/4927771-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.0GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/65506245-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Adbhut+2024+trailer",
+      "description": "Adbhut (2024) starring Shreya Dhanwanthary, Rohan Mehra.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13568,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15560952",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:47:53.879537+00:00",
+      "updatedAt": "2026-10-09T17:47:53.879537+00:00"
+    },
+    {
+      "id": "1791568079879",
+      "type": "series",
+      "title": "Take Charge of My Heart",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDkxMGU2YmUtZGFjOS00ZDg3LTliYzUtZTBmZThiNjRhYzA1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDkxMGU2YmUtZGFjOS00ZDg3LTliYzUtZTBmZThiNjRhYzA1XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt37737331&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt37737331/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt37737331/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt37737331/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt37737331?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-480p",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "300MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-720p-10BIT/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Take+Charge+of+My+Heart+2026+trailer",
+      "description": "Take Charge of My Heart (2026) starring Kim Young-kwang, Chae Soo-bin.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23821,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37737331",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:47:53.150450+00:00",
+      "updatedAt": "2026-10-09T17:47:53.150450+00:00"
+    },
+    {
       "id": "1791543827471",
       "type": "movie",
       "title": "Brothers",
@@ -18603,8 +19500,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 297,
-    "lastUpdated": "2026-10-09T11:03:44.052412+00:00",
+    "totalMovies": 312,
+    "lastUpdated": "2026-10-09T17:48:13.630857+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
