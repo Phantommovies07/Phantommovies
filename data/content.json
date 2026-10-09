@@ -1,6 +1,859 @@
 {
   "movies": [
     {
+      "id": "1791589492970",
+      "type": "movie",
+      "title": "Bunty Aur Babli",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTNhNWI4MzctZTgzYS00NzVhLTgxZDAtMWE0ZDAzM2NjZmRlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTNhNWI4MzctZTgzYS00NzVhLTgxZDAtMWE0ZDAzM2NjZmRlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0448206&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0448206&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0448206"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0448206"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0448206"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0448206"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bunty+Aur+Babli+2005+trailer",
+      "description": "Bunty Aur Babli (2005) starring Abhishek Bachchan, Rani Mukerji.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20180,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0448206",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:50.654772+00:00",
+      "updatedAt": "2026-10-09T23:44:50.654772+00:00"
+    },
+    {
+      "id": "1791589492462",
+      "type": "movie",
+      "title": "Mark Antony",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2E5YTI3YWUtYjAyMy00OWIwLTllNzQtMzI5M2ViYTRjYWNmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2E5YTI3YWUtYjAyMy00OWIwLTllNzQtMzI5M2ViYTRjYWNmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt23052532&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt23052532&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt23052532"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt23052532"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt23052532"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt23052532"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mark+Antony+2023+trailer",
+      "description": "Mark Antony (2023) starring Vishal, S.J. Suryah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7214,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt23052532",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:50.230030+00:00",
+      "updatedAt": "2026-10-09T23:44:50.230030+00:00"
+    },
+    {
+      "id": "1791589498387",
+      "type": "movie",
+      "title": "Dream Girl 2",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTMzNzYzNzctNWIyNC00NDRhLWFkNGMtMzYxOTA2ZjgwYzFhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTMzNzYzNzctNWIyNC00NDRhLWFkNGMtMzYxOTA2ZjgwYzFhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt22086334&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt22086334&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt22086334"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt22086334"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt22086334"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt22086334"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dream+Girl+2+2023+trailer",
+      "description": "Dream Girl 2 (2023) starring Ayushmann Khurrana, Ananya Panday.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10487,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt22086334",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:49.626898+00:00",
+      "updatedAt": "2026-10-09T23:44:49.626898+00:00"
+    },
+    {
+      "id": "1791589496095",
+      "type": "series",
+      "title": "Eclipse",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZGM3OTBhOTQtOTAyMi00YzVhLTk2NjMtNTUzOGFlNDU5ZTc4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZGM3OTBhOTQtOTAyMi00YzVhLTk2NjMtNTUzOGFlNDU5ZTc4XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt14820482&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt14820482/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt14820482/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt14820482/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt14820482?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Eclipse+2021+trailer",
+      "description": "Eclipse (2021) starring Zoya Hussain, Wamiqa Gabbi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16565,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14820482",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:49.008373+00:00",
+      "updatedAt": "2026-10-09T23:44:49.008373+00:00"
+    },
+    {
+      "id": "1791589491516",
+      "type": "movie",
+      "title": "Vettaiyaadu Vilaiyaadu",
+      "genre": "Feature",
+      "year": 2006,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWRiZDQyZWQtNWJlNi00ODRlLTk0ZDEtNjczYWMyMzA5YThiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWRiZDQyZWQtNWJlNi00ODRlLTk0ZDEtNjczYWMyMzA5YThiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0455829&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0455829&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0455829"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0455829"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0455829"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0455829"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vettaiyaadu+Vilaiyaadu+2006+trailer",
+      "description": "Vettaiyaadu Vilaiyaadu (2006) starring Kamal Haasan, Jyotika.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8660,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0455829",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:48.482700+00:00",
+      "updatedAt": "2026-10-09T23:44:48.482700+00:00"
+    },
+    {
+      "id": "1791589494117",
+      "type": "movie",
+      "title": "Black Clover",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt7441658&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt7441658&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt7441658"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt7441658"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt7441658"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7441658"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Black+Clover+2017+trailer",
+      "description": "Black Clover (2017) starring Gakuto Kajiwara, Dallas Reid.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14861,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7441658",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:47.882006+00:00",
+      "updatedAt": "2026-10-09T23:44:47.882006+00:00"
+    },
+    {
+      "id": "1791589494034",
+      "type": "movie",
+      "title": "Kushi",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2Q1YzlhODEtNWRiZS00ZGJkLWJlMzgtMTE2NmIyYzg5ODg1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2Q1YzlhODEtNWRiZS00ZGJkLWJlMzgtMTE2NmIyYzg5ODg1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15380630&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15380630&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15380630"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15380630"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15380630"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15380630"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kushi+2023+trailer",
+      "description": "Kushi (2023) starring Samantha Ruth Prabhu, Vijay Deverakonda.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5576,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15380630",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:47.739765+00:00",
+      "updatedAt": "2026-10-09T23:44:47.739765+00:00"
+    },
+    {
+      "id": "1791589497114",
+      "type": "movie",
+      "title": "Ghoomer",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDViNDc1MjEtMGY1My00NTE2LTliMTMtYzVkNWE0MmUwMWE0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDViNDc1MjEtMGY1My00NTE2LTliMTMtYzVkNWE0MmUwMWE0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15944428&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15944428&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15944428"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15944428"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15944428"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15944428"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ghoomer+2023+trailer",
+      "description": "Ghoomer (2023) starring Shabana Azmi, Amitabh Bachchan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21039,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15944428",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:47.365724+00:00",
+      "updatedAt": "2026-10-09T23:44:47.365724+00:00"
+    },
+    {
+      "id": "1791589492465",
+      "type": "series",
+      "title": "Maharani",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGYxNGQ2OTMtNDM4Yi00OGVmLTliOTktNjNhMmUyODhmOGQ0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGYxNGQ2OTMtNDM4Yi00OGVmLTliOTktNjNhMmUyODhmOGQ0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt14420552&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt14420552/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt14420552/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt14420552/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt14420552?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Maharani+2021+trailer",
+      "description": "Maharani (2021) starring Huma Qureshi, Siddhi Malviya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11352,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14420552",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:46.832859+00:00",
+      "updatedAt": "2026-10-09T23:44:46.832859+00:00"
+    },
+    {
+      "id": "1791589490831",
+      "type": "movie",
+      "title": "Chandramukhi",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmVjODBmODgtNmMwZC00OTZkLThkZTgtY2NiOTg0ZDU3MWUzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmVjODBmODgtNmMwZC00OTZkLThkZTgtY2NiOTg0ZDU3MWUzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0449869&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0449869&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0449869"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0449869"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0449869"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0449869"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Chandramukhi+2005+trailer",
+      "description": "Chandramukhi (2005) starring Rajinikanth, Jyotika.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16523,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0449869",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:46.208092+00:00",
+      "updatedAt": "2026-10-09T23:44:46.208092+00:00"
+    },
+    {
+      "id": "1791589493743",
+      "type": "movie",
+      "title": "Dhoom 3",
+      "genre": "Feature",
+      "year": 2013,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDIxODBmZjYtYWM3Ny00N2U1LWI3M2ItMzZkNmQ4NWYyNDFlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDIxODBmZjYtYWM3Ny00N2U1LWI3M2ItMzZkNmQ4NWYyNDFlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1833673&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1833673&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1833673"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1833673"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1833673"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1833673"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dhoom+3+2013+trailer",
+      "description": "Dhoom 3 (2013) starring Aamir Khan, Katrina Kaif.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8774,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1833673",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:45.674129+00:00",
+      "updatedAt": "2026-10-09T23:44:45.674129+00:00"
+    },
+    {
+      "id": "1791589491938",
+      "type": "movie",
+      "title": "King of Kotha",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWFkODBlNjgtYzk1NS00MDA3LWJhM2QtNjU2YzgxMjY1OTRmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWFkODBlNjgtYzk1NS00MDA3LWJhM2QtNjU2YzgxMjY1OTRmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15134398&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15134398&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15134398"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15134398"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15134398"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15134398"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=King+of+Kotha+2023+trailer",
+      "description": "King of Kotha (2023) starring Aishwarya Lekshmi, Dulquer Salmaan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13278,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15134398",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:45.532744+00:00",
+      "updatedAt": "2026-10-09T23:44:45.532744+00:00"
+    },
+    {
+      "id": "1791589486454",
+      "type": "movie",
+      "title": "Bawaal",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDI5NTBkYjItNjYzZS00ZjE0LWE2MTktY2QyMWEwYjk3ZTNlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDI5NTBkYjItNjYzZS00ZjE0LWE2MTktY2QyMWEwYjk3ZTNlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt19755170&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt19755170&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt19755170"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt19755170"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt19755170"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt19755170"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bawaal+2023+trailer",
+      "description": "Bawaal (2023) starring Varun Dhawan, Janhvi Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10539,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt19755170",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:45.050990+00:00",
+      "updatedAt": "2026-10-09T23:44:45.050990+00:00"
+    },
+    {
+      "id": "1791589493094",
+      "type": "series",
+      "title": "Undekhi",
+      "genre": "Tv Series",
+      "year": 2020,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjBhNTAwNjQtMjNkNS00MTFkLWI2Y2MtZjExZDVhZDg0NDIzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjBhNTAwNjQtMjNkNS00MTFkLWI2Y2MtZjExZDVhZDg0NDIzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt12392496&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt12392496/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt12392496/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt12392496/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt12392496?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Undekhi+2020+trailer",
+      "description": "Undekhi (2020) starring Harsh Chhaya, Surya Sharma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21053,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12392496",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:44.577605+00:00",
+      "updatedAt": "2026-10-09T23:44:44.577605+00:00"
+    },
+    {
+      "id": "1791589475693",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14704,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T23:44:30.981636+00:00",
+      "updatedAt": "2026-10-09T23:44:30.981636+00:00"
+    },
+    {
       "id": "1791568096241",
       "type": "movie",
       "title": "Alai Payuthey",
@@ -19500,8 +20353,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 312,
-    "lastUpdated": "2026-10-09T17:48:13.630857+00:00",
+    "totalMovies": 327,
+    "lastUpdated": "2026-10-09T23:44:50.704971+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
