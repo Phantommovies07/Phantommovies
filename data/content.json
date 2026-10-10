@@ -1,6 +1,1332 @@
 {
   "movies": [
     {
+      "id": "1791650554856",
+      "type": "series",
+      "title": "Tooth Pari: When Love Bites",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2FlMDYwOWEtMDliZS00YjFkLWEwMjAtOGUyNzM5MTZkNWQ1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BN2FlMDYwOWEtMDliZS00YjFkLWEwMjAtOGUyNzM5MTZkNWQ1XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "Season 1 (480p SD)",
+          "size": "1.8 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt27191658&quality=s01-480p&size=1.8GB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "Season 1 (720p HD)",
+          "size": "3.9 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt27191658&quality=s01-720p&size=3.9GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "Season 1 (1080p FHD)",
+          "size": "8.5 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt27191658&quality=s01-1080p&size=8.5GB",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt27191658&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt27191658/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt27191658/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt27191658/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt27191658?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "Season 1 (480p SD)",
+              "size": "1.8 GB",
+              "server": "Fast Cloud Mirror",
+              "url": "download.html?id=tt27191658&quality=s01-480p&size=1.8GB",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "Season 1 (720p HD)",
+              "size": "3.9 GB",
+              "server": "High Speed Cloud",
+              "url": "download.html?id=tt27191658&quality=s01-720p&size=3.9GB",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "Season 1 (1080p FHD)",
+              "size": "8.5 GB",
+              "server": "VIP Fast Server",
+              "url": "download.html?id=tt27191658&quality=s01-1080p&size=8.5GB",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Tooth+Pari:+When+Love+Bites+2023+trailer",
+      "description": "Tooth Pari: When Love Bites (2023) starring Tanya Maniktala, Shantanu Maheshwari.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11688,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27191658",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:24.901767+00:00",
+      "updatedAt": "2026-10-10T16:42:24.901767+00:00"
+    },
+    {
+      "id": "1791650551953",
+      "type": "movie",
+      "title": "Thani Oruvan",
+      "genre": "Feature",
+      "year": 2015,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2Q3ZDc0MjItOTIxZi00NzUyLWIwY2EtYzUwZmZjYmU1NDllXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2Q3ZDc0MjItOTIxZi00NzUyLWIwY2EtYzUwZmZjYmU1NDllXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt4987556&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt4987556&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt4987556"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt4987556"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt4987556"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt4987556"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt4987556&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt4987556&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt4987556&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt4987556&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Thani+Oruvan+2015+trailer",
+      "description": "Thani Oruvan (2015) starring Ravi Mohan, Arvind Swamy.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10924,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt4987556",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:24.394640+00:00",
+      "updatedAt": "2026-10-10T16:42:24.394640+00:00"
+    },
+    {
+      "id": "1791650551346",
+      "type": "movie",
+      "title": "Extra Ordinary Man",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDFmNWYxYWQtN2M4NS00ZDEzLTk4MjgtZGI3YzA2NTZmNjUwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDFmNWYxYWQtN2M4NS00ZDEzLTk4MjgtZGI3YzA2NTZmNjUwXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt23846664&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt23846664&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt23846664"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt23846664"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt23846664"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt23846664"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt23846664&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt23846664&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt23846664&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt23846664&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Extra+Ordinary+Man+2023+trailer",
+      "description": "Extra Ordinary Man (2023) starring Nithiin, Sreeleela.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13787,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt23846664",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:23.812493+00:00",
+      "updatedAt": "2026-10-10T16:42:23.812493+00:00"
+    },
+    {
+      "id": "1791650544023",
+      "type": "movie",
+      "title": "The Archies",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmM5NDIyNDUtM2U5NC00ZTM4LTg5ZGQtMmFkYTQwZTcwNTQ2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmM5NDIyNDUtM2U5NC00ZTM4LTg5ZGQtMmFkYTQwZTcwNTQ2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15979666&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15979666&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15979666"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15979666"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15979666"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15979666"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt15979666&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt15979666&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt15979666&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt15979666&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Archies+2023+trailer",
+      "description": "The Archies (2023) starring Agastya Nanda, Khushi Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18437,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15979666",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:23.090672+00:00",
+      "updatedAt": "2026-10-10T16:42:23.090672+00:00"
+    },
+    {
+      "id": "1791650547123",
+      "type": "series",
+      "title": "Rana Naidu",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTU1YWU2MjMtMDZkZC00NDBkLWFjNTUtYmYzZTBiMTk3MmQ4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTU1YWU2MjMtMDZkZC00NDBkLWFjNTUtYmYzZTBiMTk3MmQ4XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "Season 1 (480p SD)",
+          "size": "1.8 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt15471900&quality=s01-480p&size=1.8GB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "Season 1 (720p HD)",
+          "size": "3.9 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt15471900&quality=s01-720p&size=3.9GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "Season 1 (1080p FHD)",
+          "size": "8.5 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt15471900&quality=s01-1080p&size=8.5GB",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt15471900&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt15471900/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt15471900/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt15471900/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt15471900?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "Season 1 (480p SD)",
+              "size": "1.8 GB",
+              "server": "Fast Cloud Mirror",
+              "url": "download.html?id=tt15471900&quality=s01-480p&size=1.8GB",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "Season 1 (720p HD)",
+              "size": "3.9 GB",
+              "server": "High Speed Cloud",
+              "url": "download.html?id=tt15471900&quality=s01-720p&size=3.9GB",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "Season 1 (1080p FHD)",
+              "size": "8.5 GB",
+              "server": "VIP Fast Server",
+              "url": "download.html?id=tt15471900&quality=s01-1080p&size=8.5GB",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Rana+Naidu+2023+trailer",
+      "description": "Rana Naidu (2023) starring Venkatesh Daggubati, Rana Daggubati.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20419,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15471900",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:22.406524+00:00",
+      "updatedAt": "2026-10-10T16:42:22.406524+00:00"
+    },
+    {
+      "id": "1791650547539",
+      "type": "movie",
+      "title": "Kaththi",
+      "genre": "Feature",
+      "year": 2014,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjNmNmRmNzAtZDNjZC00NDdkLTljNjItZTE5YzJlNzQwYzk4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjNmNmRmNzAtZDNjZC00NDdkLTljNjItZTE5YzJlNzQwYzk4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt3801314&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt3801314&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt3801314"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt3801314"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt3801314"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt3801314"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt3801314&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt3801314&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt3801314&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt3801314&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kaththi+2014+trailer",
+      "description": "Kaththi (2014) starring Joseph Vijay, Samantha Ruth Prabhu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12371,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt3801314",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:21.781085+00:00",
+      "updatedAt": "2026-10-10T16:42:21.781085+00:00"
+    },
+    {
+      "id": "1791650542473",
+      "type": "movie",
+      "title": "Rock On!!",
+      "genre": "Feature",
+      "year": 2008,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTM2NjIwODc4N15BMl5BanBnXkFtZTcwMDgwMzM4MQ@@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTM2NjIwODc4N15BMl5BanBnXkFtZTcwMDgwMzM4MQ@@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1230165&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1230165&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1230165"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1230165"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1230165"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1230165"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt1230165&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt1230165&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt1230165&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt1230165&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Rock+On!!+2008+trailer",
+      "description": "Rock On!! (2008) starring Arjun Rampal, Farhan Akhtar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14342,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1230165",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:21.119784+00:00",
+      "updatedAt": "2026-10-10T16:42:21.119784+00:00"
+    },
+    {
+      "id": "1791650547179",
+      "type": "movie",
+      "title": "Hi Nanna",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWZjOWZhMDAtMWIxYi00NzUzLWFjNzctZTc5ZTYzMWNhY2I5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWZjOWZhMDAtMWIxYi00NzUzLWFjNzctZTc5ZTYzMWNhY2I5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt25433734&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt25433734&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt25433734"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt25433734"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt25433734"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt25433734"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt25433734&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt25433734&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt25433734&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt25433734&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hi+Nanna+2023+trailer",
+      "description": "Hi Nanna (2023) starring Nani, Mrunal Thakur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13225,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt25433734",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:20.497535+00:00",
+      "updatedAt": "2026-10-10T16:42:20.497535+00:00"
+    },
+    {
+      "id": "1791650547599",
+      "type": "movie",
+      "title": "The Private Lives of Pippa Lee",
+      "genre": "Feature",
+      "year": 2009,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTMwMTcxMjQyOF5BMl5BanBnXkFtZTcwODUyODI4Mg@@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTMwMTcxMjQyOF5BMl5BanBnXkFtZTcwODUyODI4Mg@@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1134629&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1134629&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1134629"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1134629"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1134629"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1134629"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt1134629&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt1134629&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt1134629&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt1134629&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Private+Lives+of+Pippa+Lee+2009+trailer",
+      "description": "The Private Lives of Pippa Lee (2009) starring Robin Wright, Alan Arkin.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11376,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1134629",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:19.894795+00:00",
+      "updatedAt": "2026-10-10T16:42:19.894795+00:00"
+    },
+    {
+      "id": "1791650541456",
+      "type": "series",
+      "title": "Kerala Crime Files",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTQ1NDRlOTgtZTFlMS00YWQyLWJiOTYtNzE4ZmVkYTU5OWJkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTQ1NDRlOTgtZTFlMS00YWQyLWJiOTYtNzE4ZmVkYTU5OWJkXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "Season 1 (480p SD)",
+          "size": "1.8 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt27128638&quality=s01-480p&size=1.8GB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "Season 1 (720p HD)",
+          "size": "3.9 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt27128638&quality=s01-720p&size=3.9GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "Season 1 (1080p FHD)",
+          "size": "8.5 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt27128638&quality=s01-1080p&size=8.5GB",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt27128638&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt27128638/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt27128638/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt27128638/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt27128638?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "Season 1 (480p SD)",
+              "size": "1.8 GB",
+              "server": "Fast Cloud Mirror",
+              "url": "download.html?id=tt27128638&quality=s01-480p&size=1.8GB",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "Season 1 (720p HD)",
+              "size": "3.9 GB",
+              "server": "High Speed Cloud",
+              "url": "download.html?id=tt27128638&quality=s01-720p&size=3.9GB",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "Season 1 (1080p FHD)",
+              "size": "8.5 GB",
+              "server": "VIP Fast Server",
+              "url": "download.html?id=tt27128638&quality=s01-1080p&size=8.5GB",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kerala+Crime+Files+2023+trailer",
+      "description": "Kerala Crime Files (2023) starring Devaki Rajendran, Aswathy Manoharan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24311,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27128638",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:19.479741+00:00",
+      "updatedAt": "2026-10-10T16:42:19.479741+00:00"
+    },
+    {
+      "id": "1791650543444",
+      "type": "movie",
+      "title": "Vishwaroopam",
+      "genre": "Feature",
+      "year": 2013,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDlmZWJjYTAtODQ3OS00Y2ZmLTk3ZWMtODEzYzY2MWNkMDEzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDlmZWJjYTAtODQ3OS00Y2ZmLTk3ZWMtODEzYzY2MWNkMDEzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt2199711&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt2199711&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt2199711"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt2199711"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt2199711"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt2199711"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt2199711&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt2199711&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt2199711&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt2199711&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vishwaroopam+2013+trailer",
+      "description": "Vishwaroopam (2013) starring Pooja Kumar, Miles Anderson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12050,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt2199711",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:18.811773+00:00",
+      "updatedAt": "2026-10-10T16:42:18.811773+00:00"
+    },
+    {
+      "id": "1791650538952",
+      "type": "movie",
+      "title": "Jodhaa Akbar",
+      "genre": "Feature",
+      "year": 2008,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzg5YWI5YjMtMjhmNi00MDQxLTlmNWUtM2IzOWMzMDNhOTMzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzg5YWI5YjMtMjhmNi00MDQxLTlmNWUtM2IzOWMzMDNhOTMzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0449994&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0449994&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0449994"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0449994"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0449994"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0449994"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt0449994&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt0449994&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt0449994&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt0449994&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jodhaa+Akbar+2008+trailer",
+      "description": "Jodhaa Akbar (2008) starring Hrithik Roshan, Aishwarya Rai Bachchan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16763,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0449994",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:18.241484+00:00",
+      "updatedAt": "2026-10-10T16:42:18.241484+00:00"
+    },
+    {
+      "id": "1791650545951",
+      "type": "movie",
+      "title": "Mangalavaaram",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmFlZGI1ZjQtZWVmMi00NzQ2LWFmOTMtMDhkMDlmYTEzMDM1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmFlZGI1ZjQtZWVmMi00NzQ2LWFmOTMtMDhkMDlmYTEzMDM1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt26763310&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt26763310&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt26763310"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt26763310"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt26763310"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt26763310"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt26763310&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt26763310&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt26763310&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt26763310&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mangalavaaram+2023+trailer",
+      "description": "Mangalavaaram (2023) starring Payal Rajput, Nandita Shwetha.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20128,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26763310",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:17.658265+00:00",
+      "updatedAt": "2026-10-10T16:42:17.658265+00:00"
+    },
+    {
+      "id": "1791650545283",
+      "type": "movie",
+      "title": "Aankh Micholi",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzRiNzBlMTItMTIzNS00YjNjLWIzOTAtZjdlOTM0YzlkZWFjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzRiNzBlMTItMTIzNS00YjNjLWIzOTAtZjdlOTM0YzlkZWFjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt31014169&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt31014169&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt31014169"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt31014169"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt31014169"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt31014169"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "download.html?id=tt31014169&quality=480p&size=450MB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2 GB",
+          "server": "High Speed Cloud",
+          "url": "download.html?id=tt31014169&quality=720p&size=1.2GB",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6 GB",
+          "server": "VIP Fast Server",
+          "url": "download.html?id=tt31014169&quality=1080p&size=2.6GB",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.4 GB",
+          "server": "Ultra HD Cloud",
+          "url": "download.html?id=tt31014169&quality=4k&size=6.4GB",
+          "color": "#ec4899"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Aankh+Micholi+2024+trailer",
+      "description": "Aankh Micholi (2024) starring Khushi Dubey, Bhakti Rathod.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8924,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31014169",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:42:17.040768+00:00",
+      "updatedAt": "2026-10-10T16:42:17.040768+00:00"
+    },
+    {
+      "id": "1791650518651",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/042325407443-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/37595231-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5021521-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14959,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T16:41:57.812126+00:00",
+      "updatedAt": "2026-10-10T16:41:57.812126+00:00"
+    },
+    {
       "id": "1791627593753",
       "type": "series",
       "title": "Dhootha",
@@ -32348,8 +33674,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 357,
-    "lastUpdated": "2026-10-10T10:19:51.060645+00:00",
+    "totalMovies": 372,
+    "lastUpdated": "2026-10-10T16:42:24.951958+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
