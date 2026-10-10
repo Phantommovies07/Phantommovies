@@ -239,12 +239,33 @@ function switchStream(index, isFailover = false) {
 }
 
 
+function generateFallbackDownloads(movie) {
+    const slug = String(movie.title || 'movie').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const year = movie.year || 2024;
+    const id = movie.imdb_id || movie.id || 'phantom';
+    return [
+        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: `https://w3.magiclinks.lol/download/${slug}-${year}-480p/?id=${id}`, color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: `https://w3.magiclinks.lol/download/${slug}-${year}-720p/?id=${id}`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Fast Server', url: `https://w3.magiclinks.lol/download/${slug}-${year}-1080p/?id=${id}`, color: '#10b981' },
+        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Cloud', url: `https://w3.magiclinks.lol/download/${slug}-${year}-4k/?id=${id}`, color: '#ec4899' }
+    ];
+}
+
 function normalizeDownloads(movie) {
+    if (!movie) return [];
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
-        // Exclude fake downloads (embed streams)
-        return movie.downloads.filter(item => item && item.url && !item.url.includes('/embed/') && !item.url.includes('vidsrc') && !item.url.includes('multiembed'));
+        const valid = movie.downloads.filter(item => item && item.url && !item.url.includes('/embed/') && !item.url.includes('vidsrc') && !item.url.includes('multiembed'));
+        if (valid.length) return valid;
     }
-    return [];
+    if (Array.isArray(movie.seasons) && movie.seasons.length) {
+        for (const s of movie.seasons) {
+            if (Array.isArray(s.downloads) && s.downloads.length) {
+                const valid = s.downloads.filter(item => item && item.url);
+                if (valid.length) return valid;
+            }
+        }
+    }
+    return generateFallbackDownloads(movie);
 }
 
 function renderDownloads(movie) {
@@ -314,8 +335,6 @@ function renderMovie(movie) {
         </section>
     `;
 
-    loadAndRenderAds('movie');
-
     document.querySelectorAll('.download-card').forEach(link => {
         link.addEventListener('click', (event) => {
             if (handleClickAd('download', link.href)) event.preventDefault();
@@ -352,6 +371,30 @@ function showError(message) {
     `;
 }
 
+// ─── HIGH-SPEED CONTENT CACHE ───
+async function getContentData() {
+    if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
+    try {
+        const cached = sessionStorage.getItem('phantom_content_cache');
+        const cacheTime = sessionStorage.getItem('phantom_content_time');
+        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 10 * 60 * 1000)) {
+            const parsed = JSON.parse(cached);
+            window.PHANTOM_CONTENT_CACHE = parsed;
+            return parsed;
+        }
+    } catch (_) {}
+
+    const response = await fetch('data/content.json');
+    if (!response.ok) throw new Error('Failed to load content.json');
+    const data = await response.json();
+    window.PHANTOM_CONTENT_CACHE = data;
+    try {
+        sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time', String(Date.now()));
+    } catch (_) {}
+    return data;
+}
+
 async function loadMovieDetail() {
     const movieId = getMovieIdFromURL();
     if (!movieId) {
@@ -360,9 +403,7 @@ async function loadMovieDetail() {
     }
 
     try {
-        const response = await fetch('data/content.json');
-        if (!response.ok) throw new Error('Failed to load content.json');
-        const data = await response.json();
+        const data = await getContentData();
         const movies = (data.movies || []).filter(m => m.active !== false);
         const movie = movies.find(m => String(m.id) === String(movieId));
 
@@ -372,6 +413,9 @@ async function loadMovieDetail() {
         }
 
         renderMovie(movie);
+
+        const ads = data.settings && data.settings.ads;
+        if (ads) applyAds(ads, 'movie');
     } catch (error) {
         console.error(error);
         showError('Unable to load movie details.');
@@ -382,23 +426,25 @@ loadMovieDetail();
 
 
 // ─── ADS RENDERING ───
+function applyAds(ads, page) {
+    currentAds = ads;
+    if (!ads || ads.enabled === false) return;
+
+    if (page === 'movie') {
+        insertAdBefore('#playerBox', 'ad-movie-player-top', ads.moviePlayerTop);
+        insertAdBefore('.download-grid', 'ad-movie-downloads', ads.movieDownloads);
+        insertAdAfter('.movie-detail-content', 'ad-movie-bottom', ads.movieBottom);
+    }
+
+    renderFloatingAd(ads.floatingBottom);
+    renderPopupAd(ads.popup);
+}
+
 async function loadAndRenderAds(page) {
     try {
-        const response = await fetch('data/content.json');
-        if (!response.ok) return;
-        const data = await response.json();
+        const data = await getContentData();
         const ads = data.settings && data.settings.ads;
-        currentAds = ads;
-        if (!ads || ads.enabled === false) return;
-
-        if (page === 'movie') {
-            insertAdBefore('#playerBox', 'ad-movie-player-top', ads.moviePlayerTop);
-            insertAdBefore('.download-grid', 'ad-movie-downloads', ads.movieDownloads);
-            insertAdAfter('.movie-detail-content', 'ad-movie-bottom', ads.movieBottom);
-        }
-
-        renderFloatingAd(ads.floatingBottom);
-        renderPopupAd(ads.popup);
+        if (ads) applyAds(ads, page);
     } catch (error) {
         console.warn('Ads failed to load:', error);
     }

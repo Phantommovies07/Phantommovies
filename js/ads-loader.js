@@ -21,19 +21,38 @@
     executeScripts(wrap);
   }
 
+  async function getContentData() {
+    if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
+    try {
+      const cached = sessionStorage.getItem('phantom_content_cache');
+      const cacheTime = sessionStorage.getItem('phantom_content_time');
+      if (cached && cacheTime && (Date.now() - Number(cacheTime) < 10 * 60 * 1000)) {
+        const parsed = JSON.parse(cached);
+        window.PHANTOM_CONTENT_CACHE = parsed;
+        return parsed;
+      }
+    } catch (_) {}
+
+    const res = await fetch('data/content.json');
+    if (!res.ok) return null;
+    const data = await res.json();
+    window.PHANTOM_CONTENT_CACHE = data;
+    try {
+      sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
+      sessionStorage.setItem('phantom_content_time', String(Date.now()));
+    } catch (_) {}
+    return data;
+  }
+
   async function loadGlobalAds() {
     try {
-      const res = await fetch('data/content.json', { cache: 'no-store' });
-      if (!res.ok) return;
-      const data = await res.json();
+      const data = await getContentData();
+      if (!data) return;
       const ads = data.settings && data.settings.ads;
       if (!ads || ads.enabled === false) return;
 
-      // Monetag usually asks to paste MultiTag/OnClick/IPP/Vignette scripts below <head>.
       injectHeadCode('monetag-head-code', ads.monetagHead || '');
       injectHeadCode('monetag-multitag-code', ads.monetagMultitag || '');
-
-      // Adsterra global formats such as Social Bar / Popunder can also be loaded globally.
       injectHeadCode('adsterra-head-code', ads.adsterraHead || '');
       injectHeadCode('adsterra-socialbar-code', ads.adsterraSocialBar || '');
     } catch (err) {

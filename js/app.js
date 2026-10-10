@@ -8,16 +8,34 @@ let siteSettings = {};
 let heroSlideIndex = 0;
 let heroSlideTimer = null;
 
+// ─── HIGH-SPEED CONTENT CACHE ───
+async function getContentData() {
+    if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
+    try {
+        const cached = sessionStorage.getItem('phantom_content_cache');
+        const cacheTime = sessionStorage.getItem('phantom_content_time');
+        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 10 * 60 * 1000)) {
+            const parsed = JSON.parse(cached);
+            window.PHANTOM_CONTENT_CACHE = parsed;
+            return parsed;
+        }
+    } catch (_) {}
+
+    const response = await fetch('data/content.json');
+    if (!response.ok) throw new Error('Failed to load content');
+    const data = await response.json();
+    window.PHANTOM_CONTENT_CACHE = data;
+    try {
+        sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time', String(Date.now()));
+    } catch (_) {}
+    return data;
+}
+
 // ─── LOAD MOVIES FROM JSON ───
 async function loadMoviesFromJSON() {
     try {
-        const response = await fetch('data/content.json');
-        
-        if (!response.ok) {
-            throw new Error('Failed to load content');
-        }
-
-        const data = await response.json();
+        const data = await getContentData();
         allMovies = (data.movies || []).filter(m => m.active !== false);
         siteSettings = data.settings || {};
         
@@ -124,10 +142,19 @@ function loadDemoMovies() {
     afterMoviesLoaded();
 }
 
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        loadingScreen.classList.add('hide');
+        setTimeout(() => { loadingScreen.style.display = 'none'; }, 400);
+    }
+}
+
 // ─── AFTER MOVIES LOADED ───
 function afterMoviesLoaded() {
     // Update hero count
-    document.getElementById('heroCount').textContent = allMovies.length + '+';
+    const heroCountEl = document.getElementById('heroCount');
+    if (heroCountEl) heroCountEl.textContent = allMovies.length + '+';
     
     // Set featured movie
     const feat = allMovies.find(m => m.featured) || allMovies[0];
@@ -141,7 +168,12 @@ function afterMoviesLoaded() {
     setupRequestButton();
     initThemeToggle();
     initSearchToggle();
-    loadAndRenderAds('home');
+    
+    // Hide loading screen immediately - no artificial delay!
+    hideLoadingScreen();
+
+    // Direct ad injection without network refetch
+    if (siteSettings.ads) applyAds(siteSettings.ads, 'home');
     
     // Track with GA4
     if (typeof gtag !== 'undefined') {
@@ -345,18 +377,63 @@ function applyTheme(theme) {
     if (btn) btn.textContent = theme === 'light' ? '☀️' : '🌙';
 }
 
-// ─── RENDER MOVIES ───
-function renderMovies(movies) {
+// ─── RENDER MOVIES (PROGRESSIVE CHUNKED RENDERING) ───
+const CHUNK_SIZE = 24;
+let currentFilteredMovies = [];
+let currentRenderedCount = 0;
+let scrollObserver = null;
+
+function renderMovies(movies, reset = true) {
     const grid = document.getElementById('movieGrid');
-    
-    if (!movies || movies.length === 0) {
+    if (!grid) return;
+
+    if (reset) {
+        currentFilteredMovies = movies || [];
+        currentRenderedCount = 0;
+        grid.innerHTML = '';
+    }
+
+    if (!currentFilteredMovies || currentFilteredMovies.length === 0) {
         grid.innerHTML = '<div class="empty-state">🎬 No movies found</div>';
         return;
     }
-    
-    grid.innerHTML = movies.map(m => movieCard(m)).join('');
-    
-    bindMovieCards(grid);
+
+    const nextChunk = currentFilteredMovies.slice(currentRenderedCount, currentRenderedCount + CHUNK_SIZE);
+    if (nextChunk.length) {
+        const oldSentinel = document.getElementById('gridSentinel');
+        if (oldSentinel) oldSentinel.remove();
+
+        const chunkHtml = nextChunk.map(m => movieCard(m)).join('');
+        grid.insertAdjacentHTML('beforeend', chunkHtml);
+        currentRenderedCount += nextChunk.length;
+        bindMovieCards(grid);
+
+        if (currentRenderedCount < currentFilteredMovies.length) {
+            const sentinel = document.createElement('div');
+            sentinel.id = 'gridSentinel';
+            sentinel.style.width = '100%';
+            sentinel.style.height = '60px';
+            sentinel.style.gridColumn = '1 / -1';
+            sentinel.style.display = 'flex';
+            sentinel.style.alignItems = 'center';
+            sentinel.style.justifyContent = 'center';
+            sentinel.innerHTML = '<span style="color:var(--muted);font-size:12px;letter-spacing:1px;opacity:0.8;">⚡ Scroll to reveal more titles</span>';
+            grid.appendChild(sentinel);
+
+            setupScrollObserver(sentinel);
+        }
+    }
+}
+
+function setupScrollObserver(sentinel) {
+    if (scrollObserver) scrollObserver.disconnect();
+    scrollObserver = new IntersectionObserver((entries) => {
+        if (entries[0] && entries[0].isIntersecting) {
+            scrollObserver.disconnect();
+            renderMovies(null, false);
+        }
+    }, { rootMargin: '350px 0px' });
+    scrollObserver.observe(sentinel);
 }
 
 // ─── MOVIE CARD TEMPLATE ───
@@ -364,7 +441,7 @@ function movieCard(m, forceTrendingBadge = false) {
     const badgeText = forceTrendingBadge ? 'TRENDING' : m.badge;
     const badge = badgeText ? `<div class="m-badge">${badgeText}</div>` : '';
     const img = m.poster && m.poster.trim() !== '' 
-        ? `<img src="${m.poster}" alt="${m.title}">` 
+        ? `<img src="${m.poster}" alt="${m.title}" loading="lazy" decoding="async">` 
         : '';
     
     return `<div class="movie-card" data-id="${m.id}">
@@ -566,18 +643,11 @@ function smoothScroll(target) {
 }
 
 // ─── INITIALIZATION ───
-window.addEventListener('load', function() {
-    // Hide loading screen
-    setTimeout(() => {
-        const loadingScreen = document.getElementById('loadingScreen');
-        if (loadingScreen) {
-            loadingScreen.classList.add('hide');
-        }
-    }, 1500);
-    
-    // Load movies from JSON
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadMoviesFromJSON);
+} else {
     loadMoviesFromJSON();
-});
+}
 
 // ─── CONSOLE INFO ───
 console.log('%c🎬 Phantom Movies', 'font-size:20px;color:#5bc4f5;font-weight:bold');
@@ -586,22 +656,24 @@ console.log('%cAdmin Panel: admin.html', 'color:#7a8fa8');
 
 
 // ─── ADS RENDERING ───
+function applyAds(ads, page) {
+    if (!ads || ads.enabled === false) return;
+
+    if (page === 'home') {
+        insertAdAfter('.hero', 'ad-home-top', ads.homeTop);
+        insertAdBefore('#movieGrid', 'ad-home-grid', ads.homeGrid);
+        insertAdBefore('#requestSection', 'ad-home-bottom', ads.homeBottom);
+    }
+
+    renderFloatingAd(ads.floatingBottom);
+    renderPopupAd(ads.popup);
+}
+
 async function loadAndRenderAds(page) {
     try {
-        const response = await fetch('data/content.json');
-        if (!response.ok) return;
-        const data = await response.json();
+        const data = await getContentData();
         const ads = data.settings && data.settings.ads;
-        if (!ads || ads.enabled === false) return;
-
-        if (page === 'home') {
-            insertAdAfter('.hero', 'ad-home-top', ads.homeTop);
-            insertAdBefore('#movieGrid', 'ad-home-grid', ads.homeGrid);
-            insertAdBefore('#requestSection', 'ad-home-bottom', ads.homeBottom);
-        }
-
-        renderFloatingAd(ads.floatingBottom);
-        renderPopupAd(ads.popup);
+        if (ads) applyAds(ads, page);
     } catch (error) {
         console.warn('Ads failed to load:', error);
     }
