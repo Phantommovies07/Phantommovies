@@ -107,8 +107,21 @@ function generateFallbackSeriesDownloads(series, seasonNum = 1) {
     ];
 }
 
+function isStreamingUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    const lower = url.toLowerCase();
+    return lower.includes('embed') || 
+           lower.includes('stream') || 
+           lower.includes('vidsrc') || 
+           lower.includes('autoembed') || 
+           lower.includes('multiembed') || 
+           lower.includes('smashystream') || 
+           lower.includes('player.') || 
+           lower.includes('2embed');
+}
+
 function sanitizeSeriesDownloadUrl(url, series, quality, size) {
-    if (!url) return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}`;
+    if (!url || isStreamingUrl(url)) return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}`;
     if (url.includes('magiclinks.lol/series/') && url.includes('?id=')) {
         return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size || '')}`;
     }
@@ -119,7 +132,7 @@ function normalizeDownloads(episode) {
     const season = getSeasons()[currentSeasonIndex];
     if (episode && Array.isArray(episode.downloads) && episode.downloads.length) {
         const valid = episode.downloads
-            .filter(d => d && d.url)
+            .filter(d => d && d.url && !isStreamingUrl(d.url))
             .map(d => ({
                 ...d,
                 url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'HD', d.size || '')
@@ -128,7 +141,7 @@ function normalizeDownloads(episode) {
     }
     if (season && Array.isArray(season.downloads) && season.downloads.length) {
         const valid = season.downloads
-            .filter(d => d && d.url)
+            .filter(d => d && d.url && !isStreamingUrl(d.url))
             .map(d => ({
                 ...d,
                 url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'Season Pack', d.size || '')
@@ -137,7 +150,7 @@ function normalizeDownloads(episode) {
     }
     if (currentSeries && Array.isArray(currentSeries.downloads) && currentSeries.downloads.length) {
         const valid = currentSeries.downloads
-            .filter(d => d && d.url)
+            .filter(d => d && d.url && !isStreamingUrl(d.url))
             .map(d => ({
                 ...d,
                 url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'HD', d.size || '')

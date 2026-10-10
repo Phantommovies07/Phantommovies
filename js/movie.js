@@ -249,8 +249,21 @@ function generateFallbackDownloads(movie) {
     ];
 }
 
+function isStreamingUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    const lower = url.toLowerCase();
+    return lower.includes('embed') || 
+           lower.includes('stream') || 
+           lower.includes('vidsrc') || 
+           lower.includes('autoembed') || 
+           lower.includes('multiembed') || 
+           lower.includes('smashystream') || 
+           lower.includes('player.') || 
+           lower.includes('2embed');
+}
+
 function sanitizeDownloadUrl(url, movie, quality, size) {
-    if (!url) return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}`;
+    if (!url || isStreamingUrl(url)) return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}`;
     // If it's the broken/fake pattern, route to working download portal
     if (url.includes('magiclinks.lol/download/')) {
         return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size || '')}`;
@@ -262,7 +275,7 @@ function normalizeDownloads(movie) {
     if (!movie) return [];
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
         const valid = movie.downloads
-            .filter(item => item && item.url && !item.url.includes('/embed/') && !item.url.includes('vidsrc') && !item.url.includes('multiembed'))
+            .filter(item => item && item.url && !isStreamingUrl(item.url))
             .map(item => ({
                 ...item,
                 url: sanitizeDownloadUrl(item.url, movie, item.quality || 'HD', item.size || '')
@@ -273,7 +286,7 @@ function normalizeDownloads(movie) {
         for (const s of movie.seasons) {
             if (Array.isArray(s.downloads) && s.downloads.length) {
                 const valid = s.downloads
-                    .filter(item => item && item.url)
+                    .filter(item => item && item.url && !isStreamingUrl(item.url))
                     .map(item => ({
                         ...item,
                         url: sanitizeDownloadUrl(item.url, movie, item.quality || 'HD', item.size || '')

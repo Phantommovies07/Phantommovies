@@ -278,6 +278,31 @@ async function getContentData() {
     return await res.json();
 }
 
+function isStreamingUrl(url) {
+    if (!url || typeof url !== 'string') return true;
+    const lower = url.toLowerCase();
+    return lower.includes('embed') || 
+           lower.includes('stream') || 
+           lower.includes('vidsrc') || 
+           lower.includes('multiembed') || 
+           lower.includes('autoembed') || 
+           lower.includes('smashystream') || 
+           lower.includes('player.') || 
+           lower.includes('2embed') || 
+           lower.includes('movie.html') || 
+           lower.includes('series.html');
+}
+
+function isValidDownloadUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    const clean = url.trim();
+    if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
+    if (clean.includes('download.html')) return false;
+    if (clean.includes('magiclinks.lol/download/')) return false;
+    if (isStreamingUrl(clean)) return false;
+    return true;
+}
+
 async function initDownloadPage() {
     const params = getParams();
     if (!params.id && !params.url) {
@@ -314,31 +339,86 @@ async function initDownloadPage() {
             if (btmSlot && ads.movieBottom) btmSlot.innerHTML = ads.movieBottom;
         }
 
-        // Determine destination URLs
-        let targetDownloadUrl = params.url;
-        if (!targetDownloadUrl && currentMovie) {
-            // Check if movie has real downloads matching quality
-            const dls = currentMovie.downloads || [];
-            const match = dls.find(d => d.quality && d.quality.toLowerCase().includes(params.quality.toLowerCase()));
-            if (match && match.url && !match.url.includes('download.html') && !match.url.includes('magiclinks.lol/download/')) {
-                targetDownloadUrl = match.url;
-            } else if (dls.length && dls[0].url && !dls[0].url.includes('download.html') && !dls[0].url.includes('magiclinks.lol/download/')) {
-                targetDownloadUrl = dls[0].url;
-            } else {
-                targetDownloadUrl = currentMovie.streamLink || `https://multiembed.mov/?video_id=${currentMovie.imdb_id || ''}`;
+        // Determine destination URLs (STRICTLY NO STREAMING EMBEDS)
+        let targetDownloadUrl = null;
+        let mirrorDownloadUrl = null;
+
+        if (isValidDownloadUrl(params.url)) {
+            targetDownloadUrl = params.url;
+        }
+
+        if (currentMovie) {
+            let pool = [];
+            if (Array.isArray(currentMovie.downloads)) {
+                pool.push(...currentMovie.downloads);
+            }
+            if (Array.isArray(currentMovie.seasons)) {
+                currentMovie.seasons.forEach(s => {
+                    if (Array.isArray(s.downloads)) pool.push(...s.downloads);
+                    if (Array.isArray(s.episodes)) {
+                        s.episodes.forEach(e => {
+                            if (Array.isArray(e.downloads)) pool.push(...e.downloads);
+                        });
+                    }
+                });
+            }
+
+            const validPool = pool.filter(d => d && isValidDownloadUrl(d.url));
+            if (!targetDownloadUrl && validPool.length > 0) {
+                const match = validPool.find(d => d.quality && d.quality.toLowerCase().includes(params.quality.toLowerCase()));
+                if (match) {
+                    targetDownloadUrl = match.url;
+                    const second = validPool.find(d => d.url !== targetDownloadUrl);
+                    if (second) mirrorDownloadUrl = second.url;
+                } else {
+                    targetDownloadUrl = validPool[0].url;
+                    if (validPool.length > 1) mirrorDownloadUrl = validPool[1].url;
+                }
             }
         }
 
-        const telegramLink = settings.telegramLink || 'https://t.me/Phantommovies';
+        const baseTg = settings.telegramLink || 'https://t.me/Phantommovies';
+        const cleanTitle = (currentMovie?.title || 'movie').replace(/[^a-zA-Z0-9]/g, '_');
+        const tgMovieSearch = `${baseTg}?start=dl_${encodeURIComponent(cleanTitle)}`;
 
         // Setup Buttons
         const btn1 = document.getElementById('btnServer1');
         const btn2 = document.getElementById('btnServer2');
         const btnTg = document.getElementById('btnTelegram');
 
-        btn1.href = targetDownloadUrl;
-        btn2.href = targetDownloadUrl;
-        btnTg.href = telegramLink;
+        const btn1Span = btn1 ? btn1.querySelector('span') : null;
+        const btn2Span = btn2 ? btn2.querySelector('span') : null;
+        const btnTgSpan = btnTg ? btnTg.querySelector('span') : null;
+
+        if (targetDownloadUrl) {
+            btn1.href = targetDownloadUrl;
+            if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
+
+            btn2.href = mirrorDownloadUrl || tgMovieSearch;
+            if (btn2Span) btn2Span.textContent = mirrorDownloadUrl ? '⚡ High Speed Mirror (Server 2)' : '⚡ Direct Telegram Cloud File';
+
+            btnTg.href = tgMovieSearch;
+            if (btnTgSpan) btnTgSpan.textContent = '📩 Download via Telegram Bot';
+        } else {
+            // Direct file delivery via Telegram Bot / Cloud channel
+            btn1.href = tgMovieSearch;
+            if (btn1Span) btn1Span.textContent = '🚀 Instant .MKV File via Telegram Bot';
+
+            btn2.href = baseTg;
+            if (btn2Span) btn2Span.textContent = '⚡ Direct Telegram Cloud Channel Mirror';
+
+            btnTg.href = baseTg;
+            if (btnTgSpan) btnTgSpan.textContent = '📩 Join Phantom Movies Telegram';
+
+            const container = document.getElementById('linksContainer');
+            if (container && !document.getElementById('dlTgNote')) {
+                const noteEl = document.createElement('div');
+                noteEl.id = 'dlTgNote';
+                noteEl.style.cssText = 'color: #10b981; font-size: 13px; margin-top: 15px; background: rgba(16, 185, 129, 0.08); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2); line-height: 1.4;';
+                noteEl.innerHTML = '📥 <strong>Direct File Download:</strong> This title is available as a full .MKV / .MP4 file on our official Telegram Bot & Channel with zero wait time.';
+                container.appendChild(noteEl);
+            }
+        }
 
         [btn1, btn2].forEach(btn => {
             btn.addEventListener('click', (e) => {
