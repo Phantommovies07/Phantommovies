@@ -30,7 +30,7 @@ function playerMarkup(url, poster = '', title = '') {
     }
 
     if (url) {
-        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"></iframe>`;
+        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin"></iframe>`;
     }
 
     return `<div class="stream-placeholder"><div>▶</div><p>Episode streaming link is not available.</p></div>`;
