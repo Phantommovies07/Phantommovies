@@ -262,12 +262,18 @@ function isStreamingUrl(url) {
            lower.includes('2embed');
 }
 
+function isValidDownloadUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    const clean = url.trim();
+    if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
+    if (clean.includes('download.html')) return false;
+    if (clean.includes('magiclinks.lol/download/')) return false;
+    if (isStreamingUrl(clean)) return false;
+    return true;
+}
+
 function sanitizeDownloadUrl(url, movie, quality, size) {
-    if (!url || isStreamingUrl(url)) return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}`;
-    // If it's the broken/fake pattern, route to working download portal
-    if (url.includes('magiclinks.lol/download/')) {
-        return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size || '')}`;
-    }
+    if (!url || !isValidDownloadUrl(url)) return '';
     return url;
 }
 
@@ -275,10 +281,10 @@ function normalizeDownloads(movie) {
     if (!movie) return [];
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
         const valid = movie.downloads
-            .filter(item => item && item.url && !isStreamingUrl(item.url))
+            .filter(item => item && item.url && isValidDownloadUrl(item.url))
             .map(item => ({
                 ...item,
-                url: sanitizeDownloadUrl(item.url, movie, item.quality || 'HD', item.size || '')
+                url: item.url
             }));
         if (valid.length) return valid;
     }
@@ -286,23 +292,23 @@ function normalizeDownloads(movie) {
         for (const s of movie.seasons) {
             if (Array.isArray(s.downloads) && s.downloads.length) {
                 const valid = s.downloads
-                    .filter(item => item && item.url && !isStreamingUrl(item.url))
+                    .filter(item => item && item.url && isValidDownloadUrl(item.url))
                     .map(item => ({
                         ...item,
-                        url: sanitizeDownloadUrl(item.url, movie, item.quality || 'HD', item.size || '')
+                        url: item.url
                     }));
                 if (valid.length) return valid;
             }
         }
     }
-    return generateFallbackDownloads(movie);
+    return [];
 }
 
 function renderDownloads(movie) {
     const downloads = normalizeDownloads(movie);
 
     if (!downloads.length) {
-        return `<div class="download-empty">No download options added yet.</div>`;
+        return `<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct download links are currently updating for this title.<br><span style="color: #5bc4f5;">Please use the HD streaming servers above to watch online without waiting.</span></div>`;
     }
 
     return downloads.map((item, index) => {
@@ -405,22 +411,22 @@ function showError(message) {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache');
-        const cacheTime = sessionStorage.getItem('phantom_content_time');
-        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 10 * 60 * 1000)) {
+        const cached = sessionStorage.getItem('phantom_content_cache_v3');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v3');
+        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
             return parsed;
         }
     } catch (_) {}
 
-    const response = await fetch('data/content.json');
+    const response = await fetch('data/content.json?v=' + Date.now());
     if (!response.ok) throw new Error('Failed to load content.json');
     const data = await response.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {
-        sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time', String(Date.now()));
+        sessionStorage.setItem('phantom_content_cache_v3', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time_v3', String(Date.now()));
     } catch (_) {}
     return data;
 }

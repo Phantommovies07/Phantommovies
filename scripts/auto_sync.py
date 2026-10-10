@@ -487,20 +487,74 @@ def save_content(data: Dict, path: str = CONTENT_FILE) -> bool:
         print(f"[Error] Failed to save {path}: {e}")
         return False
 
+def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
+    """Tries to scrape real working cloud download links from KM Movies for the title."""
+    try:
+        clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
+        clean_t = ' '.join(clean_t.split()[:4])
+        if not clean_t or not BeautifulSoup:
+            return []
+        url = f"https://kmmovies.baby/?s={requests.utils.quote(clean_t)}"
+        r = requests.get(url, headers=HEADERS, timeout=6)
+        if r.status_code != 200:
+            return []
+        soup = BeautifulSoup(r.text, 'html.parser')
+        articles = soup.find_all('article')
+        if not articles:
+            return []
+
+        post_url = None
+        norm_q = re.sub(r'[^a-z0-9]', '', clean_t.lower())
+        for art in articles[:4]:
+            a = art.find('a', href=True)
+            if a:
+                pt = a.get_text(strip=True).lower()
+                norm_pt = re.sub(r'[^a-z0-9]', '', pt)
+                if norm_q[:6] in norm_pt or norm_pt[:6] in norm_q:
+                    post_url = a['href']
+                    break
+        if not post_url and articles:
+            post_url = articles[0].find('a', href=True)['href']
+
+        if not post_url:
+            return []
+
+        r_post = requests.get(post_url, headers=HEADERS, timeout=6)
+        if r_post.status_code != 200:
+            return []
+        soup_post = BeautifulSoup(r_post.text, 'html.parser')
+        downloads = []
+        seen = set()
+
+        for a in soup_post.find_all('a', href=True):
+            href = a['href']
+            text = a.get_text(strip=True)
+            if ('magiclinks.lol' in href and re.search(r'/\d+-?\d*/?', href)) or 'short.azonahub' in href or 'gofile.io' in href or 'hubcloud' in href:
+                for q_key, q_label, color in QUALITY_ORDER:
+                    if q_key in text.lower() and q_label not in seen:
+                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
+                        size_str = size_match.group(1).upper() if size_match else ''
+                        downloads.append({
+                            'quality': q_label,
+                            'size': size_str,
+                            'server': 'Fast Cloud Mirror',
+                            'url': href,
+                            'color': color
+                        })
+                        seen.add(q_label)
+                        break
+
+        quality_rank = {'480p SD': 1, '720p HD': 2, '1080p Full HD': 3, '4K Ultra HD': 4}
+        downloads.sort(key=lambda d: quality_rank.get(d['quality'], 9))
+        return downloads
+    except Exception:
+        return []
+
 def generate_movie_downloads(title: str, year: int, item_id: str) -> List[Dict]:
-    return [
-        {"quality": "480p SD", "size": "450 MB", "server": "Fast Cloud Mirror", "url": f"download.html?id={item_id}&quality=480p&size=450MB", "color": "#ffd70f"},
-        {"quality": "720p HD", "size": "1.2 GB", "server": "High Speed Cloud", "url": f"download.html?id={item_id}&quality=720p&size=1.2GB", "color": "#06b6d4"},
-        {"quality": "1080p Full HD", "size": "2.6 GB", "server": "VIP Fast Server", "url": f"download.html?id={item_id}&quality=1080p&size=2.6GB", "color": "#10b981"},
-        {"quality": "4K Ultra HD", "size": "6.4 GB", "server": "Ultra HD Cloud", "url": f"download.html?id={item_id}&quality=4k&size=6.4GB", "color": "#ec4899"}
-    ]
+    return fetch_real_kmmovies_downloads(title)
 
 def generate_series_downloads(title: str, season_num: int, item_id: str) -> List[Dict]:
-    return [
-        {"quality": f"Season {season_num} (480p SD)", "size": "1.8 GB", "server": "Fast Cloud Mirror", "url": f"download.html?id={item_id}&quality=s0{season_num}-480p&size=1.8GB", "color": "#ffd70f"},
-        {"quality": f"Season {season_num} (720p HD)", "size": "3.9 GB", "server": "High Speed Cloud", "url": f"download.html?id={item_id}&quality=s0{season_num}-720p&size=3.9GB", "color": "#06b6d4"},
-        {"quality": f"Season {season_num} (1080p FHD)", "size": "8.5 GB", "server": "VIP Fast Server", "url": f"download.html?id={item_id}&quality=s0{season_num}-1080p&size=8.5GB", "color": "#10b981"}
-    ]
+    return fetch_real_kmmovies_downloads(f"{title} S0{season_num}")
 
 def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dict:
     now_iso = datetime.now(timezone.utc).isoformat()
@@ -520,7 +574,7 @@ def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dic
 
     downloads = m.get("downloads")
     if not downloads:
-        downloads = generate_movie_downloads(m.get("title", ""), m.get("year", 2024), imdb_id or unique_id)
+        downloads = fetch_real_kmmovies_downloads(m.get("title", ""))
 
     return {
         "id": unique_id,

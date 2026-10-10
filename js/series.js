@@ -120,44 +120,35 @@ function isStreamingUrl(url) {
            lower.includes('2embed');
 }
 
-function sanitizeSeriesDownloadUrl(url, series, quality, size) {
-    if (!url || isStreamingUrl(url)) return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}`;
-    if (url.includes('magiclinks.lol/series/') && url.includes('?id=')) {
-        return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size || '')}`;
-    }
-    return url;
+function isValidDownloadUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    const clean = url.trim();
+    if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
+    if (clean.includes('download.html')) return false;
+    if (clean.includes('magiclinks.lol/download/')) return false;
+    if (clean.includes('magiclinks.lol/series/') && clean.includes('?id=')) return false;
+    if (isStreamingUrl(clean)) return false;
+    return true;
 }
 
 function normalizeDownloads(episode) {
     const season = getSeasons()[currentSeasonIndex];
     if (episode && Array.isArray(episode.downloads) && episode.downloads.length) {
         const valid = episode.downloads
-            .filter(d => d && d.url && !isStreamingUrl(d.url))
-            .map(d => ({
-                ...d,
-                url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'HD', d.size || '')
-            }));
+            .filter(d => d && d.url && isValidDownloadUrl(d.url));
         if (valid.length) return valid;
     }
     if (season && Array.isArray(season.downloads) && season.downloads.length) {
         const valid = season.downloads
-            .filter(d => d && d.url && !isStreamingUrl(d.url))
-            .map(d => ({
-                ...d,
-                url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'Season Pack', d.size || '')
-            }));
+            .filter(d => d && d.url && isValidDownloadUrl(d.url));
         if (valid.length) return valid;
     }
     if (currentSeries && Array.isArray(currentSeries.downloads) && currentSeries.downloads.length) {
         const valid = currentSeries.downloads
-            .filter(d => d && d.url && !isStreamingUrl(d.url))
-            .map(d => ({
-                ...d,
-                url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'HD', d.size || '')
-            }));
+            .filter(d => d && d.url && isValidDownloadUrl(d.url));
         if (valid.length) return valid;
     }
-    return generateFallbackSeriesDownloads(currentSeries || {}, season?.seasonNumber || (currentSeasonIndex + 1));
+    return [];
 }
 
 function renderSeries(series) {
@@ -475,22 +466,22 @@ function showError(message) {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache');
-        const cacheTime = sessionStorage.getItem('phantom_content_time');
-        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 10 * 60 * 1000)) {
+        const cached = sessionStorage.getItem('phantom_content_cache_v3');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v3');
+        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
             return parsed;
         }
     } catch (_) {}
 
-    const response = await fetch('data/content.json');
+    const response = await fetch('data/content.json?v=' + Date.now());
     if (!response.ok) throw new Error('Failed to load content.json');
     const data = await response.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {
-        sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time', String(Date.now()));
+        sessionStorage.setItem('phantom_content_cache_v3', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time_v3', String(Date.now()));
     } catch (_) {}
     return data;
 }

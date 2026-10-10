@@ -242,10 +242,6 @@
                 <span>⚡ High Speed Mirror (Server 2)</span>
                 <em>Direct</em>
             </a>
-            <a class="dl-server-btn dl-server-telegram" id="btnTelegram" href="#" target="_blank" rel="noopener noreferrer">
-                <span>📩 Download via Telegram Bot</span>
-                <em>Fast</em>
-            </a>
         </div>
 
         <!-- Ad Slot: Download Bottom -->
@@ -269,13 +265,17 @@ function getParams() {
 }
 
 async function getContentData() {
-    if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache');
+        const res = await fetch('data/content.json?v=' + Date.now());
+        const data = await res.json();
+        sessionStorage.setItem('phantom_content_cache_v3', JSON.stringify(data));
+        return data;
+    } catch (_) {
+        const cached = sessionStorage.getItem('phantom_content_cache_v3');
         if (cached) return JSON.parse(cached);
-    } catch (_) {}
-    const res = await fetch('data/content.json');
-    return await res.json();
+        const res = await fetch('data/content.json');
+        return await res.json();
+    }
 }
 
 function isStreamingUrl(url) {
@@ -377,50 +377,58 @@ async function initDownloadPage() {
             }
         }
 
-        const baseTg = settings.telegramLink || 'https://t.me/Phantommovies';
-        const cleanTitle = (currentMovie?.title || 'movie').replace(/[^a-zA-Z0-9]/g, '_');
-        const tgMovieSearch = `${baseTg}?start=dl_${encodeURIComponent(cleanTitle)}`;
+        const watchUrl = (currentMovie?.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie ? currentMovie.id : (params.id || ''));
 
-        // Setup Buttons
+        if (!targetDownloadUrl) {
+            document.getElementById('timerBox').style.display = 'none';
+            document.getElementById('linksContainer').style.display = 'none';
+
+            const unavailBox = document.createElement('div');
+            unavailBox.style.cssText = 'text-align:center; padding: 25px 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); margin: 20px 0;';
+            unavailBox.innerHTML = `
+                <div style="font-size: 36px; margin-bottom: 12px;">⚡</div>
+                <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px; font-weight: 600;">Download Servers Updating</h3>
+                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin-bottom: 20px;">
+                    Direct cloud download files for this title are currently being processed.<br>
+                    You can watch the full title online in HD right now with zero wait time.
+                </p>
+                <a href="${watchUrl}" class="dl-server-btn dl-server-primary" style="justify-content: center; text-decoration: none; max-width: 340px; margin: 0 auto; display: flex;">
+                    <span>🎬 Watch Online Now (HD Player Active)</span>
+                </a>
+            `;
+            const btmAd = document.getElementById('ad-download-bottom');
+            if (btmAd) {
+                document.getElementById('downloadBox').insertBefore(unavailBox, btmAd);
+            } else {
+                document.getElementById('downloadBox').appendChild(unavailBox);
+            }
+            return;
+        }
+
+        // Setup Real Download Buttons
         const btn1 = document.getElementById('btnServer1');
         const btn2 = document.getElementById('btnServer2');
         const btnTg = document.getElementById('btnTelegram');
 
         const btn1Span = btn1 ? btn1.querySelector('span') : null;
         const btn2Span = btn2 ? btn2.querySelector('span') : null;
-        const btnTgSpan = btnTg ? btnTg.querySelector('span') : null;
 
-        if (targetDownloadUrl) {
-            btn1.href = targetDownloadUrl;
-            if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
+        btn1.href = targetDownloadUrl;
+        if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
 
-            btn2.href = mirrorDownloadUrl || tgMovieSearch;
-            if (btn2Span) btn2Span.textContent = mirrorDownloadUrl ? '⚡ High Speed Mirror (Server 2)' : '⚡ Direct Telegram Cloud File';
-
-            btnTg.href = tgMovieSearch;
-            if (btnTgSpan) btnTgSpan.textContent = '📩 Download via Telegram Bot';
+        if (mirrorDownloadUrl) {
+            btn2.href = mirrorDownloadUrl;
+            if (btn2Span) btn2Span.textContent = '⚡ High Speed Mirror (Server 2)';
+            btn2.style.display = 'flex';
         } else {
-            // Direct file delivery via Telegram Bot / Cloud channel
-            btn1.href = tgMovieSearch;
-            if (btn1Span) btn1Span.textContent = '🚀 Instant .MKV File via Telegram Bot';
-
-            btn2.href = baseTg;
-            if (btn2Span) btn2Span.textContent = '⚡ Direct Telegram Cloud Channel Mirror';
-
-            btnTg.href = baseTg;
-            if (btnTgSpan) btnTgSpan.textContent = '📩 Join Phantom Movies Telegram';
-
-            const container = document.getElementById('linksContainer');
-            if (container && !document.getElementById('dlTgNote')) {
-                const noteEl = document.createElement('div');
-                noteEl.id = 'dlTgNote';
-                noteEl.style.cssText = 'color: #10b981; font-size: 13px; margin-top: 15px; background: rgba(16, 185, 129, 0.08); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2); line-height: 1.4;';
-                noteEl.innerHTML = '📥 <strong>Direct File Download:</strong> This title is available as a full .MKV / .MP4 file on our official Telegram Bot & Channel with zero wait time.';
-                container.appendChild(noteEl);
-            }
+            btn2.style.display = 'none';
         }
 
+        // Hide fake telegram button from download actions
+        if (btnTg) btnTg.style.display = 'none';
+
         [btn1, btn2].forEach(btn => {
+            if (!btn) return;
             btn.addEventListener('click', (e) => {
                 if (ads && ads.clickAd && ads.clickAd.enabled && ads.clickAd.url) {
                     window.open(ads.clickAd.url, '_blank', 'noopener,noreferrer');
