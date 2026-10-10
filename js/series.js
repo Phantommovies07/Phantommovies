@@ -78,10 +78,10 @@ function normalizeStreams(episode) {
     if ((imdb || tmdb) && !season?.combined && !currentSeries?.combined) {
         const tvProviders = [
             { name: "Server 1 (HD)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 2 (Fast)", url: `https://player.autoembed.cc/embed/tv/${tmdb || imdb}/${sNum}/${eNum}` },
-            { name: "Server 3 (VIP)", url: `https://embed.su/embed/tv/${tmdb || imdb}/${sNum}/${eNum}` },
-            { name: "Server 4 (Ultra)", url: `https://vidsrc.cc/v2/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` },
-            { name: "Server 5 (Cloud)", url: `https://player.smashystream.com/tv/${tmdb || imdb}?s=${sNum}&e=${eNum}` }
+            { name: "Server 2 (Fast)", url: `https://vidsrc.pm/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` },
+            { name: "Server 3 (VIP)", url: `https://www.2embed.cc/embedtv/${imdb || tmdb}&s=${sNum}&e=${eNum}` },
+            { name: "Server 4 (Ultra)", url: `https://player.smashystream.com/tv/${tmdb || imdb}?s=${sNum}&e=${eNum}` },
+            { name: "Server 5 (Cloud)", url: `https://www.nontongo.win/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` }
         ];
         tvProviders.forEach(p => {
             if (!raw.some(r => r.url === p.url)) {
@@ -249,23 +249,7 @@ function updateSeriesFailoverStatus(message, isSwitching = false) {
 function startSeriesFailoverWatchdog(streamUrl, streamName) {
     if (seriesFailoverWatchdogTimer) clearTimeout(seriesFailoverWatchdogTimer);
 
-    // 1. Pre-check: If multiple servers and domain is known/detected dead, switch immediately
-    if (currentStreams.length > 1 && streamUrl && !testedSeriesFailedUrls.has(streamUrl)) {
-        try {
-            const controller = new AbortController();
-            const preTimer = setTimeout(() => controller.abort(), 2200);
-            fetch(streamUrl, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
-                .then(() => clearTimeout(preTimer))
-                .catch(() => {
-                    clearTimeout(preTimer);
-                    testedSeriesFailedUrls.add(streamUrl);
-                    console.warn(`[Series Auto-Failover] Domain ${streamName} failed health pre-check. Auto-switching...`);
-                    autoFailoverSeriesNext('health_check');
-                });
-        } catch (_) {}
-    }
-
-    // 2. Timeout Watchdog: If embed is unresponsive or blank after 7s, auto-switch to next server
+    // Timeout Watchdog: If embed is unresponsive or blank after 6.5s, auto-switch to next server
     seriesFailoverWatchdogTimer = setTimeout(() => {
         const iframe = document.querySelector('#seriesPlayerBox .stream-frame');
         if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
@@ -274,7 +258,7 @@ function startSeriesFailoverWatchdog(streamUrl, streamName) {
                 autoFailoverSeriesNext('timeout');
             }
         }
-    }, 7000);
+    }, 6500);
 }
 
 function autoFailoverSeriesNext(reason = 'auto') {

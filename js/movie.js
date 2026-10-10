@@ -83,11 +83,12 @@ function cleanServerLabel(name, index) {
 }
 
 const DEFAULT_STREAM_PROVIDERS = [
-    { name: "Server 1 (HD)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
-    { name: "Server 2 (Fast)", template: "https://player.autoembed.cc/embed/movie/{tmdb}" },
-    { name: "Server 3 (VIP)", template: "https://embed.su/embed/movie/{tmdb}" },
-    { name: "Server 4 (Ultra)", template: "https://vidsrc.cc/v2/embed/movie/{imdb}" },
-    { name: "Server 5 (Cloud)", template: "https://player.smashystream.com/movie/{tmdb}" }
+    { name: "Server 1 (HD)", template: "https://vidlink.pro/movie/{imdb}" },
+    { name: "Server 2 (Fast)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
+    { name: "Server 3 (VIP)", template: "https://www.2embed.cc/embed/{imdb}" },
+    { name: "Server 4 (Ultra)", template: "https://vidsrc.pm/embed/movie/{imdb}" },
+    { name: "Server 5 (Cloud)", template: "https://player.smashystream.com/movie/{tmdb}" },
+    { name: "Server 6 (Backup)", template: "https://www.nontongo.win/embed/movie/{imdb}" }
 ];
 
 function normalizeStreams(movie) {
@@ -156,34 +157,16 @@ function updateFailoverStatus(message, isSwitching = false) {
 function startFailoverWatchdog(streamUrl, streamName) {
     if (failoverWatchdogTimer) clearTimeout(failoverWatchdogTimer);
 
-    // 1. Pre-check: If we have multiple servers and domain is known to be dead, switch immediately
-    if (currentStreams.length > 1 && !testedFailedUrls.has(streamUrl)) {
-        try {
-            const controller = new AbortController();
-            const preTimer = setTimeout(() => controller.abort(), 2200);
-            fetch(streamUrl, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
-                .then(() => clearTimeout(preTimer))
-                .catch(() => {
-                    clearTimeout(preTimer);
-                    // Network / DNS failure detected
-                    testedFailedUrls.add(streamUrl);
-                    console.warn(`[Auto-Failover] Domain ${streamName} failed health pre-check. Auto-switching...`);
-                    autoFailoverNext('health_check');
-                });
-        } catch (_) {}
-    }
-
-    // 2. Timeout Watchdog: If embed is unresponsive or blank after 7s, auto-switch to next server
+    // Timeout Watchdog: If embed is unresponsive after 6.5s, auto-switch to next server
     failoverWatchdogTimer = setTimeout(() => {
         const iframe = document.querySelector('.stream-frame');
         if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
-            // Check if user is still on this screen and hasn't manually switched
             if (currentStreams.length > 1 && currentStreamIndex === 0) {
                 console.log(`[Auto-Failover] Server 1 watchdog expired, switching to fast fallback...`);
                 autoFailoverNext('timeout');
             }
         }
-    }, 7000);
+    }, 6500);
 }
 
 function autoFailoverNext(reason = 'auto') {

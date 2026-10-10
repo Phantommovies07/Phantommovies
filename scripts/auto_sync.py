@@ -59,13 +59,14 @@ def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[
     if not identifier:
         return "", []
 
-    primary_url = f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"
+    primary_url = f"https://vidlink.pro/movie/{imdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"
     servers = [
         {"name": "Server 1 (HD)", "url": primary_url},
-        {"name": "Server 2 (Fast)", "url": f"https://player.autoembed.cc/embed/movie/{tmdb_id or imdb_id}"},
-        {"name": "Server 3 (VIP)", "url": f"https://embed.su/embed/movie/{tmdb_id or imdb_id}"},
-        {"name": "Server 4 (Ultra)", "url": f"https://vidsrc.cc/v2/embed/movie/{imdb_id or tmdb_id}"},
-        {"name": "Server 5 (Cloud)", "url": f"https://player.smashystream.com/movie/{tmdb_id or imdb_id}"}
+        {"name": "Server 2 (Fast)", "url": f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
+        {"name": "Server 3 (VIP)", "url": f"https://www.2embed.cc/embed/{imdb_id or tmdb_id}"},
+        {"name": "Server 4 (Ultra)", "url": f"https://vidsrc.pm/embed/movie/{imdb_id or tmdb_id}"},
+        {"name": "Server 5 (Cloud)", "url": f"https://player.smashystream.com/movie/{tmdb_id or imdb_id}"},
+        {"name": "Server 6 (Backup)", "url": f"https://www.nontongo.win/embed/movie/{imdb_id or tmdb_id}"}
     ]
     return primary_url, servers
 
@@ -79,10 +80,10 @@ def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1,
     primary_url = f"https://multiembed.mov/?video_id={imdb_id}&s={s}&e={e}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}&s={s}&e={e}"
     return [
         {"name": "Server 1 (HD)", "url": primary_url},
-        {"name": "Server 2 (Fast)", "url": f"https://player.autoembed.cc/embed/tv/{tmdb_id or imdb_id}/{s}/{e}"},
-        {"name": "Server 3 (VIP)", "url": f"https://embed.su/embed/tv/{tmdb_id or imdb_id}/{s}/{e}"},
-        {"name": "Server 4 (Ultra)", "url": f"https://vidsrc.cc/v2/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"},
-        {"name": "Server 5 (Cloud)", "url": f"https://player.smashystream.com/tv/{tmdb_id or imdb_id}?s={s}&e={e}"}
+        {"name": "Server 2 (Fast)", "url": f"https://vidsrc.pm/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"},
+        {"name": "Server 3 (VIP)", "url": f"https://www.2embed.cc/embedtv/{imdb_id or tmdb_id}&s={s}&e={e}"},
+        {"name": "Server 4 (Ultra)", "url": f"https://player.smashystream.com/tv/{tmdb_id or imdb_id}?s={s}&e={e}"},
+        {"name": "Server 5 (Cloud)", "url": f"https://www.nontongo.win/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"}
     ]
 
 class IMDbSearchEngine:
@@ -487,6 +488,138 @@ def save_content(data: Dict, path: str = CONTENT_FILE) -> bool:
         print(f"[Error] Failed to save {path}: {e}")
         return False
 
+MIRRORS_FILE = os.path.join(REPO_ROOT, "data", "mirrors.json")
+
+class MirrorEngine:
+    """Self-healing, auto-discovering mirror resolver for KM Movies, VegaMovies, and RogMovies."""
+    
+    def __init__(self):
+        self.mirrors_data = self._load_mirrors_file()
+        self._active_km = None
+        self._active_vega = None
+        self._active_rog = None
+
+    def _load_mirrors_file(self) -> Dict:
+        if os.path.exists(MIRRORS_FILE):
+            try:
+                with open(MIRRORS_FILE, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        return {
+            "scrapers": {
+                "kmmovies": {
+                    "active": "https://kmmovies.baby",
+                    "mirrors": ["https://kmmovies.baby", "https://kmmovies.pink", "https://kmmovies.skin", "https://kmmovies.hair", "https://kmmovies.dad"]
+                },
+                "vegamovies": {
+                    "active": "https://vegamovies.pages.dev",
+                    "portal": "https://vegamovies.is",
+                    "mirrors": ["https://1vegamovies.baby", "https://vegamovies.pages.dev", "https://vegamovies.is", "https://vegamovies.yt", "https://vegamovies.llc"]
+                },
+                "rogmovies": {
+                    "active": "https://rogmovies.in",
+                    "mirrors": ["https://rogmovies.in", "https://rogmovies.vip", "https://rogmovies.fit", "https://rogmovies.cloud"]
+                }
+            }
+        }
+
+    def _save_mirrors_file(self):
+        try:
+            self.mirrors_data["updatedAt"] = datetime.now(timezone.utc).isoformat()
+            with open(MIRRORS_FILE, "w", encoding="utf-8") as f:
+                json.dump(self.mirrors_data, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print(f"[MirrorEngine] Failed to save mirrors.json: {e}")
+
+    def get_active_km(self) -> str:
+        if self._active_km:
+            return self._active_km
+        km_cfg = self.mirrors_data.get("scrapers", {}).get("kmmovies", {})
+        active = km_cfg.get("active", "https://kmmovies.baby")
+        mirrors = km_cfg.get("mirrors", [active])
+        
+        candidates = [active] + [m for m in mirrors if m != active]
+        for c in candidates:
+            try:
+                r = requests.get(c, headers=HEADERS, timeout=4, allow_redirects=True)
+                if r.status_code == 200:
+                    resolved = r.url.rstrip('/')
+                    self._active_km = resolved
+                    if resolved != active:
+                        print(f"🔄 [MirrorEngine] KM Movies mirror auto-rotated: {active} -> {resolved}")
+                        km_cfg["active"] = resolved
+                        self._save_mirrors_file()
+                    return resolved
+            except Exception:
+                continue
+        self._active_km = active
+        return active
+
+    def get_active_vega(self) -> str:
+        if self._active_vega:
+            return self._active_vega
+        vega_cfg = self.mirrors_data.get("scrapers", {}).get("vegamovies", {})
+        active = vega_cfg.get("active", "https://vegamovies.pages.dev")
+        portal = vega_cfg.get("portal", "https://vegamovies.is")
+        mirrors = vega_cfg.get("mirrors", [active])
+
+        if portal:
+            try:
+                rp = requests.get(portal, headers=HEADERS, timeout=4)
+                if rp.status_code == 200:
+                    meta_match = re.search(r'url=([^\s"\'>]+)', rp.text, re.IGNORECASE)
+                    if meta_match:
+                        target = meta_match.group(1).rstrip('/')
+                        try:
+                            rt = requests.get(target, headers=HEADERS, timeout=4, allow_redirects=True)
+                            if rt.status_code == 200:
+                                self._active_vega = rt.url.rstrip('/')
+                                vega_cfg["active"] = self._active_vega
+                                self._save_mirrors_file()
+                                return self._active_vega
+                        except Exception:
+                            pass
+            except Exception:
+                pass
+
+        candidates = [active] + [m for m in mirrors if m != active]
+        for c in candidates:
+            try:
+                r = requests.get(c, headers=HEADERS, timeout=4, allow_redirects=True)
+                if r.status_code == 200:
+                    resolved = r.url.rstrip('/')
+                    self._active_vega = resolved
+                    return resolved
+            except Exception:
+                continue
+        self._active_vega = active
+        return active
+
+    def get_active_rog(self) -> str:
+        if self._active_rog:
+            return self._active_rog
+        rog_cfg = self.mirrors_data.get("scrapers", {}).get("rogmovies", {})
+        active = rog_cfg.get("active", "https://rogmovies.in")
+        mirrors = rog_cfg.get("mirrors", [active])
+        candidates = [active] + [m for m in mirrors if m != active]
+        for c in candidates:
+            try:
+                r = requests.get(c, headers=HEADERS, timeout=4, allow_redirects=True)
+                if r.status_code == 200:
+                    resolved = r.url.rstrip('/')
+                    self._active_rog = resolved
+                    return resolved
+            except Exception:
+                continue
+        self._active_rog = active
+        return active
+
+_MIRROR_ENGINE = MirrorEngine()
+
+def get_active_km_mirror() -> str:
+    return _MIRROR_ENGINE.get_active_km()
+
 def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
     """Tries to scrape real working cloud download links from KM Movies for the title."""
     try:
@@ -494,7 +627,8 @@ def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
         clean_t = ' '.join(clean_t.split()[:4])
         if not clean_t or not BeautifulSoup:
             return []
-        url = f"https://kmmovies.baby/?s={requests.utils.quote(clean_t)}"
+        base_url = get_active_km_mirror()
+        url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
             return []
