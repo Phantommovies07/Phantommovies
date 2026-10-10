@@ -488,20 +488,18 @@ def save_content(data: Dict, path: str = CONTENT_FILE) -> bool:
         return False
 
 def generate_movie_downloads(title: str, year: int, item_id: str) -> List[Dict]:
-    slug = re.sub(r'[^a-z0-9]+', '-', str(title).lower()).strip('-')
     return [
-        {"quality": "480p SD", "size": "450 MB", "server": "Fast Cloud Mirror", "url": f"https://w3.magiclinks.lol/download/{slug}-{year}-480p/?id={item_id}", "color": "#ffd70f"},
-        {"quality": "720p HD", "size": "1.2 GB", "server": "High Speed Cloud", "url": f"https://w3.magiclinks.lol/download/{slug}-{year}-720p/?id={item_id}", "color": "#06b6d4"},
-        {"quality": "1080p Full HD", "size": "2.6 GB", "server": "VIP Fast Server", "url": f"https://w3.magiclinks.lol/download/{slug}-{year}-1080p/?id={item_id}", "color": "#10b981"},
-        {"quality": "4K Ultra HD", "size": "6.4 GB", "server": "Ultra HD Cloud", "url": f"https://w3.magiclinks.lol/download/{slug}-{year}-4k/?id={item_id}", "color": "#ec4899"}
+        {"quality": "480p SD", "size": "450 MB", "server": "Fast Cloud Mirror", "url": f"download.html?id={item_id}&quality=480p&size=450MB", "color": "#ffd70f"},
+        {"quality": "720p HD", "size": "1.2 GB", "server": "High Speed Cloud", "url": f"download.html?id={item_id}&quality=720p&size=1.2GB", "color": "#06b6d4"},
+        {"quality": "1080p Full HD", "size": "2.6 GB", "server": "VIP Fast Server", "url": f"download.html?id={item_id}&quality=1080p&size=2.6GB", "color": "#10b981"},
+        {"quality": "4K Ultra HD", "size": "6.4 GB", "server": "Ultra HD Cloud", "url": f"download.html?id={item_id}&quality=4k&size=6.4GB", "color": "#ec4899"}
     ]
 
 def generate_series_downloads(title: str, season_num: int, item_id: str) -> List[Dict]:
-    slug = re.sub(r'[^a-z0-9]+', '-', str(title).lower()).strip('-')
     return [
-        {"quality": f"Season {season_num} (480p SD)", "size": "1.8 GB", "server": "Fast Cloud Mirror", "url": f"https://episodes.magiclinks.lol/series/{slug}-s0{season_num}-480p/?id={item_id}", "color": "#ffd70f"},
-        {"quality": f"Season {season_num} (720p HD)", "size": "3.9 GB", "server": "High Speed Cloud", "url": f"https://episodes.magiclinks.lol/series/{slug}-s0{season_num}-720p/?id={item_id}", "color": "#06b6d4"},
-        {"quality": f"Season {season_num} (1080p FHD)", "size": "8.5 GB", "server": "VIP Fast Server", "url": f"https://episodes.magiclinks.lol/series/{slug}-s0{season_num}-1080p/?id={item_id}", "color": "#10b981"}
+        {"quality": f"Season {season_num} (480p SD)", "size": "1.8 GB", "server": "Fast Cloud Mirror", "url": f"download.html?id={item_id}&quality=s0{season_num}-480p&size=1.8GB", "color": "#ffd70f"},
+        {"quality": f"Season {season_num} (720p HD)", "size": "3.9 GB", "server": "High Speed Cloud", "url": f"download.html?id={item_id}&quality=s0{season_num}-720p&size=3.9GB", "color": "#06b6d4"},
+        {"quality": f"Season {season_num} (1080p FHD)", "size": "8.5 GB", "server": "VIP Fast Server", "url": f"download.html?id={item_id}&quality=s0{season_num}-1080p&size=8.5GB", "color": "#10b981"}
     ]
 
 def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dict:

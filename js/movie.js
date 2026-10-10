@@ -240,27 +240,44 @@ function switchStream(index, isFailover = false) {
 
 
 function generateFallbackDownloads(movie) {
-    const slug = String(movie.title || 'movie').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    const year = movie.year || 2024;
-    const id = movie.imdb_id || movie.id || 'phantom';
+    const id = movie.id || movie.imdb_id || 'phantom';
     return [
-        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: `https://w3.magiclinks.lol/download/${slug}-${year}-480p/?id=${id}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: `https://w3.magiclinks.lol/download/${slug}-${year}-720p/?id=${id}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Fast Server', url: `https://w3.magiclinks.lol/download/${slug}-${year}-1080p/?id=${id}`, color: '#10b981' },
-        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Cloud', url: `https://w3.magiclinks.lol/download/${slug}-${year}-4k/?id=${id}`, color: '#ec4899' }
+        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: `download.html?id=${encodeURIComponent(id)}&quality=480p&size=450MB`, color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: `download.html?id=${encodeURIComponent(id)}&quality=720p&size=1.2GB`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Fast Server', url: `download.html?id=${encodeURIComponent(id)}&quality=1080p&size=2.6GB`, color: '#10b981' },
+        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Cloud', url: `download.html?id=${encodeURIComponent(id)}&quality=4k&size=6.4GB`, color: '#ec4899' }
     ];
+}
+
+function sanitizeDownloadUrl(url, movie, quality, size) {
+    if (!url) return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}`;
+    // If it's the broken/fake pattern, route to working download portal
+    if (url.includes('magiclinks.lol/download/')) {
+        return `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size || '')}`;
+    }
+    return url;
 }
 
 function normalizeDownloads(movie) {
     if (!movie) return [];
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
-        const valid = movie.downloads.filter(item => item && item.url && !item.url.includes('/embed/') && !item.url.includes('vidsrc') && !item.url.includes('multiembed'));
+        const valid = movie.downloads
+            .filter(item => item && item.url && !item.url.includes('/embed/') && !item.url.includes('vidsrc') && !item.url.includes('multiembed'))
+            .map(item => ({
+                ...item,
+                url: sanitizeDownloadUrl(item.url, movie, item.quality || 'HD', item.size || '')
+            }));
         if (valid.length) return valid;
     }
     if (Array.isArray(movie.seasons) && movie.seasons.length) {
         for (const s of movie.seasons) {
             if (Array.isArray(s.downloads) && s.downloads.length) {
-                const valid = s.downloads.filter(item => item && item.url);
+                const valid = s.downloads
+                    .filter(item => item && item.url)
+                    .map(item => ({
+                        ...item,
+                        url: sanitizeDownloadUrl(item.url, movie, item.quality || 'HD', item.size || '')
+                    }));
                 if (valid.length) return valid;
             }
         }

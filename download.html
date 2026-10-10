@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Download Movie - Phantom Movies</title>
+<meta name="description" content="High speed cloud download for movies and series in full HD.">
+
+<!-- Resource Hints & Preconnect -->
+<link rel="preconnect" href="https://m.media-amazon.com" crossorigin>
+<link rel="dns-prefetch" href="https://m.media-amazon.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/ads-loader.js"></script>
+
+<style>
+.download-page-wrap {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.download-box {
+    background: rgba(18, 22, 32, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    max-width: 680px;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #5bc4f5, #2dce89, #ffd70f);
+}
+
+.download-poster-thumb {
+    width: 120px;
+    height: 170px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.dl-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.dl-meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.dl-badge {
+    background: rgba(91, 196, 245, 0.15);
+    color: #5bc4f5;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(91, 196, 245, 0.3);
+}
+
+.timer-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.timer-num {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffd70f;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.timer-label {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.progress-bar-wrap {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #5bc4f5, #2dce89);
+    transition: width 1s linear;
+}
+
+.links-container {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.dl-server-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.dl-server-primary {
+    background: linear-gradient(135deg, #2dce89, #10b981);
+    color: #000;
+    box-shadow: 0 8px 20px rgba(45, 206, 137, 0.3);
+}
+.dl-server-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(45, 206, 137, 0.45);
+}
+
+.dl-server-secondary {
+    background: rgba(91, 196, 245, 0.12);
+    color: #5bc4f5;
+    border-color: rgba(91, 196, 245, 0.3);
+}
+.dl-server-secondary:hover {
+    background: rgba(91, 196, 245, 0.22);
+    transform: translateY(-2px);
+}
+
+.dl-server-telegram {
+    background: rgba(0, 136, 204, 0.15);
+    color: #0088cc;
+    border-color: rgba(0, 136, 204, 0.35);
+}
+.dl-server-telegram:hover {
+    background: rgba(0, 136, 204, 0.25);
+    transform: translateY(-2px);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.back-link:hover {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body class="movie-detail-page">
+
+<nav id="mainNav">
+ <a class="logo" href="index.html">
+   <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
+ </a>
+ <ul class="nav-links">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="index.html#movies">Browse</a></li>
+   <li><a href="index.html#trendingSection">Trending</a></li>
+ </ul>
+ <div class="nav-right">
+   <a class="btn-secondary-main" href="index.html" style="font-size:12px;padding:6px 14px;">← Back</a>
+ </div>
+</nav>
+
+<div class="download-page-wrap">
+    <div class="download-box" id="downloadBox">
+        <img class="download-poster-thumb" id="dlPoster" src="" alt="Poster" style="display:none;">
+        <h1 class="dl-title" id="dlTitle">Generating Link...</h1>
+        <div class="dl-meta" id="dlMeta">
+            <span class="dl-badge" id="dlQualityBadge">HD</span>
+            <span id="dlSizeBadge">⚡ Fast Cloud</span>
+        </div>
+
+        <!-- Ad Slot: Download Top -->
+        <div id="ad-download-top" class="ad-slot" style="margin-bottom:20px;"></div>
+
+        <div class="timer-box" id="timerBox">
+            <div class="timer-num" id="countdownNum">3</div>
+            <div class="timer-label">Please wait while your high-speed cloud link is being generated...</div>
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="links-container" id="linksContainer">
+            <a class="dl-server-btn dl-server-primary" id="btnServer1" href="#" target="_blank" rel="noopener noreferrer">
+                <span>🚀 Fast Cloud Server 1 (Instant Download)</span>
+                <em>Download</em>
+            </a>
+            <a class="dl-server-btn dl-server-secondary" id="btnServer2" href="#" target="_blank" rel="noopener noreferrer">
+                <span>⚡ High Speed Mirror (Server 2)</span>
+                <em>Direct</em>
+            </a>
+            <a class="dl-server-btn dl-server-telegram" id="btnTelegram" href="#" target="_blank" rel="noopener noreferrer">
+                <span>📩 Download via Telegram Bot</span>
+                <em>Fast</em>
+            </a>
+        </div>
+
+        <!-- Ad Slot: Download Bottom -->
+        <div id="ad-download-bottom" class="ad-slot" style="margin-top:20px;"></div>
+
+        <a class="back-link" id="backToMovie" href="index.html">← Return to Movie Details</a>
+    </div>
+</div>
+
+<script>
+let currentMovie = null;
+
+function getParams() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+        id: p.get('id'),
+        quality: p.get('quality') || '720p',
+        size: p.get('size') || '',
+        url: p.get('url') || ''
+    };
+}
+
+async function getContentData() {
+    if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
+    try {
+        const cached = sessionStorage.getItem('phantom_content_cache');
+        if (cached) return JSON.parse(cached);
+    } catch (_) {}
+    const res = await fetch('data/content.json');
+    return await res.json();
+}
+
+async function initDownloadPage() {
+    const params = getParams();
+    if (!params.id && !params.url) {
+        document.getElementById('dlTitle').textContent = 'Invalid Download Link';
+        return;
+    }
+
+    try {
+        const data = await getContentData();
+        const movies = data.movies || [];
+        currentMovie = movies.find(m => String(m.id) === String(params.id));
+        const settings = data.settings || {};
+
+        if (currentMovie) {
+            document.title = `Download ${currentMovie.title} (${params.quality.toUpperCase()}) - Phantom Movies`;
+            document.getElementById('dlTitle').textContent = currentMovie.title;
+            const poster = currentMovie.poster || currentMovie.banner;
+            if (poster) {
+                const posterEl = document.getElementById('dlPoster');
+                posterEl.src = poster;
+                posterEl.style.display = 'block';
+            }
+            document.getElementById('dlQualityBadge').textContent = params.quality.toUpperCase();
+            document.getElementById('dlSizeBadge').textContent = params.size || 'Direct High Speed';
+            document.getElementById('backToMovie').href = (currentMovie.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie.id);
+        }
+
+        // Ads injection
+        const ads = settings.ads;
+        if (ads && ads.enabled !== false) {
+            const topSlot = document.getElementById('ad-download-top');
+            if (topSlot && ads.movieDownloads) topSlot.innerHTML = ads.movieDownloads;
+            const btmSlot = document.getElementById('ad-download-bottom');
+            if (btmSlot && ads.movieBottom) btmSlot.innerHTML = ads.movieBottom;
+        }
+
+        // Determine destination URLs
+        let targetDownloadUrl = params.url;
+        if (!targetDownloadUrl && currentMovie) {
+            // Check if movie has real downloads matching quality
+            const dls = currentMovie.downloads || [];
+            const match = dls.find(d => d.quality && d.quality.toLowerCase().includes(params.quality.toLowerCase()));
+            if (match && match.url && !match.url.includes('download.html') && !match.url.includes('magiclinks.lol/download/')) {
+                targetDownloadUrl = match.url;
+            } else if (dls.length && dls[0].url && !dls[0].url.includes('download.html') && !dls[0].url.includes('magiclinks.lol/download/')) {
+                targetDownloadUrl = dls[0].url;
+            } else {
+                targetDownloadUrl = currentMovie.streamLink || `https://multiembed.mov/?video_id=${currentMovie.imdb_id || ''}`;
+            }
+        }
+
+        const telegramLink = settings.telegramLink || 'https://t.me/Phantommovies';
+
+        // Setup Buttons
+        const btn1 = document.getElementById('btnServer1');
+        const btn2 = document.getElementById('btnServer2');
+        const btnTg = document.getElementById('btnTelegram');
+
+        btn1.href = targetDownloadUrl;
+        btn2.href = targetDownloadUrl;
+        btnTg.href = telegramLink;
+
+        [btn1, btn2].forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (ads && ads.clickAd && ads.clickAd.enabled && ads.clickAd.url) {
+                    window.open(ads.clickAd.url, '_blank', 'noopener,noreferrer');
+                }
+            });
+        });
+
+        // 3-second Countdown Timer
+        let seconds = 3;
+        const countEl = document.getElementById('countdownNum');
+        const fillEl = document.getElementById('progressFill');
+        fillEl.style.width = '33%';
+
+        const timer = setInterval(() => {
+            seconds--;
+            if (countEl) countEl.textContent = seconds;
+            if (fillEl) fillEl.style.width = ((4 - seconds) * 33) + '%';
+
+            if (seconds <= 0) {
+                clearInterval(timer);
+                document.getElementById('timerBox').style.display = 'none';
+                document.getElementById('linksContainer').style.display = 'flex';
+            }
+        }, 1000);
+
+    } catch (err) {
+        console.error(err);
+        document.getElementById('dlTitle').textContent = 'Error loading download details';
+    }
+}
+
+initDownloadPage();
+</script>
+</body>
+</html>

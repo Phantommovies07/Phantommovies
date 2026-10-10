@@ -99,27 +99,49 @@ function normalizeStreams(episode) {
 
 
 function generateFallbackSeriesDownloads(series, seasonNum = 1) {
-    const slug = String(series?.title || 'series').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    const id = series?.imdb_id || series?.id || 'phantom';
+    const id = series?.id || series?.imdb_id || 'phantom';
     return [
-        { quality: `Season ${seasonNum} (480p SD)`, size: '1.8 GB', server: 'Fast Cloud Mirror', url: `https://episodes.magiclinks.lol/series/${slug}-s0${seasonNum}-480p/?id=${id}`, color: '#ffd70f' },
-        { quality: `Season ${seasonNum} (720p HD)`, size: '3.9 GB', server: 'High Speed Cloud', url: `https://episodes.magiclinks.lol/series/${slug}-s0${seasonNum}-720p/?id=${id}`, color: '#06b6d4' },
-        { quality: `Season ${seasonNum} (1080p FHD)`, size: '8.5 GB', server: 'VIP Fast Server', url: `https://episodes.magiclinks.lol/series/${slug}-s0${seasonNum}-1080p/?id=${id}`, color: '#10b981' }
+        { quality: `Season ${seasonNum} (480p SD)`, size: '1.8 GB', server: 'Fast Cloud Mirror', url: `download.html?id=${encodeURIComponent(id)}&quality=s0${seasonNum}-480p&size=1.8GB`, color: '#ffd70f' },
+        { quality: `Season ${seasonNum} (720p HD)`, size: '3.9 GB', server: 'High Speed Cloud', url: `download.html?id=${encodeURIComponent(id)}&quality=s0${seasonNum}-720p&size=3.9GB`, color: '#06b6d4' },
+        { quality: `Season ${seasonNum} (1080p FHD)`, size: '8.5 GB', server: 'VIP Fast Server', url: `download.html?id=${encodeURIComponent(id)}&quality=s0${seasonNum}-1080p&size=8.5GB`, color: '#10b981' }
     ];
+}
+
+function sanitizeSeriesDownloadUrl(url, series, quality, size) {
+    if (!url) return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}`;
+    if (url.includes('magiclinks.lol/series/') && url.includes('?id=')) {
+        return `download.html?id=${encodeURIComponent(series?.id || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size || '')}`;
+    }
+    return url;
 }
 
 function normalizeDownloads(episode) {
     const season = getSeasons()[currentSeasonIndex];
     if (episode && Array.isArray(episode.downloads) && episode.downloads.length) {
-        const valid = episode.downloads.filter(d => d && d.url);
+        const valid = episode.downloads
+            .filter(d => d && d.url)
+            .map(d => ({
+                ...d,
+                url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'HD', d.size || '')
+            }));
         if (valid.length) return valid;
     }
     if (season && Array.isArray(season.downloads) && season.downloads.length) {
-        const valid = season.downloads.filter(d => d && d.url);
+        const valid = season.downloads
+            .filter(d => d && d.url)
+            .map(d => ({
+                ...d,
+                url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'Season Pack', d.size || '')
+            }));
         if (valid.length) return valid;
     }
     if (currentSeries && Array.isArray(currentSeries.downloads) && currentSeries.downloads.length) {
-        const valid = currentSeries.downloads.filter(d => d && d.url);
+        const valid = currentSeries.downloads
+            .filter(d => d && d.url)
+            .map(d => ({
+                ...d,
+                url: sanitizeSeriesDownloadUrl(d.url, currentSeries, d.quality || 'HD', d.size || '')
+            }));
         if (valid.length) return valid;
     }
     return generateFallbackSeriesDownloads(currentSeries || {}, season?.seasonNumber || (currentSeasonIndex + 1));
