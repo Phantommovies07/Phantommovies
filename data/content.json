@@ -1,6 +1,859 @@
 {
   "movies": [
     {
+      "id": "1791603545925",
+      "type": "movie",
+      "title": "Ghost",
+      "genre": "Feature",
+      "year": 1990,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjkwOWM2MWMtMWE1YS00MTBlLTg1ODctYTI3M2I0NGIxMGYyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjkwOWM2MWMtMWE1YS00MTBlLTg1ODctYTI3M2I0NGIxMGYyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0099653&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0099653&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0099653"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0099653"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0099653"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0099653"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ghost+1990+trailer",
+      "description": "Ghost (1990) starring Patrick Swayze, Demi Moore.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11196,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0099653",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:39:00.394829+00:00",
+      "updatedAt": "2026-10-10T03:39:00.394829+00:00"
+    },
+    {
+      "id": "1791603542791",
+      "type": "movie",
+      "title": "Sukhee",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTdmODZjNDUtYmM2MS00OGQ5LTllZDAtNTlmMWU5ZjRlZGFiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTdmODZjNDUtYmM2MS00OGQ5LTllZDAtNTlmMWU5ZjRlZGFiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt18266472&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt18266472&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt18266472"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt18266472"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt18266472"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt18266472"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sukhee+2023+trailer",
+      "description": "Sukhee (2023) starring Chaudhary Dhruv, Shilpa Shetty Kundra.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16221,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt18266472",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:39:00.253409+00:00",
+      "updatedAt": "2026-10-10T03:39:00.253409+00:00"
+    },
+    {
+      "id": "1791603547599",
+      "type": "series",
+      "title": "My Demon",
+      "genre": "Tv Series",
+      "year": 2023,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2MwMDllYTItZWNkYS00MjgyLTg1NGMtYzk0ZWZkNTZkMGQ5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2MwMDllYTItZWNkYS00MjgyLTg1NGMtYzk0ZWZkNTZkMGQ5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt29569035&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt29569035/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt29569035/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt29569035/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt29569035?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=My+Demon+2023+trailer",
+      "description": "My Demon (2023) starring Kim Yoo-jung, Song Kang.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 25085,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt29569035",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:59.748319+00:00",
+      "updatedAt": "2026-10-10T03:38:59.748319+00:00"
+    },
+    {
+      "id": "1791603544614",
+      "type": "movie",
+      "title": "Ayan",
+      "genre": "Feature",
+      "year": 2009,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODk2NTJlZmQtN2QyZC00OTBjLWEzY2YtYjM0NGQ3Y2M4Y2UzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODk2NTJlZmQtN2QyZC00OTBjLWEzY2YtYjM0NGQ3Y2M4Y2UzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1355546&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1355546&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1355546"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1355546"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1355546"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1355546"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ayan+2009+trailer",
+      "description": "Ayan (2009) starring Suriya, Tamannaah Bhatia.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5112,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1355546",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:59.609587+00:00",
+      "updatedAt": "2026-10-10T03:38:59.609587+00:00"
+    },
+    {
+      "id": "1791603547222",
+      "type": "movie",
+      "title": "Omkara",
+      "genre": "Feature",
+      "year": 2006,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTMxNTk3NzktODgzZC00MjhiLWEwZGEtYzFlN2M1ZjUwNDFjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTMxNTk3NzktODgzZC00MjhiLWEwZGEtYzFlN2M1ZjUwNDFjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0488414&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0488414&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0488414"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0488414"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0488414"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0488414"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Omkara+2006+trailer",
+      "description": "Omkara (2006) starring Ajay Devgn, Kareena Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11903,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0488414",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:59.192066+00:00",
+      "updatedAt": "2026-10-10T03:38:59.192066+00:00"
+    },
+    {
+      "id": "1791603546351",
+      "type": "movie",
+      "title": "Irugapatru",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDQ4NjAzMzAtNjRkNC00NGIwLWI0MGEtNjQ1NDA3YWM3NGRjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDQ4NjAzMzAtNjRkNC00NGIwLWI0MGEtNjQ1NDA3YWM3NGRjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt16103606&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt16103606&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt16103606"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt16103606"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt16103606"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt16103606"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Irugapatru+2023+trailer",
+      "description": "Irugapatru (2023) starring Saniya Iyappan, Shraddha Srinath.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6318,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt16103606",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:58.742215+00:00",
+      "updatedAt": "2026-10-10T03:38:58.742215+00:00"
+    },
+    {
+      "id": "1791603541290",
+      "type": "movie",
+      "title": "The Great Indian Family",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjY5Mzg4MTMtNjFkOS00NTA3LTk3NTQtNzdmNzlkOTJjZDZkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjY5Mzg4MTMtNjFkOS00NTA3LTk3NTQtNzdmNzlkOTJjZDZkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt18561736&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt18561736&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt18561736"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt18561736"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt18561736"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt18561736"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Great+Indian+Family+2023+trailer",
+      "description": "The Great Indian Family (2023) starring Vicky Kaushal, Manushi Chhillar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16939,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt18561736",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:58.254989+00:00",
+      "updatedAt": "2026-10-10T03:38:58.254989+00:00"
+    },
+    {
+      "id": "1791603539824",
+      "type": "series",
+      "title": "Human Vapor",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYWE3YWE2NTMtZTRhZS00Nzg3LWI2NWMtMjAwMWJhZDk2MWU5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYWE3YWE2NTMtZTRhZS00Nzg3LWI2NWMtMjAwMWJhZDk2MWU5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt33083249&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt33083249/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt33083249/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt33083249/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt33083249?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Human+Vapor+2026+trailer",
+      "description": "Human Vapor (2026) starring Shun Oguri, Uta Uchida.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11204,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt33083249",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:57.383324+00:00",
+      "updatedAt": "2026-10-10T03:38:57.383324+00:00"
+    },
+    {
+      "id": "1791603539553",
+      "type": "movie",
+      "title": "Billa",
+      "genre": "Feature",
+      "year": 2009,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTY5MTIwMDg0N15BMl5BanBnXkFtZTgwNjA3OTcwMzE@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTY5MTIwMDg0N15BMl5BanBnXkFtZTgwNjA3OTcwMzE@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1525323&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1525323&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1525323"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1525323"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1525323"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1525323"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Billa+2009+trailer",
+      "description": "Billa (2009) starring Prabhas, Anushka Shetty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22899,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1525323",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:57.069924+00:00",
+      "updatedAt": "2026-10-10T03:38:57.069924+00:00"
+    },
+    {
+      "id": "1791603543620",
+      "type": "movie",
+      "title": "Sarkar",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzNjMmMxMDYtZDM3YS00Zjg3LWIwZGEtMGU3Njg2MDc0NDdlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzNjMmMxMDYtZDM3YS00Zjg3LWIwZGEtMGU3Njg2MDc0NDdlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt0432047&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt0432047&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt0432047"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt0432047"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt0432047"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0432047"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sarkar+2005+trailer",
+      "description": "Sarkar (2005) starring Amitabh Bachchan, Abhishek Bachchan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11347,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0432047",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:56.655098+00:00",
+      "updatedAt": "2026-10-10T03:38:56.655098+00:00"
+    },
+    {
+      "id": "1791603540708",
+      "type": "movie",
+      "title": "Chithha",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTc5NTIzYmItYWY0MS00M2E2LThiODEtZjA3ZGYwY2QyMjU3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTc5NTIzYmItYWY0MS00M2E2LThiODEtZjA3ZGYwY2QyMjU3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt27540185&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt27540185&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt27540185"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt27540185"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt27540185"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27540185"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Chithha+2023+trailer",
+      "description": "Chithha (2023) starring Siddharth, Sahasra Sree.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17324,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27540185",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:56.092271+00:00",
+      "updatedAt": "2026-10-10T03:38:56.092271+00:00"
+    },
+    {
+      "id": "1791603542570",
+      "type": "movie",
+      "title": "Jaane Jaan",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTBmZTkzYTUtZDBmYS00MDNiLWI0NGItODAzODY3ZjhmNjM5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTBmZTkzYTUtZDBmYS00MDNiLWI0NGItODAzODY3ZjhmNjM5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt15748830&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt15748830&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt15748830"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt15748830"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt15748830"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt15748830"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jaane+Jaan+2023+trailer",
+      "description": "Jaane Jaan (2023) starring Jaideep Ahlawat, Naisha Khanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15454,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15748830",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:55.954969+00:00",
+      "updatedAt": "2026-10-10T03:38:55.954969+00:00"
+    },
+    {
+      "id": "1791603542408",
+      "type": "series",
+      "title": "Ray Donovan",
+      "genre": "Tv Series",
+      "year": 2013,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTg0MWQ5Y2ItOGViNS00MWNhLTk1Y2ItN2Q1MjY1MDhiYTM0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTg0MWQ5Y2ItOGViNS00MWNhLTk1Y2ItN2Q1MjY1MDhiYTM0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt2249007&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt2249007/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt2249007/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt2249007/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt2249007?s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ray+Donovan+2013+trailer",
+      "description": "Ray Donovan (2013) starring Liev Schreiber, Eddie Marsan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27677,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt2249007",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:55.496512+00:00",
+      "updatedAt": "2026-10-10T03:38:55.496512+00:00"
+    },
+    {
+      "id": "1791603544037",
+      "type": "movie",
+      "title": "Pokkiri",
+      "genre": "Feature",
+      "year": 2007,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTliNDg2MWQtZDEzYS00ZmU3LWFkYzktMGMzYWI2ZmYwNjJlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTliNDg2MWQtZDEzYS00ZmU3LWFkYzktMGMzYWI2ZmYwNjJlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://multiembed.mov/?video_id=tt1451409&tmdb_id=",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://multiembed.mov/?video_id=tt1451409&tmdb_id="
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://player.autoembed.cc/embed/movie/tt1451409"
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://embed.su/embed/movie/tt1451409"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.cc/v2/embed/movie/tt1451409"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1451409"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Pokkiri+2007+trailer",
+      "description": "Pokkiri (2007) starring Joseph Vijay, Asin.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9419,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1451409",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:55.361960+00:00",
+      "updatedAt": "2026-10-10T03:38:55.361960+00:00"
+    },
+    {
+      "id": "1791603528682",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9501,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-10T03:38:41.077965+00:00",
+      "updatedAt": "2026-10-10T03:38:41.077965+00:00"
+    },
+    {
       "id": "1791589492970",
       "type": "movie",
       "title": "Bunty Aur Babli",
@@ -20353,8 +21206,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 327,
-    "lastUpdated": "2026-10-09T23:44:50.704971+00:00",
+    "totalMovies": 342,
+    "lastUpdated": "2026-10-10T03:39:00.445043+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
