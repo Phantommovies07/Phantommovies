@@ -2,6 +2,14 @@
 // PHANTOM MOVIES - MOVIE DETAIL PAGE
 // ═══════════════════════════════════════════════════
 
+// Anti-Hijack Guard: Prevents third-party stream iframes from redirecting the main website
+window.addEventListener('beforeunload', (e) => {
+    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        e.preventDefault();
+        return (e.returnValue = '');
+    }
+});
+
 function getMovieIdFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');

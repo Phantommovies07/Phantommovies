@@ -2,6 +2,14 @@
 // PHANTOM MOVIES - SERIES DETAIL PAGE
 // ═══════════════════════════════════════════════════
 
+// Anti-Hijack Guard: Prevents third-party stream iframes from redirecting the main website
+window.addEventListener('beforeunload', (e) => {
+    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        e.preventDefault();
+        return (e.returnValue = '');
+    }
+});
+
 let currentSeries = null;
 let currentSeasonIndex = 0;
 let currentEpisodeIndex = 0;
