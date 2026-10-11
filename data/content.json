@@ -1,6 +1,1173 @@
 {
   "movies": [
     {
+      "id": "1791738523295",
+      "type": "movie",
+      "title": "Hit: The First Case",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2Q2Nzk0OGYtNzE1Yy00NTA2LTg4ZWUtM2QyZWZlOGYwYTdiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2Q2Nzk0OGYtNzE1Yy00NTA2LTg4ZWUtM2QyZWZlOGYwYTdiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt13130760",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt13130760"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt13130760&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt13130760"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt13130760"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt13130760"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt13130760"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hit:+The+First+Case+2022+trailer",
+      "description": "Hit: The First Case (2022) starring Rajkummar Rao, Sanya Malhotra.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14038,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt13130760",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:34.303579+00:00",
+      "updatedAt": "2026-10-11T17:08:34.303579+00:00"
+    },
+    {
+      "id": "1791738520380",
+      "type": "movie",
+      "title": "Pad Man",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGE4MTIwODQtMWQzNC00NGU4LTgwMjUtNGZjZDgxZGFlMDU3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGE4MTIwODQtMWQzNC00NGU4LTgwMjUtNGZjZDgxZGFlMDU3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt7218518",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt7218518"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt7218518&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt7218518"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt7218518"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7218518"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt7218518"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/577810034002378-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/39475818-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/762795967-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Pad+Man+2018+trailer",
+      "description": "Pad Man (2018) starring Akshay Kumar, Radhika Apte.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9335,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7218518",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:32.158682+00:00",
+      "updatedAt": "2026-10-11T17:08:32.158682+00:00"
+    },
+    {
+      "id": "1791738519895",
+      "type": "movie",
+      "title": "Michael",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzllNmRlN2EtMDQyOC00ODJjLTg4OWQtZDNmNGU3YzlkNjc1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzllNmRlN2EtMDQyOC00ODJjLTg4OWQtZDNmNGU3YzlkNjc1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt11378946",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt11378946"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt11378946&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt11378946"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt11378946"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11378946"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt11378946"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "530.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9277894-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "895.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/697148912556-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2391531148221-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "11.89 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/83299872-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Michael+2026+trailer",
+      "description": "Michael (2026) starring Jaafar Jackson, Nia Long.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6755,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11378946",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:30.361018+00:00",
+      "updatedAt": "2026-10-11T17:08:30.361018+00:00"
+    },
+    {
+      "id": "1791738515930",
+      "type": "movie",
+      "title": "Sky Force",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTViYzEwYjMtMDJlNy00ZTdiLWE3YWMtN2Q3MWFiYTFjZGZmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTViYzEwYjMtMDJlNy00ZTdiLWE3YWMtN2Q3MWFiYTFjZGZmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt27056066",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt27056066"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt27056066&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt27056066"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt27056066"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27056066"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt27056066"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "393.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/410316255178-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "735.9MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/0420408-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1126470922-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "13GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/25170318-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sky+Force+2025+trailer",
+      "description": "Sky Force (2025) starring Akshay Kumar, Veer Pahariya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16783,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27056066",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:29.044384+00:00",
+      "updatedAt": "2026-10-11T17:08:29.044384+00:00"
+    },
+    {
+      "id": "1791738508050",
+      "type": "series",
+      "title": "Bhaag Beanie Bhaag",
+      "genre": "Tv Series",
+      "year": 2020,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODBhMGQ0M2UtZDU0Ni00YzhlLThhMzYtZjA0NDQ5NTYzNmNlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODBhMGQ0M2UtZDU0Ni00YzhlLThhMzYtZjA0NDQ5NTYzNmNlXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt12775836&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt12775836/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt12775836&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt12775836?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt12775836/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bhaag+Beanie+Bhaag+2020+trailer",
+      "description": "Bhaag Beanie Bhaag (2020) starring Swara Bhasker, Ravi Patel.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 28101,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12775836",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:27.599003+00:00",
+      "updatedAt": "2026-10-11T17:08:27.599003+00:00"
+    },
+    {
+      "id": "1791738514061",
+      "type": "movie",
+      "title": "Mathu Vadalara",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWI1YzYyNzktM2UyZS00YzZlLTlmOTYtNTljOGM4NjI4MjBjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOWI1YzYyNzktM2UyZS00YzZlLTlmOTYtNTljOGM4NjI4MjBjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt11469744",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt11469744"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt11469744&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt11469744"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt11469744"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11469744"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt11469744"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "473.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2648776534872-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "775.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/03927189902-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.7GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5604849664-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "5.0GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/863129395-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mathu+Vadalara+2019+trailer",
+      "description": "Mathu Vadalara (2019) starring Sri Simha Koduri, Satya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22222,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11469744",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:25.935911+00:00",
+      "updatedAt": "2026-10-11T17:08:25.935911+00:00"
+    },
+    {
+      "id": "1791738507398",
+      "type": "movie",
+      "title": "Sanju",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjI3NTM1NzMyNF5BMl5BanBnXkFtZTgwOTE4NTgzNTM@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjI3NTM1NzMyNF5BMl5BanBnXkFtZTgwOTE4NTgzNTM@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt6452574",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt6452574"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt6452574&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt6452574"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt6452574"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt6452574"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt6452574"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "429.9MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/16172836574404-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "767.7MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/3472505-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/903552477-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sanju+2018+trailer",
+      "description": "Sanju (2018) starring Ranbir Kapoor, Paresh Rawal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13814,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6452574",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:24.233032+00:00",
+      "updatedAt": "2026-10-11T17:08:24.233032+00:00"
+    },
+    {
+      "id": "1791738506069",
+      "type": "movie",
+      "title": "Love Today",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzEyNzQ0MDEtMzVhZS00ZjE4LWIwZDQtNTNhNTY2NDAwNmE3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzEyNzQ0MDEtMzVhZS00ZjE4LWIwZDQtNTNhNTY2NDAwNmE3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt22488728",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt22488728"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt22488728&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt22488728"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt22488728"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt22488728"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt22488728"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "3.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/24727012-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "8.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/55322492799969-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "17GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/119232409320-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Love+Today+2022+trailer",
+      "description": "Love Today (2022) starring Pradeep Ranganathan, Yogi Babu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16530,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt22488728",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:22.530913+00:00",
+      "updatedAt": "2026-10-11T17:08:22.530913+00:00"
+    },
+    {
+      "id": "1791738504280",
+      "type": "movie",
+      "title": "The Raid 2",
+      "genre": "Feature",
+      "year": 2014,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDMyNTMzZmYtNDIxYi00YTNkLWE2ZTMtM2M4ZGQwYTFjZTEyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDMyNTMzZmYtNDIxYi00YTNkLWE2ZTMtM2M4ZGQwYTFjZTEyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt2265171",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt2265171"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt2265171&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt2265171"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt2265171"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt2265171"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt2265171"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "558.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/399016914118066-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "930.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/622109228-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/487778168-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Raid+2+2014+trailer",
+      "description": "The Raid 2 (2014) starring Iko Uwais, Yayan Ruhian.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20660,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt2265171",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:20.900132+00:00",
+      "updatedAt": "2026-10-11T17:08:20.900132+00:00"
+    },
+    {
+      "id": "1791738501024",
+      "type": "series",
+      "title": "Masaba Masaba",
+      "genre": "Tv Series",
+      "year": 2020,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjk0NmYxM2ItZjQ5YS00Mzc3LTllMzAtYjk4NzllODNjNDM4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjk0NmYxM2ItZjQ5YS00Mzc3LTllMzAtYjk4NzllODNjNDM4XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt10655506&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt10655506/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt10655506&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt10655506?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt10655506/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Masaba+Masaba+2020+trailer",
+      "description": "Masaba Masaba (2020) starring Masaba Gupta, Neena Gupta.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11079,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt10655506",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:19.675527+00:00",
+      "updatedAt": "2026-10-11T17:08:19.675527+00:00"
+    },
+    {
+      "id": "1791738500149",
+      "type": "movie",
+      "title": "Brochevarevarura",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDAxNWNmNGEtYTJhYi00NTdjLWExZDgtZWYyM2FhODdmMzBmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDAxNWNmNGEtYTJhYi00NTdjLWExZDgtZWYyM2FhODdmMzBmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt9742334",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt9742334"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt9742334&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt9742334"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt9742334"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt9742334"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt9742334"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "574.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/79292924487671-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "979.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2623378992-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/41473856514374-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Brochevarevarura+2019+trailer",
+      "description": "Brochevarevarura (2019) starring Sree Vishnu, Rahul Ramakrishna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17495,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9742334",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:17.757370+00:00",
+      "updatedAt": "2026-10-11T17:08:17.757370+00:00"
+    },
+    {
+      "id": "1791738503146",
+      "type": "movie",
+      "title": "Raazi",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2QyMTUyNDktN2JlYi00MmYxLWIyNTItNjYxZWI4OTU4NWNmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2QyMTUyNDktN2JlYi00MmYxLWIyNTItNjYxZWI4OTU4NWNmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt7098658",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt7098658"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt7098658&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt7098658"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt7098658"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7098658"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt7098658"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "509.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8389709174590-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "858.5MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/10209362-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.6GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2098091502-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Raazi+2018+trailer",
+      "description": "Raazi (2018) starring Alia Bhatt, Vicky Kaushal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22811,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7098658",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:16.150076+00:00",
+      "updatedAt": "2026-10-11T17:08:16.150076+00:00"
+    },
+    {
+      "id": "1791738498645",
+      "type": "movie",
+      "title": "Gatta Kusthi 2",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGFhZDkxYjYtZGViYy00MTgyLTliNWQtOWFlZmNmZmI4MWZkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGFhZDkxYjYtZGViYy00MTgyLTliNWQtOWFlZmNmZmI4MWZkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt37458495",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt37458495"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt37458495&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt37458495"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt37458495"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt37458495"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt37458495"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "471.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1784927423297-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "631.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/94769097-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9083572811-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "13.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8064184438-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Gatta+Kusthi+2+2026+trailer",
+      "description": "Gatta Kusthi 2 (2026) starring Vishnu Vishal, Aishwarya Lekshmi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17106,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37458495",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:14.702426+00:00",
+      "updatedAt": "2026-10-11T17:08:14.702426+00:00"
+    },
+    {
+      "id": "1791738500196",
+      "type": "series",
+      "title": "Leila",
+      "genre": "Tv Series",
+      "year": 2019,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDNlZTM0ZDYtYTk1NS00ZjQzLWI2N2UtYzU5NDc3MDFkZDBmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDNlZTM0ZDYtYTk1NS00ZjQzLWI2N2UtYzU5NDc3MDFkZDBmXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt9337588&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt9337588/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt9337588&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt9337588?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt9337588/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Leila+2019+trailer",
+      "description": "Leila (2019) starring Huma Qureshi, Rahul Khanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9756,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9337588",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:08:11.097674+00:00",
+      "updatedAt": "2026-10-11T17:08:11.097674+00:00"
+    },
+    {
+      "id": "1791738474851",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/042325407443-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/37595231-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5021521-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt36235895/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 28135,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T17:07:45.309364+00:00",
+      "updatedAt": "2026-10-11T17:07:45.309364+00:00"
+    },
+    {
       "id": "1791714552888",
       "type": "movie",
       "title": "Jumanji: Welcome to the Jungle",
@@ -40294,8 +41461,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 497,
-    "lastUpdated": "2026-10-11T10:29:07.306046+00:00",
+    "totalMovies": 512,
+    "lastUpdated": "2026-10-11T17:08:35.602774+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
