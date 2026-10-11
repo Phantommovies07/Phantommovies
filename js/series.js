@@ -132,6 +132,7 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
+    if (clean.includes('kmmovies.') || clean.includes('rogmovies.') || clean.includes('vegamovies.')) return false;
     if (clean.includes('magiclinks.lol/download/')) return false;
     if (clean.includes('magiclinks.lol/series/') && clean.includes('?id=')) return false;
     if (isStreamingUrl(clean)) return false;
@@ -139,12 +140,7 @@ function isValidDownloadUrl(url) {
 }
 
 function generateEpisodeFallbackDownloads(series, seasonNum = 1, epNum = 1) {
-    const id = series?.id || series?.imdb_id || 'phantom';
-    return [
-        { quality: `Episode ${epNum} (480p SD)`, size: '180 MB', server: 'Fast Cloud Mirror', url: '', color: '#ffd70f' },
-        { quality: `Episode ${epNum} (720p HD)`, size: '450 MB', server: 'High Speed Cloud', url: '', color: '#06b6d4' },
-        { quality: `Episode ${epNum} (1080p FHD)`, size: '950 MB', server: 'VIP Fast Server', url: '', color: '#10b981' }
-    ];
+    return [];
 }
 
 function normalizeDownloads(episode) {
@@ -164,9 +160,7 @@ function normalizeDownloads(episode) {
             .filter(d => d && d.url && isValidDownloadUrl(d.url));
         if (valid.length) return valid;
     }
-    const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
-    const sNum = season?.seasonNumber || (currentSeasonIndex + 1);
-    return generateEpisodeFallbackDownloads(currentSeries, sNum, epNum);
+    return [];
 }
 
 function renderSeries(series) {
@@ -447,7 +441,7 @@ function renderEpisodeDownloads() {
     if (!grid) return;
 
     if (!downloads.length) {
-        grid.innerHTML = '<div class="download-empty">No download options added for this episode.</div>';
+        grid.innerHTML = '<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct cloud download links are currently refreshing for this episode.<br><span style="color: #2dce89; font-weight:600;">Please use the HD streaming servers above to watch online instantly without waiting.</span></div>';
         return;
     }
 

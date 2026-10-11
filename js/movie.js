@@ -257,6 +257,7 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
+    if (clean.includes('kmmovies.') || clean.includes('rogmovies.') || clean.includes('vegamovies.')) return false;
     if (clean.includes('magiclinks.lol/download/')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
@@ -291,14 +292,14 @@ function normalizeDownloads(movie) {
             }
         }
     }
-    return generateFallbackDownloads(movie);
+    return [];
 }
 
 function renderDownloads(movie) {
     const downloads = normalizeDownloads(movie);
 
     if (!downloads.length) {
-        return `<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct download links are currently updating for this title.<br><span style="color: #5bc4f5;">Please use the HD streaming servers above to watch online without waiting.</span></div>`;
+        return `<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct cloud download links are currently refreshing for this title.<br><span style="color: #2dce89; font-weight:600;">Please use the HD streaming servers above to watch online instantly without waiting.</span></div>`;
     }
 
     return downloads.map((item, index) => {

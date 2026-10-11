@@ -235,6 +235,16 @@
             </div>
         </div>
 
+        <div id="noDlNotice" style="display:none; text-align:center; padding: 22px 18px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.18); border-radius: 12px; margin-bottom: 20px;">
+            <div style="font-size: 32px; margin-bottom: 10px;">⚡</div>
+            <div style="font-weight: 700; font-size: 16px; color: #fff; margin-bottom: 6px;">Direct Cloud Mirrors Updating</div>
+            <p style="font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0 0 18px 0;">Automated 10 Gbps cloud download mirrors are currently being refreshed for this title. You do not need to wait — you can stream this title right now in Full 1080p HD without interruptions!</p>
+            <a id="noticeWatchBtn" href="#" class="dl-server-btn dl-server-primary" style="justify-content: center; text-decoration: none; margin: 0 auto; max-width: 360px;">
+                <span>🎬 Watch in Full HD Stream (Instant Play)</span>
+                <em>Stream</em>
+            </a>
+        </div>
+
         <div class="links-container" id="linksContainer">
             <a class="dl-server-btn dl-server-primary" id="btnServer1" href="#" target="_blank" rel="noopener noreferrer">
                 <span>🚀 Fast Cloud Server 1 (Instant Download)</span>
@@ -307,6 +317,7 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
+    if (clean.includes('kmmovies.') || clean.includes('rogmovies.') || clean.includes('vegamovies.')) return false;
     if (clean.includes('magiclinks.lol/download/')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
@@ -358,7 +369,7 @@ async function initDownloadPage() {
             if (btmSlot && ads.movieBottom) btmSlot.innerHTML = ads.movieBottom;
         }
 
-        // Determine destination URLs (STRICTLY NO STREAMING EMBEDS)
+        // Determine destination URLs (STRICTLY NO STREAMING EMBEDS OR EXTERNAL COMPETITOR REDIRECTS)
         let targetDownloadUrl = null;
         let mirrorDownloadUrl = null;
 
@@ -401,73 +412,70 @@ async function initDownloadPage() {
 
         const watchUrl = (currentMovie?.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie ? currentMovie.id : (params.id || ''));
 
-        // If direct cloud URL not recorded yet, provide active cloud search mirror
-        if (!targetDownloadUrl && currentMovie) {
-            const cleanTitle = currentMovie.title.replace(/[:\-–—\(\)\d]/g, ' ').trim().split(/\s+/).slice(0, 4).join(' ');
-            targetDownloadUrl = `https://kmmovies.baby/?s=${encodeURIComponent(cleanTitle || currentMovie.title)}`;
-        }
-        if (!mirrorDownloadUrl && currentMovie) {
-            const cleanTitle = currentMovie.title.replace(/[:\-–—\(\)\d]/g, ' ').trim().split(/\s+/).slice(0, 4).join(' ');
-            mirrorDownloadUrl = `https://kmmovies.baby/?s=${encodeURIComponent(cleanTitle || currentMovie.title)}`;
-        }
-
-        // Setup Download Buttons
         const btn1 = document.getElementById('btnServer1');
         const btn2 = document.getElementById('btnServer2');
         const btnWatch = document.getElementById('btnWatchOnline');
-        const btnTg = document.getElementById('btnTelegram');
-
         const btn1Span = btn1 ? btn1.querySelector('span') : null;
         const btn2Span = btn2 ? btn2.querySelector('span') : null;
 
-        if (targetDownloadUrl) {
+        // If no cloud file exists yet, show in-page updating notice with 1-click HD Stream CTA (ZERO EXTERNAL REDIRECTS)
+        if (!targetDownloadUrl) {
+            const timerBox = document.getElementById('timerBox');
+            if (timerBox) timerBox.style.display = 'none';
+            const noNotice = document.getElementById('noDlNotice');
+            if (noNotice) noNotice.style.display = 'block';
+            const noticeWatchBtn = document.getElementById('noticeWatchBtn');
+            if (noticeWatchBtn) noticeWatchBtn.href = watchUrl;
+            const linksContainer = document.getElementById('linksContainer');
+            if (linksContainer) linksContainer.style.display = 'none';
+        } else {
+            const noNotice = document.getElementById('noDlNotice');
+            if (noNotice) noNotice.style.display = 'none';
+
             btn1.href = targetDownloadUrl;
             if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
             btn1.style.display = 'flex';
-        } else {
-            btn1.style.display = 'none';
-        }
 
-        if (mirrorDownloadUrl) {
-            btn2.href = mirrorDownloadUrl;
-            if (btn2Span) btn2Span.textContent = '⚡ High Speed Mirror (Server 2)';
-            btn2.style.display = 'flex';
-        } else {
-            btn2.style.display = 'none';
-        }
-
-        if (btnWatch) {
-            btnWatch.href = watchUrl;
-        }
-
-        if (btnTg) btnTg.style.display = 'none';
-
-        [btn1, btn2].forEach(btn => {
-            if (!btn) return;
-            btn.addEventListener('click', (e) => {
-                if (ads && ads.clickAd && ads.clickAd.enabled && ads.clickAd.url) {
-                    window.open(ads.clickAd.url, '_blank', 'noopener,noreferrer');
-                }
-            });
-        });
-
-        // 3-second Countdown Timer
-        let seconds = 3;
-        const countEl = document.getElementById('countdownNum');
-        const fillEl = document.getElementById('progressFill');
-        fillEl.style.width = '33%';
-
-        const timer = setInterval(() => {
-            seconds--;
-            if (countEl) countEl.textContent = seconds;
-            if (fillEl) fillEl.style.width = ((4 - seconds) * 33) + '%';
-
-            if (seconds <= 0) {
-                clearInterval(timer);
-                document.getElementById('timerBox').style.display = 'none';
-                document.getElementById('linksContainer').style.display = 'flex';
+            if (mirrorDownloadUrl) {
+                btn2.href = mirrorDownloadUrl;
+                if (btn2Span) btn2Span.textContent = '⚡ High Speed Mirror (Server 2)';
+                btn2.style.display = 'flex';
+            } else {
+                btn2.style.display = 'none';
             }
-        }, 1000);
+
+            if (btnWatch) {
+                btnWatch.href = watchUrl;
+                btnWatch.style.display = 'flex';
+            }
+
+            [btn1, btn2].forEach(btn => {
+                if (!btn) return;
+                btn.addEventListener('click', (e) => {
+                    if (ads && ads.clickAd && ads.clickAd.enabled && ads.clickAd.url) {
+                        window.open(ads.clickAd.url, '_blank', 'noopener,noreferrer');
+                    }
+                });
+            });
+
+            // 3-second Countdown Timer
+            let seconds = 3;
+            const countEl = document.getElementById('countdownNum');
+            const fillEl = document.getElementById('progressFill');
+            if (fillEl) fillEl.style.width = '33%';
+
+            const timer = setInterval(() => {
+                seconds--;
+                if (countEl) countEl.textContent = seconds;
+                if (fillEl) fillEl.style.width = ((4 - seconds) * 33) + '%';
+
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('timerBox').style.display = 'none';
+                    document.getElementById('linksContainer').style.display = 'flex';
+                }
+            }, 1000);
+        }
 
     } catch (err) {
         console.error(err);
