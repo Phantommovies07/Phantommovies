@@ -1,6 +1,1201 @@
 {
   "movies": [
     {
+      "id": "1791714552888",
+      "type": "movie",
+      "title": "Jumanji: Welcome to the Jungle",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjI5MzdmODctYjA4NS00ZmMxLWJlOWUtOGVhMjA0OGMxMWYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjI5MzdmODctYjA4NS00ZmMxLWJlOWUtOGVhMjA0OGMxMWYzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt2283362",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt2283362"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt2283362&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt2283362"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt2283362"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt2283362"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt2283362"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jumanji:+Welcome+to+the+Jungle+2017+trailer",
+      "description": "Jumanji: Welcome to the Jungle (2017) starring Dwayne Johnson, Karen Gillan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23372,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt2283362",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:29:06.370808+00:00",
+      "updatedAt": "2026-10-11T10:29:06.370808+00:00"
+    },
+    {
+      "id": "1791714547620",
+      "type": "series",
+      "title": "Hasmukh",
+      "genre": "Tv Mini-Series",
+      "year": 2020,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhhNWExZWUtMjRjZS00OTQzLTk5MzQtYmVhNDBlZjQ1NTNhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjhhNWExZWUtMjRjZS00OTQzLTk5MzQtYmVhNDBlZjQ1NTNhXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt9359294&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt9359294/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt9359294&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt9359294?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt9359294/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hasmukh+2020+trailer",
+      "description": "Hasmukh (2020) starring Vir Das, Ranvir Shorey.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 29916,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9359294",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:29:05.637896+00:00",
+      "updatedAt": "2026-10-11T10:29:05.637896+00:00"
+    },
+    {
+      "id": "1791714549557",
+      "type": "movie",
+      "title": "Evaru",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGUzNDdmYjItOWRhYS00YTlmLTgwMWYtMWRmODc0ODNlZWZjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGUzNDdmYjItOWRhYS00YTlmLTgwMWYtMWRmODc0ODNlZWZjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt10545484",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt10545484"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt10545484&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt10545484"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt10545484"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt10545484"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt10545484"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "574.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/79292924487671-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "979.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2623378992-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/41473856514374-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Evaru+2019+trailer",
+      "description": "Evaru (2019) starring Adivi Sesh, Regena Cassandrra.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22571,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt10545484",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:29:04.189539+00:00",
+      "updatedAt": "2026-10-11T10:29:04.189539+00:00"
+    },
+    {
+      "id": "1791714543458",
+      "type": "movie",
+      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "genre": "Tv Series",
+      "year": 2018,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWRjNWY5YmItZTFkNS00ZjdiLWJiMWMtODFjYzk1NjU2MWU0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWRjNWY5YmItZTFkNS00ZjdiLWJiMWMtODFjYzk1NjU2MWU0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt8993398",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt8993398"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt8993398&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt8993398"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt8993398"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt8993398"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt8993398"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Rascal+Does+Not+Dream+of+Bunny+Girl+Senpai+2018+trailer",
+      "description": "Rascal Does Not Dream of Bunny Girl Senpai (2018) starring Kaito Ishikawa, Asami Seto.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21446,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8993398",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:29:03.369863+00:00",
+      "updatedAt": "2026-10-11T10:29:03.369863+00:00"
+    },
+    {
+      "id": "1791714551058",
+      "type": "movie",
+      "title": "Metro in Dino",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODQ1NmJlNjEtODdmZi00YzY0LTgyNTctZTUwNjVkYjY0MWI1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODQ1NmJlNjEtODdmZi00YzY0LTgyNTctZTUwNjVkYjY0MWI1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt24225606",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt24225606"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt24225606&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt24225606"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt24225606"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt24225606"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt24225606"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "473.5MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/437283967312927-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1009.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/7505553-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/79958813972-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Metro+in+Dino+2025+trailer",
+      "description": "Metro in Dino (2025) starring Anupam Kher, Neena Gupta.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20384,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt24225606",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:29:01.546744+00:00",
+      "updatedAt": "2026-10-11T10:29:01.546744+00:00"
+    },
+    {
+      "id": "1791714544399",
+      "type": "series",
+      "title": "Taj Mahal 1989",
+      "genre": "Tv Series",
+      "year": 2020,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2U2NjlkYTQtNWMxYS00ZGY4LThmMTUtNjFhNDM4MzI4MmM2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2U2NjlkYTQtNWMxYS00ZGY4LThmMTUtNjFhNDM4MzI4MmM2XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt11725706&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt11725706/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt11725706&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt11725706?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt11725706/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Taj+Mahal+1989+2020+trailer",
+      "description": "Taj Mahal 1989 (2020) starring Neeraj Kabi, Geetanjali Kulkarni.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8576,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11725706",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:29:00.404409+00:00",
+      "updatedAt": "2026-10-11T10:29:00.404409+00:00"
+    },
+    {
+      "id": "1791714541002",
+      "type": "movie",
+      "title": "Kshanam",
+      "genre": "Feature",
+      "year": 2016,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmRlMmZjOWItZjgzZS00Mjc4LWEwZWYtZTA3YWZkMjgzY2JkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmRlMmZjOWItZjgzZS00Mjc4LWEwZWYtZTA3YWZkMjgzY2JkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt5504168",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt5504168"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt5504168&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt5504168"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt5504168"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt5504168"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt5504168"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kshanam+2016+trailer",
+      "description": "Kshanam (2016) starring Adivi Sesh, Adah Sharma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23211,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5504168",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:59.315564+00:00",
+      "updatedAt": "2026-10-11T10:28:59.315564+00:00"
+    },
+    {
+      "id": "1791714540456",
+      "type": "movie",
+      "title": "Bala",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2FlODNjNDgtMDg3OS00ZDM3LTk1ODMtOTUxNDliZjBiMzdhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2FlODNjNDgtMDg3OS00ZDM3LTk1ODMtOTUxNDliZjBiMzdhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt9420648",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt9420648"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt9420648&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt9420648"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt9420648"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt9420648"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt9420648"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "487 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/976262226-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "794 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/6628454875-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.68 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/12320625259-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.33 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/26519726-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bala+2019+trailer",
+      "description": "Bala (2019) starring Ayushmann Khurrana, Bhumi Satish Pednekkar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15359,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9420648",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:57.800856+00:00",
+      "updatedAt": "2026-10-11T10:28:57.800856+00:00"
+    },
+    {
+      "id": "1791714543546",
+      "type": "movie",
+      "title": "The Godfather",
+      "genre": "Feature",
+      "year": 1972,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt0068646",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt0068646"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt0068646&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt0068646"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt0068646"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0068646"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt0068646"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "711.5MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/51658898182055-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/789087433903-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/4154803249243-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Godfather+1972+trailer",
+      "description": "The Godfather (1972) starring Marlon Brando, Al Pacino.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5645,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0068646",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:56.350223+00:00",
+      "updatedAt": "2026-10-11T10:28:56.350223+00:00"
+    },
+    {
+      "id": "1791714539633",
+      "type": "movie",
+      "title": "Emergency!",
+      "genre": "Tv Series",
+      "year": 1972,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTIyNTcyMzMxMF5BMl5BanBnXkFtZTcwMDYxNjEzMQ@@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTIyNTcyMzMxMF5BMl5BanBnXkFtZTcwMDYxNjEzMQ@@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt0068067",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt0068067"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt0068067&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt0068067"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt0068067"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt0068067"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt0068067"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Emergency!+1972+trailer",
+      "description": "Emergency! (1972) starring Randolph Mantooth, Kevin Tighe.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6376,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0068067",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:55.613863+00:00",
+      "updatedAt": "2026-10-11T10:28:55.613863+00:00"
+    },
+    {
+      "id": "1791714540158",
+      "type": "movie",
+      "title": "Ninnu Kori",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDBmYjg1OTMtZDY2OS00ZjZmLTgxMjItOTVkOGRlNDljMTQxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDBmYjg1OTMtZDY2OS00ZjZmLTgxMjItOTVkOGRlNDljMTQxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt6996016",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt6996016"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt6996016&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt6996016"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt6996016"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt6996016"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt6996016"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ninnu+Kori+2017+trailer",
+      "description": "Ninnu Kori (2017) starring Nani, Nivetha Thomas.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8960,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6996016",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:54.122634+00:00",
+      "updatedAt": "2026-10-11T10:28:54.122634+00:00"
+    },
+    {
+      "id": "1791714538976",
+      "type": "movie",
+      "title": "Badla",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDEyNjI2NTktZmJlMy00Njk5LTk2OGQtMjI5NTAwNWRiZmFlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDEyNjI2NTktZmJlMy00Njk5LTk2OGQtMjI5NTAwNWRiZmFlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt8130968",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt8130968"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt8130968&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt8130968"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt8130968"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt8130968"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt8130968"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "483.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8278542-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "809.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/598321628-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5853487302812-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Badla+2019+trailer",
+      "description": "Badla (2019) starring Amitabh Bachchan, Taapsee Pannu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11103,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8130968",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:52.700028+00:00",
+      "updatedAt": "2026-10-11T10:28:52.700028+00:00"
+    },
+    {
+      "id": "1791714540069",
+      "type": "movie",
+      "title": "Karthikeya 2",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjQyM2RlNGMtZmE2Yi00NjQ4LTgwMmQtZWY1MjU3M2E4ZDhjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjQyM2RlNGMtZmE2Yi00NjQ4LTgwMmQtZWY1MjU3M2E4ZDhjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt13664684",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt13664684"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt13664684&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt13664684"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt13664684"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt13664684"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt13664684"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "401.0MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/4994989727319-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "853.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/39053824027-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/76606811308-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Karthikeya+2+2022+trailer",
+      "description": "Karthikeya 2 (2022) starring Nikhil Siddharth, Anupama Parameswaran.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23385,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt13664684",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:51.563803+00:00",
+      "updatedAt": "2026-10-11T10:28:51.563803+00:00"
+    },
+    {
+      "id": "1791714535205",
+      "type": "movie",
+      "title": "Baby John",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTM2NmVmOTYtNTBmMi00ZTliLWE2MDktZDM1ZWEwN2M5YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTM2NmVmOTYtNTBmMi00ZTliLWE2MDktZDM1ZWEwN2M5YmYzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt27757805",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt27757805"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt27757805&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt27757805"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt27757805"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt27757805"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt27757805"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "639.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/502048725305-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "853.7MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/7698683278754-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1054682-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "5.6GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1478376701-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Baby+John+2024+trailer",
+      "description": "Baby John (2024) starring Varun Dhawan, Keerthy Suresh.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14132,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27757805",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:49.706260+00:00",
+      "updatedAt": "2026-10-11T10:28:49.706260+00:00"
+    },
+    {
+      "id": "1791714514971",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/042325407443-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/37595231-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5021521-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt36235895/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13769,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T10:28:25.566481+00:00",
+      "updatedAt": "2026-10-11T10:28:25.566481+00:00"
+    },
+    {
+      "id": "1791568079879",
+      "type": "series",
+      "title": "Take Charge of My Heart",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDkxMGU2YmUtZGFjOS00ZDg3LTliYzUtZTBmZThiNjRhYzA1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDkxMGU2YmUtZGFjOS00ZDg3LTliYzUtZTBmZThiNjRhYzA1XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/603067014549-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/400040571052405-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "11.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/142919789520917-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt37737331&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt37737331/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt37737331/1/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt37737331/1/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt37737331?s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-480p",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "300MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-720p-10BIT/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "9GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Take+Charge+of+My+Heart+2026+trailer",
+      "description": "Take Charge of My Heart (2026) starring Kim Young-kwang, Chae Soo-bin.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23821,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37737331",
+      "tmdb_id": "",
+      "createdAt": "2026-10-09T17:47:53.150450+00:00",
+      "updatedAt": "2026-10-11T10:28:24.128701+00:00"
+    },
+    {
       "id": "1791688341745",
       "type": "movie",
       "title": "Fidaa",
@@ -8505,112 +9700,6 @@
       "tmdb_id": "",
       "createdAt": "2026-10-10T20:07:54.435138+00:00",
       "updatedAt": "2026-10-10T20:07:54.435138+00:00"
-    },
-    {
-      "id": "1791568079879",
-      "type": "series",
-      "title": "Take Charge of My Heart",
-      "genre": "Tv Series",
-      "year": 2026,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDkxMGU2YmUtZGFjOS00ZDg3LTliYzUtZTBmZThiNjRhYzA1XkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BNDkxMGU2YmUtZGFjOS00ZDg3LTliYzUtZTBmZThiNjRhYzA1XkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "",
-      "streams": [],
-      "downloads": [
-        {
-          "quality": "480p SD",
-          "size": "1.9GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/603067014549-2/",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p HD",
-          "size": "2.3GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/400040571052405-2/",
-          "color": "#06b6d4"
-        },
-        {
-          "quality": "1080p Full HD",
-          "size": "11.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/142919789520917-2/",
-          "color": "#10b981"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (HD)",
-              "url": "https://multiembed.mov/?video_id=tt37737331&s=1&e=1"
-            },
-            {
-              "name": "Server 2 (Fast)",
-              "url": "https://player.autoembed.cc/embed/tv/tt37737331/1/1"
-            },
-            {
-              "name": "Server 3 (VIP)",
-              "url": "https://embed.su/embed/tv/tt37737331/1/1"
-            },
-            {
-              "name": "Server 4 (Ultra)",
-              "url": "https://vidsrc.cc/v2/embed/tv/tt37737331/1/1"
-            },
-            {
-              "name": "Server 5 (Cloud)",
-              "url": "https://player.smashystream.com/tv/tt37737331?s=1&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "480p SD",
-              "size": "200MB",
-              "server": "Fast Cloud",
-              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-480p",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "720p HD",
-              "size": "300MB",
-              "server": "Fast Cloud",
-              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-720p-10BIT/",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "1080p Full HD",
-              "size": "1.2GB",
-              "server": "Fast Cloud",
-              "url": "https://episodes.magiclinks.lol/series/take-charge-of-my-heart-s01-1080p/",
-              "color": "#10b981"
-            }
-          ],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Take+Charge+of+My+Heart+2026+trailer",
-      "description": "Take Charge of My Heart (2026) starring Kim Young-kwang, Chae Soo-bin.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 23821,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt37737331",
-      "tmdb_id": "",
-      "createdAt": "2026-10-09T17:47:53.150450+00:00",
-      "updatedAt": "2026-10-10T20:07:50.993703+00:00"
     },
     {
       "id": "1791650554856",
@@ -39205,8 +40294,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 482,
-    "lastUpdated": "2026-10-11T03:12:18.436053+00:00",
+    "totalMovies": 497,
+    "lastUpdated": "2026-10-11T10:29:07.306046+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
