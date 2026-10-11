@@ -81,31 +81,52 @@ function playerMarkup(movie, streamUrl) {
 }
 
 // Whitelisted, stealth stream server providers (hiding underlying host identities)
-const SERVER_LABELS = ["Server 1 (HD)", "Server 2 (Fast)", "Server 3 (VIP)", "Server 4 (Ultra)", "Server 5 (Cloud)", "Server 6 (Backup)"];
+const SERVER_LABELS = [
+    "Server 1 (VIP Ultra HD)",
+    "Server 2 (HD)",
+    "Server 3 (Fast)",
+    "Server 4 (VIP)",
+    "Server 5 (Ultra)",
+    "Server 6 (Cloud)",
+    "Server 7 (Backup)"
+];
 
 function cleanServerLabel(name, index) {
-    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub/i.test(name)) {
+    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27/i.test(name)) {
         return SERVER_LABELS[index] || `Server ${index + 1}`;
     }
     return name;
 }
 
 const DEFAULT_STREAM_PROVIDERS = [
-    { name: "Server 1 (HD)", template: "https://vidlink.pro/movie/{imdb}" },
-    { name: "Server 2 (Fast)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
-    { name: "Server 3 (VIP)", template: "https://www.2embed.cc/embed/{imdb}" },
-    { name: "Server 4 (Ultra)", template: "https://vidsrc.pm/embed/movie/{imdb}" },
-    { name: "Server 5 (Cloud)", template: "https://player.smashystream.com/movie/{tmdb}" },
-    { name: "Server 6 (Backup)", template: "https://www.nontongo.win/embed/movie/{imdb}" }
+    { name: "Server 1 (VIP Ultra HD)", template: "https://net27.cc/watch-tmdb/{tmdb}", requiresTmdb: true },
+    { name: "Server 2 (HD)", template: "https://vidlink.pro/movie/{imdb}" },
+    { name: "Server 3 (Fast)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
+    { name: "Server 4 (VIP)", template: "https://www.2embed.cc/embed/{imdb}" },
+    { name: "Server 5 (Ultra)", template: "https://vidsrc.pm/embed/movie/{imdb}" },
+    { name: "Server 6 (Cloud)", template: "https://player.smashystream.com/movie/{tmdb}" },
+    { name: "Server 7 (Backup)", template: "https://www.nontongo.win/embed/movie/{imdb}" }
 ];
 
 function normalizeStreams(movie) {
-    const customStreams = Array.isArray(movie.streams) && movie.streams.length
-        ? movie.streams.filter(item => item && item.url).map((item, index) => ({
-            name: cleanServerLabel(item.name || item.label, index),
+    const rawStreams = Array.isArray(movie.streams) && movie.streams.length
+        ? movie.streams.filter(item => item && item.url)
+        : (movie.streamLink ? [{ name: 'Server 1 (VIP Ultra HD)', url: movie.streamLink }] : []);
+
+    // Check if we have a direct NetMirror native VIP stream
+    const netmirrorStream = rawStreams.find(s => s.url.includes('net27.cc') || s.url.includes('netmirror'));
+    const otherCustomStreams = rawStreams.filter(s => s !== netmirrorStream);
+
+    const customStreams = [];
+    if (netmirrorStream) {
+        customStreams.push({ name: "Server 1 (VIP Ultra HD)", url: netmirrorStream.url });
+    }
+    otherCustomStreams.forEach((item, index) => {
+        customStreams.push({
+            name: cleanServerLabel(item.name || item.label, customStreams.length),
             url: item.url
-        }))
-        : (movie.streamLink ? [{ name: 'Server 1 (HD)', url: movie.streamLink }] : []);
+        });
+    });
 
     // If the movie has a direct custom link, prioritize it
     const isDirectCustom = customStreams.length > 0 && !customStreams[0].url.includes('vidsrc.to');
@@ -116,7 +137,8 @@ function normalizeStreams(movie) {
     const dynamicStreams = [];
 
     if (imdb || tmdb) {
-        DEFAULT_STREAM_PROVIDERS.forEach((p, idx) => {
+        DEFAULT_STREAM_PROVIDERS.forEach((p) => {
+            if (p.requiresTmdb && !tmdb) return; // Skip if TMDb ID is required but missing
             let u = p.template
                 .replace('{imdb}', encodeURIComponent(imdb || tmdb))
                 .replace('{tmdb}', encodeURIComponent(tmdb || imdb));

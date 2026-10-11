@@ -36,48 +36,65 @@
         "https://rogmovies.mom",
         "https://rogmovies.cfd"
       ]
+    },
+    "netmirror": {
+      "active": "https://net27.cc",
+      "mirrors": [
+        "https://net27.cc",
+        "https://netmirror.app"
+      ],
+      "nativePlayer": "https://net27.cc/native/{subjectId}?dp={detailPath}&t={title}",
+      "tmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}",
+      "tvTmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}"
     }
   },
   "streaming": {
     "providers": [
       {
+        "id": "netmirror",
+        "name": "Server 1 (VIP Ultra HD)",
+        "domains": ["https://net27.cc"],
+        "movieTemplate": "/watch-tmdb/{tmdb}",
+        "tvTemplate": "/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}"
+      },
+      {
         "id": "vidlink",
-        "name": "Server 1 (HD)",
+        "name": "Server 2 (HD)",
         "domains": ["https://vidlink.pro", "https://vidlink.online"],
         "movieTemplate": "/movie/{imdb}",
         "tvTemplate": "/tv/{imdb}/{s}/{e}"
       },
       {
         "id": "multiembed",
-        "name": "Server 2 (Fast)",
+        "name": "Server 3 (Fast)",
         "domains": ["https://multiembed.mov", "https://multiembed.cc"],
         "movieTemplate": "/?video_id={imdb}&tmdb_id={tmdb}",
         "tvTemplate": "/?video_id={imdb}&s={s}&e={e}"
       },
       {
         "id": "2embed",
-        "name": "Server 3 (VIP)",
+        "name": "Server 4 (VIP)",
         "domains": ["https://www.2embed.cc", "https://2embed.org"],
         "movieTemplate": "/embed/{imdb}",
         "tvTemplate": "/embedtv/{imdb}&s={s}&e={e}"
       },
       {
         "id": "vidsrc",
-        "name": "Server 4 (Ultra)",
+        "name": "Server 5 (Ultra)",
         "domains": ["https://vidsrc.pm", "https://vidsrc.cc/v2", "https://vidsrc.xyz"],
         "movieTemplate": "/embed/movie/{imdb}",
         "tvTemplate": "/embed/tv/{imdb}/{s}/{e}"
       },
       {
         "id": "smashystream",
-        "name": "Server 5 (Cloud)",
+        "name": "Server 6 (Cloud)",
         "domains": ["https://player.smashystream.com", "https://embed.smashystream.com"],
         "movieTemplate": "/movie/{tmdb}",
         "tvTemplate": "/tv/{tmdb}?s={s}&e={e}"
       },
       {
         "id": "nontongo",
-        "name": "Server 6 (Backup)",
+        "name": "Server 7 (Backup)",
         "domains": ["https://www.nontongo.win"],
         "movieTemplate": "/embed/movie/{imdb}",
         "tvTemplate": "/embed/tv/{imdb}/{s}/{e}"

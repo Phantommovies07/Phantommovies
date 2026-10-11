@@ -53,10 +53,18 @@ function getCurrentEpisode() {
     return season?.episodes?.[currentEpisodeIndex] || null;
 }
 
-const SERVER_LABELS = ["Server 1 (HD)", "Server 2 (Fast)", "Server 3 (VIP)", "Server 4 (Ultra)", "Server 5 (Cloud)", "Server 6 (Backup)"];
+const SERVER_LABELS = [
+    "Server 1 (VIP Ultra HD)",
+    "Server 2 (HD)",
+    "Server 3 (Fast)",
+    "Server 4 (VIP)",
+    "Server 5 (Ultra)",
+    "Server 6 (Cloud)",
+    "Server 7 (Backup)"
+];
 
 function cleanServerLabel(name, index) {
-    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub/i.test(name)) {
+    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27/i.test(name)) {
         return SERVER_LABELS[index] || `Server ${index + 1}`;
     }
     return name;
@@ -84,13 +92,18 @@ function normalizeStreams(episode) {
 
     const dynamicStreams = [];
     if ((imdb || tmdb) && !season?.combined && !currentSeries?.combined) {
-        const tvProviders = [
-            { name: "Server 1 (HD)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 2 (Fast)", url: `https://vidsrc.pm/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` },
-            { name: "Server 3 (VIP)", url: `https://www.2embed.cc/embedtv/${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 4 (Ultra)", url: `https://player.smashystream.com/tv/${tmdb || imdb}?s=${sNum}&e=${eNum}` },
-            { name: "Server 5 (Cloud)", url: `https://www.nontongo.win/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` }
-        ];
+        const tvProviders = [];
+        if (tmdb) {
+            tvProviders.push({ name: "Server 1 (VIP Ultra HD)", url: `https://net27.cc/watch-tmdb/${tmdb}?type=tv&se=${sNum}&ep=${eNum}` });
+        }
+        tvProviders.push(
+            { name: "Server 2 (HD)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
+            { name: "Server 3 (Fast)", url: `https://vidsrc.pm/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` },
+            { name: "Server 4 (VIP)", url: `https://www.2embed.cc/embedtv/${imdb || tmdb}&s=${sNum}&e=${eNum}` },
+            { name: "Server 5 (Ultra)", url: `https://player.smashystream.com/tv/${tmdb || imdb}?s=${sNum}&e=${eNum}` },
+            { name: "Server 6 (Cloud)", url: `https://www.nontongo.win/embed/tv/${imdb || tmdb}/${sNum}/${eNum}` }
+        );
+
         tvProviders.forEach(p => {
             if (!raw.some(r => r.url === p.url)) {
                 dynamicStreams.push(p);
@@ -98,7 +111,19 @@ function normalizeStreams(episode) {
         });
     }
 
-    const merged = raw.length ? [...raw, ...dynamicStreams] : dynamicStreams;
+    // Separate direct NetMirror native stream if present
+    const netmirrorStream = raw.find(s => s.url.includes('net27.cc') || s.url.includes('netmirror'));
+    const otherRaw = raw.filter(s => s !== netmirrorStream);
+
+    const orderedRaw = [];
+    if (netmirrorStream) {
+        orderedRaw.push({ name: "Server 1 (VIP Ultra HD)", url: netmirrorStream.url });
+    }
+    otherRaw.forEach((s, idx) => {
+        orderedRaw.push({ name: cleanServerLabel(s.name, orderedRaw.length), url: s.url });
+    });
+
+    const merged = orderedRaw.length ? [...orderedRaw, ...dynamicStreams] : dynamicStreams;
     return merged.map((s, i) => ({
         name: cleanServerLabel(s.name, i),
         url: s.url

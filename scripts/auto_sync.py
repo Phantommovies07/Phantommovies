@@ -53,38 +53,67 @@ def format_duration(runtime_minutes: int) -> str:
     mins = runtime_minutes % 60
     return f"{hours}h {mins:02d}m"
 
-def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[Dict]]:
-    """Generates stealth whitelisted multi-server movie streaming embed links."""
-    identifier = imdb_id or tmdb_id
-    if not identifier:
-        return "", []
+def resolve_netmirror_meta(title: str, year: int = None) -> Optional[Dict]:
+    """Queries NetMirror search catalog to retrieve subjectId, detailPath and tmdbId."""
+    if not title:
+        return None
+    try:
+        clean = re.sub(r'\s*[\(\[\{].*?[\)\]\}]', '', title).strip()
+        clean = re.split(r'[:\-–]', clean)[0].strip() or clean
+        url = f"https://net27.cc/api/catalog/search-hybrid?q={requests.utils.quote(clean)}"
+        resp = requests.get(url, headers=HEADERS, timeout=4)
+        if resp.status_code == 200:
+            data = resp.json()
+            items = data.get("items", [])
+            for it in items:
+                it_title = it.get("title", "").lower()
+                if it_title == title.lower() or it_title == clean.lower() or (year and str(it.get("year")) == str(year)):
+                    return it
+            if items:
+                return items[0]
+    except Exception:
+        pass
+    return None
 
-    primary_url = f"https://vidlink.pro/movie/{imdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"
-    servers = [
-        {"name": "Server 1 (HD)", "url": primary_url},
-        {"name": "Server 2 (Fast)", "url": f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
-        {"name": "Server 3 (VIP)", "url": f"https://www.2embed.cc/embed/{imdb_id or tmdb_id}"},
-        {"name": "Server 4 (Ultra)", "url": f"https://vidsrc.pm/embed/movie/{imdb_id or tmdb_id}"},
-        {"name": "Server 5 (Cloud)", "url": f"https://player.smashystream.com/movie/{tmdb_id or imdb_id}"},
-        {"name": "Server 6 (Backup)", "url": f"https://www.nontongo.win/embed/movie/{imdb_id or tmdb_id}"}
-    ]
+def generate_stream_servers(imdb_id: str, tmdb_id: str = "", netmirror_url: str = "") -> Tuple[str, List[Dict]]:
+    """Generates stealth whitelisted multi-server movie streaming embed links with NetMirror VIP."""
+    servers = []
+    if netmirror_url:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": netmirror_url})
+    elif tmdb_id:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}"})
+
+    fallback_vidlink = f"https://vidlink.pro/movie/{imdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"
+    servers.extend([
+        {"name": "Server 2 (HD)", "url": fallback_vidlink},
+        {"name": "Server 3 (Fast)", "url": f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
+        {"name": "Server 4 (VIP)", "url": f"https://www.2embed.cc/embed/{imdb_id or tmdb_id}"},
+        {"name": "Server 5 (Ultra)", "url": f"https://vidsrc.pm/embed/movie/{imdb_id or tmdb_id}"},
+        {"name": "Server 6 (Cloud)", "url": f"https://player.smashystream.com/movie/{tmdb_id or imdb_id}"},
+        {"name": "Server 7 (Backup)", "url": f"https://www.nontongo.win/embed/movie/{imdb_id or tmdb_id}"}
+    ])
+    primary_url = servers[0]["url"]
     return primary_url, servers
 
-def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1) -> List[Dict]:
+def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1, netmirror_url: str = "") -> List[Dict]:
     """Generates stealth whitelisted multi-server TV/reality show streaming embed links."""
-    identifier = imdb_id or tmdb_id
-    if not identifier:
-        return []
     s = season or 1
     e = episode or 1
+    servers = []
+    if netmirror_url:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": netmirror_url})
+    elif tmdb_id:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}?type=tv&se={s}&ep={e}"})
+
     primary_url = f"https://multiembed.mov/?video_id={imdb_id}&s={s}&e={e}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}&s={s}&e={e}"
-    return [
-        {"name": "Server 1 (HD)", "url": primary_url},
-        {"name": "Server 2 (Fast)", "url": f"https://vidsrc.pm/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"},
-        {"name": "Server 3 (VIP)", "url": f"https://www.2embed.cc/embedtv/{imdb_id or tmdb_id}&s={s}&e={e}"},
-        {"name": "Server 4 (Ultra)", "url": f"https://player.smashystream.com/tv/{tmdb_id or imdb_id}?s={s}&e={e}"},
-        {"name": "Server 5 (Cloud)", "url": f"https://www.nontongo.win/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"}
-    ]
+    servers.extend([
+        {"name": "Server 2 (HD)", "url": primary_url},
+        {"name": "Server 3 (Fast)", "url": f"https://vidsrc.pm/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"},
+        {"name": "Server 4 (VIP)", "url": f"https://www.2embed.cc/embedtv/{imdb_id or tmdb_id}&s={s}&e={e}"},
+        {"name": "Server 5 (Ultra)", "url": f"https://player.smashystream.com/tv/{tmdb_id or imdb_id}?s={s}&e={e}"},
+        {"name": "Server 6 (Cloud)", "url": f"https://www.nontongo.win/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"}
+    ])
+    return servers
 
 class IMDbSearchEngine:
     """Zero-key scraper using IMDb suggestion API (AWS CloudFront CDN) for movies and TV series."""
@@ -696,7 +725,20 @@ def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dic
 
     imdb_id = m.get("imdb_id", "")
     tmdb_id = m.get("tmdb_id", "")
-    primary_stream, stream_servers = generate_stream_servers(imdb_id, tmdb_id)
+    netmirror_url = ""
+
+    # Auto-resolve NetMirror metadata if available
+    net_meta = resolve_netmirror_meta(m.get("title", ""), m.get("year"))
+    if net_meta:
+        if not tmdb_id and net_meta.get("tmdbId"):
+            tmdb_id = str(net_meta["tmdbId"])
+        sub_id = net_meta.get("subjectId")
+        dp = net_meta.get("detailPath")
+        if sub_id and dp:
+            enc_t = requests.utils.quote(m.get("title", ""))
+            netmirror_url = f"https://net27.cc/native/{sub_id}?dp={dp}&t={enc_t}"
+
+    primary_stream, stream_servers = generate_stream_servers(imdb_id, tmdb_id, netmirror_url)
 
     duration = format_duration(m.get("runtime", 120))
     poster = m.get("poster", "")
@@ -749,6 +791,19 @@ def format_phantom_series(meta: Dict, seasons_dict: Dict[int, Dict] = None, cate
 
     imdb_id = meta.get("imdb_id", "")
     tmdb_id = meta.get("tmdb_id", "")
+    netmirror_url = ""
+
+    # Auto-resolve NetMirror metadata for TV series
+    net_meta = resolve_netmirror_meta(meta.get("title", ""), meta.get("year"))
+    if net_meta:
+        if not tmdb_id and net_meta.get("tmdbId"):
+            tmdb_id = str(net_meta["tmdbId"])
+        sub_id = net_meta.get("subjectId")
+        dp = net_meta.get("detailPath")
+        if sub_id and dp:
+            enc_t = requests.utils.quote(meta.get("title", ""))
+            netmirror_url = f"https://net27.cc/native/{sub_id}?dp={dp}&t={enc_t}"
+
     poster = meta.get("poster", "")
     banner = meta.get("banner") or poster
     trailer = meta.get("trailer") or f"https://www.youtube.com/results?search_query={meta.get('title','').replace(' ','+')}+trailer"
@@ -757,7 +812,7 @@ def format_phantom_series(meta: Dict, seasons_dict: Dict[int, Dict] = None, cate
     formatted_seasons = []
     for s_num in sorted(seasons_dict.keys()):
         s_data = seasons_dict[s_num]
-        s_streams = generate_tv_stream_servers(imdb_id, tmdb_id, s_num, 1)
+        s_streams = generate_tv_stream_servers(imdb_id, tmdb_id, s_num, 1, netmirror_url)
 
         formatted_episodes = []
         for ep in s_data.get("episodes", []):
@@ -766,7 +821,7 @@ def format_phantom_series(meta: Dict, seasons_dict: Dict[int, Dict] = None, cate
                 "episodeNumber": ep_num,
                 "title": ep.get("title", f"Episode {ep_num}"),
                 "duration": ep.get("duration", "45m"),
-                "streams": generate_tv_stream_servers(imdb_id, tmdb_id, s_num, ep_num),
+                "streams": generate_tv_stream_servers(imdb_id, tmdb_id, s_num, ep_num, netmirror_url),
                 "downloads": ep.get("downloads", [])
             })
 
