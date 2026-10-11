@@ -1,6 +1,1209 @@
 {
   "movies": [
     {
+      "id": "1791688341745",
+      "type": "movie",
+      "title": "Fidaa",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTZjYjhlZTMtYzg1OC00OWYwLThhNGEtY2M2MmNjM2FmMzhiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTZjYjhlZTMtYzg1OC00OWYwLThhNGEtY2M2MmNjM2FmMzhiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt7159382",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt7159382"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt7159382&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt7159382"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt7159382"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7159382"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt7159382"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Fidaa+2017+trailer",
+      "description": "Fidaa (2017) starring Sai Pallavi, Varun Tej.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12779,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7159382",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:17.338010+00:00",
+      "updatedAt": "2026-10-11T03:12:17.338010+00:00"
+    },
+    {
+      "id": "1791688344787",
+      "type": "movie",
+      "title": "Kesari",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmUyYzA3MGQtNzE0Zi00Nzg0LTk4NTAtNDQ3YWQ4M2IwMWYxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMmUyYzA3MGQtNzE0Zi00Nzg0LTk4NTAtNDQ3YWQ4M2IwMWYxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt6264938",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt6264938"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt6264938&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt6264938"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt6264938"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt6264938"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt6264938"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "574.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2660380463-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "925.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/543040847-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/58816631083-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "7.0GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/02657905090000-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kesari+2019+trailer",
+      "description": "Kesari (2019) starring Akshay Kumar, Parineeti Chopra.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17095,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6264938",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:15.911983+00:00",
+      "updatedAt": "2026-10-11T03:12:15.911983+00:00"
+    },
+    {
+      "id": "1791688339753",
+      "type": "movie",
+      "title": "Major Crimes",
+      "genre": "Tv Series",
+      "year": 2012,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTExMzA0NTQwMzheQTJeQWpwZ15BbWU3MDMzNzY2MTg@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTExMzA0NTQwMzheQTJeQWpwZ15BbWU3MDMzNzY2MTg@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt1936532",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt1936532"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt1936532&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt1936532"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt1936532"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt1936532"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt1936532"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/4773448-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.6GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/921800860321562-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Major+Crimes+2012+trailer",
+      "description": "Major Crimes (2012) starring G.W. Bailey, Tony Denison.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22093,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1936532",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:14.166074+00:00",
+      "updatedAt": "2026-10-11T03:12:14.166074+00:00"
+    },
+    {
+      "id": "1791688340222",
+      "type": "movie",
+      "title": "Singham Again",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "TRENDING",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjQzZDExZDEtYjAxYy00ZGVhLWE4YWItNTVkZjA5ZjVjZWM3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjQzZDExZDEtYjAxYy00ZGVhLWE4YWItNTVkZjA5ZjVjZWM3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt11976134",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt11976134"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt11976134&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt11976134"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt11976134"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11976134"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt11976134"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "311.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8744632884404-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "979.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/690349612-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/6324645830254-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "15.6GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/629129133-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Singham+Again+2024+trailer",
+      "description": "Singham Again (2024) starring Ajay Devgn, Akshay Kumar.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 60449,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11976134",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:13.094981+00:00",
+      "updatedAt": "2026-10-11T03:12:13.094981+00:00"
+    },
+    {
+      "id": "1791688332959",
+      "type": "movie",
+      "title": "Geetha Govindam",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWI3OTcwN2EtMDQ2MS00YTQ2LTliZDEtYTM4YTIzNDU5ODMyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWI3OTcwN2EtMDQ2MS00YTQ2LTliZDEtYTM4YTIzNDU5ODMyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt8590896",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt8590896"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt8590896&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt8590896"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt8590896"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt8590896"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt8590896"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Geetha+Govindam+2018+trailer",
+      "description": "Geetha Govindam (2018) starring Vijay Deverakonda, Rashmika Mandanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16519,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8590896",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:11.124045+00:00",
+      "updatedAt": "2026-10-11T03:12:11.124045+00:00"
+    },
+    {
+      "id": "1791688337850",
+      "type": "movie",
+      "title": "Kabir Singh",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjU5ZTljMDEtNzg5Ny00OTliLWI3NmYtOTE1ZDg3NTNkMDM0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjU5ZTljMDEtNzg5Ny00OTliLWI3NmYtOTE1ZDg3NTNkMDM0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt8983202",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt8983202"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt8983202&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt8983202"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt8983202"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt8983202"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt8983202"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "601.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8991795891343-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1011.6MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/025032370124-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/60393317-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kabir+Singh+2019+trailer",
+      "description": "Kabir Singh (2019) starring Shahid Kapoor, Kiara Advani.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14186,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8983202",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:09.472091+00:00",
+      "updatedAt": "2026-10-11T03:12:09.472091+00:00"
+    },
+    {
+      "id": "1791688334092",
+      "type": "movie",
+      "title": "Bhool Bhulaiyaa 3",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "TRENDING",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGFhMDQ4MzMtMTUxOC00NDE0LTkzZWMtMzhhMGNiMDlhNDNmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGFhMDQ4MzMtMTUxOC00NDE0LTkzZWMtMzhhMGNiMDlhNDNmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt26932223",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt26932223"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt26932223&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt26932223"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt26932223"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt26932223"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt26932223"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "344.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8227038021097-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "770.0MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/29093752348-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/3085237-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "17.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/00582778-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bhool+Bhulaiyaa+3+2024+trailer",
+      "description": "Bhool Bhulaiyaa 3 (2024) starring Kartik Aaryan, Triptii Dimri.",
+      "featured": false,
+      "trending": true,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 86145,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26932223",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:07.956035+00:00",
+      "updatedAt": "2026-10-11T03:12:07.956035+00:00"
+    },
+    {
+      "id": "1791688328674",
+      "type": "movie",
+      "title": "Bheeshma",
+      "genre": "Feature",
+      "year": 2020,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODU2ZGQ2ZTctYTM4ZC00MzUxLWI0MDQtZmY0MTUyYmNiYTFmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODU2ZGQ2ZTctYTM4ZC00MzUxLWI0MDQtZmY0MTUyYmNiYTFmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt11199356",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt11199356"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt11199356&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt11199356"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt11199356"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt11199356"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt11199356"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "452.5MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5945429777-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "780.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/6697056-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/004793360-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bheeshma+2020+trailer",
+      "description": "Bheeshma (2020) starring Nithiin, Rashmika Mandanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18361,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11199356",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:06.353784+00:00",
+      "updatedAt": "2026-10-11T03:12:06.353784+00:00"
+    },
+    {
+      "id": "1791688334343",
+      "type": "movie",
+      "title": "Uri: The Surgical Strike",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTgyMTlkZTgtMTMxYi00Mjk5LTg2NTMtNGYyMDVlZWM0NmZjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTgyMTlkZTgtMTMxYi00Mjk5LTg2NTMtNGYyMDVlZWM0NmZjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt8291224",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt8291224"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt8291224&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt8291224"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt8291224"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt8291224"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt8291224"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "365.7MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/98427056-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "862.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/16344497008-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/380940022-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Uri:+The+Surgical+Strike+2019+trailer",
+      "description": "Uri: The Surgical Strike (2019) starring Vicky Kaushal, Paresh Rawal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17800,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt8291224",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:04.902037+00:00",
+      "updatedAt": "2026-10-11T03:12:04.902037+00:00"
+    },
+    {
+      "id": "1791688328437",
+      "type": "movie",
+      "title": "Vicky Vidya Ka Woh Wala Video",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDViYjk4ZmYtNjhhYS00OGQ0LWFlNTktZTYwMzcyZDUwODcwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDViYjk4ZmYtNjhhYS00OGQ0LWFlNTktZTYwMzcyZDUwODcwXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt29330913",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt29330913"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt29330913&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt29330913"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt29330913"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt29330913"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt29330913"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "596.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9190971169-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "804.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/82783272859918-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/65072203-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vicky+Vidya+Ka+Woh+Wala+Video+2024+trailer",
+      "description": "Vicky Vidya Ka Woh Wala Video (2024) starring Rajkummar Rao, Triptii Dimri.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7596,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt29330913",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:02.817862+00:00",
+      "updatedAt": "2026-10-11T03:12:02.817862+00:00"
+    },
+    {
+      "id": "1791688329878",
+      "type": "movie",
+      "title": "Sarileru Neekevvaru",
+      "genre": "Feature",
+      "year": 2020,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDVjNTdiN2YtMDhlMC00NDYwLTk1MGUtZTBkYjI4MjE0ZDExXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDVjNTdiN2YtMDhlMC00NDYwLTk1MGUtZTBkYjI4MjE0ZDExXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt10773090",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt10773090"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt10773090&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt10773090"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt10773090"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt10773090"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt10773090"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "570.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9481073601118-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "942.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/6641845196-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/3716622548682-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.0GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/082087330557-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sarileru+Neekevvaru+2020+trailer",
+      "description": "Sarileru Neekevvaru (2020) starring Mahesh Babu, Rashmika Mandanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12461,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt10773090",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:12:01.183645+00:00",
+      "updatedAt": "2026-10-11T03:12:01.183645+00:00"
+    },
+    {
+      "id": "1791688322338",
+      "type": "movie",
+      "title": "Super 30",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTM0N2I4OTQtYmJlOC00MTUzLTlhZWMtZGIxODkxZTZkMDIyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTM0N2I4OTQtYmJlOC00MTUzLTlhZWMtZGIxODkxZTZkMDIyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt7485048",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt7485048"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt7485048&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt7485048"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt7485048"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt7485048"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt7485048"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "309 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/29352819721956-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "824 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/29542378592492-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.83 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/57640314042-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Super+30+2019+trailer",
+      "description": "Super 30 (2019) starring Hrithik Roshan, Mrunal Thakur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5273,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7485048",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:11:59.494032+00:00",
+      "updatedAt": "2026-10-11T03:11:59.494032+00:00"
+    },
+    {
+      "id": "1791688323503",
+      "type": "movie",
+      "title": "Jigra",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmJhMTc5NDEtN2NkOC00Njc3LWJiMzgtZjhjZWNhZDhmZTE0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmJhMTc5NDEtN2NkOC00Njc3LWJiMzgtZjhjZWNhZDhmZTE0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt26733317",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt26733317"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt26733317&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt26733317"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt26733317"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt26733317"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt26733317"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "348.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/33159085149-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "547.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/234365768650-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/999354191481045-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5242826022745-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jigra+2024+trailer",
+      "description": "Jigra (2024) starring Alia Bhatt, Vedang Raina.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6070,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26733317",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:11:58.052152+00:00",
+      "updatedAt": "2026-10-11T03:11:58.052152+00:00"
+    },
+    {
+      "id": "1791688316876",
+      "type": "movie",
+      "title": "Ala Vaikunthapurramuloo",
+      "genre": "Feature",
+      "year": 2020,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmY1ZjBmYzQtMmIyYS00Yzk3LTg5ZDYtZWM1ZTRkYTE3MWZlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMmY1ZjBmYzQtMmIyYS00Yzk3LTg5ZDYtZWM1ZTRkYTE3MWZlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt9537292",
+      "streams": [
+        {
+          "name": "Server 1 (HD)",
+          "url": "https://vidlink.pro/movie/tt9537292"
+        },
+        {
+          "name": "Server 2 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt9537292&tmdb_id="
+        },
+        {
+          "name": "Server 3 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt9537292"
+        },
+        {
+          "name": "Server 4 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt9537292"
+        },
+        {
+          "name": "Server 5 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt9537292"
+        },
+        {
+          "name": "Server 6 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt9537292"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "540.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/71821589492-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "892.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5397369589317-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/7002700213776-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "5.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/96180993227924-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ala+Vaikunthapurramuloo+2020+trailer",
+      "description": "Ala Vaikunthapurramuloo (2020) starring Allu Arjun, Pooja Hegde.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16116,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9537292",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:11:55.862083+00:00",
+      "updatedAt": "2026-10-11T03:11:55.862083+00:00"
+    },
+    {
+      "id": "1791688300769",
+      "type": "series",
+      "title": "Private Eyes West Coast",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmQ1NGNiY2ItMmMzMi00NzUzLTg5MjAtMGU3N2YyYjljMGNjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/042325407443-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/37595231-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5021521-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt36235895/1/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt36235895&s=1&e=1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://player.smashystream.com/tv/tt36235895?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt36235895/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+West+Coast+2026+trailer",
+      "description": "Private Eyes West Coast (2026) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 26598,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36235895",
+      "tmdb_id": "",
+      "createdAt": "2026-10-11T03:11:32.011794+00:00",
+      "updatedAt": "2026-10-11T03:11:32.011794+00:00"
+    },
+    {
       "id": "1791673682464",
       "type": "movie",
       "title": "Chhichhore",
@@ -38117,8 +39320,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 467,
-    "lastUpdated": "2026-10-10T23:07:55.615272+00:00",
+    "totalMovies": 482,
+    "lastUpdated": "2026-10-11T03:12:18.436053+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
