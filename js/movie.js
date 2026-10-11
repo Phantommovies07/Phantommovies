@@ -67,7 +67,7 @@ function playerMarkup(movie, streamUrl) {
     }
 
     if (streamLink) {
-        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin"></iframe>`;
+        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin" sandbox="allow-forms allow-scripts allow-same-origin allow-presentation"></iframe>`;
     }
 
     if (trailerEmbed) {
@@ -203,7 +203,6 @@ function renderStreamButtons() {
 }
 
 function switchStream(index, isFailover = false) {
-    if (!isFailover) handleClickAd('stream');
     if (!currentMovie || !currentStreams[index]) return;
 
     currentStreamIndex = index;
@@ -371,7 +370,6 @@ function renderMovie(movie) {
 
     document.querySelectorAll('.download-card').forEach(link => {
         link.addEventListener('click', (event) => {
-            if (handleClickAd('download', link.href)) event.preventDefault();
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'download_option_click', {
                     movie_title: movie.title,
@@ -651,14 +649,5 @@ function shouldShowClickAd(frequency) {
 }
 
 function handleClickAd(type, targetUrl = '') {
-    if (!currentAds || currentAds.enabled === false) return false;
-    const clickAd = currentAds.clickAd;
-    if (!clickAd || !clickAd.enabled || !clickAd.url) return false;
-    if (type === 'download' && clickAd.applyDownloads === false) return false;
-    if (type === 'stream' && !clickAd.applyStreams) return false;
-    if (!shouldShowClickAd(clickAd.frequency || 'session')) return false;
-
-    window.open(clickAd.url, '_blank', 'noopener,noreferrer');
-    if (targetUrl) setTimeout(() => window.open(targetUrl, '_blank', 'noopener,noreferrer'), 650);
-    return !!targetUrl;
+    return false;
 }

@@ -449,15 +449,6 @@ async function initDownloadPage() {
                 btnWatch.style.display = 'flex';
             }
 
-            [btn1, btn2].forEach(btn => {
-                if (!btn) return;
-                btn.addEventListener('click', (e) => {
-                    if (ads && ads.clickAd && ads.clickAd.enabled && ads.clickAd.url) {
-                        window.open(ads.clickAd.url, '_blank', 'noopener,noreferrer');
-                    }
-                });
-            });
-
             // 3-second Countdown Timer
             let seconds = 3;
             const countEl = document.getElementById('countdownNum');

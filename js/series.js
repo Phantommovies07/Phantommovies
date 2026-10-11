@@ -38,7 +38,7 @@ function playerMarkup(url, poster = '', title = '') {
     }
 
     if (url) {
-        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin"></iframe>`;
+        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin" sandbox="allow-forms allow-scripts allow-same-origin allow-presentation"></iframe>`;
     }
 
     return `<div class="stream-placeholder"><div>▶</div><p>Episode streaming link is not available.</p></div>`;
@@ -417,7 +417,6 @@ function renderStreamButtons() {
 }
 
 function switchSeriesStream(index, isFailover = false) {
-    if (!isFailover) handleClickAd('stream');
     currentSeriesStreamIndex = index;
     const stream = currentStreams[index];
     const episode = getCurrentEpisode();
@@ -466,7 +465,6 @@ function renderEpisodeDownloads() {
 
     grid.querySelectorAll('.download-card').forEach(link => {
         link.addEventListener('click', (event) => {
-            if (handleClickAd('download', link.href)) event.preventDefault();
         });
     });
 }
@@ -666,16 +664,7 @@ function shouldShowClickAd(frequency) {
 }
 
 function handleClickAd(type, targetUrl = '') {
-    if (!currentAds || currentAds.enabled === false) return false;
-    const clickAd = currentAds.clickAd;
-    if (!clickAd || !clickAd.enabled || !clickAd.url) return false;
-    if (type === 'download' && clickAd.applyDownloads === false) return false;
-    if (type === 'stream' && !clickAd.applyStreams) return false;
-    if (!shouldShowClickAd(clickAd.frequency || 'session')) return false;
-
-    window.open(clickAd.url, '_blank', 'noopener,noreferrer');
-    if (targetUrl) setTimeout(() => window.open(targetUrl, '_blank', 'noopener,noreferrer'), 650);
-    return !!targetUrl;
+    return false;
 }
 
 // ─── USER PROGRESS & WATCHLIST (SERIES) ───
