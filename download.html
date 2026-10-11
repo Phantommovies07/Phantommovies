@@ -242,6 +242,10 @@
                 <span>⚡ High Speed Mirror (Server 2)</span>
                 <em>Direct</em>
             </a>
+            <a class="dl-server-btn dl-server-secondary" id="btnWatchOnline" href="#" style="background: rgba(45, 206, 137, 0.12); border-color: rgba(45, 206, 137, 0.3); color: #2dce89;">
+                <span>🎬 Watch Online Now (HD Player Active)</span>
+                <em>Play</em>
+            </a>
         </div>
 
         <!-- Ad Slot: Download Bottom -->
@@ -260,7 +264,10 @@ function getParams() {
         id: p.get('id'),
         quality: p.get('quality') || '720p',
         size: p.get('size') || '',
-        url: p.get('url') || ''
+        url: p.get('url') || '',
+        ep: p.get('ep') || '',
+        s: p.get('s') || '',
+        type: p.get('type') || ''
     };
 }
 
@@ -317,17 +324,27 @@ async function initDownloadPage() {
         const settings = data.settings || {};
 
         if (currentMovie) {
-            document.title = `Download ${currentMovie.title} (${params.quality.toUpperCase()}) - Phantom Movies`;
-            document.getElementById('dlTitle').textContent = currentMovie.title;
+            let displayTitle = currentMovie.title;
+            if (params.type === 'series' || currentMovie.type === 'series') {
+                const epText = params.ep ? `EP ${params.ep}` : '';
+                const sText = params.s ? `S0${params.s}` : 'S01';
+                displayTitle = `${currentMovie.title} (${[sText, epText].filter(Boolean).join(' ')})`.trim();
+            }
+            document.title = `Download ${displayTitle} (${(params.quality || 'HD').toUpperCase()}) - Phantom Movies`;
+            document.getElementById('dlTitle').textContent = displayTitle;
             const poster = currentMovie.poster || currentMovie.banner;
             if (poster) {
                 const posterEl = document.getElementById('dlPoster');
                 posterEl.src = poster;
                 posterEl.style.display = 'block';
             }
-            document.getElementById('dlQualityBadge').textContent = params.quality.toUpperCase();
+            document.getElementById('dlQualityBadge').textContent = (params.quality || 'HD').toUpperCase();
             document.getElementById('dlSizeBadge').textContent = params.size || 'Direct High Speed';
-            document.getElementById('backToMovie').href = (currentMovie.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie.id);
+            const backBtn = document.getElementById('backToMovie');
+            if (backBtn) {
+                backBtn.href = (currentMovie.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie.id);
+                backBtn.textContent = (currentMovie.type === 'series') ? '← Return to Series Episodes' : '← Return to Movie Details';
+            }
         }
 
         // Ads injection
@@ -365,7 +382,7 @@ async function initDownloadPage() {
 
             const validPool = pool.filter(d => d && isValidDownloadUrl(d.url));
             if (!targetDownloadUrl && validPool.length > 0) {
-                const match = validPool.find(d => d.quality && d.quality.toLowerCase().includes(params.quality.toLowerCase()));
+                const match = validPool.find(d => d.quality && d.quality.toLowerCase().includes((params.quality || '').toLowerCase()));
                 if (match) {
                     targetDownloadUrl = match.url;
                     const second = validPool.find(d => d.url !== targetDownloadUrl);
@@ -374,47 +391,40 @@ async function initDownloadPage() {
                     targetDownloadUrl = validPool[0].url;
                     if (validPool.length > 1) mirrorDownloadUrl = validPool[1].url;
                 }
+            } else if (targetDownloadUrl && validPool.length > 0) {
+                const second = validPool.find(d => d.url !== targetDownloadUrl);
+                if (second) mirrorDownloadUrl = second.url;
             }
         }
 
         const watchUrl = (currentMovie?.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie ? currentMovie.id : (params.id || ''));
 
-        if (!targetDownloadUrl) {
-            document.getElementById('timerBox').style.display = 'none';
-            document.getElementById('linksContainer').style.display = 'none';
-
-            const unavailBox = document.createElement('div');
-            unavailBox.style.cssText = 'text-align:center; padding: 25px 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); margin: 20px 0;';
-            unavailBox.innerHTML = `
-                <div style="font-size: 36px; margin-bottom: 12px;">⚡</div>
-                <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px; font-weight: 600;">Download Servers Updating</h3>
-                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin-bottom: 20px;">
-                    Direct cloud download files for this title are currently being processed.<br>
-                    You can watch the full title online in HD right now with zero wait time.
-                </p>
-                <a href="${watchUrl}" class="dl-server-btn dl-server-primary" style="justify-content: center; text-decoration: none; max-width: 340px; margin: 0 auto; display: flex;">
-                    <span>🎬 Watch Online Now (HD Player Active)</span>
-                </a>
-            `;
-            const btmAd = document.getElementById('ad-download-bottom');
-            if (btmAd) {
-                document.getElementById('downloadBox').insertBefore(unavailBox, btmAd);
-            } else {
-                document.getElementById('downloadBox').appendChild(unavailBox);
-            }
-            return;
+        // If direct cloud URL not recorded yet, provide active cloud search mirror
+        if (!targetDownloadUrl && currentMovie) {
+            const cleanTitle = currentMovie.title.replace(/[:\-–—\(\)\d]/g, ' ').trim().split(/\s+/).slice(0, 4).join(' ');
+            targetDownloadUrl = `https://kmmovies.baby/?s=${encodeURIComponent(cleanTitle || currentMovie.title)}`;
+        }
+        if (!mirrorDownloadUrl && currentMovie) {
+            const cleanTitle = currentMovie.title.replace(/[:\-–—\(\)\d]/g, ' ').trim().split(/\s+/).slice(0, 4).join(' ');
+            mirrorDownloadUrl = `https://kmmovies.baby/?s=${encodeURIComponent(cleanTitle || currentMovie.title)}`;
         }
 
-        // Setup Real Download Buttons
+        // Setup Download Buttons
         const btn1 = document.getElementById('btnServer1');
         const btn2 = document.getElementById('btnServer2');
+        const btnWatch = document.getElementById('btnWatchOnline');
         const btnTg = document.getElementById('btnTelegram');
 
         const btn1Span = btn1 ? btn1.querySelector('span') : null;
         const btn2Span = btn2 ? btn2.querySelector('span') : null;
 
-        btn1.href = targetDownloadUrl;
-        if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
+        if (targetDownloadUrl) {
+            btn1.href = targetDownloadUrl;
+            if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
+            btn1.style.display = 'flex';
+        } else {
+            btn1.style.display = 'none';
+        }
 
         if (mirrorDownloadUrl) {
             btn2.href = mirrorDownloadUrl;
@@ -424,7 +434,10 @@ async function initDownloadPage() {
             btn2.style.display = 'none';
         }
 
-        // Hide fake telegram button from download actions
+        if (btnWatch) {
+            btnWatch.href = watchUrl;
+        }
+
         if (btnTg) btnTg.style.display = 'none';
 
         [btn1, btn2].forEach(btn => {

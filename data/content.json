@@ -8677,29 +8677,7 @@
               "url": "https://player.smashystream.com/tv/tt27191658?s=1&e=1"
             }
           ],
-          "downloads": [
-            {
-              "quality": "Season 1 (480p SD)",
-              "size": "1.8 GB",
-              "server": "Fast Cloud Mirror",
-              "url": "download.html?id=tt27191658&quality=s01-480p&size=1.8GB",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "Season 1 (720p HD)",
-              "size": "3.9 GB",
-              "server": "High Speed Cloud",
-              "url": "download.html?id=tt27191658&quality=s01-720p&size=3.9GB",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "Season 1 (1080p FHD)",
-              "size": "8.5 GB",
-              "server": "VIP Fast Server",
-              "url": "download.html?id=tt27191658&quality=s01-1080p&size=8.5GB",
-              "color": "#10b981"
-            }
-          ],
+          "downloads": [],
           "episodes": []
         }
       ],
@@ -8839,31 +8817,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "542.6MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt23846664&quality=480p&size=450MB",
+          "url": "https://w3.magiclinks.lol/68599708658-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt23846664&quality=720p&size=1.2GB",
+          "size": "957.0MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/57884419-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt23846664&quality=1080p&size=2.6GB",
+          "size": "1.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/055074621-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=tt23846664&quality=4k&size=6.4GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -8921,31 +8892,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "1.2GB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt15979666&quality=480p&size=450MB",
+          "url": "https://w3.magiclinks.lol/742112902249696-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt15979666&quality=720p&size=1.2GB",
+          "size": "3.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/030086018574513-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt15979666&quality=1080p&size=2.6GB",
+          "size": "7.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2423243655-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=tt15979666&quality=4k&size=6.4GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -8981,25 +8945,32 @@
       "streams": [],
       "downloads": [
         {
-          "quality": "Season 1 (480p SD)",
-          "size": "1.8 GB",
+          "quality": "480p SD",
+          "size": "1.1GB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt15471900&quality=s01-480p&size=1.8GB",
+          "url": "https://w3.magiclinks.lol/4921319-2/",
           "color": "#ffd70f"
         },
         {
-          "quality": "Season 1 (720p HD)",
-          "size": "3.9 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt15471900&quality=s01-720p&size=3.9GB",
+          "quality": "720p HD",
+          "size": "2.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/237617566404419-2/",
           "color": "#06b6d4"
         },
         {
-          "quality": "Season 1 (1080p FHD)",
-          "size": "8.5 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt15471900&quality=s01-1080p&size=8.5GB",
+          "quality": "1080p Full HD",
+          "size": "7.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/31302321214-2/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "40GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/79120263-2/",
+          "color": "#ec4899"
         }
       ],
       "seasons": [
@@ -9029,29 +9000,7 @@
               "url": "https://player.smashystream.com/tv/tt15471900?s=1&e=1"
             }
           ],
-          "downloads": [
-            {
-              "quality": "Season 1 (480p SD)",
-              "size": "1.8 GB",
-              "server": "Fast Cloud Mirror",
-              "url": "download.html?id=tt15471900&quality=s01-480p&size=1.8GB",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "Season 1 (720p HD)",
-              "size": "3.9 GB",
-              "server": "High Speed Cloud",
-              "url": "download.html?id=tt15471900&quality=s01-720p&size=3.9GB",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "Season 1 (1080p FHD)",
-              "size": "8.5 GB",
-              "server": "VIP Fast Server",
-              "url": "download.html?id=tt15471900&quality=s01-1080p&size=8.5GB",
-              "color": "#10b981"
-            }
-          ],
+          "downloads": [],
           "episodes": []
         }
       ],
@@ -9273,31 +9222,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "418.3MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt25433734&quality=480p&size=450MB",
+          "url": "https://w3.magiclinks.lol/3341057150319-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt25433734&quality=720p&size=1.2GB",
+          "size": "690.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/845220003312165-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt25433734&quality=1080p&size=2.6GB",
+          "size": "2.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/850759443-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=tt25433734&quality=4k&size=6.4GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -9355,31 +9297,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "1.3GB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt1134629&quality=480p&size=450MB",
+          "url": "https://w3.magiclinks.lol/5401343627-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt1134629&quality=720p&size=1.2GB",
+          "size": "2.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/18766697795956-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt1134629&quality=1080p&size=2.6GB",
+          "size": "10.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/20333023479556-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=tt1134629&quality=4k&size=6.4GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -9415,24 +9350,24 @@
       "streams": [],
       "downloads": [
         {
-          "quality": "Season 1 (480p SD)",
-          "size": "1.8 GB",
+          "quality": "480p SD",
+          "size": "602.7MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt27128638&quality=s01-480p&size=1.8GB",
+          "url": "https://w3.magiclinks.lol/58673322-2/",
           "color": "#ffd70f"
         },
         {
-          "quality": "Season 1 (720p HD)",
-          "size": "3.9 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt27128638&quality=s01-720p&size=3.9GB",
+          "quality": "720p HD",
+          "size": "1.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5480281-2/",
           "color": "#06b6d4"
         },
         {
-          "quality": "Season 1 (1080p FHD)",
-          "size": "8.5 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt27128638&quality=s01-1080p&size=8.5GB",
+          "quality": "1080p Full HD",
+          "size": "5.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5637729900220-2/",
           "color": "#10b981"
         }
       ],
@@ -9463,29 +9398,7 @@
               "url": "https://player.smashystream.com/tv/tt27128638?s=1&e=1"
             }
           ],
-          "downloads": [
-            {
-              "quality": "Season 1 (480p SD)",
-              "size": "1.8 GB",
-              "server": "Fast Cloud Mirror",
-              "url": "download.html?id=tt27128638&quality=s01-480p&size=1.8GB",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "Season 1 (720p HD)",
-              "size": "3.9 GB",
-              "server": "High Speed Cloud",
-              "url": "download.html?id=tt27128638&quality=s01-720p&size=3.9GB",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "Season 1 (1080p FHD)",
-              "size": "8.5 GB",
-              "server": "VIP Fast Server",
-              "url": "download.html?id=tt27128638&quality=s01-1080p&size=8.5GB",
-              "color": "#10b981"
-            }
-          ],
+          "downloads": [],
           "episodes": []
         }
       ],
@@ -9625,31 +9538,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "712.3MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=tt0449994&quality=480p&size=450MB",
+          "url": "https://w3.magiclinks.lol/450294578178704-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=tt0449994&quality=720p&size=1.2GB",
+          "size": "1.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/4826263-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=tt0449994&quality=1080p&size=2.6GB",
+          "size": "3.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/82670129242-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=tt0449994&quality=4k&size=6.4GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -11389,31 +11295,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "587.7MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=1791603544614&quality=480pSD&size=450MB",
+          "url": "https://w3.magiclinks.lol/08494860440818-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=1791603544614&quality=720pHD&size=12GB",
+          "size": "1.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/83864978-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=1791603544614&quality=1080pFullHD&size=26GB",
+          "size": "2.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/021237199-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=1791603544614&quality=4KUltraHD&size=64GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -13361,31 +13260,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "566.3MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=1791589486454&quality=480pSD&size=450MB",
+          "url": "https://w3.magiclinks.lol/63325555-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=1791589486454&quality=720pHD&size=12GB",
+          "size": "953.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/664724841-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=1791589486454&quality=1080pFullHD&size=26GB",
+          "size": "1.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/801700760-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "6.4 GB",
-          "server": "Ultra HD Cloud",
-          "url": "download.html?id=1791589486454&quality=4KUltraHD&size=64GB",
-          "color": "#ec4899"
         }
       ],
       "seasons": [],
@@ -28489,31 +28381,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "529.7MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=1791401054476&quality=480pSD&size=450MB",
+          "url": "https://w3.magiclinks.lol/9535586785-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.1 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=1791401054476&quality=720pHD&size=11GB",
+          "size": "925.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/830314406-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.4 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=1791401054476&quality=1080pFullHD&size=24GB",
+          "size": "1.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/070866669187-2/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "7.8 GB",
-          "server": "Ultra High Speed",
-          "url": "download.html?id=1791401054476&quality=4KUltraHD&size=78GB",
-          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -28967,31 +28852,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "450 MB",
+          "size": "607.8MB",
           "server": "Fast Cloud Mirror",
-          "url": "download.html?id=1791399865032&quality=480pSD&size=450MB",
+          "url": "https://w3.magiclinks.lol/0227213964912-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.1 GB",
-          "server": "High Speed Cloud",
-          "url": "download.html?id=1791399865032&quality=720pHD&size=11GB",
+          "size": "1.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2542864-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.4 GB",
-          "server": "VIP Fast Server",
-          "url": "download.html?id=1791399865032&quality=1080pFullHD&size=24GB",
+          "size": "2.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9633985-2/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "7.8 GB",
-          "server": "Ultra High Speed",
-          "url": "download.html?id=1791399865032&quality=4KUltraHD&size=78GB",
-          "color": "#8b5cf6"
+          "size": "14GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5110434053-2/",
+          "color": "#ec4899"
         }
       ],
       "seasons": [],

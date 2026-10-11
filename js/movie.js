@@ -231,12 +231,11 @@ function switchStream(index, isFailover = false) {
 
 
 function generateFallbackDownloads(movie) {
-    const id = movie.id || movie.imdb_id || 'phantom';
     return [
-        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: `download.html?id=${encodeURIComponent(id)}&quality=480p&size=450MB`, color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: `download.html?id=${encodeURIComponent(id)}&quality=720p&size=1.2GB`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Fast Server', url: `download.html?id=${encodeURIComponent(id)}&quality=1080p&size=2.6GB`, color: '#10b981' },
-        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Cloud', url: `download.html?id=${encodeURIComponent(id)}&quality=4k&size=6.4GB`, color: '#ec4899' }
+        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: '', color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: '', color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Fast Server', url: '', color: '#10b981' },
+        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Cloud', url: '', color: '#ec4899' }
     ];
 }
 
@@ -292,7 +291,7 @@ function normalizeDownloads(movie) {
             }
         }
     }
-    return [];
+    return generateFallbackDownloads(movie);
 }
 
 function renderDownloads(movie) {
@@ -304,15 +303,17 @@ function renderDownloads(movie) {
 
     return downloads.map((item, index) => {
         const quality = item.quality || item.label || `Option ${index + 1}`;
-        const server = item.server || '';
+        const server = item.server || 'Fast Cloud';
         const size = item.size || '';
         const color = item.color || '#5bc4f5';
-        return `<a class="download-card" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" data-quality="${escapeHTML(quality)}" style="--download-color:${escapeHTML(color)}">
+        const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
+        const dlLink = `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}`;
+        return `<a class="download-card" href="${dlLink}" target="_blank" rel="noopener noreferrer" data-quality="${escapeHTML(quality)}" style="--download-color:${escapeHTML(color)}">
             <div>
                 <strong>${escapeHTML(quality)}</strong>
                 <span>${escapeHTML([server, size].filter(Boolean).join(' • '))}</span>
             </div>
-            <em>Download</em>
+            <em>Download ⬇</em>
         </a>`;
     }).join('');
 }

@@ -62,6 +62,8 @@ jobs:
           fi
           echo "Fetching $COUNT new titles for category: $CATEGORY..."
           python scripts/auto_sync.py --category "$CATEGORY" --count "$COUNT"
+          echo "Enriching real download servers for newly added titles..."
+          python scripts/enrich_real_links.py || true
 
       - name: 🚀 Commit and Push to Main
         run: |

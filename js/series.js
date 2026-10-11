@@ -107,11 +107,10 @@ function normalizeStreams(episode) {
 
 
 function generateFallbackSeriesDownloads(series, seasonNum = 1) {
-    const id = series?.id || series?.imdb_id || 'phantom';
     return [
-        { quality: `Season ${seasonNum} (480p SD)`, size: '1.8 GB', server: 'Fast Cloud Mirror', url: `download.html?id=${encodeURIComponent(id)}&quality=s0${seasonNum}-480p&size=1.8GB`, color: '#ffd70f' },
-        { quality: `Season ${seasonNum} (720p HD)`, size: '3.9 GB', server: 'High Speed Cloud', url: `download.html?id=${encodeURIComponent(id)}&quality=s0${seasonNum}-720p&size=3.9GB`, color: '#06b6d4' },
-        { quality: `Season ${seasonNum} (1080p FHD)`, size: '8.5 GB', server: 'VIP Fast Server', url: `download.html?id=${encodeURIComponent(id)}&quality=s0${seasonNum}-1080p&size=8.5GB`, color: '#10b981' }
+        { quality: `Season ${seasonNum} (480p SD)`, size: '1.8 GB', server: 'Fast Cloud Mirror', url: '', color: '#ffd70f' },
+        { quality: `Season ${seasonNum} (720p HD)`, size: '3.9 GB', server: 'High Speed Cloud', url: '', color: '#06b6d4' },
+        { quality: `Season ${seasonNum} (1080p FHD)`, size: '8.5 GB', server: 'VIP Fast Server', url: '', color: '#10b981' }
     ];
 }
 
@@ -139,6 +138,15 @@ function isValidDownloadUrl(url) {
     return true;
 }
 
+function generateEpisodeFallbackDownloads(series, seasonNum = 1, epNum = 1) {
+    const id = series?.id || series?.imdb_id || 'phantom';
+    return [
+        { quality: `Episode ${epNum} (480p SD)`, size: '180 MB', server: 'Fast Cloud Mirror', url: '', color: '#ffd70f' },
+        { quality: `Episode ${epNum} (720p HD)`, size: '450 MB', server: 'High Speed Cloud', url: '', color: '#06b6d4' },
+        { quality: `Episode ${epNum} (1080p FHD)`, size: '950 MB', server: 'VIP Fast Server', url: '', color: '#10b981' }
+    ];
+}
+
 function normalizeDownloads(episode) {
     const season = getSeasons()[currentSeasonIndex];
     if (episode && Array.isArray(episode.downloads) && episode.downloads.length) {
@@ -156,7 +164,9 @@ function normalizeDownloads(episode) {
             .filter(d => d && d.url && isValidDownloadUrl(d.url));
         if (valid.length) return valid;
     }
-    return [];
+    const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
+    const sNum = season?.seasonNumber || (currentSeasonIndex + 1);
+    return generateEpisodeFallbackDownloads(currentSeries, sNum, epNum);
 }
 
 function renderSeries(series) {
@@ -426,15 +436,20 @@ function renderEpisodeDownloads() {
 
     grid.innerHTML = downloads.map((item, index) => {
         const quality = item.quality || item.label || `Option ${index + 1}`;
-        const server = item.server || '';
+        const server = item.server || 'Fast Cloud';
         const size = item.size || '';
         const color = item.color || '#5bc4f5';
-        return `<a class="download-card" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" style="--download-color:${escapeHTML(color)}">
+        const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
+        const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
+        const sNum = currentSeasonIndex + 1;
+        const targetUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series`;
+
+        return `<a class="download-card" href="${targetUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:${escapeHTML(color)}">
             <div>
                 <strong>${escapeHTML(quality)}</strong>
                 <span>${escapeHTML([server, size].filter(Boolean).join(' • '))}</span>
             </div>
-            <em>Download</em>
+            <em>Download ⬇</em>
         </a>`;
     }).join('');
 
