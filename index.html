@@ -29,6 +29,8 @@
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f1422">
 <script src="js/ads-loader.js"></script>
 
 </head>
@@ -53,6 +55,7 @@
    <li><a onclick="smoothScroll('#requestSection')">Request</a></li>
  </ul>
  <div class="nav-right">
+   <button class="pwa-install-btn" id="pwaInstallBtn" type="button" title="Install App">📲 App</button>
    <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
    <div class="search-wrap">
      <button class="search-toggle" id="searchToggle" type="button" title="Search">🔍</button>
@@ -97,6 +100,24 @@
  </div>
 </section>
 
+
+<!-- Continue Watching Shelf -->
+<section class="shelf-section fade-in" id="continueWatchingSection" style="display:none;">
+ <div class="sec-header">
+   <div class="sec-title">CONTINUE <span>WATCHING</span></div>
+   <button class="btn-secondary-main" onclick="clearContinueWatching()" style="font-size:11px;padding:4px 12px;">Clear All</button>
+ </div>
+ <div class="shelf-scroll-row" id="continueWatchingRow"></div>
+</section>
+
+<!-- My Watchlist Shelf -->
+<section class="shelf-section fade-in" id="watchlistSection" style="display:none;">
+ <div class="sec-header">
+   <div class="sec-title">MY <span>WATCHLIST</span></div>
+   <button class="btn-secondary-main" onclick="clearWatchlist()" style="font-size:11px;padding:4px 12px;">Clear All</button>
+ </div>
+ <div class="shelf-scroll-row" id="watchlistRow"></div>
+</section>
 
 <!-- Trending Section -->
 <section id="trendingSection" class="trending-section">

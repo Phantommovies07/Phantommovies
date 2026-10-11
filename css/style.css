@@ -1810,3 +1810,314 @@ body.light-theme .slide-overlay span { background: rgba(255,255,255,.78); }
         transform-origin: top right;
     }
 }
+
+/* ═══════════════════════════════════════════════════
+   PREMIUM FEATURE SUITE: SEARCH, WATCHLIST, PWA, BADGES
+   ═══════════════════════════════════════════════════ */
+
+/* ─── LIVE SEARCH AUTOCOMPLETE DROPDOWN ─── */
+.search-results {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(380px, 92vw);
+    max-height: 440px;
+    overflow-y: auto;
+    background: rgba(14, 18, 27, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(24px);
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 20px rgba(91, 196, 245, 0.15);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    padding: 8px;
+    gap: 4px;
+}
+
+.search-results.show {
+    display: flex;
+    animation: dropDownFade 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dropDownFade {
+    from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.search-item:hover, .search-item.selected {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(91, 196, 245, 0.3);
+    transform: translateX(3px);
+}
+
+.search-thumb {
+    width: 44px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+}
+
+.search-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-meta-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.search-meta-sub {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ─── CONTINUE WATCHING & WATCHLIST SECTIONS ─── */
+.shelf-section {
+    padding: 30px 4% 10px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.shelf-scroll-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 12px 4px 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.shelf-scroll-row::-webkit-scrollbar {
+    height: 6px;
+}
+.shelf-scroll-row::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.shelf-card {
+    min-width: 160px;
+    max-width: 160px;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.shelf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    border-color: rgba(91, 196, 245, 0.4);
+}
+
+.shelf-poster {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background: #111522;
+}
+
+.shelf-info {
+    padding: 10px 10px 12px;
+}
+
+.shelf-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shelf-sub {
+    font-size: 10.5px;
+    color: #5bc4f5;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shelf-remove-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s;
+    z-index: 5;
+}
+
+.shelf-card:hover .shelf-remove-btn {
+    opacity: 1;
+}
+
+.shelf-remove-btn:hover {
+    background: #ef4444;
+}
+
+/* ─── DUAL AUDIO & QUALITY PILLS ON MOVIE CARDS ─── */
+.card-pill-stack {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card-pill {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    backdrop-filter: blur(8px);
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.card-pill-dual {
+    background: rgba(6, 182, 212, 0.85);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(6, 182, 212, 0.4);
+}
+
+.card-pill-4k {
+    background: rgba(236, 72, 153, 0.85);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4);
+}
+
+.card-pill-rating {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 215, 15, 0.4);
+    color: #ffd70f;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 6px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    backdrop-filter: blur(6px);
+}
+
+/* ─── WATCHLIST TOGGLE BUTTON (Detail Pages) ─── */
+.btn-watchlist-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-watchlist-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-watchlist-toggle.active {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: rgba(239, 68, 68, 0.45);
+    color: #f87171;
+}
+
+/* ─── EPISODE WATCHED BADGE (Series) ─── */
+.ep-watched-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+
+/* ─── PWA INSTALL BUTTON ─── */
+.pwa-install-btn {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, rgba(91, 196, 245, 0.2), rgba(45, 206, 137, 0.2));
+    border: 1px solid rgba(91, 196, 245, 0.4);
+    color: #5bc4f5;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pwa-install-btn:hover {
+    background: linear-gradient(135deg, rgba(91, 196, 245, 0.35), rgba(45, 206, 137, 0.35));
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(91, 196, 245, 0.3);
+}
+
+.pwa-install-btn.visible {
+    display: inline-flex;
+}
+

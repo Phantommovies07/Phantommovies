@@ -162,12 +162,16 @@ function afterMoviesLoaded() {
     
     // Render home content
     renderCategoryFilters();
+    renderContinueWatching();
+    renderWatchlist();
     renderTrending();
     renderHeroSlider();
     renderMovies(allMovies);
     setupRequestButton();
     initThemeToggle();
     initSearchToggle();
+    initRichSearch();
+    initPWA();
     
     // Hide loading screen immediately - no artificial delay!
     hideLoadingScreen();
@@ -444,10 +448,22 @@ function movieCard(m, forceTrendingBadge = false) {
         ? `<img src="${m.poster}" alt="${m.title}" loading="lazy" decoding="async">` 
         : '';
     
+    const isDual = (m.title && /dual|hindi/i.test(m.title)) || (m.tags && /dual|hindi/i.test(m.tags.join(' '))) || (m.industry === 'Bollywood' || m.industry === 'South');
+    const is4K = (m.badge && /4k/i.test(m.badge)) || (m.title && /4k|2160p/i.test(m.title)) || (Array.isArray(m.downloads) && m.downloads.some(d => /4k|2160p/i.test(d.quality || '')));
+    const ratingTag = m.rating ? `<div class="card-pill-rating">⭐ ${m.rating}</div>` : '';
+
+    const pills = [];
+    if (is4K) pills.push('<span class="card-pill card-pill-4k">4K UHD</span>');
+    if (isDual) pills.push('<span class="card-pill card-pill-dual">Dual Audio</span>');
+
+    const pillStack = pills.length ? `<div class="card-pill-stack">${pills.join('')}</div>` : '';
+
     return `<div class="movie-card" data-id="${m.id}">
         <div class="movie-poster">
             <div class="poster-ph">${img}</div>
             ${badge}
+            ${ratingTag}
+            ${pillStack}
         </div>
         <div class="movie-info">
             <div class="movie-name">${m.title}</div>
@@ -482,80 +498,255 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ─── SEARCH FUNCTIONALITY ───
+// ─── RICH SEARCH & KEYBOARD AUTOCOMPLETE ───
 let searchTimeout;
 
-document.addEventListener('DOMContentLoaded', function() {
+function initRichSearch() {
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
-    
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            clearTimeout(searchTimeout);
-            
-            const query = this.value.trim().toLowerCase();
-            
-            if (!query) {
-                searchResults.classList.remove('show');
+    const searchWrap = document.querySelector('.search-wrap');
+    if (!searchInput || !searchResults || searchInput.dataset.ready === '1') return;
+    searchInput.dataset.ready = '1';
+
+    let selectedIndex = -1;
+
+    searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        const query = this.value.trim().toLowerCase();
+        selectedIndex = -1;
+
+        if (!query) {
+            searchResults.classList.remove('show');
+            searchResults.innerHTML = '';
+            return;
+        }
+
+        searchTimeout = setTimeout(() => {
+            const matches = allMovies.filter(m => 
+                (m.title || '').toLowerCase().includes(query) ||
+                (m.genre || '').toLowerCase().includes(query) ||
+                (m.category || '').toLowerCase().includes(query)
+            ).slice(0, 8);
+
+            if (matches.length === 0) {
+                searchResults.innerHTML = `<div style="padding:16px;text-align:center;color:var(--muted);font-size:12px;">No titles found for "<strong>${query}</strong>"</div>`;
+                searchResults.classList.add('show');
                 return;
             }
-            
-            searchTimeout = setTimeout(() => {
-                const matches = allMovies.filter(m => 
-                    (m.title || '').toLowerCase().includes(query) ||
-                    (m.genre || '').toLowerCase().includes(query)
-                ).slice(0, 8);
-                
-                if (matches.length === 0) {
-                    searchResults.classList.remove('show');
-                    return;
-                }
-                
-                searchResults.innerHTML = matches.map(m => `
-                    <div class="search-item rich-search-item" data-id="${m.id}">
-                        <div class="search-thumb">${m.poster ? `<img src="${m.poster}" alt="${m.title}">` : '🎬'}</div>
-                        <div>
-                            <div style="font-size:13px;font-weight:700">${m.title}</div>
-                            <div style="font-size:11px;color:var(--muted)">${m.type === 'series' ? 'Series' : 'Movie'} • ${m.genre || 'Unknown'} • ${m.year || 'N/A'}</div>
+
+            searchResults.innerHTML = matches.map((m, idx) => `
+                <div class="search-item" data-id="${m.id}" data-idx="${idx}">
+                    <div class="search-thumb">
+                        ${m.poster ? `<img src="${m.poster}" alt="${m.title}">` : '🎬'}
+                    </div>
+                    <div>
+                        <div class="search-meta-title">${m.title}</div>
+                        <div class="search-meta-sub">
+                            <span>${m.type === 'series' ? '📺 Series' : '🎬 Movie'}</span>
+                            <span>•</span>
+                            <span>${m.year || 'N/A'}</span>
+                            ${m.rating ? `<span>• ⭐ ${m.rating}</span>` : ''}
                         </div>
                     </div>
-                `).join('');
-                
-                // Add click listeners to search results
-                searchResults.querySelectorAll('.search-item').forEach(item => {
-                    item.addEventListener('click', function() {
-                        const movieId = this.dataset.id;
-                        const movie = allMovies.find(x => x.id === movieId);
-                        if (movie) {
-                            openMoviePage(movie);
-                            searchResults.classList.remove('show');
-                            searchInput.value = '';
-                        }
-                    });
-                });
-                
-                searchResults.classList.add('show');
-                
-                // Track search with GA4
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'search', {
-                        'search_term': query
-                    });
-                }
-            }, 300);
-        });
-    }
-});
+                </div>
+            `).join('');
 
-// Close search results when clicking outside
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.search-wrap')) {
-        const searchResults = document.getElementById('searchResults');
-        if (searchResults) {
+            searchResults.querySelectorAll('.search-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const mId = this.dataset.id;
+                    const found = allMovies.find(x => String(x.id) === String(mId));
+                    if (found) {
+                        openMoviePage(found);
+                        searchResults.classList.remove('show');
+                        searchInput.value = '';
+                    }
+                });
+            });
+
+            searchResults.classList.add('show');
+        }, 120);
+    });
+
+    searchInput.addEventListener('keydown', function(e) {
+        const items = searchResults.querySelectorAll('.search-item');
+        if (!items.length || !searchResults.classList.contains('show')) {
+            if (e.key === 'Enter') {
+                const q = this.value.trim();
+                if (q) {
+                    smoothScroll('#movies');
+                    const filtered = allMovies.filter(m => (m.title || '').toLowerCase().includes(q.toLowerCase()));
+                    renderMovies(filtered);
+                    searchResults.classList.remove('show');
+                }
+            }
+            return;
+        }
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex + 1) % items.length;
+            items.forEach((it, i) => it.classList.toggle('selected', i === selectedIndex));
+            if (items[selectedIndex]) items[selectedIndex].scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+            items.forEach((it, i) => it.classList.toggle('selected', i === selectedIndex));
+            if (items[selectedIndex]) items[selectedIndex].scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (selectedIndex >= 0 && items[selectedIndex]) {
+                items[selectedIndex].click();
+            } else {
+                const q = this.value.trim();
+                if (q) {
+                    smoothScroll('#movies');
+                    const filtered = allMovies.filter(m => (m.title || '').toLowerCase().includes(q.toLowerCase()));
+                    renderMovies(filtered);
+                    searchResults.classList.remove('show');
+                }
+            }
+        } else if (e.key === 'Escape') {
             searchResults.classList.remove('show');
         }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!searchWrap || !searchWrap.contains(e.target)) {
+            searchResults.classList.remove('show');
+        }
+    });
+}
+
+// ─── CONTINUE WATCHING & WATCHLIST MANAGERS ───
+function getContinueWatching() {
+    try {
+        return JSON.parse(localStorage.getItem('phantom_continue_watching') || '[]');
+    } catch (_) { return []; }
+}
+
+function getWatchlist() {
+    try {
+        return JSON.parse(localStorage.getItem('phantom_watchlist') || '[]');
+    } catch (_) { return []; }
+}
+
+function renderContinueWatching() {
+    const section = document.getElementById('continueWatchingSection');
+    const row = document.getElementById('continueWatchingRow');
+    if (!section || !row) return;
+
+    const list = getContinueWatching();
+    if (!list || !list.length) {
+        section.style.display = 'none';
+        return;
     }
-});
+
+    section.style.display = 'block';
+    row.innerHTML = list.map(item => {
+        const subText = item.type === 'series' && item.episode 
+            ? `S0${item.season || 1} EP ${item.episode}` 
+            : 'Resume Movie';
+        const targetUrl = item.type === 'series' 
+            ? `series.html?id=${encodeURIComponent(item.id)}` 
+            : `movie.html?id=${encodeURIComponent(item.id)}`;
+        return `
+            <div class="shelf-card" onclick="location.href='${targetUrl}'">
+                <button class="shelf-remove-btn" onclick="removeContinueWatching(event, '${item.id}')" title="Remove">✕</button>
+                <img class="shelf-poster" src="${item.poster || item.banner || ''}" alt="${item.title}" loading="lazy">
+                <div class="shelf-info">
+                    <div class="shelf-title">${item.title}</div>
+                    <div class="shelf-sub"><span>▶ ${subText}</span></div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function removeContinueWatching(event, id) {
+    event.stopPropagation();
+    let list = getContinueWatching().filter(x => String(x.id) !== String(id));
+    localStorage.setItem('phantom_continue_watching', JSON.stringify(list));
+    renderContinueWatching();
+}
+
+function clearContinueWatching() {
+    localStorage.removeItem('phantom_continue_watching');
+    renderContinueWatching();
+    showToast('Continue watching cleared');
+}
+
+function renderWatchlist() {
+    const section = document.getElementById('watchlistSection');
+    const row = document.getElementById('watchlistRow');
+    if (!section || !row) return;
+
+    const list = getWatchlist();
+    if (!list || !list.length) {
+        section.style.display = 'none';
+        return;
+    }
+
+    section.style.display = 'block';
+    row.innerHTML = list.map(item => {
+        const targetUrl = item.type === 'series' 
+            ? `series.html?id=${encodeURIComponent(item.id)}` 
+            : `movie.html?id=${encodeURIComponent(item.id)}`;
+        return `
+            <div class="shelf-card" onclick="location.href='${targetUrl}'">
+                <button class="shelf-remove-btn" onclick="removeWatchlist(event, '${item.id}')" title="Remove">✕</button>
+                <img class="shelf-poster" src="${item.poster || item.banner || ''}" alt="${item.title}" loading="lazy">
+                <div class="shelf-info">
+                    <div class="shelf-title">${item.title}</div>
+                    <div class="shelf-sub"><span style="color:#f87171;">❤️ Saved</span><span>⭐ ${item.rating || '8.5'}</span></div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function removeWatchlist(event, id) {
+    event.stopPropagation();
+    let list = getWatchlist().filter(x => String(x.id) !== String(id));
+    localStorage.setItem('phantom_watchlist', JSON.stringify(list));
+    renderWatchlist();
+    showToast('Removed from Watchlist');
+}
+
+function clearWatchlist() {
+    localStorage.removeItem('phantom_watchlist');
+    renderWatchlist();
+    showToast('Watchlist cleared');
+}
+
+// ─── PWA WEB APP MANAGER ───
+function initPWA() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        });
+    }
+
+    let deferredPrompt;
+    const pwaBtn = document.getElementById('pwaInstallBtn');
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (pwaBtn) pwaBtn.classList.add('visible');
+    });
+
+    if (pwaBtn) {
+        pwaBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted' && pwaBtn) pwaBtn.classList.remove('visible');
+                deferredPrompt = null;
+            } else {
+                showToast('To install, open browser options and choose "Add to Home Screen"');
+            }
+        });
+    }
+}
 
 // ─── OPEN MOVIE DETAIL PAGE ───
 function openMoviePage(movie) {

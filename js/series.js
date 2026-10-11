@@ -202,6 +202,11 @@ function renderSeries(series) {
                 ${series.badge ? `<div class="feat-tag">${escapeHTML(series.badge)}</div>` : '<div class="feat-tag">📺 Series</div>'}
                 <h1>${escapeHTML(series.title)}</h1>
                 <p class="detail-meta">${escapeHTML(meta)}</p>
+                <div style="margin: 14px 0 16px;">
+                    <button class="btn-watchlist-toggle" id="btnWatchlistToggle" onclick="toggleWatchlist()">
+                        <span id="watchlistIcon">🤍</span> <span id="watchlistText">Add to Watchlist</span>
+                    </button>
+                </div>
                 <p class="detail-desc">${escapeHTML(series.description || 'No description available.')}</p>
                 ${(series.combined || (series.seasons || []).some(s => s.combined)) ? '<p class="detail-meta" style="margin-top:6px;">🎞 Combined: season ke sab episodes ek hi video file me hain.</p>' : ''}
 
@@ -221,6 +226,7 @@ function renderSeries(series) {
     renderSeasonTabs();
     renderEpisodes();
     playEpisode(0);
+    updateWatchlistButtonState();
     loadAndRenderAds('series');
 
     if (typeof gtag !== 'undefined') {
@@ -332,12 +338,18 @@ function renderEpisodes() {
         return;
     }
 
-    list.innerHTML = episodes.map((ep, index) => `
-        <button class="episode-item ${index === currentEpisodeIndex ? 'active' : ''}" onclick="playEpisode(${index})">
-            <strong>E${escapeHTML(ep.episodeNumber || index + 1)}. ${escapeHTML(ep.title || `Episode ${index + 1}`)}</strong>
-            <span>${escapeHTML(ep.duration || '')}</span>
-        </button>
-    `).join('');
+    const sNum = currentSeasonIndex + 1;
+    list.innerHTML = episodes.map((ep, index) => {
+        const epNum = ep.episodeNumber || index + 1;
+        const watched = isEpisodeWatched(currentSeries.id, sNum, epNum);
+        const watchedTag = watched ? '<span class="ep-watched-badge">✓ Watched</span>' : '';
+        return `
+            <button class="episode-item ${index === currentEpisodeIndex ? 'active' : ''}" onclick="playEpisode(${index})">
+                <strong>E${escapeHTML(epNum)}. ${escapeHTML(ep.title || `Episode ${index + 1}`)} ${watchedTag}</strong>
+                <span>${escapeHTML(ep.duration || '')}</span>
+            </button>
+        `;
+    }).join('');
 }
 
 function playEpisode(index) {
@@ -376,6 +388,11 @@ function playEpisode(index) {
     renderSeriesFailoverBar();
     renderStreamButtons();
     renderEpisodeDownloads();
+
+    const sNum = currentSeasonIndex + 1;
+    const epNum = episode ? (episode.episodeNumber || index + 1) : 1;
+    markEpisodeWatched(currentSeries.id, sNum, epNum);
+    trackSeriesProgress(currentSeries, sNum, epNum);
 
     if (currentStreams[0]) {
         startSeriesFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
@@ -665,4 +682,83 @@ function handleClickAd(type, targetUrl = '') {
     window.open(clickAd.url, '_blank', 'noopener,noreferrer');
     if (targetUrl) setTimeout(() => window.open(targetUrl, '_blank', 'noopener,noreferrer'), 650);
     return !!targetUrl;
+}
+
+// ─── USER PROGRESS & WATCHLIST (SERIES) ───
+function trackSeriesProgress(series, seasonNum, epNum) {
+    if (!series) return;
+    try {
+        let list = JSON.parse(localStorage.getItem('phantom_continue_watching') || '[]');
+        list = list.filter(x => String(x.id) !== String(series.id));
+        list.unshift({
+            id: series.id,
+            title: series.title,
+            poster: series.poster || series.banner || '',
+            banner: series.banner || series.poster || '',
+            type: 'series',
+            season: seasonNum,
+            episode: epNum,
+            timestamp: Date.now()
+        });
+        localStorage.setItem('phantom_continue_watching', JSON.stringify(list.slice(0, 15)));
+    } catch (_) {}
+}
+
+function markEpisodeWatched(seriesId, seasonNum, epNum) {
+    if (!seriesId) return;
+    try {
+        localStorage.setItem(`phantom_watched_${seriesId}_s${seasonNum}_e${epNum}`, 'true');
+    } catch (_) {}
+}
+
+function isEpisodeWatched(seriesId, seasonNum, epNum) {
+    if (!seriesId) return false;
+    try {
+        return localStorage.getItem(`phantom_watched_${seriesId}_s${seasonNum}_e${epNum}`) === 'true';
+    } catch (_) { return false; }
+}
+
+function toggleWatchlist() {
+    if (!currentSeries) return;
+    try {
+        let list = JSON.parse(localStorage.getItem('phantom_watchlist') || '[]');
+        const idx = list.findIndex(x => String(x.id) === String(currentSeries.id));
+        const btn = document.getElementById('btnWatchlistToggle');
+        const icon = document.getElementById('watchlistIcon');
+        const text = document.getElementById('watchlistText');
+        if (idx >= 0) {
+            list.splice(idx, 1);
+            if (btn) btn.classList.remove('active');
+            if (icon) icon.textContent = '🤍';
+            if (text) text.textContent = 'Add to Watchlist';
+            showToast('Removed from Watchlist');
+        } else {
+            list.unshift({
+                id: currentSeries.id,
+                title: currentSeries.title,
+                poster: currentSeries.poster || currentSeries.banner || '',
+                rating: currentSeries.rating || '8.5',
+                type: 'series'
+            });
+            if (btn) btn.classList.add('active');
+            if (icon) icon.textContent = '❤️';
+            if (text) text.textContent = 'In Watchlist';
+            showToast('Saved to Watchlist! ❤️');
+        }
+        localStorage.setItem('phantom_watchlist', JSON.stringify(list.slice(0, 30)));
+    } catch (_) {}
+}
+
+function updateWatchlistButtonState() {
+    if (!currentSeries) return;
+    try {
+        const list = JSON.parse(localStorage.getItem('phantom_watchlist') || '[]');
+        const exists = list.some(x => String(x.id) === String(currentSeries.id));
+        const btn = document.getElementById('btnWatchlistToggle');
+        const icon = document.getElementById('watchlistIcon');
+        const text = document.getElementById('watchlistText');
+        if (btn) btn.classList.toggle('active', exists);
+        if (icon) icon.textContent = exists ? '❤️' : '🤍';
+        if (text) text.textContent = exists ? 'In Watchlist' : 'Add to Watchlist';
+    } catch (_) {}
 }

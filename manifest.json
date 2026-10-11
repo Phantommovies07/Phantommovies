@@ -1,0 +1,19 @@
+{
+  "name": "Phantom Movies - Stream & Download",
+  "short_name": "PhantomMovies",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0d14",
+  "theme_color": "#0f1422",
+  "description": "Stream unlimited HD movies and series with fast cloud downloads.",
+  "categories": ["entertainment", "video", "movies"],
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

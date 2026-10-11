@@ -351,6 +351,11 @@ function renderMovie(movie) {
                 ${movie.badge ? `<div class="feat-tag">${escapeHTML(movie.badge)}</div>` : ''}
                 <h1>${escapeHTML(movie.title)}</h1>
                 <p class="detail-meta">${escapeHTML(meta)}</p>
+                <div style="margin: 14px 0 16px;">
+                    <button class="btn-watchlist-toggle" id="btnWatchlistToggle" onclick="toggleWatchlist()">
+                        <span id="watchlistIcon">🤍</span> <span id="watchlistText">Add to Watchlist</span>
+                    </button>
+                </div>
                 <p class="detail-desc">${escapeHTML(movie.description || 'No description available.')}</p>
 
                 <div class="download-section">
@@ -380,6 +385,9 @@ function renderMovie(movie) {
         startFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
     }
 
+    trackMovieProgress(movie);
+    updateWatchlistButtonState();
+
     if (typeof gtag !== 'undefined') {
         gtag('event', 'movie_detail_view', {
             movie_title: movie.title,
@@ -387,6 +395,68 @@ function renderMovie(movie) {
             genre: movie.genre || ''
         });
     }
+}
+
+// ─── USER PROGRESS & WATCHLIST ───
+function trackMovieProgress(movie) {
+    try {
+        let list = JSON.parse(localStorage.getItem('phantom_continue_watching') || '[]');
+        list = list.filter(x => String(x.id) !== String(movie.id));
+        list.unshift({
+            id: movie.id,
+            title: movie.title,
+            poster: movie.poster || movie.banner || '',
+            banner: movie.banner || movie.poster || '',
+            type: 'movie',
+            timestamp: Date.now()
+        });
+        localStorage.setItem('phantom_continue_watching', JSON.stringify(list.slice(0, 15)));
+    } catch (_) {}
+}
+
+function toggleWatchlist() {
+    if (!currentMovie) return;
+    try {
+        let list = JSON.parse(localStorage.getItem('phantom_watchlist') || '[]');
+        const idx = list.findIndex(x => String(x.id) === String(currentMovie.id));
+        const btn = document.getElementById('btnWatchlistToggle');
+        const icon = document.getElementById('watchlistIcon');
+        const text = document.getElementById('watchlistText');
+        if (idx >= 0) {
+            list.splice(idx, 1);
+            if (btn) btn.classList.remove('active');
+            if (icon) icon.textContent = '🤍';
+            if (text) text.textContent = 'Add to Watchlist';
+            showToast('Removed from Watchlist');
+        } else {
+            list.unshift({
+                id: currentMovie.id,
+                title: currentMovie.title,
+                poster: currentMovie.poster || currentMovie.banner || '',
+                rating: currentMovie.rating || '8.5',
+                type: 'movie'
+            });
+            if (btn) btn.classList.add('active');
+            if (icon) icon.textContent = '❤️';
+            if (text) text.textContent = 'In Watchlist';
+            showToast('Saved to Watchlist! ❤️');
+        }
+        localStorage.setItem('phantom_watchlist', JSON.stringify(list.slice(0, 30)));
+    } catch (_) {}
+}
+
+function updateWatchlistButtonState() {
+    if (!currentMovie) return;
+    try {
+        const list = JSON.parse(localStorage.getItem('phantom_watchlist') || '[]');
+        const exists = list.some(x => String(x.id) === String(currentMovie.id));
+        const btn = document.getElementById('btnWatchlistToggle');
+        const icon = document.getElementById('watchlistIcon');
+        const text = document.getElementById('watchlistText');
+        if (btn) btn.classList.toggle('active', exists);
+        if (icon) icon.textContent = exists ? '❤️' : '🤍';
+        if (text) text.textContent = exists ? 'In Watchlist' : 'Add to Watchlist';
+    } catch (_) {}
 }
 
 

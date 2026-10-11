@@ -55,6 +55,34 @@ def search_kmmovies(title):
     except Exception:
         return None
 
+def resolve_magiclink(url):
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=4)
+        if r.status_code != 200:
+            return url
+        soup = BeautifulSoup(r.text, 'html.parser')
+        # Check for direct CDN / ZIP-ZAP link first
+        for a in soup.find_all('a', href=True):
+            href = a['href']
+            txt = a.get_text(strip=True).upper()
+            if 'DOWNLOAD99' in href or 'ZIP-ZAP' in txt:
+                return href
+        # Check for GoFile 10Gbps next
+        for a in soup.find_all('a', href=True):
+            href = a['href']
+            txt = a.get_text(strip=True).upper()
+            if 'GOFILE' in txt or 'gofile.io' in href:
+                return href
+        # Check for SkyDrop fast cloud
+        for a in soup.find_all('a', href=True):
+            href = a['href']
+            txt = a.get_text(strip=True).upper()
+            if 'SKYDROP' in txt or 'skydrop' in href:
+                return href
+    except Exception:
+        pass
+    return url
+
 def extract_downloads(post_url):
     try:
         r = requests.get(post_url, headers=HEADERS, timeout=6)
@@ -73,11 +101,13 @@ def extract_downloads(post_url):
                     if q_key in text.lower() and q_label not in seen:
                         size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
                         size_str = size_match.group(1).upper() if size_match else ''
+                        final_url = resolve_magiclink(href) if 'magiclinks.lol' in href else href
+                        server_label = 'Direct Cloud (10 Gbps)' if ('download99' in final_url or 'gofile' in final_url) else 'Fast Cloud Mirror'
                         downloads.append({
                             'quality': q_label,
                             'size': size_str,
-                            'server': 'Fast Cloud Mirror',
-                            'url': href,
+                            'server': server_label,
+                            'url': final_url,
                             'color': color
                         })
                         seen.add(q_label)
