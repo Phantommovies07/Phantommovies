@@ -232,11 +232,26 @@ function autoFailoverNext(reason = 'auto') {
 }
 
 function renderStreamButtons() {
-    if (!currentStreams.length || currentStreams.length === 1) return '';
-    return `<div class="stream-server-row">${currentStreams.map((stream, index) => `
-        <button class="stream-server-btn ${index === currentStreamIndex ? 'active' : ''}" onclick="switchStream(${index})">${escapeHTML(stream.name)}</button>
-    `).join('')}</div>`;
+    if (!currentStreams || currentStreams.length <= 1) return '';
+    return `
+        <div class="source-server-card">
+            <div class="source-server-header">
+                <span class="source-server-title">SELECT SOURCE SERVER</span>
+                <span class="source-server-count">${currentStreams.length} SERVERS</span>
+            </div>
+            <div class="stream-server-row">
+                ${currentStreams.map((stream, index) => {
+                    const isNoAds = /no ads/i.test(stream.name);
+                    const activeClass = index === currentStreamIndex ? 'active' : '';
+                    const noAdsClass = isNoAds ? 'no-ads' : '';
+                    const classes = ['stream-server-btn', activeClass, noAdsClass].filter(Boolean).join(' ');
+                    return `<button type="button" class="${classes}" onclick="switchStream(${index})">${escapeHTML(stream.name)}</button>`;
+                }).join('')}
+            </div>
+        </div>
+    `;
 }
+
 
 function switchStream(index, isFailover = false) {
     if (!currentMovie || !currentStreams[index]) return;

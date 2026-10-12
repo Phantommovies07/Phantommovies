@@ -733,23 +733,38 @@ def fetch_real_hdhub4u_downloads(title: str) -> List[Dict]:
         for a in psoup.find_all('a', href=True):
             href = a['href']
             text = a.get_text(strip=True)
-            if not href.startswith('http') or any(x in href for x in ['twitter', 'facebook', 't.me', 'telegram']):
+            if not href.startswith('http') or any(x in href.lower() for x in ['twitter', 'facebook', 't.me', 'telegram', 'hdhub4u.', 'category', 'tag', 'how-to', 'disclaimer']):
                 continue
             is_dl_host = any(h in href.lower() for h in ['hubcdn', 'hubdrive', '4khdhub', 'greenmotors', 'gofile', 'pixeldrain', 'fastdl', 'drive'])
-            if is_dl_host or any(q in text.lower() for q in ['480p', '720p', '1080p', '2160p', '4k', 'hevc', 'download']):
+            if not is_dl_host:
+                continue
+
+            sibs = ' '.join([s.get_text(' ', strip=True) for s in a.find_all_previous(limit=5) if s.get_text(strip=True)])
+            full_ctx = (text + ' ' + sibs).lower()
+
+            matched_quality = None
+            for q_key, q_label, color in QUALITY_ORDER:
+                if q_key in full_ctx and q_label not in seen:
+                    matched_quality = (q_key, q_label, color)
+                    break
+            if not matched_quality:
                 for q_key, q_label, color in QUALITY_ORDER:
-                    if q_key in text.lower() and q_label not in seen:
-                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
-                        size_str = size_match.group(1).upper() if size_match else ''
-                        downloads.append({
-                            'quality': q_label,
-                            'size': size_str,
-                            'server': 'HDHub4u Cloud Mirror',
-                            'url': href,
-                            'color': color
-                        })
-                        seen.add(q_label)
+                    if q_label not in seen:
+                        matched_quality = (q_key, q_label, color)
                         break
+
+            if matched_quality:
+                _, q_label, color = matched_quality
+                size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', full_ctx, re.IGNORECASE)
+                size_str = size_match.group(1).upper() if size_match else ''
+                downloads.append({
+                    'quality': q_label,
+                    'size': size_str,
+                    'server': 'HDHub4u Cloud Mirror',
+                    'url': href,
+                    'color': color
+                })
+                seen.add(q_label)
 
         quality_rank = {'480p SD': 1, '720p HD': 2, '1080p Full HD': 3, '4K Ultra HD': 4}
         downloads.sort(key=lambda d: quality_rank.get(d['quality'], 9))
@@ -790,23 +805,38 @@ def fetch_real_rogmovies_downloads(title: str) -> List[Dict]:
         for a in psoup.find_all('a', href=True):
             href = a['href']
             text = a.get_text(strip=True)
-            if not href.startswith('http') or any(x in href for x in ['twitter', 'facebook', 't.me', 'telegram']):
+            if not href.startswith('http') or any(x in href.lower() for x in ['rogmovies.one', 'category', 'tag', 'movies-by-quality', 'telegram', 'twitter', 'facebook']):
                 continue
             is_dl_host = any(h in href.lower() for h in ['nexdrive', 'hubcloud', 'gofile', 'fastdl', 'drive'])
-            if is_dl_host or any(q in text.lower() for q in ['480p', '720p', '1080p', '2160p', '4k', 'hevc', 'download']):
+            if not is_dl_host:
+                continue
+
+            sibs = ' '.join([s.get_text(' ', strip=True) for s in a.find_all_previous(limit=5) if s.get_text(strip=True)])
+            full_ctx = (text + ' ' + sibs).lower()
+
+            matched_quality = None
+            for q_key, q_label, color in QUALITY_ORDER:
+                if q_key in full_ctx and q_label not in seen:
+                    matched_quality = (q_key, q_label, color)
+                    break
+            if not matched_quality:
                 for q_key, q_label, color in QUALITY_ORDER:
-                    if q_key in text.lower() and q_label not in seen:
-                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
-                        size_str = size_match.group(1).upper() if size_match else ''
-                        downloads.append({
-                            'quality': q_label,
-                            'size': size_str,
-                            'server': 'ROG Fast Cloud',
-                            'url': href,
-                            'color': color
-                        })
-                        seen.add(q_label)
+                    if q_label not in seen:
+                        matched_quality = (q_key, q_label, color)
                         break
+
+            if matched_quality:
+                _, q_label, color = matched_quality
+                size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', full_ctx, re.IGNORECASE)
+                size_str = size_match.group(1).upper() if size_match else ''
+                downloads.append({
+                    'quality': q_label,
+                    'size': size_str,
+                    'server': 'ROG Fast Cloud',
+                    'url': href,
+                    'color': color
+                })
+                seen.add(q_label)
 
         quality_rank = {'480p SD': 1, '720p HD': 2, '1080p Full HD': 3, '4K Ultra HD': 4}
         downloads.sort(key=lambda d: quality_rank.get(d['quality'], 9))

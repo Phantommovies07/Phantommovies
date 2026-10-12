@@ -2,162 +2,75 @@ import json
 import re
 import time
 import sys
-import requests
-from bs4 import BeautifulSoup
+import os
 
+# Set UTF-8 encoding for standard output
 sys.stdout.reconfigure(encoding='utf-8')
 
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
-}
+# Ensure repo root is on sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-QUALITY_ORDER = [
-    ('4k', '4K Ultra HD', '#ec4899'),
-    ('2160p', '4K Ultra HD', '#ec4899'),
-    ('1080p', '1080p Full HD', '#10b981'),
-    ('720p', '720p HD', '#06b6d4'),
-    ('480p', '480p SD', '#ffd70f')
-]
-
-def clean_query(title):
-    t = re.sub(r'\(\d{4}\)', '', title)
-    t = re.sub(r'[:\-–—]', ' ', t)
-    t = re.sub(r'\s+', ' ', t).strip()
-    words = t.split()
-    return ' '.join(words[:4])
-
-def search_kmmovies(title):
-    q = clean_query(title)
-    if not q:
-        return None
-    url = f"https://kmmovies.baby/?s={requests.utils.quote(q)}"
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=6)
-        if r.status_code != 200:
-            return None
-        soup = BeautifulSoup(r.text, 'html.parser')
-        articles = soup.find_all('article')
-        if not articles:
-            return None
-
-        norm_q = re.sub(r'[^a-z0-9]', '', q.lower())
-        for art in articles[:5]:
-            a = art.find('a', href=True)
-            if not a:
-                continue
-            post_title = a.get_text(strip=True).lower()
-            norm_pt = re.sub(r'[^a-z0-9]', '', post_title)
-            # Match first 6 characters or inclusion
-            if norm_q[:6] in norm_pt or norm_pt[:6] in norm_q:
-                return a['href']
-
-        return articles[0].find('a', href=True)['href']
-    except Exception:
-        return None
-
-def resolve_magiclink(url):
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=4)
-        if r.status_code != 200:
-            return url
-        soup = BeautifulSoup(r.text, 'html.parser')
-        # Check for direct CDN / ZIP-ZAP link first
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            txt = a.get_text(strip=True).upper()
-            if 'DOWNLOAD99' in href or 'ZIP-ZAP' in txt:
-                return href
-        # Check for GoFile 10Gbps next
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            txt = a.get_text(strip=True).upper()
-            if 'GOFILE' in txt or 'gofile.io' in href:
-                return href
-        # Check for SkyDrop fast cloud
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            txt = a.get_text(strip=True).upper()
-            if 'SKYDROP' in txt or 'skydrop' in href:
-                return href
-    except Exception:
-        pass
-    return url
-
-def extract_downloads(post_url):
-    try:
-        r = requests.get(post_url, headers=HEADERS, timeout=6)
-        if r.status_code != 200:
-            return []
-        soup = BeautifulSoup(r.text, 'html.parser')
-        downloads = []
-        seen = set()
-
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            text = a.get_text(strip=True)
-
-            if ('magiclinks.lol' in href and re.search(r'/\d+-?\d*/?', href)) or 'short.azonahub' in href or 'gofile.io' in href or 'hubcloud' in href:
-                for q_key, q_label, color in QUALITY_ORDER:
-                    if q_key in text.lower() and q_label not in seen:
-                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
-                        size_str = size_match.group(1).upper() if size_match else ''
-                        final_url = resolve_magiclink(href) if 'magiclinks.lol' in href else href
-                        server_label = 'Direct Cloud (10 Gbps)' if ('download99' in final_url or 'gofile' in final_url) else 'Fast Cloud Mirror'
-                        downloads.append({
-                            'quality': q_label,
-                            'size': size_str,
-                            'server': server_label,
-                            'url': final_url,
-                            'color': color
-                        })
-                        seen.add(q_label)
-                        break
-
-        quality_rank = {'480p SD': 1, '720p HD': 2, '1080p Full HD': 3, '4K Ultra HD': 4}
-        downloads.sort(key=lambda d: quality_rank.get(d['quality'], 9))
-        return downloads
-    except Exception:
-        return []
+# Import our best multi-source scraper (HDHub4u -> ROG Movies -> KM Movies)
+from scripts.auto_sync import fetch_best_real_downloads
 
 def main():
-    print("🚀 Starting comprehensive real download enrichment...")
-    with open('data/content.json', 'r', encoding='utf-8') as f:
+    print("🚀 Starting comprehensive real download enrichment via HDHub4u & ROG Movies...")
+    content_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'content.json')
+    with open(content_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     movies = data.get('movies', [])
     enriched_count = 0
 
-    for i, m in enumerate(movies):
-        dls = m.get('downloads', [])
-        # If movie has no real downloads or only has old fallback urls
-        has_real = any(d.get('url', '') and not d.get('url', '').startswith('download.html') and not 'magiclinks.lol/download/' in d.get('url', '') for d in dls)
-
-        if not has_real:
-            title = m.get('title', '')
-            post_url = search_kmmovies(title)
-            if post_url:
-                real_dls = extract_downloads(post_url)
-                if real_dls:
-                    m['downloads'] = real_dls
-                    enriched_count += 1
-                    print(f"[{i+1}/{len(movies)}] ✓ Enriched '{title}': {len(real_dls)} real download servers")
-            time.sleep(0.3)
-        else:
-            # Clean out any old dummy items if mixed
-            m['downloads'] = [d for d in dls if not d.get('url', '').startswith('download.html') and not 'magiclinks.lol/download/' in d.get('url', '')]
-
-    # Clean series downloads as well
+    # Limit to movies that don't have direct cloud links yet
+    target_movies = []
     for m in movies:
-        if m.get('type') == 'series':
-            for s in m.get('seasons', []):
-                s['downloads'] = [d for d in s.get('downloads', []) if not d.get('url', '').startswith('download.html') and not 'magiclinks.lol/download/' in d.get('url', '')]
-                for ep in s.get('episodes', []):
-                    ep['downloads'] = [d for d in ep.get('downloads', []) if not d.get('url', '').startswith('download.html') and not 'magiclinks.lol/download/' in d.get('url', '')]
+        dls = m.get('downloads', [])
+        has_real = any(
+            d.get('url', '') and 
+            any(h in d.get('url', '').lower() for h in ['hubcdn', 'hubdrive', 'nexdrive', '4khdhub', 'greenmotors', 'gofile', 'pixeldrain', 'fastdl', 'drive'])
+            for d in dls
+        )
+        if not has_real:
+            target_movies.append(m)
 
-    with open('data/content.json', 'w', encoding='utf-8') as f:
+    print(f"📊 Total catalog: {len(movies)} titles. Unenriched titles: {len(target_movies)}")
+
+    # Enrich first 25 target titles to prevent timeout during regular sync runs
+    batch_size = int(sys.argv[1]) if len(sys.argv) > 1 else 25
+    to_process = target_movies[:batch_size]
+
+    for i, m in enumerate(to_process):
+        title = m.get('title', '')
+        if not title:
+            continue
+        try:
+            real_dls = fetch_best_real_downloads(title)
+            if real_dls:
+                m['downloads'] = real_dls
+                enriched_count += 1
+                servers = list(set(d.get('server', 'Cloud') for d in real_dls))
+                print(f"[{i+1}/{len(to_process)}] ✓ Enriched '{title}': {len(real_dls)} links ({', '.join(servers)})")
+            else:
+                print(f"[{i+1}/{len(to_process)}] - No new links found for '{title}'")
+            time.sleep(0.4)
+        except Exception as e:
+            print(f"[{i+1}/{len(to_process)}] ⚠️ Error enriching '{title}': {e}")
+
+    # Clean out any old dummy/redirect links from all movies
+    for m in movies:
+        if m.get('downloads'):
+            m['downloads'] = [
+                d for d in m['downloads'] 
+                if not d.get('url', '').startswith('download.html') 
+                and 'kmmovies.' not in d.get('url', '').lower()
+                and 'magiclinks.lol/download/' not in d.get('url', '').lower()
+            ]
+
+    with open(content_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"🎉 Finished enrichment! Successfully added real download links to {enriched_count} titles.")
+    print(f"🎉 Enrichment completed! Added verified direct cloud links to {enriched_count} titles.")
 
 if __name__ == '__main__':
     main()

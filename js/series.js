@@ -452,14 +452,28 @@ function renderStreamButtons() {
     const wrap = document.getElementById('seriesStreamButtons');
     if (!wrap) return;
 
-    if (currentStreams.length <= 1) {
+    if (!currentStreams || currentStreams.length <= 1) {
         wrap.innerHTML = '';
         return;
     }
 
-    wrap.innerHTML = `<div class="stream-server-row">${currentStreams.map((stream, index) => `
-        <button class="stream-server-btn ${index === currentSeriesStreamIndex ? 'active' : ''}" onclick="switchSeriesStream(${index})">${escapeHTML(stream.name)}</button>
-    `).join('')}</div>`;
+    wrap.innerHTML = `
+        <div class="source-server-card">
+            <div class="source-server-header">
+                <span class="source-server-title">SELECT SOURCE SERVER</span>
+                <span class="source-server-count">${currentStreams.length} SERVERS</span>
+            </div>
+            <div class="stream-server-row">
+                ${currentStreams.map((stream, index) => {
+                    const isNoAds = /no ads/i.test(stream.name);
+                    const activeClass = index === currentSeriesStreamIndex ? 'active' : '';
+                    const noAdsClass = isNoAds ? 'no-ads' : '';
+                    const classes = ['stream-server-btn', activeClass, noAdsClass].filter(Boolean).join(' ');
+                    return `<button type="button" class="${classes}" onclick="switchSeriesStream(${index})">${escapeHTML(stream.name)}</button>`;
+                }).join('')}
+            </div>
+        </div>
+    `;
 }
 
 function switchSeriesStream(index, isFailover = false) {
