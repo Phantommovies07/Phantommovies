@@ -1,6 +1,1231 @@
 {
   "movies": [
     {
+      "id": "1791776138803",
+      "type": "movie",
+      "title": "G2",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmJhNWZjYWQtYzRmMS00MDhkLWJkYjgtOTc2ZTJjNmYwODg1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZmJhNWZjYWQtYzRmMS00MDhkLWJkYjgtOTc2ZTJjNmYwODg1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/7943460544865255968?dp=bang-dream-6PsYlrh8Ns9&t=G2",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7943460544865255968?dp=bang-dream-6PsYlrh8Ns9&t=G2"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt11306406"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt11306406&tmdb_id=69236"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt11306406"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt11306406"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/69236"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt11306406"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "405.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/40820751-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "765.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/386499297732-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.0GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5605594-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=G2+2026+trailer",
+      "description": "G2 (2026) starring Wamiqa Gabbi, Emraan Hashmi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5775,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11306406",
+      "tmdb_id": "69236",
+      "createdAt": "2026-10-12T03:35:38.036808+00:00",
+      "updatedAt": "2026-10-12T03:35:38.036808+00:00"
+    },
+    {
+      "id": "1791776136437",
+      "type": "movie",
+      "title": "Shubh Mangal Savdhan",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTY1MzJiZjktNjRiYS00NWIzLThmNTYtMWYzNGJiNDZkMzhhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTY1MzJiZjktNjRiYS00NWIzLThmNTYtMWYzNGJiNDZkMzhhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/471892",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/471892"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt6971752"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt6971752&tmdb_id=471892"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt6971752"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt6971752"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/471892"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt6971752"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Shubh+Mangal+Savdhan+2017+trailer",
+      "description": "Shubh Mangal Savdhan (2017) starring Ayushmann Khurrana, Bhumi Satish Pednekkar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7825,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6971752",
+      "tmdb_id": "471892",
+      "createdAt": "2026-10-12T03:35:36.357300+00:00",
+      "updatedAt": "2026-10-12T03:35:36.357300+00:00"
+    },
+    {
+      "id": "1791776139668",
+      "type": "movie",
+      "title": "Balagam",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjUwNGM0ODctMWNlOC00NzY5LWI0ZjctMmU0NTUwMDhiM2FhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjUwNGM0ODctMWNlOC00NzY5LWI0ZjctMmU0NTUwMDhiM2FhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1092632",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1092632"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt26690825"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt26690825&tmdb_id=1092632"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt26690825"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt26690825"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1092632"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt26690825"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Balagam+2023+trailer",
+      "description": "Balagam (2023) starring Priyadarshi Pulikonda, Kavya Kalyanram.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10051,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26690825",
+      "tmdb_id": "1092632",
+      "createdAt": "2026-10-12T03:35:34.543107+00:00",
+      "updatedAt": "2026-10-12T03:35:34.543107+00:00"
+    },
+    {
+      "id": "1791776140118",
+      "type": "movie",
+      "title": "Newton",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzI1NDVhMDYtYjM0Ni00NzI2LWI1YTAtOGIxYzA0ZTlkMjU1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzI1NDVhMDYtYjM0Ni00NzI2LWI1YTAtOGIxYzA0ZTlkMjU1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/75574",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/75574"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt6484982"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt6484982&tmdb_id=75574"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt6484982"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt6484982"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/75574"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt6484982"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "522.6MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/550074098320-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "533.6MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/202406432-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/6756136-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "17.63 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/6895127711-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Newton+2017+trailer",
+      "description": "Newton (2017) starring Rajkummar Rao, Pankaj Tripathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12302,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt6484982",
+      "tmdb_id": "75574",
+      "createdAt": "2026-10-12T03:35:31.622496+00:00",
+      "updatedAt": "2026-10-12T03:35:31.622496+00:00"
+    },
+    {
+      "id": "1791776136220",
+      "type": "movie",
+      "title": "Dream Girl",
+      "genre": "Feature",
+      "year": 2019,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTlmOGQ1MTktYjI2Mi00ZWUzLWEzNDQtMTdlYzcyMGUxNDg0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTlmOGQ1MTktYjI2Mi00ZWUzLWEzNDQtMTdlYzcyMGUxNDg0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/7957096611837347184?dp=dream-girl-s094V2oANt9&t=Dream%20Girl",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7957096611837347184?dp=dream-girl-s094V2oANt9&t=Dream%20Girl"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt9248940"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt9248940&tmdb_id=1771486"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt9248940"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt9248940"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1771486"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt9248940"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "403.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/166537335-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "679.5MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/05041931544691-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/67790395178658-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dream+Girl+2019+trailer",
+      "description": "Dream Girl (2019) starring Ayushmann Khurrana, Nushrratt Bharuccha.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21754,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9248940",
+      "tmdb_id": "1771486",
+      "createdAt": "2026-10-12T03:35:26.524422+00:00",
+      "updatedAt": "2026-10-12T03:35:26.524422+00:00"
+    },
+    {
+      "id": "1791776125783",
+      "type": "movie",
+      "title": "Star Wars: The Mandalorian and Grogu",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjRkYzAzNjktZmRhMy00NjRiLWE0OTMtYmRmMTE5NDkzY2NlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjRkYzAzNjktZmRhMy00NjRiLWE0OTMtYmRmMTE5NDkzY2NlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/7839949827281931040?dp=star-wars-qnfT5dj39l9&t=Star%20Wars%3A%20The%20Mandalorian%20and%20Grogu",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7839949827281931040?dp=star-wars-qnfT5dj39l9&t=Star%20Wars%3A%20The%20Mandalorian%20and%20Grogu"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt30825738"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt30825738&tmdb_id=11"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt30825738"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt30825738"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/11"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt30825738"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "606.9MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1655432466-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1002.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/0388013-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/223099380-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "23.37 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/4896614233148-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Star+Wars:+The+Mandalorian+and+Grogu+2026+trailer",
+      "description": "Star Wars: The Mandalorian and Grogu (2026) starring Pedro Pascal, Brendan Wayne.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16326,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt30825738",
+      "tmdb_id": "11",
+      "createdAt": "2026-10-12T03:35:22.718062+00:00",
+      "updatedAt": "2026-10-12T03:35:22.718062+00:00"
+    },
+    {
+      "id": "1791776125254",
+      "type": "movie",
+      "title": "Blue Star",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWE4ZjMzYjEtZjUxNi00NWUwLThiZWUtYmQwYWFlODc0NjMzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWE4ZjMzYjEtZjUxNi00NWUwLThiZWUtYmQwYWFlODc0NjMzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/2980945413190157784?dp=doctor-who-EqTPSEdLcy3&t=Blue%20Star",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/2980945413190157784?dp=doctor-who-EqTPSEdLcy3&t=Blue%20Star"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt15440460"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt15440460&tmdb_id=239770"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt15440460"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt15440460"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/239770"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt15440460"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "546.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/606818243-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "920.1MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/54306737610-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9103941934057-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "12.20 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/51228686-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Blue+Star+2024+trailer",
+      "description": "Blue Star (2024) starring Ashok Selvan, Bagavathi Perumal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21060,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15440460",
+      "tmdb_id": "239770",
+      "createdAt": "2026-10-12T03:35:16.182305+00:00",
+      "updatedAt": "2026-10-12T03:35:16.182305+00:00"
+    },
+    {
+      "id": "1791776120506",
+      "type": "movie",
+      "title": "AT&T - Businessman",
+      "genre": "Short",
+      "year": 2009,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTE2MGUxOWItNTExYS00YTg1LTgxZDAtNzA5YjM2M2QzYzBiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTE2MGUxOWItNTExYS00YTg1LTgxZDAtNzA5YjM2M2QzYzBiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt18308220",
+      "streams": [
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt18308220"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt18308220&tmdb_id="
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt18308220"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt18308220"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/tt18308220"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt18308220"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=AT&T+-+Businessman+2009+trailer",
+      "description": "AT&T - Businessman (2009) starring .",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14872,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt18308220",
+      "tmdb_id": "",
+      "createdAt": "2026-10-12T03:35:14.295740+00:00",
+      "updatedAt": "2026-10-12T03:35:14.295740+00:00"
+    },
+    {
+      "id": "1791776119618",
+      "type": "movie",
+      "title": "Merry Christmas Mr. Lawrence",
+      "genre": "Feature",
+      "year": 1983,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYWU3NzRlZTktZWFjMC00OWYzLTkzZTItMjI5Mjg5YmJjNGEzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYWU3NzRlZTktZWFjMC00OWYzLTkzZTItMjI5Mjg5YmJjNGEzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/5114385152713574888?dp=merry-christmas-mr-lawrence-WRieqFaWN56&t=Merry%20Christmas%20Mr.%20Lawrence",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/5114385152713574888?dp=merry-christmas-mr-lawrence-WRieqFaWN56&t=Merry%20Christmas%20Mr.%20Lawrence"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt0085933"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt0085933&tmdb_id=11948"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt0085933"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt0085933"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/11948"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt0085933"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Merry+Christmas+Mr.+Lawrence+1983+trailer",
+      "description": "Merry Christmas Mr. Lawrence (1983) starring David Bowie, Tom Conti.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24276,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0085933",
+      "tmdb_id": "11948",
+      "createdAt": "2026-10-12T03:35:11.281030+00:00",
+      "updatedAt": "2026-10-12T03:35:11.281030+00:00"
+    },
+    {
+      "id": "1791776112908",
+      "type": "movie",
+      "title": "Pippa",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDA1NmZmYzQtMDdmMi00ZDNhLThiZTktMGVmYjFhNzhmZTMxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDA1NmZmYzQtMDdmMi00ZDNhLThiZTktMGVmYjFhNzhmZTMxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/429754",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/429754"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt12887208"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt12887208&tmdb_id=429754"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt12887208"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt12887208"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/429754"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt12887208"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "393.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5983110722283-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.0GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/78445184558587-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.9GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/839885006-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Pippa+2023+trailer",
+      "description": "Pippa (2023) starring Ishaan Khatter, Mrunal Thakur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6580,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12887208",
+      "tmdb_id": "429754",
+      "createdAt": "2026-10-12T03:35:08.758347+00:00",
+      "updatedAt": "2026-10-12T03:35:08.758347+00:00"
+    },
+    {
+      "id": "1791776109790",
+      "type": "series",
+      "title": "Human Planet",
+      "genre": "Tv Mini-Series",
+      "year": 2011,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDYxN2U4YjEtZmZjYS00NmJkLTg3Y2EtZjFmNmFiNmExMDMwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDYxN2U4YjEtZmZjYS00NmJkLTg3Y2EtZjFmNmFiNmExMDMwXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/watch-tmdb/32062?type=tv&se=1&ep=1"
+            },
+            {
+              "name": "Server 2 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt1806234&s=1&e=1"
+            },
+            {
+              "name": "Server 3 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt1806234/1/1"
+            },
+            {
+              "name": "Server 4 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt1806234&s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Ultra)",
+              "url": "https://player.smashystream.com/tv/32062?s=1&e=1"
+            },
+            {
+              "name": "Server 6 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt1806234/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Human+Planet+2011+trailer",
+      "description": "Human Planet (2011) starring John Hurt, Roger Munns.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14651,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1806234",
+      "tmdb_id": "32062",
+      "createdAt": "2026-10-12T03:35:06.244555+00:00",
+      "updatedAt": "2026-10-12T03:35:06.244555+00:00"
+    },
+    {
+      "id": "1791776105105",
+      "type": "series",
+      "title": "Ray Gunn",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTE5OTkyYzYtOWVmZS00Y2E2LTk2NmMtZmE4Y2NkYTI2M2ZmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTE5OTkyYzYtOWVmZS00Y2E2LTk2NmMtZmE4Y2NkYTI2M2ZmXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "413.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/12914407467-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "685.8MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/282735150-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5611958414-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "15.22GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/846663574626-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/watch-tmdb/940009?type=tv&se=1&ep=1"
+            },
+            {
+              "name": "Server 2 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt18270542&s=1&e=1"
+            },
+            {
+              "name": "Server 3 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt18270542/1/1"
+            },
+            {
+              "name": "Server 4 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt18270542&s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Ultra)",
+              "url": "https://player.smashystream.com/tv/940009?s=1&e=1"
+            },
+            {
+              "name": "Server 6 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt18270542/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "413.2MB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/12914407467-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "685.8MB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/282735150-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/5611958414-2/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "15.22GB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/846663574626-2/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ray+Gunn+2026+trailer",
+      "description": "Ray Gunn (2026) starring Sam Rockwell, Scarlett Johansson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15759,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt18270542",
+      "tmdb_id": "940009",
+      "createdAt": "2026-10-12T03:35:04.040932+00:00",
+      "updatedAt": "2026-10-12T03:35:04.040932+00:00"
+    },
+    {
+      "id": "1791776105055",
+      "type": "movie",
+      "title": "Baby Driver",
+      "genre": "Feature",
+      "year": 2017,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/269208047602516216?dp=baby-driver-StlxZDuYSj&t=Baby%20Driver",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/269208047602516216?dp=baby-driver-StlxZDuYSj&t=Baby%20Driver"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt3890160"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt3890160&tmdb_id=339403"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt3890160"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt3890160"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/339403"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt3890160"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "517.4MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/115754613-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/10033719518219-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/21019954133-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "21.65 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/010979182416-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Baby+Driver+2017+trailer",
+      "description": "Baby Driver (2017) starring Ansel Elgort, Jon Bernthal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21498,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt3890160",
+      "tmdb_id": "339403",
+      "createdAt": "2026-10-12T03:35:01.137835+00:00",
+      "updatedAt": "2026-10-12T03:35:01.137835+00:00"
+    },
+    {
+      "id": "1791776100405",
+      "type": "movie",
+      "title": "The World's Fastest Indian",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2IwYTI1MzMtYWYzMC00Y2I5LWJlODUtMTQwMTYwNjY4MTg3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BN2IwYTI1MzMtYWYzMC00Y2I5LWJlODUtMTQwMTYwNjY4MTg3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/9912",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/9912"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt0412080"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt0412080&tmdb_id=9912"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt0412080"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt0412080"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/9912"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt0412080"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "1.12 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/96988249128722-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.57 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/607990315907-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+World's+Fastest+Indian+2005+trailer",
+      "description": "The World's Fastest Indian (2005) starring Anthony Hopkins, Diane Ladd.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16681,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0412080",
+      "tmdb_id": "9912",
+      "createdAt": "2026-10-12T03:34:58.066184+00:00",
+      "updatedAt": "2026-10-12T03:34:58.066184+00:00"
+    },
+    {
+      "id": "1791776090355",
+      "type": "series",
+      "title": "Private Eyes",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/042325407443-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/37595231-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5021521-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/3142864047087962600?dp=the-private-eyes-ajvlD0KlaK3&t=Private%20Eyes"
+            },
+            {
+              "name": "Server 2 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 3 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt5722298/1/1"
+            },
+            {
+              "name": "Server 4 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Ultra)",
+              "url": "https://player.smashystream.com/tv/13762?s=1&e=1"
+            },
+            {
+              "name": "Server 6 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt5722298/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+2016+trailer",
+      "description": "Private Eyes (2016) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12558,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5722298",
+      "tmdb_id": "13762",
+      "createdAt": "2026-10-12T03:34:43.160152+00:00",
+      "updatedAt": "2026-10-12T03:34:43.160152+00:00"
+    },
+    {
       "id": "1791760865768",
       "type": "movie",
       "title": "Chhaava",
@@ -45311,8 +46536,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 527,
-    "lastUpdated": "2026-10-11T23:21:04.417337+00:00",
+    "totalMovies": 542,
+    "lastUpdated": "2026-10-12T03:35:39.341031+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
