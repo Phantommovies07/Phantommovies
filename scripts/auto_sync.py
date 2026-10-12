@@ -76,23 +76,33 @@ def resolve_netmirror_meta(title: str, year: int = None) -> Optional[Dict]:
     return None
 
 def generate_stream_servers(imdb_id: str, tmdb_id: str = "", netmirror_url: str = "") -> Tuple[str, List[Dict]]:
-    """Generates stealth whitelisted multi-server movie streaming embed links with NetMirror VIP."""
+    """Generates stealth whitelisted multi-server movie streaming embed links with NetMirror VIP and Ad-Free aggregators."""
     servers = []
     if netmirror_url:
         servers.append({"name": "Server 1 (VIP Ultra HD)", "url": netmirror_url})
     elif tmdb_id:
         servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}"})
 
-    fallback_vidlink = f"https://vidlink.pro/movie/{imdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"
+    if tmdb_id:
+        servers.append({"name": "Server 2 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/movie/{tmdb_id}"})
+        servers.append({"name": "Server 3 (MoviesAPI - No Ads)", "url": f"https://moviesapi.club/movie/{tmdb_id}"})
+        servers.append({"name": "Server 4 (Mapple - No Ads)", "url": f"https://mapple.tv/embed/movie/{tmdb_id}"})
+        servers.append({"name": "Server 5 (AutoEmbed)", "url": f"https://player.autoembed.cc/embed/movie/{tmdb_id}"})
+        servers.append({"name": "Server 6 (VidEasy)", "url": f"https://player.videasy.net/movie/{tmdb_id}"})
+    if imdb_id:
+        servers.append({"name": "Server 7 (VidLink)", "url": f"https://vidlink.pro/movie/{imdb_id}"})
+    if tmdb_id:
+        servers.append({"name": "Server 8 (VixSrc)", "url": f"https://vixsrc.to/embed/movie/{tmdb_id}"})
     servers.extend([
-        {"name": "Server 2 (HD)", "url": fallback_vidlink},
-        {"name": "Server 3 (Fast)", "url": f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
-        {"name": "Server 4 (VIP)", "url": f"https://www.2embed.cc/embed/{imdb_id or tmdb_id}"},
-        {"name": "Server 5 (Ultra)", "url": f"https://vidsrc.pm/embed/movie/{imdb_id or tmdb_id}"},
-        {"name": "Server 6 (Cloud)", "url": f"https://player.smashystream.com/movie/{tmdb_id or imdb_id}"},
-        {"name": "Server 7 (Backup)", "url": f"https://www.nontongo.win/embed/movie/{imdb_id or tmdb_id}"}
+        {"name": "Server 9 (MultiEmbed)", "url": f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
+        {"name": "Server 10 (2Embed)", "url": f"https://www.2embed.cc/embed/{imdb_id or tmdb_id}"},
+        {"name": "Server 11 (VidSrc Embed)", "url": f"https://vidsrc.me/embed/movie?imdb={imdb_id or tmdb_id}"}
     ])
-    primary_url = servers[0]["url"]
+    if tmdb_id:
+        servers.append({"name": "Server 12 (111Movies)", "url": f"https://111movies.com/movie/{tmdb_id}"})
+        servers.append({"name": "Server 13 (PrimeSrc)", "url": f"https://primesrc.net/embed/movie/{tmdb_id}"})
+
+    primary_url = servers[0]["url"] if servers else ""
     return primary_url, servers
 
 def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1, netmirror_url: str = "") -> List[Dict]:
@@ -105,14 +115,24 @@ def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1,
     elif tmdb_id:
         servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}?type=tv&se={s}&ep={e}"})
 
-    primary_url = f"https://multiembed.mov/?video_id={imdb_id}&s={s}&e={e}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}&s={s}&e={e}"
+    if tmdb_id:
+        servers.append({"name": "Server 2 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/tv/{tmdb_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 3 (MoviesAPI - No Ads)", "url": f"https://moviesapi.club/tv/{tmdb_id}-{s}-{e}"})
+        servers.append({"name": "Server 4 (Mapple - No Ads)", "url": f"https://mapple.tv/embed/tv/{tmdb_id}/{s}/{e}"})
+        servers.append({"name": "Server 5 (AutoEmbed)", "url": f"https://player.autoembed.cc/embed/tv/{tmdb_id}/{s}/{e}"})
+        servers.append({"name": "Server 6 (VidEasy)", "url": f"https://player.videasy.net/tv/{tmdb_id}/{s}/{e}"})
+    if imdb_id:
+        servers.append({"name": "Server 7 (VidLink)", "url": f"https://vidlink.pro/tv/{imdb_id}/{s}/{e}"})
+    if tmdb_id:
+        servers.append({"name": "Server 8 (VixSrc)", "url": f"https://vixsrc.to/embed/tv/{tmdb_id}/{s}/{e}"})
     servers.extend([
-        {"name": "Server 2 (HD)", "url": primary_url},
-        {"name": "Server 3 (Fast)", "url": f"https://vidsrc.pm/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"},
-        {"name": "Server 4 (VIP)", "url": f"https://www.2embed.cc/embedtv/{imdb_id or tmdb_id}&s={s}&e={e}"},
-        {"name": "Server 5 (Ultra)", "url": f"https://player.smashystream.com/tv/{tmdb_id or imdb_id}?s={s}&e={e}"},
-        {"name": "Server 6 (Cloud)", "url": f"https://www.nontongo.win/embed/tv/{imdb_id or tmdb_id}/{s}/{e}"}
+        {"name": "Server 9 (MultiEmbed)", "url": f"https://multiembed.mov/?video_id={imdb_id}&s={s}&e={e}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}&s={s}&e={e}"},
+        {"name": "Server 10 (2Embed)", "url": f"https://www.2embed.cc/embedtv/{imdb_id or tmdb_id}&s={s}&e={e}"},
+        {"name": "Server 11 (VidSrc Embed)", "url": f"https://vidsrc.me/embed/tv?imdb={imdb_id or tmdb_id}&season={s}&episode={e}"}
     ])
+    if tmdb_id:
+        servers.append({"name": "Server 12 (111Movies)", "url": f"https://111movies.com/tv/{tmdb_id}/{s}/{e}"})
+        servers.append({"name": "Server 13 (PrimeSrc)", "url": f"https://primesrc.net/embed/tv/{tmdb_id}/{s}/{e}"})
     return servers
 
 class IMDbSearchEngine:
@@ -625,11 +645,27 @@ class MirrorEngine:
         self._active_vega = active
         return active
 
+    def get_active_hdhub4u(self) -> str:
+        hd_cfg = self.mirrors_data.get("scrapers", {}).get("hdhub4u", {})
+        active = hd_cfg.get("active", "https://new3.hdhub4u.free")
+        # Try dynamic host resolver first
+        try:
+            r = requests.get("https://h4.suncdn.org/host/", headers=HEADERS, timeout=4)
+            if r.status_code == 200:
+                import base64
+                d = r.json()
+                t = base64.b64decode(d.get("c", "")).decode().split('?')[0].rstrip('/')
+                if t.startswith("http"):
+                    return t
+        except Exception:
+            pass
+        return active
+
     def get_active_rog(self) -> str:
         if self._active_rog:
             return self._active_rog
         rog_cfg = self.mirrors_data.get("scrapers", {}).get("rogmovies", {})
-        active = rog_cfg.get("active", "https://rogmovies.in")
+        active = rog_cfg.get("active", "https://rogmovies.one")
         mirrors = rog_cfg.get("mirrors", [active])
         candidates = [active] + [m for m in mirrors if m != active]
         for c in candidates:
@@ -648,6 +684,135 @@ _MIRROR_ENGINE = MirrorEngine()
 
 def get_active_km_mirror() -> str:
     return _MIRROR_ENGINE.get_active_km()
+
+def get_active_hdhub4u_mirror() -> str:
+    return _MIRROR_ENGINE.get_active_hdhub4u()
+
+def get_active_rog_mirror() -> str:
+    return _MIRROR_ENGINE.get_active_rog()
+
+def fetch_real_hdhub4u_downloads(title: str) -> List[Dict]:
+    """Scrapes fast cloud download mirrors (HubDrive, HubCDN, GoFile, etc.) from HDHub4u."""
+    if not title or not BeautifulSoup:
+        return []
+    try:
+        base_url = get_active_hdhub4u_mirror()
+        clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
+        clean_t = ' '.join(clean_t.split()[:4])
+        search_url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
+        r = requests.get(search_url, headers=HEADERS, timeout=6)
+        if r.status_code != 200:
+            return []
+        soup = BeautifulSoup(r.text, 'html.parser')
+        post_url = None
+        norm_q = re.sub(r'[^a-z0-9]', '', clean_t.lower())
+
+        for a in soup.find_all('a', href=True):
+            href = a['href']
+            text = a.get_text(strip=True).lower()
+            if any(x in href for x in ['/?s=', '/category/', '/tag/', '/page/', '/disclaimer', '/how-to']):
+                continue
+            if href in ['/', base_url, f"{base_url}/"]:
+                continue
+            norm_text = re.sub(r'[^a-z0-9]', '', text)
+            if norm_q[:5] in norm_text or norm_q[:5] in href.lower():
+                import urllib.parse
+                post_url = urllib.parse.urljoin(base_url, href)
+                break
+
+        if not post_url:
+            return []
+
+        r_post = requests.get(post_url, headers=HEADERS, timeout=6)
+        if r_post.status_code != 200:
+            return []
+        psoup = BeautifulSoup(r_post.text, 'html.parser')
+        downloads = []
+        seen = set()
+
+        for a in psoup.find_all('a', href=True):
+            href = a['href']
+            text = a.get_text(strip=True)
+            if not href.startswith('http') or any(x in href for x in ['twitter', 'facebook', 't.me', 'telegram']):
+                continue
+            is_dl_host = any(h in href.lower() for h in ['hubcdn', 'hubdrive', '4khdhub', 'greenmotors', 'gofile', 'pixeldrain', 'fastdl', 'drive'])
+            if is_dl_host or any(q in text.lower() for q in ['480p', '720p', '1080p', '2160p', '4k', 'hevc', 'download']):
+                for q_key, q_label, color in QUALITY_ORDER:
+                    if q_key in text.lower() and q_label not in seen:
+                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
+                        size_str = size_match.group(1).upper() if size_match else ''
+                        downloads.append({
+                            'quality': q_label,
+                            'size': size_str,
+                            'server': 'HDHub4u Cloud Mirror',
+                            'url': href,
+                            'color': color
+                        })
+                        seen.add(q_label)
+                        break
+
+        quality_rank = {'480p SD': 1, '720p HD': 2, '1080p Full HD': 3, '4K Ultra HD': 4}
+        downloads.sort(key=lambda d: quality_rank.get(d['quality'], 9))
+        return downloads
+    except Exception:
+        return []
+
+def fetch_real_rogmovies_downloads(title: str) -> List[Dict]:
+    """Scrapes high-speed cloud download mirrors (NexDrive, HubCloud, etc.) via ROG Movies Typesense API."""
+    if not title or not BeautifulSoup:
+        return []
+    try:
+        base_url = get_active_rog_mirror()
+        clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
+        clean_t = ' '.join(clean_t.split()[:4])
+        api_url = f"{base_url}/ts-search.php?q={requests.utils.quote(clean_t)}"
+        r = requests.get(api_url, headers=HEADERS, timeout=5)
+        if r.status_code != 200:
+            return []
+        data = r.json()
+        hits = data.get('hits', [])
+        if not hits:
+            return []
+        doc = hits[0].get('document', {})
+        permalink = doc.get('permalink', '')
+        if not permalink:
+            return []
+        import urllib.parse
+        post_url = urllib.parse.urljoin(base_url, permalink)
+
+        r_post = requests.get(post_url, headers=HEADERS, timeout=6)
+        if r_post.status_code != 200:
+            return []
+        psoup = BeautifulSoup(r_post.text, 'html.parser')
+        downloads = []
+        seen = set()
+
+        for a in psoup.find_all('a', href=True):
+            href = a['href']
+            text = a.get_text(strip=True)
+            if not href.startswith('http') or any(x in href for x in ['twitter', 'facebook', 't.me', 'telegram']):
+                continue
+            is_dl_host = any(h in href.lower() for h in ['nexdrive', 'hubcloud', 'gofile', 'fastdl', 'drive'])
+            if is_dl_host or any(q in text.lower() for q in ['480p', '720p', '1080p', '2160p', '4k', 'hevc', 'download']):
+                for q_key, q_label, color in QUALITY_ORDER:
+                    if q_key in text.lower() and q_label not in seen:
+                        size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)
+                        size_str = size_match.group(1).upper() if size_match else ''
+                        downloads.append({
+                            'quality': q_label,
+                            'size': size_str,
+                            'server': 'ROG Fast Cloud',
+                            'url': href,
+                            'color': color
+                        })
+                        seen.add(q_label)
+                        break
+
+        quality_rank = {'480p SD': 1, '720p HD': 2, '1080p Full HD': 3, '4K Ultra HD': 4}
+        downloads.sort(key=lambda d: quality_rank.get(d['quality'], 9))
+        return downloads
+    except Exception:
+        return []
 
 def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
     """Tries to scrape real working cloud download links from KM Movies for the title."""
@@ -713,11 +878,21 @@ def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
     except Exception:
         return []
 
-def generate_movie_downloads(title: str, year: int, item_id: str) -> List[Dict]:
+def fetch_best_real_downloads(title: str) -> List[Dict]:
+    """Tries HDHub4u first (fastest/best), then ROG Movies, then KM Movies."""
+    dl = fetch_real_hdhub4u_downloads(title)
+    if dl:
+        return dl
+    dl = fetch_real_rogmovies_downloads(title)
+    if dl:
+        return dl
     return fetch_real_kmmovies_downloads(title)
 
+def generate_movie_downloads(title: str, year: int, item_id: str) -> List[Dict]:
+    return fetch_best_real_downloads(title)
+
 def generate_series_downloads(title: str, season_num: int, item_id: str) -> List[Dict]:
-    return fetch_real_kmmovies_downloads(f"{title} S0{season_num}")
+    return fetch_best_real_downloads(f"{title} S0{season_num}")
 
 def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dict:
     now_iso = datetime.now(timezone.utc).isoformat()
@@ -750,7 +925,7 @@ def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dic
 
     downloads = m.get("downloads")
     if not downloads:
-        downloads = fetch_real_kmmovies_downloads(m.get("title", ""))
+        downloads = fetch_best_real_downloads(m.get("title", ""))
 
     return {
         "id": unique_id,

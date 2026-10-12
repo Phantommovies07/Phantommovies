@@ -67,7 +67,9 @@ function playerMarkup(movie, streamUrl) {
     }
 
     if (streamLink) {
-        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin" sandbox="allow-forms allow-scripts allow-same-origin allow-presentation"></iframe>`;
+        // Anti-Sandbox fix: allow-popups, allow-pointer-lock, allow-orientation-lock satisfy provider checks,
+        // while omitting allow-top-navigation permanently prevents rogue iframes from hijacking or redirecting the main window.
+        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-pointer-lock allow-orientation-lock allow-popups allow-popups-to-escape-sandbox"></iframe>`;
     }
 
     if (trailerEmbed) {
@@ -80,19 +82,25 @@ function playerMarkup(movie, streamUrl) {
     </div>`;
 }
 
-// Whitelisted, stealth stream server providers (hiding underlying host identities)
+// Whitelisted, stealth stream server providers matching famous ad-free aggregators
 const SERVER_LABELS = [
     "Server 1 (VIP Ultra HD)",
-    "Server 2 (HD)",
-    "Server 3 (Fast)",
-    "Server 4 (VIP)",
-    "Server 5 (Ultra)",
-    "Server 6 (Cloud)",
-    "Server 7 (Backup)"
+    "Server 2 (CineSrc - No Ads)",
+    "Server 3 (MoviesAPI - No Ads)",
+    "Server 4 (Mapple - No Ads)",
+    "Server 5 (AutoEmbed)",
+    "Server 6 (VidEasy)",
+    "Server 7 (VidLink)",
+    "Server 8 (VixSrc)",
+    "Server 9 (MultiEmbed)",
+    "Server 10 (2Embed)",
+    "Server 11 (VidSrc Embed)",
+    "Server 12 (111Movies)",
+    "Server 13 (PrimeSrc)"
 ];
 
 function cleanServerLabel(name, index) {
-    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27/i.test(name)) {
+    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27|cinesrc|moviesapi|mapple|videasy/i.test(name)) {
         return SERVER_LABELS[index] || `Server ${index + 1}`;
     }
     return name;
@@ -100,12 +108,18 @@ function cleanServerLabel(name, index) {
 
 const DEFAULT_STREAM_PROVIDERS = [
     { name: "Server 1 (VIP Ultra HD)", template: "https://net27.cc/watch-tmdb/{tmdb}", requiresTmdb: true },
-    { name: "Server 2 (HD)", template: "https://vidlink.pro/movie/{imdb}" },
-    { name: "Server 3 (Fast)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
-    { name: "Server 4 (VIP)", template: "https://www.2embed.cc/embed/{imdb}" },
-    { name: "Server 5 (Ultra)", template: "https://vidsrc.pm/embed/movie/{imdb}" },
-    { name: "Server 6 (Cloud)", template: "https://player.smashystream.com/movie/{tmdb}" },
-    { name: "Server 7 (Backup)", template: "https://www.nontongo.win/embed/movie/{imdb}" }
+    { name: "Server 2 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 3 (MoviesAPI - No Ads)", template: "https://moviesapi.club/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 4 (Mapple - No Ads)", template: "https://mapple.tv/embed/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 5 (AutoEmbed)", template: "https://player.autoembed.cc/embed/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 6 (VidEasy)", template: "https://player.videasy.net/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 7 (VidLink)", template: "https://vidlink.pro/movie/{imdb}" },
+    { name: "Server 8 (VixSrc)", template: "https://vixsrc.to/embed/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 9 (MultiEmbed)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
+    { name: "Server 10 (2Embed)", template: "https://www.2embed.cc/embed/{imdb}" },
+    { name: "Server 11 (VidSrc Embed)", template: "https://vidsrc.me/embed/movie?imdb={imdb}" },
+    { name: "Server 12 (111Movies)", template: "https://111movies.com/movie/{tmdb}", requiresTmdb: true },
+    { name: "Server 13 (PrimeSrc)", template: "https://primesrc.net/embed/movie/{tmdb}", requiresTmdb: true }
 ];
 
 function normalizeStreams(movie) {
