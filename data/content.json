@@ -1,6 +1,1085 @@
 {
   "movies": [
     {
+      "id": "1791804696142",
+      "type": "movie",
+      "title": "Ulajh",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDEwZjRlYzMtNDc2Ny00Y2Q4LTk1NmQtYmU3NzZhMzNiZWI4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDEwZjRlYzMtNDc2Ny00Y2Q4LTk1NmQtYmU3NzZhMzNiZWI4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/7096627011032335160?dp=ulajh-A6W7JbSCes8&t=Ulajh",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7096627011032335160?dp=ulajh-A6W7JbSCes8&t=Ulajh"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt19838634"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt19838634&tmdb_id=1124876"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt19838634"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt19838634"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1124876"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt19838634"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ulajh+2024+trailer",
+      "description": "Ulajh (2024) starring Janhvi Kapoor, Arun Malik.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19107,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt19838634",
+      "tmdb_id": "1124876",
+      "createdAt": "2026-10-12T11:31:34.347946+00:00",
+      "updatedAt": "2026-10-12T11:31:34.347946+00:00"
+    },
+    {
+      "id": "1791804694097",
+      "type": "movie",
+      "title": "Airlift",
+      "genre": "Feature",
+      "year": 2016,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjNjMGEzNTUtOTJmMC00OGJkLThhOWYtZmUzYTk3ZWY4MmVmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjNjMGEzNTUtOTJmMC00OGJkLThhOWYtZmUzYTk3ZWY4MmVmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/5029249725783048592?dp=airlift-hindi-MiRMxJ31wZ5&t=Airlift",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/5029249725783048592?dp=airlift-hindi-MiRMxJ31wZ5&t=Airlift"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt4387040"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt4387040&tmdb_id=375290"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt4387040"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt4387040"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/375290"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt4387040"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Airlift+2016+trailer",
+      "description": "Airlift (2016) starring Akshay Kumar, Nimrat Kaur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13688,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt4387040",
+      "tmdb_id": "375290",
+      "createdAt": "2026-10-12T11:31:32.187594+00:00",
+      "updatedAt": "2026-10-12T11:31:32.187594+00:00"
+    },
+    {
+      "id": "1791804690197",
+      "type": "movie",
+      "title": "Dhoomam",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWQ3ZWVjN2YtOWY4NC00MWU2LWI1OTQtNWU5NGI0MjAwOTY5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOWQ3ZWVjN2YtOWY4NC00MWU2LWI1OTQtNWU5NGI0MjAwOTY5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1030101",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1030101"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt22436062"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt22436062&tmdb_id=1030101"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt22436062"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt22436062"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1030101"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt22436062"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dhoomam+2023+trailer",
+      "description": "Dhoomam (2023) starring Fahadh Faasil, Aparna Balamurali.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7623,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt22436062",
+      "tmdb_id": "1030101",
+      "createdAt": "2026-10-12T11:31:29.799762+00:00",
+      "updatedAt": "2026-10-12T11:31:29.799762+00:00"
+    },
+    {
+      "id": "1791804692691",
+      "type": "movie",
+      "title": "Auron Mein Kahan Dum Tha",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjYxMjE0N2UtNGFkOC00NTliLWI1ODEtNWQ1ZmUyYjdmYmU4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjYxMjE0N2UtNGFkOC00NTliLWI1ODEtNWQ1ZmUyYjdmYmU4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/4561012185014699672?dp=auron-mein-kahan-dum-tha-4OUTvf1uVq5&t=Auron%20Mein%20Kahan%20Dum%20Tha",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/4561012185014699672?dp=auron-mein-kahan-dum-tha-4OUTvf1uVq5&t=Auron%20Mein%20Kahan%20Dum%20Tha"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt26659814"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt26659814&tmdb_id=1083590"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt26659814"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt26659814"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1083590"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt26659814"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Auron+Mein+Kahan+Dum+Tha+2024+trailer",
+      "description": "Auron Mein Kahan Dum Tha (2024) starring Ajay Devgn, Tabu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22662,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26659814",
+      "tmdb_id": "1083590",
+      "createdAt": "2026-10-12T11:31:27.670363+00:00",
+      "updatedAt": "2026-10-12T11:31:27.670363+00:00"
+    },
+    {
+      "id": "1791804685541",
+      "type": "movie",
+      "title": "Kapoor & Sons",
+      "genre": "Feature",
+      "year": 2016,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjE4NDk4MTIwNl5BMl5BanBnXkFtZTgwNDEwODI5NzE@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjE4NDk4MTIwNl5BMl5BanBnXkFtZTgwNDEwODI5NzE@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/1879591723332944456?dp=kapoor-and-sons-hindi-o8CBtk6yQe2&t=Kapoor%20%26%20Sons",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/1879591723332944456?dp=kapoor-and-sons-hindi-o8CBtk6yQe2&t=Kapoor%20%26%20Sons"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt4900716"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt4900716&tmdb_id=374173"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt4900716"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt4900716"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/374173"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt4900716"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/783550620-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/40495946451-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "7.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/455554406-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Kapoor+&+Sons+2016+trailer",
+      "description": "Kapoor & Sons (2016) starring Rishi Kapoor, Rajat Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 5856,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt4900716",
+      "tmdb_id": "374173",
+      "createdAt": "2026-10-12T11:31:25.398677+00:00",
+      "updatedAt": "2026-10-12T11:31:25.398677+00:00"
+    },
+    {
+      "id": "1791804688923",
+      "type": "movie",
+      "title": "Vimanam",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzc2MTJmOTgtY2E2Yi00MjBlLTk3NGUtNzlmYmRlYjg5MWI4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzc2MTJmOTgtY2E2Yi00MjBlLTk3NGUtNzlmYmRlYjg5MWI4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/459726",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/459726"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt26743568"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt26743568&tmdb_id=459726"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt26743568"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt26743568"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/459726"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt26743568"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vimanam+2023+trailer",
+      "description": "Vimanam (2023) starring Samuthirakani, Motta Rajendran.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 6629,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26743568",
+      "tmdb_id": "459726",
+      "createdAt": "2026-10-12T11:31:21.617608+00:00",
+      "updatedAt": "2026-10-12T11:31:21.617608+00:00"
+    },
+    {
+      "id": "1791804684826",
+      "type": "movie",
+      "title": "Ghudchadi",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTJlZmQ5Y2YtNjZjOC00N2UyLTliY2YtNjEzZmUzZTBmNjdlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTJlZmQ5Y2YtNjZjOC00N2UyLTliY2YtNjEzZmUzZTBmNjdlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/942561",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/942561"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt21836384"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt21836384&tmdb_id=942561"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt21836384"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt21836384"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/942561"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt21836384"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ghudchadi+2024+trailer",
+      "description": "Ghudchadi (2024) starring Sanjay Dutt, Raveena Tandon.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16829,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt21836384",
+      "tmdb_id": "942561",
+      "createdAt": "2026-10-12T11:31:19.170764+00:00",
+      "updatedAt": "2026-10-12T11:31:19.170764+00:00"
+    },
+    {
+      "id": "1791804681813",
+      "type": "movie",
+      "title": "Neerja",
+      "genre": "Feature",
+      "year": 2016,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjg1OGMyZjktYzBhYS00NTkwLWE3NTUtZGEwZjc5Njc1NDk1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjg1OGMyZjktYzBhYS00NTkwLWE3NTUtZGEwZjc5Njc1NDk1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/376869",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/376869"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt5286444"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt5286444&tmdb_id=376869"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt5286444"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt5286444"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/376869"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt5286444"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Neerja+2016+trailer",
+      "description": "Neerja (2016) starring Sonam Kapoor, Shabana Azmi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15230,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5286444",
+      "tmdb_id": "376869",
+      "createdAt": "2026-10-12T11:31:17.427422+00:00",
+      "updatedAt": "2026-10-12T11:31:17.427422+00:00"
+    },
+    {
+      "id": "1791804676544",
+      "type": "movie",
+      "title": "Good Night, and Good Luck.",
+      "genre": "Feature",
+      "year": 2005,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTJhMmY5OGMtNDZhNS00ZjAyLWFmODQtOTA0NWM5NjMyOTk5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTJhMmY5OGMtNDZhNS00ZjAyLWFmODQtOTA0NWM5NjMyOTk5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/7418793452261331168?dp=good-night-and-good-luck-inxhe3t92Q8&t=Good%20Night%2C%20and%20Good%20Luck.",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7418793452261331168?dp=good-night-and-good-luck-inxhe3t92Q8&t=Good%20Night%2C%20and%20Good%20Luck."
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt0433383"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt0433383&tmdb_id=3291"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt0433383"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt0433383"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/3291"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt0433383"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Good+Night,+and+Good+Luck.+2005+trailer",
+      "description": "Good Night, and Good Luck. (2005) starring David Strathairn, George Clooney.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14730,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0433383",
+      "tmdb_id": "3291",
+      "createdAt": "2026-10-12T11:31:15.013744+00:00",
+      "updatedAt": "2026-10-12T11:31:15.013744+00:00"
+    },
+    {
+      "id": "1791804677731",
+      "type": "movie",
+      "title": "Wild Wild Punjab",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjA3Y2E0ZTEtNjBjMi00ZmMwLTkxZmItZmRiODk4YmMzNWMxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjA3Y2E0ZTEtNjBjMi00ZmMwLTkxZmItZmRiODk4YmMzNWMxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/4316151349235908728?dp=wild-wild-punjab-U0eldVa1Q85&t=Wild%20Wild%20Punjab",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/4316151349235908728?dp=wild-wild-punjab-U0eldVa1Q85&t=Wild%20Wild%20Punjab"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt31514262"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt31514262&tmdb_id=1252455"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt31514262"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt31514262"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1252455"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt31514262"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Wild+Wild+Punjab+2024+trailer",
+      "description": "Wild Wild Punjab (2024) starring Varun Sharma, Sunny Singh.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19376,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31514262",
+      "tmdb_id": "1252455",
+      "createdAt": "2026-10-12T11:31:13.245236+00:00",
+      "updatedAt": "2026-10-12T11:31:13.245236+00:00"
+    },
+    {
+      "id": "1791804671133",
+      "type": "movie",
+      "title": "M.S. Dhoni: The Untold Story",
+      "genre": "Feature",
+      "year": 2016,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2UwZTNkMmItYmYzOS00MTk3LTg3NDgtNzg5ZjYxNTIzNzY4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2UwZTNkMmItYmYzOS00MTk3LTg3NDgtNzg5ZjYxNTIzNzY4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/5294735934041244752?dp=m-s-dhoni-the-untold-story-M6ZRgjHW7j6&t=M.S.%20Dhoni%3A%20The%20Untold%20Story",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/5294735934041244752?dp=m-s-dhoni-the-untold-story-M6ZRgjHW7j6&t=M.S.%20Dhoni%3A%20The%20Untold%20Story"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt4169250"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt4169250&tmdb_id=388333"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt4169250"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt4169250"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/388333"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt4169250"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/53935262966756-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/992876861629-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/449706853555026-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=M.S.+Dhoni:+The+Untold+Story+2016+trailer",
+      "description": "M.S. Dhoni: The Untold Story (2016) starring Sushant Singh Rajput, Kiara Advani.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19673,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt4169250",
+      "tmdb_id": "388333",
+      "createdAt": "2026-10-12T11:31:10.807972+00:00",
+      "updatedAt": "2026-10-12T11:31:10.807972+00:00"
+    },
+    {
+      "id": "1791804672375",
+      "type": "movie",
+      "title": "Ugram",
+      "genre": "Feature",
+      "year": 2023,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjk4ZDU1OTEtMmQ0OS00Yzk3LWE2MTMtOWVmMDBiNGE3OWVhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjk4ZDU1OTEtMmQ0OS00Yzk3LWE2MTMtOWVmMDBiNGE3OWVhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/8113088333674415000?dp=ugramm-hindi-gKlGOMT1kF9&t=Ugram",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/8113088333674415000?dp=ugramm-hindi-gKlGOMT1kF9&t=Ugram"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt21989120"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt21989120&tmdb_id=385152"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt21989120"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt21989120"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/385152"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt21989120"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ugram+2023+trailer",
+      "description": "Ugram (2023) starring Allari Naresh, Mirnaa.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9821,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt21989120",
+      "tmdb_id": "385152",
+      "createdAt": "2026-10-12T11:31:09.155974+00:00",
+      "updatedAt": "2026-10-12T11:31:09.155974+00:00"
+    },
+    {
+      "id": "1791804676421",
+      "type": "movie",
+      "title": "Luv Ki Arrange Marriage",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGYyOTNiYjEtMGE1OC00Y2IzLWFhNDctNjIzMzI2MmU4N2U2XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGYyOTNiYjEtMGE1OC00Y2IzLWFhNDctNjIzMzI2MmU4N2U2XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1298506",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1298506"
+        },
+        {
+          "name": "Server 2 (HD)",
+          "url": "https://vidlink.pro/movie/tt27330732"
+        },
+        {
+          "name": "Server 3 (Fast)",
+          "url": "https://multiembed.mov/?video_id=tt27330732&tmdb_id=1298506"
+        },
+        {
+          "name": "Server 4 (VIP)",
+          "url": "https://www.2embed.cc/embed/tt27330732"
+        },
+        {
+          "name": "Server 5 (Ultra)",
+          "url": "https://vidsrc.pm/embed/movie/tt27330732"
+        },
+        {
+          "name": "Server 6 (Cloud)",
+          "url": "https://player.smashystream.com/movie/1298506"
+        },
+        {
+          "name": "Server 7 (Backup)",
+          "url": "https://www.nontongo.win/embed/movie/tt27330732"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "261.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/2271973114826-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/02998854507-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/58110935167-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Luv+Ki+Arrange+Marriage+2024+trailer",
+      "description": "Luv Ki Arrange Marriage (2024) starring Sunny Singh, Avneet Kaur.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17850,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27330732",
+      "tmdb_id": "1298506",
+      "createdAt": "2026-10-12T11:31:07.093424+00:00",
+      "updatedAt": "2026-10-12T11:31:07.093424+00:00"
+    },
+    {
+      "id": "1791804660868",
+      "type": "series",
+      "title": "My Name",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2ZiZWU3MzMtNGM5OC00ZWVkLTkxNjUtMTYwZGU4MzgxYzk0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BN2ZiZWU3MzMtNGM5OC00ZWVkLTkxNjUtMTYwZGU4MzgxYzk0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/900389724-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/697263081702-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "14.4GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/33721486-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/1942682268544162208?dp=my-name-ix8G2Lkvvj2&t=My%20Name"
+            },
+            {
+              "name": "Server 2 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt12940504&s=1&e=1"
+            },
+            {
+              "name": "Server 3 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt12940504/1/1"
+            },
+            {
+              "name": "Server 4 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt12940504&s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Ultra)",
+              "url": "https://player.smashystream.com/tv/110356?s=1&e=1"
+            },
+            {
+              "name": "Server 6 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt12940504/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.3GB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/900389724-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.5GB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/697263081702-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "14.4GB",
+              "server": "Fast Cloud Mirror",
+              "url": "https://w3.magiclinks.lol/33721486-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=My+Name+2021+trailer",
+      "description": "My Name (2021) starring Han So-hee, Park Hee-soon.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19831,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt12940504",
+      "tmdb_id": "110356",
+      "createdAt": "2026-10-12T11:30:52.179580+00:00",
+      "updatedAt": "2026-10-12T11:30:52.179580+00:00"
+    },
+    {
+      "id": "1791804644068",
+      "type": "series",
+      "title": "Private Eyes",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/042325407443-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/37595231-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/5021521-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/3142864047087962600?dp=the-private-eyes-ajvlD0KlaK3&t=Private%20Eyes"
+            },
+            {
+              "name": "Server 2 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 3 (Fast)",
+              "url": "https://vidsrc.pm/embed/tv/tt5722298/1/1"
+            },
+            {
+              "name": "Server 4 (VIP)",
+              "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 5 (Ultra)",
+              "url": "https://player.smashystream.com/tv/13762?s=1&e=1"
+            },
+            {
+              "name": "Server 6 (Cloud)",
+              "url": "https://www.nontongo.win/embed/tv/tt5722298/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+2016+trailer",
+      "description": "Private Eyes (2016) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23475,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5722298",
+      "tmdb_id": "13762",
+      "createdAt": "2026-10-12T11:30:35.687523+00:00",
+      "updatedAt": "2026-10-12T11:30:35.687523+00:00"
+    },
+    {
       "id": "1791776138803",
       "type": "movie",
       "title": "G2",
@@ -46536,8 +47615,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 542,
-    "lastUpdated": "2026-10-12T03:35:39.341031+00:00",
+    "totalMovies": 557,
+    "lastUpdated": "2026-10-12T11:31:36.038302+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
