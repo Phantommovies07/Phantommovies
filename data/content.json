@@ -1,6 +1,130 @@
 {
   "movies": [
     {
+      "id": "1791924940606",
+      "type": "series",
+      "title": "Private Eyes",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "200MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776105856/",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/3142864047087962600?dp=the-private-eyes-ajvlD0KlaK3&t=Private%20Eyes"
+            },
+            {
+              "name": "Server 2 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/13762?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (MoviesAPI - No Ads)",
+              "url": "https://moviesapi.club/tv/13762-1-1"
+            },
+            {
+              "name": "Server 4 (Mapple - No Ads)",
+              "url": "https://mapple.tv/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 5 (AutoEmbed)",
+              "url": "https://player.autoembed.cc/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 6 (VidEasy)",
+              "url": "https://player.videasy.net/tv/13762/1/1"
+            },
+            {
+              "name": "Server 7 (VidLink)",
+              "url": "https://vidlink.pro/tv/tt5722298/1/1"
+            },
+            {
+              "name": "Server 8 (VixSrc)",
+              "url": "https://vixsrc.to/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 9 (MultiEmbed)",
+              "url": "https://multiembed.mov/?video_id=tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 10 (2Embed)",
+              "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 11 (VidSrc Embed)",
+              "url": "https://vidsrc.me/embed/tv?imdb=tt5722298&season=1&episode=1"
+            },
+            {
+              "name": "Server 12 (111Movies)",
+              "url": "https://111movies.com/tv/13762/1/1"
+            },
+            {
+              "name": "Server 13 (PrimeSrc)",
+              "url": "https://primesrc.net/embed/tv/13762/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+2016+trailer",
+      "description": "Private Eyes (2016) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 25008,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5722298",
+      "tmdb_id": "13762",
+      "createdAt": "2026-10-13T20:55:34.790317+00:00",
+      "updatedAt": "2026-10-13T20:55:34.790317+00:00"
+    },
+    {
       "id": "1791905289400",
       "type": "movie",
       "title": "Talvar",
@@ -58010,31 +58134,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "349.9MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/9169140406-2/",
+          "size": "440MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/NcHAQIrPiL54mEBNaBZnSa74q",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.3GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/890730581230-2/",
+          "size": "840MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/file/2445660507",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.7GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/07605999950-2/",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cGRZK25rYUZGNm1oMHc2RVRFb0YzUHJKVkU3aW1NYjhSejBaV1BZcXNqWjRrd2l0bFgxREdYeHNhNkErbUxQd3NHWS9XUmM5UWZvWENJUEtvTzczbnR6YU9hUnFuVy8yK0dERlViU1lQcUU9",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "14.73 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/38920130789018-2/",
-          "color": "#ec4899"
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58126,31 +58250,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "639.4MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/84511209483-2/",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=TVNhYll0bGFUS3pTWmJZLyttWWJXT0FlQTU4ZEtiWXRBdzZ5STlyNEovbUMyaHdHQ2xvT1owNllnb0NFVjFOVkVHSGkralhRNERlTFNYRUkvd0oycUwxL01TY3lEQWZlMEhvam5NZUxhTG89",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "942.4MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/1136914-2/",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=TVNhYll0bGFUS3pTWmJZLyttWWJXT0FlQTU4ZEtiWXRBdzZ5STlyNEovbUMyaHdHQ2xvT1owNllnb0NFVjFOVkp5MEZiSGtJQlRjSjFyVVVNTUZqQjBJWC9SNGZKejgrZUtGL09ramxjb3c9",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "3.8GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/9600152848973-2/",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=TVNhYll0bGFUS3pTWmJZLyttWWJXT0FlQTU4ZEtiWXRBdzZ5STlyNEovbUMyaHdHQ2xvT1owNllnb0NFVjFOVkhMcVQwSDA2U251WXRzbS9VMHpWWW85NnlXNzNGVGdlQ2lHNzNBM3FZWkU9",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "24.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/04216529475-2/",
-          "color": "#ec4899"
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58242,24 +58366,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "446.1MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/055117324482172-2/",
+          "size": "500MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776357175/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/7814852637722-2/",
+          "size": "850MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776357289/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/105990906-2/",
+          "size": "2.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776357172/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776357176/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58349,31 +58480,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "602.8MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/796681185-2/",
+          "size": "550MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776352729/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/4934400-2/",
+          "size": "930MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776352730/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.5GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/1758495457-2/",
+          "size": "3.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776352732/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "16.0GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/75850417271326-2/",
-          "color": "#ec4899"
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776352731/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58463,31 +58594,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "517.2MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/561764978-2/",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776167741/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "903.5MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/3630984-2/",
+          "size": "980MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776167789/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.7GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/918847742-2/",
+          "size": "2.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776167722/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "5.9GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/4999753914-2/",
-          "color": "#ec4899"
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776167727/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58577,31 +58708,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "927.5MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/68713276602-2/",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776404029/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.6GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/3681034-2/",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776404025/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "3.0GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/91424682445-2/",
+          "size": "3.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776404021/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "24.05 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/5626540401110-2/",
-          "color": "#ec4899"
+          "size": "1.9GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776404026/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58690,7 +58821,36 @@
           "url": "https://primesrc.net/embed/movie/811941"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395161/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "950MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395169/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395159/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395166/",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Devara+Part+1+2024+trailer",
       "description": "Devara Part 1 (2024) starring N.T. Rama Rao Jr., Saif Ali Khan.",
@@ -58779,25 +58939,32 @@
       ],
       "downloads": [
         {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776362931/",
+          "color": "#ffd70f"
+        },
+        {
           "quality": "720p HD",
-          "size": "265878 MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/443581914843114-2/",
+          "size": "700MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776362962/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "11.64 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/3761553956-2/",
+          "size": "3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776362925/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "26518.38 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/6212318686-2/",
-          "color": "#ec4899"
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776362919/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58886,7 +59053,36 @@
           "url": "https://primesrc.net/embed/movie/936622"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "580MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369522/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "840MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369568/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369524/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.4GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369523/",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Bade+Miyan+Chote+Miyan+2024+trailer",
       "description": "Bade Miyan Chote Miyan (2024) starring Akshay Kumar, Prithviraj Sukumaran.",
@@ -58973,7 +59169,29 @@
           "url": "https://primesrc.net/embed/movie/1233531"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847764992/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847765001/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847765012/",
+          "color": "#10b981"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Article+370+2024+trailer",
       "description": "Article 370 (2024) starring Yami Gautam, Priyamani.",
@@ -59063,24 +59281,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "1.3GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/33350238357-2/",
+          "size": "450MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776367157/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.5GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/4408022116437-2/",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776367131/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "8.0GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/733372664129-2/",
+          "size": "2.4GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776367171/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "4.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776367094/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -65658,7 +65883,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 433,
-    "lastUpdated": "2026-10-13T15:28:06.886048+00:00",
+    "lastUpdated": "2026-10-13T20:56:06.850308+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -65690,7 +65915,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 129,
-    "totalTitles": 562
+    "totalSeries": 130,
+    "totalTitles": 563
   }
 }
