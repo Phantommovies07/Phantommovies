@@ -330,6 +330,10 @@ h1 em {
 }
 
 .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
     margin-top: 48px;
     border-top: 1px solid var(--border);
     padding-top: 28px;
@@ -1709,6 +1713,10 @@ body.light-theme .slide-overlay span { background: rgba(255,255,255,.78); }
         border: 1px solid var(--border);
         border-radius: 14px;
         padding: 16px;
+        display: flex;
+        justify-content: space-around;
+        gap: 16px;
+        text-align: center;
     }
 }
 

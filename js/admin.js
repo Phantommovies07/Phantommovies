@@ -1489,7 +1489,9 @@ async function runQuickAdd() {
         const content = await githubAPI.getContent();
         newMovies.forEach(m => content.movies.unshift(m));
         content.settings = content.settings || {};
-        content.settings.totalMovies = content.movies.length;
+        content.settings.totalMovies = content.movies.filter(m => m.type !== 'series').length;
+        content.settings.totalSeries = content.movies.filter(m => m.type === 'series').length;
+        content.settings.totalTitles = content.movies.length;
         content.settings.lastUpdated = new Date().toISOString();
         await githubAPI.updateFile(githubAPI.contentPath, JSON.stringify(content, null, 2), `Bulk quick add: ${newMovies.length} items`, fileData ? fileData.sha : null);
 

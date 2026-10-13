@@ -182,6 +182,8 @@ class GitHubAPI {
                     siteName: "Phantom Movies",
                     siteDescription: "Stream unlimited movies & shows",
                     totalMovies: 0,
+                    totalSeries: 0,
+                    totalTitles: 0,
                     lastUpdated: new Date().toISOString()
                 }
             };
@@ -215,7 +217,9 @@ class GitHubAPI {
         currentContent.movies.unshift(newMovie);
         
         // Update settings
-        currentContent.settings.totalMovies = currentContent.movies.length;
+        currentContent.settings.totalMovies = currentContent.movies.filter(m => m.type !== 'series').length;
+        currentContent.settings.totalSeries = currentContent.movies.filter(m => m.type === 'series').length;
+        currentContent.settings.totalTitles = currentContent.movies.length;
         currentContent.settings.lastUpdated = new Date().toISOString();
 
         // Convert to JSON string
@@ -342,7 +346,9 @@ class GitHubAPI {
         currentContent.movies = currentContent.movies.filter(m => m.id !== movieId);
 
         // Update settings
-        currentContent.settings.totalMovies = currentContent.movies.length;
+        currentContent.settings.totalMovies = currentContent.movies.filter(m => m.type !== 'series').length;
+        currentContent.settings.totalSeries = currentContent.movies.filter(m => m.type === 'series').length;
+        currentContent.settings.totalTitles = currentContent.movies.length;
         currentContent.settings.lastUpdated = new Date().toISOString();
 
         // Convert to JSON string

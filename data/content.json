@@ -65657,7 +65657,7 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 562,
+    "totalMovies": 433,
     "lastUpdated": "2026-10-13T15:28:06.886048+00:00",
     "ads": {
       "enabled": false,
@@ -65689,6 +65689,8 @@
     "request": {
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
-    }
+    },
+    "totalSeries": 129,
+    "totalTitles": 562
   }
 }

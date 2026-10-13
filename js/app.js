@@ -152,8 +152,14 @@ function hideLoadingScreen() {
 
 // ─── AFTER MOVIES LOADED ───
 function afterMoviesLoaded() {
-    // Update hero count
+    // Update hero exact counts
+    const movieCount = allMovies.filter(m => m.type !== 'series').length;
+    const seriesCount = allMovies.filter(m => m.type === 'series').length;
+    const heroMoviesCountEl = document.getElementById('heroMoviesCount');
+    const heroSeriesCountEl = document.getElementById('heroSeriesCount');
     const heroCountEl = document.getElementById('heroCount');
+    if (heroMoviesCountEl) heroMoviesCountEl.textContent = movieCount + '+';
+    if (heroSeriesCountEl) heroSeriesCountEl.textContent = seriesCount + '+';
     if (heroCountEl) heroCountEl.textContent = allMovies.length + '+';
     
     // Set featured movie
@@ -302,13 +308,16 @@ function bindMovieCards(scope = document) {
 function renderCategoryFilters() {
     const row = document.getElementById('genreRow');
     if (!row) return;
+    const movieCount = allMovies.filter(m => m.type !== 'series').length;
+    const seriesCount = allMovies.filter(m => m.type === 'series').length;
     const genres = [...new Set(allMovies.map(m => m.genre).filter(Boolean))].filter(g => !['Movie', 'Tv Series'].includes(g)).sort();
     const pills = [
-        { label: 'All', filter: 'all' },
+        { label: `All (${allMovies.length})`, filter: 'all' },
+        { label: `🎬 Movies (${movieCount})`, filter: 'movie' },
+        { label: `📺 Web Series (${seriesCount})`, filter: 'series' },
         { label: '🔥 Trending', filter: 'trending' },
         { label: '🎬 Bollywood (New)', filter: 'bollywood_new' },
         { label: '⚡ South (New)', filter: 'south_new' },
-        { label: '📺 Web Series & TV', filter: 'series' },
         { label: '🏛️ Bollywood Classics', filter: 'bollywood_classic' },
         { label: '🏆 South Classics', filter: 'south_classic' },
         ...genres.map(g => ({ label: g, genre: g }))

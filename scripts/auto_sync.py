@@ -518,6 +518,8 @@ def load_content(path: str = CONTENT_FILE) -> Dict:
             "siteName": "Phantom Movies",
             "siteDescription": "Stream unlimited movies & shows",
             "totalMovies": 0,
+            "totalSeries": 0,
+            "totalTitles": 0,
             "lastUpdated": datetime.now(timezone.utc).isoformat()
         }
     }
@@ -1578,9 +1580,11 @@ def run_auto_sync(category: str = "all", target_new_count: int = 10, tmdb_key: s
     # ─────────────────────────────────────────────────────────────
     if newly_added or updated_series_count > 0:
         content_data["movies"] = catalog
-        if "settings" not in content_data:
-            content_data["settings"] = {}
-        content_data["settings"]["totalMovies"] = len(catalog)
+        total_movies = sum(1 for m in catalog if m.get("type") != "series")
+        total_series = sum(1 for m in catalog if m.get("type") == "series")
+        content_data["settings"]["totalMovies"] = total_movies
+        content_data["settings"]["totalSeries"] = total_series
+        content_data["settings"]["totalTitles"] = len(catalog)
         content_data["settings"]["lastUpdated"] = datetime.now(timezone.utc).isoformat()
 
         if save_content(content_data):
