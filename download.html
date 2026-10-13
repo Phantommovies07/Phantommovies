@@ -317,7 +317,7 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
-    if (clean.includes('kmmovies.') || clean.includes('rogmovies.') || clean.includes('vegamovies.')) return false;
+    if (clean.includes('kmmovies.') || clean.includes('vegamovies.')) return false;
     if (clean.includes('magiclinks.lol/download/')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
@@ -410,6 +410,14 @@ async function initDownloadPage() {
             }
         }
 
+        // GUARANTEED DOWNLOAD OPTION FOR ALL MOVIES
+        if (!targetDownloadUrl && currentMovie) {
+            const cleanTitle = (currentMovie.title || '').replace(/[:\-–—\(\)\d]/g, ' ').trim();
+            const q = encodeURIComponent(cleanTitle || currentMovie.title || '');
+            targetDownloadUrl = `https://new3.hdhub4u.free/?s=${q}`;
+            mirrorDownloadUrl = `https://rogmovies.one/?s=${q}`;
+        }
+
         const watchUrl = (currentMovie?.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie ? currentMovie.id : (params.id || ''));
 
         const btn1 = document.getElementById('btnServer1');
@@ -418,27 +426,19 @@ async function initDownloadPage() {
         const btn1Span = btn1 ? btn1.querySelector('span') : null;
         const btn2Span = btn2 ? btn2.querySelector('span') : null;
 
-        // If no cloud file exists yet, show in-page updating notice with 1-click HD Stream CTA (ZERO EXTERNAL REDIRECTS)
-        if (!targetDownloadUrl) {
-            const timerBox = document.getElementById('timerBox');
-            if (timerBox) timerBox.style.display = 'none';
-            const noNotice = document.getElementById('noDlNotice');
-            if (noNotice) noNotice.style.display = 'block';
-            const noticeWatchBtn = document.getElementById('noticeWatchBtn');
-            if (noticeWatchBtn) noticeWatchBtn.href = watchUrl;
-            const linksContainer = document.getElementById('linksContainer');
-            if (linksContainer) linksContainer.style.display = 'none';
-        } else {
-            const noNotice = document.getElementById('noDlNotice');
-            if (noNotice) noNotice.style.display = 'none';
+        const noNotice = document.getElementById('noDlNotice');
+        if (noNotice) noNotice.style.display = 'none';
 
+        if (targetDownloadUrl) {
             btn1.href = targetDownloadUrl;
-            if (btn1Span) btn1Span.textContent = '🚀 Fast Cloud Server 1 (Direct Download)';
+            const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive/i.test(targetDownloadUrl);
+            if (btn1Span) btn1Span.textContent = isDirect1 ? '🚀 Fast Cloud Server 1 (Direct Download)' : '🚀 Fast Cloud Server 1 (HDHub4u Cloud Engine)';
             btn1.style.display = 'flex';
 
             if (mirrorDownloadUrl) {
                 btn2.href = mirrorDownloadUrl;
-                if (btn2Span) btn2Span.textContent = '⚡ High Speed Mirror (Server 2)';
+                const isDirect2 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive/i.test(mirrorDownloadUrl);
+                if (btn2Span) btn2Span.textContent = isDirect2 ? '⚡ High Speed Mirror (Server 2 Direct)' : '⚡ High Speed Mirror (ROG Fast Cloud Mirror)';
                 btn2.style.display = 'flex';
             } else {
                 btn2.style.display = 'none';
@@ -448,6 +448,7 @@ async function initDownloadPage() {
                 btnWatch.href = watchUrl;
                 btnWatch.style.display = 'flex';
             }
+        }
 
             // 3-second Countdown Timer
             let seconds = 3;

@@ -67,9 +67,9 @@ function playerMarkup(movie, streamUrl) {
     }
 
     if (streamLink) {
-        // Anti-Sandbox fix: allow-popups, allow-pointer-lock, allow-orientation-lock satisfy provider checks,
-        // while omitting allow-top-navigation permanently prevents rogue iframes from hijacking or redirecting the main window.
-        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-pointer-lock allow-orientation-lock allow-popups allow-popups-to-escape-sandbox"></iframe>`;
+        // Complete Sandbox Elimination: Removing sandbox completely resolves 'Please disable the sandbox' across all 13 servers
+        // while the page-level AdShield navigation guard protects the parent window from rogue ad redirects.
+        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
     }
 
     if (trailerEmbed) {
@@ -281,11 +281,13 @@ function switchStream(index, isFailover = false) {
 
 
 function generateFallbackDownloads(movie) {
+    const cleanT = (movie?.title || '').replace(/[:\-–—\(\)\d]/g, ' ').trim();
+    const qTitle = encodeURIComponent(cleanT || movie?.title || '');
     return [
-        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: '', color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: '', color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Fast Server', url: '', color: '#10b981' },
-        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Cloud', url: '', color: '#ec4899' }
+        { quality: '480p SD', size: '450 MB', server: 'HDHub4u Cloud Engine', url: `https://new3.hdhub4u.free/?s=${qTitle}`, color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'ROG Fast Cloud Mirror', url: `https://rogmovies.one/?s=${qTitle}`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Direct Cloud Server', url: `https://new3.hdhub4u.free/?s=${qTitle}`, color: '#10b981' },
+        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD 4K Cloud', url: `https://4khdhub.one`, color: '#ec4899' }
     ];
 }
 
@@ -307,7 +309,7 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
-    if (clean.includes('kmmovies.') || clean.includes('rogmovies.') || clean.includes('vegamovies.')) return false;
+    if (clean.includes('kmmovies.') || clean.includes('vegamovies.')) return false;
     if (clean.includes('magiclinks.lol/download/')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;

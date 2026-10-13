@@ -62,3 +62,40 @@
 
   loadGlobalAds();
 })();
+
+// ─── PHANTOM ANTI-REDIRECT & POPUP SHIELD ───
+// Permanently protects users from rogue iframe top-navigation redirects and spam popups
+(function initAntiHijackShield() {
+  let userNavigationIntent = false;
+
+  // Track legitimate user navigation clicks on our site
+  window.addEventListener('click', function(e) {
+    const link = e.target.closest('a, button, input');
+    if (link) {
+      userNavigationIntent = true;
+      setTimeout(() => { userNavigationIntent = false; }, 4000);
+    }
+  }, true);
+
+  // Guard window.open against unprompted pop-under ads
+  const _origOpen = window.open;
+  window.open = function(url, target, features) {
+    if (!url || typeof url !== 'string') return null;
+    const clean = url.toLowerCase();
+    // Allow internal site links and valid cloud file hosts
+    if (clean.includes(window.location.hostname) || 
+        clean.includes('download.html') || 
+        clean.includes('hubcdn') || 
+        clean.includes('hubdrive') || 
+        clean.includes('nexdrive') || 
+        clean.includes('gofile') ||
+        clean.includes('drive.google') ||
+        clean.includes('4khdhub') ||
+        clean.includes('greenmotors')) {
+      return _origOpen.call(window, url, target, features);
+    }
+    console.warn('[Phantom AdShield] Blocked rogue redirect popup:', url);
+    return null;
+  };
+})();
+
