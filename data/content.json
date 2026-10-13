@@ -1,6 +1,1806 @@
 {
   "movies": [
     {
+      "id": "1791905289400",
+      "type": "movie",
+      "title": "Talvar",
+      "genre": "Feature",
+      "year": 2015,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTYzODg0Mjc4M15BMl5BanBnXkFtZTgwNzY4Mzc3NjE@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTYzODg0Mjc4M15BMl5BanBnXkFtZTgwNzY4Mzc3NjE@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/353464",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/353464"
+        },
+        {
+          "name": "Server 2 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/353464"
+        },
+        {
+          "name": "Server 3 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/353464"
+        },
+        {
+          "name": "Server 4 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/353464"
+        },
+        {
+          "name": "Server 5 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/353464"
+        },
+        {
+          "name": "Server 6 (VidEasy)",
+          "url": "https://player.videasy.net/movie/353464"
+        },
+        {
+          "name": "Server 7 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt4934950"
+        },
+        {
+          "name": "Server 8 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/353464"
+        },
+        {
+          "name": "Server 9 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt4934950&tmdb_id=353464"
+        },
+        {
+          "name": "Server 10 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt4934950"
+        },
+        {
+          "name": "Server 11 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt4934950"
+        },
+        {
+          "name": "Server 12 (111Movies)",
+          "url": "https://111movies.com/movie/353464"
+        },
+        {
+          "name": "Server 13 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/353464"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "360MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477630607/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "750MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776223908/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847765911/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847769826/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Talvar+2015+trailer",
+      "description": "Talvar (2015) starring Irrfan Khan, Konkona Sen Sharma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22474,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt4934950",
+      "tmdb_id": "353464",
+      "createdAt": "2026-10-13T15:28:05.587006+00:00",
+      "updatedAt": "2026-10-13T15:28:05.587006+00:00"
+    },
+    {
+      "id": "1791905287660",
+      "type": "movie",
+      "title": "Gyaarah Gyaarah",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2JiOTlhYTUtZTk5Zi00MjA1LTkxYmQtOTgyODJmNmJmYmZlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2JiOTlhYTUtZTk5Zi00MjA1LTkxYmQtOTgyODJmNmJmYmZlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/2806627514725139368?dp=gyaarah-gyaarah-C7YiLiNnkl3&t=Gyaarah%20Gyaarah",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/2806627514725139368?dp=gyaarah-gyaarah-C7YiLiNnkl3&t=Gyaarah%20Gyaarah"
+        },
+        {
+          "name": "Server 2 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/259688"
+        },
+        {
+          "name": "Server 3 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/259688"
+        },
+        {
+          "name": "Server 4 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/259688"
+        },
+        {
+          "name": "Server 5 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/259688"
+        },
+        {
+          "name": "Server 6 (VidEasy)",
+          "url": "https://player.videasy.net/movie/259688"
+        },
+        {
+          "name": "Server 7 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt26915338"
+        },
+        {
+          "name": "Server 8 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/259688"
+        },
+        {
+          "name": "Server 9 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt26915338&tmdb_id=259688"
+        },
+        {
+          "name": "Server 10 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt26915338"
+        },
+        {
+          "name": "Server 11 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt26915338"
+        },
+        {
+          "name": "Server 12 (111Movies)",
+          "url": "https://111movies.com/movie/259688"
+        },
+        {
+          "name": "Server 13 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/259688"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/packs/wryqdups",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/packs/fgdnunyo",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/packs/yxpwqgpr",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Gyaarah+Gyaarah+2024+trailer",
+      "description": "Gyaarah Gyaarah (2024) starring Raghav Juyal, Kritika Kamra.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22521,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26915338",
+      "tmdb_id": "259688",
+      "createdAt": "2026-10-13T15:28:04.318818+00:00",
+      "updatedAt": "2026-10-13T15:28:04.318818+00:00"
+    },
+    {
+      "id": "1791905289112",
+      "type": "movie",
+      "title": "Badlapur",
+      "genre": "Feature",
+      "year": 2015,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhlYWFjOTktNmM3My00ZTFkLTg2N2QtZjY1YzY1MjI5NzJjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjhlYWFjOTktNmM3My00ZTFkLTg2N2QtZjY1YzY1MjI5NzJjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/323517",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/323517"
+        },
+        {
+          "name": "Server 2 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/323517"
+        },
+        {
+          "name": "Server 3 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/323517"
+        },
+        {
+          "name": "Server 4 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/323517"
+        },
+        {
+          "name": "Server 5 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/323517"
+        },
+        {
+          "name": "Server 6 (VidEasy)",
+          "url": "https://player.videasy.net/movie/323517"
+        },
+        {
+          "name": "Server 7 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt3678782"
+        },
+        {
+          "name": "Server 8 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/323517"
+        },
+        {
+          "name": "Server 9 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt3678782&tmdb_id=323517"
+        },
+        {
+          "name": "Server 10 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt3678782"
+        },
+        {
+          "name": "Server 11 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt3678782"
+        },
+        {
+          "name": "Server 12 (111Movies)",
+          "url": "https://111movies.com/movie/323517"
+        },
+        {
+          "name": "Server 13 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/323517"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477623481/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477623480/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776175727/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Badlapur+2015+trailer",
+      "description": "Badlapur (2015) starring Varun Dhawan, Nawazuddin Siddiqui.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8617,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt3678782",
+      "tmdb_id": "323517",
+      "createdAt": "2026-10-13T15:28:01.878139+00:00",
+      "updatedAt": "2026-10-13T15:28:01.878139+00:00"
+    },
+    {
+      "id": "series_the_great_indian_kapil_show",
+      "type": "series",
+      "title": "The Great Indian Kapil Show",
+      "genre": "Comedy",
+      "year": 2024,
+      "rating": 8.4,
+      "badge": "TRENDING",
+      "trending": true,
+      "views": 98450,
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
+      "description": "Comedian Kapil Sharma hosts this laugh-out-loud variety talk show with celebrity guests, hilarious antics, and his signature supporting cast.",
+      "imdb_id": "tt30003786",
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Ranbir Kapoor, Neetu Kapoor & Riddhima",
+              "duration": "54m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=1"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/1"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/1"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/1"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "450MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e1-720p/",
+                  "color": "#06b6d4"
+                },
+                {
+                  "quality": "1080p FHD",
+                  "size": "1.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e1-1080p/",
+                  "color": "#10b981"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Rohit Sharma & Shreyas Iyer",
+              "duration": "52m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=2"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/2"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/2"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/2"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=2"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "440MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e2-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 3,
+              "title": "Diljit Dosanjh, Parineeti Chopra & Imtiaz Ali",
+              "duration": "56m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=3"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/3"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/3"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/3"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=3"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "460MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e3-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 4,
+              "title": "Vicky Kaushal & Sunny Kaushal",
+              "duration": "50m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=4"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/4"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/4"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/4"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=4"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "430MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e4-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Aamir Khan Special",
+              "duration": "61m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=5"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/5"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/5"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/5"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=5"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "500MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e5-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 6,
+              "title": "Sunny Deol & Bobby Deol",
+              "duration": "53m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=6"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/6"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/6"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/6"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=6"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "440MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e6-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 7,
+              "title": "Heeramandi Cast Special",
+              "duration": "55m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=7"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/7"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/7"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/7"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=7"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "450MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e7-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 8,
+              "title": "Ed Sheeran in India",
+              "duration": "48m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=8"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/8"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/8"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/8"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=8"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "410MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e8-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 9,
+              "title": "Farah Khan & Anil Kapoor",
+              "duration": "53m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=9"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/9"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/9"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/9"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=9"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "440MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e9-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 10,
+              "title": "Janhvi Kapoor & Rajkummar Rao",
+              "duration": "52m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=10"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/10"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/10"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/10"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=10"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "430MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e10-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 11,
+              "title": "Sania Mirza, Saina Nehwal & Mary Kom",
+              "duration": "54m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=11"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/11"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/11"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/11"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=11"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "450MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e11-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 12,
+              "title": "Badshah & Divine",
+              "duration": "51m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=12"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/12"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/12"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/12"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=12"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "420MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e12-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 13,
+              "title": "Kartik Aaryan & Vidya Balan (Season 1 Finale)",
+              "duration": "58m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=13"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/13"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/1/13"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/13"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=13"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "480MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s1-e13-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "3.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/46389608163995-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "5.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/038395780802541-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "17.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/82874962938630-2/",
+              "color": "#10b981"
+            }
+          ]
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Jigra Special: Alia Bhatt, Karan Johar & Vedang",
+              "duration": "56m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/1"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/1"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/1"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "470MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e1-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Devara Cast: Jr NTR, Saif Ali Khan & Janhvi",
+              "duration": "55m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=2"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/2"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/2"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/2"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=2"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "460MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e2-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 3,
+              "title": "Champions Special: Rohit Sharma & Surya",
+              "duration": "58m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=3"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/3"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/3"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/3"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=3"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "480MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e3-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 4,
+              "title": "Kareena Kapoor Khan & Karisma Kapoor",
+              "duration": "54m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=4"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/4"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/4"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/4"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=4"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "450MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e4-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Fabulous Lives vs Bollywood Wives",
+              "duration": "52m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=5"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/5"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/5"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/5"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=5"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "430MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e5-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 6,
+              "title": "Do Patti Cast: Kajol, Kriti Sanon & Shaheer Sheikh",
+              "duration": "53m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=6"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/6"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/6"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/6"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=6"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "440MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e6-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 7,
+              "title": "Bhool Bhulaiyaa 3: Kartik Aaryan, Vidya & Triptii",
+              "duration": "57m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=7"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/7"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/7"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/7"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=7"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "470MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e7-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 8,
+              "title": "Narayana Murthy & Sudha Murty Special",
+              "duration": "55m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=8"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/8"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/8"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/8"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=8"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "450MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e8-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 9,
+              "title": "Navjot Singh Sidhu Returns",
+              "duration": "59m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=9"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/9"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/9"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/9"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=9"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "490MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e9-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 10,
+              "title": "Shalini Passi & Delhi Royalty",
+              "duration": "51m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=10"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/10"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/10"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/10"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=10"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "420MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e10-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 11,
+              "title": "Pushpa 2 Cast: Allu Arjun & Rashmika Mandanna",
+              "duration": "60m",
+              "streams": [
+                {
+                  "name": "Server 1 (HD)",
+                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=11"
+                },
+                {
+                  "name": "Server 2 (Fast)",
+                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/11"
+                },
+                {
+                  "name": "Server 3 (VIP)",
+                  "url": "https://embed.su/embed/tv/tt30003786/2/11"
+                },
+                {
+                  "name": "Server 4 (Ultra)",
+                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/11"
+                },
+                {
+                  "name": "Server 5 (Cloud)",
+                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=11"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "500MB",
+                  "server": "Fast Cloud",
+                  "url": "https://w3.magiclinks.lol/kapil-s2-e11-720p/",
+                  "color": "#06b6d4"
+                }
+              ]
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "500MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s02-1080p/",
+              "color": "#10b981"
+            }
+          ]
+        },
+        {
+          "seasonNumber": 3,
+          "title": "Season 3",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt30003786&s=3&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt30003786/3/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt30003786/3/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/3/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt30003786?s=3&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s03-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "530MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s03-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s03-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt30003786&s=4&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt30003786/4/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt30003786/4/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/4/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt30003786?s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s04-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "450MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s04-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s04-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 5,
+          "title": "Season 5",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (HD)",
+              "url": "https://multiembed.mov/?video_id=tt30003786&s=5&e=1"
+            },
+            {
+              "name": "Server 2 (Fast)",
+              "url": "https://player.autoembed.cc/embed/tv/tt30003786/5/1"
+            },
+            {
+              "name": "Server 3 (VIP)",
+              "url": "https://embed.su/embed/tv/tt30003786/5/1"
+            },
+            {
+              "name": "Server 4 (Ultra)",
+              "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/5/1"
+            },
+            {
+              "name": "Server 5 (Cloud)",
+              "url": "https://player.smashystream.com/tv/tt30003786?s=5&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s05-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "400MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s05-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-great-indian-kapil-show-s05-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "updatedAt": "2026-10-13T15:27:35.277097+00:00",
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SnBHQm5TNWl5MUcwUmVLcGFmWHZFR1dSTElpZUx6ZlVHWXRvTVltYlByRkJoV3VlNjlLQ1R1UXNMVlJ2bVNIdDd3VXNDWnlMMGN1TENkVGk0K1ZGNkkyWWlqWUQ0MnZ4OXZzaHpBZERxR1E9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SnBHQm5TNWl5MUcwUmVLcGFmWHZFR1dSTElpZUx6ZlVHWXRvTVltYlByRkJoV3VlNjlLQ1R1UXNMVlJ2bVNIdDRPdit3dEc0ZFo0UjgxYmUybWo1cjZ2VUR0eW9BN3B6Mkc0NWJSa1I5RGs9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SnBHQm5TNWl5MUcwUmVLcGFmWHZFR1dSTElpZUx6ZlVHWXRvTVltYlByRkJoV3VlNjlLQ1R1UXNMVlJ2bVNIdE5PeDBzYmZFbTJjVU01c3hpMGQyOE5QUU9RTFlZSGtJMkZDNWlDeUIyN009",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "tmdb_id": "247769",
+      "netmirror_id": "7995548436131104088",
+      "netmirror_dp": "the-great-indian-kapil-show-oCn8zYbHDw9",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7995548436131104088?dp=the-great-indian-kapil-show-oCn8zYbHDw9&t=The%20Great%20Indian%20Kapil%20Show"
+        },
+        {
+          "name": "Server 2 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/247769"
+        },
+        {
+          "name": "Server 3 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/247769"
+        },
+        {
+          "name": "Server 4 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/247769"
+        },
+        {
+          "name": "Server 5 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/247769"
+        },
+        {
+          "name": "Server 6 (VidEasy)",
+          "url": "https://player.videasy.net/movie/247769"
+        },
+        {
+          "name": "Server 7 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt30003786"
+        },
+        {
+          "name": "Server 8 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/247769"
+        },
+        {
+          "name": "Server 9 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt30003786&tmdb_id=247769"
+        },
+        {
+          "name": "Server 10 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt30003786"
+        },
+        {
+          "name": "Server 11 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt30003786"
+        },
+        {
+          "name": "Server 12 (111Movies)",
+          "url": "https://111movies.com/movie/247769"
+        },
+        {
+          "name": "Server 13 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/247769"
+        }
+      ],
+      "streamLink": "https://net27.cc/native/7995548436131104088?dp=the-great-indian-kapil-show-oCn8zYbHDw9&t=The%20Great%20Indian%20Kapil%20Show"
+    },
+    {
+      "id": "1791905256164",
+      "type": "series",
+      "title": "Private Eyes",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "200MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776105856/",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/3142864047087962600?dp=the-private-eyes-ajvlD0KlaK3&t=Private%20Eyes"
+            },
+            {
+              "name": "Server 2 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/13762?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (MoviesAPI - No Ads)",
+              "url": "https://moviesapi.club/tv/13762-1-1"
+            },
+            {
+              "name": "Server 4 (Mapple - No Ads)",
+              "url": "https://mapple.tv/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 5 (AutoEmbed)",
+              "url": "https://player.autoembed.cc/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 6 (VidEasy)",
+              "url": "https://player.videasy.net/tv/13762/1/1"
+            },
+            {
+              "name": "Server 7 (VidLink)",
+              "url": "https://vidlink.pro/tv/tt5722298/1/1"
+            },
+            {
+              "name": "Server 8 (VixSrc)",
+              "url": "https://vixsrc.to/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 9 (MultiEmbed)",
+              "url": "https://multiembed.mov/?video_id=tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 10 (2Embed)",
+              "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 11 (VidSrc Embed)",
+              "url": "https://vidsrc.me/embed/tv?imdb=tt5722298&season=1&episode=1"
+            },
+            {
+              "name": "Server 12 (111Movies)",
+              "url": "https://111movies.com/tv/13762/1/1"
+            },
+            {
+              "name": "Server 13 (PrimeSrc)",
+              "url": "https://primesrc.net/embed/tv/13762/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+2016+trailer",
+      "description": "Private Eyes (2016) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21690,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5722298",
+      "tmdb_id": "13762",
+      "createdAt": "2026-10-13T15:27:32.466753+00:00",
+      "updatedAt": "2026-10-13T15:27:32.466753+00:00"
+    },
+    {
+      "id": "1791905252306",
+      "type": "series",
+      "title": "The Trap",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzYzYzEzMTYtNTgwOC00ODg3LWE0NzItMWVjMTVmMmY4OTdlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzYzYzEzMTYtNTgwOC00ODg3LWE0NzItMWVjMTVmMmY4OTdlXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SnBHQm5TNWl5MUcwUmVLcGFmWHZFR1dSTElpZUx6ZlVHWXRvTVltYlByRkJoV3VlNjlLQ1R1UXNMVlJ2bVNIdEFPQnBucFpFakdYajJVdDVaR3dDN3lqbkRSUHNYWkdmTnAzbzE3Qyt4cXM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.8GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SnBHQm5TNWl5MUcwUmVLcGFmWHZFR1dSTElpZUx6ZlVHWXRvTVltYlByRkJoV3VlNjlLQ1R1UXNMVlJ2bVNIdGRSSTQ3N0dZYnlaQjhJdnpyMFgwR3FRZkhhYzg3c0N0aUFrbW1hWFk1RFk9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "5.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SnBHQm5TNWl5MUcwUmVLcGFmWHZFR1dSTElpZUx6ZlVHWXRvTVltYlByRkJoV3VlNjlLQ1R1UXNMVlJ2bVNIdE50OEMxemN0MkJHaVVpYUJkai9ZOEQ1ZjdxQjhOZFoybjZCUWRJOUlIcXc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/8067587408264580904?dp=the-parent-trap-I0LYItqDXB9&t=The%20Trap"
+            },
+            {
+              "name": "Server 2 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/9820?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (MoviesAPI - No Ads)",
+              "url": "https://moviesapi.club/tv/9820-1-1"
+            },
+            {
+              "name": "Server 4 (Mapple - No Ads)",
+              "url": "https://mapple.tv/embed/tv/9820/1/1"
+            },
+            {
+              "name": "Server 5 (AutoEmbed)",
+              "url": "https://player.autoembed.cc/embed/tv/9820/1/1"
+            },
+            {
+              "name": "Server 6 (VidEasy)",
+              "url": "https://player.videasy.net/tv/9820/1/1"
+            },
+            {
+              "name": "Server 7 (VidLink)",
+              "url": "https://vidlink.pro/tv/tt36470958/1/1"
+            },
+            {
+              "name": "Server 8 (VixSrc)",
+              "url": "https://vixsrc.to/embed/tv/9820/1/1"
+            },
+            {
+              "name": "Server 9 (MultiEmbed)",
+              "url": "https://multiembed.mov/?video_id=tt36470958&s=1&e=1"
+            },
+            {
+              "name": "Server 10 (2Embed)",
+              "url": "https://www.2embed.cc/embedtv/tt36470958&s=1&e=1"
+            },
+            {
+              "name": "Server 11 (VidSrc Embed)",
+              "url": "https://vidsrc.me/embed/tv?imdb=tt36470958&season=1&episode=1"
+            },
+            {
+              "name": "Server 12 (111Movies)",
+              "url": "https://111movies.com/tv/9820/1/1"
+            },
+            {
+              "name": "Server 13 (PrimeSrc)",
+              "url": "https://primesrc.net/embed/tv/9820/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-trap-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "500MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-trap-s01-720p/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-trap-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "5GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-trap-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Trap+2026+trailer",
+      "description": "The Trap (2026) starring Friederike Becht, Hans Löw.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22296,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36470958",
+      "tmdb_id": "9820",
+      "createdAt": "2026-10-13T15:27:28.995465+00:00",
+      "updatedAt": "2026-10-13T15:27:28.995465+00:00"
+    },
+    {
       "id": "1791804696142",
       "type": "movie",
       "title": "Ulajh",
@@ -4398,31 +6198,24 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "473.4MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/2648776534872-2/",
+          "size": "470MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776423826/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "775.8MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/03927189902-2/",
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776423828/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.7GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/5604849664-2/",
+          "size": "3.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776423830/",
           "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "5.0GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/863129395-2/",
-          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -4476,23 +6269,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "429.9MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/16172836574404-2/",
+          "size": "450MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847764473/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "767.7MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/3472505-2/",
+          "size": "1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847764475/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/903552477-2/",
+          "size": "4.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477614990/",
           "color": "#10b981"
         }
       ],
@@ -5732,23 +7525,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "473.5MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/437283967312927-2/",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776427718/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1009.3MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/7505553-2/",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776427720/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "1.9GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/79958813972-2/",
+          "size": "3.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776427721/",
           "color": "#10b981"
         }
       ],
@@ -19187,23 +20980,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "1.6GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/02916516235-2/",
+          "size": "430MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395454/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "2.7GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/4192664604045-2/",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395455/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "8.0GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/5375540833-2/",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395456/",
           "color": "#10b981"
         }
       ],
@@ -26486,7 +28279,7 @@
           "size": "23.44 GB",
           "server": "Fast Cloud Mirror",
           "url": "https://w3.magiclinks.lol/295340312398875-2/",
-          "color": "#ec4899"
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [
@@ -31385,24 +33178,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "1GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/20650903225947-2/",
+          "size": "540MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395329/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.9GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/4727178-2/",
+          "size": "2.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395317/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "9.9GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/03599873991217-2/",
+          "size": "540MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395330/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "540MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776395331/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [
@@ -36134,21 +37934,21 @@
         {
           "quality": "480p SD",
           "size": "452 MB",
-          "server": "Fast Cloud",
+          "server": "Fast Cloud Mirror",
           "url": "https://w3.magiclinks.lol/9471401528076-2/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
           "size": "747 MB",
-          "server": "Fast Cloud",
+          "server": "Fast Cloud Mirror",
           "url": "https://w3.magiclinks.lol/9031269-2/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
           "size": "1.59 GB",
-          "server": "Fast Cloud",
+          "server": "Fast Cloud Mirror",
           "url": "https://w3.magiclinks.lol/1875550487727-2/",
           "color": "#10b981"
         }
@@ -55752,7 +57552,29 @@
           "url": "https://primesrc.net/embed/movie/12259"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "700MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776458578/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.6GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776458579/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.4GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776458580/",
+          "color": "#10b981"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Sholay+1975+trailer",
       "description": "Sholay (1975) starring Sanjeev Kumar, Dharmendra.",
@@ -55842,31 +57664,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "639.6MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/4142186743097-2/",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776203205/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/1233734872-2/",
+          "size": "870MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776203218/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/43072827251772-2/",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776203180/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "12.98 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/9521748324958-2/",
-          "color": "#ec4899"
+          "size": "340MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776203199/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -55958,24 +57780,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "584.8MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/1295586-2/",
+          "size": "500MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776204416/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1001.4MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/5179249851-2/",
+          "size": "900MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776204642/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "3.8GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/564041303082-2/",
+          "size": "2.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776204367/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776204423/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -56067,31 +57896,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "433.3MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/9575459070-2/",
+          "size": "630MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/xwSGUYExianZ4W8zTr7Fdkq8G",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "895.0MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/652861741087573-2/",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/file/2095709801",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "3.0GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/92987532917164-2/",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cU4ramhFeG50ZWd1VWk1TDB5Um9CVUVzQ1FxR21hMjNIZlRzKzk2R1BNM2lsR0FUaUhlMStYZnJWcnFTb1d1UFRGSVJBTllCUWxya2REUHpSREdSWEdoNzZMQ1U5eCtuRy9pL1JCL2Z3TGs9",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "4.6GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/842909997895-2/",
-          "color": "#ec4899"
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -58062,1100 +59891,6 @@
       "tmdb_id": "1101412",
       "createdAt": "2026-10-07T18:03:52.380019+00:00",
       "updatedAt": "2026-10-07T18:03:52.380019+00:00"
-    },
-    {
-      "id": "series_the_great_indian_kapil_show",
-      "type": "series",
-      "title": "The Great Indian Kapil Show",
-      "genre": "Comedy",
-      "year": 2024,
-      "rating": 8.4,
-      "badge": "TRENDING",
-      "trending": true,
-      "views": 98450,
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
-      "description": "Comedian Kapil Sharma hosts this laugh-out-loud variety talk show with celebrity guests, hilarious antics, and his signature supporting cast.",
-      "imdb_id": "tt30003786",
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "episodes": [
-            {
-              "episodeNumber": 1,
-              "title": "Ranbir Kapoor, Neetu Kapoor & Riddhima",
-              "duration": "54m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=1"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/1"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/1"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/1"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=1"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "450MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e1-720p/",
-                  "color": "#06b6d4"
-                },
-                {
-                  "quality": "1080p FHD",
-                  "size": "1.1GB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e1-1080p/",
-                  "color": "#10b981"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 2,
-              "title": "Rohit Sharma & Shreyas Iyer",
-              "duration": "52m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=2"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/2"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/2"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/2"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=2"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "440MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e2-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 3,
-              "title": "Diljit Dosanjh, Parineeti Chopra & Imtiaz Ali",
-              "duration": "56m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=3"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/3"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/3"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/3"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=3"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "460MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e3-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 4,
-              "title": "Vicky Kaushal & Sunny Kaushal",
-              "duration": "50m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=4"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/4"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/4"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/4"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=4"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "430MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e4-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 5,
-              "title": "Aamir Khan Special",
-              "duration": "61m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=5"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/5"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/5"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/5"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=5"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "500MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e5-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 6,
-              "title": "Sunny Deol & Bobby Deol",
-              "duration": "53m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=6"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/6"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/6"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/6"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=6"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "440MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e6-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 7,
-              "title": "Heeramandi Cast Special",
-              "duration": "55m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=7"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/7"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/7"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/7"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=7"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "450MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e7-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 8,
-              "title": "Ed Sheeran in India",
-              "duration": "48m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=8"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/8"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/8"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/8"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=8"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "410MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e8-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 9,
-              "title": "Farah Khan & Anil Kapoor",
-              "duration": "53m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=9"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/9"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/9"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/9"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=9"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "440MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e9-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 10,
-              "title": "Janhvi Kapoor & Rajkummar Rao",
-              "duration": "52m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=10"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/10"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/10"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/10"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=10"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "430MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e10-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 11,
-              "title": "Sania Mirza, Saina Nehwal & Mary Kom",
-              "duration": "54m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=11"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/11"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/11"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/11"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=11"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "450MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e11-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 12,
-              "title": "Badshah & Divine",
-              "duration": "51m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=12"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/12"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/12"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/12"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=12"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "420MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e12-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 13,
-              "title": "Kartik Aaryan & Vidya Balan (Season 1 Finale)",
-              "duration": "58m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=1&e=13"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/1/13"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/1/13"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/1/13"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=1&e=13"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "480MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s1-e13-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "480p SD",
-              "size": "3.2GB",
-              "server": "Fast Cloud",
-              "url": "https://w3.magiclinks.lol/46389608163995-2/",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "720p HD",
-              "size": "5.7GB",
-              "server": "Fast Cloud",
-              "url": "https://w3.magiclinks.lol/038395780802541-2/",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "1080p Full HD",
-              "size": "17.7GB",
-              "server": "Fast Cloud",
-              "url": "https://w3.magiclinks.lol/82874962938630-2/",
-              "color": "#10b981"
-            }
-          ]
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "episodes": [
-            {
-              "episodeNumber": 1,
-              "title": "Jigra Special: Alia Bhatt, Karan Johar & Vedang",
-              "duration": "56m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=1"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/1"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/1"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/1"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=1"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "470MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e1-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 2,
-              "title": "Devara Cast: Jr NTR, Saif Ali Khan & Janhvi",
-              "duration": "55m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=2"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/2"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/2"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/2"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=2"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "460MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e2-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 3,
-              "title": "Champions Special: Rohit Sharma & Surya",
-              "duration": "58m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=3"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/3"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/3"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/3"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=3"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "480MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e3-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 4,
-              "title": "Kareena Kapoor Khan & Karisma Kapoor",
-              "duration": "54m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=4"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/4"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/4"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/4"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=4"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "450MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e4-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 5,
-              "title": "Fabulous Lives vs Bollywood Wives",
-              "duration": "52m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=5"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/5"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/5"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/5"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=5"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "430MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e5-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 6,
-              "title": "Do Patti Cast: Kajol, Kriti Sanon & Shaheer Sheikh",
-              "duration": "53m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=6"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/6"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/6"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/6"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=6"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "440MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e6-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 7,
-              "title": "Bhool Bhulaiyaa 3: Kartik Aaryan, Vidya & Triptii",
-              "duration": "57m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=7"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/7"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/7"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/7"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=7"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "470MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e7-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 8,
-              "title": "Narayana Murthy & Sudha Murty Special",
-              "duration": "55m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=8"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/8"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/8"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/8"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=8"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "450MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e8-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 9,
-              "title": "Navjot Singh Sidhu Returns",
-              "duration": "59m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=9"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/9"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/9"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/9"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=9"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "490MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e9-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 10,
-              "title": "Shalini Passi & Delhi Royalty",
-              "duration": "51m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=10"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/10"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/10"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/10"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=10"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "420MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e10-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            },
-            {
-              "episodeNumber": 11,
-              "title": "Pushpa 2 Cast: Allu Arjun & Rashmika Mandanna",
-              "duration": "60m",
-              "streams": [
-                {
-                  "name": "Server 1 (HD)",
-                  "url": "https://multiembed.mov/?video_id=tt30003786&s=2&e=11"
-                },
-                {
-                  "name": "Server 2 (Fast)",
-                  "url": "https://player.autoembed.cc/embed/tv/tt30003786/2/11"
-                },
-                {
-                  "name": "Server 3 (VIP)",
-                  "url": "https://embed.su/embed/tv/tt30003786/2/11"
-                },
-                {
-                  "name": "Server 4 (Ultra)",
-                  "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/2/11"
-                },
-                {
-                  "name": "Server 5 (Cloud)",
-                  "url": "https://player.smashystream.com/tv/tt30003786?s=2&e=11"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "720p HD",
-                  "size": "500MB",
-                  "server": "Fast Cloud",
-                  "url": "https://w3.magiclinks.lol/kapil-s2-e11-720p/",
-                  "color": "#06b6d4"
-                }
-              ]
-            }
-          ],
-          "downloads": []
-        },
-        {
-          "seasonNumber": 3,
-          "title": "Season 3",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (HD)",
-              "url": "https://multiembed.mov/?video_id=tt30003786&s=3&e=1"
-            },
-            {
-              "name": "Server 2 (Fast)",
-              "url": "https://player.autoembed.cc/embed/tv/tt30003786/3/1"
-            },
-            {
-              "name": "Server 3 (VIP)",
-              "url": "https://embed.su/embed/tv/tt30003786/3/1"
-            },
-            {
-              "name": "Server 4 (Ultra)",
-              "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/3/1"
-            },
-            {
-              "name": "Server 5 (Cloud)",
-              "url": "https://player.smashystream.com/tv/tt30003786?s=3&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 4,
-          "title": "Season 4",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (HD)",
-              "url": "https://multiembed.mov/?video_id=tt30003786&s=4&e=1"
-            },
-            {
-              "name": "Server 2 (Fast)",
-              "url": "https://player.autoembed.cc/embed/tv/tt30003786/4/1"
-            },
-            {
-              "name": "Server 3 (VIP)",
-              "url": "https://embed.su/embed/tv/tt30003786/4/1"
-            },
-            {
-              "name": "Server 4 (Ultra)",
-              "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/4/1"
-            },
-            {
-              "name": "Server 5 (Cloud)",
-              "url": "https://player.smashystream.com/tv/tt30003786?s=4&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 5,
-          "title": "Season 5",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (HD)",
-              "url": "https://multiembed.mov/?video_id=tt30003786&s=5&e=1"
-            },
-            {
-              "name": "Server 2 (Fast)",
-              "url": "https://player.autoembed.cc/embed/tv/tt30003786/5/1"
-            },
-            {
-              "name": "Server 3 (VIP)",
-              "url": "https://embed.su/embed/tv/tt30003786/5/1"
-            },
-            {
-              "name": "Server 4 (Ultra)",
-              "url": "https://vidsrc.cc/v2/embed/tv/tt30003786/5/1"
-            },
-            {
-              "name": "Server 5 (Cloud)",
-              "url": "https://player.smashystream.com/tv/tt30003786?s=5&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        }
-      ],
-      "updatedAt": "2026-10-07T18:03:49.882626+00:00",
-      "downloads": [
-        {
-          "quality": "480p SD",
-          "size": "3.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/46389608163995-2/",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p HD",
-          "size": "5.7GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/038395780802541-2/",
-          "color": "#06b6d4"
-        },
-        {
-          "quality": "1080p Full HD",
-          "size": "17.7GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/82874962938630-2/",
-          "color": "#10b981"
-        }
-      ],
-      "tmdb_id": "247769",
-      "netmirror_id": "7995548436131104088",
-      "netmirror_dp": "the-great-indian-kapil-show-oCn8zYbHDw9",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://net27.cc/native/7995548436131104088?dp=the-great-indian-kapil-show-oCn8zYbHDw9&t=The%20Great%20Indian%20Kapil%20Show"
-        },
-        {
-          "name": "Server 2 (CineSrc - No Ads)",
-          "url": "https://cinesrc.st/embed/movie/247769"
-        },
-        {
-          "name": "Server 3 (MoviesAPI - No Ads)",
-          "url": "https://moviesapi.club/movie/247769"
-        },
-        {
-          "name": "Server 4 (Mapple - No Ads)",
-          "url": "https://mapple.tv/embed/movie/247769"
-        },
-        {
-          "name": "Server 5 (AutoEmbed)",
-          "url": "https://player.autoembed.cc/embed/movie/247769"
-        },
-        {
-          "name": "Server 6 (VidEasy)",
-          "url": "https://player.videasy.net/movie/247769"
-        },
-        {
-          "name": "Server 7 (VidLink)",
-          "url": "https://vidlink.pro/movie/tt30003786"
-        },
-        {
-          "name": "Server 8 (VixSrc)",
-          "url": "https://vixsrc.to/embed/movie/247769"
-        },
-        {
-          "name": "Server 9 (MultiEmbed)",
-          "url": "https://multiembed.mov/?video_id=tt30003786&tmdb_id=247769"
-        },
-        {
-          "name": "Server 10 (2Embed)",
-          "url": "https://www.2embed.cc/embed/tt30003786"
-        },
-        {
-          "name": "Server 11 (VidSrc Embed)",
-          "url": "https://vidsrc.me/embed/movie?imdb=tt30003786"
-        },
-        {
-          "name": "Server 12 (111Movies)",
-          "url": "https://111movies.com/movie/247769"
-        },
-        {
-          "name": "Server 13 (PrimeSrc)",
-          "url": "https://primesrc.net/embed/movie/247769"
-        }
-      ],
-      "streamLink": "https://net27.cc/native/7995548436131104088?dp=the-great-indian-kapil-show-oCn8zYbHDw9&t=The%20Great%20Indian%20Kapil%20Show"
     },
     {
       "id": "1791396228906",
@@ -64922,8 +65657,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 557,
-    "lastUpdated": "2026-10-12T11:31:36.038302+00:00",
+    "totalMovies": 562,
+    "lastUpdated": "2026-10-13T15:28:06.886048+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
