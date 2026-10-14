@@ -39,7 +39,7 @@ CONTENT_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "content.js
 
 def clean_tokens(text: str) -> List[str]:
     t = re.sub(r'\(.*?\)|\[.*?\]', ' ', text)
-    t = re.sub(r'\b(hindi|dubbed|dual audio|org|hd|4k|uhd|2160p|1080p|720p|480p|amzn|netflix|hotstar|hdtc|web-dl|rip|full|movie|download|watch|online|free|tamil|telugu|kannada|malayalam)\b', ' ', t, flags=re.I)
+    t = re.sub(r'\b(hindi|dubbed|dual audio|org|hd|4k|uhd|2160p|1080p|720p|480p|amzn|netflix|hotstar|hdtc|web-dl|rip|full|movie|download|watch|online|free|tamil|telugu|kannada|malayalam|season|episode|complete|special)\b', ' ', t, flags=re.I)
     t = re.sub(r'[^a-zA-Z0-9\s]', ' ', t)
     stop = {'the', 'a', 'an', 'in', 'of', 'and', 'to', 'for', 'part'}
     tokens = [w.lower() for w in t.split() if w.lower() not in stop]
@@ -69,17 +69,23 @@ def is_title_match(catalog_title: str, candidate_title: str, catalog_year: int =
     if nums_cat and not nums_cat.issubset(nums_cand):
         return False
 
+    # Exact word-boundary phrase match
     phrase_cat = ' '.join(tokens_cat)
     phrase_cand = ' '.join(tokens_cand)
-    if phrase_cat in phrase_cand:
+    if f' {phrase_cat} ' in f' {phrase_cand} ':
+        # If catalog title is single token, don't loosely match multi-name candidates (e.g. Michael vs Michael Jackson)
+        if len(tokens_cat) == 1:
+            if len(tokens_cand) <= 2 or set_cat == set_cand:
+                return True
+            return False
         return True
         
     overlap = set_cat.intersection(set_cand)
     overlap_ratio = len(overlap) / len(set_cat)
     
     if overlap_ratio >= 0.7:
-        return True
-    if len(tokens_cat) == 1 and tokens_cat[0] in set_cand:
+        if len(tokens_cat) == 1 and len(tokens_cand) > 2:
+            return False
         return True
     return False
 
