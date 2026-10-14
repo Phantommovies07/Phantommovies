@@ -1,6 +1,358 @@
 {
   "movies": [
     {
+      "id": "1791946607298",
+      "type": "movie",
+      "title": "Everest",
+      "genre": "Feature",
+      "year": 2015,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDAzOTYxMTctY2ViNi00NDI3LTgwMGItY2FhN2JjZWE5MjRkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDAzOTYxMTctY2ViNi00NDI3LTgwMGItY2FhN2JjZWE5MjRkXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/3025173525041660152?dp=everest-Sx7JZmgktB3&t=Everest",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/3025173525041660152?dp=everest-Sx7JZmgktB3&t=Everest"
+        },
+        {
+          "name": "Server 2 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/253412"
+        },
+        {
+          "name": "Server 3 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/253412"
+        },
+        {
+          "name": "Server 4 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/253412"
+        },
+        {
+          "name": "Server 5 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/253412"
+        },
+        {
+          "name": "Server 6 (VidEasy)",
+          "url": "https://player.videasy.net/movie/253412"
+        },
+        {
+          "name": "Server 7 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt2719848"
+        },
+        {
+          "name": "Server 8 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/253412"
+        },
+        {
+          "name": "Server 9 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt2719848&tmdb_id=253412"
+        },
+        {
+          "name": "Server 10 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt2719848"
+        },
+        {
+          "name": "Server 11 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt2719848"
+        },
+        {
+          "name": "Server 12 (111Movies)",
+          "url": "https://111movies.com/movie/253412"
+        },
+        {
+          "name": "Server 13 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/253412"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "396.9MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/51558293821220-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "827.2MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/8666128284-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.5GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/05983850-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "27.38 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/140247395120183-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Everest+2015+trailer",
+      "description": "Everest (2015) starring Jason Clarke, Ang Phula Sherpa.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12241,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt2719848",
+      "tmdb_id": "253412",
+      "createdAt": "2026-10-14T02:56:45.524199+00:00",
+      "updatedAt": "2026-10-14T02:56:45.524199+00:00"
+    },
+    {
+      "id": "1791946611773",
+      "type": "series",
+      "title": "Private Eyes",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "200MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776105856/",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/3142864047087962600?dp=the-private-eyes-ajvlD0KlaK3&t=Private%20Eyes"
+            },
+            {
+              "name": "Server 2 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/13762?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (MoviesAPI - No Ads)",
+              "url": "https://moviesapi.club/tv/13762-1-1"
+            },
+            {
+              "name": "Server 4 (Mapple - No Ads)",
+              "url": "https://mapple.tv/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 5 (AutoEmbed)",
+              "url": "https://player.autoembed.cc/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 6 (VidEasy)",
+              "url": "https://player.videasy.net/tv/13762/1/1"
+            },
+            {
+              "name": "Server 7 (VidLink)",
+              "url": "https://vidlink.pro/tv/tt5722298/1/1"
+            },
+            {
+              "name": "Server 8 (VixSrc)",
+              "url": "https://vixsrc.to/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 9 (MultiEmbed)",
+              "url": "https://multiembed.mov/?video_id=tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 10 (2Embed)",
+              "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 11 (VidSrc Embed)",
+              "url": "https://vidsrc.me/embed/tv?imdb=tt5722298&season=1&episode=1"
+            },
+            {
+              "name": "Server 12 (111Movies)",
+              "url": "https://111movies.com/tv/13762/1/1"
+            },
+            {
+              "name": "Server 13 (PrimeSrc)",
+              "url": "https://primesrc.net/embed/tv/13762/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+2016+trailer",
+      "description": "Private Eyes (2016) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20474,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5722298",
+      "tmdb_id": "13762",
+      "createdAt": "2026-10-14T02:56:41.943157+00:00",
+      "updatedAt": "2026-10-14T02:56:41.943157+00:00"
+    },
+    {
+      "id": "1791946601561",
+      "type": "movie",
+      "title": "Weapons",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTBhNWJjZWItYzY3NS00M2NkLThmOWYtYTlmNzBmN2UxZWFjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTBhNWJjZWItYzY3NS00M2NkLThmOWYtYTlmNzBmN2UxZWFjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1078605",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1078605"
+        },
+        {
+          "name": "Server 2 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1078605"
+        },
+        {
+          "name": "Server 3 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/1078605"
+        },
+        {
+          "name": "Server 4 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/1078605"
+        },
+        {
+          "name": "Server 5 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/1078605"
+        },
+        {
+          "name": "Server 6 (VidEasy)",
+          "url": "https://player.videasy.net/movie/1078605"
+        },
+        {
+          "name": "Server 7 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt26581740"
+        },
+        {
+          "name": "Server 8 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/1078605"
+        },
+        {
+          "name": "Server 9 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt26581740&tmdb_id=1078605"
+        },
+        {
+          "name": "Server 10 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt26581740"
+        },
+        {
+          "name": "Server 11 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt26581740"
+        },
+        {
+          "name": "Server 12 (111Movies)",
+          "url": "https://111movies.com/movie/1078605"
+        },
+        {
+          "name": "Server 13 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/1078605"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "490MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/Kv0op4nQtT0bG9ahcKMUwPkmM",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/file/2237002897",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cjgxZHArY0sxMmkxVis3NlcvT0lKRWpHd2NXTFhFei8yeHVrWldxL0xvODlBSG95a2x3ZVRxa0E2RCtGYUF3Ykk3alJUZitudzBJZ2JZZStqTkRySzg4b1dhNGxzZnRydkxKOVVFcDZvcUU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Weapons+2025+trailer",
+      "description": "Weapons (2025) starring Julia Garner, Josh Brolin.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14504,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26581740",
+      "tmdb_id": "1078605",
+      "createdAt": "2026-10-14T02:56:38.258249+00:00",
+      "updatedAt": "2026-10-14T02:56:38.258249+00:00"
+    },
+    {
       "id": "1791924940606",
       "type": "series",
       "title": "Private Eyes",
@@ -59359,24 +59711,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "433.1MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/98298042653-2/",
+          "size": "480MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776374372/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "727.6MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/642002814-2/",
+          "size": "830MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776374373/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.6GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/859072701-2/",
+          "size": "2.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776374375/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776374374/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -59466,31 +59825,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "384.0MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/58746883-2/",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776383392/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "919.6MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/12330041-2/",
+          "size": "800MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776383417/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.4GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/45427657485754-2/",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776383418/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "3.5GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/1504773784-2/",
-          "color": "#ec4899"
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776383394/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -59769,31 +60128,31 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "414.0MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/195746077-2/",
+          "size": "500MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776344008/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "579.3MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/381192273497447-2/",
+          "size": "850MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776352609/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.5GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/24886077195-2/",
+          "size": "3.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776344010/",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "14.2GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/7007317-2/",
-          "color": "#ec4899"
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776344009/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -59882,7 +60241,36 @@
           "url": "https://primesrc.net/embed/movie/66025"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "420MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/e9xl01WXyjtigJjfPL6860d6o",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "820MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/file/2069479113",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=bnBXTUowNFlPTXl5cWNiU0pHS3BxcERjcEhSTnNpTVkvMVV0dXR1RG9qYmVpNlR3ZVNQWDJ3eXBKZzROWk0rSmExQzNPZlFiTm5lWFFpa2Mwc2FZaUhHZEpWcGIrc3ZnYUlWR2RiY1Q5cW89",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Animal+Kingdom+2016+trailer",
       "description": "Animal Kingdom (2016) starring Shawn Hatosy, Ben Robson.",
@@ -60087,18 +60475,32 @@
       ],
       "downloads": [
         {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510671/",
+          "color": "#ffd70f"
+        },
+        {
           "quality": "720p HD",
-          "size": "265714 MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/20566117814-2/",
+          "size": "1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510688/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2652.83 GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/587059778191390-2/",
+          "size": "",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510689/",
           "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510672/",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -60188,23 +60590,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "320.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/85012559-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776513669/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "759.1MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/6204449-2/",
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776513671/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
           "size": "2.5GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/27143086-2/",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776513673/",
           "color": "#10b981"
         }
       ],
@@ -60295,23 +60697,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "666.1MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/291918679989-2/",
+          "size": "420MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510935/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "983.7MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/2688981029-2/",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510936/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "3.1GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/216337279-2/",
+          "size": "2.6GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510937/",
           "color": "#10b981"
         }
       ],
@@ -60366,30 +60768,30 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "584.3MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/045518636540818-2/",
+          "size": "690MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/KC33hlDfYuZFYTPQzkUIGniKD",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "968.7MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/06785049068322-2/",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/file/2550289224",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2.4GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/845298674640-2/",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=MlZNalhVVFI1akE3TEYyKzEycEZtbVBFOGpTc0Y0RVFNSldzNUk5MEZDdTByTzZEbzRWS1RxdTBiTmRXVEZwR2h5ZHhyTmNZR1JUajVGdVpWOHAxWGNCQWU5aGZJY1VnakxBRnU2a3czbzQ9",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "26522.70 GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/607351737-2/",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
           "color": "#8b5cf6"
         }
       ],
@@ -60480,30 +60882,30 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "339.8MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/954971348578589-2/",
+          "size": "420MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/ze0uwT47AHegdyNN0xFOZ8rVM",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "609.8MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/795349038-2/",
+          "size": "830MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.pics/file/2295714986",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "1.4GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/2212262-2/",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=R0hGL0NDTHV2RHpVVmp4dHlqdEVQbTVHQ0RydTVpR0lzT2cvZmdkVGpzTmdkbG1DY3oxdVlyY0gzSzlyN2xaQmpENUZFOFNTQ3RhRnlaTDg4UzBiNFBFazZ3bUl0WGFieDIzaW1TSHVET0E9",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "2654.54 GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/36797591188-2/",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
           "color": "#8b5cf6"
         }
       ],
@@ -65882,8 +66284,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 433,
-    "lastUpdated": "2026-10-13T20:56:06.850308+00:00",
+    "totalMovies": 435,
+    "lastUpdated": "2026-10-14T02:57:16.926546+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -65915,7 +66317,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 130,
-    "totalTitles": 563
+    "totalSeries": 131,
+    "totalTitles": 566
   }
 }
