@@ -57,22 +57,27 @@ function getCurrentEpisode() {
 
 const SERVER_LABELS = [
     "Server 1 (VIP Ultra HD)",
-    "Server 2 (CineSrc - No Ads)",
-    "Server 3 (MoviesAPI - No Ads)",
-    "Server 4 (Mapple - No Ads)",
-    "Server 5 (AutoEmbed)",
-    "Server 6 (VidEasy)",
-    "Server 7 (VidLink)",
-    "Server 8 (VixSrc)",
-    "Server 9 (MultiEmbed)",
-    "Server 10 (2Embed)",
-    "Server 11 (VidSrc Embed)",
-    "Server 12 (111Movies)",
-    "Server 13 (PrimeSrc)"
+    "Server 2 (HDMovie2 - P2P HLS)",
+    "Server 3 (CineSrc - No Ads)",
+    "Server 4 (MoviesAPI - No Ads)",
+    "Server 5 (Mapple - No Ads)",
+    "Server 6 (AutoEmbed)",
+    "Server 7 (VidEasy)",
+    "Server 8 (VidLink)",
+    "Server 9 (VixSrc)",
+    "Server 10 (MultiEmbed)",
+    "Server 11 (2Embed)",
+    "Server 12 (VidSrc Embed)",
+    "Server 13 (111Movies)",
+    "Server 14 (PrimeSrc)"
 ];
 
 function cleanServerLabel(name, index) {
-    if (!name || /vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27|cinesrc|moviesapi|mapple|videasy/i.test(name)) {
+    if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
+    if (/hdmovie2|gorri|fikka|p2p/i.test(name)) return "Server 2 (HDMovie2 - P2P HLS)";
+    if (/multicloud/i.test(name)) return "Server 3 (MultiCloud - Fast HD)";
+    if (/hubstream/i.test(name)) return "Server 4 (HubStream)";
+    if (/vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27|cinesrc|moviesapi|mapple|videasy/i.test(name)) {
         return SERVER_LABELS[index] || `Server ${index + 1}`;
     }
     return name;
@@ -103,26 +108,31 @@ function normalizeStreams(episode) {
         const tvProviders = [];
         if (tmdb) {
             tvProviders.push({ name: "Server 1 (VIP Ultra HD)", url: `https://net27.cc/watch-tmdb/${tmdb}?type=tv&se=${sNum}&ep=${eNum}` });
-            tvProviders.push({ name: "Server 2 (CineSrc - No Ads)", url: `https://cinesrc.st/embed/tv/${tmdb}?s=${sNum}&e=${eNum}` });
-            tvProviders.push({ name: "Server 3 (MoviesAPI - No Ads)", url: `https://moviesapi.club/tv/${tmdb}-${sNum}-${eNum}` });
-            tvProviders.push({ name: "Server 4 (Mapple - No Ads)", url: `https://mapple.tv/embed/tv/${tmdb}/${sNum}/${eNum}` });
-            tvProviders.push({ name: "Server 5 (AutoEmbed)", url: `https://player.autoembed.cc/embed/tv/${tmdb}/${sNum}/${eNum}` });
-            tvProviders.push({ name: "Server 6 (VidEasy)", url: `https://player.videasy.net/tv/${tmdb}/${sNum}/${eNum}` });
         }
         if (imdb) {
-            tvProviders.push({ name: "Server 7 (VidLink)", url: `https://vidlink.pro/tv/${imdb}/${sNum}/${eNum}` });
+            tvProviders.push({ name: "Server 2 (HDMovie2 - P2P HLS)", url: `https://gorri421kos.com/play/${imdb}?s=${sNum}&e=${eNum}` });
         }
         if (tmdb) {
-            tvProviders.push({ name: "Server 8 (VixSrc)", url: `https://vixsrc.to/embed/tv/${tmdb}/${sNum}/${eNum}` });
+            tvProviders.push({ name: "Server 3 (CineSrc - No Ads)", url: `https://cinesrc.st/embed/tv/${tmdb}?s=${sNum}&e=${eNum}` });
+            tvProviders.push({ name: "Server 4 (MoviesAPI - No Ads)", url: `https://moviesapi.club/tv/${tmdb}-${sNum}-${eNum}` });
+            tvProviders.push({ name: "Server 5 (Mapple - No Ads)", url: `https://mapple.tv/embed/tv/${tmdb}/${sNum}/${eNum}` });
+            tvProviders.push({ name: "Server 6 (AutoEmbed)", url: `https://player.autoembed.cc/embed/tv/${tmdb}/${sNum}/${eNum}` });
+            tvProviders.push({ name: "Server 7 (VidEasy)", url: `https://player.videasy.net/tv/${tmdb}/${sNum}/${eNum}` });
+        }
+        if (imdb) {
+            tvProviders.push({ name: "Server 8 (VidLink)", url: `https://vidlink.pro/tv/${imdb}/${sNum}/${eNum}` });
+        }
+        if (tmdb) {
+            tvProviders.push({ name: "Server 9 (VixSrc)", url: `https://vixsrc.to/embed/tv/${tmdb}/${sNum}/${eNum}` });
         }
         tvProviders.push(
-            { name: "Server 9 (MultiEmbed)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 10 (2Embed)", url: `https://www.2embed.cc/embedtv/${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 11 (VidSrc Embed)", url: `https://vidsrc.me/embed/tv?imdb=${imdb || tmdb}&season=${sNum}&episode=${eNum}` }
+            { name: "Server 10 (MultiEmbed)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
+            { name: "Server 11 (2Embed)", url: `https://www.2embed.cc/embedtv/${imdb || tmdb}&s=${sNum}&e=${eNum}` },
+            { name: "Server 12 (VidSrc Embed)", url: `https://vidsrc.me/embed/tv?imdb=${imdb || tmdb}&season=${sNum}&episode=${eNum}` }
         );
         if (tmdb) {
-            tvProviders.push({ name: "Server 12 (111Movies)", url: `https://111movies.com/tv/${tmdb}/${sNum}/${eNum}` });
-            tvProviders.push({ name: "Server 13 (PrimeSrc)", url: `https://primesrc.net/embed/tv/${tmdb}/${sNum}/${eNum}` });
+            tvProviders.push({ name: "Server 13 (111Movies)", url: `https://111movies.com/tv/${tmdb}/${sNum}/${eNum}` });
+            tvProviders.push({ name: "Server 14 (PrimeSrc)", url: `https://primesrc.net/embed/tv/${tmdb}/${sNum}/${eNum}` });
         }
 
         tvProviders.forEach(p => {
