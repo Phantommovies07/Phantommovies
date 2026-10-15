@@ -1,6 +1,134 @@
 {
   "movies": [
     {
+      "id": "1792031752770",
+      "type": "series",
+      "title": "Private Eyes",
+      "genre": "Tv Series",
+      "year": 2016,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgzNjc1N2ItNzg3Ny00OTU3LWFlNTItYTFmZjUwZjkwNzliXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "200MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776105856/",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/3142864047087962600?dp=the-private-eyes-ajvlD0KlaK3&t=Private%20Eyes"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5722298?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/13762?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (MoviesAPI - No Ads)",
+              "url": "https://moviesapi.club/tv/13762-1-1"
+            },
+            {
+              "name": "Server 5 (Mapple - No Ads)",
+              "url": "https://mapple.tv/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 6 (AutoEmbed)",
+              "url": "https://player.autoembed.cc/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 7 (VidEasy)",
+              "url": "https://player.videasy.net/tv/13762/1/1"
+            },
+            {
+              "name": "Server 8 (VidLink)",
+              "url": "https://vidlink.pro/tv/tt5722298/1/1"
+            },
+            {
+              "name": "Server 9 (VixSrc)",
+              "url": "https://vixsrc.to/embed/tv/13762/1/1"
+            },
+            {
+              "name": "Server 10 (MultiEmbed)",
+              "url": "https://multiembed.mov/?video_id=tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 11 (2Embed)",
+              "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
+            },
+            {
+              "name": "Server 12 (VidSrc Embed)",
+              "url": "https://vidsrc.me/embed/tv?imdb=tt5722298&season=1&episode=1"
+            },
+            {
+              "name": "Server 13 (111Movies)",
+              "url": "https://111movies.com/tv/13762/1/1"
+            },
+            {
+              "name": "Server 14 (PrimeSrc)",
+              "url": "https://primesrc.net/embed/tv/13762/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/042325407443-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "4GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/37595231-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "8GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/5021521-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Private+Eyes+2016+trailer",
+      "description": "Private Eyes (2016) starring Jason Priestley, Cindy Sampson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16522,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5722298",
+      "tmdb_id": "13762",
+      "createdAt": "2026-10-15T02:35:45.440929+00:00",
+      "updatedAt": "2026-10-15T02:35:45.440929+00:00"
+    },
+    {
       "id": "1792018463949",
       "type": "series",
       "title": "Private Eyes",
@@ -68240,7 +68368,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 439,
-    "lastUpdated": "2026-10-14T22:54:46.945198+00:00",
+    "lastUpdated": "2026-10-15T02:36:14.000780+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -68272,7 +68400,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 134,
-    "totalTitles": 573
+    "totalSeries": 135,
+    "totalTitles": 574
   }
 }
