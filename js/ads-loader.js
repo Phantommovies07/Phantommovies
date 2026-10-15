@@ -87,10 +87,17 @@
         clean.includes('download.html') || 
         clean.includes('hubcdn') || 
         clean.includes('hubdrive') || 
+        clean.includes('drivehub') ||
+        clean.includes('gdflix') ||
+        clean.includes('multicloud') ||
         clean.includes('nexdrive') || 
         clean.includes('gofile') ||
         clean.includes('drive.google') ||
         clean.includes('4khdhub') ||
+        clean.includes('magiclinks') ||
+        clean.includes('hdm2') ||
+        clean.includes('hdhub4u') ||
+        clean.includes('rogmovies') ||
         clean.includes('greenmotors')) {
       return _origOpen.call(window, url, target, features);
     }

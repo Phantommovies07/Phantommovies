@@ -229,10 +229,11 @@
 
         <div class="timer-box" id="timerBox">
             <div class="timer-num" id="countdownNum">3</div>
-            <div class="timer-label">Please wait while your high-speed cloud link is being generated...</div>
+            <div class="timer-label" id="timerLabel">Please wait while your high-speed cloud link is being generated...</div>
             <div class="progress-bar-wrap">
-                <div class="progress-bar-fill" id="progressFill"></div>
+                <div class="progress-bar-fill" id="progressFill" style="width: 33%;"></div>
             </div>
+            <button id="skipTimerBtn" type="button" style="display:inline-block; margin-top:14px; background:rgba(91,196,245,0.12); border:1px solid rgba(91,196,245,0.3); color:#5bc4f5; font-size:12px; font-weight:700; padding:6px 18px; border-radius:20px; cursor:pointer; transition:all 0.2s;">⚡ Instant Access (Skip Wait)</button>
         </div>
 
         <div id="noDlNotice" style="display:none; text-align:center; padding: 22px 18px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.18); border-radius: 12px; margin-bottom: 20px;">
@@ -431,14 +432,14 @@ async function initDownloadPage() {
 
         if (targetDownloadUrl) {
             btn1.href = targetDownloadUrl;
-            const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive/i.test(targetDownloadUrl);
-            if (btn1Span) btn1Span.textContent = isDirect1 ? '🚀 Fast Cloud Server 1 (Direct Download)' : '🚀 Fast Cloud Server 1 (HDHub4u Cloud Engine)';
+            const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks/i.test(targetDownloadUrl);
+            if (btn1Span) btn1Span.textContent = isDirect1 ? '🚀 Fast Cloud Server 1 (Direct Download)' : '🚀 Fast Cloud Server 1 (Instant Download)';
             btn1.style.display = 'flex';
 
             if (mirrorDownloadUrl) {
                 btn2.href = mirrorDownloadUrl;
-                const isDirect2 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive/i.test(mirrorDownloadUrl);
-                if (btn2Span) btn2Span.textContent = isDirect2 ? '⚡ High Speed Mirror (Server 2 Direct)' : '⚡ High Speed Mirror (ROG Fast Cloud Mirror)';
+                const isDirect2 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks/i.test(mirrorDownloadUrl);
+                if (btn2Span) btn2Span.textContent = isDirect2 ? '⚡ High Speed Mirror (Server 2 Direct)' : '⚡ High Speed Mirror (Fast Cloud Mirror)';
                 btn2.style.display = 'flex';
             } else {
                 btn2.style.display = 'none';
@@ -448,33 +449,70 @@ async function initDownloadPage() {
                 btnWatch.href = watchUrl;
                 btnWatch.style.display = 'flex';
             }
+            pageDataReady = true;
+            tryRevealDownloadLinks();
+        } else {
+            if (noNotice) {
+                const noticeWatch = document.getElementById('noticeWatchBtn');
+                if (noticeWatch) noticeWatch.href = watchUrl;
+                noNotice.style.display = 'block';
+            }
+            const timerBox = document.getElementById('timerBox');
+            if (timerBox) timerBox.style.display = 'none';
         }
-
-            // 3-second Countdown Timer
-            let seconds = 3;
-            const countEl = document.getElementById('countdownNum');
-            const fillEl = document.getElementById('progressFill');
-            if (fillEl) fillEl.style.width = '33%';
-
-            const timer = setInterval(() => {
-                seconds--;
-                if (countEl) countEl.textContent = seconds;
-                if (fillEl) fillEl.style.width = ((4 - seconds) * 33) + '%';
-
-                if (seconds <= 0) {
-                    clearInterval(timer);
-                    document.getElementById('timerBox').style.display = 'none';
-                    document.getElementById('linksContainer').style.display = 'flex';
-                }
-            }, 1000);
-        }
-
     } catch (err) {
         console.error(err);
-        document.getElementById('dlTitle').textContent = 'Error loading download details';
+        const dlTitle = document.getElementById('dlTitle');
+        if (dlTitle) dlTitle.textContent = 'Download Server Ready';
+        pageDataReady = true;
+        tryRevealDownloadLinks();
     }
 }
 
+let countdownFinished = false;
+let pageDataReady = false;
+
+function tryRevealDownloadLinks() {
+    if (!countdownFinished || !pageDataReady) return;
+    const timerBox = document.getElementById('timerBox');
+    const linksContainer = document.getElementById('linksContainer');
+    if (timerBox) timerBox.style.display = 'none';
+    if (linksContainer) linksContainer.style.display = 'flex';
+}
+
+function startCountdownTimer() {
+    let seconds = 3;
+    const countEl = document.getElementById('countdownNum');
+    const fillEl = document.getElementById('progressFill');
+    const skipBtn = document.getElementById('skipTimerBtn');
+
+    if (skipBtn) {
+        skipBtn.addEventListener('click', () => {
+            seconds = 0;
+            if (countEl) countEl.textContent = '0';
+            if (fillEl) fillEl.style.width = '100%';
+            countdownFinished = true;
+            tryRevealDownloadLinks();
+        });
+    }
+
+    if (fillEl) fillEl.style.width = '33%';
+
+    const timer = setInterval(() => {
+        seconds--;
+        if (countEl) countEl.textContent = Math.max(0, seconds);
+        if (fillEl) fillEl.style.width = Math.min(100, (4 - seconds) * 33) + '%';
+
+        if (seconds <= 0) {
+            clearInterval(timer);
+            countdownFinished = true;
+            tryRevealDownloadLinks();
+        }
+    }, 1000);
+}
+
+// Start countdown immediately for instant user feedback
+startCountdownTimer();
 initDownloadPage();
 </script>
 </body>
