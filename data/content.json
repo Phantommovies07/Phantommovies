@@ -1,6 +1,124 @@
 {
   "movies": [
     {
+      "id": "1792177792907",
+      "type": "movie",
+      "title": "Sacrifice",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2FmMzhmNzQtMmVlNS00OGM1LTlhMzYtNmI2MDA0NjU3YWQ3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2FmMzhmNzQtMmVlNS00OGM1LTlhMzYtNmI2MDA0NjU3YWQ3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/5488190286926861080?dp=sacrifice-QIbq6G7Ypx6&t=Sacrifice",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/5488190286926861080?dp=sacrifice-QIbq6G7Ypx6&t=Sacrifice"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt32268992"
+        },
+        {
+          "name": "Server 3 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/137948"
+        },
+        {
+          "name": "Server 4 (MoviesAPI - No Ads)",
+          "url": "https://moviesapi.club/movie/137948"
+        },
+        {
+          "name": "Server 5 (Mapple - No Ads)",
+          "url": "https://mapple.tv/embed/movie/137948"
+        },
+        {
+          "name": "Server 6 (AutoEmbed)",
+          "url": "https://player.autoembed.cc/embed/movie/137948"
+        },
+        {
+          "name": "Server 7 (VidEasy)",
+          "url": "https://player.videasy.net/movie/137948"
+        },
+        {
+          "name": "Server 8 (VidLink)",
+          "url": "https://vidlink.pro/movie/tt32268992"
+        },
+        {
+          "name": "Server 9 (VixSrc)",
+          "url": "https://vixsrc.to/embed/movie/137948"
+        },
+        {
+          "name": "Server 10 (MultiEmbed)",
+          "url": "https://multiembed.mov/?video_id=tt32268992&tmdb_id=137948"
+        },
+        {
+          "name": "Server 11 (2Embed)",
+          "url": "https://www.2embed.cc/embed/tt32268992"
+        },
+        {
+          "name": "Server 12 (VidSrc Embed)",
+          "url": "https://vidsrc.me/embed/movie?imdb=tt32268992"
+        },
+        {
+          "name": "Server 13 (111Movies)",
+          "url": "https://111movies.com/movie/137948"
+        },
+        {
+          "name": "Server 14 (PrimeSrc)",
+          "url": "https://primesrc.net/embed/movie/137948"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "417.9MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/5994414562-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "685.3MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1121205686-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/7556559326104-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "16.81 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/88243881-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sacrifice+2025+trailer",
+      "description": "Sacrifice (2025) starring Chris Evans, Anya Taylor-Joy.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19530,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32268992",
+      "tmdb_id": "137948",
+      "createdAt": "2026-10-16T19:09:44.049817+00:00",
+      "updatedAt": "2026-10-16T19:09:44.049817+00:00"
+    },
+    {
       "id": "1792165906050",
       "type": "series",
       "title": "Friends Sex and Games",
@@ -115,6 +233,13 @@
               "server": "Fast Cloud",
               "url": "https://episodes.magiclinks.lol/series/friends-sex-and-games-s01-1080p/",
               "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/friends-sex-and-games-s01-2160p/",
+              "color": "#8b5cf6"
             }
           ],
           "episodes": []
@@ -133,7 +258,7 @@
       "imdb_id": "tt37180305",
       "tmdb_id": "298550",
       "createdAt": "2026-10-16T15:51:36.779659+00:00",
-      "updatedAt": "2026-10-16T15:51:36.779659+00:00"
+      "updatedAt": "2026-10-16T19:09:43.330567+00:00"
     },
     {
       "id": "1792165895668",
@@ -69872,8 +69997,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 444,
-    "lastUpdated": "2026-10-16T15:52:07.039163+00:00",
+    "totalMovies": 445,
+    "lastUpdated": "2026-10-16T19:10:09.073513+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -69906,6 +70031,6 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 140,
-    "totalTitles": 584
+    "totalTitles": 585
   }
 }
