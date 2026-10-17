@@ -432,13 +432,13 @@ async function initDownloadPage() {
 
         if (targetDownloadUrl) {
             btn1.href = targetDownloadUrl;
-            const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks/i.test(targetDownloadUrl);
+            const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks|allmovieland|slast430did/i.test(targetDownloadUrl);
             if (btn1Span) btn1Span.textContent = isDirect1 ? '🚀 Fast Cloud Server 1 (Direct Download)' : '🚀 Fast Cloud Server 1 (Instant Download)';
             btn1.style.display = 'flex';
 
             if (mirrorDownloadUrl) {
                 btn2.href = mirrorDownloadUrl;
-                const isDirect2 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks/i.test(mirrorDownloadUrl);
+                const isDirect2 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks|allmovieland|slast430did/i.test(mirrorDownloadUrl);
                 if (btn2Span) btn2Span.textContent = isDirect2 ? '⚡ High Speed Mirror (Server 2 Direct)' : '⚡ High Speed Mirror (Fast Cloud Mirror)';
                 btn2.style.display = 'flex';
             } else {

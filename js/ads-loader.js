@@ -98,7 +98,11 @@
         clean.includes('hdm2') ||
         clean.includes('hdhub4u') ||
         clean.includes('rogmovies') ||
-        clean.includes('greenmotors')) {
+        clean.includes('greenmotors') ||
+        clean.includes('slast430did') ||
+        clean.includes('allmovieland') ||
+        clean.includes('1xcinema') ||
+        clean.includes('krico443jez')) {
       return _origOpen.call(window, url, target, features);
     }
     console.warn('[Phantom AdShield] Blocked rogue redirect popup:', url);

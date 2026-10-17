@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T15:52:14.615968+00:00",
+  "updatedAt": "2026-10-17T10:15:00.000000+00:00",
   "scrapers": {
     "hdhub4u": {
       "active": "https://new3.hdhub4u.free",
@@ -70,8 +70,19 @@
         "tvTemplate": "/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}"
       },
       {
+        "id": "allmovieland",
+        "name": "Server 2 (AllMovieLand - HDVB P2P)",
+        "domains": [
+          "https://slast430did.com",
+          "https://allmovieland.link",
+          "https://1xcinema.net"
+        ],
+        "movieTemplate": "/play/{imdb}",
+        "tvTemplate": "/play/{imdb}?s={s}&e={e}"
+      },
+      {
         "id": "cinesrc",
-        "name": "Server 2 (CineSrc - No Ads)",
+        "name": "Server 3 (CineSrc - No Ads)",
         "domains": [
           "https://cinesrc.st"
         ],
@@ -80,7 +91,7 @@
       },
       {
         "id": "moviesapi",
-        "name": "Server 3 (MoviesAPI - No Ads)",
+        "name": "Server 4 (MoviesAPI - No Ads)",
         "domains": [
           "https://moviesapi.club"
         ],
@@ -89,7 +100,7 @@
       },
       {
         "id": "mapple",
-        "name": "Server 4 (Mapple - No Ads)",
+        "name": "Server 5 (Mapple - No Ads)",
         "domains": [
           "https://mapple.tv"
         ],
@@ -98,7 +109,7 @@
       },
       {
         "id": "autoembed",
-        "name": "Server 5 (AutoEmbed)",
+        "name": "Server 6 (AutoEmbed)",
         "domains": [
           "https://player.autoembed.cc"
         ],
@@ -107,7 +118,7 @@
       },
       {
         "id": "videasy",
-        "name": "Server 6 (VidEasy)",
+        "name": "Server 7 (VidEasy)",
         "domains": [
           "https://player.videasy.net"
         ],
@@ -116,7 +127,7 @@
       },
       {
         "id": "vidlink",
-        "name": "Server 7 (VidLink)",
+        "name": "Server 8 (VidLink)",
         "domains": [
           "https://vidlink.pro",
           "https://vidlink.online"
@@ -126,7 +137,7 @@
       },
       {
         "id": "vixsrc",
-        "name": "Server 8 (VixSrc)",
+        "name": "Server 9 (VixSrc)",
         "domains": [
           "https://vixsrc.to"
         ],
@@ -135,7 +146,7 @@
       },
       {
         "id": "multiembed",
-        "name": "Server 9 (MultiEmbed)",
+        "name": "Server 10 (MultiEmbed)",
         "domains": [
           "https://multiembed.mov",
           "https://multiembed.cc"
@@ -145,7 +156,7 @@
       },
       {
         "id": "2embed",
-        "name": "Server 10 (2Embed)",
+        "name": "Server 11 (2Embed)",
         "domains": [
           "https://www.2embed.cc",
           "https://2embed.org"
@@ -155,7 +166,7 @@
       },
       {
         "id": "vidsrc",
-        "name": "Server 11 (VidSrc Embed)",
+        "name": "Server 12 (VidSrc Embed)",
         "domains": [
           "https://vidsrc.me",
           "https://vidsrc.pm",
@@ -166,7 +177,7 @@
       },
       {
         "id": "111movies",
-        "name": "Server 12 (111Movies)",
+        "name": "Server 13 (111Movies)",
         "domains": [
           "https://111movies.com"
         ],
@@ -175,7 +186,7 @@
       },
       {
         "id": "primesrc",
-        "name": "Server 13 (PrimeSrc)",
+        "name": "Server 14 (PrimeSrc)",
         "domains": [
           "https://primesrc.net"
         ],
