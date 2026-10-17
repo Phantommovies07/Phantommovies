@@ -60,34 +60,28 @@ const SERVER_LABELS = [
     "Server 2 (AllMovieLand - HDVB P2P)",
     "Server 3 (HDMovie2 - P2P HLS)",
     "Server 4 (CineSrc - No Ads)",
-    "Server 5 (MoviesAPI - No Ads)",
-    "Server 6 (Mapple - No Ads)",
-    "Server 7 (AutoEmbed)",
-    "Server 8 (VidEasy)",
-    "Server 9 (VidLink)",
-    "Server 10 (VixSrc)",
-    "Server 11 (MultiEmbed)",
-    "Server 12 (2Embed)",
-    "Server 13 (VidSrc Embed)",
-    "Server 14 (111Movies)",
-    "Server 15 (PrimeSrc)"
+    "Server 5 (VidLink - Fast HD)"
 ];
+
+function isAllowedStreamUrl(url) {
+    if (!url) return false;
+    return /net27\.cc|netmirror|slast430did\.com|allmovieland|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+}
 
 function cleanServerLabel(name, index) {
     if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
+    if (/net27|netmirror|vip ultra hd/i.test(name)) return "Server 1 (VIP Ultra HD)";
     if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 2 (AllMovieLand - HDVB P2P)";
     if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 3 (HDMovie2 - P2P HLS)";
-    if (/multicloud/i.test(name)) return "Server 4 (MultiCloud - Fast HD)";
-    if (/hubstream/i.test(name)) return "Server 5 (HubStream)";
-    if (/vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27|cinesrc|moviesapi|mapple|videasy/i.test(name)) {
-        return SERVER_LABELS[index] || `Server ${index + 1}`;
-    }
-    return name;
+    if (/cinesrc/i.test(name)) return "Server 4 (CineSrc - No Ads)";
+    if (/vidlink/i.test(name)) return "Server 5 (VidLink - Fast HD)";
+    return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
 function seasonStreams(season) {
     return (Array.isArray(season?.streams) ? season.streams : [])
-        .filter(s => s && s.url).map((s, i) => ({ name: cleanServerLabel(s.name, i), url: s.url }));
+        .filter(s => s && s.url && isAllowedStreamUrl(s.url))
+        .map((s, i) => ({ name: cleanServerLabel(s.name, i), url: s.url }));
 }
 
 function normalizeStreams(episode) {
@@ -96,72 +90,48 @@ function normalizeStreams(episode) {
     if (season?.combined) raw = seasonStreams(season);
     else if (currentSeries?.combined) raw = seasonStreams(currentSeries);
     else if (Array.isArray(episode?.streams) && episode.streams.length) {
-        raw = episode.streams.filter(s => s && s.url).map((s, i) => ({ name: s.name || `Server ${i + 1}`, url: s.url }));
+        raw = episode.streams.filter(s => s && s.url && isAllowedStreamUrl(s.url)).map((s, i) => ({ name: cleanServerLabel(s.name, i), url: s.url }));
     }
 
-    // Dynamic TV embed fallbacks if tmdb or imdb is available
     const imdb = currentSeries?.imdb_id || '';
     const tmdb = currentSeries?.tmdb_id || '';
     const sNum = season?.seasonNumber || (currentSeasonIndex + 1);
     const eNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
 
-    const dynamicStreams = [];
-    if ((imdb || tmdb) && !season?.combined && !currentSeries?.combined) {
-        const tvProviders = [];
-        if (tmdb) {
-            tvProviders.push({ name: "Server 1 (VIP Ultra HD)", url: `https://net27.cc/watch-tmdb/${tmdb}?type=tv&se=${sNum}&ep=${eNum}` });
-        }
-        if (imdb) {
-            tvProviders.push({ name: "Server 2 (AllMovieLand - HDVB P2P)", url: `https://slast430did.com/play/${imdb}?s=${sNum}&e=${eNum}` });
-            tvProviders.push({ name: "Server 3 (HDMovie2 - P2P HLS)", url: `https://gorri421kos.com/play/${imdb}?s=${sNum}&e=${eNum}` });
-        }
-        if (tmdb) {
-            tvProviders.push({ name: "Server 4 (CineSrc - No Ads)", url: `https://cinesrc.st/embed/tv/${tmdb}?s=${sNum}&e=${eNum}` });
-            tvProviders.push({ name: "Server 5 (MoviesAPI - No Ads)", url: `https://moviesapi.club/tv/${tmdb}-${sNum}-${eNum}` });
-            tvProviders.push({ name: "Server 6 (Mapple - No Ads)", url: `https://mapple.tv/embed/tv/${tmdb}/${sNum}/${eNum}` });
-            tvProviders.push({ name: "Server 7 (AutoEmbed)", url: `https://player.autoembed.cc/embed/tv/${tmdb}/${sNum}/${eNum}` });
-            tvProviders.push({ name: "Server 8 (VidEasy)", url: `https://player.videasy.net/tv/${tmdb}/${sNum}/${eNum}` });
-        }
-        if (imdb) {
-            tvProviders.push({ name: "Server 9 (VidLink)", url: `https://vidlink.pro/tv/${imdb}/${sNum}/${eNum}` });
-        }
-        if (tmdb) {
-            tvProviders.push({ name: "Server 10 (VixSrc)", url: `https://vixsrc.to/embed/tv/${tmdb}/${sNum}/${eNum}` });
-        }
-        tvProviders.push(
-            { name: "Server 11 (MultiEmbed)", url: `https://multiembed.mov/?video_id=${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 12 (2Embed)", url: `https://www.2embed.cc/embedtv/${imdb || tmdb}&s=${sNum}&e=${eNum}` },
-            { name: "Server 13 (VidSrc Embed)", url: `https://vidsrc.me/embed/tv?imdb=${imdb || tmdb}&season=${sNum}&episode=${eNum}` }
-        );
-        if (tmdb) {
-            tvProviders.push({ name: "Server 14 (111Movies)", url: `https://111movies.com/tv/${tmdb}/${sNum}/${eNum}` });
-            tvProviders.push({ name: "Server 15 (PrimeSrc)", url: `https://primesrc.net/embed/tv/${tmdb}/${sNum}/${eNum}` });
-        }
+    const streamMap = new Map();
 
-        tvProviders.forEach(p => {
-            if (!raw.some(r => r.url === p.url)) {
-                dynamicStreams.push(p);
-            }
-        });
-    }
-
-    // Separate direct NetMirror native stream if present
-    const netmirrorStream = raw.find(s => s.url.includes('net27.cc') || s.url.includes('netmirror'));
-    const otherRaw = raw.filter(s => s !== netmirrorStream);
-
-    const orderedRaw = [];
-    if (netmirrorStream) {
-        orderedRaw.push({ name: "Server 1 (VIP Ultra HD)", url: netmirrorStream.url });
-    }
-    otherRaw.forEach((s, idx) => {
-        orderedRaw.push({ name: cleanServerLabel(s.name, orderedRaw.length), url: s.url });
+    // 1. Add valid raw custom streams
+    raw.forEach(s => {
+        const label = cleanServerLabel(s.name);
+        streamMap.set(label, { name: label, url: s.url });
     });
 
-    const merged = orderedRaw.length ? [...orderedRaw, ...dynamicStreams] : dynamicStreams;
-    return merged.map((s, i) => ({
-        name: cleanServerLabel(s.name, i),
-        url: s.url
-    }));
+    // 2. Add verified dynamic streams
+    if (tmdb && !streamMap.has("Server 1 (VIP Ultra HD)")) {
+        streamMap.set("Server 1 (VIP Ultra HD)", { name: "Server 1 (VIP Ultra HD)", url: `https://net27.cc/watch-tmdb/${tmdb}?type=tv&se=${sNum}&ep=${eNum}` });
+    }
+    if (imdb && !streamMap.has("Server 2 (AllMovieLand - HDVB P2P)")) {
+        streamMap.set("Server 2 (AllMovieLand - HDVB P2P)", { name: "Server 2 (AllMovieLand - HDVB P2P)", url: `https://slast430did.com/play/${imdb}?s=${sNum}&e=${eNum}` });
+    }
+    if (imdb && !streamMap.has("Server 3 (HDMovie2 - P2P HLS)")) {
+        streamMap.set("Server 3 (HDMovie2 - P2P HLS)", { name: "Server 3 (HDMovie2 - P2P HLS)", url: `https://gorri421kos.com/play/${imdb}?s=${sNum}&e=${eNum}` });
+    }
+    if (tmdb && !streamMap.has("Server 4 (CineSrc - No Ads)")) {
+        streamMap.set("Server 4 (CineSrc - No Ads)", { name: "Server 4 (CineSrc - No Ads)", url: `https://cinesrc.st/embed/tv/${tmdb}?s=${sNum}&e=${eNum}` });
+    }
+    if (imdb && !streamMap.has("Server 5 (VidLink - Fast HD)")) {
+        streamMap.set("Server 5 (VidLink - Fast HD)", { name: "Server 5 (VidLink - Fast HD)", url: `https://vidlink.pro/tv/${imdb}/${sNum}/${eNum}` });
+    }
+
+    // 3. Return canonical ordered streams
+    const result = [];
+    SERVER_LABELS.forEach(label => {
+        if (streamMap.has(label)) {
+            result.push(streamMap.get(label));
+        }
+    });
+
+    return result.length ? result : Array.from(streamMap.values());
 }
 
 

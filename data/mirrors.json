@@ -81,8 +81,17 @@
         "tvTemplate": "/play/{imdb}?s={s}&e={e}"
       },
       {
+        "id": "hdmovie2",
+        "name": "Server 3 (HDMovie2 - P2P HLS)",
+        "domains": [
+          "https://gorri421kos.com"
+        ],
+        "movieTemplate": "/play/{imdb}",
+        "tvTemplate": "/play/{imdb}?s={s}&e={e}"
+      },
+      {
         "id": "cinesrc",
-        "name": "Server 3 (CineSrc - No Ads)",
+        "name": "Server 4 (CineSrc - No Ads)",
         "domains": [
           "https://cinesrc.st"
         ],
@@ -90,108 +99,14 @@
         "tvTemplate": "/embed/tv/{tmdb}?s={s}&e={e}"
       },
       {
-        "id": "moviesapi",
-        "name": "Server 4 (MoviesAPI - No Ads)",
-        "domains": [
-          "https://moviesapi.club"
-        ],
-        "movieTemplate": "/movie/{tmdb}",
-        "tvTemplate": "/tv/{tmdb}-{s}-{e}"
-      },
-      {
-        "id": "mapple",
-        "name": "Server 5 (Mapple - No Ads)",
-        "domains": [
-          "https://mapple.tv"
-        ],
-        "movieTemplate": "/embed/movie/{tmdb}",
-        "tvTemplate": "/embed/tv/{tmdb}/{s}/{e}"
-      },
-      {
-        "id": "autoembed",
-        "name": "Server 6 (AutoEmbed)",
-        "domains": [
-          "https://player.autoembed.cc"
-        ],
-        "movieTemplate": "/embed/movie/{tmdb}",
-        "tvTemplate": "/embed/tv/{tmdb}/{s}/{e}"
-      },
-      {
-        "id": "videasy",
-        "name": "Server 7 (VidEasy)",
-        "domains": [
-          "https://player.videasy.net"
-        ],
-        "movieTemplate": "/movie/{tmdb}",
-        "tvTemplate": "/tv/{tmdb}/{s}/{e}"
-      },
-      {
         "id": "vidlink",
-        "name": "Server 8 (VidLink)",
+        "name": "Server 5 (VidLink - Fast HD)",
         "domains": [
           "https://vidlink.pro",
           "https://vidlink.online"
         ],
         "movieTemplate": "/movie/{imdb}",
         "tvTemplate": "/tv/{imdb}/{s}/{e}"
-      },
-      {
-        "id": "vixsrc",
-        "name": "Server 9 (VixSrc)",
-        "domains": [
-          "https://vixsrc.to"
-        ],
-        "movieTemplate": "/embed/movie/{tmdb}",
-        "tvTemplate": "/embed/tv/{tmdb}/{s}/{e}"
-      },
-      {
-        "id": "multiembed",
-        "name": "Server 10 (MultiEmbed)",
-        "domains": [
-          "https://multiembed.mov",
-          "https://multiembed.cc"
-        ],
-        "movieTemplate": "/?video_id={imdb}&tmdb_id={tmdb}",
-        "tvTemplate": "/?video_id={imdb}&s={s}&e={e}"
-      },
-      {
-        "id": "2embed",
-        "name": "Server 11 (2Embed)",
-        "domains": [
-          "https://www.2embed.cc",
-          "https://2embed.org"
-        ],
-        "movieTemplate": "/embed/{imdb}",
-        "tvTemplate": "/embedtv/{imdb}&s={s}&e={e}"
-      },
-      {
-        "id": "vidsrc",
-        "name": "Server 12 (VidSrc Embed)",
-        "domains": [
-          "https://vidsrc.me",
-          "https://vidsrc.pm",
-          "https://vidsrc.xyz"
-        ],
-        "movieTemplate": "/embed/movie?imdb={imdb}",
-        "tvTemplate": "/embed/tv?imdb={imdb}&season={s}&episode={e}"
-      },
-      {
-        "id": "111movies",
-        "name": "Server 13 (111Movies)",
-        "domains": [
-          "https://111movies.com"
-        ],
-        "movieTemplate": "/movie/{tmdb}",
-        "tvTemplate": "/tv/{tmdb}/{s}/{e}"
-      },
-      {
-        "id": "primesrc",
-        "name": "Server 14 (PrimeSrc)",
-        "domains": [
-          "https://primesrc.net"
-        ],
-        "movieTemplate": "/embed/movie/{tmdb}",
-        "tvTemplate": "/embed/tv/{tmdb}/{s}/{e}"
       }
     ]
   }

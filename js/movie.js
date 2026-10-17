@@ -82,35 +82,28 @@ function playerMarkup(movie, streamUrl) {
     </div>`;
 }
 
-// Whitelisted, stealth stream server providers matching famous ad-free aggregators
+// Streamlined, verified stream server providers (high availability & fast CDN playback)
 const SERVER_LABELS = [
     "Server 1 (VIP Ultra HD)",
     "Server 2 (AllMovieLand - HDVB P2P)",
     "Server 3 (HDMovie2 - P2P HLS)",
     "Server 4 (CineSrc - No Ads)",
-    "Server 5 (MoviesAPI - No Ads)",
-    "Server 6 (Mapple - No Ads)",
-    "Server 7 (AutoEmbed)",
-    "Server 8 (VidEasy)",
-    "Server 9 (VidLink)",
-    "Server 10 (VixSrc)",
-    "Server 11 (MultiEmbed)",
-    "Server 12 (2Embed)",
-    "Server 13 (VidSrc Embed)",
-    "Server 14 (111Movies)",
-    "Server 15 (PrimeSrc)"
+    "Server 5 (VidLink - Fast HD)"
 ];
+
+function isAllowedStreamUrl(url) {
+    if (!url) return false;
+    return /net27\.cc|netmirror|slast430did\.com|allmovieland|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+}
 
 function cleanServerLabel(name, index) {
     if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
+    if (/net27|netmirror|vip ultra hd/i.test(name)) return "Server 1 (VIP Ultra HD)";
     if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 2 (AllMovieLand - HDVB P2P)";
     if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 3 (HDMovie2 - P2P HLS)";
-    if (/multicloud/i.test(name)) return "Server 4 (MultiCloud - Fast HD)";
-    if (/hubstream/i.test(name)) return "Server 5 (HubStream)";
-    if (/vidsrc|superembed|autoembed|embedsu|smashy|multiembed|azonahub|netmirror|net27|cinesrc|moviesapi|mapple|videasy/i.test(name)) {
-        return SERVER_LABELS[index] || `Server ${index + 1}`;
-    }
-    return name;
+    if (/cinesrc/i.test(name)) return "Server 4 (CineSrc - No Ads)";
+    if (/vidlink/i.test(name)) return "Server 5 (VidLink - Fast HD)";
+    return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
 const DEFAULT_STREAM_PROVIDERS = [
@@ -118,66 +111,47 @@ const DEFAULT_STREAM_PROVIDERS = [
     { name: "Server 2 (AllMovieLand - HDVB P2P)", template: "https://slast430did.com/play/{imdb}", requiresImdb: true },
     { name: "Server 3 (HDMovie2 - P2P HLS)", template: "https://gorri421kos.com/play/{imdb}", requiresImdb: true },
     { name: "Server 4 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 5 (MoviesAPI - No Ads)", template: "https://moviesapi.club/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 6 (Mapple - No Ads)", template: "https://mapple.tv/embed/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 7 (AutoEmbed)", template: "https://player.autoembed.cc/embed/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 8 (VidEasy)", template: "https://player.videasy.net/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 9 (VidLink)", template: "https://vidlink.pro/movie/{imdb}" },
-    { name: "Server 10 (VixSrc)", template: "https://vixsrc.to/embed/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 11 (MultiEmbed)", template: "https://multiembed.mov/?video_id={imdb}&tmdb_id={tmdb}" },
-    { name: "Server 12 (2Embed)", template: "https://www.2embed.cc/embed/{imdb}" },
-    { name: "Server 13 (VidSrc Embed)", template: "https://vidsrc.me/embed/movie?imdb={imdb}" },
-    { name: "Server 14 (111Movies)", template: "https://111movies.com/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 15 (PrimeSrc)", template: "https://primesrc.net/embed/movie/{tmdb}", requiresTmdb: true }
+    { name: "Server 5 (VidLink - Fast HD)", template: "https://vidlink.pro/movie/{imdb}", requiresImdb: true }
 ];
 
 function normalizeStreams(movie) {
     const rawStreams = Array.isArray(movie.streams) && movie.streams.length
-        ? movie.streams.filter(item => item && item.url)
-        : (movie.streamLink ? [{ name: 'Server 1 (VIP Ultra HD)', url: movie.streamLink }] : []);
+        ? movie.streams.filter(item => item && item.url && isAllowedStreamUrl(item.url))
+        : (movie.streamLink && isAllowedStreamUrl(movie.streamLink) ? [{ name: 'Server 1 (VIP Ultra HD)', url: movie.streamLink }] : []);
 
-    // Check if we have a direct NetMirror native VIP stream
-    const netmirrorStream = rawStreams.find(s => s.url.includes('net27.cc') || s.url.includes('netmirror'));
-    const otherCustomStreams = rawStreams.filter(s => s !== netmirrorStream);
-
-    const customStreams = [];
-    if (netmirrorStream) {
-        customStreams.push({ name: "Server 1 (VIP Ultra HD)", url: netmirrorStream.url });
-    }
-    otherCustomStreams.forEach((item, index) => {
-        customStreams.push({
-            name: cleanServerLabel(item.name || item.label, customStreams.length),
-            url: item.url
-        });
-    });
-
-    // If the movie has a direct custom link, prioritize it
-    const isDirectCustom = customStreams.length > 0 && !customStreams[0].url.includes('vidsrc.to');
-
-    // Build dynamic servers if imdb_id or tmdb_id exists
     const imdb = movie.imdb_id || '';
     const tmdb = movie.tmdb_id || '';
-    const dynamicStreams = [];
 
-    if (imdb || tmdb) {
-        DEFAULT_STREAM_PROVIDERS.forEach((p) => {
-            if (p.requiresTmdb && !tmdb) return; // Skip if TMDb ID is required but missing
-            if (p.requiresImdb && !imdb) return; // Skip if IMDb ID is required but missing
-            let u = p.template
-                .replace('{imdb}', encodeURIComponent(imdb || tmdb))
-                .replace('{tmdb}', encodeURIComponent(tmdb || imdb));
-            if (!customStreams.some(s => s.url === u)) {
-                dynamicStreams.push({ name: p.name, url: u });
-            }
-        });
-    }
+    const streamMap = new Map();
 
-    const merged = isDirectCustom ? [...customStreams, ...dynamicStreams] : (dynamicStreams.length ? dynamicStreams : customStreams);
-    // Final sanitization of all stream names to guarantee no third-party branding leaks
-    return merged.map((s, i) => ({
-        name: cleanServerLabel(s.name, i),
-        url: s.url
-    }));
+    // 1. First add any pre-existing custom streams that match our approved domains
+    rawStreams.forEach((item) => {
+        const u = item.url.trim();
+        const label = cleanServerLabel(item.name || item.label);
+        streamMap.set(label, { name: label, url: u });
+    });
+
+    // 2. Generate standard providers for any missing verified slots
+    DEFAULT_STREAM_PROVIDERS.forEach((p) => {
+        if (p.requiresTmdb && !tmdb) return;
+        if (p.requiresImdb && !imdb) return;
+        const u = p.template
+            .replace('{imdb}', encodeURIComponent(imdb || tmdb))
+            .replace('{tmdb}', encodeURIComponent(tmdb || imdb));
+        if (!streamMap.has(p.name)) {
+            streamMap.set(p.name, { name: p.name, url: u });
+        }
+    });
+
+    // 3. Return cleanly ordered list according to canonical SERVER_LABELS
+    const result = [];
+    SERVER_LABELS.forEach((label) => {
+        if (streamMap.has(label)) {
+            result.push(streamMap.get(label));
+        }
+    });
+
+    return result.length ? result : Array.from(streamMap.values());
 }
 
 

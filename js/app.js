@@ -12,8 +12,8 @@ let heroSlideTimer = null;
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v3');
-        const cacheTime = sessionStorage.getItem('phantom_content_time_v3');
+        const cached = sessionStorage.getItem('phantom_content_cache_v4');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v4');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
@@ -26,8 +26,8 @@ async function getContentData() {
     const data = await response.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {
-        sessionStorage.setItem('phantom_content_cache_v3', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time_v3', String(Date.now()));
+        sessionStorage.setItem('phantom_content_cache_v4', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time_v4', String(Date.now()));
     } catch (_) {}
     return data;
 }
@@ -36,7 +36,31 @@ async function getContentData() {
 async function loadMoviesFromJSON() {
     try {
         const data = await getContentData();
-        allMovies = (data.movies || []).filter(m => m.active !== false);
+        const rawList = (data.movies || []).filter(m => m.active !== false);
+        
+        // Strict deduplication guard to ensure zero repeating movies
+        const seenIds = new Set();
+        const seenImdb = new Set();
+        const seenTitles = new Set();
+        allMovies = [];
+
+        rawList.forEach(m => {
+            if (!m || !m.title) return;
+            const normTitle = m.title.trim().toLowerCase();
+            const imdb = (m.imdb_id || '').trim();
+            const id = String(m.id || '').trim();
+
+            if (id && seenIds.has(id)) return;
+            if (imdb && seenImdb.has(imdb)) return;
+            if (normTitle && seenTitles.has(normTitle)) return;
+
+            if (id) seenIds.add(id);
+            if (imdb) seenImdb.add(imdb);
+            if (normTitle) seenTitles.add(normTitle);
+
+            allMovies.push(m);
+        });
+
         siteSettings = data.settings || {};
         
         // Track page view with GA4

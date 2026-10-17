@@ -84,26 +84,14 @@ def generate_stream_servers(imdb_id: str, tmdb_id: str = "", netmirror_url: str 
         servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}"})
 
     if imdb_id:
-        servers.append({"name": "Server 2 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}"})
+        servers.append({"name": "Server 2 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}"})
+        servers.append({"name": "Server 3 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}"})
 
     if tmdb_id:
-        servers.append({"name": "Server 3 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/movie/{tmdb_id}"})
-        servers.append({"name": "Server 4 (MoviesAPI - No Ads)", "url": f"https://moviesapi.club/movie/{tmdb_id}"})
-        servers.append({"name": "Server 5 (Mapple - No Ads)", "url": f"https://mapple.tv/embed/movie/{tmdb_id}"})
-        servers.append({"name": "Server 6 (AutoEmbed)", "url": f"https://player.autoembed.cc/embed/movie/{tmdb_id}"})
-        servers.append({"name": "Server 7 (VidEasy)", "url": f"https://player.videasy.net/movie/{tmdb_id}"})
+        servers.append({"name": "Server 4 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/movie/{tmdb_id}"})
+
     if imdb_id:
-        servers.append({"name": "Server 8 (VidLink)", "url": f"https://vidlink.pro/movie/{imdb_id}"})
-    if tmdb_id:
-        servers.append({"name": "Server 9 (VixSrc)", "url": f"https://vixsrc.to/embed/movie/{tmdb_id}"})
-    servers.extend([
-        {"name": "Server 10 (MultiEmbed)", "url": f"https://multiembed.mov/?video_id={imdb_id}&tmdb_id={tmdb_id}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}"},
-        {"name": "Server 11 (2Embed)", "url": f"https://www.2embed.cc/embed/{imdb_id or tmdb_id}"},
-        {"name": "Server 12 (VidSrc Embed)", "url": f"https://vidsrc.me/embed/movie?imdb={imdb_id or tmdb_id}"}
-    ])
-    if tmdb_id:
-        servers.append({"name": "Server 13 (111Movies)", "url": f"https://111movies.com/movie/{tmdb_id}"})
-        servers.append({"name": "Server 14 (PrimeSrc)", "url": f"https://primesrc.net/embed/movie/{tmdb_id}"})
+        servers.append({"name": "Server 5 (VidLink - Fast HD)", "url": f"https://vidlink.pro/movie/{imdb_id}"})
 
     primary_url = servers[0]["url"] if servers else ""
     return primary_url, servers
@@ -119,26 +107,15 @@ def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1,
         servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}?type=tv&se={s}&ep={e}"})
 
     if imdb_id:
-        servers.append({"name": "Server 2 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 2 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 3 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}?s={s}&e={e}"})
 
     if tmdb_id:
-        servers.append({"name": "Server 3 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/tv/{tmdb_id}?s={s}&e={e}"})
-        servers.append({"name": "Server 4 (MoviesAPI - No Ads)", "url": f"https://moviesapi.club/tv/{tmdb_id}-{s}-{e}"})
-        servers.append({"name": "Server 5 (Mapple - No Ads)", "url": f"https://mapple.tv/embed/tv/{tmdb_id}/{s}/{e}"})
-        servers.append({"name": "Server 6 (AutoEmbed)", "url": f"https://player.autoembed.cc/embed/tv/{tmdb_id}/{s}/{e}"})
-        servers.append({"name": "Server 7 (VidEasy)", "url": f"https://player.videasy.net/tv/{tmdb_id}/{s}/{e}"})
+        servers.append({"name": "Server 4 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/tv/{tmdb_id}?s={s}&e={e}"})
+
     if imdb_id:
-        servers.append({"name": "Server 8 (VidLink)", "url": f"https://vidlink.pro/tv/{imdb_id}/{s}/{e}"})
-    if tmdb_id:
-        servers.append({"name": "Server 9 (VixSrc)", "url": f"https://vixsrc.to/embed/tv/{tmdb_id}/{s}/{e}"})
-    servers.extend([
-        {"name": "Server 10 (MultiEmbed)", "url": f"https://multiembed.mov/?video_id={imdb_id}&s={s}&e={e}" if imdb_id else f"https://multiembed.mov/?tmdb_id={tmdb_id}&s={s}&e={e}"},
-        {"name": "Server 11 (2Embed)", "url": f"https://www.2embed.cc/embedtv/{imdb_id or tmdb_id}&s={s}&e={e}"},
-        {"name": "Server 12 (VidSrc Embed)", "url": f"https://vidsrc.me/embed/tv?imdb={imdb_id or tmdb_id}&season={s}&episode={e}"}
-    ])
-    if tmdb_id:
-        servers.append({"name": "Server 13 (111Movies)", "url": f"https://111movies.com/tv/{tmdb_id}/{s}/{e}"})
-        servers.append({"name": "Server 14 (PrimeSrc)", "url": f"https://primesrc.net/embed/tv/{tmdb_id}/{s}/{e}"})
+        servers.append({"name": "Server 5 (VidLink - Fast HD)", "url": f"https://vidlink.pro/tv/{imdb_id}/{s}/{e}"})
+
     return servers
 
 class IMDbSearchEngine:
