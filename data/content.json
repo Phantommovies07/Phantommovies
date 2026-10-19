@@ -1,6 +1,463 @@
 {
   "movies": [
     {
+      "id": "1792377530113",
+      "type": "movie",
+      "title": "Sardar",
+      "genre": "Feature",
+      "year": 2022,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTYzMTEzYmEtZDdjZS00YzdiLWE5MzgtOTRmZmIwYjQ4YzFiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTYzMTEzYmEtZDdjZS00YzdiLWE5MzgtOTRmZmIwYjQ4YzFiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/4570995874075133008?dp=sardar-aR0S4HZcFr5&t=Sardar",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/4570995874075133008?dp=sardar-aR0S4HZcFr5&t=Sardar"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt14526318"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt14526318"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/858080"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt14526318"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "580MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776511198/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776511267/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776511202/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776511200/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Sardar+2022+trailer",
+      "description": "Sardar (2022) starring Karthi, Raashi Khanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10343,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14526318",
+      "tmdb_id": "858080",
+      "createdAt": "2026-10-19T02:38:43.782901+00:00",
+      "updatedAt": "2026-10-19T02:38:43.782901+00:00"
+    },
+    {
+      "id": "1792377518919",
+      "type": "movie",
+      "title": "Merry Christmas, Ted Cooper!",
+      "genre": "Tv Movie",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzU1OWEyYWMtN2E4Zi00YmYzLTkwYjYtMTRlZGUyNTcxYjQzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzU1OWEyYWMtN2E4Zi00YmYzLTkwYjYtMTRlZGUyNTcxYjQzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1547882",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1547882"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt37263154"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt37263154"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1547882"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt37263154"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776355689/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "770MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776355690/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776355692/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776355691/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Merry+Christmas,+Ted+Cooper!+2025+trailer",
+      "description": "Merry Christmas, Ted Cooper! (2025) starring Robert Buckley, Kimberley Sustad.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22037,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37263154",
+      "tmdb_id": "1547882",
+      "createdAt": "2026-10-19T02:38:31.833923+00:00",
+      "updatedAt": "2026-10-19T02:38:31.833923+00:00"
+    },
+    {
+      "id": "1792377515827",
+      "type": "movie",
+      "title": "Dhoom",
+      "genre": "Feature",
+      "year": 2004,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDcyYTI4YTktOTVmYy00ZTQ3LTk2YzEtMmU1Y2IxMGQ1YmJlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDcyYTI4YTktOTVmYy00ZTQ3LTk2YzEtMmU1Y2IxMGQ1YmJlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/7444718469175988008?dp=dhoom-GvFBOv9TWR8&t=Dhoom",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/7444718469175988008?dp=dhoom-GvFBOv9TWR8&t=Dhoom"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0422091"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0422091"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/17478"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0422091"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "480MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776408908/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776408907/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776408909/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dhoom+2004+trailer",
+      "description": "Dhoom (2004) starring Abhishek Bachchan, John Abraham.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18467,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0422091",
+      "tmdb_id": "17478",
+      "createdAt": "2026-10-19T02:38:26.304289+00:00",
+      "updatedAt": "2026-10-19T02:38:26.304289+00:00"
+    },
+    {
+      "id": "1792377512032",
+      "type": "movie",
+      "title": "Indian",
+      "genre": "Feature",
+      "year": 1996,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzc0ZDU5YjQtYWRiOC00ZjEyLTgxNDgtMjZlYTE5NThhMTBjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzc0ZDU5YjQtYWRiOC00ZjEyLTgxNDgtMjZlYTE5NThhMTBjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/9010778145762460752?dp=indian-0OrTUkusDJa&t=Indian",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/9010778145762460752?dp=indian-0OrTUkusDJa&t=Indian"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0116630"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0116630"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/31521"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0116630"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cnBKVUNlZmNIMkZKU3kvcDNQOGQ3L1RBVk9UMVBzZjZNdjh5T1hpVFkxRTZjZStVcFgxZFR5QXJCNmJjRHVOcmhmcXBsY3RSUm9pRTJ5bkI1NStqRlFybVUybFQrbk4vb2FrbFhUSmF5UGs9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cnBKVUNlZmNIMkZKU3kvcDNQOGQ3L1RBVk9UMVBzZjZNdjh5T1hpVFkxRTZjZStVcFgxZFR5QXJCNmJjRHVOcm9VMzgxaFlpTWJ2dGk5aHJYR2h2ZUQxL3k5bk5aakx3Y2pJbEV6T3BnVWM9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cnBKVUNlZmNIMkZKU3kvcDNQOGQ3L1RBVk9UMVBzZjZNdjh5T1hpVFkxRTZjZStVcFgxZFR5QXJCNmJjRHVOckdYenAyd1VtS3VSQjVxd2lmYWJYMDlxQ2xteTBUZ05JeThPY3pZUE1LTEE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Indian+1996+trailer",
+      "description": "Indian (1996) starring Kamal Haasan, Sukanya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12860,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0116630",
+      "tmdb_id": "31521",
+      "createdAt": "2026-10-19T02:38:23.064296+00:00",
+      "updatedAt": "2026-10-19T02:38:23.064296+00:00"
+    },
+    {
+      "id": "1792377508766",
+      "type": "movie",
+      "title": "Bombay",
+      "genre": "Feature",
+      "year": 1995,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzkxOGRiMTItMjAyMC00NjRhLWJjODktNWY5YzQwNDYyZmViXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzkxOGRiMTItMjAyMC00NjRhLWJjODktNWY5YzQwNDYyZmViXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/4685356576696322040?dp=salaam-bombay-kyq8KZVY6A5&t=Bombay",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/4685356576696322040?dp=salaam-bombay-kyq8KZVY6A5&t=Bombay"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0112553"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0112553"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/45129"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0112553"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "420MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510935/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510936/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510937/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bombay+1995+trailer",
+      "description": "Bombay (1995) starring Arvind Swamy, Manisha Koirala.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18486,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0112553",
+      "tmdb_id": "45129",
+      "createdAt": "2026-10-19T02:38:21.410460+00:00",
+      "updatedAt": "2026-10-19T02:38:21.410460+00:00"
+    },
+    {
+      "id": "1792377492919",
+      "type": "movie",
+      "title": "20/20",
+      "genre": "Tv Series",
+      "year": 1978,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWJlYjBiZDYtYjBmMi00MzNkLTlhOGEtZTQ3MGMyNGU3YTVhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOWJlYjBiZDYtYjBmMi00MzNkLTlhOGEtZTQ3MGMyNGU3YTVhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/2904706068267814176?dp=dimension-20-q7jvMefAzs3&t=20/20",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/2904706068267814176?dp=dimension-20-q7jvMefAzs3&t=20/20"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0124932"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0124932"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/89180"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0124932"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=20/20+1978+trailer",
+      "description": "20/20 (1978) starring David Muir, Amy Robach.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17744,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0124932",
+      "tmdb_id": "89180",
+      "createdAt": "2026-10-19T02:38:08.856145+00:00",
+      "updatedAt": "2026-10-19T02:38:08.856145+00:00"
+    },
+    {
       "id": "1792336222649",
       "type": "movie",
       "title": "Aryabhatt Ka Zero",
@@ -50255,8 +50712,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 449,
-    "lastUpdated": "2026-10-18T15:10:50.013730+00:00",
+    "totalMovies": 455,
+    "lastUpdated": "2026-10-19T02:38:52.525803+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -50289,6 +50746,6 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 112,
-    "totalTitles": 561
+    "totalTitles": 567
   }
 }
