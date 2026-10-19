@@ -1,6 +1,163 @@
 {
   "movies": [
     {
+      "id": "1792402129050",
+      "type": "movie",
+      "title": "Queen at Sea",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_classic",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTIxY2M1YjMtNGQ5My00NTZiLTlhOGItNWIxNWY3YmQxNDhmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTIxY2M1YjMtNGQ5My00NTZiLTlhOGItNWIxNWY3YmQxNDhmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1021848",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1021848"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt27541205"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt27541205"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1021848"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt27541205"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776327042/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.4GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776327043/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776327044/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Queen+at+Sea+2026+trailer",
+      "description": "Queen at Sea (2026) starring Juliette Binoche, Tom Courtenay.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16337,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27541205",
+      "tmdb_id": "1021848",
+      "createdAt": "2026-10-19T09:28:39.487165+00:00",
+      "updatedAt": "2026-10-19T09:28:39.487165+00:00"
+    },
+    {
+      "id": "1792402116634",
+      "type": "movie",
+      "title": "Bad Apples",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmViZDJhOWItMGRkMC00ZTlmLTg4ZGYtYjU5MzM2N2ZhNTZlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNmViZDJhOWItMGRkMC00ZTlmLTg4ZGYtYjU5MzM2N2ZhNTZlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1198654",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1198654"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt29714073"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt29714073"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1198654"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt29714073"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "500MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776451092/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776451093/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.8GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776451094/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.8GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776451154/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bad+Apples+2025+trailer",
+      "description": "Bad Apples (2025) starring Eddie Waller, Sean Gilder.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10613,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt29714073",
+      "tmdb_id": "1198654",
+      "createdAt": "2026-10-19T09:28:31.320588+00:00",
+      "updatedAt": "2026-10-19T09:28:31.320588+00:00"
+    },
+    {
       "id": "1792377530113",
       "type": "movie",
       "title": "Sardar",
@@ -50712,8 +50869,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 455,
-    "lastUpdated": "2026-10-19T02:38:52.525803+00:00",
+    "totalMovies": 457,
+    "lastUpdated": "2026-10-19T09:28:58.426154+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -50746,6 +50903,6 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 112,
-    "totalTitles": 567
+    "totalTitles": 569
   }
 }
