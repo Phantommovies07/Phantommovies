@@ -1,88 +1,6 @@
 {
   "movies": [
     {
-      "id": "1792573284149",
-      "type": "movie",
-      "title": "Ghost in the Cell",
-      "genre": "Feature",
-      "year": 2026,
-      "duration": "2h 00m",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "bollywood_new",
-      "industry": "Bollywood",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWYzM2ZiYWQtMTVmOS00NTMyLWI0YjktOTU3ZDQ2MzE4NDc0XkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BYWYzM2ZiYWQtMTVmOS00NTMyLWI0YjktOTU3ZDQ2MzE4NDc0XkEyXkFqcGc@._V1_.jpg",
-      "streamLink": "https://net27.cc/native/8598294125756175536?dp=ghost-in-the-cell-w2lyNQfhafa&t=Ghost%20in%20the%20Cell",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://net27.cc/native/8598294125756175536?dp=ghost-in-the-cell-w2lyNQfhafa&t=Ghost%20in%20the%20Cell"
-        },
-        {
-          "name": "Server 2 (AllMovieLand - HDVB P2P)",
-          "url": "https://slast430did.com/play/tt9000310"
-        },
-        {
-          "name": "Server 3 (HDMovie2 - P2P HLS)",
-          "url": "https://gorri421kos.com/play/tt9000310"
-        },
-        {
-          "name": "Server 4 (CineSrc - No Ads)",
-          "url": "https://cinesrc.st/embed/movie/1393326"
-        },
-        {
-          "name": "Server 5 (VidLink - Fast HD)",
-          "url": "https://vidlink.pro/movie/tt9000310"
-        }
-      ],
-      "downloads": [
-        {
-          "quality": "480p SD",
-          "size": "350MB",
-          "server": "ROG Fast Cloud",
-          "url": "https://nexdrive.beer/genxfm784776247200/",
-          "color": "#ffd70f"
-        },
-        {
-          "quality": "720p HD",
-          "size": "750MB",
-          "server": "ROG Fast Cloud",
-          "url": "https://nexdrive.beer/genxfm784776247204/",
-          "color": "#06b6d4"
-        },
-        {
-          "quality": "1080p Full HD",
-          "size": "3GB",
-          "server": "ROG Fast Cloud",
-          "url": "https://nexdrive.beer/genxfm784776247191/",
-          "color": "#10b981"
-        },
-        {
-          "quality": "4K Ultra HD",
-          "size": "1.2GB",
-          "server": "ROG Fast Cloud",
-          "url": "https://nexdrive.beer/genxfm784776247196/",
-          "color": "#8b5cf6"
-        }
-      ],
-      "seasons": [],
-      "trailerLink": "https://www.youtube.com/results?search_query=Ghost+in+the+Cell+2026+trailer",
-      "description": "Ghost in the Cell (2026) starring Abimana Aryasatya, Almanzo Konoralma.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 15367,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt9000310",
-      "tmdb_id": "1393326",
-      "createdAt": "2026-10-21T09:01:17.598500+00:00",
-      "updatedAt": "2026-10-21T09:01:17.598500+00:00"
-    },
-    {
       "id": "1792573284713",
       "type": "series",
       "title": "The Terminal List",
@@ -175,6 +93,13 @@
               "server": "Fast Cloud",
               "url": "https://w3.magiclinks.lol/763439064-2/",
               "color": "#06b6d4"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "50.64 GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/814686656906388-2/",
+              "color": "#8b5cf6"
             }
           ],
           "episodes": []
@@ -212,6 +137,27 @@
               "server": "Fast Cloud",
               "url": "https://episodes.magiclinks.lol/series/the-terminal-list-s02-1080p-hq/",
               "color": "#10b981"
+            },
+            {
+              "quality": "480p SD",
+              "size": "120MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-terminal-list-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-terminal-list-s02-720p-10BIT/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-terminal-list-s02-2160p/",
+              "color": "#8b5cf6"
             }
           ],
           "episodes": []
@@ -230,7 +176,269 @@
       "imdb_id": "tt11743610",
       "tmdb_id": "120911",
       "createdAt": "2026-10-21T09:01:16.205057+00:00",
-      "updatedAt": "2026-10-21T09:01:16.205057+00:00"
+      "updatedAt": "2026-10-21T16:23:01.073493+00:00"
+    },
+    {
+      "id": "1792599781370",
+      "type": "movie",
+      "title": "Moana",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWEyZDViMGYtZjcyNy00OWI3LWJmOWUtNTUzMmJmMWI3ZGNmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWEyZDViMGYtZjcyNy00OWI3LWJmOWUtNTUzMmJmMWI3ZGNmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/784222266707137040?dp=moana-cam-KHgXxMgKVV&t=Moana",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/784222266707137040?dp=moana-cam-KHgXxMgKVV&t=Moana"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt27419466"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt27419466"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1108427"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt27419466"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=QmdWRWNSSDJUd3RGRHRYaDloZWV5enBTNGpuRkkwNVlCWGJ1eHR5RGVmMVd6NktIdGYrQ1JFNEJoejBveHRndTZOVEdpVDl6UHQ3YjJBN3h6WGQzR2Vhajd2SHZ5cXgyUWU4WHRsK2k4Zzg9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "850MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1867837152",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "580MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/to3DLauWy9o2fa4bnY0WChVww",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Moana+2026+trailer",
+      "description": "Moana (2026) starring Dwayne Johnson, Catherine Laga'aia.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13001,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt27419466",
+      "tmdb_id": "1108427",
+      "createdAt": "2026-10-21T16:22:59.881978+00:00",
+      "updatedAt": "2026-10-21T16:22:59.881978+00:00"
+    },
+    {
+      "id": "1792599786021",
+      "type": "series",
+      "title": "Matarghasti",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "398.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "634.0MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.2GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt31474411/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "398.4MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/1177307-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "634.0MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/054241852077481-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/60437360-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Matarghasti+None+trailer",
+      "description": "Matarghasti (None) starring .",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8795,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31474411",
+      "tmdb_id": "",
+      "createdAt": "2026-10-21T16:22:58.529876+00:00",
+      "updatedAt": "2026-10-21T16:22:58.529876+00:00"
+    },
+    {
+      "id": "1792573284149",
+      "type": "movie",
+      "title": "Ghost in the Cell",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYWYzM2ZiYWQtMTVmOS00NTMyLWI0YjktOTU3ZDQ2MzE4NDc0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYWYzM2ZiYWQtMTVmOS00NTMyLWI0YjktOTU3ZDQ2MzE4NDc0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/8598294125756175536?dp=ghost-in-the-cell-w2lyNQfhafa&t=Ghost%20in%20the%20Cell",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/8598294125756175536?dp=ghost-in-the-cell-w2lyNQfhafa&t=Ghost%20in%20the%20Cell"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt9000310"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt9000310"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1393326"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt9000310"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247200/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "750MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247204/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247191/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247196/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ghost+in+the+Cell+2026+trailer",
+      "description": "Ghost in the Cell (2026) starring Abimana Aryasatya, Almanzo Konoralma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15367,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9000310",
+      "tmdb_id": "1393326",
+      "createdAt": "2026-10-21T09:01:17.598500+00:00",
+      "updatedAt": "2026-10-21T09:01:17.598500+00:00"
     },
     {
       "id": "1792402129050",
@@ -51101,8 +51309,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 458,
-    "lastUpdated": "2026-10-21T09:01:43.876416+00:00",
+    "totalMovies": 459,
+    "lastUpdated": "2026-10-21T16:23:26.509040+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -51134,7 +51342,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 113,
-    "totalTitles": 571
+    "totalSeries": 114,
+    "totalTitles": 573
   }
 }
