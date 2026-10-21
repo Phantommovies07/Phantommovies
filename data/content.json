@@ -1,6 +1,238 @@
 {
   "movies": [
     {
+      "id": "1792573284149",
+      "type": "movie",
+      "title": "Ghost in the Cell",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYWYzM2ZiYWQtMTVmOS00NTMyLWI0YjktOTU3ZDQ2MzE4NDc0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYWYzM2ZiYWQtMTVmOS00NTMyLWI0YjktOTU3ZDQ2MzE4NDc0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/8598294125756175536?dp=ghost-in-the-cell-w2lyNQfhafa&t=Ghost%20in%20the%20Cell",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/8598294125756175536?dp=ghost-in-the-cell-w2lyNQfhafa&t=Ghost%20in%20the%20Cell"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt9000310"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt9000310"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1393326"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt9000310"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247200/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "750MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247204/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247191/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776247196/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ghost+in+the+Cell+2026+trailer",
+      "description": "Ghost in the Cell (2026) starring Abimana Aryasatya, Almanzo Konoralma.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15367,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9000310",
+      "tmdb_id": "1393326",
+      "createdAt": "2026-10-21T09:01:17.598500+00:00",
+      "updatedAt": "2026-10-21T09:01:17.598500+00:00"
+    },
+    {
+      "id": "1792573284713",
+      "type": "series",
+      "title": "The Terminal List",
+      "genre": "Tv Series",
+      "year": 2022,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTFiZDQ1NWItODBkZS00ZjA1LThkNzUtY2M5Yzk2M2Y3ZDNkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTFiZDQ1NWItODBkZS00ZjA1LThkNzUtY2M5Yzk2M2Y3ZDNkXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "50.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one/the-terminal-list-series-1316/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "50.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/38161571252",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "26.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/29454419153",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/6377932688309244960?dp=the-terminal-list-YMJKCBXZ8B7&t=The%20Terminal%20List"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt11743610?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt11743610?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/120911?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt11743610/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p Full HD",
+              "size": "26.45 GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/57630917426018-2/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "480p SD",
+              "size": "1.5GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/01640637252-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.6GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/763439064-2/",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/6377932688309244960?dp=the-terminal-list-YMJKCBXZ8B7&t=The%20Terminal%20List"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt11743610?s=2&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt11743610?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/120911?s=2&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt11743610/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p Full HD",
+              "size": "3GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-terminal-list-s02-1080p-hq/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Terminal+List+2022+trailer",
+      "description": "The Terminal List (2022) starring Chris Pratt, Constance Wu.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19296,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt11743610",
+      "tmdb_id": "120911",
+      "createdAt": "2026-10-21T09:01:16.205057+00:00",
+      "updatedAt": "2026-10-21T09:01:16.205057+00:00"
+    },
+    {
       "id": "1792402129050",
       "type": "movie",
       "title": "Queen at Sea",
@@ -50869,8 +51101,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 457,
-    "lastUpdated": "2026-10-19T09:28:58.426154+00:00",
+    "totalMovies": 458,
+    "lastUpdated": "2026-10-21T09:01:43.876416+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -50902,7 +51134,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 112,
-    "totalTitles": 569
+    "totalSeries": 113,
+    "totalTitles": 571
   }
 }
