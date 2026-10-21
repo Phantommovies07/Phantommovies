@@ -1,6 +1,282 @@
 {
   "movies": [
     {
+      "id": "1792623409878",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SW1lc0FjdG9xeVMyYks2Skx0cVJqbGNpR3A4M1N3YUt2MEpxaldZbU9hcHBnM2lWL0hEdmNBWmRHRGtQeXNmN0hNTkVFb203c05rT0d3bGkwTXN6QXRySUZ2ZmtiZUVJekd2MjUvaUVGTHM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SW1lc0FjdG9xeVMyYks2Skx0cVJqbGNpR3A4M1N3YUt2MEpxaldZbU9hcHBnM2lWL0hEdmNBWmRHRGtQeXNmNzNucjBZVk9FN2ViV0Z0VzJucm5wMzBoOTRIR1pKT1VDY05rSWt5cExuSEE9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=SW1lc0FjdG9xeVMyYks2Skx0cVJqbGNpR3A4M1N3YUt2MEpxaldZbU9hcHBnM2lWL0hEdmNBWmRHRGtQeXNmN2FWeGJYcTFqVDlXL2FDVXh4SG03Ynpnc1BFVVluZ1htQTMwZFI3Ry9mTFE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/2636217885101804008?dp=the-punisher-2Va43daUJ83&t=The%20Punisher"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/7220?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/2636217885101804008?dp=the-punisher-2Va43daUJ83&t=The%20Punisher"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/7220?s=2&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s02-2160p-hdr/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8322,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "7220",
+      "createdAt": "2026-10-21T22:56:42.337070+00:00",
+      "updatedAt": "2026-10-21T22:56:42.337070+00:00"
+    },
+    {
+      "id": "1792623399755",
+      "type": "series",
+      "title": "Matarghasti",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "398.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "634.0MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.2GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt31474411/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "398.4MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/1177307-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "634.0MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/054241852077481-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/60437360-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Matarghasti+None+trailer",
+      "description": "Matarghasti (None) starring .",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13036,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31474411",
+      "tmdb_id": "",
+      "createdAt": "2026-10-21T22:56:38.817070+00:00",
+      "updatedAt": "2026-10-21T22:56:38.817070+00:00"
+    },
+    {
       "id": "1792573284713",
       "type": "series",
       "title": "The Terminal List",
@@ -51310,7 +51586,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 459,
-    "lastUpdated": "2026-10-21T16:23:26.509040+00:00",
+    "lastUpdated": "2026-10-21T22:57:10.581894+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -51342,7 +51618,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 114,
-    "totalTitles": 573
+    "totalSeries": 116,
+    "totalTitles": 575
   }
 }
