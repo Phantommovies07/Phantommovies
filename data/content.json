@@ -1,6 +1,820 @@
 {
   "movies": [
     {
+      "id": "1792659846583",
+      "type": "movie",
+      "title": "The Sun Never Sets",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmM1N2EwOGMtOTdlOC00ZGY2LTkzNDEtZjFhYWY1NTBmOTM3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmM1N2EwOGMtOTdlOC00ZGY2LTkzNDEtZjFhYWY1NTBmOTM3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1490214",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1490214"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt37818327"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt37818327"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1490214"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt37818327"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "805MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776444924/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776444918/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "805MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776444926/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "805MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776444925/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Sun+Never+Sets+2026+trailer",
+      "description": "The Sun Never Sets (2026) starring Dakota Fanning, Debby Ryan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8844,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37818327",
+      "tmdb_id": "1490214",
+      "createdAt": "2026-10-22T09:03:58.059388+00:00",
+      "updatedAt": "2026-10-22T09:03:58.059388+00:00"
+    },
+    {
+      "id": "1792659835688",
+      "type": "movie",
+      "title": "The Weight",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZWU1NWY0MzctYmFiYS00MDU3LWFlNDItZDc5ZGY3Y2JiYTI4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZWU1NWY0MzctYmFiYS00MDU3LWFlNDItZDc5ZGY3Y2JiYTI4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/8157589940453400584?dp=the-unbearable-weight-of-massive-talent-i7rVSwBQBI9&t=The%20Weight",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/8157589940453400584?dp=the-unbearable-weight-of-massive-talent-i7rVSwBQBI9&t=The%20Weight"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt10794054"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt10794054"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/648579"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt10794054"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510196/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "960MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515562/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510190/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776510198/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Weight+2026+trailer",
+      "description": "The Weight (2026) starring Ethan Hawke, Russell Crowe.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17026,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt10794054",
+      "tmdb_id": "648579",
+      "createdAt": "2026-10-22T09:03:55.567865+00:00",
+      "updatedAt": "2026-10-22T09:03:55.567865+00:00"
+    },
+    {
+      "id": "1792659842665",
+      "type": "movie",
+      "title": "Hadestown: The Musical",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGFjMDFlNDMtMjBhNy00MjJkLWE5ZjktOWVmMTIyY2Q3YTM1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGFjMDFlNDMtMjBhNy00MjJkLWE5ZjktOWVmMTIyY2Q3YTM1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1439808",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1439808"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt36307021"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt36307021"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1439808"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt36307021"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "420MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477623464/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776289255/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776289257/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hadestown:+The+Musical+2026+trailer",
+      "description": "Hadestown: The Musical (2026) starring Reeve Carney, André De Shields.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14825,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36307021",
+      "tmdb_id": "1439808",
+      "createdAt": "2026-10-22T09:03:54.631450+00:00",
+      "updatedAt": "2026-10-22T09:03:54.631450+00:00"
+    },
+    {
+      "id": "1792659834957",
+      "type": "movie",
+      "title": "Bride & Prejudice",
+      "genre": "Feature",
+      "year": 2004,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTAyOWQwNzAtMWVjNi00MzE4LTg1NzktODI1Zjg0YzJjOGNhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTAyOWQwNzAtMWVjNi00MzE4LTg1NzktODI1Zjg0YzJjOGNhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/5238383676047657464?dp=bride-and-prejudice-qlYLRcSQXe6&t=Bride%20%26%20Prejudice",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/5238383676047657464?dp=bride-and-prejudice-qlYLRcSQXe6&t=Bride%20%26%20Prejudice"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0361411"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0361411"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/57825"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0361411"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515566/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "3.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515567/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515568/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bride+&+Prejudice+2004+trailer",
+      "description": "Bride & Prejudice (2004) starring Martin Henderson, Aishwarya Rai Bachchan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7815,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0361411",
+      "tmdb_id": "57825",
+      "createdAt": "2026-10-22T09:03:53.513642+00:00",
+      "updatedAt": "2026-10-22T09:03:53.513642+00:00"
+    },
+    {
+      "id": "1792659834569",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=MGwwVGo0SDVRVG44M3Z5QlhpWHNFaGorM3VwekUvUGVqR0w3cHVOSWpESnF3amRVWmlIczVXODhaazV5STBxVWVEOTYrclR4TEI0QkZqd1VqaVMyU3poSWU3a21TOUN2MWwvUUZ5K01WMnM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=MGwwVGo0SDVRVG44M3Z5QlhpWHNFaGorM3VwekUvUGVqR0w3cHVOSWpESnF3amRVWmlIczVXODhaazV5STBxVUN3dXU5ZGZxbE9yaENZems1NmhQZlpCV0JYcHlRRENjcTdVcEJSeGlKbm89",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=MGwwVGo0SDVRVG44M3Z5QlhpWHNFaGorM3VwekUvUGVqR0w3cHVOSWpESnF3amRVWmlIczVXODhaazV5STBxVUJDTkMxQUZFcERFMys3T3l1K1FvZlVMMVhpNGovUEU5QkVibzRUczRjVFU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/2636217885101804008?dp=the-punisher-2Va43daUJ83&t=The%20Punisher"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/7220?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/2636217885101804008?dp=the-punisher-2Va43daUJ83&t=The%20Punisher"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/7220?s=2&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s02-2160p-hdr/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27792,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "7220",
+      "createdAt": "2026-10-22T09:03:51.400653+00:00",
+      "updatedAt": "2026-10-22T09:03:51.400653+00:00"
+    },
+    {
+      "id": "1792659835262",
+      "type": "series",
+      "title": "Matarghasti",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "398.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "634.0MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.2GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt31474411/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "398.4MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/1177307-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "634.0MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/054241852077481-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/60437360-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Matarghasti+None+trailer",
+      "description": "Matarghasti (None) starring .",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15160,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31474411",
+      "tmdb_id": "",
+      "createdAt": "2026-10-22T09:03:49.443004+00:00",
+      "updatedAt": "2026-10-22T09:03:49.443004+00:00"
+    },
+    {
+      "id": "1792659828059",
+      "type": "movie",
+      "title": "The Paradise",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGI3N2I1ZWUtYzMyZS00MTRlLThlNDUtNWZhY2MxZTlmMDJjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMGI3N2I1ZWUtYzMyZS00MTRlLThlNDUtNWZhY2MxZTlmMDJjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/59674",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/59674"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt31969655"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt31969655"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/59674"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt31969655"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "650MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/WYOygm5M5MESDpjNsXRTML3TB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2738979815",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=NWZSSElEMElMVVgzY0JBejdISDc2TlEwSy8rM2diSlhuNlN3MEl3TGVHNjJLNDVSaHVhY0tsMEI1L0ZJZzdUc3AvcFNZNTlTamRjK3RMaVc5bzB5RXl1dFE1K2F1eDlMK1ExV1prVTE5UnM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Paradise+2026+trailer",
+      "description": "The Paradise (2026) starring Keerthy Suresh, Nani.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10157,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31969655",
+      "tmdb_id": "59674",
+      "createdAt": "2026-10-22T09:03:47.300695+00:00",
+      "updatedAt": "2026-10-22T09:03:47.300695+00:00"
+    },
+    {
+      "id": "1792659829885",
+      "type": "movie",
+      "title": "No More Cocoons",
+      "genre": "Short",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzU0NzU3NDUtYzhlMS00OWYyLTlkY2ItZWNlM2Y5ZDA5ZmI4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNzU0NzU3NDUtYzhlMS00OWYyLTlkY2ItZWNlM2Y5ZDA5ZmI4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt37892322",
+      "streams": [
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt37892322"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt37892322"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt37892322"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "430MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776514655/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776514656/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776514657/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=No+More+Cocoons+2026+trailer",
+      "description": "No More Cocoons (2026) starring Sky Bison, Henry Hunter Hall.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15924,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37892322",
+      "tmdb_id": "",
+      "createdAt": "2026-10-22T09:03:46.284883+00:00",
+      "updatedAt": "2026-10-22T09:03:46.284883+00:00"
+    },
+    {
+      "id": "1792659829936",
+      "type": "movie",
+      "title": "Super Hit",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGY0YjMwMmMtYmNhNy00NTY3LTg2ZjAtZWY5NGI2M2U4NWQ1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGY0YjMwMmMtYmNhNy00NTY3LTg2ZjAtZWY5NGI2M2U4NWQ1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/9035754283068704440?dp=super-hit-2lYIVeJQtLa&t=Super%20Hit",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/9035754283068704440?dp=super-hit-2lYIVeJQtLa&t=Super%20Hit"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt39100759"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt39100759"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1686719"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt39100759"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477645161/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477645162/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776163278/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Super+Hit+2026+trailer",
+      "description": "Super Hit (2026) starring Gilli Nata, Gourav Shetty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14579,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39100759",
+      "tmdb_id": "1686719",
+      "createdAt": "2026-10-22T09:03:44.892353+00:00",
+      "updatedAt": "2026-10-22T09:03:44.892353+00:00"
+    },
+    {
       "id": "1792636956025",
       "type": "series",
       "title": "The Punisher",
@@ -51861,8 +52675,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 459,
-    "lastUpdated": "2026-10-22T02:42:52.758393+00:00",
+    "totalMovies": 466,
+    "lastUpdated": "2026-10-22T09:04:22.956069+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -51894,7 +52708,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 118,
-    "totalTitles": 577
+    "totalSeries": 120,
+    "totalTitles": 586
   }
 }
