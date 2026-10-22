@@ -1,6 +1,449 @@
 {
   "movies": [
     {
+      "id": "1792709625459",
+      "type": "series",
+      "title": "Birangana",
+      "genre": "Tv Series",
+      "year": 2025,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2RjYjgwOTgtNTJiOS00Y2UxLWE4Y2QtZDJiNDNlNDhlNDc4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2RjYjgwOTgtNTJiOS00Y2UxLWE4Y2QtZDJiNDNlNDhlNDc4XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432074/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432075/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432076/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/watch-tmdb/296721?type=tv&se=1&ep=1"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt37626694?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt37626694?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/296721?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt37626694/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "491.2MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/397176756-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "875.3MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/995344320-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.3GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/298606405-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Birangana+2025+trailer",
+      "description": "Birangana (2025) starring Sabyasachi Hazra, Soumyadeep Chakraborty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21391,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37626694",
+      "tmdb_id": "296721",
+      "createdAt": "2026-10-22T22:53:43.545144+00:00",
+      "updatedAt": "2026-10-22T22:53:43.545144+00:00"
+    },
+    {
+      "id": "1792709629161",
+      "type": "series",
+      "title": "Matarghasti",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "398.4MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "634.0MB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.2GB",
+          "server": "Fast Cloud",
+          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt31474411/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "398.4MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/1177307-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "634.0MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/054241852077481-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/60437360-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Matarghasti+None+trailer",
+      "description": "Matarghasti (None) starring .",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27349,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31474411",
+      "tmdb_id": "",
+      "createdAt": "2026-10-22T22:53:41.712555+00:00",
+      "updatedAt": "2026-10-22T22:53:41.712555+00:00"
+    },
+    {
+      "id": "1792709625004",
+      "type": "movie",
+      "title": "Dhoomakethu",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTE1ZDFiMGEtMTRjMS00ZWZlLTgyMDctNjJkZDM2YjI4NGFlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTE1ZDFiMGEtMTRjMS00ZWZlLTgyMDctNjJkZDM2YjI4NGFlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1590718",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1590718"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt38990864"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt38990864"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1590718"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt38990864"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "460MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/NR3nhInfdYtcXqnXQhwh2AsRN",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "940MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2048101654",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnpvS2lHK2UycVlwemlMa3JaMXczeHpCQWpXdHBsa0hJYTljaG91R0drSkU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dhoomakethu+2026+trailer",
+      "description": "Dhoomakethu (2026) starring Nikhila Vimal, Sidharth Bharathan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23833,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt38990864",
+      "tmdb_id": "1590718",
+      "createdAt": "2026-10-22T22:53:40.812637+00:00",
+      "updatedAt": "2026-10-22T22:53:40.812637+00:00"
+    },
+    {
+      "id": "1792709620580",
+      "type": "movie",
+      "title": "Dorothy",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZGZmZmEyZjMtYTJkZC00ZmVjLTg1OGEtOGUwMjgzNGQ4MGYxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZGZmZmEyZjMtYTJkZC00ZmVjLTg1OGEtOGUwMjgzNGQ4MGYxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1578079",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1578079"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt38915678"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt38915678"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1578079"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt38915678"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "550MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/g1skLrxBJZA0G2WXA82gdoBXs",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2606048615",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qi9mOEduc2ZzM2krUlpFZmRtSTBMMG92T1NzbTJOaVFnZDBLc1l4VVlYVW89",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dorothy+2026+trailer",
+      "description": "Dorothy (2026) starring Sananth, Rishikanth.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13845,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt38915678",
+      "tmdb_id": "1578079",
+      "createdAt": "2026-10-22T22:53:40.025967+00:00",
+      "updatedAt": "2026-10-22T22:53:40.025967+00:00"
+    },
+    {
+      "id": "1792709622918",
+      "type": "movie",
+      "title": "Jeena Dil Se",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODkwYTI5YWMtZjNhMC00Y2IxLWJmZmUtYjY1OThmY2NhNGM0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODkwYTI5YWMtZjNhMC00Y2IxLWJmZmUtYjY1OThmY2NhNGM0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1713546",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1713546"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt42362291"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt42362291"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1713546"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt42362291"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "540MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515602/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "815MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515603/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.8GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515604/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jeena+Dil+Se+2026+trailer",
+      "description": "Jeena Dil Se (2026) starring Ruma Sharma, Lakshya Handa.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21362,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt42362291",
+      "tmdb_id": "1713546",
+      "createdAt": "2026-10-22T22:53:38.830987+00:00",
+      "updatedAt": "2026-10-22T22:53:38.830987+00:00"
+    },
+    {
       "id": "1792686179115",
       "type": "movie",
       "title": "The Five-Year Engagement",
@@ -53289,8 +53732,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 469,
-    "lastUpdated": "2026-10-22T16:23:23.351112+00:00",
+    "totalMovies": 472,
+    "lastUpdated": "2026-10-22T22:54:10.640751+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -53322,7 +53765,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 123,
-    "totalTitles": 592
+    "totalSeries": 125,
+    "totalTitles": 597
   }
 }
