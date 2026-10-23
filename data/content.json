@@ -1,6 +1,648 @@
 {
   "movies": [
     {
+      "id": "1792771948987",
+      "type": "series",
+      "title": "Birangana",
+      "genre": "Tv Series",
+      "year": 2025,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2RjYjgwOTgtNTJiOS00Y2UxLWE4Y2QtZDJiNDNlNDhlNDc4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2RjYjgwOTgtNTJiOS00Y2UxLWE4Y2QtZDJiNDNlNDhlNDc4XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432074/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432075/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432076/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/watch-tmdb/296721?type=tv&se=1&ep=1"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt37626694?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt37626694?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/296721?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt37626694/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "491.2MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/397176756-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "875.3MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/995344320-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.3GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/298606405-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Birangana+2025+trailer",
+      "description": "Birangana (2025) starring Sabyasachi Hazra, Soumyadeep Chakraborty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8077,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37626694",
+      "tmdb_id": "296721",
+      "createdAt": "2026-10-23T16:12:27.059040+00:00",
+      "updatedAt": "2026-10-23T16:12:27.059040+00:00"
+    },
+    {
+      "id": "1792771953492",
+      "type": "series",
+      "title": "Lupin",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzk4MTc0NWUtZjk3Mi00ODkzLTlkYjItOWRhMTc5MmRiNjI0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzk4MTc0NWUtZjk3Mi00ODkzLTlkYjItOWRhMTc5MmRiNjI0XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "3.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnpLdXlGZVNrUis2TDVQSFFHM1JnVDIreG9Mekc1ZDliOS9sZGtDNU9CSmM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/4088021914",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnlrcERUUUEzU20vSGMrZzA1VlkrMTVrUzVybEFmV0ljbjFPc3dFcHpsc1E9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/838601903666779168?dp=lupin-2rBwMMWNWZ&t=Lupin"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt2531336?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt2531336?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/96677?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt2531336/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/8452981-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.7GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/77837432-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "9.3GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/095432569322567-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/838601903666779168?dp=lupin-2rBwMMWNWZ&t=Lupin"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt2531336?s=2&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt2531336?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/96677?s=2&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt2531336/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "3.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnpLdXlGZVNrUis2TDVQSFFHM1JnVDIreG9Mekc1ZDliOS9sZGtDNU9CSmM9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.2GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/4088021914",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnlrcERUUUEzU20vSGMrZzA1VlkrMTVrUzVybEFmV0ljbjFPc3dFcHpsc1E9",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 3,
+          "title": "Season 3",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/838601903666779168?dp=lupin-2rBwMMWNWZ&t=Lupin"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt2531336?s=3&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt2531336?s=3&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/96677?s=3&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt2531336/3/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "3.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnpLdXlGZVNrUis2TDVQSFFHM1JnVDIreG9Mekc1ZDliOS9sZGtDNU9CSmM9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.2GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/4088021914",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnlrcERUUUEzU20vSGMrZzA1VlkrMTVrUzVybEFmV0ljbjFPc3dFcHpsc1E9",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/native/838601903666779168?dp=lupin-2rBwMMWNWZ&t=Lupin"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt2531336?s=4&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt2531336?s=4&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/96677?s=4&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt2531336/4/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "150MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lupin-s04-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lupin-s04-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/lupin-s04-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Lupin+2021+trailer",
+      "description": "Lupin (2021) starring Omar Sy, Ludivine Sagnier.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17785,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt2531336",
+      "tmdb_id": "96677",
+      "createdAt": "2026-10-23T16:12:24.353092+00:00",
+      "updatedAt": "2026-10-23T16:12:24.353092+00:00"
+    },
+    {
+      "id": "1792771947110",
+      "type": "series",
+      "title": "Fading Grandeur",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDQ2NWFjNWEtMWZjNy00NGJmLWIyNTktZGE3NmRhOWEyZGIxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDQ2NWFjNWEtMWZjNy00NGJmLWIyNTktZGE3NmRhOWEyZGIxXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "675.7MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/3090340909-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/82800170-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "4.2GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/44428346-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/watch-tmdb/335535?type=tv&se=1&ep=1"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt39387986?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt39387986?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/335535?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt39387986/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "100MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/fading-grandeur-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "250MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/fading-grandeur-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "800MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/fading-grandeur-s01-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Fading+Grandeur+2026+trailer",
+      "description": "Fading Grandeur (2026) starring Alexandra Jiménez, Antonio de la Torre.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13688,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39387986",
+      "tmdb_id": "335535",
+      "createdAt": "2026-10-23T16:12:23.355927+00:00",
+      "updatedAt": "2026-10-23T16:12:23.355927+00:00"
+    },
+    {
+      "id": "1792771947940",
+      "type": "movie",
+      "title": "Udta Teer",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzBhMmZiMjktYTdmZS00ZTJjLTk1ZTEtMGMzNjlhNmZiYjhmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzBhMmZiMjktYTdmZS00ZTJjLTk1ZTEtMGMzNjlhNmZiYjhmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1375156",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1375156"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt31806773"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt31806773"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1375156"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt31806773"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "460MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/y09pXvcCyRB5L1vydgzHuYLiP",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "790MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2059067125",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1822482567",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Udta+Teer+2026+trailer",
+      "description": "Udta Teer (2026) starring Ayushmann Khurrana, Raghubir Yadav.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15888,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31806773",
+      "tmdb_id": "1375156",
+      "createdAt": "2026-10-23T16:12:22.021787+00:00",
+      "updatedAt": "2026-10-23T16:12:22.021787+00:00"
+    },
+    {
+      "id": "1792771950154",
+      "type": "movie",
+      "title": "Pehla Pyaar Doosri Baar",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjhmYzY1ZDktMzFmMi00MzdlLWE0MTgtYjdkODIwNDA1MzJmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjhmYzY1ZDktMzFmMi00MzdlLWE0MTgtYjdkODIwNDA1MzJmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1772549",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1772549"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt46065968"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt46065968"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1772549"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt46065968"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776249831/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "900MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776249836/",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Pehla+Pyaar+Doosri+Baar+2026+trailer",
+      "description": "Pehla Pyaar Doosri Baar (2026) starring Alisha Chopra, Sparsh Walia.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20622,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt46065968",
+      "tmdb_id": "1772549",
+      "createdAt": "2026-10-23T16:12:21.129128+00:00",
+      "updatedAt": "2026-10-23T16:12:21.129128+00:00"
+    },
+    {
       "id": "1792745924526",
       "type": "series",
       "title": "Birangana",
@@ -54447,8 +55089,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 476,
-    "lastUpdated": "2026-10-23T08:59:00.783618+00:00",
+    "totalMovies": 478,
+    "lastUpdated": "2026-10-23T16:12:54.694491+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -54480,7 +55122,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 129,
-    "totalTitles": 605
+    "totalSeries": 132,
+    "totalTitles": 610
   }
 }
