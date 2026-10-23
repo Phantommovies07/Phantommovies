@@ -1,6 +1,517 @@
 {
   "movies": [
     {
+      "id": "1792745924526",
+      "type": "series",
+      "title": "Birangana",
+      "genre": "Tv Series",
+      "year": 2025,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2RjYjgwOTgtNTJiOS00Y2UxLWE4Y2QtZDJiNDNlNDhlNDc4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2RjYjgwOTgtNTJiOS00Y2UxLWE4Y2QtZDJiNDNlNDhlNDc4XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432074/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432075/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776432076/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://net27.cc/watch-tmdb/296721?type=tv&se=1&ep=1"
+            },
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt37626694?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt37626694?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (CineSrc - No Ads)",
+              "url": "https://cinesrc.st/embed/tv/296721?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt37626694/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "491.2MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/397176756-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "875.3MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/995344320-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.3GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/298606405-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Birangana+2025+trailer",
+      "description": "Birangana (2025) starring Sabyasachi Hazra, Soumyadeep Chakraborty.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15184,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37626694",
+      "tmdb_id": "296721",
+      "createdAt": "2026-10-23T08:58:34.759901+00:00",
+      "updatedAt": "2026-10-23T08:58:34.759901+00:00"
+    },
+    {
+      "id": "1792745922178",
+      "type": "series",
+      "title": "Matarghasti",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 2 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 3 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt31474411?s=1&e=1"
+            },
+            {
+              "name": "Server 5 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt31474411/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "398.4MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/1177307-2/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "634.0MB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/054241852077481-2/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "4.2GB",
+              "server": "Fast Cloud",
+              "url": "https://w3.magiclinks.lol/60437360-2/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Matarghasti+None+trailer",
+      "description": "Matarghasti (None) starring .",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9435,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31474411",
+      "tmdb_id": "",
+      "createdAt": "2026-10-23T08:58:33.987337+00:00",
+      "updatedAt": "2026-10-23T08:58:33.987337+00:00"
+    },
+    {
+      "id": "1792745918006",
+      "type": "movie",
+      "title": "The Invite",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjI0MzJjMjctNmQzZi00Y2U4LWEwZGItMmE3NDUzNzk1YzY3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjI0MzJjMjctNmQzZi00Y2U4LWEwZGItMmE3NDUzNzk1YzY3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/native/5455573294353205616?dp=the-invite-6lXLuebA0v6&t=The%20Invite",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/native/5455573294353205616?dp=the-invite-6lXLuebA0v6&t=The%20Invite"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt14173636"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt14173636"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/950028"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt14173636"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "4GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515705/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.6GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515770/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.6GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515772/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.6GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515771/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Invite+2026+trailer",
+      "description": "The Invite (2026) starring Seth Rogen, Olivia Wilde.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21443,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14173636",
+      "tmdb_id": "950028",
+      "createdAt": "2026-10-23T08:58:31.931382+00:00",
+      "updatedAt": "2026-10-23T08:58:31.931382+00:00"
+    },
+    {
+      "id": "1792745917824",
+      "type": "movie",
+      "title": "Gajab Raat",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2JjYmI2YTMtMDZlZi00MmNjLWEyMmItZDlmMWM0MTJjY2E1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2JjYmI2YTMtMDZlZi00MmNjLWEyMmItZDlmMWM0MTJjY2E1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1453407",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1453407"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt39631280"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt39631280"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1453407"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt39631280"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/7648040339",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Gajab+Raat+2026+trailer",
+      "description": "Gajab Raat (2026) starring Meghna Agarwal, Manoj Bajpayee.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21085,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39631280",
+      "tmdb_id": "1453407",
+      "createdAt": "2026-10-23T08:58:31.117820+00:00",
+      "updatedAt": "2026-10-23T08:58:31.117820+00:00"
+    },
+    {
+      "id": "1792745919321",
+      "type": "movie",
+      "title": "Surviving Hurricane Otis",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTYzNzc5NjctZjg5OC00NzRmLWFkODAtZDU2NDBhNmRkNzhjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTYzNzc5NjctZjg5OC00NzRmLWFkODAtZDU2NDBhNmRkNzhjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/1780005",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/1780005"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt37961714"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt37961714"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/1780005"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt37961714"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "298.7MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1716677232727-2/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "441.5MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/7604345323582-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.8GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/961914991571133-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Surviving+Hurricane+Otis+2026+trailer",
+      "description": "Surviving Hurricane Otis (2026) starring Benny Emmanuel, Kristyan Ferrer.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21001,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37961714",
+      "tmdb_id": "1780005",
+      "createdAt": "2026-10-23T08:58:30.544869+00:00",
+      "updatedAt": "2026-10-23T08:58:30.544869+00:00"
+    },
+    {
+      "id": "1792745913364",
+      "type": "movie",
+      "title": "Chaar Yaar",
+      "genre": "Feature",
+      "year": 2024,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDUyOWU0Y2MtYWY1MC00ZTY2LWI1NTUtNWI1YWRkYjQxNDdjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDUyOWU0Y2MtYWY1MC00ZTY2LWI1NTUtNWI1YWRkYjQxNDdjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://net27.cc/watch-tmdb/338918",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://net27.cc/watch-tmdb/338918"
+        },
+        {
+          "name": "Server 2 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt28591762"
+        },
+        {
+          "name": "Server 3 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt28591762"
+        },
+        {
+          "name": "Server 4 (CineSrc - No Ads)",
+          "url": "https://cinesrc.st/embed/movie/338918"
+        },
+        {
+          "name": "Server 5 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt28591762"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjAvWURSUFlNOVpFZTE2WGxwWWtwRkNRT0RScFVraFp3RXdBMHd3VXE5blE9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2327191830",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjhpSWg2VHlMWnEyZ3ViNG9Xa25hWU9oSGREMFpZWWZqcHBRRXFpOHp1UEE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Chaar+Yaar+None+trailer",
+      "description": "Chaar Yaar (None) starring Prachi Hada, Pushpanshu Khale.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22372,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28591762",
+      "tmdb_id": "338918",
+      "createdAt": "2026-10-23T08:58:29.244655+00:00",
+      "updatedAt": "2026-10-23T08:58:29.244655+00:00"
+    },
+    {
       "id": "1792723600634",
       "type": "series",
       "title": "Birangana",
@@ -124,23 +635,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -328,23 +839,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -1099,23 +1610,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -1771,23 +2282,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -2271,23 +2782,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -2547,23 +3058,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -2905,23 +3416,23 @@
       "downloads": [
         {
           "quality": "480p SD",
-          "size": "398.4MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/1177307-2/",
+          "size": "320MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515878/",
           "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "634.0MB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/054241852077481-2/",
+          "size": "610MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515877/",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "4.2GB",
-          "server": "Fast Cloud",
-          "url": "https://w3.magiclinks.lol/60437360-2/",
+          "size": "970MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776515879/",
           "color": "#10b981"
         }
       ],
@@ -53936,8 +54447,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 472,
-    "lastUpdated": "2026-10-23T02:47:00.382232+00:00",
+    "totalMovies": 476,
+    "lastUpdated": "2026-10-23T08:59:00.783618+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -53969,7 +54480,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 127,
-    "totalTitles": 599
+    "totalSeries": 129,
+    "totalTitles": 605
   }
 }
