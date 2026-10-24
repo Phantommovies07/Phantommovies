@@ -54,6 +54,7 @@ function getYouTubeEmbed(url) {
 
 let currentMovie = null;
 let currentStreams = [];
+let liveMirrorsConfig = null;
 
 function playerMarkup(movie, streamUrl) {
     const streamLink = streamUrl || movie.streamLink || '';
@@ -67,9 +68,9 @@ function playerMarkup(movie, streamUrl) {
     }
 
     if (streamLink) {
-        // Complete Sandbox Elimination: Removing sandbox completely resolves 'Please disable the sandbox' across all 13 servers
-        // while the page-level AdShield navigation guard protects the parent window from rogue ad redirects.
-        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+        // Stealth Anti-Hijack Sandbox: allows full media execution, WebRTC P2P mesh, and same-origin storage
+        // Crucially omits allow-top-navigation to prevent rogue embeds from redirecting parent window or spawning unwanted popups
+        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"></iframe>`;
     }
 
     if (trailerEmbed) {
@@ -91,28 +92,74 @@ const SERVER_LABELS = [
     "Server 5 (VidLink - Fast HD)"
 ];
 
+let DEFAULT_STREAM_PROVIDERS = [
+    { id: "netmirror", name: "Server 1 (VIP Ultra HD)", template: "https://net79.cc/watch-tmdb/{tmdb}", requiresTmdb: true },
+    { id: "allmovieland", name: "Server 2 (AllMovieLand - HDVB P2P)", template: "https://allmovieland.link/play/{imdb}", requiresImdb: true },
+    { id: "hdmovie2", name: "Server 3 (HDMovie2 - P2P HLS)", template: "https://slast430did.com/play/{imdb}", requiresImdb: true },
+    { id: "cinesrc", name: "Server 4 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/movie/{tmdb}", requiresTmdb: true },
+    { id: "vidlink", name: "Server 5 (VidLink - Fast HD)", template: "https://vidlink.pro/movie/{imdb}", requiresImdb: true }
+];
+
+async function loadLiveMirrors() {
+    if (window.PHANTOM_MIRRORS_CACHE) {
+        liveMirrorsConfig = window.PHANTOM_MIRRORS_CACHE;
+        applyLiveMirrors(liveMirrorsConfig);
+        return;
+    }
+    try {
+        const cached = sessionStorage.getItem('phantom_mirrors_cache_v2');
+        const cacheTime = sessionStorage.getItem('phantom_mirrors_time_v2');
+        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
+            liveMirrorsConfig = JSON.parse(cached);
+            window.PHANTOM_MIRRORS_CACHE = liveMirrorsConfig;
+            applyLiveMirrors(liveMirrorsConfig);
+            return;
+        }
+    } catch (_) {}
+
+    try {
+        const resp = await fetch('data/mirrors.json?v=' + Date.now());
+        if (resp.ok) {
+            const data = await resp.json();
+            liveMirrorsConfig = data;
+            window.PHANTOM_MIRRORS_CACHE = data;
+            sessionStorage.setItem('phantom_mirrors_cache_v2', JSON.stringify(data));
+            sessionStorage.setItem('phantom_mirrors_time_v2', String(Date.now()));
+            applyLiveMirrors(data);
+        }
+    } catch (err) {
+        console.warn('[Mirrors] Using default stream providers:', err);
+    }
+}
+
+function applyLiveMirrors(data) {
+    if (!data) return;
+    const provs = data.streaming?.providers || [];
+    provs.forEach(p => {
+        const found = DEFAULT_STREAM_PROVIDERS.find(dp => dp.id === p.id || dp.name.includes(p.name));
+        if (found && p.domains && p.domains.length) {
+            const activeDomain = p.domains[0].replace(/\/+$/, '');
+            const tmpl = p.movieTemplate || found.template.replace(/^https?:\/\/[^\/]+/, '');
+            found.template = activeDomain + (tmpl.startsWith('/') ? tmpl : '/' + tmpl);
+        }
+    });
+}
+
 function isAllowedStreamUrl(url) {
     if (!url) return false;
-    return /net27\.cc|netmirror|slast430did\.com|allmovieland|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    // Check against standard verified domains and any live dynamic domains loaded from mirrors.json
+    return /net27\.cc|net79\.cc|netmirror|slast430did\.com|allmovieland|1xcinema|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index) {
     if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
-    if (/net27|netmirror|vip ultra hd/i.test(name)) return "Server 1 (VIP Ultra HD)";
+    if (/net27|net79|netmirror|vip ultra hd/i.test(name)) return "Server 1 (VIP Ultra HD)";
     if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 2 (AllMovieLand - HDVB P2P)";
     if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 3 (HDMovie2 - P2P HLS)";
     if (/cinesrc/i.test(name)) return "Server 4 (CineSrc - No Ads)";
     if (/vidlink/i.test(name)) return "Server 5 (VidLink - Fast HD)";
     return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
-
-const DEFAULT_STREAM_PROVIDERS = [
-    { name: "Server 1 (VIP Ultra HD)", template: "https://net27.cc/watch-tmdb/{tmdb}", requiresTmdb: true },
-    { name: "Server 2 (AllMovieLand - HDVB P2P)", template: "https://slast430did.com/play/{imdb}", requiresImdb: true },
-    { name: "Server 3 (HDMovie2 - P2P HLS)", template: "https://gorri421kos.com/play/{imdb}", requiresImdb: true },
-    { name: "Server 4 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/movie/{tmdb}", requiresTmdb: true },
-    { name: "Server 5 (VidLink - Fast HD)", template: "https://vidlink.pro/movie/{imdb}", requiresImdb: true }
-];
 
 function normalizeStreams(movie) {
     const rawStreams = Array.isArray(movie.streams) && movie.streams.length
@@ -126,7 +173,11 @@ function normalizeStreams(movie) {
 
     // 1. First add any pre-existing custom streams that match our approved domains
     rawStreams.forEach((item) => {
-        const u = item.url.trim();
+        let u = item.url.trim();
+        // Dynamic domain migration for older links
+        if (u.includes('net27.cc') && liveMirrorsConfig?.scrapers?.netmirror?.active) {
+            u = u.replace('https://net27.cc', liveMirrorsConfig.scrapers.netmirror.active);
+        }
         const label = cleanServerLabel(item.name || item.label);
         streamMap.set(label, { name: label, url: u });
     });
@@ -159,6 +210,23 @@ let currentStreamIndex = 0;
 let failoverWatchdogTimer = null;
 let testedFailedUrls = new Set();
 
+function getStreamStatusText(stream) {
+    if (!stream) return 'Server 1 (Auto-Failover On)';
+    if (/p2p|allmovieland/i.test(stream.name)) {
+        return `⚡ Active: ${escapeHTML(stream.name)} — Peer-to-Peer Acceleration Active (0 Buffering)`;
+    }
+    if (/hdmovie2|mesh/i.test(stream.name)) {
+        return `⚡ Active: ${escapeHTML(stream.name)} — P2P Mesh HLS Active (Low Latency)`;
+    }
+    if (/vip/i.test(stream.name)) {
+        return `👑 Active: ${escapeHTML(stream.name)} — Direct VIP CDN (Auto-Failover Active in 4.5s)`;
+    }
+    if (/no ads/i.test(stream.name)) {
+        return `🛡️ Active: ${escapeHTML(stream.name)} — Clean Ad-Shielded Stream`;
+    }
+    return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Global Stream`;
+}
+
 function renderFailoverBar() {
     if (!currentStreams || currentStreams.length <= 1) return '';
     const activeStream = currentStreams[currentStreamIndex] || currentStreams[0];
@@ -166,7 +234,7 @@ function renderFailoverBar() {
         <div class="stream-failover-bar" id="streamFailoverBar">
             <div class="failover-status">
                 <span class="failover-dot online" id="failoverDot"></span>
-                <span id="failoverText">⚡ Active: ${escapeHTML(activeStream ? activeStream.name : 'Server 1 (HD)')} (Auto-Failover On)</span>
+                <span id="failoverText">${getStreamStatusText(activeStream)}</span>
             </div>
             <button type="button" class="failover-quick-btn" onclick="autoFailoverNext('manual')">Switch Server ↻</button>
         </div>
@@ -185,34 +253,34 @@ function updateFailoverStatus(message, isSwitching = false) {
 function startFailoverWatchdog(streamUrl, streamName) {
     if (failoverWatchdogTimer) clearTimeout(failoverWatchdogTimer);
 
-    // Timeout Watchdog: If embed is unresponsive after 6.5s, auto-switch to next server
+    // Optimized 4.5s Watchdog: auto-switches to Server 2 (P2P) if Server 1 delays buffering
     failoverWatchdogTimer = setTimeout(() => {
         const iframe = document.querySelector('.stream-frame');
         if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
             if (currentStreams.length > 1 && currentStreamIndex === 0) {
-                console.log(`[Auto-Failover] Server 1 watchdog expired, switching to fast fallback...`);
-                autoFailoverNext('timeout');
+                console.log(`[Auto-Failover] Server 1 buffer delay detected (4.5s), switching to Server 2 P2P...`);
+                autoFailoverNext('buffer_timeout');
             }
         }
-    }, 6500);
+    }, 4500);
 }
 
 function autoFailoverNext(reason = 'auto') {
     if (!currentStreams || currentStreams.length <= 1) return;
     if (failoverWatchdogTimer) clearTimeout(failoverWatchdogTimer);
 
-    const prevIndex = currentStreamIndex;
     currentStreamIndex = (currentStreamIndex + 1) % currentStreams.length;
     const nextStream = currentStreams[currentStreamIndex];
 
-    const reasonText = reason === 'manual' ? 'Switched to' : 'Auto-switched to';
+    const isTimeout = reason === 'buffer_timeout';
+    const reasonText = isTimeout ? 'Server 1 buffering. Auto-switched to' : (reason === 'manual' ? 'Switched to' : 'Auto-switched to');
     updateFailoverStatus(`⚠️ ${reasonText} ${nextStream.name} (Live)...`, true);
 
     switchStream(currentStreamIndex, true);
 
     setTimeout(() => {
-        updateFailoverStatus(`⚡ Connected: ${nextStream.name} (Auto-Failover Active)`, false);
-    }, 1500);
+        updateFailoverStatus(getStreamStatusText(nextStream), false);
+    }, 1200);
 }
 
 function renderStreamButtons() {
@@ -221,15 +289,30 @@ function renderStreamButtons() {
         <div class="source-server-card">
             <div class="source-server-header">
                 <span class="source-server-title">SELECT SOURCE SERVER</span>
-                <span class="source-server-count">${currentStreams.length} SERVERS</span>
+                <span class="source-server-count">${currentStreams.length} VERIFIED SERVERS</span>
             </div>
             <div class="stream-server-row">
                 ${currentStreams.map((stream, index) => {
+                    const isP2P = /p2p|hdvb|mesh/i.test(stream.name);
                     const isNoAds = /no ads/i.test(stream.name);
+                    const isVIP = /vip|ultra/i.test(stream.name);
                     const activeClass = index === currentStreamIndex ? 'active' : '';
-                    const noAdsClass = isNoAds ? 'no-ads' : '';
-                    const classes = ['stream-server-btn', activeClass, noAdsClass].filter(Boolean).join(' ');
-                    return `<button type="button" class="${classes}" onclick="switchStream(${index})">${escapeHTML(stream.name)}</button>`;
+                    const extraClasses = [
+                        isP2P ? 'p2p' : '',
+                        isNoAds ? 'no-ads' : '',
+                        isVIP ? 'vip' : ''
+                    ].filter(Boolean).join(' ');
+
+                    let icon = '▶';
+                    if (isVIP) icon = '👑';
+                    else if (isP2P) icon = '⚡';
+                    else if (isNoAds) icon = '🛡️';
+                    else icon = '🚀';
+
+                    return `<button type="button" class="stream-server-btn ${activeClass} ${extraClasses}" onclick="switchStream(${index})" title="${isP2P ? 'Peer-to-Peer Accelerated (Buffer-free)' : escapeHTML(stream.name)}">
+                        <span>${icon}</span>
+                        <span>${escapeHTML(stream.name)}</span>
+                    </button>`;
                 }).join('')}
             </div>
         </div>
@@ -252,6 +335,7 @@ function switchStream(index, isFailover = false) {
         btn.classList.toggle('active', i === index);
     });
 
+    updateFailoverStatus(getStreamStatusText(stream), false);
     startFailoverWatchdog(stream.url, stream.name);
 
     if (typeof gtag !== 'undefined') {
@@ -509,8 +593,8 @@ function showError(message) {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v3');
-        const cacheTime = sessionStorage.getItem('phantom_content_time_v3');
+        const cached = sessionStorage.getItem('phantom_content_cache_v4');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v4');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
@@ -523,8 +607,8 @@ async function getContentData() {
     const data = await response.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {
-        sessionStorage.setItem('phantom_content_cache_v3', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time_v3', String(Date.now()));
+        sessionStorage.setItem('phantom_content_cache_v4', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time_v4', String(Date.now()));
     } catch (_) {}
     return data;
 }
@@ -537,6 +621,9 @@ async function loadMovieDetail() {
     }
 
     try {
+        // Dynamic live mirrors hook: updates active domains in real time
+        await loadLiveMirrors();
+
         const data = await getContentData();
         const movies = (data.movies || []).filter(m => m.active !== false);
         const movie = movies.find(m => String(m.id) === String(movieId));

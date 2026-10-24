@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-10-21T09:01:48.444724+00:00",
+  "updatedAt": "2026-10-24T18:13:54.569019+00:00",
   "scrapers": {
     "hdhub4u": {
-      "active": "https://new3.hdhub4u.free",
+      "active": "https://new9.hdhub4u.cl",
       "portal": "https://hdhub4u.bi",
       "hostApi": "https://h4.suncdn.org/host/",
       "mirrors": [
-        "https://new3.hdhub4u.free",
-        "https://hdhub4u.ag",
-        "https://hdhub4u.bi",
-        "https://hdhub4u.ms"
-      ]
+        "https://new9.hdhub4u.cl",
+        "https://hdhub4u.fast"
+      ],
+      "latency_ms": 709,
+      "status": "online"
     },
     "kmmovies": {
       "active": "https://kmmovies.cam",
@@ -29,33 +29,32 @@
       "active": "https://vegamovies.pages.dev",
       "portal": "https://vegamovies.is",
       "mirrors": [
-        "https://1vegamovies.baby",
-        "https://vegamovies.pages.dev",
-        "https://vegamovies.is",
-        "https://vegamovies.yt",
-        "https://vegamovies.llc",
-        "https://1vegamovies.beer"
-      ]
+        "https://vegamovies.pages.dev"
+      ],
+      "latency_ms": 3330,
+      "status": "online"
     },
     "rogmovies": {
-      "active": "https://rogmovies.one",
+      "active": "https://rogmovies.in",
       "mirrors": [
-        "https://rogmovies.one",
-        "https://rogmovies.in",
-        "https://rogmovies.shop",
-        "https://rogmovies.click",
-        "https://rogmovies.vip"
-      ]
+        "https://rogmovies.im",
+        "https://rogmovies.in"
+      ],
+      "latency_ms": 837,
+      "status": "online"
     },
     "netmirror": {
       "active": "https://net27.cc",
       "mirrors": [
         "https://net27.cc",
-        "https://netmirror.app"
+        "https://netmirror.app",
+        "https://net79.cc"
       ],
       "nativePlayer": "https://net27.cc/native/{subjectId}?dp={detailPath}&t={title}",
       "tmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}",
-      "tvTmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}"
+      "tvTmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}",
+      "latency_ms": 0,
+      "status": "online"
     }
   },
   "streaming": {
@@ -64,7 +63,8 @@
         "id": "netmirror",
         "name": "Server 1 (VIP Ultra HD)",
         "domains": [
-          "https://net27.cc"
+          "https://net27.cc",
+          "https://net79.cc"
         ],
         "movieTemplate": "/watch-tmdb/{tmdb}",
         "tvTemplate": "/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}"
@@ -84,7 +84,8 @@
         "id": "hdmovie2",
         "name": "Server 3 (HDMovie2 - P2P HLS)",
         "domains": [
-          "https://gorri421kos.com"
+          "https://gorri421kos.com",
+          "https://slast430did.com"
         ],
         "movieTemplate": "/play/{imdb}",
         "tvTemplate": "/play/{imdb}?s={s}&e={e}"
@@ -102,8 +103,8 @@
         "id": "vidlink",
         "name": "Server 5 (VidLink - Fast HD)",
         "domains": [
-          "https://vidlink.pro",
-          "https://vidlink.online"
+          "https://vidlink.online",
+          "https://vidlink.pro"
         ],
         "movieTemplate": "/movie/{imdb}",
         "tvTemplate": "/tv/{imdb}/{s}/{e}"
