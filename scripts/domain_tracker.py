@@ -9,7 +9,6 @@ Automatically discovers, probes, tests, and updates live/active domains for:
   • RogMovies (handles .one, .in, .click redirect tracking)
   • HDMovie2 / HDVB (handles P2P streaming player gateway resolution)
   • AllMovieLand (handles link hubs and 1xcinema mirrors)
-  • NetMirror (handles net27 -> net79 CDN node rotation)
   • KMMovies (handles multi-tld mirror rotations)
 
 Updates: phantommovies_site/data/mirrors.json
@@ -138,19 +137,6 @@ TARGET_REGISTRY = {
             "https://hdmovie2.rest"
         ],
         "fingerprint": r'hdmovie2|play|stream|video'
-    },
-    "netmirror": {
-        "name": "NetMirror (VIP Ultra HD)",
-        "gateways": [
-            "https://net27.cc",
-            "https://netmirror.app"
-        ],
-        "seeds": [
-            "https://net79.cc",
-            "https://net27.cc",
-            "https://netmirror.app"
-        ],
-        "fingerprint": r'netmirror|net27|net79|watch-tmdb|embed'
     },
     "cinesrc": {
         "name": "CineSrc (No Ads)",
@@ -360,7 +346,7 @@ class DomainTracker:
             if "scrapers" not in data:
                 data["scrapers"] = {}
 
-            for key in ["hdhub4u", "vegamovies", "rogmovies", "netmirror"]:
+            for key in ["hdhub4u", "vegamovies", "rogmovies"]:
                 if key in results:
                     r = results[key]
                     if key not in data["scrapers"]:

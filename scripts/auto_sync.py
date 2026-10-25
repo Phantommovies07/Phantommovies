@@ -53,68 +53,36 @@ def format_duration(runtime_minutes: int) -> str:
     mins = runtime_minutes % 60
     return f"{hours}h {mins:02d}m"
 
-def resolve_netmirror_meta(title: str, year: int = None) -> Optional[Dict]:
-    """Queries NetMirror search catalog to retrieve subjectId, detailPath and tmdbId."""
-    if not title:
-        return None
-    try:
-        clean = re.sub(r'\s*[\(\[\{].*?[\)\]\}]', '', title).strip()
-        clean = re.split(r'[:\-–]', clean)[0].strip() or clean
-        url = f"https://net27.cc/api/catalog/search-hybrid?q={requests.utils.quote(clean)}"
-        resp = requests.get(url, headers=HEADERS, timeout=4)
-        if resp.status_code == 200:
-            data = resp.json()
-            items = data.get("items", [])
-            for it in items:
-                it_title = it.get("title", "").lower()
-                if it_title == title.lower() or it_title == clean.lower() or (year and str(it.get("year")) == str(year)):
-                    return it
-            if items:
-                return items[0]
-    except Exception:
-        pass
-    return None
-
-def generate_stream_servers(imdb_id: str, tmdb_id: str = "", netmirror_url: str = "") -> Tuple[str, List[Dict]]:
-    """Generates stealth whitelisted multi-server movie streaming embed links with NetMirror VIP and Ad-Free aggregators."""
+def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[Dict]]:
+    """Generates stealth whitelisted multi-server movie streaming embed links with AllMovieLand P2P, HDMovie2, CineSrc, and VidLink."""
     servers = []
-    if netmirror_url:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": netmirror_url})
-    elif tmdb_id:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}"})
-
     if imdb_id:
-        servers.append({"name": "Server 2 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}"})
-        servers.append({"name": "Server 3 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}"})
+        servers.append({"name": "Server 1 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}"})
+        servers.append({"name": "Server 2 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}"})
 
     if tmdb_id:
-        servers.append({"name": "Server 4 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/movie/{tmdb_id}"})
+        servers.append({"name": "Server 3 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/movie/{tmdb_id}"})
 
     if imdb_id:
-        servers.append({"name": "Server 5 (VidLink - Fast HD)", "url": f"https://vidlink.pro/movie/{imdb_id}"})
+        servers.append({"name": "Server 4 (VidLink - Fast HD)", "url": f"https://vidlink.pro/movie/{imdb_id}"})
 
     primary_url = servers[0]["url"] if servers else ""
     return primary_url, servers
 
-def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1, netmirror_url: str = "") -> List[Dict]:
+def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1) -> List[Dict]:
     """Generates stealth whitelisted multi-server TV/reality show streaming embed links."""
     s = season or 1
     e = episode or 1
     servers = []
-    if netmirror_url:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": netmirror_url})
-    elif tmdb_id:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://net27.cc/watch-tmdb/{tmdb_id}?type=tv&se={s}&ep={e}"})
-
     if imdb_id:
-        servers.append({"name": "Server 2 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}?s={s}&e={e}"})
-        servers.append({"name": "Server 3 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 1 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 2 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}?s={s}&e={e}"})
 
     if tmdb_id:
-        servers.append({"name": "Server 4 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/tv/{tmdb_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 3 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/tv/{tmdb_id}?s={s}&e={e}"})
 
     if imdb_id:
-        servers.append({"name": "Server 5 (VidLink - Fast HD)", "url": f"https://vidlink.pro/tv/{imdb_id}/{s}/{e}"})
+        servers.append({"name": "Server 4 (VidLink - Fast HD)", "url": f"https://vidlink.pro/tv/{imdb_id}/{s}/{e}"})
 
     return servers
 
@@ -915,20 +883,8 @@ def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dic
 
     imdb_id = m.get("imdb_id", "")
     tmdb_id = m.get("tmdb_id", "")
-    netmirror_url = ""
 
-    # Auto-resolve NetMirror metadata if available
-    net_meta = resolve_netmirror_meta(m.get("title", ""), m.get("year"))
-    if net_meta:
-        if not tmdb_id and net_meta.get("tmdbId"):
-            tmdb_id = str(net_meta["tmdbId"])
-        sub_id = net_meta.get("subjectId")
-        dp = net_meta.get("detailPath")
-        if sub_id and dp:
-            enc_t = requests.utils.quote(m.get("title", ""))
-            netmirror_url = f"https://net27.cc/native/{sub_id}?dp={dp}&t={enc_t}"
-
-    primary_stream, stream_servers = generate_stream_servers(imdb_id, tmdb_id, netmirror_url)
+    primary_stream, stream_servers = generate_stream_servers(imdb_id, tmdb_id)
 
     duration = format_duration(m.get("runtime", 120))
     poster = m.get("poster", "")
@@ -981,18 +937,6 @@ def format_phantom_series(meta: Dict, seasons_dict: Dict[int, Dict] = None, cate
 
     imdb_id = meta.get("imdb_id", "")
     tmdb_id = meta.get("tmdb_id", "")
-    netmirror_url = ""
-
-    # Auto-resolve NetMirror metadata for TV series
-    net_meta = resolve_netmirror_meta(meta.get("title", ""), meta.get("year"))
-    if net_meta:
-        if not tmdb_id and net_meta.get("tmdbId"):
-            tmdb_id = str(net_meta["tmdbId"])
-        sub_id = net_meta.get("subjectId")
-        dp = net_meta.get("detailPath")
-        if sub_id and dp:
-            enc_t = requests.utils.quote(meta.get("title", ""))
-            netmirror_url = f"https://net27.cc/native/{sub_id}?dp={dp}&t={enc_t}"
 
     poster = meta.get("poster", "")
     banner = meta.get("banner") or poster
@@ -1002,7 +946,7 @@ def format_phantom_series(meta: Dict, seasons_dict: Dict[int, Dict] = None, cate
     formatted_seasons = []
     for s_num in sorted(seasons_dict.keys()):
         s_data = seasons_dict[s_num]
-        s_streams = generate_tv_stream_servers(imdb_id, tmdb_id, s_num, 1, netmirror_url)
+        s_streams = generate_tv_stream_servers(imdb_id, tmdb_id, s_num, 1)
 
         formatted_episodes = []
         for ep in s_data.get("episodes", []):
@@ -1011,7 +955,7 @@ def format_phantom_series(meta: Dict, seasons_dict: Dict[int, Dict] = None, cate
                 "episodeNumber": ep_num,
                 "title": ep.get("title", f"Episode {ep_num}"),
                 "duration": ep.get("duration", "45m"),
-                "streams": generate_tv_stream_servers(imdb_id, tmdb_id, s_num, ep_num, netmirror_url),
+                "streams": generate_tv_stream_servers(imdb_id, tmdb_id, s_num, ep_num),
                 "downloads": ep.get("downloads", [])
             })
 

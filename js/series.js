@@ -67,19 +67,17 @@ function getCurrentEpisode() {
 }
 
 const SERVER_LABELS = [
-    "Server 1 (VIP Ultra HD)",
-    "Server 2 (AllMovieLand - HDVB P2P)",
-    "Server 3 (HDMovie2 - P2P HLS)",
-    "Server 4 (CineSrc - No Ads)",
-    "Server 5 (VidLink - Fast HD)"
+    "Server 1 (AllMovieLand - HDVB P2P)",
+    "Server 2 (HDMovie2 - P2P HLS)",
+    "Server 3 (CineSrc - No Ads)",
+    "Server 4 (VidLink - Fast HD)"
 ];
 
 let DEFAULT_TV_PROVIDERS = [
-    { id: "netmirror", name: "Server 1 (VIP Ultra HD)", template: "https://net79.cc/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}", requiresTmdb: true },
-    { id: "allmovieland", name: "Server 2 (AllMovieLand - HDVB P2P)", template: "https://allmovieland.link/play/{imdb}?s={s}&e={e}", requiresImdb: true },
-    { id: "hdmovie2", name: "Server 3 (HDMovie2 - P2P HLS)", template: "https://slast430did.com/play/{imdb}?s={s}&e={e}", requiresImdb: true },
-    { id: "cinesrc", name: "Server 4 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/tv/{tmdb}?s={s}&e={e}", requiresTmdb: true },
-    { id: "vidlink", name: "Server 5 (VidLink - Fast HD)", template: "https://vidlink.pro/tv/{imdb}/{s}/{e}", requiresImdb: true }
+    { id: "allmovieland", name: "Server 1 (AllMovieLand - HDVB P2P)", template: "https://allmovieland.link/play/{imdb}?s={s}&e={e}", requiresImdb: true },
+    { id: "hdmovie2", name: "Server 2 (HDMovie2 - P2P HLS)", template: "https://slast430did.com/play/{imdb}?s={s}&e={e}", requiresImdb: true },
+    { id: "cinesrc", name: "Server 3 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/tv/{tmdb}?s={s}&e={e}", requiresTmdb: true },
+    { id: "vidlink", name: "Server 4 (VidLink - Fast HD)", template: "https://vidlink.pro/tv/{imdb}/{s}/{e}", requiresImdb: true }
 ];
 
 async function loadLiveMirrors() {
@@ -129,16 +127,15 @@ function applyLiveMirrors(data) {
 
 function isAllowedStreamUrl(url) {
     if (!url) return false;
-    return /net27\.cc|net79\.cc|netmirror|slast430did\.com|allmovieland|1xcinema|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    return /slast430did\.com|allmovieland|1xcinema|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|vidlink\.online|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index) {
     if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
-    if (/net27|net79|netmirror|vip ultra hd/i.test(name)) return "Server 1 (VIP Ultra HD)";
-    if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 2 (AllMovieLand - HDVB P2P)";
-    if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 3 (HDMovie2 - P2P HLS)";
-    if (/cinesrc/i.test(name)) return "Server 4 (CineSrc - No Ads)";
-    if (/vidlink/i.test(name)) return "Server 5 (VidLink - Fast HD)";
+    if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 1 (AllMovieLand - HDVB P2P)";
+    if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 2 (HDMovie2 - P2P HLS)";
+    if (/cinesrc/i.test(name)) return "Server 3 (CineSrc - No Ads)";
+    if (/vidlink/i.test(name)) return "Server 4 (VidLink - Fast HD)";
     return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
@@ -164,12 +161,9 @@ function normalizeStreams(episode) {
 
     const streamMap = new Map();
 
-    // 1. Add valid raw custom streams with dynamic domain rewriting
+    // 1. Add valid raw custom streams
     raw.forEach(s => {
         let u = s.url.trim();
-        if (u.includes('net27.cc') && liveMirrorsConfig?.scrapers?.netmirror?.active) {
-            u = u.replace('https://net27.cc', liveMirrorsConfig.scrapers.netmirror.active);
-        }
         const label = cleanServerLabel(s.name);
         streamMap.set(label, { name: label, url: u });
     });
@@ -344,9 +338,6 @@ function getSeriesStreamStatusText(stream) {
     }
     if (/hdmovie2|mesh/i.test(stream.name)) {
         return `⚡ Active: ${escapeHTML(stream.name)} — P2P Mesh HLS Active (Low Latency)`;
-    }
-    if (/vip/i.test(stream.name)) {
-        return `👑 Active: ${escapeHTML(stream.name)} — Direct VIP CDN (Auto-Failover Active in 4.5s)`;
     }
     if (/no ads/i.test(stream.name)) {
         return `🛡️ Active: ${escapeHTML(stream.name)} — Clean Ad-Shielded Stream`;
@@ -540,17 +531,14 @@ function renderStreamButtons() {
                 ${currentStreams.map((stream, index) => {
                     const isP2P = /p2p|hdvb|mesh/i.test(stream.name);
                     const isNoAds = /no ads/i.test(stream.name);
-                    const isVIP = /vip|ultra/i.test(stream.name);
                     const activeClass = index === currentSeriesStreamIndex ? 'active' : '';
                     const extraClasses = [
                         isP2P ? 'p2p' : '',
-                        isNoAds ? 'no-ads' : '',
-                        isVIP ? 'vip' : ''
+                        isNoAds ? 'no-ads' : ''
                     ].filter(Boolean).join(' ');
 
                     let icon = '▶';
-                    if (isVIP) icon = '👑';
-                    else if (isP2P) icon = '⚡';
+                    if (isP2P) icon = '⚡';
                     else if (isNoAds) icon = '🛡️';
                     else icon = '🚀';
 

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T18:13:54.569019+00:00",
+  "updatedAt": "2026-10-25T08:24:36.180748+00:00",
   "scrapers": {
     "hdhub4u": {
       "active": "https://new9.hdhub4u.cl",
@@ -9,7 +9,7 @@
         "https://new9.hdhub4u.cl",
         "https://hdhub4u.fast"
       ],
-      "latency_ms": 709,
+      "latency_ms": 101,
       "status": "online"
     },
     "kmmovies": {
@@ -26,12 +26,14 @@
       ]
     },
     "vegamovies": {
-      "active": "https://vegamovies.pages.dev",
+      "active": "https://1vegamovies.pics",
       "portal": "https://vegamovies.is",
       "mirrors": [
-        "https://vegamovies.pages.dev"
+        "https://1vegamovies.pics",
+        "https://vegamovies.pages.dev",
+        "https://vegamovies.bar"
       ],
-      "latency_ms": 3330,
+      "latency_ms": 91,
       "status": "online"
     },
     "rogmovies": {
@@ -40,59 +42,36 @@
         "https://rogmovies.im",
         "https://rogmovies.in"
       ],
-      "latency_ms": 837,
-      "status": "online"
-    },
-    "netmirror": {
-      "active": "https://net27.cc",
-      "mirrors": [
-        "https://net27.cc",
-        "https://netmirror.app",
-        "https://net79.cc"
-      ],
-      "nativePlayer": "https://net27.cc/native/{subjectId}?dp={detailPath}&t={title}",
-      "tmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}",
-      "tvTmdbPlayer": "https://net27.cc/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}",
-      "latency_ms": 0,
+      "latency_ms": 137,
       "status": "online"
     }
   },
   "streaming": {
     "providers": [
       {
-        "id": "netmirror",
-        "name": "Server 1 (VIP Ultra HD)",
-        "domains": [
-          "https://net27.cc",
-          "https://net79.cc"
-        ],
-        "movieTemplate": "/watch-tmdb/{tmdb}",
-        "tvTemplate": "/watch-tmdb/{tmdb}?type=tv&se={s}&ep={e}"
-      },
-      {
         "id": "allmovieland",
-        "name": "Server 2 (AllMovieLand - HDVB P2P)",
+        "name": "Server 1 (AllMovieLand - HDVB P2P)",
         "domains": [
+          "https://1xcinema.net",
           "https://slast430did.com",
-          "https://allmovieland.link",
-          "https://1xcinema.net"
+          "https://allmovieland.link"
         ],
         "movieTemplate": "/play/{imdb}",
         "tvTemplate": "/play/{imdb}?s={s}&e={e}"
       },
       {
         "id": "hdmovie2",
-        "name": "Server 3 (HDMovie2 - P2P HLS)",
+        "name": "Server 2 (HDMovie2 - P2P HLS)",
         "domains": [
-          "https://gorri421kos.com",
-          "https://slast430did.com"
+          "https://slast430did.com",
+          "https://gorri421kos.com"
         ],
         "movieTemplate": "/play/{imdb}",
         "tvTemplate": "/play/{imdb}?s={s}&e={e}"
       },
       {
         "id": "cinesrc",
-        "name": "Server 4 (CineSrc - No Ads)",
+        "name": "Server 3 (CineSrc - No Ads)",
         "domains": [
           "https://cinesrc.st"
         ],
@@ -101,10 +80,10 @@
       },
       {
         "id": "vidlink",
-        "name": "Server 5 (VidLink - Fast HD)",
+        "name": "Server 4 (VidLink - Fast HD)",
         "domains": [
-          "https://vidlink.online",
-          "https://vidlink.pro"
+          "https://vidlink.pro",
+          "https://vidlink.online"
         ],
         "movieTemplate": "/movie/{imdb}",
         "tvTemplate": "/tv/{imdb}/{s}/{e}"
