@@ -2,13 +2,23 @@
 // PHANTOM MOVIES - SERIES DETAIL PAGE
 // ═══════════════════════════════════════════════════
 
-// Anti-Hijack Guard: Prevents third-party stream iframes from redirecting the main website
+// Anti-Hijack Guard: Prevents third-party stream iframes from redirecting or hijacking the main website
 window.addEventListener('beforeunload', (e) => {
     if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
         e.preventDefault();
         return (e.returnValue = '');
     }
 });
+
+// Guard against rogue popunder/popup creation on the parent window by iframe interactions
+const _originalWindowOpen = window.open;
+window.open = function(url, target, features) {
+    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        console.warn('[Anti-Hijack] Prevented unauthorized window.open from iframe');
+        return null;
+    }
+    return _originalWindowOpen.call(window, url, target, features);
+};
 
 let currentSeries = null;
 let currentSeasonIndex = 0;
@@ -39,9 +49,9 @@ function playerMarkup(url, poster = '', title = '') {
     }
 
     if (url) {
-        // Stealth Anti-Hijack Sandbox: allows full media execution, WebRTC P2P mesh, and same-origin storage
-        // Crucially omits allow-top-navigation to prevent rogue embeds from redirecting parent window or spawning unwanted popups
-        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"></iframe>`;
+        // Complete Sandbox Elimination: Removing sandbox completely resolves 'Please disable the sandbox' across all providers
+        // while the page-level Anti-Hijack Guard protects the parent window from rogue ad redirects.
+        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
     }
 
     return `<div class="stream-placeholder"><div>▶</div><p>Episode streaming link is not available.</p></div>`;
