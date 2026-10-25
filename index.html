@@ -66,19 +66,33 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero">
- <div class="hero-bg"></div>
+<section class="hero" id="heroSection">
+ <div class="hero-bg" id="heroBackdrop"></div>
+ <div class="hero-bg-overlay"></div>
  <div class="mobile-spotlight-stack" id="mobileSpotlightStack"></div>
- <div class="hero-content">
-   <div class="hero-tag">Now Streaming</div>
-   <h1>WATCH<br>WITHOUT<br><em>limits</em></h1>
-   <p class="hero-desc">Stream thousands of blockbusters, indie gems, and exclusive originals in stunning quality — anytime, anywhere.</p>
+ <div class="hero-content" id="heroContent">
+   <div class="hero-tag" id="heroTag">🔥 Now Streaming</div>
+   <h1 id="heroTitle">WATCH<br>WITHOUT<br><em>limits</em></h1>
+   <div class="hero-meta-row" id="heroMetaRow" style="display:none;">
+     <span class="meta-pill meta-rating" id="heroRating">⭐ 8.8</span>
+     <span class="meta-pill" id="heroYear">2024</span>
+     <span class="meta-pill" id="heroDuration">2h 15m</span>
+     <span class="meta-pill meta-badge" id="heroQuality">4K UHD</span>
+     <span class="meta-pill meta-badge" id="heroTorrentBadge" style="display:none;">🧲 P2P Fast</span>
+   </div>
+   <p class="hero-desc" id="heroDesc">Stream thousands of blockbusters, indie gems, and exclusive originals in stunning quality — anytime, anywhere.</p>
    <div class="hero-actions">
-     <button class="btn-primary" onclick="smoothScroll('#movies')">
+     <button class="btn-primary" id="heroPlayBtn" onclick="watchCurrentHeroSlide()">
        <span class="play-ico"></span> Start Watching
      </button>
-     <button class="btn-secondary-main" onclick="smoothScroll('#trendingSection')">Trending Now</button>
+     <button class="btn-secondary-main" id="heroDlBtn" onclick="downloadCurrentHeroSlide()">
+       <span>⬇ Fast Download / Magnet</span>
+     </button>
+     <button class="btn-secondary-main btn-icon-only" id="heroWatchlistBtn" onclick="toggleHeroWatchlist()" title="Add to Watchlist">
+       <span id="heroWatchlistIcon">🔖</span>
+     </button>
    </div>
+   <div class="hero-indicators" id="heroIndicators"></div>
    <div class="hero-stats">
      <div class="stat">
        <div class="stat-num" id="heroMoviesCount">0+</div>
@@ -130,7 +144,7 @@
 <!-- Trending Section -->
 <section id="trendingSection" class="trending-section">
  <div class="sec-header">
-   <div class="sec-title">TRENDING <span>NOW</span></div>
+   <div class="sec-title">TOP 10 <span>TRENDING NOW</span></div>
    <button class="btn-secondary-main" onclick="smoothScroll('#movies')">Browse All</button>
  </div>
  <div class="movie-grid fade-in" id="trendingGrid">
@@ -156,13 +170,32 @@
 <!-- Movies Section -->
 <section id="movies">
  <div class="sec-header">
-   <div class="sec-title">POPULAR <span>NOW</span></div>
+   <div class="sec-title">EXPLORE <span>CATALOG</span></div>
+   <div class="sort-wrap">
+     <label for="catalogSort" style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-right: 6px;">Sort By:</label>
+     <select id="catalogSort" class="catalog-sort-select" onchange="applyCatalogSort(this.value)">
+       <option value="popular">🔥 Most Popular</option>
+       <option value="rating">⭐ Highest Rated</option>
+       <option value="newest">📅 Newest Releases (2025-2026)</option>
+       <option value="title">🔤 Alphabetical (A-Z)</option>
+     </select>
+   </div>
  </div>
  
- <!-- Genre Filter -->
- <div id="categoriesBlock"></div>
+ <!-- Primary Category Tabs Bar -->
+ <div class="category-tabs-bar" id="categoryTabsBar">
+   <button class="cat-tab active" data-filter="all"><span class="cat-icon">🔥</span> All Titles</button>
+   <button class="cat-tab" data-filter="movie"><span class="cat-icon">🎬</span> Movies</button>
+   <button class="cat-tab" data-filter="series"><span class="cat-icon">📺</span> Web Series</button>
+   <button class="cat-tab" data-filter="bollywood_new"><span class="cat-icon">🇮🇳</span> Bollywood</button>
+   <button class="cat-tab" data-filter="south_new"><span class="cat-icon">⚡</span> South Indian (Hindi)</button>
+   <button class="cat-tab" data-filter="torrent"><span class="cat-icon">🧲</span> 4K Torrents (P2P)</button>
+   <button class="cat-tab" data-filter="trending"><span class="cat-icon">🌟</span> Top Trending</button>
+ </div>
+ 
+ <!-- Secondary Genre Filter -->
  <div class="genre-row" id="genreRow">
-   <div class="genre-pill active" data-genre="All">All</div>
+   <div class="genre-pill active" data-genre="All">All Genres</div>
    <div class="genre-pill" data-genre="Action">Action</div>
    <div class="genre-pill" data-genre="Sci-Fi">Sci-Fi</div>
    <div class="genre-pill" data-genre="Horror">Horror</div>

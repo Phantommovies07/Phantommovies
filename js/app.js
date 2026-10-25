@@ -248,44 +248,191 @@ function getTrendingMovies(limit = 6) {
         .slice(0, limit);
 }
 
+let heroSlidesList = [];
+let currentCategoryFilter = 'all';
+let currentGenreFilter = 'All';
+let currentSortMethod = 'popular';
+
 function renderTrending() {
     const grid = document.getElementById('trendingGrid');
     if (!grid) return;
 
-    const trending = getTrendingMovies(8);
+    const trending = getTrendingMovies(10);
     if (!trending.length) {
         grid.innerHTML = '<div class="empty-state">🔥 No trending titles yet</div>';
         return;
     }
 
-    grid.innerHTML = trending.map(m => movieCard(m, true)).join('');
+    grid.innerHTML = trending.map((m, idx) => movieCard(m, true, idx + 1)).join('');
     bindMovieCards(grid);
+}
+
+function updateHeroSpotlight(index) {
+    if (!heroSlidesList || !heroSlidesList.length) return;
+    heroSlideIndex = ((index % heroSlidesList.length) + heroSlidesList.length) % heroSlidesList.length;
+    const m = heroSlidesList[heroSlideIndex];
+    if (!m) return;
+
+    // 1. Backdrop
+    const backdrop = document.getElementById('heroBackdrop');
+    if (backdrop) {
+        const bgImg = m.banner || m.poster || '';
+        if (bgImg) {
+            backdrop.style.backgroundImage = `url("${bgImg}")`;
+            backdrop.classList.add('zoom');
+        }
+    }
+
+    // 2. Title & Tag
+    const titleEl = document.getElementById('heroTitle');
+    if (titleEl) {
+        titleEl.textContent = m.title;
+    }
+
+    const tagEl = document.getElementById('heroTag');
+    if (tagEl) {
+        if (m.type === 'series') {
+            tagEl.textContent = '📺 Featured Series';
+        } else if (m.badge) {
+            tagEl.textContent = `🔥 ${m.badge}`;
+        } else {
+            tagEl.textContent = '🔥 Spotlight Blockbuster';
+        }
+    }
+
+    // 3. Metadata row
+    const metaRow = document.getElementById('heroMetaRow');
+    if (metaRow) {
+        metaRow.style.display = 'flex';
+        const ratingEl = document.getElementById('heroRating');
+        if (ratingEl) ratingEl.textContent = `⭐ ${m.rating || '8.5'}`;
+
+        const yearEl = document.getElementById('heroYear');
+        if (yearEl) yearEl.textContent = `${m.year || '2025'}`;
+
+        const durEl = document.getElementById('heroDuration');
+        if (durEl) durEl.textContent = `${m.duration || (m.type === 'series' ? 'Web Series' : '2h 15m')}`;
+
+        const qualityEl = document.getElementById('heroQuality');
+        if (qualityEl) qualityEl.textContent = `${m.quality || m.badge || '4K UHD'}`;
+
+        const torrentEl = document.getElementById('heroTorrentBadge');
+        if (torrentEl) {
+            torrentEl.style.display = (m.torrent && m.torrent.magnet) ? 'inline-flex' : 'none';
+        }
+    }
+
+    // 4. Description
+    const descEl = document.getElementById('heroDesc');
+    if (descEl) {
+        descEl.textContent = m.description || `Stream or fast download ${m.title} in ultra-crisp 4K quality with multi-server and P2P torrent acceleration.`;
+    }
+
+    // 5. Watchlist Button Status
+    const isSaved = getWatchlist().some(x => String(x.id) === String(m.id));
+    const wlIcon = document.getElementById('heroWatchlistIcon');
+    if (wlIcon) wlIcon.textContent = isSaved ? '❤️' : '🔖';
+    const wlBtn = document.getElementById('heroWatchlistBtn');
+    if (wlBtn) wlBtn.title = isSaved ? 'Remove from Watchlist' : 'Add to Watchlist';
+
+    // 6. Dot Indicators
+    const dots = document.querySelectorAll('.hero-dot');
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === heroSlideIndex);
+    });
+
+    // 7. Right-side slider thumbnails
+    const slides = document.querySelectorAll('.hero-slide');
+    slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === heroSlideIndex);
+    });
 }
 
 function renderHeroSlider() {
     const slider = document.getElementById('heroSlider');
-    if (!slider) return;
-
     const manualSlides = allMovies.filter(m => m.heroSlide);
-    const slides = (manualSlides.length ? manualSlides : getTrendingMovies(6)).slice(0, 6);
-    if (!slides.length) {
-        slider.innerHTML = '<div class="empty-state">No trending titles yet</div>';
+    heroSlidesList = (manualSlides.length ? manualSlides : getTrendingMovies(7)).slice(0, 7);
+    if (!heroSlidesList.length) {
+        if (slider) slider.innerHTML = '<div class="empty-state">No trending titles yet</div>';
         return;
     }
 
-    slider.innerHTML = slides.map((m, index) => {
-        const banner = m.banner || m.poster || '';
-        return `<div class="hero-slide ${index === 0 ? 'active' : ''}" data-id="${m.id}" data-banner="${banner}" onclick="openMoviePageById('${m.id}')">
-            ${banner ? `<img src="${banner}" alt="${m.title}">` : '<div class="slide-fallback">🎬</div>'}
-            <div class="slide-overlay"><span>${m.type === 'series' ? 'Series' : 'Movie'}</span></div>
-        </div>`;
-    }).join('');
+    if (slider) {
+        slider.innerHTML = heroSlidesList.map((m, index) => {
+            const banner = m.banner || m.poster || '';
+            return `<div class="hero-slide ${index === 0 ? 'active' : ''}" data-id="${m.id}" data-idx="${index}" onclick="goToHeroSlide(${index})">
+                ${banner ? `<img src="${banner}" alt="${m.title}" loading="lazy">` : '<div class="slide-fallback">🎬</div>'}
+                <div class="slide-overlay"><span>${m.type === 'series' ? 'Series' : 'Movie'}</span></div>
+            </div>`;
+        }).join('');
+    }
 
+    // Indicators
+    const indContainer = document.getElementById('heroIndicators');
+    if (indContainer) {
+        indContainer.innerHTML = heroSlidesList.map((_, i) => `<div class="hero-dot ${i === 0 ? 'active' : ''}" onclick="goToHeroSlide(${i})"></div>`).join('');
+    }
+
+    updateHeroSpotlight(0);
 
     if (heroSlideTimer) clearInterval(heroSlideTimer);
-    heroSlideTimer = setInterval(() => moveHeroSlide(1), 4200);
+    heroSlideTimer = setInterval(() => moveHeroSlide(1), 5500);
 }
 
+function goToHeroSlide(index) {
+    if (heroSlideTimer) {
+        clearInterval(heroSlideTimer);
+        heroSlideTimer = setInterval(() => moveHeroSlide(1), 5500);
+    }
+    updateHeroSpotlight(index);
+}
+
+function moveHeroSlide(direction) {
+    if (!heroSlidesList || !heroSlidesList.length) return;
+    const nextIdx = (heroSlideIndex + direction + heroSlidesList.length) % heroSlidesList.length;
+    goToHeroSlide(nextIdx);
+}
+
+function watchCurrentHeroSlide() {
+    if (!heroSlidesList || !heroSlidesList[heroSlideIndex]) {
+        smoothScroll('#movies');
+        return;
+    }
+    openMoviePage(heroSlidesList[heroSlideIndex]);
+}
+
+function downloadCurrentHeroSlide() {
+    if (!heroSlidesList || !heroSlidesList[heroSlideIndex]) {
+        smoothScroll('#movies');
+        return;
+    }
+    const m = heroSlidesList[heroSlideIndex];
+    const targetUrl = (m.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(m.id) + '#downloads';
+    window.location.href = targetUrl;
+}
+
+function toggleHeroWatchlist() {
+    if (!heroSlidesList || !heroSlidesList[heroSlideIndex]) return;
+    const m = heroSlidesList[heroSlideIndex];
+    let list = getWatchlist();
+    const existingIndex = list.findIndex(x => String(x.id) === String(m.id));
+    if (existingIndex >= 0) {
+        list.splice(existingIndex, 1);
+        showToast('Removed from Watchlist');
+    } else {
+        list.unshift({
+            id: m.id,
+            title: m.title,
+            type: m.type || 'movie',
+            poster: m.poster || m.banner || '',
+            rating: m.rating || '8.5'
+        });
+        showToast('Added to Watchlist ❤️');
+    }
+    localStorage.setItem('phantom_watchlist', JSON.stringify(list));
+    renderWatchlist();
+    updateHeroSpotlight(heroSlideIndex);
+}
 
 function renderMobileSpotlight(items) {
     const stack = document.getElementById('mobileSpotlightStack');
@@ -303,15 +450,6 @@ function renderMobileSpotlight(items) {
     }).join('') + '<div class="spotlight-glow"></div>';
 }
 
-function moveHeroSlide(direction) {
-    const slides = document.querySelectorAll('.hero-slide');
-    if (!slides.length) return;
-
-    slides[heroSlideIndex]?.classList.remove('active');
-    heroSlideIndex = (heroSlideIndex + direction + slides.length) % slides.length;
-    slides[heroSlideIndex].classList.add('active');
-}
-
 function openMoviePageById(id) {
     const movie = allMovies.find(m => String(m.id) === String(id));
     if (movie) openMoviePage(movie);
@@ -321,46 +459,110 @@ function bindMovieCards(scope = document) {
     scope.querySelectorAll('.movie-card').forEach(card => {
         if (card.dataset.bound === '1') return;
         card.dataset.bound = '1';
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
             const movieId = this.dataset.id;
-            const movie = allMovies.find(x => x.id === movieId);
+            const movie = allMovies.find(x => String(x.id) === String(movieId));
             if (movie) openMoviePage(movie);
         });
+    });
+}
+
+function initCategoryTabs() {
+    const tabsBar = document.getElementById('categoryTabsBar');
+    if (!tabsBar || tabsBar.dataset.ready === '1') return;
+    tabsBar.dataset.ready = '1';
+
+    tabsBar.addEventListener('click', (e) => {
+        const tab = e.target.closest('.cat-tab');
+        if (!tab) return;
+
+        tabsBar.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        currentCategoryFilter = tab.dataset.filter || 'all';
+        applyFiltersAndSort();
+
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'category_tab_click', { filter: currentCategoryFilter });
+        }
     });
 }
 
 function renderCategoryFilters() {
     const row = document.getElementById('genreRow');
     if (!row) return;
-    const movieCount = allMovies.filter(m => m.type !== 'series').length;
-    const seriesCount = allMovies.filter(m => m.type === 'series').length;
-    const genres = [...new Set(allMovies.map(m => m.genre).filter(Boolean))].filter(g => !['Movie', 'Tv Series'].includes(g)).sort();
+
+    initCategoryTabs();
+
+    const genres = [...new Set(allMovies.map(m => m.genre).filter(Boolean))]
+        .filter(g => !['Movie', 'Tv Series'].includes(g))
+        .sort();
+
     const pills = [
-        { label: `All (${allMovies.length})`, filter: 'all' },
-        { label: `🎬 Movies (${movieCount})`, filter: 'movie' },
-        { label: `📺 Web Series (${seriesCount})`, filter: 'series' },
-        { label: '🔥 Trending', filter: 'trending' },
-        { label: '🎬 Bollywood (New)', filter: 'bollywood_new' },
-        { label: '⚡ South (New)', filter: 'south_new' },
-        { label: '🏛️ Bollywood Classics', filter: 'bollywood_classic' },
-        { label: '🏆 South Classics', filter: 'south_classic' },
+        { label: 'All Genres', genre: 'All' },
         ...genres.map(g => ({ label: g, genre: g }))
     ];
-    row.innerHTML = pills.map((p, i) => `<div class="genre-pill ${i === 0 ? 'active' : ''}" data-filter="${p.filter || ''}" data-genre="${p.genre || ''}">${p.label}</div>`).join('');
+
+    row.innerHTML = pills.map((p, i) => `
+        <div class="genre-pill ${i === 0 ? 'active' : ''}" data-genre="${p.genre}">${p.label}</div>
+    `).join('');
+}
+
+function applyCatalogSort(sortType) {
+    currentSortMethod = sortType || 'popular';
+    applyFiltersAndSort();
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'catalog_sort', { sort_method: currentSortMethod });
+    }
+}
+
+function applyFiltersAndSort() {
+    let result = [...allMovies];
+
+    // Primary Category Tab Filter
+    if (currentCategoryFilter === 'movie') {
+        result = result.filter(m => m.type !== 'series');
+    } else if (currentCategoryFilter === 'series') {
+        result = result.filter(m => m.type === 'series');
+    } else if (currentCategoryFilter === 'bollywood_new') {
+        result = result.filter(m => m.category === 'bollywood_new' || (m.industry === 'Bollywood' && (m.year >= 2022 || !m.year)) || (m.tags && m.tags.includes('bollywood_new')));
+    } else if (currentCategoryFilter === 'south_new') {
+        result = result.filter(m => m.category === 'south_new' || (m.industry === 'South' && (m.year >= 2022 || !m.year)) || (m.tags && m.tags.includes('south_new')));
+    } else if (currentCategoryFilter === 'torrent') {
+        result = result.filter(m => Boolean(m.torrent && m.torrent.magnet));
+    } else if (currentCategoryFilter === 'trending') {
+        result = getTrendingMovies(100);
+    }
+
+    // Secondary Genre Pill Filter
+    if (currentGenreFilter && currentGenreFilter !== 'All' && currentGenreFilter !== 'All Genres') {
+        result = result.filter(m => (m.genre || '').toLowerCase() === currentGenreFilter.toLowerCase());
+    }
+
+    // Sorting
+    if (currentSortMethod === 'rating') {
+        result.sort((a, b) => (Number(b.rating) || 0) - (Number(a.rating) || 0));
+    } else if (currentSortMethod === 'newest') {
+        result.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
+    } else if (currentSortMethod === 'title') {
+        result.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+    } else {
+        // 'popular' default: trend bonus + views + rating
+        result.sort((a, b) => {
+            const aTrend = (a.trending || String(a.badge || '').toUpperCase() === 'TRENDING') ? 500000 : 0;
+            const bTrend = (b.trending || String(b.badge || '').toUpperCase() === 'TRENDING') ? 500000 : 0;
+            const aScore = aTrend + Number(a.views || 0) + Number(a.rating || 0) * 100;
+            const bScore = bTrend + Number(b.views || 0) + Number(b.rating || 0) * 100;
+            return bScore - aScore;
+        });
+    }
+
+    renderMovies(result, true);
 }
 
 function filterContent(pill) {
-    const filter = pill.dataset.filter;
-    const genre = pill.dataset.genre;
-    if (filter === 'movie') return allMovies.filter(m => m.type !== 'series');
-    if (filter === 'series') return allMovies.filter(m => m.type === 'series');
-    if (filter === 'trending') return getTrendingMovies(100);
-    if (filter === 'bollywood_new') return allMovies.filter(m => m.category === 'bollywood_new' || (m.industry === 'Bollywood' && m.year >= 2022) || (m.tags && m.tags.includes('bollywood_new')));
-    if (filter === 'south_new') return allMovies.filter(m => m.category === 'south_new' || (m.industry === 'South' && m.year >= 2022) || (m.tags && m.tags.includes('south_new')));
-    if (filter === 'bollywood_classic') return allMovies.filter(m => m.category === 'bollywood_classic' || (m.industry === 'Bollywood' && m.year < 2022) || (m.tags && m.tags.includes('bollywood_classic')));
-    if (filter === 'south_classic') return allMovies.filter(m => m.category === 'south_classic' || (m.industry === 'South' && m.year < 2022) || (m.tags && m.tags.includes('south_classic')));
-    if (genre) return allMovies.filter(m => m.genre === genre);
-    return allMovies;
+    applyFiltersAndSort();
+    return currentFilteredMovies;
 }
 
 function setupRequestButton() {
@@ -474,7 +676,7 @@ function setupScrollObserver(sentinel) {
 }
 
 // ─── MOVIE CARD TEMPLATE ───
-function movieCard(m, forceTrendingBadge = false) {
+function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
     const badgeText = forceTrendingBadge ? 'TRENDING' : m.badge;
     const badge = badgeText ? `<div class="m-badge">${badgeText}</div>` : '';
     const img = m.poster && m.poster.trim() !== '' 
@@ -483,17 +685,25 @@ function movieCard(m, forceTrendingBadge = false) {
     
     const isDual = (m.title && /dual|hindi/i.test(m.title)) || (m.tags && /dual|hindi/i.test(m.tags.join(' '))) || (m.industry === 'Bollywood' || m.industry === 'South');
     const is4K = (m.badge && /4k/i.test(m.badge)) || (m.title && /4k|2160p/i.test(m.title)) || (Array.isArray(m.downloads) && m.downloads.some(d => /4k|2160p/i.test(d.quality || '')));
+    const hasTorrent = Boolean(m.torrent && m.torrent.magnet);
     const ratingTag = m.rating ? `<div class="card-pill-rating">⭐ ${m.rating}</div>` : '';
 
     const pills = [];
     if (is4K) pills.push('<span class="card-pill card-pill-4k">4K UHD</span>');
+    if (hasTorrent) pills.push('<span class="card-pill card-pill-torrent">🧲 Torrent</span>');
     if (isDual) pills.push('<span class="card-pill card-pill-dual">Dual Audio</span>');
 
     const pillStack = pills.length ? `<div class="card-pill-stack">${pills.join('')}</div>` : '';
+    const rankEl = rankNumber ? `<div class="trending-rank-number">${rankNumber}</div>` : '';
 
     return `<div class="movie-card" data-id="${m.id}">
+        ${rankEl}
         <div class="movie-poster">
             <div class="poster-ph">${img}</div>
+            <div class="card-hover-overlay">
+                <div class="card-play-btn"><span class="play-ico"></span></div>
+                <span class="card-quick-stream">${m.type === 'series' ? 'Watch Series' : 'Stream Now'}</span>
+            </div>
             ${badge}
             ${ratingTag}
             ${pillStack}
@@ -509,22 +719,24 @@ function movieCard(m, forceTrendingBadge = false) {
 document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle();
     initSearchToggle();
+    initCategoryTabs();
     const genreRow = document.getElementById('genreRow');
     
-    if (genreRow) {
+    if (genreRow && genreRow.dataset.ready !== '1') {
+        genreRow.dataset.ready = '1';
         genreRow.addEventListener('click', function(e) {
             const pill = e.target.closest('.genre-pill');
             if (!pill) return;
             
-            document.querySelectorAll('.genre-pill').forEach(p => p.classList.remove('active'));
+            genreRow.querySelectorAll('.genre-pill').forEach(p => p.classList.remove('active'));
             pill.classList.add('active');
 
-            const filtered = filterContent(pill);
-            renderMovies(filtered);
+            currentGenreFilter = pill.dataset.genre || 'All';
+            applyFiltersAndSort();
 
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'content_filter', {
-                    'filter': pill.dataset.filter || pill.dataset.genre || 'all'
+                gtag('event', 'genre_filter', {
+                    'genre': currentGenreFilter
                 });
             }
         });
