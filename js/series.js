@@ -580,7 +580,7 @@ function renderEpisodeDownloads() {
         return;
     }
 
-    grid.innerHTML = downloads.map((item, index) => {
+    let cards = downloads.map((item, index) => {
         const quality = item.quality || item.label || `Option ${index + 1}`;
         const server = item.server || 'Fast Cloud';
         const size = item.size || '';
@@ -597,7 +597,26 @@ function renderEpisodeDownloads() {
             </div>
             <em>Download ⬇</em>
         </a>`;
-    }).join('');
+    });
+
+    if (currentSeries?.torrent && currentSeries.torrent.magnet) {
+        const t = currentSeries.torrent;
+        const seedersText = t.seeders ? `${t.seeders} Seeders Active` : 'High Speed P2P';
+        const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
+        const sNum = currentSeasonIndex + 1;
+        const targetUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=4K/1080p&size=${encodeURIComponent(t.size || '')}&ep=${epNum}&s=${sNum}&type=series`;
+        cards.push(`
+            <a class="download-card" href="${targetUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:#8b5cf6; border-color:rgba(139,92,246,0.4); background:linear-gradient(135deg, rgba(139,92,246,0.15), rgba(99,102,241,0.08));">
+                <div>
+                    <strong>🧲 Direct Torrent & Magnet (4K / 1080p)</strong>
+                    <span>${escapeHTML([t.size, seedersText, 'P2P Instant Client'].filter(Boolean).join(' • '))}</span>
+                </div>
+                <em>Magnet 🧲</em>
+            </a>
+        `);
+    }
+
+    grid.innerHTML = cards.join('');
 
     grid.querySelectorAll('.download-card').forEach(link => {
         link.addEventListener('click', (event) => {

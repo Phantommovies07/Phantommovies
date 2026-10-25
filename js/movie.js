@@ -390,39 +390,38 @@ function sanitizeDownloadUrl(url, movie, quality, size) {
 
 function normalizeDownloads(movie) {
     if (!movie) return [];
+    let pool = [];
     if (Array.isArray(movie.downloads) && movie.downloads.length) {
-        const valid = movie.downloads
-            .filter(item => item && item.url && isValidDownloadUrl(item.url))
-            .map(item => ({
-                ...item,
-                url: item.url
-            }));
-        if (valid.length) return valid;
-    }
-    if (Array.isArray(movie.seasons) && movie.seasons.length) {
+        pool = movie.downloads;
+    } else if (Array.isArray(movie.seasons) && movie.seasons.length) {
         for (const s of movie.seasons) {
             if (Array.isArray(s.downloads) && s.downloads.length) {
-                const valid = s.downloads
-                    .filter(item => item && item.url && isValidDownloadUrl(item.url))
-                    .map(item => ({
-                        ...item,
-                        url: item.url
-                    }));
-                if (valid.length) return valid;
+                pool = s.downloads;
+                break;
             }
         }
     }
-    return [];
+
+    const seen = new Set();
+    const valid = [];
+    for (const item of pool) {
+        if (!item || !item.url || !isValidDownloadUrl(item.url)) continue;
+        const qKey = (item.quality || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (seen.has(qKey)) continue;
+        seen.add(qKey);
+        valid.push({ ...item, url: item.url });
+    }
+    return valid;
 }
 
 function renderDownloads(movie) {
     const downloads = normalizeDownloads(movie);
 
-    if (!downloads.length) {
+    if (!downloads.length && !movie.torrent) {
         return `<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct cloud download links are currently refreshing for this title.<br><span style="color: #2dce89; font-weight:600;">Please use the HD streaming servers above to watch online instantly without waiting.</span></div>`;
     }
 
-    return downloads.map((item, index) => {
+    let cards = downloads.map((item, index) => {
         const quality = item.quality || item.label || `Option ${index + 1}`;
         const server = item.server || 'Fast Cloud';
         const size = item.size || '';
@@ -436,7 +435,24 @@ function renderDownloads(movie) {
             </div>
             <em>Download ⬇</em>
         </a>`;
-    }).join('');
+    });
+
+    if (movie.torrent && movie.torrent.magnet) {
+        const t = movie.torrent;
+        const seedersText = t.seeders ? `${t.seeders} Seeders Active` : 'High Speed P2P';
+        const magnetDlLink = `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=4K/1080p&size=${encodeURIComponent(t.size || '')}`;
+        cards.push(`
+            <a class="download-card" href="${magnetDlLink}" target="_blank" rel="noopener noreferrer" data-quality="Torrent/Magnet" style="--download-color:#8b5cf6; border-color:rgba(139,92,246,0.4); background:linear-gradient(135deg, rgba(139,92,246,0.15), rgba(99,102,241,0.08));">
+                <div>
+                    <strong>🧲 Direct Torrent & Magnet (4K / 1080p)</strong>
+                    <span>${escapeHTML([t.size, seedersText, 'P2P Instant Client'].filter(Boolean).join(' • '))}</span>
+                </div>
+                <em>Magnet 🧲</em>
+            </a>
+        `);
+    }
+
+    return cards.join('');
 }
 
 function renderMovie(movie) {

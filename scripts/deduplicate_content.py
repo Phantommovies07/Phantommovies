@@ -2,7 +2,12 @@ import json
 from collections import defaultdict
 import re
 
-CONTENT_FILE = 'phantommovies_site/data/content.json'
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONTENT_FILE = os.path.join(BASE_DIR, '..', 'data', 'content.json')
+if not os.path.exists(CONTENT_FILE):
+    CONTENT_FILE = os.path.join('phantommovies_site', 'data', 'content.json')
 
 print(f"Loading {CONTENT_FILE}...")
 with open(CONTENT_FILE, 'r', encoding='utf-8') as f:

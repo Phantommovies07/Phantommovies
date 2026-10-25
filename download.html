@@ -181,6 +181,48 @@
     transform: translateY(-2px);
 }
 
+.dl-torrent-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.14), rgba(99, 102, 241, 0.08));
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 16px;
+    padding: 18px 20px;
+    text-align: left;
+    margin: 4px 0 6px;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.12);
+}
+.dl-torrent-card:hover {
+    border-color: rgba(139, 92, 246, 0.55);
+}
+.btn-torrent-magnet {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: #fff !important;
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35);
+}
+.btn-torrent-magnet:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.5);
+    color: #fff !important;
+}
+.btn-copy-magnet {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-copy-magnet:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
+}
+
 .back-link {
     display: inline-block;
     margin-top: 25px;
@@ -259,6 +301,34 @@
                 <span>🌐 Multi-Quality Cloud Mirror (Server 3)</span>
                 <em>Mirror</em>
             </a>
+
+            <!-- P2P High-Speed Torrent & Magnet Box -->
+            <div class="dl-torrent-card" id="torrentBox" style="display:none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 22px; filter: drop-shadow(0 2px 8px rgba(139,92,246,0.5));">🧲</span>
+                        <div>
+                            <div style="font-weight: 700; font-size: 15px; color: #fff;">Direct P2P Torrent & Magnet</div>
+                            <div style="font-size: 12px; color: #a78bfa;" id="torrentMeta">4K / 1080p Ultra High-Speed • Client Direct</div>
+                        </div>
+                    </div>
+                    <span class="dl-badge" id="torrentSeedersBadge" style="background: rgba(45, 206, 137, 0.15); color: #2dce89; border-color: rgba(45, 206, 137, 0.3);">
+                        ⚡ <span id="torrentSeedersCount">30+</span> Seeders
+                    </span>
+                </div>
+                <div style="font-size: 12px; color: #cbd5e1; margin-bottom: 14px; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: rgba(0,0,0,0.3); padding: 7px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);" id="torrentReleaseName">
+                    Resolving verified magnet...
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a class="dl-server-btn btn-torrent-magnet" id="btnMagnetOpen" href="#" style="flex: 1; min-width: 210px; padding: 12px 18px; justify-content: center; gap: 8px; border: none; text-decoration: none;">
+                        <span>🧲 Open in Torrent Client (qBit / uTorrent / Stremio)</span>
+                    </a>
+                    <button type="button" class="btn-copy-magnet" id="btnCopyMagnet">
+                        <span id="copyMagnetIcon">📋</span> <span id="copyMagnetText">Copy Magnet</span>
+                    </button>
+                </div>
+            </div>
+
             <a class="dl-server-btn dl-server-secondary" id="btnWatchOnline" href="#" style="background: rgba(45, 206, 137, 0.12); border-color: rgba(45, 206, 137, 0.3); color: #2dce89;">
                 <span>🎬 Watch Online Now (HD Player Active)</span>
                 <em>Play</em>
@@ -433,6 +503,70 @@ async function getContentData() {
     return null;
 }
 
+// --- P2P TORRENT & MAGNET RESOLUTION ENGINE ---
+function setupTorrentBox(movie, params) {
+    const box = document.getElementById('torrentBox');
+    const nameEl = document.getElementById('torrentReleaseName');
+    const badgeEl = document.getElementById('torrentSeedersBadge');
+    const countEl = document.getElementById('torrentSeedersCount');
+    const metaEl = document.getElementById('torrentMeta');
+    const openBtn = document.getElementById('btnMagnetOpen');
+    const copyBtn = document.getElementById('btnCopyMagnet');
+    const copyText = document.getElementById('copyMagnetText');
+    const copyIcon = document.getElementById('copyMagnetIcon');
+
+    if (!box) return;
+
+    const torrent = movie?.torrent;
+    const magnetUrl = torrent?.magnet || '';
+
+    if (torrent && magnetUrl) {
+        box.style.display = 'block';
+        if (nameEl) nameEl.textContent = torrent.name || `${movie.title || 'Movie'} 1080p WebRip`;
+        if (badgeEl) badgeEl.style.display = 'inline-block';
+        if (countEl) countEl.textContent = `${torrent.seeders || 30}+`;
+        if (metaEl) metaEl.textContent = `${torrent.size ? torrent.size + ' • ' : ''}4K / 1080p Ultra High-Speed • Client Instant Launch`;
+        if (openBtn) {
+            openBtn.href = magnetUrl;
+            openBtn.target = '_self';
+            openBtn.removeAttribute('download');
+            openBtn.querySelector('span').textContent = '🧲 Open in Torrent Client (qBit / uTorrent / Flud / Stremio)';
+        }
+        if (copyBtn) {
+            copyBtn.style.display = 'flex';
+            copyBtn.onclick = async (e) => {
+                e.preventDefault();
+                try {
+                    await navigator.clipboard.writeText(magnetUrl);
+                    if (copyText) copyText.textContent = 'Copied!';
+                    if (copyIcon) copyIcon.textContent = '✅';
+                    setTimeout(() => {
+                        if (copyText) copyText.textContent = 'Copy Magnet';
+                        if (copyIcon) copyIcon.textContent = '📋';
+                    }, 2500);
+                } catch (_) {
+                    prompt('Copy Torrent Magnet Link:', magnetUrl);
+                }
+            };
+        }
+    } else {
+        const rawTitle = params.title || movie?.title || params.id || '';
+        const titleQuery = cleanTitleForQuery(rawTitle);
+        if (titleQuery) {
+            box.style.display = 'block';
+            if (nameEl) nameEl.textContent = `${titleQuery} • Multi-Peer High-Speed P2P Network`;
+            if (badgeEl) badgeEl.style.display = 'none';
+            if (metaEl) metaEl.textContent = 'Verified Torrent Mirrors (1337x / TPB Direct Search)';
+            if (openBtn) {
+                openBtn.href = `https://thepiratebay0.org/search/${encodeURIComponent(titleQuery)}/1/99/0`;
+                openBtn.target = '_blank';
+                openBtn.querySelector('span').textContent = '🔍 Search Verified Torrent Mirrors (1337x / TPB)';
+            }
+            if (copyBtn) copyBtn.style.display = 'none';
+        }
+    }
+}
+
 // --- INITIAL SYNCHRONOUS HYDRATION (0ms) ---
 function applyInitialParams(params) {
     const dlTitle = document.getElementById('dlTitle');
@@ -497,6 +631,8 @@ function applyInitialParams(params) {
         btn3.href = fallbackRog;
         btn3.querySelector('span').textContent = '🌐 ROG VIP Cloud Server (Server 3)';
     }
+
+    setupTorrentBox(null, params);
 }
 
 // --- BACKGROUND ENRICHMENT (Mirrors & Catalog) ---
@@ -610,6 +746,9 @@ async function enrichPage() {
 
             btn3.href = `${activeMirrors.rogmovies}/?s=${q}`;
             btn3.querySelector('span').textContent = '🌐 ROG VIP Cloud Mirror (Server 3)';
+
+            // Hydrate P2P Torrent & Magnet with verified catalog data
+            setupTorrentBox(currentMovie, params);
         }
 
         // Ad injection

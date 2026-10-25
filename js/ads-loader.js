@@ -81,9 +81,9 @@
   const _origOpen = window.open;
   window.open = function(url, target, features) {
     if (!url || typeof url !== 'string') return null;
-    const clean = url.toLowerCase();
-    // Allow internal site links and valid cloud file hosts
-    if (clean.includes(window.location.hostname) || 
+    // Allow internal site links, magnet protocol, and valid cloud file hosts
+    if (clean.startsWith('magnet:') ||
+        clean.includes(window.location.hostname) || 
         clean.includes('download.html') || 
         clean.includes('hubcdn') || 
         clean.includes('hubdrive') || 
