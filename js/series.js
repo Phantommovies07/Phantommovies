@@ -12,7 +12,7 @@ window.addEventListener('beforeunload', (e) => {
 
 // Guard against rogue popunder/popup creation on the parent window by iframe interactions
 const _originalWindowOpen = window.open;
-window.open = function(url, target, features) {
+window.open = function (url, target, features) {
     if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
         console.warn('[Anti-Hijack] Prevented unauthorized window.open from iframe');
         return null;
@@ -95,7 +95,7 @@ async function loadLiveMirrors() {
             applyLiveMirrors(liveMirrorsConfig);
             return;
         }
-    } catch (_) {}
+    } catch (_) { }
 
     try {
         const resp = await fetch('data/mirrors.json?v=' + Date.now());
@@ -205,14 +205,14 @@ function generateFallbackSeriesDownloads(series, seasonNum = 1) {
 function isStreamingUrl(url) {
     if (!url || typeof url !== 'string') return false;
     const lower = url.toLowerCase();
-    return lower.includes('embed') || 
-           lower.includes('stream') || 
-           lower.includes('vidsrc') || 
-           lower.includes('autoembed') || 
-           lower.includes('multiembed') || 
-           lower.includes('smashystream') || 
-           lower.includes('player.') || 
-           lower.includes('2embed');
+    return lower.includes('embed') ||
+        lower.includes('stream') ||
+        lower.includes('vidsrc') ||
+        lower.includes('autoembed') ||
+        lower.includes('multiembed') ||
+        lower.includes('smashystream') ||
+        lower.includes('player.') ||
+        lower.includes('2embed');
 }
 
 function isValidDownloadUrl(url) {
@@ -529,24 +529,24 @@ function renderStreamButtons() {
             </div>
             <div class="stream-server-row">
                 ${currentStreams.map((stream, index) => {
-                    const isP2P = /p2p|hdvb|mesh/i.test(stream.name);
-                    const isNoAds = /no ads/i.test(stream.name);
-                    const activeClass = index === currentSeriesStreamIndex ? 'active' : '';
-                    const extraClasses = [
-                        isP2P ? 'p2p' : '',
-                        isNoAds ? 'no-ads' : ''
-                    ].filter(Boolean).join(' ');
+        const isP2P = /p2p|hdvb|mesh/i.test(stream.name);
+        const isNoAds = /no ads/i.test(stream.name);
+        const activeClass = index === currentSeriesStreamIndex ? 'active' : '';
+        const extraClasses = [
+            isP2P ? 'p2p' : '',
+            isNoAds ? 'no-ads' : ''
+        ].filter(Boolean).join(' ');
 
-                    let icon = '▶';
-                    if (isP2P) icon = '⚡';
-                    else if (isNoAds) icon = '🛡️';
-                    else icon = '🚀';
+        let icon = '▶';
+        if (isP2P) icon = '⚡';
+        else if (isNoAds) icon = '🛡️';
+        else icon = '🚀';
 
-                    return `<button type="button" class="stream-server-btn ${activeClass} ${extraClasses}" onclick="switchSeriesStream(${index})" title="${isP2P ? 'Peer-to-Peer Accelerated (Buffer-free)' : escapeHTML(stream.name)}">
+        return `<button type="button" class="stream-server-btn ${activeClass} ${extraClasses}" onclick="switchSeriesStream(${index})" title="${isP2P ? 'Peer-to-Peer Accelerated (Buffer-free)' : escapeHTML(stream.name)}">
                         <span>${icon}</span>
                         <span>${escapeHTML(stream.name)}</span>
                     </button>`;
-                }).join('')}
+    }).join('')}
             </div>
         </div>
     `;
@@ -588,7 +588,7 @@ function renderEpisodeDownloads() {
         const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
         const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
         const sNum = currentSeasonIndex + 1;
-        const targetUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series`;
+        const targetUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series`;
 
         return `<a class="download-card" href="${targetUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:${escapeHTML(color)}">
             <div>
@@ -625,7 +625,7 @@ async function getContentData() {
             window.PHANTOM_CONTENT_CACHE = parsed;
             return parsed;
         }
-    } catch (_) {}
+    } catch (_) { }
 
     const response = await fetch('data/content.json?v=' + Date.now());
     if (!response.ok) throw new Error('Failed to load content.json');
@@ -634,7 +634,7 @@ async function getContentData() {
     try {
         sessionStorage.setItem('phantom_content_cache_v4', JSON.stringify(data));
         sessionStorage.setItem('phantom_content_time_v4', String(Date.now()));
-    } catch (_) {}
+    } catch (_) { }
     return data;
 }
 
@@ -823,14 +823,14 @@ function trackSeriesProgress(series, seasonNum, epNum) {
             timestamp: Date.now()
         });
         localStorage.setItem('phantom_continue_watching', JSON.stringify(list.slice(0, 15)));
-    } catch (_) {}
+    } catch (_) { }
 }
 
 function markEpisodeWatched(seriesId, seasonNum, epNum) {
     if (!seriesId) return;
     try {
         localStorage.setItem(`phantom_watched_${seriesId}_s${seasonNum}_e${epNum}`, 'true');
-    } catch (_) {}
+    } catch (_) { }
 }
 
 function isEpisodeWatched(seriesId, seasonNum, epNum) {
@@ -868,7 +868,7 @@ function toggleWatchlist() {
             showToast('Saved to Watchlist! ❤️');
         }
         localStorage.setItem('phantom_watchlist', JSON.stringify(list.slice(0, 30)));
-    } catch (_) {}
+    } catch (_) { }
 }
 
 function updateWatchlistButtonState() {
@@ -882,5 +882,5 @@ function updateWatchlistButtonState() {
         if (btn) btn.classList.toggle('active', exists);
         if (icon) icon.textContent = exists ? '❤️' : '🤍';
         if (text) text.textContent = exists ? 'In Watchlist' : 'Add to Watchlist';
-    } catch (_) {}
+    } catch (_) { }
 }

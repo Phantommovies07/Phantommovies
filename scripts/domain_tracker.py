@@ -90,9 +90,9 @@ TARGET_REGISTRY = {
             "https://hdhub4u.ms"
         ],
         "seeds": [
+            "https://new9.hdhub4u.cl",
             "https://new8.hdhub4u.cl",
             "https://hdhub4u.fans",
-            "https://new3.hdhub4u.free",
             "https://hdhub4u.bi"
         ],
         "fingerprint": r'hdhub4u'

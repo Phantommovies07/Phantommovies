@@ -98,6 +98,14 @@
         clean.includes('hdm2') ||
         clean.includes('hdhub4u') ||
         clean.includes('rogmovies') ||
+        clean.includes('vegamovies') ||
+        clean.includes('fastdrive') ||
+        clean.includes('mega.nz') ||
+        clean.includes('mediafire') ||
+        clean.includes('pixeldrain') ||
+        clean.includes('dropgalaxy') ||
+        clean.includes('katdrive') ||
+        clean.includes('suncdn') ||
         clean.includes('greenmotors') ||
         clean.includes('slast430did') ||
         clean.includes('allmovieland') ||

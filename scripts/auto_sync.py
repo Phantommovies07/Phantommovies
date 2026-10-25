@@ -600,7 +600,7 @@ class MirrorEngine:
 
     def get_active_hdhub4u(self) -> str:
         hd_cfg = self.mirrors_data.get("scrapers", {}).get("hdhub4u", {})
-        active = hd_cfg.get("active", "https://new3.hdhub4u.free")
+        active = hd_cfg.get("active", "https://new9.hdhub4u.cl")
         # Try dynamic host resolver first
         try:
             r = requests.get("https://h4.suncdn.org/host/", headers=HEADERS, timeout=4)
@@ -618,7 +618,7 @@ class MirrorEngine:
         if self._active_rog:
             return self._active_rog
         rog_cfg = self.mirrors_data.get("scrapers", {}).get("rogmovies", {})
-        active = rog_cfg.get("active", "https://rogmovies.one")
+        active = rog_cfg.get("active", "https://rogmovies.in")
         mirrors = rog_cfg.get("mirrors", [active])
         candidates = [active] + [m for m in mirrors if m != active]
         for c in candidates:

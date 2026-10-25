@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T08:24:36.180748+00:00",
+  "updatedAt": "2026-10-25T08:43:46.432924+00:00",
   "scrapers": {
     "hdhub4u": {
       "active": "https://new9.hdhub4u.cl",
@@ -9,7 +9,7 @@
         "https://new9.hdhub4u.cl",
         "https://hdhub4u.fast"
       ],
-      "latency_ms": 101,
+      "latency_ms": 103,
       "status": "online"
     },
     "kmmovies": {
@@ -26,23 +26,23 @@
       ]
     },
     "vegamovies": {
-      "active": "https://1vegamovies.pics",
+      "active": "https://vegamovies.pages.dev",
       "portal": "https://vegamovies.is",
       "mirrors": [
         "https://1vegamovies.pics",
         "https://vegamovies.pages.dev",
         "https://vegamovies.bar"
       ],
-      "latency_ms": 91,
+      "latency_ms": 117,
       "status": "online"
     },
     "rogmovies": {
-      "active": "https://rogmovies.in",
+      "active": "https://rogmovies.im",
       "mirrors": [
         "https://rogmovies.im",
         "https://rogmovies.in"
       ],
-      "latency_ms": 137,
+      "latency_ms": 172,
       "status": "online"
     }
   },

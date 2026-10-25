@@ -348,10 +348,13 @@ function switchStream(index, isFailover = false) {
 function generateFallbackDownloads(movie) {
     const cleanT = (movie?.title || '').replace(/[:\-–—\(\)\d]/g, ' ').trim();
     const qTitle = encodeURIComponent(cleanT || movie?.title || '');
+    const hdhubDomain = liveMirrorsConfig?.scrapers?.hdhub4u?.active || 'https://new9.hdhub4u.cl';
+    const rogDomain = liveMirrorsConfig?.scrapers?.rogmovies?.active || 'https://rogmovies.in';
+    const vegaDomain = liveMirrorsConfig?.scrapers?.vegamovies?.active || 'https://1vegamovies.pics';
     return [
-        { quality: '480p SD', size: '450 MB', server: 'HDHub4u Cloud Engine', url: `https://new3.hdhub4u.free/?s=${qTitle}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'ROG Fast Cloud Mirror', url: `https://rogmovies.one/?s=${qTitle}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Direct Cloud Server', url: `https://new3.hdhub4u.free/?s=${qTitle}`, color: '#10b981' },
+        { quality: '480p SD', size: '450 MB', server: 'HDHub4u Cloud Engine', url: `${hdhubDomain}/?s=${qTitle}`, color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'VegaMovies Fast Cloud', url: `${vegaDomain}/?s=${qTitle}`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'ROG VIP Cloud Server', url: `${rogDomain}/?s=${qTitle}`, color: '#10b981' },
         { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD 4K Cloud', url: `https://4khdhub.one`, color: '#ec4899' }
     ];
 }
@@ -425,7 +428,7 @@ function renderDownloads(movie) {
         const size = item.size || '';
         const color = item.color || '#5bc4f5';
         const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
-        const dlLink = `download.html?id=${encodeURIComponent(movie.id)}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}`;
+        const dlLink = `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}`;
         return `<a class="download-card" href="${dlLink}" target="_blank" rel="noopener noreferrer" data-quality="${escapeHTML(quality)}" style="--download-color:${escapeHTML(color)}">
             <div>
                 <strong>${escapeHTML(quality)}</strong>

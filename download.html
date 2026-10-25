@@ -249,11 +249,15 @@
         <div class="links-container" id="linksContainer">
             <a class="dl-server-btn dl-server-primary" id="btnServer1" href="#" target="_blank" rel="noopener noreferrer">
                 <span>🚀 Fast Cloud Server 1 (Instant Download)</span>
-                <em>Download</em>
+                <em>10 Gbps</em>
             </a>
             <a class="dl-server-btn dl-server-secondary" id="btnServer2" href="#" target="_blank" rel="noopener noreferrer">
-                <span>⚡ High Speed Mirror (Server 2)</span>
+                <span>⚡ High Speed Cloud Mirror (Server 2)</span>
                 <em>Direct</em>
+            </a>
+            <a class="dl-server-btn dl-server-secondary" id="btnServer3" href="#" target="_blank" rel="noopener noreferrer" style="border-color: rgba(255, 215, 15, 0.35); color: #ffd70f; background: rgba(255, 215, 15, 0.08);">
+                <span>🌐 Multi-Quality Cloud Mirror (Server 3)</span>
+                <em>Mirror</em>
             </a>
             <a class="dl-server-btn dl-server-secondary" id="btnWatchOnline" href="#" style="background: rgba(45, 206, 137, 0.12); border-color: rgba(45, 206, 137, 0.3); color: #2dce89;">
                 <span>🎬 Watch Online Now (HD Player Active)</span>
@@ -269,40 +273,41 @@
 </div>
 
 <script>
+// --- GLOBAL ACTIVE MIRRORS & STATE ---
 let currentMovie = null;
+let activeMirrors = {
+    hdhub4u: 'https://new9.hdhub4u.cl',
+    vegamovies: 'https://1vegamovies.pics',
+    rogmovies: 'https://rogmovies.in'
+};
 
 function getParams() {
     const p = new URLSearchParams(window.location.search);
     return {
-        id: p.get('id'),
+        id: p.get('id') || '',
         quality: p.get('quality') || '720p',
         size: p.get('size') || '',
         url: p.get('url') || '',
+        title: p.get('title') || '',
+        poster: p.get('poster') || '',
         ep: p.get('ep') || '',
         s: p.get('s') || '',
         type: p.get('type') || ''
     };
 }
 
-async function getContentData() {
-    try {
-        const res = await fetch('data/content.json?v=' + Date.now());
-        const data = await res.json();
-        sessionStorage.setItem('phantom_content_cache_v3', JSON.stringify(data));
-        return data;
-    } catch (_) {
-        const cached = sessionStorage.getItem('phantom_content_cache_v3');
-        if (cached) return JSON.parse(cached);
-        const res = await fetch('data/content.json');
-        return await res.json();
-    }
+function cleanTitleForQuery(rawTitle) {
+    if (!rawTitle) return '';
+    return rawTitle
+        .replace(/[:\-–—\(\)\[\]\d]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
 }
 
 function isStreamingUrl(url) {
     if (!url || typeof url !== 'string') return true;
     const lower = url.toLowerCase();
     return lower.includes('embed') || 
-           lower.includes('stream') || 
            lower.includes('vidsrc') || 
            lower.includes('multiembed') || 
            lower.includes('autoembed') || 
@@ -318,24 +323,209 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
-    if (clean.includes('kmmovies.') || clean.includes('vegamovies.')) return false;
-    if (clean.includes('magiclinks.lol/download/')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
 }
 
-async function initDownloadPage() {
-    const params = getParams();
-    if (!params.id && !params.url) {
-        document.getElementById('dlTitle').textContent = 'Invalid Download Link';
-        return;
+// --- BULLETPROOF COUNTDOWN & UNLOCK ENGINE ---
+let countdownSeconds = 3;
+let linksRevealed = false;
+let countdownInterval = null;
+
+function revealDownloadLinks() {
+    if (linksRevealed) return;
+    linksRevealed = true;
+    if (countdownInterval) clearInterval(countdownInterval);
+
+    const timerBox = document.getElementById('timerBox');
+    const linksContainer = document.getElementById('linksContainer');
+    const countEl = document.getElementById('countdownNum');
+    const fillEl = document.getElementById('progressFill');
+
+    if (countEl) countEl.textContent = '0';
+    if (fillEl) fillEl.style.width = '100%';
+    if (timerBox) timerBox.style.display = 'none';
+    if (linksContainer) {
+        linksContainer.style.display = 'flex';
+        linksContainer.style.opacity = '1';
+    }
+}
+
+function startCountdownTimer() {
+    const countEl = document.getElementById('countdownNum');
+    const fillEl = document.getElementById('progressFill');
+    const skipBtn = document.getElementById('skipTimerBtn');
+
+    if (skipBtn) {
+        skipBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            revealDownloadLinks();
+        });
     }
 
+    if (fillEl) fillEl.style.width = '33%';
+
+    countdownInterval = setInterval(() => {
+        countdownSeconds--;
+        if (countEl) countEl.textContent = Math.max(0, countdownSeconds);
+        if (fillEl) fillEl.style.width = Math.min(100, (4 - countdownSeconds) * 33.3) + '%';
+
+        if (countdownSeconds <= 0) {
+            clearInterval(countdownInterval);
+            revealDownloadLinks();
+        }
+    }, 1000);
+
+    // Watchdog: Unconditionally guarantee reveal within 3.2 seconds max
+    setTimeout(() => {
+        revealDownloadLinks();
+    }, 3200);
+}
+
+// --- DATA ACCESS HELPERS ---
+async function fetchMirrorsConfig() {
+    if (window.PHANTOM_MIRRORS_CACHE) return window.PHANTOM_MIRRORS_CACHE;
     try {
-        const data = await getContentData();
-        const movies = data.movies || [];
-        currentMovie = movies.find(m => String(m.id) === String(params.id));
-        const settings = data.settings || {};
+        const cached = sessionStorage.getItem('phantom_mirrors_cache_v2');
+        if (cached) {
+            const parsed = JSON.parse(cached);
+            window.PHANTOM_MIRRORS_CACHE = parsed;
+            return parsed;
+        }
+    } catch (_) {}
+
+    try {
+        const res = await fetch('data/mirrors.json?v=' + Date.now());
+        if (res.ok) {
+            const data = await res.json();
+            window.PHANTOM_MIRRORS_CACHE = data;
+            sessionStorage.setItem('phantom_mirrors_cache_v2', JSON.stringify(data));
+            return data;
+        }
+    } catch (e) {
+        console.warn('[Mirrors] Falling back to default mirrors:', e);
+    }
+    return null;
+}
+
+async function getContentData() {
+    if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
+    try {
+        const cached = sessionStorage.getItem('phantom_content_cache');
+        if (cached) {
+            const parsed = JSON.parse(cached);
+            window.PHANTOM_CONTENT_CACHE = parsed;
+            return parsed;
+        }
+    } catch (_) {}
+
+    try {
+        const res = await fetch('data/content.json');
+        if (res.ok) {
+            const data = await res.json();
+            window.PHANTOM_CONTENT_CACHE = data;
+            sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
+            return data;
+        }
+    } catch (e) {
+        console.warn('[Content] Fetch failed:', e);
+    }
+    return null;
+}
+
+// --- INITIAL SYNCHRONOUS HYDRATION (0ms) ---
+function applyInitialParams(params) {
+    const dlTitle = document.getElementById('dlTitle');
+    const dlPoster = document.getElementById('dlPoster');
+    const dlQuality = document.getElementById('dlQualityBadge');
+    const dlSize = document.getElementById('dlSizeBadge');
+    const backBtn = document.getElementById('backToMovie');
+
+    let initialTitle = params.title || '';
+    if (params.type === 'series') {
+        const sText = params.s ? `S0${params.s}` : 'S01';
+        const epText = params.ep ? `EP ${params.ep}` : '';
+        if (initialTitle) initialTitle = `${initialTitle} (${[sText, epText].filter(Boolean).join(' ')})`.trim();
+    }
+
+    if (initialTitle) {
+        dlTitle.textContent = initialTitle;
+        document.title = `Download ${initialTitle} (${(params.quality || 'HD').toUpperCase()}) - Phantom Movies`;
+    } else {
+        dlTitle.textContent = 'Preparing High-Speed Download...';
+    }
+
+    if (params.poster) {
+        dlPoster.src = params.poster;
+        dlPoster.style.display = 'block';
+    }
+
+    if (dlQuality) dlQuality.textContent = (params.quality || 'HD').toUpperCase();
+    if (dlSize) dlSize.textContent = params.size || '⚡ 10 Gbps Cloud';
+
+    const watchUrl = (params.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(params.id || '');
+    const btnWatch = document.getElementById('btnWatchOnline');
+    if (btnWatch) btnWatch.href = watchUrl;
+    if (backBtn) {
+        backBtn.href = watchUrl;
+        backBtn.textContent = (params.type === 'series') ? '← Return to Series Episodes' : '← Return to Movie Details';
+    }
+
+    const btn1 = document.getElementById('btnServer1');
+    const btn2 = document.getElementById('btnServer2');
+    const btn3 = document.getElementById('btnServer3');
+
+    const rawSearch = cleanTitleForQuery(params.title || params.id || '');
+    const q = encodeURIComponent(rawSearch || params.title || '');
+
+    const fallbackHdhub = `${activeMirrors.hdhub4u}/?s=${q}`;
+    const fallbackVega = `${activeMirrors.vegamovies}/?s=${q}`;
+    const fallbackRog = `${activeMirrors.rogmovies}/?s=${q}`;
+
+    if (isValidDownloadUrl(params.url)) {
+        btn1.href = params.url;
+        btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${(params.quality || 'HD').toUpperCase()})`;
+        btn2.href = fallbackVega;
+        btn2.querySelector('span').textContent = '⚡ VegaMovies Cloud Mirror (Server 2)';
+        btn3.href = fallbackHdhub;
+        btn3.querySelector('span').textContent = '🌐 HDHub4u Multi-Quality Mirror (Server 3)';
+    } else {
+        btn1.href = fallbackHdhub;
+        btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (HDHub4u Cloud)';
+        btn2.href = fallbackVega;
+        btn2.querySelector('span').textContent = '⚡ VegaMovies Cloud Mirror (Server 2)';
+        btn3.href = fallbackRog;
+        btn3.querySelector('span').textContent = '🌐 ROG VIP Cloud Server (Server 3)';
+    }
+}
+
+// --- BACKGROUND ENRICHMENT (Mirrors & Catalog) ---
+async function enrichPage() {
+    const params = getParams();
+
+    // 1. Sync live mirror domains
+    try {
+        const mirrorsData = await fetchMirrorsConfig();
+        if (mirrorsData?.scrapers) {
+            if (mirrorsData.scrapers.hdhub4u?.active) activeMirrors.hdhub4u = mirrorsData.scrapers.hdhub4u.active;
+            if (mirrorsData.scrapers.vegamovies?.active) activeMirrors.vegamovies = mirrorsData.scrapers.vegamovies.active;
+            if (mirrorsData.scrapers.rogmovies?.active) activeMirrors.rogmovies = mirrorsData.scrapers.rogmovies.active;
+        }
+    } catch (_) {}
+
+    // 2. Fetch catalog details
+    try {
+        const catalogData = await getContentData();
+        const movies = catalogData?.movies || [];
+        const settings = catalogData?.settings || {};
+
+        if (params.id) {
+            currentMovie = movies.find(m => String(m.id) === String(params.id));
+        }
+        if (!currentMovie && params.title) {
+            const lowT = params.title.toLowerCase().trim();
+            currentMovie = movies.find(m => (m.title || '').toLowerCase().trim() === lowT);
+        }
 
         if (currentMovie) {
             let displayTitle = currentMovie.title;
@@ -344,41 +534,25 @@ async function initDownloadPage() {
                 const sText = params.s ? `S0${params.s}` : 'S01';
                 displayTitle = `${currentMovie.title} (${[sText, epText].filter(Boolean).join(' ')})`.trim();
             }
+
+            const dlTitle = document.getElementById('dlTitle');
+            if (dlTitle) dlTitle.textContent = displayTitle;
             document.title = `Download ${displayTitle} (${(params.quality || 'HD').toUpperCase()}) - Phantom Movies`;
-            document.getElementById('dlTitle').textContent = displayTitle;
+
             const poster = currentMovie.poster || currentMovie.banner;
-            if (poster) {
-                const posterEl = document.getElementById('dlPoster');
-                posterEl.src = poster;
-                posterEl.style.display = 'block';
+            const dlPoster = document.getElementById('dlPoster');
+            if (poster && dlPoster) {
+                dlPoster.src = poster;
+                dlPoster.style.display = 'block';
             }
-            document.getElementById('dlQualityBadge').textContent = (params.quality || 'HD').toUpperCase();
-            document.getElementById('dlSizeBadge').textContent = params.size || 'Direct High Speed';
+
             const backBtn = document.getElementById('backToMovie');
             if (backBtn) {
                 backBtn.href = (currentMovie.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie.id);
                 backBtn.textContent = (currentMovie.type === 'series') ? '← Return to Series Episodes' : '← Return to Movie Details';
             }
-        }
 
-        // Ads injection
-        const ads = settings.ads;
-        if (ads && ads.enabled !== false) {
-            const topSlot = document.getElementById('ad-download-top');
-            if (topSlot && ads.movieDownloads) topSlot.innerHTML = ads.movieDownloads;
-            const btmSlot = document.getElementById('ad-download-bottom');
-            if (btmSlot && ads.movieBottom) btmSlot.innerHTML = ads.movieBottom;
-        }
-
-        // Determine destination URLs (STRICTLY NO STREAMING EMBEDS OR EXTERNAL COMPETITOR REDIRECTS)
-        let targetDownloadUrl = null;
-        let mirrorDownloadUrl = null;
-
-        if (isValidDownloadUrl(params.url)) {
-            targetDownloadUrl = params.url;
-        }
-
-        if (currentMovie) {
+            // Gather all direct download links from this movie/series
             let pool = [];
             if (Array.isArray(currentMovie.downloads)) {
                 pool.push(...currentMovie.downloads);
@@ -395,125 +569,67 @@ async function initDownloadPage() {
             }
 
             const validPool = pool.filter(d => d && isValidDownloadUrl(d.url));
-            if (!targetDownloadUrl && validPool.length > 0) {
-                const match = validPool.find(d => d.quality && d.quality.toLowerCase().includes((params.quality || '').toLowerCase()));
-                if (match) {
-                    targetDownloadUrl = match.url;
-                    const second = validPool.find(d => d.url !== targetDownloadUrl);
-                    if (second) mirrorDownloadUrl = second.url;
-                } else {
-                    targetDownloadUrl = validPool[0].url;
-                    if (validPool.length > 1) mirrorDownloadUrl = validPool[1].url;
-                }
-            } else if (targetDownloadUrl && validPool.length > 0) {
-                const second = validPool.find(d => d.url !== targetDownloadUrl);
-                if (second) mirrorDownloadUrl = second.url;
+            const btn1 = document.getElementById('btnServer1');
+            const btn2 = document.getElementById('btnServer2');
+            const btn3 = document.getElementById('btnServer3');
+
+            const cleanT = cleanTitleForQuery(currentMovie.title);
+            const q = encodeURIComponent(cleanT || currentMovie.title);
+
+            let primaryUrl = isValidDownloadUrl(params.url) ? params.url : null;
+            let secondaryUrl = null;
+
+            if (!primaryUrl && validPool.length > 0) {
+                const match = validPool.find(d => (d.quality || '').toLowerCase().includes((params.quality || '').toLowerCase()));
+                primaryUrl = match ? match.url : validPool[0].url;
             }
-        }
 
-        // GUARANTEED DOWNLOAD OPTION FOR ALL MOVIES
-        if (!targetDownloadUrl && currentMovie) {
-            const cleanTitle = (currentMovie.title || '').replace(/[:\-–—\(\)\d]/g, ' ').trim();
-            const q = encodeURIComponent(cleanTitle || currentMovie.title || '');
-            targetDownloadUrl = `https://new3.hdhub4u.free/?s=${q}`;
-            mirrorDownloadUrl = `https://rogmovies.one/?s=${q}`;
-        }
+            if (validPool.length > 0) {
+                const secondMatch = validPool.find(d => d.url !== primaryUrl);
+                if (secondMatch) secondaryUrl = secondMatch.url;
+            }
 
-        const watchUrl = (currentMovie?.type === 'series' ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(currentMovie ? currentMovie.id : (params.id || ''));
-
-        const btn1 = document.getElementById('btnServer1');
-        const btn2 = document.getElementById('btnServer2');
-        const btnWatch = document.getElementById('btnWatchOnline');
-        const btn1Span = btn1 ? btn1.querySelector('span') : null;
-        const btn2Span = btn2 ? btn2.querySelector('span') : null;
-
-        const noNotice = document.getElementById('noDlNotice');
-        if (noNotice) noNotice.style.display = 'none';
-
-        if (targetDownloadUrl) {
-            btn1.href = targetDownloadUrl;
-            const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks|allmovieland|slast430did/i.test(targetDownloadUrl);
-            if (btn1Span) btn1Span.textContent = isDirect1 ? '🚀 Fast Cloud Server 1 (Direct Download)' : '🚀 Fast Cloud Server 1 (Instant Download)';
-            btn1.style.display = 'flex';
-
-            if (mirrorDownloadUrl) {
-                btn2.href = mirrorDownloadUrl;
-                const isDirect2 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks|allmovieland|slast430did/i.test(mirrorDownloadUrl);
-                if (btn2Span) btn2Span.textContent = isDirect2 ? '⚡ High Speed Mirror (Server 2 Direct)' : '⚡ High Speed Mirror (Fast Cloud Mirror)';
-                btn2.style.display = 'flex';
+            if (primaryUrl) {
+                btn1.href = primaryUrl;
+                const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks|allmovieland|slast430did/i.test(primaryUrl);
+                btn1.querySelector('span').textContent = isDirect1 ? 
+                    `🚀 Fast Cloud Server 1 (Direct Download - ${(params.quality || 'HD').toUpperCase()})` : 
+                    `🚀 Fast Cloud Server 1 (Instant Download)`;
             } else {
-                btn2.style.display = 'none';
+                btn1.href = `${activeMirrors.hdhub4u}/?s=${q}`;
+                btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (HDHub4u Cloud)';
             }
 
-            if (btnWatch) {
-                btnWatch.href = watchUrl;
-                btnWatch.style.display = 'flex';
+            if (secondaryUrl) {
+                btn2.href = secondaryUrl;
+                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2 Direct)';
+            } else {
+                btn2.href = `${activeMirrors.vegamovies}/?s=${q}`;
+                btn2.querySelector('span').textContent = '⚡ VegaMovies Cloud Mirror (Server 2)';
             }
-            pageDataReady = true;
-            tryRevealDownloadLinks();
-        } else {
-            if (noNotice) {
-                const noticeWatch = document.getElementById('noticeWatchBtn');
-                if (noticeWatch) noticeWatch.href = watchUrl;
-                noNotice.style.display = 'block';
-            }
-            const timerBox = document.getElementById('timerBox');
-            if (timerBox) timerBox.style.display = 'none';
+
+            btn3.href = `${activeMirrors.rogmovies}/?s=${q}`;
+            btn3.querySelector('span').textContent = '🌐 ROG VIP Cloud Mirror (Server 3)';
+        }
+
+        // Ad injection
+        const ads = settings.ads;
+        if (ads && ads.enabled !== false) {
+            const topSlot = document.getElementById('ad-download-top');
+            if (topSlot && ads.movieDownloads) topSlot.innerHTML = ads.movieDownloads;
+            const btmSlot = document.getElementById('ad-download-bottom');
+            if (btmSlot && ads.movieBottom) btmSlot.innerHTML = ads.movieBottom;
         }
     } catch (err) {
-        console.error(err);
-        const dlTitle = document.getElementById('dlTitle');
-        if (dlTitle) dlTitle.textContent = 'Download Server Ready';
-        pageDataReady = true;
-        tryRevealDownloadLinks();
+        console.warn('[Download Enrich Error]', err);
     }
 }
 
-let countdownFinished = false;
-let pageDataReady = false;
-
-function tryRevealDownloadLinks() {
-    if (!countdownFinished || !pageDataReady) return;
-    const timerBox = document.getElementById('timerBox');
-    const linksContainer = document.getElementById('linksContainer');
-    if (timerBox) timerBox.style.display = 'none';
-    if (linksContainer) linksContainer.style.display = 'flex';
-}
-
-function startCountdownTimer() {
-    let seconds = 3;
-    const countEl = document.getElementById('countdownNum');
-    const fillEl = document.getElementById('progressFill');
-    const skipBtn = document.getElementById('skipTimerBtn');
-
-    if (skipBtn) {
-        skipBtn.addEventListener('click', () => {
-            seconds = 0;
-            if (countEl) countEl.textContent = '0';
-            if (fillEl) fillEl.style.width = '100%';
-            countdownFinished = true;
-            tryRevealDownloadLinks();
-        });
-    }
-
-    if (fillEl) fillEl.style.width = '33%';
-
-    const timer = setInterval(() => {
-        seconds--;
-        if (countEl) countEl.textContent = Math.max(0, seconds);
-        if (fillEl) fillEl.style.width = Math.min(100, (4 - seconds) * 33) + '%';
-
-        if (seconds <= 0) {
-            clearInterval(timer);
-            countdownFinished = true;
-            tryRevealDownloadLinks();
-        }
-    }, 1000);
-}
-
-// Start countdown immediately for instant user feedback
+// --- BOOTSTRAP ---
+const initialParams = getParams();
+applyInitialParams(initialParams);
 startCountdownTimer();
-initDownloadPage();
+enrichPage();
 </script>
 </body>
 </html>
