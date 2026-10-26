@@ -1,6 +1,228 @@
 {
   "movies": [
     {
+      "id": "1793037638809",
+      "type": "movie",
+      "title": "Doosra",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDdiNzY2YTEtMzEwYS00MWM3LWEwODYtNzljZTFhMmY1ODY0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDdiNzY2YTEtMzEwYS00MWM3LWEwODYtNzljZTFhMmY1ODY0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt9123066",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt9123066"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt9123066"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt9123066"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "340MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmx5Qk56S1l4eFV4YzZtSjljNUYySGxxclhINWtyelNkanVnZUExSFhzeUE9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "435MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjF1cHNNUjUrODk4UTZ5ZjFrU0xpNFJRUU9jVm5NUFhFWm9XOHgyZ2ptZFE9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "710MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRSOTIxN1BWTitVbTVLa2dueDZ3ditYWml5VDBpODZ6azBEK1NPMU1FWmc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Doosra+2026+trailer",
+      "description": "Doosra (2026) starring Plabita Borthakur, Ankur Vikal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18578,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt9123066",
+      "tmdb_id": "",
+      "createdAt": "2026-10-26T18:00:30.070819+00:00",
+      "updatedAt": "2026-10-26T18:00:30.070819+00:00"
+    },
+    {
+      "id": "1793037637376",
+      "type": "movie",
+      "title": "Tu Hai Meri Kiran",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjY0MWI4NzctYjUxZS00MDM3LTkwZGMtZWY0N2IzYjc5NzA0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjY0MWI4NzctYjUxZS00MDM3LTkwZGMtZWY0N2IzYjc5NzA0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt33321821",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt33321821"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt33321821"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt33321821"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "390MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QllqNUN0WjZKVHdQa1JKdFJtVEMxcTh2OEpWeE9Wdzh6N2wwZzk3ODVKTGM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "727MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjFxdVhJTzlGUTd0UnplcWxMNmEwMUlkbkFYV0g0MU0zejVDY2VBUHVwMDQ9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRGR3N3bndVZm8rRGE3czcrNHU1Q0w0TlpuWkpBeHBsVk9uUm5FR1p6dVE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Tu+Hai+Meri+Kiran+2026+trailer",
+      "description": "Tu Hai Meri Kiran (2026) starring Sonakshi Sinha, Zaheer Iqbal.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9891,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt33321821",
+      "tmdb_id": "",
+      "createdAt": "2026-10-26T18:00:29.340108+00:00",
+      "updatedAt": "2026-10-26T18:00:29.340108+00:00"
+    },
+    {
+      "id": "1793037632053",
+      "type": "movie",
+      "title": "Tum Mere Ho",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjg0MTZjNmUtNzBjZi00Zjk2LWE0MGItZWIwODJmODY3NTQ3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjg0MTZjNmUtNzBjZi00Zjk2LWE0MGItZWIwODJmODY3NTQ3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt46083105",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt46083105"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt46083105"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt46083105"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlF1QmRUSkxUNzJqemhJQi9KZ0FhZFBjcjJac1dpQi9LZ2VvTmpPOW9GTGs9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "738MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm5rWkdzdDZ3aGRYQjNIbkhMQXplREJsSFp3N3ZWWEVQSzlLY3BuUjVxYVU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qi9tZHVBTVRMVlBwdnNuRFpCN3lWYTJIK3lZYlUyWkJteEdraTZnUjg4RGc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Tum+Mere+Ho+2026+trailer",
+      "description": "Tum Mere Ho (2026) starring Gurmeet Choudhary, Isha Malviya.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24237,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt46083105",
+      "tmdb_id": "",
+      "createdAt": "2026-10-26T18:00:29.084579+00:00",
+      "updatedAt": "2026-10-26T18:00:29.084579+00:00"
+    },
+    {
       "id": "1793007140573",
       "type": "movie",
       "title": "Cocoons",
@@ -51370,8 +51592,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 482,
-    "lastUpdated": "2026-10-26T09:32:37.972154+00:00",
+    "totalMovies": 485,
+    "lastUpdated": "2026-10-26T18:00:51.107996+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -51404,6 +51626,6 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 117,
-    "totalTitles": 599
+    "totalTitles": 602
   }
 }
