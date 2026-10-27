@@ -1,6 +1,309 @@
 {
   "movies": [
     {
+      "id": "1793093356318",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QllyOUlhT0J0VlBmQVQ4ME5xTk4rZlZBdDdEYWtSK2VqRllxL3NGbTIwVjg9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjZEVzFVOFF5THlwcW1RWkdMTEdsZU1BcEVNWTRRd1lzcUFrTEJ3WlhCeFk9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qi8xOWRJWWE4WDhDVStSeGlBUG4yaDlCdXl2blVMNUJFY2tCQS9DT29YN289",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s02-2160p-hdr/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20537,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T09:29:13.327979+00:00",
+      "updatedAt": "2026-10-27T09:29:13.327979+00:00"
+    },
+    {
+      "id": "1793093354065",
+      "type": "movie",
+      "title": "Verity",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt32261958",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt32261958"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt32261958"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt32261958"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "265740 MB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/24354184177-2/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2655.10 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/1762140-2/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "26513.25 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/9650317713-2/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Verity+2026+trailer",
+      "description": "Verity (2026) starring Anne Hathaway, Dakota Johnson.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18870,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32261958",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T09:29:11.759410+00:00",
+      "updatedAt": "2026-10-27T09:29:11.759410+00:00"
+    },
+    {
+      "id": "1793093354967",
+      "type": "movie",
+      "title": "Forgotten Island",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt36583977",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt36583977"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt36583977"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt36583977"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "500MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776122129/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847767104/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm7847767106/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "500MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776122130/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Forgotten+Island+2026+trailer",
+      "description": "Forgotten Island (2026) starring H.E.R., Liza Soberano.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16671,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36583977",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T09:29:11.223241+00:00",
+      "updatedAt": "2026-10-27T09:29:11.223241+00:00"
+    },
+    {
       "id": "1793037638809",
       "type": "movie",
       "title": "Doosra",
@@ -51592,8 +51895,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 485,
-    "lastUpdated": "2026-10-26T18:00:51.107996+00:00",
+    "totalMovies": 487,
+    "lastUpdated": "2026-10-27T09:29:41.227668+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -51625,7 +51928,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 117,
-    "totalTitles": 602
+    "totalSeries": 118,
+    "totalTitles": 605
   }
 }
