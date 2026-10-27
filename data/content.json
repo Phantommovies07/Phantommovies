@@ -1,6 +1,422 @@
 {
   "movies": [
     {
+      "id": "1793120903122",
+      "type": "movie",
+      "title": "Jeepers Creepers",
+      "genre": "Feature",
+      "year": 2001,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTkwNDU0NTE0OV5BMl5BanBnXkFtZTgwNzAzNzQyMTI@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTkwNDU0NTE0OV5BMl5BanBnXkFtZTgwNzAzNzQyMTI@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt0263488",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0263488"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0263488"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0263488"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "9.87 GB",
+          "server": "Fast Cloud Mirror",
+          "url": "https://w3.magiclinks.lol/478624683318507-2/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Jeepers+Creepers+2001+trailer",
+      "description": "Jeepers Creepers (2001) starring Gina Philips, Justin Long.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7139,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0263488",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T17:08:19.698067+00:00",
+      "updatedAt": "2026-10-27T17:08:19.698067+00:00"
+    },
+    {
+      "id": "1793120901531",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZZeE5hMmsrVXdZUFRpWEZIKzIxdThYWHMrRWVGekhLREJkR1lkUWs3aTQ9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4.9GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1894669605",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkxlL2c4OUxCdzNPYUZCT0FLbkpUZlp1M1VMbEJELytROGRGajFaVnlHTTQ9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s02-2160p-hdr/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21661,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T17:08:19.244156+00:00",
+      "updatedAt": "2026-10-27T17:08:19.244156+00:00"
+    },
+    {
+      "id": "1793120907827",
+      "type": "movie",
+      "title": "Peak Everything",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzMzMmRmMDUtZDk0ZS00ZmQ2LWFhODItM2ZiY2JiMTRhZmMxXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzMzMmRmMDUtZDk0ZS00ZmQ2LWFhODItM2ZiY2JiMTRhZmMxXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt33335204",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt33335204"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt33335204"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt33335204"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477634125/",
+          "color": "#ffd70f"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Peak+Everything+2025+trailer",
+      "description": "Peak Everything (2025) starring Patrick Hivon, Élizabeth Mageren.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16235,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt33335204",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T17:08:18.303860+00:00",
+      "updatedAt": "2026-10-27T17:08:18.303860+00:00"
+    },
+    {
+      "id": "1793120898505",
+      "type": "movie",
+      "title": "The Dark Knight",
+      "genre": "Feature",
+      "year": 2008,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt0468569",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0468569"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0468569"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0468569"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488844/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488845/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488847/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "3.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488846/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Dark+Knight+2008+trailer",
+      "description": "The Dark Knight (2008) starring Christian Bale, Heath Ledger.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7409,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0468569",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T17:08:17.995697+00:00",
+      "updatedAt": "2026-10-27T17:08:17.995697+00:00"
+    },
+    {
+      "id": "1793120904813",
+      "type": "movie",
+      "title": "The Dark Knight Rises",
+      "genre": "Feature",
+      "year": 2012,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt1345836",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt1345836"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt1345836"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt1345836"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488844/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488845/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488847/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "3.7GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776488846/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Dark+Knight+Rises+2012+trailer",
+      "description": "The Dark Knight Rises (2012) starring Christian Bale, Tom Hardy.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22909,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1345836",
+      "tmdb_id": "",
+      "createdAt": "2026-10-27T17:08:17.574046+00:00",
+      "updatedAt": "2026-10-27T17:08:17.574046+00:00"
+    },
+    {
       "id": "1793093356318",
       "type": "series",
       "title": "The Punisher",
@@ -192,24 +608,31 @@
       ],
       "downloads": [
         {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/DfK0fHFcwshWnT2pjKP70Dxmf",
+          "color": "#ffd70f"
+        },
+        {
           "quality": "720p HD",
-          "size": "265740 MB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/24354184177-2/",
+          "size": "910MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2270868297",
           "color": "#06b6d4"
         },
         {
           "quality": "1080p Full HD",
-          "size": "2655.10 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/1762140-2/",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjhCWWJtZjhDWm9pOTBkdlJJM2Y4VC9UY1ltOVRDTVBMZ2JuNkxpaEF4L009",
           "color": "#10b981"
         },
         {
           "quality": "4K Ultra HD",
-          "size": "26513.25 GB",
-          "server": "Fast Cloud Mirror",
-          "url": "https://w3.magiclinks.lol/9650317713-2/",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
           "color": "#8b5cf6"
         }
       ],
@@ -51895,8 +52318,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 487,
-    "lastUpdated": "2026-10-27T09:29:41.227668+00:00",
+    "totalMovies": 491,
+    "lastUpdated": "2026-10-27T17:08:46.567511+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -51928,7 +52351,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 118,
-    "totalTitles": 605
+    "totalSeries": 119,
+    "totalTitles": 610
   }
 }
