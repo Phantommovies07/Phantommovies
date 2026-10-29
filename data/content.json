@@ -1,6 +1,510 @@
 {
   "movies": [
     {
+      "id": "1793296278105",
+      "type": "movie",
+      "title": "Mum, I'm Alien Pregnant",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjdhZGQ2ZGItOTI1MC00YjQ0LTliOTMtNTVlM2ViMzdiOTQ0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjdhZGQ2ZGItOTI1MC00YjQ0LTliOTMtNTVlM2ViMzdiOTQ0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt28784376",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt28784376"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt28784376"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt28784376"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "700MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477658017/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477658016/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477658043/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "700MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm78477658048/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mum,+I'm+Alien+Pregnant+2026+trailer",
+      "description": "Mum, I'm Alien Pregnant (2026) starring Hannah Lynch, Yvette Parsons.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11198,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28784376",
+      "tmdb_id": "",
+      "createdAt": "2026-10-29T17:51:14.130148+00:00",
+      "updatedAt": "2026-10-29T17:51:14.130148+00:00"
+    },
+    {
+      "id": "1793296282530",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZZeE5hMmsrVXdZUFRpWEZIKzIxdThYWHMrRWVGekhLREJkR1lkUWs3aTQ9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4.9GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1894669605",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkxlL2c4OUxCdzNPYUZCT0FLbkpUZlp1M1VMbEJELytROGRGajFaVnlHTTQ9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s02-2160p-hdr/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23707,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-29T17:51:13.381719+00:00",
+      "updatedAt": "2026-10-29T17:51:13.381719+00:00"
+    },
+    {
+      "id": "1793296273070",
+      "type": "movie",
+      "title": "Baadshah",
+      "genre": "Feature",
+      "year": 1999,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmQyOWI2YWYtNTE0OC00YzE3LTllZWYtMGI0YTY4YmE3MzU4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZmQyOWI2YWYtNTE0OC00YzE3LTllZWYtMGI0YTY4YmE3MzU4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt0211934",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt0211934"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt0211934"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt0211934"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "600MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776193091/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776193092/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776193093/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Baadshah+1999+trailer",
+      "description": "Baadshah (1999) starring Shah Rukh Khan, Twinkle Khanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15021,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0211934",
+      "tmdb_id": "",
+      "createdAt": "2026-10-29T17:51:12.488556+00:00",
+      "updatedAt": "2026-10-29T17:51:12.488556+00:00"
+    },
+    {
+      "id": "1793296276659",
+      "type": "series",
+      "title": "Hostel Haadsa",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "",
+      "banner": "",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "570MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qnd5THZTRjVleWxHUWtvU0YwNmpSdHFIZVZsNldwNTBNZWJLYTlULzU3YU09",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qlhpa3d3U0J3NFRIYlNHcDFiRkZPZ2t2YmYya2kxbDg5UGU2Q0xUdHNsTEk9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmw5K05pZ1Z1eGo1a0tzT3RkTm9oSlJvalJOQUpxTzV5bGxaWVh3bDl0QlE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt50286925?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt50286925?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt50286925/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://one.kmcloud.lol/s/XTF4KxQE",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud",
+              "url": "https://one.kmcloud.lol/s/R0DeODNA",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 8,
+          "title": "Season 8",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt50286925?s=8&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt50286925?s=8&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt50286925/8/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "808.1MB",
+              "server": "Fast Cloud",
+              "url": "https://one.kmcloud.lol/s/Mq3is8i5",
+              "color": "#ffd70f"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Hostel+Haadsa+2026+trailer",
+      "description": "Hostel Haadsa (2026) starring Sukirti Kandpal, Vineet Raina.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24284,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt50286925",
+      "tmdb_id": "",
+      "createdAt": "2026-10-29T17:51:11.483311+00:00",
+      "updatedAt": "2026-10-29T17:51:11.483311+00:00"
+    },
+    {
+      "id": "1793296273285",
+      "type": "movie",
+      "title": "Immortal",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjZhZjI4MGQtOWNlNC00MTFhLWFhNWQtYzY5ZTEyZGNiZWE3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjZhZjI4MGQtOWNlNC00MTFhLWFhNWQtYzY5ZTEyZGNiZWE3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt36931126",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt36931126"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt36931126"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt36931126"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "510MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1946306254",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "820MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2289927532",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmROLzBRbGVpZFlDU0pwaHAyNXFUVmtyWEt6dWlIKzJDSXZmU05wTTgwaG89",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Immortal+2026+trailer",
+      "description": "Immortal (2026) starring Kayadu Lohar, G.V. Prakash Kumar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10981,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36931126",
+      "tmdb_id": "",
+      "createdAt": "2026-10-29T17:51:11.165468+00:00",
+      "updatedAt": "2026-10-29T17:51:11.165468+00:00"
+    },
+    {
       "id": "1793270225754",
       "type": "series",
       "title": "The Punisher",
@@ -54736,8 +55240,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 497,
-    "lastUpdated": "2026-10-29T10:37:25.691464+00:00",
+    "totalMovies": 500,
+    "lastUpdated": "2026-10-29T17:51:35.121882+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -54769,7 +55273,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 133,
-    "totalTitles": 630
+    "totalSeries": 135,
+    "totalTitles": 635
   }
 }
