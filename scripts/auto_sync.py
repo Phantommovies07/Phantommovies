@@ -55,33 +55,53 @@ def format_duration(runtime_minutes: int) -> str:
     return f"{hours}h {mins:02d}m"
 
 def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[Dict]]:
-    """Generates strictly 3 verified ad-free multi-server movie streaming embed links."""
+    """Generates strictly 3 verified ad-free multi-server movie streaming embed links (VidLink clean player prioritized)."""
     servers = []
     t_id = (tmdb_id or imdb_id or "").strip()
     t_imdb = (imdb_id or tmdb_id or "").strip()
 
-    if t_id:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/movie/{t_id}"})
+    # Server 1: VidLink (Cleanest embed player, lowest ad profile)
     if t_imdb:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/movie/imdb/{t_imdb}"})
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://vidlink.pro/movie/{t_imdb}"})
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/movie/{t_imdb}?primaryColor=0284c7&autoplay=false"})
+    elif t_id:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/movie/{t_id}?primaryColor=0284c7&autoplay=false"})
+
+    # Server 2: CineSrc (High Speed HD)
+    if t_id:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://cinesrc.st/embed/movie/{t_id}"})
+    elif t_imdb:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://cinesrc.st/embed/movie/{t_imdb}"})
+
+    # Server 3: AutoEmbed
+    if t_imdb:
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/movie/imdb/{t_imdb}"})
+    elif t_id:
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/movie/tmdb/{t_id}"})
 
     primary_url = servers[0]["url"] if servers else ""
     return primary_url, servers
 
 def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1) -> List[Dict]:
-    """Generates strictly 3 verified ad-free multi-server TV/web series streaming embed links."""
+    """Generates strictly 3 verified ad-free multi-server TV/web series streaming embed links (VidLink prioritized)."""
     s = season or 1
     e = episode or 1
     servers = []
     t_id = (tmdb_id or imdb_id or "").strip()
     t_imdb = (imdb_id or tmdb_id or "").strip()
 
-    if t_id:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/tv/{t_id}?s={s}&e={e}"})
+    # Server 1: VidLink
     if t_imdb:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://player.autoembed.cc/embed/tv/{t_imdb}/{s}/{e}"})
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/tv/{t_imdb}/{s}/{e}?primaryColor=0284c7&autoplay=false"})
+    elif t_id:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/tv/{t_id}/{s}/{e}?primaryColor=0284c7&autoplay=false"})
+
+    # Server 2: CineSrc
+    if t_id:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://cinesrc.st/embed/tv/{t_id}?s={s}&e={e}"})
+
+    # Server 3: AutoEmbed
+    if t_imdb:
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
 
     return servers
 

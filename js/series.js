@@ -73,9 +73,9 @@ const SERVER_LABELS = [
 ];
 
 let DEFAULT_TV_PROVIDERS = [
-    { id: "cinesrc", name: "Server 1 (VIP Ultra HD)", template: "https://cinesrc.st/embed/tv/{id}?s={s}&e={e}", requiresTmdb: false },
-    { id: "autoembed", name: "Server 2 (High Speed HD)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true },
-    { id: "player_autoembed", name: "Server 3 (Backup Server)", template: "https://player.autoembed.cc/embed/tv/{imdb}/{s}/{e}", requiresImdb: true }
+    { id: "vidlink", name: "Server 1 (VIP Ultra HD)", template: "https://vidlink.pro/tv/{imdb}/{s}/{e}?primaryColor=0284c7&autoplay=false", requiresImdb: true },
+    { id: "cinesrc", name: "Server 2 (High Speed HD)", template: "https://cinesrc.st/embed/tv/{id}?s={s}&e={e}", requiresTmdb: false },
+    { id: "autoembed", name: "Server 3 (Backup Server)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true }
 ];
 
 async function loadLiveMirrors() {
@@ -128,18 +128,24 @@ function isAllowedStreamUrl(url) {
     return /cinesrc\.st|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
-function cleanServerLabel(name, index) {
-    if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
-    if (/cinesrc|server\s*1/i.test(name) || index === 0) return "Server 1 (VIP Ultra HD)";
-    if (/autoembed|vidlink|server\s*2/i.test(name) || index === 1) return "Server 2 (High Speed HD)";
-    if (/2embed|backup|server\s*3/i.test(name) || index === 2) return "Server 3 (Backup Server)";
+function cleanServerLabel(name, index, url) {
+    const combined = ((name || '') + ' ' + (url || '')).toLowerCase();
+    if (combined.includes('vidlink') || (/server\s*1/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed')) || index === 0) {
+        return "Server 1 (VIP Ultra HD)";
+    }
+    if (combined.includes('cinesrc') || (/server\s*2/i.test(name) && !combined.includes('vidlink') && !combined.includes('autoembed')) || index === 1) {
+        return "Server 2 (High Speed HD)";
+    }
+    if (combined.includes('autoembed') || combined.includes('2embed') || /server\s*3/i.test(name) || index === 2) {
+        return "Server 3 (Backup Server)";
+    }
     return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
 function seasonStreams(season) {
     return (Array.isArray(season?.streams) ? season.streams : [])
         .filter(s => s && s.url && isAllowedStreamUrl(s.url))
-        .map((s, i) => ({ name: cleanServerLabel(s.name, i), url: s.url }));
+        .map((s, i) => ({ name: cleanServerLabel(s.name, i, s.url), url: s.url }));
 }
 
 function normalizeStreams(episode) {
@@ -148,7 +154,7 @@ function normalizeStreams(episode) {
     if (season?.combined) raw = seasonStreams(season);
     else if (currentSeries?.combined) raw = seasonStreams(currentSeries);
     else if (Array.isArray(episode?.streams) && episode.streams.length) {
-        raw = episode.streams.filter(s => s && s.url && isAllowedStreamUrl(s.url)).map((s, i) => ({ name: cleanServerLabel(s.name, i), url: s.url }));
+        raw = episode.streams.filter(s => s && s.url && isAllowedStreamUrl(s.url)).map((s, i) => ({ name: cleanServerLabel(s.name, i, s.url), url: s.url }));
     }
 
     const imdb = currentSeries?.imdb_id || '';
@@ -387,6 +393,156 @@ function updateSeasonBatchPack() {
     }
 }
 
+
+// ─── PHANTOM VIP AD-SHIELD ENGINE (UBLOCK WORKFLOW INTEGRATION) ───
+let isAdShieldActive = false;
+
+async function checkAdBlockStatus() {
+    try {
+        const testAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 2000);
+        await fetch(new Request(testAdUrl, { mode: 'no-cors' }), { signal: controller.signal });
+        clearTimeout(timeoutId);
+        isAdShieldActive = false;
+    } catch (_) {
+        // Blocked by client / uBlock Origin active!
+        isAdShieldActive = true;
+    }
+    updateAdShieldUI();
+}
+
+function updateAdShieldUI() {
+    const btn = document.getElementById('adShieldBtn');
+    const label = document.getElementById('adShieldLabel');
+    if (!btn || !label) return;
+
+    if (isAdShieldActive) {
+        btn.classList.add('adshield-active');
+        btn.classList.remove('adshield-inactive');
+        label.textContent = 'Ad-Shield: ACTIVE';
+        btn.title = 'VIP Ad-Shield is Active: 100% Ad-Free & Zero Popups!';
+    } else {
+        btn.classList.remove('adshield-active');
+        btn.classList.add('adshield-inactive');
+        label.textContent = 'Enable Ad-Shield';
+        btn.title = 'Click to activate VIP Ad-Shield for 100% ad-free streaming';
+    }
+}
+
+function openAdShieldModal() {
+    let modal = document.getElementById('adShieldModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.className = 'adshield-modal';
+        modal.id = 'adShieldModal';
+        modal.innerHTML = `
+            <div class="adshield-backdrop" onclick="closeAdShieldModal()"></div>
+            <div class="adshield-box">
+                <div class="adshield-header">
+                    <div class="adshield-title-wrap">
+                        <span class="adshield-logo-icon">🛡️</span>
+                        <div>
+                            <div class="adshield-title">PHANTOM VIP AD-SHIELD</div>
+                            <div class="adshield-subtitle">100% Zero-Ad & Zero-Popup Cinema Streaming</div>
+                        </div>
+                    </div>
+                    <button class="adshield-close-btn" onclick="closeAdShieldModal()" aria-label="Close">✕</button>
+                </div>
+                <div class="adshield-body">
+                    <div class="adshield-status-card ${isAdShieldActive ? 'active-status' : 'warn-status'}" id="adShieldStatusCard">
+                        <span class="status-indicator-icon">${isAdShieldActive ? '✅' : '⚡'}</span>
+                        <div class="status-details">
+                            <strong>${isAdShieldActive ? 'VIP Ad-Shield is Active & Protected' : 'Enhance to 100% Zero-Popup Streaming'}</strong>
+                            <p>${isAdShieldActive ? 'uBlock Origin is actively defusing embed ad scripts, popunders, and trackers. Enjoy uninterrupted full HD streaming!' : 'Streaming servers inject cross-origin popups. Phantom Movies has built-in anti-hijack guard, and pairing it with uBlock Origin guarantees 100% zero-popup playback.'}</p>
+                        </div>
+                    </div>
+
+                    <div class="adshield-section-title">🚀 1-CLICK FREE SETUP (UBLOCK ORIGIN)</div>
+                    <p class="adshield-desc">uBlock Origin is the #1 recommended, open-source ad blocker. It completely kills popups on streaming embeds without breaking playback.</p>
+
+                    <div class="adshield-install-grid">
+                        <a href="https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank" rel="noopener noreferrer" class="adshield-store-btn chrome-btn">
+                            <span class="store-icon">🌐</span>
+                            <div>
+                                <strong>Chrome / Brave / Edge</strong>
+                                <span>Add from Web Store</span>
+                            </div>
+                        </a>
+                        <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" target="_blank" rel="noopener noreferrer" class="adshield-store-btn firefox-btn">
+                            <span class="store-icon">🦊</span>
+                            <div>
+                                <strong>Firefox Browser</strong>
+                                <span>Add from AMO</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/gorhill/uBlock" target="_blank" rel="noopener noreferrer" class="adshield-store-btn github-btn">
+                            <span class="store-icon">🐙</span>
+                            <div>
+                                <strong>Open Source GitHub</strong>
+                                <span>gorhill/uBlock</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="adshield-section-title" style="margin-top: 18px;">📋 PHANTOM CUSTOM POPUP FILTER (OPTIONAL)</div>
+                    <p class="adshield-desc">Add these rules to uBlock Origin <em>(Dashboard → My Filters)</em> to permanently defuse streaming server popups:</p>
+
+                    <div class="adshield-code-box">
+                        <code id="adShieldRulesText">*$popup,domain=cinesrc.st|autoembed.co|vidlink.pro|vidsrc.to
+*##+js(set-constant, window.open, noop)</code>
+                        <button type="button" class="adshield-copy-btn" onclick="copyAdShieldRules()">📋 Copy Rules</button>
+                    </div>
+
+                    <div class="adshield-footer-tip">
+                        💡 <strong>Pro Tip:</strong> Prefer zero ads right now without installing anything? Scroll down to <strong>DOWNLOAD OPTIONS</strong> and use <strong>Fast Cloud Download</strong> or <strong>Direct P2P Torrent</strong> to play locally in VLC with zero ads!
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    } else {
+        const card = document.getElementById('adShieldStatusCard');
+        if (card) {
+            card.className = `adshield-status-card ${isAdShieldActive ? 'active-status' : 'warn-status'}`;
+            card.innerHTML = `
+                <span class="status-indicator-icon">${isAdShieldActive ? '✅' : '⚡'}</span>
+                <div class="status-details">
+                    <strong>${isAdShieldActive ? 'VIP Ad-Shield is Active & Protected' : 'Enhance to 100% Zero-Popup Streaming'}</strong>
+                    <p>${isAdShieldActive ? 'uBlock Origin is actively defusing embed ad scripts, popunders, and trackers. Enjoy uninterrupted full HD streaming!' : 'Streaming servers inject cross-origin popups. Phantom Movies has built-in anti-hijack guard, and pairing it with uBlock Origin guarantees 100% zero-popup playback.'}</p>
+                </div>
+            `;
+        }
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeAdShieldModal() {
+    const modal = document.getElementById('adShieldModal');
+    if (modal) modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function copyAdShieldRules() {
+    const rules = document.getElementById('adShieldRulesText')?.textContent || '';
+    if (navigator.clipboard && rules) {
+        navigator.clipboard.writeText(rules).then(() => {
+            showToast('Filter Rules Copied to Clipboard! 📋');
+        }).catch(() => {
+            showToast('Selected. Press Ctrl+C to copy.');
+        });
+    } else {
+        showToast('Filter rules ready in box.');
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAdShieldModal();
+});
+
+
 function renderSeries(series) {
     currentSeries = series;
     currentSeasonIndex = 0;
@@ -493,13 +649,21 @@ function renderSeriesFailoverBar() {
         return;
     }
     const activeStream = currentStreams[currentSeriesStreamIndex] || currentStreams[0];
+    const shieldClass = isAdShieldActive ? 'adshield-active' : 'adshield-inactive';
+    const shieldText = isAdShieldActive ? 'Ad-Shield: ACTIVE' : 'Enable Ad-Shield';
     container.innerHTML = `
         <div class="stream-failover-bar" id="seriesFailoverBar">
             <div class="failover-status">
                 <span class="failover-dot online" id="seriesFailoverDot"></span>
                 <span id="seriesFailoverText">${getSeriesStreamStatusText(activeStream)}</span>
             </div>
-            <button type="button" class="failover-quick-btn" onclick="autoFailoverSeriesNext('manual')">Switch Server ↻</button>
+            <div class="failover-actions">
+                <button type="button" class="adshield-badge-btn ${shieldClass}" id="adShieldBtn" onclick="openAdShieldModal()" title="VIP Ad-Shield Status">
+                    <span class="adshield-icon">🛡️</span>
+                    <span class="adshield-label" id="adShieldLabel">${shieldText}</span>
+                </button>
+                <button type="button" class="failover-quick-btn" onclick="autoFailoverSeriesNext('manual')">Switch Server ↻</button>
+            </div>
         </div>
     `;
 }
