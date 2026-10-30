@@ -305,19 +305,71 @@ function setFeatured(m) {
 }
 
 
-// ─── TRENDING HELPERS ───
-function getTrendingMovies(limit = 6) {
-    const tagged = allMovies.filter(m => m.trending || m.featured || ['TRENDING', 'HOT', 'NEW', '4K'].includes(String(m.badge || '').toUpperCase()));
-    const source = tagged.length ? tagged : allMovies;
-    return [...source]
-        .sort((a, b) => {
-            const aTrendBonus = (a.trending || String(a.badge || '').toUpperCase() === 'TRENDING') ? 500000 : 0;
-            const bTrendBonus = (b.trending || String(b.badge || '').toUpperCase() === 'TRENDING') ? 500000 : 0;
-            const aScore = aTrendBonus + Number(a.views || 0) + Number(a.rating || 0) * 100;
-            const bScore = bTrendBonus + Number(b.views || 0) + Number(b.rating || 0) * 100;
-            return bScore - aScore;
-        })
-        .slice(0, limit);
+// ─── TRENDING & FRESH HERO SLIDES HELPERS ───
+function getTrendingMovies(limit = 10, preferredType = null) {
+    let pool = allMovies;
+    if (preferredType === 'movie') {
+        pool = allMovies.filter(m => m.type !== 'series');
+    } else if (preferredType === 'series') {
+        pool = allMovies.filter(m => m.type === 'series');
+    }
+
+    const scored = pool.map(m => {
+        const y = parseInt(m.year) || 0;
+        // Heavy recency boost: 2025/2024 get highest priority for active releases
+        let recencyScore = 0;
+        if (y === 2025) recencyScore = 380000;
+        else if (y === 2024) recencyScore = 320000;
+        else if (y === 2023) recencyScore = 120000;
+        else if (y >= 2026) recencyScore = 60000; // unreleased future titles get small score
+        else recencyScore = 0; // older titles (<2023) receive no recency boost
+
+        const trendBonus = (m.trending || String(m.badge || '').toUpperCase() === 'TRENDING') ? 350000 : 0;
+        const badgeBonus = ['HOT', 'NEW', '4K'].includes(String(m.badge || '').toUpperCase()) ? 150000 : 0;
+        
+        // Boost verified watchable titles (has stream or downloads)
+        const hasMediaBonus = (m.streamLink || (Array.isArray(m.streams) && m.streams.length) || (Array.isArray(m.downloads) && m.downloads.length)) ? 120000 : 0;
+        
+        // Movie priority bonus so trending prominently displays blockbuster movies
+        const movieBonus = (m.type !== 'series') ? 140000 : 0;
+        
+        const ratingScore = (parseFloat(m.rating) || 7.0) * 8000;
+        const viewsScore = Math.min(parseInt(m.views) || 0, 120000);
+
+        return {
+            movie: m,
+            score: recencyScore + trendBonus + badgeBonus + hasMediaBonus + movieBonus + ratingScore + viewsScore
+        };
+    });
+
+    scored.sort((a, b) => b.score - a.score);
+    return scored.slice(0, limit).map(x => x.movie);
+}
+
+function getFreshHeroSlides(limit = 7) {
+    // Only select verified releases from 2024-2026 with high-quality landscape banners
+    const candidates = allMovies.filter(m => {
+        const hasBanner = m.banner && m.banner.trim().length > 10;
+        const y = parseInt(m.year) || 0;
+        const hasMedia = Boolean(m.streamLink || (Array.isArray(m.streams) && m.streams.length) || (Array.isArray(m.downloads) && m.downloads.length));
+        return hasBanner && y >= 2024 && hasMedia;
+    });
+
+    const pool = candidates.length >= limit ? candidates : allMovies.filter(m => m.banner);
+    
+    return [...pool].sort((a, b) => {
+        const aY = parseInt(a.year) || 0;
+        const bY = parseInt(b.year) || 0;
+        const aYearScore = aY === 2025 ? 400000 : (aY === 2024 ? 300000 : (aY >= 2026 ? 150000 : 0));
+        const bYearScore = bY === 2025 ? 400000 : (bY === 2024 ? 300000 : (bY >= 2026 ? 150000 : 0));
+        const aTrend = (a.trending || a.badge === 'TRENDING') ? 300000 : 0;
+        const bTrend = (b.trending || b.badge === 'TRENDING') ? 300000 : 0;
+        const aMovie = a.type !== 'series' ? 100000 : 0;
+        const bMovie = b.type !== 'series' ? 100000 : 0;
+        const aScore = aYearScore + aTrend + aMovie + (Number(a.views) || 0) + (Number(a.rating) || 0) * 1000;
+        const bScore = bYearScore + bTrend + bMovie + (Number(b.views) || 0) + (Number(b.rating) || 0) * 1000;
+        return bScore - aScore;
+    }).slice(0, limit);
 }
 
 let heroSlidesList = [];
@@ -423,8 +475,7 @@ function updateHeroSpotlight(index) {
 function renderHeroSlider() {
     const slider = document.getElementById('heroSlider');
     if (!slider) return;
-    const manualSlides = allMovies.filter(m => m.heroSlide);
-    heroSlidesList = (manualSlides.length ? manualSlides : getTrendingMovies(7)).slice(0, 7);
+    heroSlidesList = getFreshHeroSlides(7);
     if (!heroSlidesList.length) {
         if (slider) slider.innerHTML = '<div class="empty-state">No trending titles yet</div>';
         return;
