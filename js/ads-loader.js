@@ -114,8 +114,15 @@
         clean.includes('krico443jez')) {
       return _origOpen.call(window, url, target, features);
     }
-    console.warn('[Phantom AdShield] Blocked rogue redirect popup:', url);
-    return null;
+    console.warn('[Phantom Ad-Shield] Defused rogue redirect popup:', url);
+    return {
+      closed: false,
+      focus: function() {},
+      blur: function() {},
+      close: function() {},
+      location: { href: url || '' },
+      document: {}
+    };
   };
 })();
 

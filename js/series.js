@@ -2,23 +2,40 @@
 // PHANTOM MOVIES - SERIES DETAIL PAGE
 // ═══════════════════════════════════════════════════
 
-// Anti-Hijack Guard: Prevents third-party stream iframes from redirecting or hijacking the main website
+// ─── PHANTOM ANTI-HIJACK & UBLOCK POPUNDER DEFENSE ENGINE ───
 window.addEventListener('beforeunload', (e) => {
-    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+    if (document.activeElement && (document.activeElement.tagName === 'IFRAME' || document.activeElement.closest('.player-box'))) {
         e.preventDefault();
         return (e.returnValue = '');
     }
 });
 
-// Guard against rogue popunder/popup creation on the parent window by iframe interactions
+// Defuse rogue window.open calls with uBlock Origin-style mock defuser
 const _originalWindowOpen = window.open;
-window.open = function (url, target, features) {
-    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
-        console.warn('[Anti-Hijack] Prevented unauthorized window.open from iframe');
-        return null;
+window.open = function(url, target, features) {
+    if (document.activeElement && (document.activeElement.tagName === 'IFRAME' || document.activeElement.closest('.player-box'))) {
+        console.warn('[Phantom Ad-Shield] Defused unauthorized popup attempt from player embed:', url);
+        // Return dummy mock so anti-adblock check in player thinks popup succeeded!
+        return {
+            closed: false,
+            focus: function() {},
+            blur: function() {},
+            close: function() {},
+            location: { href: url || '' },
+            document: {}
+        };
     }
     return _originalWindowOpen.call(window, url, target, features);
 };
+
+// Focus recovery against click-hijacking popunders
+window.addEventListener('blur', () => {
+    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        setTimeout(() => {
+            window.focus();
+        }, 120);
+    }
+});
 
 let currentSeries = null;
 let currentSeasonIndex = 0;
