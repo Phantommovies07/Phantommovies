@@ -4,8 +4,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Series Details - Phantom Movies</title>
-<meta name="description" content="Watch series episodes and choose available download options.">
+<meta name="description" content="Watch web series seasons, episode selector, stream with zero ads on top-tier CDN servers, and download in 1080p.">
 
+<!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XND5TTDN7Z"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -26,7 +27,7 @@
 <meta name="theme-color" content="#0f1422">
 <script src="js/ads-loader.js"></script>
 </head>
-<body class="movie-detail-page series-detail-page">
+<body class="movie-detail-page">
 
 <div class="toast" id="toast"></div>
 
@@ -35,25 +36,62 @@
    <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
  </a>
  <ul class="nav-links">
-   <li><a href="index.html#movies">Browse</a></li>
-   <li><a href="index.html#movies">Trending</a></li>
-   <li><a href="index.html#movies">Categories</a></li>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="movies.html">Movies</a></li>
+   <li><a href="series-catalog.html" class="active">Web Series</a></li>
+   <li><a href="trending.html">Trending</a></li>
  </ul>
  <div class="nav-right">
-   <a class="btn-primary nav-home-btn" href="index.html">← Home</a>
+   <a class="btn-primary nav-home-btn" href="series-catalog.html">← All Series</a>
  </div>
 </nav>
 
 <main class="detail-shell" id="seriesDetail">
-  <div class="empty-state">🎬 Loading series...</div>
+  <div class="empty-state">🎬 Loading series details & episodes...</div>
 </main>
+
+<!-- Mobile Bottom Navigation Bar -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
+  <a href="index.html" class="bottom-nav-item" id="bnavHome">
+    <span class="bnav-icon">🏠</span>
+    <span class="bnav-label">Home</span>
+  </a>
+  <a href="movies.html" class="bottom-nav-item" id="bnavMovies">
+    <span class="bnav-icon">🎬</span>
+    <span class="bnav-label">Movies</span>
+  </a>
+  <a href="series-catalog.html" class="bottom-nav-item active" id="bnavSeries">
+    <span class="bnav-icon">📺</span>
+    <span class="bnav-label">Series</span>
+  </a>
+  <a href="trending.html" class="bottom-nav-item" id="bnavTrending">
+    <span class="bnav-icon">🔥</span>
+    <span class="bnav-label">Trending</span>
+  </a>
+  <a href="index.html" class="bottom-nav-item" id="bnavSearch">
+    <span class="bnav-icon">🔍</span>
+    <span class="bnav-label">Search</span>
+  </a>
+</nav>
 
 <footer>
  <div class="footer-bottom">
-   <p class="footer-copy">© 2025 <span>Phantom Movies</span>. All rights reserved.</p>
+   <p class="footer-copy">© 2026 <span>Phantom Movies</span>. Stream without limits.</p>
  </div>
 </footer>
 
-<script src="js/series.js?v=20261025_downloads_v2"></script>
+<script src="js/series.js?v=20261029_clean"></script>
+<!-- Trailer Lightbox Modal -->
+<div class="trailer-modal" id="trailerModal" aria-hidden="true">
+  <div class="trailer-backdrop" onclick="closeTrailerModal()"></div>
+  <div class="trailer-box">
+    <div class="trailer-header">
+      <span class="trailer-caption" id="trailerCaption">🎬 Official Trailer</span>
+      <button class="trailer-close-btn" onclick="closeTrailerModal()" aria-label="Close Trailer">✕</button>
+    </div>
+    <div class="trailer-video-wrap" id="trailerVideoWrap"></div>
+  </div>
+</div>
+
 </body>
 </html>

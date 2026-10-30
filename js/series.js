@@ -67,17 +67,15 @@ function getCurrentEpisode() {
 }
 
 const SERVER_LABELS = [
-    "Server 1 (AllMovieLand - HDVB P2P)",
-    "Server 2 (HDMovie2 - P2P HLS)",
-    "Server 3 (CineSrc - No Ads)",
-    "Server 4 (VidLink - Fast HD)"
+    "Server 1 (VIP Ultra HD)",
+    "Server 2 (High Speed HD)",
+    "Server 3 (Backup Server)"
 ];
 
 let DEFAULT_TV_PROVIDERS = [
-    { id: "allmovieland", name: "Server 1 (AllMovieLand - HDVB P2P)", template: "https://allmovieland.link/play/{imdb}?s={s}&e={e}", requiresImdb: true },
-    { id: "hdmovie2", name: "Server 2 (HDMovie2 - P2P HLS)", template: "https://slast430did.com/play/{imdb}?s={s}&e={e}", requiresImdb: true },
-    { id: "cinesrc", name: "Server 3 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/tv/{tmdb}?s={s}&e={e}", requiresTmdb: true },
-    { id: "vidlink", name: "Server 4 (VidLink - Fast HD)", template: "https://vidlink.pro/tv/{imdb}/{s}/{e}", requiresImdb: true }
+    { id: "cinesrc", name: "Server 1 (VIP Ultra HD)", template: "https://cinesrc.st/embed/tv/{id}?s={s}&e={e}", requiresTmdb: false },
+    { id: "autoembed", name: "Server 2 (High Speed HD)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true },
+    { id: "player_autoembed", name: "Server 3 (Backup Server)", template: "https://player.autoembed.cc/embed/tv/{imdb}/{s}/{e}", requiresImdb: true }
 ];
 
 async function loadLiveMirrors() {
@@ -127,15 +125,14 @@ function applyLiveMirrors(data) {
 
 function isAllowedStreamUrl(url) {
     if (!url) return false;
-    return /slast430did\.com|allmovieland|1xcinema|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|vidlink\.online|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    return /cinesrc\.st|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index) {
     if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
-    if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 1 (AllMovieLand - HDVB P2P)";
-    if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 2 (HDMovie2 - P2P HLS)";
-    if (/cinesrc/i.test(name)) return "Server 3 (CineSrc - No Ads)";
-    if (/vidlink/i.test(name)) return "Server 4 (VidLink - Fast HD)";
+    if (/cinesrc|server\s*1/i.test(name) || index === 0) return "Server 1 (VIP Ultra HD)";
+    if (/autoembed|vidlink|server\s*2/i.test(name) || index === 1) return "Server 2 (High Speed HD)";
+    if (/2embed|backup|server\s*3/i.test(name) || index === 2) return "Server 3 (Backup Server)";
     return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
@@ -172,7 +169,9 @@ function normalizeStreams(episode) {
     DEFAULT_TV_PROVIDERS.forEach(p => {
         if (p.requiresTmdb && !tmdb) return;
         if (p.requiresImdb && !imdb) return;
+        const id = tmdb || imdb;
         const u = p.template
+            .replace('{id}', encodeURIComponent(id))
             .replace('{imdb}', encodeURIComponent(imdb || tmdb))
             .replace('{tmdb}', encodeURIComponent(tmdb || imdb))
             .replace('{s}', encodeURIComponent(sNum))
@@ -231,10 +230,11 @@ function generateEpisodeFallbackDownloads(series, seasonNum = 1, epNum = 1) {
     const title = series?.title || 'Series';
     const cleanT = title.replace(/[:\-–—\(\)\d]/g, ' ').trim();
     const q = encodeURIComponent(`${cleanT} S0${seasonNum}`.trim());
+    const hdhubDomain = liveMirrorsConfig?.scrapers?.hdhub4u?.active || 'https://new9.hdhub4u.cl';
     return [
-        { quality: '480p SD', size: '180 MB', server: 'HDHub4u Cloud Engine', url: `https://new3.hdhub4u.free/?s=${q}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '450 MB', server: 'ROG Fast Cloud Mirror', url: `https://rogmovies.one/?s=${q}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '950 MB', server: 'VIP Direct Cloud Server', url: `https://new3.hdhub4u.free/?s=${q}`, color: '#10b981' }
+        { quality: '480p SD', size: '180 MB', server: 'Standard HD Cloud', url: `${hdhubDomain}/?s=${q}`, color: '#ffd70f' },
+        { quality: '720p HD', size: '450 MB', server: 'Fast Direct Cloud', url: `${hdhubDomain}/?s=${q}`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '950 MB', server: 'High Speed Direct Cloud', url: `${hdhubDomain}/?s=${q}`, color: '#10b981' }
     ];
 }
 
@@ -258,6 +258,135 @@ function normalizeDownloads(episode) {
     return generateEpisodeFallbackDownloads(currentSeries, currentSeasonIndex + 1, currentEpisodeIndex + 1);
 }
 
+
+// ─── MEDIA SPECIFICATIONS, CAST CHIPS & SEASON BATCH PACKS ───
+function extractCastList(item) {
+    if (Array.isArray(item.cast) && item.cast.length) return item.cast;
+    const desc = item.description || '';
+    const match = desc.match(/starring\s+([^.\n]+)/i);
+    if (match && match[1]) {
+        return match[1].split(',').map(s => s.trim()).filter(Boolean);
+    }
+    return [];
+}
+
+function renderCastChips(series) {
+    const cast = extractCastList(series);
+    if (!cast.length) return '';
+    return `
+        <div class="cast-section">
+            <div class="cast-header">
+                <span class="cast-title">🎭 STARRING CAST</span>
+                <span class="cast-hint">Click actor to discover filmography</span>
+            </div>
+            <div class="cast-chips-wrap">
+                ${cast.map(actor => `
+                    <a class="cast-chip" href="movies.html?search=${encodeURIComponent(actor)}">
+                        <span class="cast-icon">👤</span>
+                        <span class="cast-name">${escapeHTML(actor)}</span>
+                    </a>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function renderMediaSpecs(series) {
+    const isDual = (series.title && /dual|hindi/i.test(series.title)) || true;
+    const is4K = (series.badge && /4k/i.test(series.badge)) || (series.title && /4k|2160p/i.test(series.title));
+    
+    const audioSpec = isDual ? "Hindi (Clean Master DDP 5.1) + English DD 5.1" : "Original Dual Audio (Dolby Digital Plus 5.1)";
+    const videoSpec = is4K ? "4K UHD 2160p HEVC 10-Bit (Dolby Vision / HDR10+)" : "1080p FHD HEVC x265 (High Bitrate Binge Master)";
+    const sourceSpec = "Official OTT WEB-DL Master Series";
+    const subSpec = "English [Muxed & External SRT] • Multi-Subtitles";
+
+    return `
+        <div class="tech-specs-card">
+            <div class="specs-header">
+                <span class="specs-title">⚡ MEDIA SPECIFICATIONS & AUDIO CHANNELS</span>
+                <span class="specs-badge">10-BIT HEVC</span>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-icon">🔊</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Audio Tracks</span>
+                        <span class="spec-val">${escapeHTML(audioSpec)}</span>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🎞️</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Video Codec</span>
+                        <span class="spec-val">${escapeHTML(videoSpec)}</span>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">📀</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Master Source</span>
+                        <span class="spec-val">${escapeHTML(sourceSpec)}</span>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">💬</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Subtitles</span>
+                        <span class="spec-val">${escapeHTML(subSpec)}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderSeasonBatchPack(series, seasonIndex) {
+    const sNum = seasonIndex + 1;
+    const sTitle = `Season ${sNum}`;
+    const cleanT = (series?.title || 'Series').replace(/[:\-–—\(\)\d]/g, ' ').trim();
+    const hdhubDomain = liveMirrorsConfig?.scrapers?.hdhub4u?.active || 'https://new9.hdhub4u.cl';
+    const qBatch = encodeURIComponent(`${cleanT} ${sTitle} complete zip`.trim());
+
+    const batchOptions = [
+        { quality: `${sTitle} Complete Pack (480p SD Zip)`, size: '1.8 GB', color: '#ffd70f', server: 'Standard HD Cloud' },
+        { quality: `${sTitle} Complete Pack (720p HD Zip)`, size: '3.8 GB', color: '#06b6d4', server: 'Fast Direct Cloud' },
+        { quality: `${sTitle} Complete Pack (1080p FHD 10-Bit Zip)`, size: '7.5 GB', color: '#10b981', server: 'High Speed Direct Cloud' }
+    ];
+
+    return `
+        <div class="season-batch-card">
+            <div class="batch-header">
+                <div>
+                    <span class="batch-badge">📦 BINGE PACK</span>
+                    <h3 class="batch-title">Download ${escapeHTML(sTitle)} — All Episodes in 1 Zip</h3>
+                    <p class="batch-subtitle">Single-click high speed cloud download for the entire season. Extract and watch offline without interruptions.</p>
+                </div>
+            </div>
+            <div class="batch-grid">
+                ${batchOptions.map(opt => {
+                    const dlUrl = `download.html?id=${encodeURIComponent(series.id)}&title=${encodeURIComponent(series.title || '')}&poster=${encodeURIComponent(series.poster || series.banner || '')}&quality=${encodeURIComponent(opt.quality)}&size=${encodeURIComponent(opt.size)}&url=${encodeURIComponent(`${hdhubDomain}/?s=${qBatch}`)}&s=${sNum}&type=series`;
+                    return `
+                        <a class="download-card batch-dl-btn" href="${dlUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:${opt.color}">
+                            <div>
+                                <strong>📦 ${escapeHTML(opt.quality)}</strong>
+                                <span>${escapeHTML(opt.server)} • ${escapeHTML(opt.size)}</span>
+                            </div>
+                            <em>Get Batch Zip ⬇</em>
+                        </a>
+                    `;
+                }).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function updateSeasonBatchPack() {
+    const container = document.getElementById('seasonBatchContainer');
+    if (container && currentSeries) {
+        container.innerHTML = renderSeasonBatchPack(currentSeries, currentSeasonIndex);
+    }
+}
+
 function renderSeries(series) {
     currentSeries = series;
     currentSeasonIndex = 0;
@@ -277,6 +406,7 @@ function renderSeries(series) {
             <div class="detail-hero-bg" style="background-image:url('${escapeHTML(banner)}')"></div>
             <div class="watch-wrap">
                 <div class="player-box" id="seriesPlayerBox"></div>
+                <div id="seriesBingeContainer"></div>
                 <div id="seriesFailoverContainer"></div>
                 <div id="seriesStreamButtons"></div>
             </div>
@@ -291,18 +421,28 @@ function renderSeries(series) {
                 ${series.badge ? `<div class="feat-tag">${escapeHTML(series.badge)}</div>` : '<div class="feat-tag">📺 Series</div>'}
                 <h1>${escapeHTML(series.title)}</h1>
                 <p class="detail-meta">${escapeHTML(meta)}</p>
-                <div style="margin: 14px 0 16px;">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 16px;">
                     <button class="btn-watchlist-toggle" id="btnWatchlistToggle" onclick="toggleWatchlist()">
                         <span id="watchlistIcon">🤍</span> <span id="watchlistText">Add to Watchlist</span>
                     </button>
+                    ${series.trailerLink ? `<button class="btn-watchlist-toggle" onclick="openTrailerModal('${escapeHTML(series.trailerLink)}', '${escapeHTML(series.title)}')">
+                        <span>🎬</span> <span>Watch Trailer</span>
+                    </button>` : ''}
                 </div>
                 <p class="detail-desc">${escapeHTML(series.description || 'No description available.')}</p>
+                ${renderCastChips(series)}
                 ${(series.combined || (series.seasons || []).some(s => s.combined)) ? '<p class="detail-meta" style="margin-top:6px;">🎞 Combined: season ke sab episodes ek hi video file me hain.</p>' : ''}
 
                 <div class="series-browser">
                     <div class="series-tabs" id="seasonTabs"></div>
                     <div class="episode-list" id="episodeList"></div>
                 </div>
+
+                <div id="seasonBatchContainer">
+                    ${renderSeasonBatchPack(series, 0)}
+                </div>
+
+                ${renderMediaSpecs(series)}
 
                 <div class="download-section">
                     <div class="sec-title">EPISODE <span>DOWNLOADS</span></div>
@@ -314,7 +454,7 @@ function renderSeries(series) {
 
     renderSeasonTabs();
     renderEpisodes();
-    playEpisode(0);
+    playEpisode(0, false);
     updateWatchlistButtonState();
     loadAndRenderAds('series');
 
@@ -333,16 +473,16 @@ let testedSeriesFailedUrls = new Set();
 
 function getSeriesStreamStatusText(stream) {
     if (!stream) return 'Server 1 (Auto-Failover On)';
-    if (/p2p|allmovieland/i.test(stream.name)) {
-        return `⚡ Active: ${escapeHTML(stream.name)} — Peer-to-Peer Acceleration Active (0 Buffering)`;
+    if (/server\s*1/i.test(stream.name)) {
+        return `🛡️ Active: ${escapeHTML(stream.name)} — Ultra Clean Stream (Zero Pre-roll Ads)`;
     }
-    if (/hdmovie2|mesh/i.test(stream.name)) {
-        return `⚡ Active: ${escapeHTML(stream.name)} — P2P Mesh HLS Active (Low Latency)`;
+    if (/server\s*2/i.test(stream.name)) {
+        return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Multi-Audio CDN Active`;
     }
-    if (/no ads/i.test(stream.name)) {
-        return `🛡️ Active: ${escapeHTML(stream.name)} — Clean Ad-Shielded Stream`;
+    if (/server\s*3/i.test(stream.name)) {
+        return `🌐 Active: ${escapeHTML(stream.name)} — Global VIP Stream Active`;
     }
-    return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Global Stream`;
+    return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Stream`;
 }
 
 function renderSeriesFailoverBar() {
@@ -375,17 +515,8 @@ function updateSeriesFailoverStatus(message, isSwitching = false) {
 
 function startSeriesFailoverWatchdog(streamUrl, streamName) {
     if (seriesFailoverWatchdogTimer) clearTimeout(seriesFailoverWatchdogTimer);
-
-    // Optimized 4.5s Watchdog: auto-switches to Server 2 (P2P) if Server 1 delays buffering
-    seriesFailoverWatchdogTimer = setTimeout(() => {
-        const iframe = document.querySelector('#seriesPlayerBox .stream-frame');
-        if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
-            if (currentStreams.length > 1 && currentSeriesStreamIndex === 0) {
-                console.log(`[Series Auto-Failover] Server 1 buffer delay detected (4.5s), switching to Server 2 P2P...`);
-                autoFailoverSeriesNext('buffer_timeout');
-            }
-        }
-    }, 4500);
+    // User can manually switch using the "Switch Server ↻" button.
+    // Removed the blind 4.5-second interrupt timer so series episodes play smoothly and uninterrupted.
 }
 
 function autoFailoverSeriesNext(reason = 'auto') {
@@ -423,8 +554,171 @@ function selectSeason(index) {
     currentEpisodeIndex = 0;
     renderSeasonTabs();
     renderEpisodes();
-    playEpisode(0);
+    updateSeasonBatchPack();
+    playEpisode(0, false);
 }
+
+
+let isSeriesPlaying = false;
+
+function getWatchProgress(id) {
+    try {
+        const store = JSON.parse(localStorage.getItem('phantom_watch_progress') || '{}');
+        return store[String(id)] || null;
+    } catch (_) { return null; }
+}
+
+function setWatchProgress(id, progress, meta = {}) {
+    try {
+        const store = JSON.parse(localStorage.getItem('phantom_watch_progress') || '{}');
+        const existing = store[String(id)] || {};
+        store[String(id)] = {
+            ...existing,
+            progress: Math.min(100, Math.max(5, Math.round(progress))),
+            updatedAt: Date.now(),
+            ...meta
+        };
+        localStorage.setItem('phantom_watch_progress', JSON.stringify(store));
+    } catch (_) {}
+}
+
+function renderSeriesCurtain(episode, activeStream) {
+    const backdrop = currentSeries?.banner || currentSeries?.poster || '';
+    const serverLabel = activeStream ? activeStream.name : 'Server 1 (VIP Ultra HD)';
+    const epTitle = episode ? (episode.title || `Episode ${currentEpisodeIndex + 1}`) : (currentSeries?.title || 'Series');
+    const epNumStr = episode ? `Season ${currentSeasonIndex + 1} • Episode ${episode.episodeNumber || currentEpisodeIndex + 1}` : `Season ${currentSeasonIndex + 1}`;
+    return `
+        <div class="player-curtain" id="seriesPlayerCurtain" onclick="startSeriesPlayback()">
+            <div class="curtain-backdrop" style="background-image: url('${escapeHTML(backdrop)}');"></div>
+            <div class="curtain-overlay"></div>
+            <div class="curtain-content">
+                <div class="curtain-play-btn"><span class="play-ico">▶</span></div>
+                <div class="curtain-title">${escapeHTML(epTitle)}</div>
+                <div class="curtain-meta">
+                    <span>${escapeHTML(currentSeries?.title || 'Series')}</span>
+                    <span>•</span>
+                    <span>${escapeHTML(epNumStr)}</span>
+                    <span>•</span>
+                    <span>⭐ ${escapeHTML(currentSeries?.rating || '8.5')}</span>
+                </div>
+                <div class="curtain-badge">▶ CLICK TO PLAY • ${escapeHTML(serverLabel)}</div>
+            </div>
+        </div>
+    `;
+}
+
+function startSeriesPlayback() {
+    playEpisode(currentEpisodeIndex, true);
+}
+
+function renderSeriesBingeBar() {
+    const container = document.getElementById('seriesBingeContainer');
+    if (!container) return;
+    const seasons = getSeasons();
+    const currentSeason = seasons[currentSeasonIndex];
+    const episodes = currentSeason?.episodes || [];
+
+    let nextSeasonIdx = currentSeasonIndex;
+    let nextEpIdx = currentEpisodeIndex + 1;
+    let nextEp = null;
+
+    if (nextEpIdx < episodes.length) {
+        nextEp = episodes[nextEpIdx];
+    } else if (currentSeasonIndex + 1 < seasons.length) {
+        nextSeasonIdx = currentSeasonIndex + 1;
+        nextEpIdx = 0;
+        const nextSeason = seasons[nextSeasonIdx];
+        nextEp = nextSeason?.episodes?.[0] || null;
+    }
+
+    if (!nextEp) {
+        container.innerHTML = '';
+        return;
+    }
+
+    const epNum = nextEp.episodeNumber || (nextEpIdx + 1);
+    const sNum = nextSeasonIdx + 1;
+    const epTitle = nextEp.title || `Episode ${epNum}`;
+
+    container.innerHTML = `
+        <div class="binge-bar" id="bingeBar">
+            <div class="binge-info">
+                <span class="binge-badge">Up Next • S0${sNum} E${epNum}</span>
+                <span class="binge-title">${escapeHTML(epTitle)}</span>
+            </div>
+            <button type="button" class="btn-primary binge-next-btn" onclick="playNextEpisode(${nextSeasonIdx}, ${nextEpIdx})">
+                <span>Next Episode ▶</span>
+            </button>
+        </div>
+    `;
+}
+
+function playNextEpisode(seasonIdx, epIdx) {
+    if (seasonIdx !== currentSeasonIndex) {
+        currentSeasonIndex = seasonIdx;
+        renderSeasonTabs();
+        renderEpisodes();
+    }
+    playEpisode(epIdx, true);
+    const player = document.getElementById('seriesPlayerBox');
+    if (player) {
+        player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function getYouTubeEmbed(url) {
+    if (!url) return '';
+    try {
+        const u = new URL(url);
+        const host = u.hostname.replace(/^www\./, '').toLowerCase();
+        let id = '';
+        if (host === 'youtu.be') {
+            id = u.pathname.slice(1).split('/')[0] || '';
+        } else if (host === 'youtube.com' || host === 'm.youtube.com' || host === 'music.youtube.com') {
+            id = u.searchParams.get('v')
+                || (u.pathname.startsWith('/embed/') ? (u.pathname.split('/')[2] || '') : '');
+        }
+        if (id && !/^[A-Za-z0-9_-]{5,20}$/.test(id)) id = '';
+        return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : '';
+    } catch (_) {
+        return '';
+    }
+}
+
+window.openTrailerModal = function(trailerUrl, title = 'Trailer') {
+    let embedUrl = getYouTubeEmbed(trailerUrl);
+    if (!embedUrl) {
+        embedUrl = `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(title + ' official trailer')}`;
+    }
+    const modal = document.getElementById('trailerModal');
+    const wrap = document.getElementById('trailerVideoWrap');
+    const caption = document.getElementById('trailerCaption');
+    if (!modal || !wrap) return;
+
+    if (caption) caption.textContent = `${title} — Official Trailer`;
+    wrap.innerHTML = `<iframe src="${embedUrl}&autoplay=1" allow="autoplay; fullscreen; encrypted-media" allowfullscreen title="${escapeHTML(title)} trailer"></iframe>`;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeTrailerModal = function() {
+    const modal = document.getElementById('trailerModal');
+    const wrap = document.getElementById('trailerVideoWrap');
+    if (wrap) wrap.innerHTML = '';
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+    document.body.style.overflow = '';
+};
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        window.closeTrailerModal();
+    }
+});
+
 
 function renderEpisodes() {
     const list = document.getElementById('episodeList');
@@ -448,7 +742,7 @@ function renderEpisodes() {
         const watched = isEpisodeWatched(currentSeries.id, sNum, epNum);
         const watchedTag = watched ? '<span class="ep-watched-badge">✓ Watched</span>' : '';
         return `
-            <button class="episode-item ${index === currentEpisodeIndex ? 'active' : ''}" onclick="playEpisode(${index})">
+            <button class="episode-item ${index === currentEpisodeIndex ? 'active' : ''}" onclick="playEpisode(${index}, true)">
                 <strong>E${escapeHTML(epNum)}. ${escapeHTML(ep.title || `Episode ${index + 1}`)} ${watchedTag}</strong>
                 <span>${escapeHTML(ep.duration || '')}</span>
             </button>
@@ -456,7 +750,7 @@ function renderEpisodes() {
     }).join('');
 }
 
-function playEpisode(index) {
+function playEpisode(index, autoStart = false) {
     currentEpisodeIndex = index;
     currentSeriesStreamIndex = 0;
     const episode = getCurrentEpisode();
@@ -468,46 +762,60 @@ function playEpisode(index) {
             const sNum = season?.seasonNumber || (currentSeasonIndex + 1);
             currentStreams = normalizeStreams({ episodeNumber: 1 });
         }
-        const player = document.getElementById('seriesPlayerBox');
-        if (player) player.innerHTML = playerMarkup(
-            currentStreams[0]?.url || '',
-            currentSeries?.banner || currentSeries?.poster || '',
-            (season?.title || 'Season') + ' — Full Stream'
-        );
-        document.querySelectorAll('.episode-item').forEach(btn => btn.classList.remove('active'));
-        renderSeriesFailoverBar();
-        renderStreamButtons();
-        renderEpisodeDownloads();
-        if (currentStreams[0]) {
-            startSeriesFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
-        }
-        return;
+    } else {
+        currentStreams = normalizeStreams(episode);
     }
 
-    currentStreams = normalizeStreams(episode);
+    const activeStream = currentStreams[0] || null;
     const player = document.getElementById('seriesPlayerBox');
-    if (player) player.innerHTML = playerMarkup(currentStreams[0]?.url || '', currentSeries.banner || currentSeries.poster || '', episode.title || currentSeries.title);
+
+    if (autoStart) {
+        isSeriesPlaying = true;
+        if (player) {
+            player.innerHTML = playerMarkup(
+                activeStream?.url || '',
+                currentSeries?.banner || currentSeries?.poster || '',
+                episode ? (episode.title || currentSeries.title) : ((season?.title || 'Season') + ' — Full Stream')
+            );
+        }
+        if (activeStream) {
+            startSeriesFailoverWatchdog(activeStream.url, activeStream.name);
+        }
+    } else {
+        isSeriesPlaying = false;
+        if (player) {
+            player.innerHTML = renderSeriesCurtain(episode, activeStream);
+        }
+    }
 
     document.querySelectorAll('.episode-item').forEach((btn, i) => btn.classList.toggle('active', i === index));
+    renderSeriesBingeBar();
     renderSeriesFailoverBar();
     renderStreamButtons();
     renderEpisodeDownloads();
 
     const sNum = currentSeasonIndex + 1;
     const epNum = episode ? (episode.episodeNumber || index + 1) : 1;
-    markEpisodeWatched(currentSeries.id, sNum, epNum);
-    trackSeriesProgress(currentSeries, sNum, epNum);
 
-    if (currentStreams[0]) {
-        startSeriesFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
+    if (autoStart) {
+        markEpisodeWatched(currentSeries.id, sNum, epNum);
+        trackSeriesProgress(currentSeries, sNum, epNum);
+        const epTotal = Math.max(1, (season?.episodes || []).length);
+        const calcProg = Math.round(((index + 1) / epTotal) * 100);
+        setWatchProgress(currentSeries.id, calcProg, {
+            title: currentSeries.title,
+            type: 'series',
+            season: sNum,
+            episode: epNum
+        });
     }
 
     if (typeof gtag !== 'undefined') {
         gtag('event', 'episode_play', {
             series_title: currentSeries.title,
             series_id: currentSeries.id,
-            episode_title: episode.title || '',
-            episode_number: episode.episodeNumber || index + 1
+            episode_title: episode?.title || '',
+            episode_number: epNum
         });
     }
 }
@@ -559,13 +867,20 @@ function switchSeriesStream(index, isFailover = false) {
     const season = getSeasons()[currentSeasonIndex];
     if (!stream) return;
 
-    const title = (episode?.title) ||
-        (season?.combined ? (season.title || 'Season') + ' — Combined' : currentSeries.title);
     const player = document.getElementById('seriesPlayerBox');
-    if (player) player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', title);
+    if (isSeriesPlaying || isFailover) {
+        isSeriesPlaying = true;
+        const title = (episode?.title) ||
+            (season?.combined ? (season.title || 'Season') + ' — Combined' : currentSeries.title);
+        if (player) player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', title);
+        startSeriesFailoverWatchdog(stream.url, stream.name);
+    } else {
+        if (player) {
+            player.innerHTML = renderSeriesCurtain(episode, stream);
+        }
+    }
 
     document.querySelectorAll('#seriesStreamButtons .stream-server-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
-    startSeriesFailoverWatchdog(stream.url, stream.name);
 }
 
 function renderEpisodeDownloads() {

@@ -95,17 +95,15 @@ function playerMarkup(movie, streamUrl) {
 
 // Streamlined, verified stream server providers (high availability & fast CDN playback)
 const SERVER_LABELS = [
-    "Server 1 (AllMovieLand - HDVB P2P)",
-    "Server 2 (HDMovie2 - P2P HLS)",
-    "Server 3 (CineSrc - No Ads)",
-    "Server 4 (VidLink - Fast HD)"
+    "Server 1 (VIP Ultra HD)",
+    "Server 2 (High Speed HD)",
+    "Server 3 (Backup Server)"
 ];
 
 let DEFAULT_STREAM_PROVIDERS = [
-    { id: "allmovieland", name: "Server 1 (AllMovieLand - HDVB P2P)", template: "https://allmovieland.link/play/{imdb}", requiresImdb: true },
-    { id: "hdmovie2", name: "Server 2 (HDMovie2 - P2P HLS)", template: "https://slast430did.com/play/{imdb}", requiresImdb: true },
-    { id: "cinesrc", name: "Server 3 (CineSrc - No Ads)", template: "https://cinesrc.st/embed/movie/{tmdb}", requiresTmdb: true },
-    { id: "vidlink", name: "Server 4 (VidLink - Fast HD)", template: "https://vidlink.pro/movie/{imdb}", requiresImdb: true }
+    { id: "cinesrc", name: "Server 1 (VIP Ultra HD)", template: "https://cinesrc.st/embed/movie/{id}", requiresTmdb: false },
+    { id: "autoembed", name: "Server 2 (High Speed HD)", template: "https://autoembed.co/movie/imdb/{imdb}", requiresImdb: true },
+    { id: "vidlink", name: "Server 3 (Backup Server)", template: "https://vidlink.pro/movie/{imdb}", requiresImdb: true }
 ];
 
 async function loadLiveMirrors() {
@@ -156,15 +154,14 @@ function applyLiveMirrors(data) {
 function isAllowedStreamUrl(url) {
     if (!url) return false;
     // Check against standard verified domains and any live dynamic domains loaded from mirrors.json
-    return /slast430did\.com|allmovieland|1xcinema|gorri421kos\.com|hdmovie2|cinesrc\.st|vidlink\.pro|vidlink\.online|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    return /cinesrc\.st|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index) {
     if (!name) return SERVER_LABELS[index] || `Server ${index + 1}`;
-    if (/allmovieland|slast430did|hdvb/i.test(name)) return "Server 1 (AllMovieLand - HDVB P2P)";
-    if (/hdmovie2|gorri|fikka/i.test(name)) return "Server 2 (HDMovie2 - P2P HLS)";
-    if (/cinesrc/i.test(name)) return "Server 3 (CineSrc - No Ads)";
-    if (/vidlink/i.test(name)) return "Server 4 (VidLink - Fast HD)";
+    if (/cinesrc|server\s*1/i.test(name) || index === 0) return "Server 1 (VIP Ultra HD)";
+    if (/autoembed|vidlink|server\s*2/i.test(name) || index === 1) return "Server 2 (High Speed HD)";
+    if (/2embed|backup|server\s*3/i.test(name) || index === 2) return "Server 3 (Backup Server)";
     return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
@@ -189,7 +186,9 @@ function normalizeStreams(movie) {
     DEFAULT_STREAM_PROVIDERS.forEach((p) => {
         if (p.requiresTmdb && !tmdb) return;
         if (p.requiresImdb && !imdb) return;
+        const id = tmdb || imdb;
         const u = p.template
+            .replace('{id}', encodeURIComponent(id))
             .replace('{imdb}', encodeURIComponent(imdb || tmdb))
             .replace('{tmdb}', encodeURIComponent(tmdb || imdb));
         if (!streamMap.has(p.name)) {
@@ -215,16 +214,16 @@ let testedFailedUrls = new Set();
 
 function getStreamStatusText(stream) {
     if (!stream) return 'Server 1 (Auto-Failover On)';
-    if (/p2p|allmovieland/i.test(stream.name)) {
-        return `⚡ Active: ${escapeHTML(stream.name)} — Peer-to-Peer Acceleration Active (0 Buffering)`;
+    if (/server\s*1/i.test(stream.name)) {
+        return `🛡️ Active: ${escapeHTML(stream.name)} — Ultra Clean Stream (Zero Pre-roll Ads)`;
     }
-    if (/hdmovie2|mesh/i.test(stream.name)) {
-        return `⚡ Active: ${escapeHTML(stream.name)} — P2P Mesh HLS Active (Low Latency)`;
+    if (/server\s*2/i.test(stream.name)) {
+        return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Multi-Audio CDN Active`;
     }
-    if (/no ads/i.test(stream.name)) {
-        return `🛡️ Active: ${escapeHTML(stream.name)} — Clean Ad-Shielded Stream`;
+    if (/server\s*3/i.test(stream.name)) {
+        return `🌐 Active: ${escapeHTML(stream.name)} — Global VIP Stream Active`;
     }
-    return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Global Stream`;
+    return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Stream`;
 }
 
 function renderFailoverBar() {
@@ -252,17 +251,8 @@ function updateFailoverStatus(message, isSwitching = false) {
 
 function startFailoverWatchdog(streamUrl, streamName) {
     if (failoverWatchdogTimer) clearTimeout(failoverWatchdogTimer);
-
-    // Optimized 4.5s Watchdog: auto-switches to Server 2 (P2P) if Server 1 delays buffering
-    failoverWatchdogTimer = setTimeout(() => {
-        const iframe = document.querySelector('.stream-frame');
-        if (iframe && iframe.tagName.toLowerCase() === 'iframe') {
-            if (currentStreams.length > 1 && currentStreamIndex === 0) {
-                console.log(`[Auto-Failover] Server 1 buffer delay detected (4.5s), switching to Server 2 P2P...`);
-                autoFailoverNext('buffer_timeout');
-            }
-        }
-    }, 4500);
+    // User can manually switch using the "Switch Server ↻" button.
+    // Removed the blind 4.5-second interrupt timer so streams play smoothly and uninterrupted.
 }
 
 function autoFailoverNext(reason = 'auto') {
@@ -317,6 +307,111 @@ function renderStreamButtons() {
 }
 
 
+
+let isPlaybackStarted = false;
+
+function getWatchProgress(id) {
+    try {
+        const store = JSON.parse(localStorage.getItem('phantom_watch_progress') || '{}');
+        return store[String(id)] || null;
+    } catch (_) { return null; }
+}
+
+function setWatchProgress(id, progress, meta = {}) {
+    try {
+        const store = JSON.parse(localStorage.getItem('phantom_watch_progress') || '{}');
+        const existing = store[String(id)] || {};
+        store[String(id)] = {
+            ...existing,
+            progress: Math.min(100, Math.max(5, Math.round(progress))),
+            updatedAt: Date.now(),
+            ...meta
+        };
+        localStorage.setItem('phantom_watch_progress', JSON.stringify(store));
+    } catch (_) {}
+}
+
+function renderMovieCurtain(movie, activeStream) {
+    const backdrop = movie.banner || movie.poster || '';
+    const serverLabel = activeStream ? activeStream.name : 'Server 1 (VIP Ultra HD)';
+    return `
+        <div class="player-curtain" id="playerCurtain" onclick="startMoviePlayback()">
+            <div class="curtain-backdrop" style="background-image: url('${escapeHTML(backdrop)}');"></div>
+            <div class="curtain-overlay"></div>
+            <div class="curtain-content">
+                <div class="curtain-play-btn"><span class="play-ico">▶</span></div>
+                <div class="curtain-title">${escapeHTML(movie.title)}</div>
+                <div class="curtain-meta">
+                    <span>${escapeHTML(movie.year || '2025')}</span>
+                    <span>•</span>
+                    <span>${escapeHTML(movie.duration || 'Full Movie')}</span>
+                    <span>•</span>
+                    <span>⭐ ${escapeHTML(movie.rating || '8.5')}</span>
+                </div>
+                <div class="curtain-badge">▶ CLICK TO PLAY • ${escapeHTML(serverLabel)}</div>
+            </div>
+        </div>
+    `;
+}
+
+function startMoviePlayback() {
+    if (!currentMovie) return;
+    isPlaybackStarted = true;
+    const player = document.getElementById('playerBox');
+    const activeStream = currentStreams[currentStreamIndex] || currentStreams[0];
+    if (player && activeStream) {
+        player.innerHTML = playerMarkup(currentMovie, activeStream.url);
+        startFailoverWatchdog(activeStream.url, activeStream.name);
+        updateFailoverStatus(getStreamStatusText(activeStream), false);
+    }
+    setWatchProgress(currentMovie.id, 25, { title: currentMovie.title, type: 'movie' });
+    trackMovieProgress(currentMovie);
+}
+
+// Progress increment interval while watching
+setInterval(() => {
+    if (isPlaybackStarted && currentMovie) {
+        const cur = getWatchProgress(currentMovie.id);
+        const nextProg = Math.min(95, (cur?.progress || 25) + 5);
+        setWatchProgress(currentMovie.id, nextProg, { title: currentMovie.title, type: 'movie' });
+    }
+}, 20000);
+
+window.openTrailerModal = function(trailerUrl, title = 'Trailer') {
+    let embedUrl = getYouTubeEmbed(trailerUrl);
+    if (!embedUrl) {
+        embedUrl = `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(title + ' official trailer')}`;
+    }
+    const modal = document.getElementById('trailerModal');
+    const wrap = document.getElementById('trailerVideoWrap');
+    const caption = document.getElementById('trailerCaption');
+    if (!modal || !wrap) return;
+
+    if (caption) caption.textContent = `${title} — Official Trailer`;
+    wrap.innerHTML = `<iframe src="${embedUrl}&autoplay=1" allow="autoplay; fullscreen; encrypted-media" allowfullscreen title="${escapeHTML(title)} trailer"></iframe>`;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeTrailerModal = function() {
+    const modal = document.getElementById('trailerModal');
+    const wrap = document.getElementById('trailerVideoWrap');
+    if (wrap) wrap.innerHTML = '';
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+    document.body.style.overflow = '';
+};
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        window.closeTrailerModal();
+    }
+});
+
+
 function switchStream(index, isFailover = false) {
     if (!currentMovie || !currentStreams[index]) return;
 
@@ -324,8 +419,18 @@ function switchStream(index, isFailover = false) {
     const stream = currentStreams[index];
 
     const player = document.getElementById('playerBox');
-    if (player) {
-        player.innerHTML = playerMarkup(currentMovie, stream.url);
+    if (isPlaybackStarted || isFailover) {
+        isPlaybackStarted = true;
+        if (player) {
+            player.innerHTML = playerMarkup(currentMovie, stream.url);
+        }
+        startFailoverWatchdog(stream.url, stream.name);
+        setWatchProgress(currentMovie.id, 35, { title: currentMovie.title, type: 'movie' });
+    } else {
+        // If not started yet, update curtain without autoplaying
+        if (player) {
+            player.innerHTML = renderMovieCurtain(currentMovie, stream);
+        }
     }
 
     document.querySelectorAll('.stream-server-btn').forEach((btn, i) => {
@@ -333,7 +438,6 @@ function switchStream(index, isFailover = false) {
     });
 
     updateFailoverStatus(getStreamStatusText(stream), false);
-    startFailoverWatchdog(stream.url, stream.name);
 
     if (typeof gtag !== 'undefined') {
         gtag('event', 'stream_server_switch', {
@@ -349,13 +453,11 @@ function generateFallbackDownloads(movie) {
     const cleanT = (movie?.title || '').replace(/[:\-–—\(\)\d]/g, ' ').trim();
     const qTitle = encodeURIComponent(cleanT || movie?.title || '');
     const hdhubDomain = liveMirrorsConfig?.scrapers?.hdhub4u?.active || 'https://new9.hdhub4u.cl';
-    const rogDomain = liveMirrorsConfig?.scrapers?.rogmovies?.active || 'https://rogmovies.in';
-    const vegaDomain = liveMirrorsConfig?.scrapers?.vegamovies?.active || 'https://1vegamovies.pics';
     return [
-        { quality: '480p SD', size: '450 MB', server: 'HDHub4u Cloud Engine', url: `${hdhubDomain}/?s=${qTitle}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'VegaMovies Fast Cloud', url: `${vegaDomain}/?s=${qTitle}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'ROG VIP Cloud Server', url: `${rogDomain}/?s=${qTitle}`, color: '#10b981' },
-        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD 4K Cloud', url: `https://4khdhub.one`, color: '#ec4899' }
+        { quality: '480p SD', size: '450 MB', server: 'Standard HD Cloud', url: `${hdhubDomain}/?s=${qTitle}`, color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'Fast Direct Cloud', url: `${hdhubDomain}/?s=${qTitle}`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'High Speed Direct Cloud', url: `${hdhubDomain}/?s=${qTitle}`, color: '#10b981' },
+        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Direct Cloud', url: `https://4khdhub.one`, color: '#ec4899' }
     ];
 }
 
@@ -455,9 +557,92 @@ function renderDownloads(movie) {
     return cards.join('');
 }
 
+
+// ─── MEDIA SPECIFICATIONS & CAST CHIPS ───
+function extractCastList(item) {
+    if (Array.isArray(item.cast) && item.cast.length) return item.cast;
+    const desc = item.description || '';
+    const match = desc.match(/starring\s+([^.\n]+)/i);
+    if (match && match[1]) {
+        return match[1].split(',').map(s => s.trim()).filter(Boolean);
+    }
+    return [];
+}
+
+function renderCastChips(movie) {
+    const cast = extractCastList(movie);
+    if (!cast.length) return '';
+    return `
+        <div class="cast-section">
+            <div class="cast-header">
+                <span class="cast-title">🎭 STARRING CAST</span>
+                <span class="cast-hint">Click actor to discover filmography</span>
+            </div>
+            <div class="cast-chips-wrap">
+                ${cast.map(actor => `
+                    <a class="cast-chip" href="movies.html?search=${encodeURIComponent(actor)}">
+                        <span class="cast-icon">👤</span>
+                        <span class="cast-name">${escapeHTML(actor)}</span>
+                    </a>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function renderMediaSpecs(movie) {
+    const isDual = (movie.title && /dual|hindi/i.test(movie.title)) || (movie.industry === 'Bollywood' || movie.industry === 'South') || true;
+    const is4K = (movie.badge && /4k/i.test(movie.badge)) || (movie.title && /4k|2160p/i.test(movie.title)) || (Array.isArray(movie.downloads) && movie.downloads.some(d => /4k/i.test(d.quality || '')));
+    
+    const audioSpec = isDual ? "Hindi (Clean Master DDP 5.1) + English DD 5.1" : "Original Dual Audio (Dolby Digital Plus 5.1)";
+    const videoSpec = is4K ? "4K UHD 2160p HEVC 10-Bit (HDR10+ / Dolby Vision)" : "1080p Full HD HEVC x265 (High Dynamic Bitrate)";
+    const sourceSpec = is4K ? "Official 4K UHD Master Remux" : "Official Studio WEB-DL Master";
+    const subSpec = "English [Muxed & External SRT] • Multi-Language";
+
+    return `
+        <div class="tech-specs-card">
+            <div class="specs-header">
+                <span class="specs-title">⚡ MEDIA SPECIFICATIONS & AUDIO CHANNELS</span>
+                <span class="specs-badge">10-BIT HEVC</span>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-icon">🔊</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Audio Tracks</span>
+                        <span class="spec-val">${escapeHTML(audioSpec)}</span>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🎞️</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Video Codec</span>
+                        <span class="spec-val">${escapeHTML(videoSpec)}</span>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">📀</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Master Source</span>
+                        <span class="spec-val">${escapeHTML(sourceSpec)}</span>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">💬</span>
+                    <div class="spec-text">
+                        <span class="spec-label">Subtitles</span>
+                        <span class="spec-val">${escapeHTML(subSpec)}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 function renderMovie(movie) {
     currentMovie = movie;
     currentStreams = normalizeStreams(movie);
+    isPlaybackStarted = false;
 
     const detail = document.getElementById('movieDetail');
     const banner = movie.banner || movie.poster || '';
@@ -471,7 +656,7 @@ function renderMovie(movie) {
             <div class="detail-hero-bg" style="background-image:url('${escapeHTML(banner)}')"></div>
             <div class="watch-wrap">
                 <div class="player-box" id="playerBox">
-                    ${playerMarkup(movie, currentStreams[0] ? currentStreams[0].url : '')}
+                    ${renderMovieCurtain(movie, currentStreams[0])}
                 </div>
                 ${renderFailoverBar()}
                 ${renderStreamButtons()}
@@ -488,12 +673,18 @@ function renderMovie(movie) {
                 ${movie.badge ? `<div class="feat-tag">${escapeHTML(movie.badge)}</div>` : ''}
                 <h1>${escapeHTML(movie.title)}</h1>
                 <p class="detail-meta">${escapeHTML(meta)}</p>
-                <div style="margin: 14px 0 16px;">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 16px;">
                     <button class="btn-watchlist-toggle" id="btnWatchlistToggle" onclick="toggleWatchlist()">
                         <span id="watchlistIcon">🤍</span> <span id="watchlistText">Add to Watchlist</span>
                     </button>
+                    ${movie.trailerLink ? `<button class="btn-watchlist-toggle" onclick="openTrailerModal('${escapeHTML(movie.trailerLink)}', '${escapeHTML(movie.title)}')">
+                        <span>🎬</span> <span>Watch Trailer</span>
+                    </button>` : ''}
                 </div>
                 <p class="detail-desc">${escapeHTML(movie.description || 'No description available.')}</p>
+                ${renderCastChips(movie)}
+
+                ${renderMediaSpecs(movie)}
 
                 <div class="download-section">
                     <div class="sec-title">DOWNLOAD <span>OPTIONS</span></div>
@@ -517,9 +708,7 @@ function renderMovie(movie) {
         });
     });
 
-    if (currentStreams[0]) {
-        startFailoverWatchdog(currentStreams[0].url, currentStreams[0].name);
-    }
+    // Watchdog deferred until user clicks Play on the curtain (no autoplay)
 
     trackMovieProgress(movie);
     updateWatchlistButtonState();

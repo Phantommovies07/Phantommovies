@@ -174,17 +174,50 @@ function hideLoadingScreen() {
     }
 }
 
-// ─── AFTER MOVIES LOADED ───
-function afterMoviesLoaded() {
-    // Update hero exact counts
+function animateHeroCounter(elementId, targetValue, duration = 1200) {
+    const el = document.getElementById(elementId);
+    if (!el || typeof targetValue !== 'number') return;
+    const startTime = performance.now();
+    function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const current = Math.floor(easeOut * targetValue);
+        el.textContent = current.toLocaleString();
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        } else {
+            el.textContent = targetValue.toLocaleString();
+        }
+    }
+    requestAnimationFrame(step);
+}
+
+function updateHeroRealtimeStats() {
+    const totalCount = allMovies.length;
     const movieCount = allMovies.filter(m => m.type !== 'series').length;
     const seriesCount = allMovies.filter(m => m.type === 'series').length;
-    const heroMoviesCountEl = document.getElementById('heroMoviesCount');
-    const heroSeriesCountEl = document.getElementById('heroSeriesCount');
-    const heroCountEl = document.getElementById('heroCount');
-    if (heroMoviesCountEl) heroMoviesCountEl.textContent = movieCount + '+';
-    if (heroSeriesCountEl) heroSeriesCountEl.textContent = seriesCount + '+';
-    if (heroCountEl) heroCountEl.textContent = allMovies.length + '+';
+    const fourKCount = allMovies.filter(m => 
+        (m.badge && /4k/i.test(m.badge)) || 
+        (m.title && /4k|2160p/i.test(m.title)) || 
+        (Array.isArray(m.downloads) && m.downloads.some(d => /4k|2160p/i.test(d.quality || '')))
+    ).length;
+    const torrentCount = allMovies.filter(m => Boolean(m.torrent && m.torrent.magnet)).length;
+
+    animateHeroCounter('heroTotalCount', totalCount, 1200);
+    animateHeroCounter('hero4KCount', fourKCount, 1200);
+    animateHeroCounter('heroTorrentCount', torrentCount, 1200);
+
+    const labelEl = document.getElementById('heroTotalLabel');
+    if (labelEl) {
+        labelEl.textContent = `Combined (${movieCount} Movies • ${seriesCount} Series)`;
+    }
+}
+
+// ─── AFTER MOVIES LOADED ───
+function afterMoviesLoaded() {
+    // Update hero combined realtime counter
+    updateHeroRealtimeStats();
     
     // Set featured movie
     const feat = allMovies.find(m => m.featured) || allMovies[0];
@@ -196,7 +229,34 @@ function afterMoviesLoaded() {
     renderWatchlist();
     renderTrending();
     renderHeroSlider();
-    renderMovies(allMovies);
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+    const pageType = window.PHANTOM_PAGE_TYPE || 'home';
+
+    if (searchParam) {
+        const q = searchParam.trim().toLowerCase();
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) searchInput.value = searchParam;
+        const matches = allMovies.filter(m =>
+            (m.title || '').toLowerCase().includes(q) ||
+            (m.genre || '').toLowerCase().includes(q) ||
+            (m.category || '').toLowerCase().includes(q) ||
+            (m.description || '').toLowerCase().includes(q)
+        );
+        renderMovies(matches);
+        const movieSec = document.getElementById('movies');
+        if (movieSec) movieSec.scrollIntoView({ behavior: 'smooth' });
+    } else if (pageType === 'movies') {
+        const moviesList = allMovies.filter(m => m.type !== 'series');
+        renderMovies(moviesList);
+    } else if (pageType === 'series') {
+        const seriesList = allMovies.filter(m => m.type === 'series');
+        renderMovies(seriesList);
+    } else if (pageType === 'trending') {
+        renderDedicatedTrendingPage();
+    } else {
+        renderMovies(allMovies);
+    }
     setupRequestButton();
     initThemeToggle();
     initSearchToggle();
@@ -411,6 +471,12 @@ function downloadCurrentHeroSlide() {
     window.location.href = targetUrl;
 }
 
+function watchCurrentHeroTrailer() {
+    if (!heroSlidesList || !heroSlidesList[heroSlideIndex]) return;
+    const m = heroSlidesList[heroSlideIndex];
+    window.openTrailerModal(m.trailerLink, m.title);
+}
+
 function toggleHeroWatchlist() {
     if (!heroSlidesList || !heroSlidesList[heroSlideIndex]) return;
     const m = heroSlidesList[heroSlideIndex];
@@ -518,6 +584,13 @@ function applyCatalogSort(sortType) {
 
 function applyFiltersAndSort() {
     let result = [...allMovies];
+    const pageType = window.PHANTOM_PAGE_TYPE || 'home';
+
+    if (pageType === 'movies') {
+        result = result.filter(m => m.type !== 'series');
+    } else if (pageType === 'series') {
+        result = result.filter(m => m.type === 'series');
+    }
 
     // Primary Category Tab Filter
     if (currentCategoryFilter === 'movie') {
@@ -528,6 +601,18 @@ function applyFiltersAndSort() {
         result = result.filter(m => m.category === 'bollywood_new' || (m.industry === 'Bollywood' && (m.year >= 2022 || !m.year)) || (m.tags && m.tags.includes('bollywood_new')));
     } else if (currentCategoryFilter === 'south_new') {
         result = result.filter(m => m.category === 'south_new' || (m.industry === 'South' && (m.year >= 2022 || !m.year)) || (m.tags && m.tags.includes('south_new')));
+    } else if (currentCategoryFilter === 'hollywood') {
+        result = result.filter(m => m.industry === 'Hollywood' || (m.tags && m.tags.includes('hollywood')) || /dual audio|english/i.test(m.title));
+    } else if (currentCategoryFilter === 'netflix') {
+        result = result.filter(m => (m.tags && m.tags.includes('netflix')) || (m.description || '').toLowerCase().includes('netflix') || (m.category || '').toLowerCase().includes('netflix'));
+    } else if (currentCategoryFilter === 'prime') {
+        result = result.filter(m => (m.tags && m.tags.includes('prime')) || (m.description || '').toLowerCase().includes('prime') || (m.category || '').toLowerCase().includes('amazon'));
+    } else if (currentCategoryFilter === 'hotstar') {
+        result = result.filter(m => (m.tags && m.tags.includes('hotstar')) || (m.description || '').toLowerCase().includes('hotstar') || (m.category || '').toLowerCase().includes('hotstar'));
+    } else if (currentCategoryFilter === 'jiocinema') {
+        result = result.filter(m => (m.tags && m.tags.includes('jio')) || (m.description || '').toLowerCase().includes('jio') || (m.category || '').toLowerCase().includes('jio'));
+    } else if (currentCategoryFilter === 'sonyliv') {
+        result = result.filter(m => (m.tags && m.tags.includes('sonyliv')) || (m.description || '').toLowerCase().includes('sonyliv') || (m.category || '').toLowerCase().includes('sonyliv'));
     } else if (currentCategoryFilter === 'torrent') {
         result = result.filter(m => Boolean(m.torrent && m.torrent.magnet));
     } else if (currentCategoryFilter === 'trending') {
@@ -675,6 +760,28 @@ function setupScrollObserver(sentinel) {
     scrollObserver.observe(sentinel);
 }
 
+// ─── WATCH PROGRESS STORE ───
+function getWatchProgress(id) {
+    try {
+        const store = JSON.parse(localStorage.getItem('phantom_watch_progress') || '{}');
+        return store[String(id)] || null;
+    } catch (_) { return null; }
+}
+
+function setWatchProgress(id, progress, meta = {}) {
+    try {
+        const store = JSON.parse(localStorage.getItem('phantom_watch_progress') || '{}');
+        const existing = store[String(id)] || {};
+        store[String(id)] = {
+            ...existing,
+            progress: Math.min(100, Math.max(5, Math.round(progress))),
+            updatedAt: Date.now(),
+            ...meta
+        };
+        localStorage.setItem('phantom_watch_progress', JSON.stringify(store));
+    } catch (_) {}
+}
+
 // ─── MOVIE CARD TEMPLATE ───
 function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
     const badgeText = forceTrendingBadge ? 'TRENDING' : m.badge;
@@ -686,15 +793,27 @@ function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
     const isDual = (m.title && /dual|hindi/i.test(m.title)) || (m.tags && /dual|hindi/i.test(m.tags.join(' '))) || (m.industry === 'Bollywood' || m.industry === 'South');
     const is4K = (m.badge && /4k/i.test(m.badge)) || (m.title && /4k|2160p/i.test(m.title)) || (Array.isArray(m.downloads) && m.downloads.some(d => /4k|2160p/i.test(d.quality || '')));
     const hasTorrent = Boolean(m.torrent && m.torrent.magnet);
+    const isBluRay = (m.badge && /bluray|bdrip/i.test(m.badge)) || (m.title && /bluray|bdrip/i.test(m.title));
     const ratingTag = m.rating ? `<div class="card-pill-rating">⭐ ${m.rating}</div>` : '';
 
     const pills = [];
-    if (is4K) pills.push('<span class="card-pill card-pill-4k">4K UHD</span>');
-    if (hasTorrent) pills.push('<span class="card-pill card-pill-torrent">🧲 Torrent</span>');
+    if (is4K) {
+        pills.push('<span class="card-pill card-pill-4k">4K UHD</span>');
+    } else if (isBluRay) {
+        pills.push('<span class="card-pill card-pill-source">BluRay</span>');
+    } else {
+        pills.push('<span class="card-pill card-pill-source">WEB-DL</span>');
+    }
+    pills.push('<span class="card-pill card-pill-codec">HEVC</span>');
     if (isDual) pills.push('<span class="card-pill card-pill-dual">Dual Audio</span>');
+    if (hasTorrent) pills.push('<span class="card-pill card-pill-torrent">🧲 Torrent</span>');
 
     const pillStack = pills.length ? `<div class="card-pill-stack">${pills.join('')}</div>` : '';
     const rankEl = rankNumber ? `<div class="trending-rank-number">${rankNumber}</div>` : '';
+    const wp = getWatchProgress(m.id);
+    const progressBar = (wp && wp.progress > 0)
+        ? `<div class="card-progress-bar"><div class="card-progress-fill" style="width: ${wp.progress}%"></div></div>`
+        : '';
 
     return `<div class="movie-card" data-id="${m.id}">
         ${rankEl}
@@ -707,6 +826,7 @@ function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
             ${badge}
             ${ratingTag}
             ${pillStack}
+            ${progressBar}
         </div>
         <div class="movie-info">
             <div class="movie-name">${m.title}</div>
@@ -1175,3 +1295,253 @@ function renderPopupAd(code) {
         executeAdScripts(content);
     }, 1800);
 }
+
+
+// ═══════════════════════════════════════════════════════════════
+// FULL-SCREEN MOBILE SEARCH MODAL & APP NAVIGATION CONTROLLER
+// ═══════════════════════════════════════════════════════════════
+
+function safeEscapeHTML(str) {
+    if (!str) return '';
+    return String(str).replace(/[&<>"']/g, s => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    }[s]));
+}
+
+window.openSearchModal = function(initialQuery = '') {
+    const modal = document.getElementById('searchModal');
+    const input = document.getElementById('modalSearchInput');
+    if (!modal) return;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (input) {
+        if (initialQuery) {
+            input.value = initialQuery;
+            executeModalSearch(initialQuery);
+        } else if (input.value) {
+            executeModalSearch(input.value);
+        }
+        setTimeout(() => input.focus(), 80);
+    }
+};
+
+window.closeSearchModal = function() {
+    const modal = document.getElementById('searchModal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+};
+
+window.clearModalSearch = function() {
+    const input = document.getElementById('modalSearchInput');
+    const results = document.getElementById('modalSearchResults');
+    if (input) {
+        input.value = '';
+        input.focus();
+    }
+    if (results) {
+        results.innerHTML = '<div class="search-empty-prompt">Type title, actor, or genre above to search...</div>';
+    }
+};
+
+window.searchForTag = function(tag) {
+    const input = document.getElementById('modalSearchInput');
+    if (input) {
+        input.value = tag;
+        executeModalSearch(tag);
+        input.focus();
+    }
+};
+
+function executeModalSearch(query) {
+    const resultsEl = document.getElementById('modalSearchResults');
+    if (!resultsEl) return;
+    const q = (query || '').trim().toLowerCase();
+    if (!q) {
+        resultsEl.innerHTML = '<div class="search-empty-prompt">Type title, actor, or genre above to search...</div>';
+        return;
+    }
+
+    const matches = (allMovies || []).filter(m => 
+        (m.title || '').toLowerCase().includes(q) ||
+        (m.genre || '').toLowerCase().includes(q) ||
+        (m.category || '').toLowerCase().includes(q) ||
+        (m.description || '').toLowerCase().includes(q) ||
+        (Array.isArray(m.cast) && m.cast.some(c => String(c).toLowerCase().includes(q))) ||
+        (m.year && String(m.year).includes(q))
+    ).slice(0, 20);
+
+    if (!matches.length) {
+        resultsEl.innerHTML = `<div class="search-empty-prompt">No titles found for "<strong>${safeEscapeHTML(query)}</strong>".<br>Try searching for a different keyword.</div>`;
+        return;
+    }
+
+    resultsEl.innerHTML = matches.map(m => {
+        const isSeries = m.type === 'series';
+        const targetUrl = (isSeries ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(m.id);
+        const ratingStr = m.rating ? `⭐ ${m.rating}` : '⭐ 8.0';
+        const typeStr = isSeries ? '📺 Series' : '🎬 Movie';
+        const badgeStr = m.badge || (m.year ? `${m.year}` : 'HD');
+        const img = m.poster || m.banner || '';
+        return `
+            <div class="modal-result-item" onclick="location.href='${targetUrl}'">
+                <img class="modal-result-thumb" src="${safeEscapeHTML(img)}" alt="${safeEscapeHTML(m.title)}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 140%22 fill=%22%23222%22><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2224%22>🎬</text></svg>'">
+                <div class="modal-result-info">
+                    <div class="modal-result-title">${safeEscapeHTML(m.title)}</div>
+                    <div class="modal-result-meta">
+                        <span>${typeStr}</span>
+                        <span>•</span>
+                        <span>${ratingStr}</span>
+                        ${m.genre ? `<span>•</span><span>${safeEscapeHTML(m.genre)}</span>` : ''}
+                        <span class="modal-result-badge">${safeEscapeHTML(badgeStr)}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function initSearchModalListeners() {
+    const input = document.getElementById('modalSearchInput');
+    if (input && input.dataset.ready !== '1') {
+        input.dataset.ready = '1';
+        let debounceTimer;
+        input.addEventListener('input', function() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                executeModalSearch(this.value);
+            }, 100);
+        });
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearchModal();
+            }
+        });
+    }
+
+    // Connect top navbar search toggle button to modal on mobile or desktop
+    const searchToggleBtn = document.getElementById('searchToggle');
+    if (searchToggleBtn && searchToggleBtn.dataset.modalBound !== '1') {
+        searchToggleBtn.dataset.modalBound = '1';
+        searchToggleBtn.addEventListener('click', (e) => {
+            // On mobile (< 768px), immediately open full-screen search modal
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                openSearchModal();
+            }
+        });
+    }
+
+    // Keyboard shortcut: Press "/" to search, Escape to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+            e.preventDefault();
+            openSearchModal();
+        } else if (e.key === 'Escape') {
+            closeSearchModal();
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initSearchModalListeners);
+
+function renderDedicatedTrendingPage() {
+    const grid = document.getElementById('trendingGridPage') || document.getElementById('movieGrid');
+    if (!grid) return;
+    const trendingList = getTrendingMovies(24);
+    if (!trendingList.length) {
+        grid.innerHTML = '<div class="empty-state">No trending items available right now.</div>';
+        return;
+    }
+    grid.innerHTML = trendingList.map((m, idx) => {
+        const isSeries = m.type === 'series';
+        const targetUrl = (isSeries ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(m.id);
+        const rank = idx + 1;
+        const img = m.poster || m.banner || '';
+        const rankColor = rank === 1 ? '#ffd70f' : (rank === 2 ? '#c0c0c0' : (rank === 3 ? '#cd7f32' : 'rgba(91, 196, 245, 0.9)'));
+        const wp = getWatchProgress(m.id);
+        const progressBar = (wp && wp.progress > 0)
+            ? `<div class="card-progress-bar"><div class="card-progress-fill" style="width: ${wp.progress}%"></div></div>`
+            : '';
+        return `
+            <div class="movie-card fade-in" data-id="${m.id}" onclick="location.href='${targetUrl}'" style="position:relative;">
+                <div class="trending-rank-badge" style="background: ${rankColor}; color: #000;">#${rank}</div>
+                <div class="card-poster">
+                    <img src="${safeEscapeHTML(img)}" alt="${safeEscapeHTML(m.title)}" loading="lazy">
+                    <div class="card-play-btn"><span class="play-ico"></span></div>
+                    <span class="card-quick-stream">${isSeries ? 'Watch Series' : 'Stream Now'}</span>
+                    ${progressBar}
+                </div>
+                <div class="card-info">
+                    <div class="card-title">${safeEscapeHTML(m.title)}</div>
+                    <div class="card-meta">
+                        <span>⭐ ${m.rating || '8.5'}</span>
+                        <span>•</span>
+                        <span class="card-pill card-pill-source" style="padding: 1px 6px; font-size: 10px;">WEB-DL</span>
+                        <span class="card-pill card-pill-codec" style="padding: 1px 6px; font-size: 10px;">HEVC</span>
+                        <span style="color:#5bc4f5;">${isSeries ? 'Series' : 'Movie'}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+
+// ═══════════════════════════════════════════════════════════════
+// INSTANT TRAILER LIGHTBOX MODAL CONTROLLER
+// ═══════════════════════════════════════════════════════════════
+
+function getYouTubeEmbed(url) {
+    if (!url) return '';
+    try {
+        const u = new URL(url);
+        const host = u.hostname.replace(/^www\./, '').toLowerCase();
+        let id = '';
+        if (host === 'youtu.be') {
+            id = u.pathname.slice(1).split('/')[0] || '';
+        } else if (host === 'youtube.com' || host === 'm.youtube.com' || host === 'music.youtube.com') {
+            id = u.searchParams.get('v')
+                || (u.pathname.startsWith('/embed/') ? (u.pathname.split('/')[2] || '') : '');
+        }
+        if (id && !/^[A-Za-z0-9_-]{5,20}$/.test(id)) id = '';
+        return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : '';
+    } catch (_) {
+        return '';
+    }
+}
+
+window.openTrailerModal = function(trailerUrl, title = 'Trailer') {
+    let embedUrl = getYouTubeEmbed(trailerUrl);
+    if (!embedUrl) {
+        embedUrl = `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(title + ' official trailer')}`;
+    }
+    const modal = document.getElementById('trailerModal');
+    const wrap = document.getElementById('trailerVideoWrap');
+    const caption = document.getElementById('trailerCaption');
+    if (!modal || !wrap) return;
+
+    if (caption) caption.textContent = `${title} — Official Trailer`;
+    wrap.innerHTML = `<iframe src="${embedUrl}&autoplay=1" allow="autoplay; fullscreen; encrypted-media" allowfullscreen title="${safeEscapeHTML(title)} trailer"></iframe>`;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeTrailerModal = function() {
+    const modal = document.getElementById('trailerModal');
+    const wrap = document.getElementById('trailerVideoWrap');
+    if (wrap) wrap.innerHTML = '';
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+    document.body.style.overflow = '';
+};

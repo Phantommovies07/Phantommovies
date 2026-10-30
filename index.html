@@ -1,271 +1,337 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Phantom Movies - Stream Unlimited Movies & Shows</title>
-<meta name="description" content="Stream thousands of blockbusters, indie gems, and exclusive originals in stunning 4K quality.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phantom Movies - Stream Unlimited Movies & Web Series</title>
+  <meta name="description"
+    content="Stream thousands of blockbusters, indie gems, and exclusive originals in stunning 4K and 1080p quality.">
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XND5TTDN7Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XND5TTDN7Z', {
-    'send_page_view': true
-  });
-</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XND5TTDN7Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XND5TTDN7Z', {
+      'send_page_view': true
+    });
+  </script>
 
-<!-- Resource Hints & Preconnect -->
-<link rel="preconnect" href="https://m.media-amazon.com" crossorigin>
-<link rel="dns-prefetch" href="https://m.media-amazon.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Resource Hints & Preconnect -->
+  <link rel="preconnect" href="https://m.media-amazon.com" crossorigin>
+  <link rel="dns-prefetch" href="https://m.media-amazon.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"/>
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet" />
 
-<!-- Main CSS -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0f1422">
-<script src="js/ads-loader.js"></script>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f1422">
+  <script src="js/ads-loader.js"></script>
 
+  <script>
+    window.PHANTOM_PAGE_TYPE = 'home';
+  </script>
 </head>
+
 <body>
 
-<div class="loading-screen" id="loadingScreen">
-  <div class="loading-logo">PHANTOM<span>MOVIES</span></div>
-  <div class="loading-bar"><div class="loading-fill"></div></div>
-</div>
-
-<div class="toast" id="toast"></div>
-
-<!-- Navigation -->
-<nav id="mainNav">
- <div class="logo" onclick="scrollTo(0,0)">
-   <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
- </div>
- <ul class="nav-links">
-   <li><a onclick="smoothScroll('#movies')">Browse</a></li>
-   <li><a onclick="smoothScroll('#trendingSection')">Trending</a></li>
-   <li><a onclick="smoothScroll('#categoriesBlock')">Categories</a></li>
-   <li><a onclick="smoothScroll('#requestSection')">Request</a></li>
- </ul>
- <div class="nav-right">
-   <button class="pwa-install-btn" id="pwaInstallBtn" type="button" title="Install App">📲 App</button>
-   <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
-   <div class="search-wrap">
-     <button class="search-toggle" id="searchToggle" type="button" title="Search">🔍</button>
-     <input class="search-input" id="searchInput" type="text" placeholder="Search movies & series..."/>
-     <div class="search-results" id="searchResults"></div>
-   </div>
- </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero" id="heroSection">
- <div class="hero-bg" id="heroBackdrop"></div>
- <div class="hero-bg-overlay"></div>
- <div class="mobile-spotlight-stack" id="mobileSpotlightStack"></div>
- <div class="hero-content" id="heroContent">
-   <div class="hero-tag" id="heroTag">🔥 Now Streaming</div>
-   <h1 id="heroTitle">WATCH<br>WITHOUT<br><em>limits</em></h1>
-   <div class="hero-meta-row" id="heroMetaRow" style="display:none;">
-     <span class="meta-pill meta-rating" id="heroRating">⭐ 8.8</span>
-     <span class="meta-pill" id="heroYear">2024</span>
-     <span class="meta-pill" id="heroDuration">2h 15m</span>
-     <span class="meta-pill meta-badge" id="heroQuality">4K UHD</span>
-     <span class="meta-pill meta-badge" id="heroTorrentBadge" style="display:none;">🧲 P2P Fast</span>
-   </div>
-   <p class="hero-desc" id="heroDesc">Stream thousands of blockbusters, indie gems, and exclusive originals in stunning quality — anytime, anywhere.</p>
-   <div class="hero-actions">
-     <button class="btn-primary" id="heroPlayBtn" onclick="watchCurrentHeroSlide()">
-       <span class="play-ico"></span> Start Watching
-     </button>
-     <button class="btn-secondary-main" id="heroDlBtn" onclick="downloadCurrentHeroSlide()">
-       <span>⬇ Fast Download / Magnet</span>
-     </button>
-     <button class="btn-secondary-main btn-icon-only" id="heroWatchlistBtn" onclick="toggleHeroWatchlist()" title="Add to Watchlist">
-       <span id="heroWatchlistIcon">🔖</span>
-     </button>
-   </div>
-   <div class="hero-indicators" id="heroIndicators"></div>
-   <div class="hero-stats">
-     <div class="stat">
-       <div class="stat-num" id="heroMoviesCount">0+</div>
-       <div class="stat-label">Movies</div>
-     </div>
-     <div class="stat">
-       <div class="stat-num" id="heroSeriesCount">0+</div>
-       <div class="stat-label">Web Series</div>
-     </div>
-     <div class="stat">
-       <div class="stat-num" id="heroCount">0+</div>
-       <div class="stat-label">Total Titles</div>
-     </div>
-   </div>
- </div>
- <div class="hero-slider-wrap">
-   <div class="hero-slider-head">
-     <span>Top Trending</span>
-     <div>
-       <button class="slider-btn" onclick="moveHeroSlide(-1)">‹</button>
-       <button class="slider-btn" onclick="moveHeroSlide(1)">›</button>
-     </div>
-   </div>
-   <div class="hero-slider" id="heroSlider">
-     <div class="empty-state">Loading trending...</div>
-   </div>
- </div>
-</section>
-
-
-<!-- Continue Watching Shelf -->
-<section class="shelf-section fade-in" id="continueWatchingSection" style="display:none;">
- <div class="sec-header">
-   <div class="sec-title">CONTINUE <span>WATCHING</span></div>
-   <button class="btn-secondary-main" onclick="clearContinueWatching()" style="font-size:11px;padding:4px 12px;">Clear All</button>
- </div>
- <div class="shelf-scroll-row" id="continueWatchingRow"></div>
-</section>
-
-<!-- My Watchlist Shelf -->
-<section class="shelf-section fade-in" id="watchlistSection" style="display:none;">
- <div class="sec-header">
-   <div class="sec-title">MY <span>WATCHLIST</span></div>
-   <button class="btn-secondary-main" onclick="clearWatchlist()" style="font-size:11px;padding:4px 12px;">Clear All</button>
- </div>
- <div class="shelf-scroll-row" id="watchlistRow"></div>
-</section>
-
-<!-- Trending Section -->
-<section id="trendingSection" class="trending-section">
- <div class="sec-header">
-   <div class="sec-title">TOP 10 <span>TRENDING NOW</span></div>
-   <button class="btn-secondary-main" onclick="smoothScroll('#movies')">Browse All</button>
- </div>
- <div class="movie-grid fade-in" id="trendingGrid">
-   <div class="empty-state">🔥 Loading trending...</div>
- </div>
-</section>
-
-<!-- Featured Movie -->
-<div class="featured fade-in" id="featuredSection">
- <div class="feat-poster" id="featPosterEl"></div>
- <div class="feat-info">
-   <div class="feat-tag">⭐ Featured</div>
-   <div class="feat-title" id="featTitle">LOADING...</div>
-   <p class="feat-desc" id="featDesc">Loading...</p>
-   <div class="feat-actions">
-     <button class="btn-primary" onclick="watchFeatured()">
-       <span class="play-ico"></span> Watch Now
-     </button>
-   </div>
- </div>
-</div>
-
-<!-- Movies Section -->
-<section id="movies">
- <div class="sec-header">
-   <div class="sec-title">EXPLORE <span>CATALOG</span></div>
-   <div class="sort-wrap">
-     <label for="catalogSort" style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-right: 6px;">Sort By:</label>
-     <select id="catalogSort" class="catalog-sort-select" onchange="applyCatalogSort(this.value)">
-       <option value="popular">🔥 Most Popular</option>
-       <option value="rating">⭐ Highest Rated</option>
-       <option value="newest">📅 Newest Releases (2025-2026)</option>
-       <option value="title">🔤 Alphabetical (A-Z)</option>
-     </select>
-   </div>
- </div>
- 
- <!-- Primary Category Tabs Bar -->
- <div class="category-tabs-bar" id="categoryTabsBar">
-   <button class="cat-tab active" data-filter="all"><span class="cat-icon">🔥</span> All Titles</button>
-   <button class="cat-tab" data-filter="movie"><span class="cat-icon">🎬</span> Movies</button>
-   <button class="cat-tab" data-filter="series"><span class="cat-icon">📺</span> Web Series</button>
-   <button class="cat-tab" data-filter="bollywood_new"><span class="cat-icon">🇮🇳</span> Bollywood</button>
-   <button class="cat-tab" data-filter="south_new"><span class="cat-icon">⚡</span> South Indian (Hindi)</button>
-   <button class="cat-tab" data-filter="torrent"><span class="cat-icon">🧲</span> 4K Torrents (P2P)</button>
-   <button class="cat-tab" data-filter="trending"><span class="cat-icon">🌟</span> Top Trending</button>
- </div>
- 
- <!-- Secondary Genre Filter -->
- <div class="genre-row" id="genreRow">
-   <div class="genre-pill active" data-genre="All">All Genres</div>
-   <div class="genre-pill" data-genre="Action">Action</div>
-   <div class="genre-pill" data-genre="Sci-Fi">Sci-Fi</div>
-   <div class="genre-pill" data-genre="Horror">Horror</div>
-   <div class="genre-pill" data-genre="Drama">Drama</div>
-   <div class="genre-pill" data-genre="Comedy">Comedy</div>
-   <div class="genre-pill" data-genre="Thriller">Thriller</div>
-   <div class="genre-pill" data-genre="Animation">Animation</div>
-   <div class="genre-pill" data-genre="Romance">Romance</div>
- </div>
- 
- <!-- Movie Grid -->
- <div class="movie-grid fade-in" id="movieGrid">
-   <div class="empty-state">🎬 Loading movies...</div>
- </div>
-</section>
-
-
-<!-- Request Section -->
-<section id="requestSection" class="request-section fade-in">
-  <div class="request-card">
-    <div>
-      <div class="sec-title">REQUEST <span>A TITLE</span></div>
-      <p>Apni favourite movie ya series request karo. Hum available hote hi add karne ki koshish karenge.</p>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">PHANTOM<span>MOVIES</span></div>
+    <div class="loading-bar">
+      <div class="loading-fill"></div>
     </div>
-    <a class="btn-primary" id="requestBtn" href="#" target="_blank" rel="noopener noreferrer">📩 Request on Telegram</a>
   </div>
-</section>
 
-<!-- Footer -->
-<footer>
- <div class="footer-grid">
-   <div class="footer-brand">
-     <div class="logo">
-       <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
-     </div>
-     <p>Your portal to cinematic worlds. Stream thousands of movies in stunning 4K quality.</p>
-   </div>
-   <div class="footer-col">
-     <h4>Browse</h4>
-     <ul>
-       <li><a onclick="scrollTo(0,800)">Popular</a></li>
-       <li><a onclick="scrollTo(0,1400)">Trending</a></li>
-       <li><a onclick="scrollTo(0,2000)">Categories</a></li>
-     </ul>
-   </div>
-   <div class="footer-col">
-     <h4>Company</h4>
-     <ul>
-       <li><a href="about.html">About</a></li>
-       <li><a href="contact.html">Contact</a></li>
-       <li><a href="contact.html">Contact</a></li>
-     </ul>
-   </div>
-   <div class="footer-col">
-     <h4>Legal</h4>
-     <ul>
-       <li><a href="privacy.html">Privacy</a></li>
-       <li><a href="terms.html">Terms</a></li>
-       <li><a href="copyright-policy.html">Copyright Policy</a></li>
-       <li><a href="contact.html">Contact</a></li>
-     </ul>
-   </div>
- </div>
- <div class="footer-bottom">
-   <p class="footer-copy">© 2025 <span>Phantom Movies</span>. All rights reserved.</p>
- </div>
-</footer>
+  <div class="toast" id="toast"></div>
 
-<!-- JavaScript -->
-<script src="js/app.js"></script>
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a class="logo" href="index.html">
+      <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="series-catalog.html">Web Series</a></li>
+      <li><a href="trending.html">Trending</a></li>
+      <li><a onclick="openSearchModal()" style="cursor:pointer;">Search</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="pwa-install-btn" id="pwaInstallBtn" type="button" title="Install App">📲 App</button>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+      <button class="search-toggle" id="searchToggle" type="button" title="Search"
+        onclick="openSearchModal()">🔍</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="heroSection">
+    <div class="hero-bg" id="heroBackdrop"></div>
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-tag" id="heroTag">🔥 Now Streaming</div>
+      <h1 id="heroTitle">WATCH<br>WITHOUT<br><em>limits</em></h1>
+      <div class="hero-meta-row" id="heroMetaRow" style="display:none;">
+        <span class="meta-pill meta-rating" id="heroRating">⭐ 8.8</span>
+        <span class="meta-pill" id="heroYear">2025</span>
+        <span class="meta-pill" id="heroDuration">2h 15m</span>
+        <span class="meta-pill meta-badge" id="heroQuality">4K UHD</span>
+        <span class="meta-pill meta-badge" id="heroTorrentBadge" style="display:none;">🧲 P2P Fast</span>
+      </div>
+      <p class="hero-desc" id="heroDesc">Stream thousands of blockbusters, indie gems, and exclusive originals in
+        stunning quality — anytime, anywhere.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="heroPlayBtn" onclick="watchCurrentHeroSlide()">
+          <span class="play-ico"></span> Start Watching
+        </button>
+        <button class="btn-secondary-main" id="heroDlBtn" onclick="downloadCurrentHeroSlide()">
+          <span>⬇ Fast Download</span>
+        </button>
+        <button class="btn-secondary-main btn-icon-only" id="heroWatchlistBtn" onclick="toggleHeroWatchlist()"
+          title="Add to Watchlist">
+          <span id="heroWatchlistIcon">🔖</span>
+        </button>
+      </div>
+      <div class="hero-indicators" id="heroIndicators"></div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" id="heroTotalCount">0</div>
+          <div class="stat-label" id="heroTotalLabel">Total Movies & Series</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="hero4KCount">0</div>
+          <div class="stat-label">4K UHD Titles</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="heroTorrentCount">0</div>
+          <div class="stat-label">Fast P2P Torrents</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slider-wrap">
+      <div class="hero-slider-head">
+        <span>Top Trending</span>
+        <div>
+          <button class="slider-btn" onclick="moveHeroSlide(-1)">‹</button>
+          <button class="slider-btn" onclick="moveHeroSlide(1)">›</button>
+        </div>
+      </div>
+      <div class="hero-slider" id="heroSlider">
+        <div class="empty-state">Loading trending...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continue Watching Shelf -->
+  <section class="shelf-section fade-in" id="continueWatchingSection" style="display:none;">
+    <div class="sec-header">
+      <div class="sec-title">CONTINUE <span>WATCHING</span></div>
+      <button class="btn-secondary-main" onclick="clearContinueWatching()"
+        style="font-size:11px;padding:4px 12px;">Clear All</button>
+    </div>
+    <div class="shelf-scroll-row" id="continueWatchingRow"></div>
+  </section>
+
+  <!-- My Watchlist Shelf -->
+  <section class="shelf-section fade-in" id="watchlistSection" style="display:none;">
+    <div class="sec-header">
+      <div class="sec-title">MY <span>WATCHLIST</span></div>
+      <button class="btn-secondary-main" onclick="clearWatchlist()" style="font-size:11px;padding:4px 12px;">Clear
+        All</button>
+    </div>
+    <div class="shelf-scroll-row" id="watchlistRow"></div>
+  </section>
+
+  <!-- Trending Section -->
+  <section id="trendingSection" class="trending-section">
+    <div class="sec-header">
+      <div class="sec-title">TOP 10 <span>TRENDING NOW</span></div>
+      <a class="btn-secondary-main" href="trending.html">View All Trending (Top 20) →</a>
+    </div>
+    <div class="movie-grid fade-in" id="trendingGrid">
+      <div class="empty-state">🔥 Loading trending...</div>
+    </div>
+  </section>
+
+  <!-- Featured Movie -->
+  <div class="featured fade-in" id="featuredSection">
+    <div class="feat-poster" id="featPosterEl"></div>
+    <div class="feat-info">
+      <div class="feat-tag">⭐ Featured Spotlight</div>
+      <div class="feat-title" id="featTitle">LOADING...</div>
+      <p class="feat-desc" id="featDesc">Loading...</p>
+      <div class="feat-actions">
+        <button class="btn-primary" onclick="watchFeatured()">
+          <span class="play-ico"></span> Watch Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explore Section with Quick Nav -->
+  <section id="movies">
+    <div class="sec-header">
+      <div class="sec-title">EXPLORE <span>CATALOG</span></div>
+      <div style="display:flex; gap:8px;">
+        <a class="btn-secondary-main" href="movies.html">All Movies →</a>
+        <a class="btn-secondary-main" href="series-catalog.html">All Web Series →</a>
+      </div>
+    </div>
+
+    <!-- Primary Category Tabs Bar -->
+    <div class="category-tabs-bar" id="categoryTabsBar">
+      <button class="cat-tab active" data-filter="all"><span class="cat-icon">🔥</span> All Titles</button>
+      <button class="cat-tab" data-filter="movie"><span class="cat-icon">🎬</span> Movies</button>
+      <button class="cat-tab" data-filter="series"><span class="cat-icon">📺</span> Web Series</button>
+      <button class="cat-tab" data-filter="bollywood_new"><span class="cat-icon">🇮🇳</span> Bollywood</button>
+      <button class="cat-tab" data-filter="south_new"><span class="cat-icon">⚡</span> South Indian</button>
+      <button class="cat-tab" data-filter="torrent"><span class="cat-icon">🧲</span> 4K Torrents</button>
+    </div>
+
+    <!-- Secondary Genre Filter -->
+    <div class="genre-row" id="genreRow">
+      <div class="genre-pill active" data-genre="All">All Genres</div>
+      <div class="genre-pill" data-genre="Action">Action</div>
+      <div class="genre-pill" data-genre="Sci-Fi">Sci-Fi</div>
+      <div class="genre-pill" data-genre="Horror">Horror</div>
+      <div class="genre-pill" data-genre="Drama">Drama</div>
+      <div class="genre-pill" data-genre="Comedy">Comedy</div>
+      <div class="genre-pill" data-genre="Thriller">Thriller</div>
+      <div class="genre-pill" data-genre="Animation">Animation</div>
+    </div>
+
+    <!-- Movie Grid -->
+    <div class="movie-grid fade-in" id="movieGrid">
+      <div class="empty-state">🎬 Loading movies...</div>
+    </div>
+  </section>
+
+  <!-- Request Section -->
+  <section id="requestSection" class="request-section fade-in">
+    <div class="request-card">
+      <div>
+        <div class="sec-title">REQUEST <span>A TITLE</span></div>
+        <p>Apni favourite movie ya series request karo. Hum available hote hi add karenge.</p>
+      </div>
+      <a class="btn-primary" id="requestBtn" href="#" target="_blank" rel="noopener noreferrer">📩 Request on
+        Telegram</a>
+    </div>
+  </section>
+
+  <!-- Full-Screen Mobile Search Modal -->
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+    <div class="search-modal-box">
+      <div class="search-modal-header">
+        <button class="search-modal-back" onclick="closeSearchModal()" aria-label="Close search">←</button>
+        <div class="search-modal-input-wrap">
+          <span class="search-modal-icon">🔍</span>
+          <input type="search" id="modalSearchInput" class="modal-search-input"
+            placeholder="Search movies, web series, actors..." autocomplete="off" />
+          <button class="search-modal-clear" id="modalSearchClear" onclick="clearModalSearch()"
+            aria-label="Clear">✕</button>
+        </div>
+      </div>
+      <div class="search-modal-tags" id="modalSearchTags">
+        <span class="tags-label">Trending:</span>
+        <button class="search-tag-chip" onclick="searchForTag('Stree 2')">🔥 Stree 2</button>
+        <button class="search-tag-chip" onclick="searchForTag('Jawan')">🎬 Jawan</button>
+        <button class="search-tag-chip" onclick="searchForTag('Deadpool')">⚡ Deadpool</button>
+        <button class="search-tag-chip" onclick="searchForTag('Mirzapur')">📺 Mirzapur</button>
+        <button class="search-tag-chip" onclick="searchForTag('4K')">🧲 4K UHD</button>
+      </div>
+      <div class="search-modal-results" id="modalSearchResults">
+        <div class="search-empty-prompt">Type title, actor, or genre above to search...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
+    <a href="index.html" class="bottom-nav-item active" id="bnavHome">
+      <span class="bnav-icon">🏠</span>
+      <span class="bnav-label">Home</span>
+    </a>
+    <a href="movies.html" class="bottom-nav-item" id="bnavMovies">
+      <span class="bnav-icon">🎬</span>
+      <span class="bnav-label">Movies</span>
+    </a>
+    <a href="series-catalog.html" class="bottom-nav-item" id="bnavSeries">
+      <span class="bnav-icon">📺</span>
+      <span class="bnav-label">Series</span>
+    </a>
+    <a href="trending.html" class="bottom-nav-item" id="bnavTrending">
+      <span class="bnav-icon">🔥</span>
+      <span class="bnav-label">Trending</span>
+    </a>
+    <button type="button" class="bottom-nav-item" id="bnavSearch" onclick="openSearchModal()">
+      <span class="bnav-icon">🔍</span>
+      <span class="bnav-label">Search</span>
+    </button>
+  </nav>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
+        </div>
+        <p>Your portal to cinematic worlds. Stream thousands of movies and web series in stunning 4K quality with zero
+          ads.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="movies.html">All Movies</a></li>
+          <li><a href="series-catalog.html">Web Series</a></li>
+          <li><a href="trending.html">Trending Charts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="copyright-policy.html">Copyright Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <span>Phantom Movies</span>. Stream without limits.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+
+  <!-- Trailer Lightbox Modal -->
+  <div class="trailer-modal" id="trailerModal" aria-hidden="true">
+    <div class="trailer-backdrop" onclick="closeTrailerModal()"></div>
+    <div class="trailer-box">
+      <div class="trailer-header">
+        <span class="trailer-caption" id="trailerCaption">🎬 Official Trailer</span>
+        <button class="trailer-close-btn" onclick="closeTrailerModal()" aria-label="Close Trailer">✕</button>
+      </div>
+      <div class="trailer-video-wrap" id="trailerVideoWrap"></div>
+    </div>
+  </div>
 
 </body>
+
 </html>

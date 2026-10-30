@@ -63,24 +63,6 @@ BROWSER_HEADERS = {
 }
 
 TARGET_REGISTRY = {
-    "vegamovies": {
-        "name": "VegaMovies",
-        "gateways": [
-            "https://1vegamovies.beer",
-            "https://vegamovies.is",
-            "https://vegamovies.pages.dev"
-        ],
-        "seeds": [
-            "https://1vegamovies.pics",
-            "https://1vegamovies.beer",
-            "https://1vegamovies.baby",
-            "https://vegamovies.is",
-            "https://vegamovies.bar",
-            "https://vegamovies.yt",
-            "https://vegamovies.llc"
-        ],
-        "fingerprint": r'vegamovies'
-    },
     "hdhub4u": {
         "name": "HDHub4u",
         "api": "https://h4.suncdn.org/host/",
@@ -346,7 +328,7 @@ class DomainTracker:
             if "scrapers" not in data:
                 data["scrapers"] = {}
 
-            for key in ["hdhub4u", "vegamovies", "rogmovies"]:
+            for key in ["hdhub4u", "rogmovies"]:
                 if key in results:
                     r = results[key]
                     if key not in data["scrapers"]:

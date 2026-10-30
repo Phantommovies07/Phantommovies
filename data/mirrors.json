@@ -1,19 +1,21 @@
 {
-  "updatedAt": "2026-10-28T17:44:00.574508+00:00",
+  "updatedAt": "2026-10-29T18:43:00.000000+00:00",
   "scrapers": {
     "hdhub4u": {
-      "active": "https://new9.hdhub4u.cl",
+      "active": "https://new10.hdhub4u.cl",
       "portal": "https://hdhub4u.bi",
       "hostApi": "https://h4.suncdn.org/host/",
       "mirrors": [
+        "https://new10.hdhub4u.cl",
         "https://new9.hdhub4u.cl",
-        "https://hdhub4u.fast"
+        "https://hdhub4u.fast",
+        "https://hdhub4u.eco"
       ],
       "latency_ms": 103,
       "status": "online"
     },
     "kmmovies": {
-      "active": "https://kmmovies.autos",
+      "active": "https://kmmovies.cam",
       "mirrors": [
         "https://kmmovies.baby",
         "https://kmmovies.pink",
@@ -24,17 +26,6 @@
         "https://kmmovies.vip",
         "https://kmmovies.lat"
       ]
-    },
-    "vegamovies": {
-      "active": "https://vegamovies.pages.dev",
-      "portal": "https://vegamovies.is",
-      "mirrors": [
-        "https://1vegamovies.pics",
-        "https://vegamovies.pages.dev",
-        "https://vegamovies.bar"
-      ],
-      "latency_ms": 117,
-      "status": "online"
     },
     "rogmovies": {
       "active": "https://rogmovies.im",
@@ -49,44 +40,32 @@
   "streaming": {
     "providers": [
       {
-        "id": "allmovieland",
-        "name": "Server 1 (AllMovieLand - HDVB P2P)",
-        "domains": [
-          "https://1xcinema.net",
-          "https://slast430did.com",
-          "https://allmovieland.link"
-        ],
-        "movieTemplate": "/play/{imdb}",
-        "tvTemplate": "/play/{imdb}?s={s}&e={e}"
-      },
-      {
-        "id": "hdmovie2",
-        "name": "Server 2 (HDMovie2 - P2P HLS)",
-        "domains": [
-          "https://slast430did.com",
-          "https://gorri421kos.com"
-        ],
-        "movieTemplate": "/play/{imdb}",
-        "tvTemplate": "/play/{imdb}?s={s}&e={e}"
-      },
-      {
         "id": "cinesrc",
-        "name": "Server 3 (CineSrc - No Ads)",
+        "name": "Server 1 (VIP Ultra HD)",
         "domains": [
           "https://cinesrc.st"
         ],
-        "movieTemplate": "/embed/movie/{tmdb}",
-        "tvTemplate": "/embed/tv/{tmdb}?s={s}&e={e}"
+        "movieTemplate": "/embed/movie/{id}",
+        "tvTemplate": "/embed/tv/{id}?s={s}&e={e}"
+      },
+      {
+        "id": "autoembed",
+        "name": "Server 2 (High Speed HD)",
+        "domains": [
+          "https://autoembed.co"
+        ],
+        "movieTemplate": "/movie/imdb/{imdb}",
+        "tvTemplate": "/tv/imdb/{imdb}-{s}-{e}"
       },
       {
         "id": "vidlink",
-        "name": "Server 4 (VidLink - Fast HD)",
+        "name": "Server 3 (Backup Server)",
         "domains": [
           "https://vidlink.pro",
-          "https://vidlink.online"
+          "https://player.autoembed.cc"
         ],
         "movieTemplate": "/movie/{imdb}",
-        "tvTemplate": "/tv/{imdb}/{s}/{e}"
+        "tvTemplate": "/tv/{tmdb}/{s}/{e}"
       }
     ]
   }

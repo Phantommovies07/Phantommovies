@@ -1,3 +1,4 @@
+import urllib.parse
 import os
 import sys
 import json
@@ -54,35 +55,33 @@ def format_duration(runtime_minutes: int) -> str:
     return f"{hours}h {mins:02d}m"
 
 def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[Dict]]:
-    """Generates stealth whitelisted multi-server movie streaming embed links with AllMovieLand P2P, HDMovie2, CineSrc, and VidLink."""
+    """Generates strictly 3 verified ad-free multi-server movie streaming embed links."""
     servers = []
-    if imdb_id:
-        servers.append({"name": "Server 1 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}"})
-        servers.append({"name": "Server 2 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}"})
+    t_id = (tmdb_id or imdb_id or "").strip()
+    t_imdb = (imdb_id or tmdb_id or "").strip()
 
-    if tmdb_id:
-        servers.append({"name": "Server 3 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/movie/{tmdb_id}"})
-
-    if imdb_id:
-        servers.append({"name": "Server 4 (VidLink - Fast HD)", "url": f"https://vidlink.pro/movie/{imdb_id}"})
+    if t_id:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/movie/{t_id}"})
+    if t_imdb:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/movie/imdb/{t_imdb}"})
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://vidlink.pro/movie/{t_imdb}"})
 
     primary_url = servers[0]["url"] if servers else ""
     return primary_url, servers
 
 def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1) -> List[Dict]:
-    """Generates stealth whitelisted multi-server TV/reality show streaming embed links."""
+    """Generates strictly 3 verified ad-free multi-server TV/web series streaming embed links."""
     s = season or 1
     e = episode or 1
     servers = []
-    if imdb_id:
-        servers.append({"name": "Server 1 (AllMovieLand - HDVB P2P)", "url": f"https://slast430did.com/play/{imdb_id}?s={s}&e={e}"})
-        servers.append({"name": "Server 2 (HDMovie2 - P2P HLS)", "url": f"https://gorri421kos.com/play/{imdb_id}?s={s}&e={e}"})
+    t_id = (tmdb_id or imdb_id or "").strip()
+    t_imdb = (imdb_id or tmdb_id or "").strip()
 
-    if tmdb_id:
-        servers.append({"name": "Server 3 (CineSrc - No Ads)", "url": f"https://cinesrc.st/embed/tv/{tmdb_id}?s={s}&e={e}"})
-
-    if imdb_id:
-        servers.append({"name": "Server 4 (VidLink - Fast HD)", "url": f"https://vidlink.pro/tv/{imdb_id}/{s}/{e}"})
+    if t_id:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/tv/{t_id}?s={s}&e={e}"})
+    if t_imdb:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://player.autoembed.cc/embed/tv/{t_imdb}/{s}/{e}"})
 
     return servers
 
@@ -137,11 +136,21 @@ class IMDbSearchEngine:
             qid = best_match.get("qid", "")
             is_series = qid in ["tvSeries", "tvMiniSeries"]
 
+            # CRITICAL: Reject unreleased / placeholder titles without a release year or poster
+            if not year or str(year).lower() in ["none", "null", ""] or not poster:
+                return None
+            try:
+                i_year = int(year)
+                if i_year > 2026:
+                    return None
+            except (ValueError, TypeError):
+                return None
+
             return {
                 "imdb_id": imdb_id,
                 "tmdb_id": "",
                 "title": title,
-                "year": int(year) if year else 2024,
+                "year": i_year,
                 "cast": cast,
                 "genre": best_match.get("q", "Drama" if is_series else "Action").title(),
                 "rating": 7.5,
@@ -278,11 +287,9 @@ class LiveRecentCrawler:
     """Crawls active recent feeds from KM Movies & RogMovies to ingest newly published movies & series 24/7."""
 
     FEEDS = [
-        ("https://kmmovies.baby/", "kmmovies", False),
-        ("https://kmmovies.baby/category/tv-series/", "kmmovies", True),
-        ("https://kmmovies.pics/", "kmmovies", False),
-        ("https://rogmovies.casa/", "rogmovies", False),
-        ("https://rogmovies.casa/web-series/", "rogmovies", True),
+        ("https://new10.hdhub4u.cl/", "hdhub4u", False),
+        ("https://rogmovies.im/", "rogmovies", False),
+        ("https://rogmovies.im/category/web-series/", "rogmovies", True),
     ]
 
     def fetch_recent_posts(self, max_posts: int = 15) -> List[Dict]:
@@ -298,26 +305,32 @@ class LiveRecentCrawler:
                 if resp.status_code != 200:
                     continue
                 soup = BeautifulSoup(resp.text, "html.parser")
-                articles = soup.find_all("article")
-                if not articles:
-                    articles = soup.select('.post, .item, div[class*="post"], div[class*="item"]')
+                articles = soup.select('.thumb, article, .post, .item, div[class*="post"], div[class*="item"]')
 
                 for art in articles:
                     a_tag = art.find("a", href=True)
-                    title_tag = art.find(["h2", "h3", "h1"]) or a_tag
-                    if not a_tag or not title_tag:
+                    if not a_tag:
                         continue
                     href = a_tag["href"]
-                    title_text = title_tag.get_text(strip=True)
+                    if not href.startswith("http"):
+                        href = urllib.parse.urljoin(feed_url, href)
 
-                    if href in seen_urls or not href.startswith("http"):
+                    img_tag = art.find("img")
+                    title_text = (
+                        a_tag.get("title") or 
+                        (img_tag.get("alt") if img_tag else None) or 
+                        art.get_text(strip=True)
+                    )
+                    title_text = (title_text or "").replace('\u200b', '').strip()
+
+                    if href in seen_urls:
                         continue
                     if len(title_text) < 4 or any(k in href for k in ["/category/", "/page/", "/actor/", "/genre/"]):
                         continue
 
                     seen_urls.add(href)
                     parsed = parse_title_info(title_text)
-                    if is_tv_feed:
+                    if is_tv_feed or "series" in href.lower() or "season" in title_text.lower():
                         parsed["is_series"] = True
                         if not parsed["seasons"]:
                             parsed["seasons"] = [1]
@@ -498,7 +511,6 @@ class MirrorEngine:
     def __init__(self):
         self.mirrors_data = self._load_mirrors_file()
         self._active_km = None
-        self._active_vega = None
         self._active_rog = None
 
     def _load_mirrors_file(self) -> Dict:
@@ -513,11 +525,6 @@ class MirrorEngine:
                 "kmmovies": {
                     "active": "https://kmmovies.baby",
                     "mirrors": ["https://kmmovies.baby", "https://kmmovies.pink", "https://kmmovies.skin", "https://kmmovies.hair", "https://kmmovies.dad"]
-                },
-                "vegamovies": {
-                    "active": "https://vegamovies.pages.dev",
-                    "portal": "https://vegamovies.is",
-                    "mirrors": ["https://1vegamovies.baby", "https://vegamovies.pages.dev", "https://vegamovies.is", "https://vegamovies.yt", "https://vegamovies.llc"]
                 },
                 "rogmovies": {
                     "active": "https://rogmovies.in",
@@ -556,46 +563,6 @@ class MirrorEngine:
             except Exception:
                 continue
         self._active_km = active
-        return active
-
-    def get_active_vega(self) -> str:
-        if self._active_vega:
-            return self._active_vega
-        vega_cfg = self.mirrors_data.get("scrapers", {}).get("vegamovies", {})
-        active = vega_cfg.get("active", "https://vegamovies.pages.dev")
-        portal = vega_cfg.get("portal", "https://vegamovies.is")
-        mirrors = vega_cfg.get("mirrors", [active])
-
-        if portal:
-            try:
-                rp = requests.get(portal, headers=HEADERS, timeout=4)
-                if rp.status_code == 200:
-                    meta_match = re.search(r'url=([^\s"\'>]+)', rp.text, re.IGNORECASE)
-                    if meta_match:
-                        target = meta_match.group(1).rstrip('/')
-                        try:
-                            rt = requests.get(target, headers=HEADERS, timeout=4, allow_redirects=True)
-                            if rt.status_code == 200:
-                                self._active_vega = rt.url.rstrip('/')
-                                vega_cfg["active"] = self._active_vega
-                                self._save_mirrors_file()
-                                return self._active_vega
-                        except Exception:
-                            pass
-            except Exception:
-                pass
-
-        candidates = [active] + [m for m in mirrors if m != active]
-        for c in candidates:
-            try:
-                r = requests.get(c, headers=HEADERS, timeout=4, allow_redirects=True)
-                if r.status_code == 200:
-                    resolved = r.url.rstrip('/')
-                    self._active_vega = resolved
-                    return resolved
-            except Exception:
-                continue
-        self._active_vega = active
         return active
 
     def get_active_hdhub4u(self) -> str:
@@ -652,26 +619,49 @@ def fetch_real_hdhub4u_downloads(title: str) -> List[Dict]:
         base_url = get_active_hdhub4u_mirror()
         clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
         clean_t = ' '.join(clean_t.split()[:4])
-        search_url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
-        r = requests.get(search_url, headers=HEADERS, timeout=6)
-        if r.status_code != 200:
-            return []
-        soup = BeautifulSoup(r.text, 'html.parser')
         post_url = None
-        norm_q = re.sub(r'[^a-z0-9]', '', clean_t.lower())
 
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            text = a.get_text(strip=True).lower()
-            if any(x in href for x in ['/?s=', '/category/', '/tag/', '/page/', '/disclaimer', '/how-to']):
-                continue
-            if href in ['/', base_url, f"{base_url}/"]:
-                continue
-            norm_text = re.sub(r'[^a-z0-9]', '', text)
-            if norm_q[:5] in norm_text or norm_q[:5] in href.lower():
-                import urllib.parse
-                post_url = urllib.parse.urljoin(base_url, href)
-                break
+        # 1. High-speed Typesense search (mirrors current HDHub4u frontend)
+        try:
+            import urllib.parse
+            api_headers = dict(HEADERS)
+            api_headers["Referer"] = f"{base_url}/"
+            api_headers["Origin"] = base_url
+            params = {
+                "q": clean_t,
+                "query_by": "post_title,category,stars,director,imdb_id",
+                "limit": 3
+            }
+            resp_ts = requests.get("https://search.pingora.fyi/collections/post/documents/search", params=params, headers=api_headers, timeout=4)
+            if resp_ts.status_code == 200:
+                hits = resp_ts.json().get("hits", [])
+                if hits:
+                    doc = hits[0].get("document", {})
+                    plink = doc.get("permalink", "")
+                    path = urllib.parse.urlparse(plink).path if plink else f"/{doc.get('post_name', '')}/"
+                    post_url = urllib.parse.urljoin(base_url, path)
+        except Exception:
+            pass
+
+        # 2. Fallback to HTML search
+        if not post_url:
+            search_url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
+            r = requests.get(search_url, headers=HEADERS, timeout=6)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                norm_q = re.sub(r'[^a-z0-9]', '', clean_t.lower())
+                for a in soup.find_all('a', href=True):
+                    href = a['href']
+                    text = a.get_text(strip=True).lower()
+                    if any(x in href for x in ['/?s=', '/category/', '/tag/', '/page/', '/disclaimer', '/how-to']):
+                        continue
+                    if href in ['/', base_url, f"{base_url}/"]:
+                        continue
+                    norm_text = re.sub(r'[^a-z0-9]', '', text)
+                    if norm_q[:5] in norm_text or norm_q[:5] in href.lower():
+                        import urllib.parse
+                        post_url = urllib.parse.urljoin(base_url, href)
+                        break
 
         if not post_url:
             return []
@@ -1150,7 +1140,7 @@ CATEGORIES_MANIFEST = {
         "Munjya", "Srikanth", "Crew", "Article 370", "Bade Miyan Chote Miyan", "Yodha", "Sam Bahadur",
         "Tiger 3", "OMG 2", "Gadar 2", "Rocky Aur Rani Kii Prem Kahaani", "Satyaprem Ki Katha",
         "Zara Hatke Zara Bachke", "Tu Jhoothi Main Makkaar", "Pathaan", "Bhediya", "Drishyam 2",
-        "Vikram Vedha", "Brahmastra", "Bhool Bhulaiyaa 2", "Gangubai Kathiawadi",
+        "Vikram Vedha", "Brahmastra Part One: Shiva", "Bhool Bhulaiyaa 2", "Gangubai Kathiawadi",
         "The Kashmir Files", "Badhaai Do", "Jayeshbhai Jordaar", "Darlings", "Monica O My Darling",
         "Qala", "An Action Hero", "Cirkus", "Kuttey", "Mission Majnu", "Shehzada", "Selfiee",
         "Mrs Chatterjee vs Norway", "Bheed", "Gumraah", "Kisi Ka Bhai Kisi Ki Jaan", "Afwaah",

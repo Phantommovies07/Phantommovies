@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Top 20 Trending Charts - Phantom Movies</title>
+<meta name="description" content="Discover the top 20 trending blockbusters and web series streaming right now on Phantom Movies.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XND5TTDN7Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XND5TTDN7Z', { 'send_page_view': true });
+</script>
+
+<!-- Resource Hints & Preconnect -->
+<link rel="preconnect" href="https://m.media-amazon.com" crossorigin>
+<link rel="dns-prefetch" href="https://m.media-amazon.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f1422">
+<script src="js/ads-loader.js"></script>
+
+<script>
+  window.PHANTOM_PAGE_TYPE = 'trending';
+</script>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-logo">PHANTOM<span>MOVIES</span></div>
+  <div class="loading-bar"><div class="loading-fill"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Navigation -->
+<nav id="mainNav">
+ <a class="logo" href="index.html">
+   <div class="logo-icon"></div>PHANTOM<span>MOVIES</span>
+ </a>
+ <ul class="nav-links">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="movies.html">Movies</a></li>
+   <li><a href="series-catalog.html">Web Series</a></li>
+   <li><a href="trending.html" class="active">Trending</a></li>
+   <li><a onclick="openSearchModal()" style="cursor:pointer;">Search</a></li>
+ </ul>
+ <div class="nav-right">
+   <button class="pwa-install-btn" id="pwaInstallBtn" type="button" title="Install App">📲 App</button>
+   <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+   <button class="search-toggle" id="searchToggle" type="button" title="Search" onclick="openSearchModal()">🔍</button>
+ </div>
+</nav>
+
+<!-- Page Header -->
+<header class="catalog-page-header">
+  <h1 class="catalog-page-title">TOP 20 <span>TRENDING</span> CHARTS</h1>
+  <p class="catalog-page-subtitle">The most popular movies and binge-worthy web series trending right now across all streaming platforms.</p>
+</header>
+
+<!-- Main Trending Grid -->
+<main class="catalog-grid-wrapper">
+  <div class="movie-grid fade-in" id="trendingGridPage">
+    <div class="empty-state">🔥 Loading top trending charts...</div>
+  </div>
+</main>
+
+<!-- Full-Screen Mobile Search Modal -->
+<div class="search-modal" id="searchModal" aria-hidden="true">
+  <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+  <div class="search-modal-box">
+    <div class="search-modal-header">
+      <button class="search-modal-back" onclick="closeSearchModal()" aria-label="Close search">←</button>
+      <div class="search-modal-input-wrap">
+        <span class="search-modal-icon">🔍</span>
+        <input type="search" id="modalSearchInput" class="modal-search-input" placeholder="Search movies, web series, actors..." autocomplete="off" />
+        <button class="search-modal-clear" id="modalSearchClear" onclick="clearModalSearch()" aria-label="Clear">✕</button>
+      </div>
+    </div>
+    <div class="search-modal-tags" id="modalSearchTags">
+      <span class="tags-label">Trending:</span>
+      <button class="search-tag-chip" onclick="searchForTag('Stree 2')">🔥 Stree 2</button>
+      <button class="search-tag-chip" onclick="searchForTag('Jawan')">🎬 Jawan</button>
+      <button class="search-tag-chip" onclick="searchForTag('Deadpool')">⚡ Deadpool</button>
+      <button class="search-tag-chip" onclick="searchForTag('Mirzapur')">📺 Mirzapur</button>
+    </div>
+    <div class="search-modal-results" id="modalSearchResults">
+      <div class="search-empty-prompt">Type title, actor, or genre above to search...</div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Bottom Navigation Bar -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
+  <a href="index.html" class="bottom-nav-item" id="bnavHome">
+    <span class="bnav-icon">🏠</span>
+    <span class="bnav-label">Home</span>
+  </a>
+  <a href="movies.html" class="bottom-nav-item" id="bnavMovies">
+    <span class="bnav-icon">🎬</span>
+    <span class="bnav-label">Movies</span>
+  </a>
+  <a href="series-catalog.html" class="bottom-nav-item" id="bnavSeries">
+    <span class="bnav-icon">📺</span>
+    <span class="bnav-label">Series</span>
+  </a>
+  <a href="trending.html" class="bottom-nav-item active" id="bnavTrending">
+    <span class="bnav-icon">🔥</span>
+    <span class="bnav-label">Trending</span>
+  </a>
+  <button type="button" class="bottom-nav-item" id="bnavSearch" onclick="openSearchModal()">
+    <span class="bnav-icon">🔍</span>
+    <span class="bnav-label">Search</span>
+  </button>
+</nav>
+
+<!-- Footer -->
+<footer>
+ <div class="footer-bottom">
+   <p class="footer-copy">© 2026 <span>Phantom Movies</span>. Stream without limits.</p>
+ </div>
+</footer>
+
+<script src="js/app.js"></script>
+<!-- Trailer Lightbox Modal -->
+<div class="trailer-modal" id="trailerModal" aria-hidden="true">
+  <div class="trailer-backdrop" onclick="closeTrailerModal()"></div>
+  <div class="trailer-box">
+    <div class="trailer-header">
+      <span class="trailer-caption" id="trailerCaption">🎬 Official Trailer</span>
+      <button class="trailer-close-btn" onclick="closeTrailerModal()" aria-label="Close Trailer">✕</button>
+    </div>
+    <div class="trailer-video-wrap" id="trailerVideoWrap"></div>
+  </div>
+</div>
+
+</body>
+</html>
+

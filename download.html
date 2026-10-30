@@ -347,7 +347,7 @@
 let currentMovie = null;
 let activeMirrors = {
     hdhub4u: 'https://new9.hdhub4u.cl',
-    vegamovies: 'https://1vegamovies.pics',
+    kmmovies: 'https://kmmovies.cam',
     rogmovies: 'https://rogmovies.in'
 };
 
@@ -613,23 +613,23 @@ function applyInitialParams(params) {
     const q = encodeURIComponent(rawSearch || params.title || '');
 
     const fallbackHdhub = `${activeMirrors.hdhub4u}/?s=${q}`;
-    const fallbackVega = `${activeMirrors.vegamovies}/?s=${q}`;
+    const fallbackKm = `${activeMirrors.kmmovies}/?s=${q}`;
     const fallbackRog = `${activeMirrors.rogmovies}/?s=${q}`;
 
     if (isValidDownloadUrl(params.url)) {
         btn1.href = params.url;
         btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${(params.quality || 'HD').toUpperCase()})`;
-        btn2.href = fallbackVega;
-        btn2.querySelector('span').textContent = '⚡ VegaMovies Cloud Mirror (Server 2)';
+        btn2.href = fallbackKm;
+        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2)';
         btn3.href = fallbackHdhub;
-        btn3.querySelector('span').textContent = '🌐 HDHub4u Multi-Quality Mirror (Server 3)';
+        btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror (Server 3)';
     } else {
         btn1.href = fallbackHdhub;
-        btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (HDHub4u Cloud)';
-        btn2.href = fallbackVega;
-        btn2.querySelector('span').textContent = '⚡ VegaMovies Cloud Mirror (Server 2)';
+        btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (Instant Cloud)';
+        btn2.href = fallbackKm;
+        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2)';
         btn3.href = fallbackRog;
-        btn3.querySelector('span').textContent = '🌐 ROG VIP Cloud Server (Server 3)';
+        btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror (Server 3)';
     }
 
     setupTorrentBox(null, params);
@@ -644,7 +644,7 @@ async function enrichPage() {
         const mirrorsData = await fetchMirrorsConfig();
         if (mirrorsData?.scrapers) {
             if (mirrorsData.scrapers.hdhub4u?.active) activeMirrors.hdhub4u = mirrorsData.scrapers.hdhub4u.active;
-            if (mirrorsData.scrapers.vegamovies?.active) activeMirrors.vegamovies = mirrorsData.scrapers.vegamovies.active;
+            if (mirrorsData.scrapers.kmmovies?.active) activeMirrors.kmmovies = mirrorsData.scrapers.kmmovies.active;
             if (mirrorsData.scrapers.rogmovies?.active) activeMirrors.rogmovies = mirrorsData.scrapers.rogmovies.active;
         }
     } catch (_) {}
@@ -733,19 +733,19 @@ async function enrichPage() {
                     `🚀 Fast Cloud Server 1 (Instant Download)`;
             } else {
                 btn1.href = `${activeMirrors.hdhub4u}/?s=${q}`;
-                btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (HDHub4u Cloud)';
+                btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (Instant Cloud)';
             }
 
             if (secondaryUrl) {
                 btn2.href = secondaryUrl;
                 btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2 Direct)';
             } else {
-                btn2.href = `${activeMirrors.vegamovies}/?s=${q}`;
-                btn2.querySelector('span').textContent = '⚡ VegaMovies Cloud Mirror (Server 2)';
+                btn2.href = `${activeMirrors.kmmovies}/?s=${q}`;
+                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2)';
             }
 
             btn3.href = `${activeMirrors.rogmovies}/?s=${q}`;
-            btn3.querySelector('span').textContent = '🌐 ROG VIP Cloud Mirror (Server 3)';
+            btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror (Server 3)';
 
             // Hydrate P2P Torrent & Magnet with verified catalog data
             setupTorrentBox(currentMovie, params);
