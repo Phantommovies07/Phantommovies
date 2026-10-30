@@ -1,6 +1,225 @@
 {
   "movies": [
     {
+      "id": "1793402656115",
+      "type": "series",
+      "title": "Mirzapur: The Movie",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhlYWY1NWUtYjU4Zi00MDg4LWE2N2MtYjQzMjBkMjgwOWI5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjhlYWY1NWUtYjU4Zi00MDg4LWE2N2MtYjQzMjBkMjgwOWI5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "750MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2780039390",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2942963731",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://vidlink.pro/tv/tt34339725/2/1?primaryColor=0284c7&autoplay=false"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt34339725-2-1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "750MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.2GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/2780039390",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/2942963731",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 81,
+              "title": "Episode 81",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://vidlink.pro/tv/tt34339725/2/81?primaryColor=0284c7&autoplay=false"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=81"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt34339725-2-81"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "1.8GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmJvaGNuTEVQa0RHVmwxSkdKbVM2YWswMUVWQlNSME81ckozdXorZDFpa0k9",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Episode 5",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://vidlink.pro/tv/tt34339725/2/5?primaryColor=0284c7&autoplay=false"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=5"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt34339725-2-5"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p Full HD",
+                  "size": "4.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhVMXdNOG16ODY3VERmRDVUOUVlWDJGT0tKaTY0K1AyQVBqUGJxME5YaWc9",
+                  "color": "#10b981"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://vidlink.pro/tv/tt34339725/4/1?primaryColor=0284c7&autoplay=false"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://cinesrc.st/embed/tv/tt34339725?s=4&e=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt34339725-4-1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "750MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/2780039390",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.7GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/2941714560",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mirzapur:+The+Movie+2026+trailer",
+      "description": "Mirzapur: The Movie (2026) starring Ali Fazal, Pankaj Tripathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 28562,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt34339725",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T23:24:07.995988+00:00",
+      "updatedAt": "2026-10-30T23:24:07.995988+00:00"
+    },
+    {
       "id": "1793381537755",
       "type": "movie",
       "title": "All That We Never Were",
@@ -1569,7 +1788,7 @@
       ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Apocalypse+Z:+New+World+2026+trailer",
-      "description": "Apocalypse Z: New World (2026) starring Carlos Alcaide, Julia Mart\u00ednez.",
+      "description": "Apocalypse Z: New World (2026) starring Carlos Alcaide, Julia Martínez.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -2899,7 +3118,7 @@
         }
       ],
       "trailerLink": "https://www.youtube.com/results?search_query=Fading+Grandeur+2026+trailer",
-      "description": "Fading Grandeur (2026) starring Alexandra Jim\u00e9nez, Antonio de la Torre.",
+      "description": "Fading Grandeur (2026) starring Alexandra Jiménez, Antonio de la Torre.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -3983,7 +4202,7 @@
       ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Hadestown:+The+Musical+2026+trailer",
-      "description": "Hadestown: The Musical (2026) starring Reeve Carney, Andr\u00e9 De Shields.",
+      "description": "Hadestown: The Musical (2026) starring Reeve Carney, André De Shields.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -8455,7 +8674,7 @@
         }
       ],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Trap+2026+trailer",
-      "description": "The Trap (2026) starring Friederike Becht, Hans L\u00f6w.",
+      "description": "The Trap (2026) starring Friederike Becht, Hans Löw.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -9258,7 +9477,7 @@
       "createdAt": "2026-10-12T11:31:13.245236+00:00",
       "updatedAt": "2026-10-12T11:31:13.245236+00:00",
       "torrent": {
-        "name": "Wild.Wild.Punjab.2024.1080p.WEBRip.x264.Dual.YG\u2b50",
+        "name": "Wild.Wild.Punjab.2024.1080p.WEBRip.x264.Dual.YG⭐",
         "seeders": 2,
         "size": "2.5 GB",
         "magnet": "magnet:?xt=urn:btih:2C8FCEA4EBF1EFCDA6F5B10E84EE4355FE7D0A97&dn=Wild.Wild.Punjab.2024.1080p.WEBRip.x264.Dual.YG%E2%AD%90&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//open.demonii.com%3A1337/announce&tr=udp%3A//open.stealth.si%3A80/announce&tr=udp%3A//tracker.torrent.eu.org%3A451/announce&tr=udp%3A//explodie.org%3A6969/announce&tr=udp%3A//tracker.coppersurfer.tk%3A6969/announce&tr=udp%3A//p4p.arenabg.com%3A1337/announce",
@@ -20306,7 +20525,7 @@
       ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Blue+Star+2023+trailer",
-      "description": "The Blue Star (2023) starring Le\u00f3n Froil\u00e1n Carabajal, Pepe Lorente.",
+      "description": "The Blue Star (2023) starring León Froilán Carabajal, Pepe Lorente.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -25143,7 +25362,7 @@
       ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=It:+Welcome+to+Derry+2025+trailer",
-      "description": "It: Welcome to Derry (2025) starring Jovan Adepo, Bill Skarsg\u00e5rd.",
+      "description": "It: Welcome to Derry (2025) starring Jovan Adepo, Bill Skarsgård.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -31271,7 +31490,7 @@
       ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Custody+2017+trailer",
-      "description": "Custody (2017) starring Denis M\u00e9nochet, L\u00e9a Drucker.",
+      "description": "Custody (2017) starring Denis Ménochet, Léa Drucker.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
@@ -50171,7 +50390,7 @@
       ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dune:+Part+Two+2024+trailer",
-      "description": "Dune: Part Two (2024) starring Timoth\u00e9e Chalamet, Zendaya.",
+      "description": "Dune: Part Two (2024) starring Timothée Chalamet, Zendaya.",
       "featured": false,
       "trending": true,
       "heroSlide": false,
@@ -50777,7 +50996,7 @@
       ],
       "seasons": [],
       "trailerLink": "",
-      "description": "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a greater threat\u2014one that could endanger not only their species, but the entire valley they call home.",
+      "description": "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a greater threat—one that could endanger not only their species, but the entire valley they call home.",
       "featured": true,
       "trending": false,
       "heroSlide": false,
@@ -50917,7 +51136,7 @@
       ],
       "seasons": [],
       "trailerLink": "",
-      "description": "A celebrated Olympian shooter travels to America looking for a donor to help his sick child \u2014 but unexpected romance complicates his search.",
+      "description": "A celebrated Olympian shooter travels to America looking for a donor to help his sick child — but unexpected romance complicates his search.",
       "featured": true,
       "trending": true,
       "heroSlide": false,
@@ -51753,7 +51972,7 @@
       ],
       "seasons": [],
       "trailerLink": "",
-      "description": "The battle for Mirzapur\u2019s throne intensifies as old enemies resurface and a new threat emerges in the form of Babban Babua, a ruthless businessman from Jaisalmer with ambitions of his own. As the Tripathis face enemies from both the past and present, loyalties are tested while Guddu and Bablu Pandit fight to establish themselves in the power struggle for Mirzapur.",
+      "description": "The battle for Mirzapur’s throne intensifies as old enemies resurface and a new threat emerges in the form of Babban Babua, a ruthless businessman from Jaisalmer with ambitions of his own. As the Tripathis face enemies from both the past and present, loyalties are tested while Guddu and Bablu Pandit fight to establish themselves in the power struggle for Mirzapur.",
       "featured": true,
       "trending": true,
       "heroSlide": true,
@@ -52219,7 +52438,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 490,
-    "lastUpdated": "2026-10-30T17:32:37.495857+00:00",
+    "lastUpdated": "2026-10-30T23:24:33.258684+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -52249,9 +52468,9 @@
     "siteBaseUrl": "",
     "request": {
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
-      "buttonText": "\ud83d\udce9 Request on Telegram"
+      "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 119,
-    "totalTitles": 609
+    "totalSeries": 120,
+    "totalTitles": 610
   }
 }
