@@ -2,6 +2,11 @@
 // PHANTOM MOVIES - MAIN APPLICATION (JSON-Based)
 // ═══════════════════════════════════════════════════
 
+// Universal Loading Screen Watchdog: Force-hide after max 1500ms under any network condition
+setTimeout(function() {
+    hideLoadingScreen();
+}, 1500);
+
 let allMovies = [];
 let featuredMovie = null;
 let siteSettings = {};
@@ -12,24 +17,34 @@ let heroSlideTimer = null;
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v4');
-        const cacheTime = sessionStorage.getItem('phantom_content_time_v4');
-        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
+        const cached = sessionStorage.getItem('phantom_content_cache_v5');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v5');
+        if (cached && cacheTime && (Date.now() - Number(cacheTime) < 15 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
             return parsed;
         }
     } catch (_) {}
 
-    const response = await fetch('data/content.json?v=' + Date.now());
-    if (!response.ok) throw new Error('Failed to load content');
-    const data = await response.json();
-    window.PHANTOM_CONTENT_CACHE = data;
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+
     try {
-        sessionStorage.setItem('phantom_content_cache_v4', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time_v4', String(Date.now()));
-    } catch (_) {}
-    return data;
+        const response = await fetch('data/content.json?v=20261031_2', { signal: controller.signal });
+        clearTimeout(timeoutId);
+        if (!response.ok) throw new Error('Failed to load content');
+        const data = await response.json();
+        window.PHANTOM_CONTENT_CACHE = data;
+        try {
+            sessionStorage.setItem('phantom_content_cache_v5', JSON.stringify(data));
+            sessionStorage.setItem('phantom_content_time_v5', String(Date.now()));
+        } catch (_) {}
+        return data;
+    } catch (err) {
+        clearTimeout(timeoutId);
+        console.warn('Content fetch issue, attempting cached or fallback:', err);
+        throw err;
+    }
 }
 
 // ─── LOAD MOVIES FROM JSON ───
@@ -316,22 +331,23 @@ function getTrendingMovies(limit = 10, preferredType = null) {
 
     const scored = pool.map(m => {
         const y = parseInt(m.year) || 0;
-        // Heavy recency boost: 2025/2024 get highest priority for active releases
+        // Heavy recency boost for active 2024-2025 releases; penalize unreleased titles >= 2026
         let recencyScore = 0;
-        if (y === 2025) recencyScore = 380000;
+        if (y >= 2026) recencyScore = -200000;
+        else if (y === 2025) recencyScore = 380000;
         else if (y === 2024) recencyScore = 320000;
-        else if (y === 2023) recencyScore = 120000;
-        else if (y >= 2026) recencyScore = 60000; // unreleased future titles get small score
-        else recencyScore = 0; // older titles (<2023) receive no recency boost
+        else if (y === 2023) recencyScore = 140000;
+        else if (y >= 2020) recencyScore = 50000;
+        else recencyScore = 0;
 
         const trendBonus = (m.trending || String(m.badge || '').toUpperCase() === 'TRENDING') ? 350000 : 0;
         const badgeBonus = ['HOT', 'NEW', '4K'].includes(String(m.badge || '').toUpperCase()) ? 150000 : 0;
         
         // Boost verified watchable titles (has stream or downloads)
-        const hasMediaBonus = (m.streamLink || (Array.isArray(m.streams) && m.streams.length) || (Array.isArray(m.downloads) && m.downloads.length)) ? 120000 : 0;
+        const hasMediaBonus = (m.streamLink || (Array.isArray(m.streams) && m.streams.length) || (Array.isArray(m.downloads) && m.downloads.length)) ? 150000 : 0;
         
         // Movie priority bonus so trending prominently displays blockbuster movies
-        const movieBonus = (m.type !== 'series') ? 140000 : 0;
+        const movieBonus = (m.type !== 'series') ? 120000 : 0;
         
         const ratingScore = (parseFloat(m.rating) || 7.0) * 8000;
         const viewsScore = Math.min(parseInt(m.views) || 0, 120000);
@@ -1521,41 +1537,9 @@ function renderDedicatedTrendingPage() {
         grid.innerHTML = '<div class="empty-state">No trending items available right now.</div>';
         return;
     }
-    grid.innerHTML = trendingList.map((m, idx) => {
-        const isSeries = m.type === 'series';
-        const targetUrl = (isSeries ? 'series.html?id=' : 'movie.html?id=') + encodeURIComponent(m.id);
-        const rank = idx + 1;
-        const img = m.poster || m.banner || '';
-        const rankColor = rank === 1 ? '#ffd70f' : (rank === 2 ? '#c0c0c0' : (rank === 3 ? '#cd7f32' : 'rgba(91, 196, 245, 0.9)'));
-        const wp = getWatchProgress(m.id);
-        const progressBar = (wp && wp.progress > 0)
-            ? `<div class="card-progress-bar"><div class="card-progress-fill" style="width: ${wp.progress}%"></div></div>`
-            : '';
-        return `
-            <div class="movie-card fade-in" data-id="${m.id}" onclick="location.href='${targetUrl}'" style="position:relative;">
-                <div class="trending-rank-badge" style="background: ${rankColor}; color: #000;">#${rank}</div>
-                <div class="card-poster">
-                    <img src="${safeEscapeHTML(img)}" alt="${safeEscapeHTML(m.title)}" loading="lazy">
-                    <div class="card-play-btn"><span class="play-ico"></span></div>
-                    <span class="card-quick-stream">${isSeries ? 'Watch Series' : 'Stream Now'}</span>
-                    ${progressBar}
-                </div>
-                <div class="card-info">
-                    <div class="card-title">${safeEscapeHTML(m.title)}</div>
-                    <div class="card-meta">
-                        <span>⭐ ${m.rating || '8.5'}</span>
-                        <span>•</span>
-                        <span class="card-pill card-pill-source" style="padding: 1px 6px; font-size: 10px;">WEB-DL</span>
-                        <span class="card-pill card-pill-codec" style="padding: 1px 6px; font-size: 10px;">HEVC</span>
-                        <span style="color:#5bc4f5;">${isSeries ? 'Series' : 'Movie'}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    }).join('');
+    grid.innerHTML = trendingList.map((m, idx) => movieCard(m, true, idx + 1)).join('');
+    bindMovieCards(grid);
 }
-
-
 // ═══════════════════════════════════════════════════════════════
 // INSTANT TRAILER LIGHTBOX MODAL CONTROLLER
 // ═══════════════════════════════════════════════════════════════
