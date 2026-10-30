@@ -216,58 +216,64 @@ function updateHeroRealtimeStats() {
 
 // ─── AFTER MOVIES LOADED ───
 function afterMoviesLoaded() {
-    // Update hero combined realtime counter
-    updateHeroRealtimeStats();
-    
-    // Set featured movie
-    const feat = allMovies.find(m => m.featured) || allMovies[0];
-    if (feat) setFeatured(feat);
-    
-    // Render home content
-    renderCategoryFilters();
-    renderContinueWatching();
-    renderWatchlist();
-    renderTrending();
-    renderHeroSlider();
-    const urlParams = new URLSearchParams(window.location.search);
-    const searchParam = urlParams.get('search');
-    const pageType = window.PHANTOM_PAGE_TYPE || 'home';
+    try {
+        const pageType = window.PHANTOM_PAGE_TYPE || 'home';
 
-    if (searchParam) {
-        const q = searchParam.trim().toLowerCase();
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) searchInput.value = searchParam;
-        const matches = allMovies.filter(m =>
-            (m.title || '').toLowerCase().includes(q) ||
-            (m.genre || '').toLowerCase().includes(q) ||
-            (m.category || '').toLowerCase().includes(q) ||
-            (m.description || '').toLowerCase().includes(q)
-        );
-        renderMovies(matches);
-        const movieSec = document.getElementById('movies');
-        if (movieSec) movieSec.scrollIntoView({ behavior: 'smooth' });
-    } else if (pageType === 'movies') {
-        const moviesList = allMovies.filter(m => m.type !== 'series');
-        renderMovies(moviesList);
-    } else if (pageType === 'series') {
-        const seriesList = allMovies.filter(m => m.type === 'series');
-        renderMovies(seriesList);
-    } else if (pageType === 'trending') {
-        renderDedicatedTrendingPage();
-    } else {
-        renderMovies(allMovies);
+        // Home-specific hero and spotlight widgets
+        if (pageType === 'home') {
+            updateHeroRealtimeStats();
+            const feat = allMovies.find(m => m.featured) || allMovies[0];
+            if (feat) setFeatured(feat);
+            renderHeroSlider();
+            renderContinueWatching();
+            renderWatchlist();
+            renderTrending();
+        }
+
+        renderCategoryFilters();
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('search');
+
+        if (searchParam) {
+            const q = searchParam.trim().toLowerCase();
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) searchInput.value = searchParam;
+            const matches = allMovies.filter(m =>
+                (m.title || '').toLowerCase().includes(q) ||
+                (m.genre || '').toLowerCase().includes(q) ||
+                (m.category || '').toLowerCase().includes(q) ||
+                (m.description || '').toLowerCase().includes(q)
+            );
+            renderMovies(matches);
+            const movieSec = document.getElementById('movies');
+            if (movieSec) movieSec.scrollIntoView({ behavior: 'smooth' });
+        } else if (pageType === 'movies') {
+            const moviesList = allMovies.filter(m => m.type !== 'series');
+            renderMovies(moviesList);
+        } else if (pageType === 'series') {
+            const seriesList = allMovies.filter(m => m.type === 'series');
+            renderMovies(seriesList);
+        } else if (pageType === 'trending') {
+            renderDedicatedTrendingPage();
+        } else {
+            renderMovies(allMovies);
+        }
+
+        setupRequestButton();
+        initThemeToggle();
+        initSearchToggle();
+        initRichSearch();
+        initPWA();
+    } catch (err) {
+        console.error('Error during afterMoviesLoaded:', err);
+    } finally {
+        // Guarantee loading screen is ALWAYS hidden immediately
+        hideLoadingScreen();
     }
-    setupRequestButton();
-    initThemeToggle();
-    initSearchToggle();
-    initRichSearch();
-    initPWA();
-    
-    // Hide loading screen immediately - no artificial delay!
-    hideLoadingScreen();
 
     // Direct ad injection without network refetch
-    if (siteSettings.ads) applyAds(siteSettings.ads, 'home');
+    if (siteSettings.ads) applyAds(siteSettings.ads, window.PHANTOM_PAGE_TYPE || 'home');
     
     // Track with GA4
     if (typeof gtag !== 'undefined') {
@@ -279,16 +285,22 @@ function afterMoviesLoaded() {
 
 // ─── SET FEATURED MOVIE ───
 function setFeatured(m) {
+    if (!m) return;
     featuredMovie = m;
     
-    document.getElementById('featTitle').textContent = m.title.toUpperCase();
-    document.getElementById('featDesc').textContent = m.description || '';
+    const featTitle = document.getElementById('featTitle');
+    if (featTitle) featTitle.textContent = (m.title || '').toUpperCase();
+
+    const featDesc = document.getElementById('featDesc');
+    if (featDesc) featDesc.textContent = m.description || '';
     
     if (m.poster && m.poster.trim() !== '') {
         const el = document.getElementById('featPosterEl');
-        el.style.backgroundImage = 'url(' + m.poster + ')';
-        el.style.backgroundSize = 'cover';
-        el.style.backgroundPosition = 'center';
+        if (el) {
+            el.style.backgroundImage = 'url(' + m.poster + ')';
+            el.style.backgroundSize = 'cover';
+            el.style.backgroundPosition = 'center';
+        }
     }
 }
 
@@ -410,6 +422,7 @@ function updateHeroSpotlight(index) {
 
 function renderHeroSlider() {
     const slider = document.getElementById('heroSlider');
+    if (!slider) return;
     const manualSlides = allMovies.filter(m => m.heroSlide);
     heroSlidesList = (manualSlides.length ? manualSlides : getTrendingMovies(7)).slice(0, 7);
     if (!heroSlidesList.length) {
