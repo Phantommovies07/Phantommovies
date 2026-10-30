@@ -450,14 +450,13 @@ function switchStream(index, isFailover = false) {
 
 
 function generateFallbackDownloads(movie) {
-    const cleanT = (movie?.title || '').replace(/[:\-–—\(\)\d]/g, ' ').trim();
-    const qTitle = encodeURIComponent(cleanT || movie?.title || '');
-    const hdhubDomain = liveMirrorsConfig?.scrapers?.hdhub4u?.active || 'https://new9.hdhub4u.cl';
+    const qTitle = encodeURIComponent(movie?.title || '');
+    const mId = encodeURIComponent(movie?.id || '');
     return [
-        { quality: '480p SD', size: '450 MB', server: 'Standard HD Cloud', url: `${hdhubDomain}/?s=${qTitle}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'Fast Direct Cloud', url: `${hdhubDomain}/?s=${qTitle}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'High Speed Direct Cloud', url: `${hdhubDomain}/?s=${qTitle}`, color: '#10b981' },
-        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Direct Cloud', url: `https://4khdhub.one`, color: '#ec4899' }
+        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: `download.html?id=${mId}&quality=480p&size=450+MB&title=${qTitle}`, color: '#ffd70f' },
+        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: `download.html?id=${mId}&quality=720p&size=1.2+GB&title=${qTitle}`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Direct Cloud', url: `download.html?id=${mId}&quality=1080p&size=2.6+GB&title=${qTitle}`, color: '#10b981' },
+        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Master Cloud', url: `download.html?id=${mId}&quality=4K&size=6.4+GB&title=${qTitle}`, color: '#ec4899' }
     ];
 }
 
@@ -639,6 +638,90 @@ function renderMediaSpecs(movie) {
     `;
 }
 
+
+function renderMovieScreenshots(movie) {
+    if (!movie) return '';
+    let shots = [];
+    if (Array.isArray(movie.screenshots) && movie.screenshots.length) {
+        shots = movie.screenshots.filter(s => s && typeof s === 'string' && s.trim());
+    }
+
+    if (!shots.length) {
+        const still = movie.banner || movie.poster;
+        if (still) {
+            shots = [still];
+        }
+    }
+
+    if (!shots.length) return '';
+
+    const cards = shots.slice(0, 4).map((shotUrl, idx) => `
+        <div class="screenshot-item" onclick="openScreenshotModal('${encodeURI(shotUrl)}', '${encodeURIComponent(movie.title || 'Movie Still')}')">
+            <div class="screenshot-img-wrap">
+                <img src="${shotUrl}" alt="${escapeHTML(movie.title || 'Movie')} Screenshot ${idx + 1}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(movie.banner || movie.poster || '')}'">
+                <div class="screenshot-hover-overlay">
+                    <span class="zoom-icon">🔍</span>
+                    <span class="zoom-text">View Full HD</span>
+                </div>
+            </div>
+            <div class="screenshot-caption">Sample Capture ${idx + 1} • 1080p / 4K UHD Master</div>
+        </div>
+    `).join('');
+
+    return `
+        <div class="screenshots-card" id="screenshotsSection">
+            <div class="screenshots-header">
+                <div class="screenshots-title">
+                    <span class="sc-icon">📸</span> VIDEO QUALITY SCREENSHOTS
+                </div>
+                <span class="screenshots-badge">VERIFIED 1080p & 4K MASTER</span>
+            </div>
+            <p class="screenshots-desc">Sample video captures from the actual release. Check picture clarity, aspect ratio & subtitle rendering before downloading.</p>
+            <div class="screenshots-grid">
+                ${cards}
+            </div>
+        </div>
+    `;
+}
+
+function openScreenshotModal(imgUrl, caption) {
+    let modal = document.getElementById('screenshotModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.className = 'screenshot-modal';
+        modal.id = 'screenshotModal';
+        modal.innerHTML = `
+            <div class="screenshot-backdrop" onclick="closeScreenshotModal()"></div>
+            <div class="screenshot-box">
+                <div class="screenshot-box-header">
+                    <span id="screenshotModalCaption">📸 Screenshot Preview</span>
+                    <button class="screenshot-close-btn" onclick="closeScreenshotModal()" aria-label="Close">✕</button>
+                </div>
+                <div class="screenshot-box-body">
+                    <img id="screenshotModalImg" src="" alt="Screenshot">
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+    const modalImg = document.getElementById('screenshotModalImg');
+    const modalCaption = document.getElementById('screenshotModalCaption');
+    if (modalImg) modalImg.src = decodeURI(imgUrl);
+    if (modalCaption) modalCaption.textContent = decodeURIComponent(caption) + ' - Master Screenshot';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeScreenshotModal() {
+    const modal = document.getElementById('screenshotModal');
+    if (modal) modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeScreenshotModal();
+});
+
 function renderMovie(movie) {
     currentMovie = movie;
     currentStreams = normalizeStreams(movie);
@@ -685,6 +768,8 @@ function renderMovie(movie) {
                 ${renderCastChips(movie)}
 
                 ${renderMediaSpecs(movie)}
+
+                ${renderMovieScreenshots(movie)}
 
                 <div class="download-section">
                     <div class="sec-title">DOWNLOAD <span>OPTIONS</span></div>

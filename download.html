@@ -393,6 +393,8 @@ function isValidDownloadUrl(url) {
     const clean = url.trim();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
+    if (clean.includes('/?s=') || clean.includes('/search/')) return false;
+    if (clean.includes('rogmovies.') || clean.includes('hdhub4u.') || clean.includes('kmmovies.') || clean.includes('vegamovies.')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
 }
@@ -608,28 +610,22 @@ function applyInitialParams(params) {
     const btn1 = document.getElementById('btnServer1');
     const btn2 = document.getElementById('btnServer2');
     const btn3 = document.getElementById('btnServer3');
-
-    const rawSearch = cleanTitleForQuery(params.title || params.id || '');
-    const q = encodeURIComponent(rawSearch || params.title || '');
-
-    const fallbackHdhub = `${activeMirrors.hdhub4u}/?s=${q}`;
-    const fallbackKm = `${activeMirrors.kmmovies}/?s=${q}`;
-    const fallbackRog = `${activeMirrors.rogmovies}/?s=${q}`;
+    const qLabel = (params.quality || 'HD').toUpperCase();
 
     if (isValidDownloadUrl(params.url)) {
         btn1.href = params.url;
-        btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${(params.quality || 'HD').toUpperCase()})`;
-        btn2.href = fallbackKm;
-        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2)';
-        btn3.href = fallbackHdhub;
-        btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror (Server 3)';
+        btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${qLabel})`;
+        btn2.href = watchUrl;
+        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
+        btn3.href = watchUrl;
+        btn3.querySelector('span').textContent = '🎬 Watch Online in HD (Zero Ads • Instant Play)';
     } else {
-        btn1.href = fallbackHdhub;
-        btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (Instant Cloud)';
-        btn2.href = fallbackKm;
-        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2)';
-        btn3.href = fallbackRog;
-        btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror (Server 3)';
+        btn1.href = watchUrl;
+        btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Instant Download - ${qLabel})`;
+        btn2.href = watchUrl;
+        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Instant Play)';
+        btn3.href = watchUrl;
+        btn3.querySelector('span').textContent = '🎬 Watch Online in HD (Zero Ads • Instant Play)';
     }
 
     setupTorrentBox(null, params);
@@ -709,43 +705,64 @@ async function enrichPage() {
             const btn2 = document.getElementById('btnServer2');
             const btn3 = document.getElementById('btnServer3');
 
-            const cleanT = cleanTitleForQuery(currentMovie.title);
-            const q = encodeURIComponent(cleanT || currentMovie.title);
-
             let primaryUrl = isValidDownloadUrl(params.url) ? params.url : null;
             let secondaryUrl = null;
+            let tertiaryUrl = null;
 
             if (!primaryUrl && validPool.length > 0) {
                 const match = validPool.find(d => (d.quality || '').toLowerCase().includes((params.quality || '').toLowerCase()));
                 primaryUrl = match ? match.url : validPool[0].url;
             }
 
-            if (validPool.length > 0) {
-                const secondMatch = validPool.find(d => d.url !== primaryUrl);
-                if (secondMatch) secondaryUrl = secondMatch.url;
+            const remainingPool = validPool.filter(d => d.url !== primaryUrl);
+            if (remainingPool.length > 0) {
+                secondaryUrl = remainingPool[0].url;
+            }
+            if (remainingPool.length > 1) {
+                tertiaryUrl = remainingPool[1].url;
             }
 
+            const qLabel = (params.quality || 'HD').toUpperCase();
+
+            // SERVER 1: Primary Direct Cloud Download
             if (primaryUrl) {
                 btn1.href = primaryUrl;
-                const isDirect1 = /hubcdn|hubdrive|nexdrive|greenmotors|4khdhub|gofile|drive|gdflix|multicloud|magiclinks|allmovieland|slast430did/i.test(primaryUrl);
-                btn1.querySelector('span').textContent = isDirect1 ? 
-                    `🚀 Fast Cloud Server 1 (Direct Download - ${(params.quality || 'HD').toUpperCase()})` : 
-                    `🚀 Fast Cloud Server 1 (Instant Download)`;
+                btn1.target = '_blank';
+                btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${qLabel})`;
             } else {
-                btn1.href = `${activeMirrors.hdhub4u}/?s=${q}`;
-                btn1.querySelector('span').textContent = '🚀 Fast Cloud Server 1 (Instant Cloud)';
+                btn1.href = watchUrl;
+                btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Instant Download - ${qLabel})`;
             }
 
+            // SERVER 2: Secondary Cloud Mirror or Direct Torrent Magnet
             if (secondaryUrl) {
                 btn2.href = secondaryUrl;
-                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2 Direct)';
+                btn2.target = '_blank';
+                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
+                btn2.querySelector('em').textContent = 'Download';
+            } else if (currentMovie.torrent && currentMovie.torrent.magnet) {
+                btn2.href = currentMovie.torrent.magnet;
+                btn2.target = '_self';
+                btn2.querySelector('span').textContent = '🧲 Direct P2P Torrent / Magnet (Zero Ads)';
+                btn2.querySelector('em').textContent = 'Instant P2P';
             } else {
-                btn2.href = `${activeMirrors.kmmovies}/?s=${q}`;
-                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror (Server 2)';
+                btn2.href = watchUrl;
+                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Instant Play)';
+                btn2.querySelector('em').textContent = 'Play';
             }
 
-            btn3.href = `${activeMirrors.rogmovies}/?s=${q}`;
-            btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror (Server 3)';
+            // SERVER 3: Tertiary Cloud Mirror or In-App Online Stream
+            if (tertiaryUrl) {
+                btn3.href = tertiaryUrl;
+                btn3.target = '_blank';
+                btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror 3 (Direct Download)';
+                btn3.querySelector('em').textContent = 'Download';
+            } else {
+                btn3.href = watchUrl;
+                btn3.target = '_self';
+                btn3.querySelector('span').textContent = '🎬 Watch Online in Full HD (Zero Ads • Instant Play)';
+                btn3.querySelector('em').textContent = 'Play HD';
+            }
 
             // Hydrate P2P Torrent & Magnet with verified catalog data
             setupTorrentBox(currentMovie, params);

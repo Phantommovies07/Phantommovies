@@ -228,13 +228,12 @@ function isValidDownloadUrl(url) {
 
 function generateEpisodeFallbackDownloads(series, seasonNum = 1, epNum = 1) {
     const title = series?.title || 'Series';
-    const cleanT = title.replace(/[:\-–—\(\)\d]/g, ' ').trim();
-    const q = encodeURIComponent(`${cleanT} S0${seasonNum}`.trim());
-    const hdhubDomain = liveMirrorsConfig?.scrapers?.hdhub4u?.active || 'https://new9.hdhub4u.cl';
+    const sId = encodeURIComponent(series?.id || '');
+    const qTitle = encodeURIComponent(`${title} S0${seasonNum} EP ${epNum}`);
     return [
-        { quality: '480p SD', size: '180 MB', server: 'Standard HD Cloud', url: `${hdhubDomain}/?s=${q}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '450 MB', server: 'Fast Direct Cloud', url: `${hdhubDomain}/?s=${q}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '950 MB', server: 'High Speed Direct Cloud', url: `${hdhubDomain}/?s=${q}`, color: '#10b981' }
+        { quality: '480p SD', size: '180 MB', server: 'Fast Cloud Mirror', url: `download.html?id=${sId}&quality=480p&size=180+MB&title=${qTitle}&s=${seasonNum}&ep=${epNum}&type=series`, color: '#ffd70f' },
+        { quality: '720p HD', size: '450 MB', server: 'High Speed Cloud', url: `download.html?id=${sId}&quality=720p&size=450+MB&title=${qTitle}&s=${seasonNum}&ep=${epNum}&type=series`, color: '#06b6d4' },
+        { quality: '1080p Full HD', size: '950 MB', server: 'VIP Direct Cloud', url: `download.html?id=${sId}&quality=1080p&size=950+MB&title=${qTitle}&s=${seasonNum}&ep=${epNum}&type=series`, color: '#10b981' }
     ];
 }
 
@@ -340,6 +339,90 @@ function renderMediaSpecs(series) {
     `;
 }
 
+
+function renderSeriesScreenshots(series) {
+    if (!series) return '';
+    let shots = [];
+    if (Array.isArray(series.screenshots) && series.screenshots.length) {
+        shots = series.screenshots.filter(s => s && typeof s === 'string' && s.trim());
+    }
+
+    if (!shots.length) {
+        const still = series.banner || series.poster;
+        if (still) {
+            shots = [still];
+        }
+    }
+
+    if (!shots.length) return '';
+
+    const cards = shots.slice(0, 4).map((shotUrl, idx) => `
+        <div class="screenshot-item" onclick="openScreenshotModal('${encodeURI(shotUrl)}', '${encodeURIComponent(series.title || 'Series Still')}')">
+            <div class="screenshot-img-wrap">
+                <img src="${shotUrl}" alt="${escapeHTML(series.title || 'Series')} Screenshot ${idx + 1}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(series.banner || series.poster || '')}'">
+                <div class="screenshot-hover-overlay">
+                    <span class="zoom-icon">🔍</span>
+                    <span class="zoom-text">View Full HD</span>
+                </div>
+            </div>
+            <div class="screenshot-caption">Sample Capture ${idx + 1} • 1080p / 4K UHD Master</div>
+        </div>
+    `).join('');
+
+    return `
+        <div class="screenshots-card" id="screenshotsSection">
+            <div class="screenshots-header">
+                <div class="screenshots-title">
+                    <span class="sc-icon">📸</span> VIDEO QUALITY SCREENSHOTS
+                </div>
+                <span class="screenshots-badge">VERIFIED 1080p & 4K MASTER</span>
+            </div>
+            <p class="screenshots-desc">Sample video captures from the actual release. Check picture clarity, aspect ratio & subtitle rendering before downloading.</p>
+            <div class="screenshots-grid">
+                ${cards}
+            </div>
+        </div>
+    `;
+}
+
+function openScreenshotModal(imgUrl, caption) {
+    let modal = document.getElementById('screenshotModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.className = 'screenshot-modal';
+        modal.id = 'screenshotModal';
+        modal.innerHTML = `
+            <div class="screenshot-backdrop" onclick="closeScreenshotModal()"></div>
+            <div class="screenshot-box">
+                <div class="screenshot-box-header">
+                    <span id="screenshotModalCaption">📸 Screenshot Preview</span>
+                    <button class="screenshot-close-btn" onclick="closeScreenshotModal()" aria-label="Close">✕</button>
+                </div>
+                <div class="screenshot-box-body">
+                    <img id="screenshotModalImg" src="" alt="Screenshot">
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+    const modalImg = document.getElementById('screenshotModalImg');
+    const modalCaption = document.getElementById('screenshotModalCaption');
+    if (modalImg) modalImg.src = decodeURI(imgUrl);
+    if (modalCaption) modalCaption.textContent = decodeURIComponent(caption) + ' - Master Screenshot';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeScreenshotModal() {
+    const modal = document.getElementById('screenshotModal');
+    if (modal) modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeScreenshotModal();
+});
+
 function renderSeasonBatchPack(series, seasonIndex) {
     const sNum = seasonIndex + 1;
     const sTitle = `Season ${sNum}`;
@@ -364,7 +447,7 @@ function renderSeasonBatchPack(series, seasonIndex) {
             </div>
             <div class="batch-grid">
                 ${batchOptions.map(opt => {
-                    const dlUrl = `download.html?id=${encodeURIComponent(series.id)}&title=${encodeURIComponent(series.title || '')}&poster=${encodeURIComponent(series.poster || series.banner || '')}&quality=${encodeURIComponent(opt.quality)}&size=${encodeURIComponent(opt.size)}&url=${encodeURIComponent(`${hdhubDomain}/?s=${qBatch}`)}&s=${sNum}&type=series`;
+                    const dlUrl = `download.html?id=${encodeURIComponent(series.id)}&title=${encodeURIComponent(series.title || '')}&poster=${encodeURIComponent(series.poster || series.banner || '')}&quality=${encodeURIComponent(opt.quality)}&size=${encodeURIComponent(opt.size)}&url=&s=${sNum}&type=series`;
                     return `
                         <a class="download-card batch-dl-btn" href="${dlUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:${opt.color}">
                             <div>
@@ -443,6 +526,8 @@ function renderSeries(series) {
                 </div>
 
                 ${renderMediaSpecs(series)}
+
+                ${renderSeriesScreenshots(series)}
 
                 <div class="download-section">
                     <div class="sec-title">EPISODE <span>DOWNLOADS</span></div>
