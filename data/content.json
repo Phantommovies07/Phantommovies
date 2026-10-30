@@ -1,6 +1,720 @@
 {
   "movies": [
     {
+      "id": "1793356757331",
+      "type": "series",
+      "title": "The Punisher",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTI2NDllMjgtOWEyYi00Y2YxLThhYjQtNTQ0NTgwNDE1YmYzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZZeE5hMmsrVXdZUFRpWEZIKzIxdThYWHMrRWVGekhLREJkR1lkUWs3aTQ9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4.9GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1894669605",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkxlL2c4OUxCdzNPYUZCT0FLbkpUZlp1M1VMbEJELytROGRGajFaVnlHTTQ9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "4.7GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s01-2160p/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt5675620?s=2&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt5675620/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-480p/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/the-punisher-s02-1080p/",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "6GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/marvels-the-punisher-s02-2160p-hdr/",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Punisher+2017+trailer",
+      "description": "The Punisher (2017) starring Jon Bernthal, Amber Rose Revah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24457,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5675620",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:10.877701+00:00",
+      "updatedAt": "2026-10-30T10:39:10.877701+00:00"
+    },
+    {
+      "id": "1793356758024",
+      "type": "movie",
+      "title": "Apocalypse Z: New World",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGI4ODQ1NGQtMTVmZS00NzcwLThmNWUtMTI4MDhkNDAyZDI0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNGI4ODQ1NGQtMTVmZS00NzcwLThmNWUtMTI4MDhkNDAyZDI0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt37522541",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt37522541"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt37522541"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt37522541"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "200MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776216406/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "650MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776216407/",
+          "color": "#06b6d4"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Apocalypse+Z:+New+World+2026+trailer",
+      "description": "Apocalypse Z: New World (2026) starring Carlos Alcaide, Julia Martínez.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22720,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37522541",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:10.404036+00:00",
+      "updatedAt": "2026-10-30T10:39:10.404036+00:00"
+    },
+    {
+      "id": "1793356756977",
+      "type": "movie",
+      "title": "Meethe Mein Kya Hai",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDBhYzUyODQtOWNhZS00NzM5LWE2ZmYtZDYxMDE1N2U2NjhhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDBhYzUyODQtOWNhZS00NzM5LWE2ZmYtZDYxMDE1N2U2NjhhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt39536070",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt39536070"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt39536070"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt39536070"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "430MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/tVqLjbwmrF1V89lS9mwzZwraU",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "700MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1876615769",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmxES3U5L2Vkd25aUW1iajk1ZkxDTnJtM1h3Sk9Vb0hjNnU1WVQ0bGtrQUE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Meethe+Mein+Kya+Hai+2026+trailer",
+      "description": "Meethe Mein Kya Hai (2026) starring Ritwik Bhowmik, Rohini Hattangadi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 24713,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39536070",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:10.128500+00:00",
+      "updatedAt": "2026-10-30T10:39:10.128500+00:00"
+    },
+    {
+      "id": "1793356757398",
+      "type": "movie",
+      "title": "Ice Age: Collision Course",
+      "genre": "Feature",
+      "year": 2016,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmExOGMxNzMtYjc3MC00OWU5LTg5OTAtNmRhNzBkYzk2ZGE1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZmExOGMxNzMtYjc3MC00OWU5LTg5OTAtNmRhNzBkYzk2ZGE1XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt3416828",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt3416828"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt3416828"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt3416828"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369701/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "750MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369702/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369704/",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776369703/",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ice+Age:+Collision+Course+2016+trailer",
+      "description": "Ice Age: Collision Course (2016) starring Ray Romano, Denis Leary.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18085,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt3416828",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:09.932532+00:00",
+      "updatedAt": "2026-10-30T10:39:09.932532+00:00"
+    },
+    {
+      "id": "1793356756871",
+      "type": "movie",
+      "title": "The Birthday Gift",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTM2MGFiMGYtMmFhZC00YWU3LThlOTAtZTAyOGNiMzUxODc4XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZTM2MGFiMGYtMmFhZC00YWU3LThlOTAtZTAyOGNiMzUxODc4XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt38999812",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt38999812"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt38999812"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt38999812"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776503221/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776503226/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776503228/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Birthday+Gift+2026+trailer",
+      "description": "The Birthday Gift (2026) starring Enzo Brumm, Sogol Faghani.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21109,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt38999812",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:09.665719+00:00",
+      "updatedAt": "2026-10-30T10:39:09.665719+00:00"
+    },
+    {
+      "id": "1793356753195",
+      "type": "movie",
+      "title": "The Strangers: Chapter 3",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZGQ2ZDJlMjgtYmMwNi00MjAxLWIzOWYtMzE0YTFjZWYyNmEzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZGQ2ZDJlMjgtYmMwNi00MjAxLWIzOWYtMzE0YTFjZWYyNmEzXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://slast430did.com/play/tt28682323",
+      "streams": [
+        {
+          "name": "Server 1 (AllMovieLand - HDVB P2P)",
+          "url": "https://slast430did.com/play/tt28682323"
+        },
+        {
+          "name": "Server 2 (HDMovie2 - P2P HLS)",
+          "url": "https://gorri421kos.com/play/tt28682323"
+        },
+        {
+          "name": "Server 4 (VidLink - Fast HD)",
+          "url": "https://vidlink.pro/movie/tt28682323"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "360MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/l5AttnDi2dbtObPRZvwsuGzGS",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "700MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1808458673",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "900MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk5iQTFpcjMrTHcwMkxWUlZOcFJ1dE1XVmdvZzUwZE9kd1Q3NTd0dHB6UHM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Strangers:+Chapter+3+2026+trailer",
+      "description": "The Strangers: Chapter 3 (2026) starring Hannah Galway, Ema Horvath.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15493,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28682323",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:09.042350+00:00",
+      "updatedAt": "2026-10-30T10:39:09.042350+00:00"
+    },
+    {
+      "id": "1793356748236",
+      "type": "series",
+      "title": "Akka",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODQ2NmJiMjktMWU4ZS00YTA1LWIxZGUtYmE1ZDE4MmFhZjQyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODQ2NmJiMjktMWU4ZS00YTA1LWIxZGUtYmE1ZDE4MmFhZjQyXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "10.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/4237020442",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnJ4N0JQczhFM3Zwd0ZCQjBPOTEwRy9nZWw4Q016blBoZDNxMG1iUk1wUUE9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk1iRnZSajJVem9FZ1NqcHBEaThLN2lOcVlOSlE0cThUR0FEb2dlM2FEeE09",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt29625288?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt29625288?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt29625288/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "311.6MB",
+              "server": "Fast Cloud",
+              "url": "https://one.kmcloud.lol/s/0xfDkVGh",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://one.kmcloud.lol/s/r7VGIzom",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.9GB",
+              "server": "Fast Cloud",
+              "url": "https://one.kmcloud.lol/s/uXNpblqg",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Akka+2026+trailer",
+      "description": "Akka (2026) starring Keerthy Suresh, Radhika Apte.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18411,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt29625288",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:08.078913+00:00",
+      "updatedAt": "2026-10-30T10:39:08.078913+00:00"
+    },
+    {
+      "id": "1793356756930",
+      "type": "series",
+      "title": "Love Always",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTI5ZjgzMmQtMmMwNy00ODJlLTkwOWUtZjZkZDUzMDE0NzFiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTI5ZjgzMmQtMmMwNy00ODJlLTkwOWUtZjZkZDUzMDE0NzFiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "330MB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776516503/",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.5GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776516504/",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.9GB",
+          "server": "ROG Fast Cloud",
+          "url": "https://nexdrive.beer/genxfm784776516505/",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (AllMovieLand - HDVB P2P)",
+              "url": "https://slast430did.com/play/tt47743462?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (HDMovie2 - P2P HLS)",
+              "url": "https://gorri421kos.com/play/tt47743462?s=1&e=1"
+            },
+            {
+              "name": "Server 4 (VidLink - Fast HD)",
+              "url": "https://vidlink.pro/tv/tt47743462/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "200MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-always-s01-480P/",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "350MB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-always-s01-720p-10bit/",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://episodes.magiclinks.lol/series/love-always-s01-1080p/",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Love+Always+2026+trailer",
+      "description": "Love Always (2026) starring Gouri G. Kishan, V. Jayaprakash.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11016,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt47743462",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T10:39:07.889385+00:00",
+      "updatedAt": "2026-10-30T10:39:07.889385+00:00"
+    },
+    {
       "id": "1793332048004",
       "type": "series",
       "title": "The Punisher",
@@ -55860,8 +56574,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 504,
-    "lastUpdated": "2026-10-30T03:47:47.572881+00:00",
+    "totalMovies": 509,
+    "lastUpdated": "2026-10-30T10:39:33.435366+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -55893,7 +56607,7 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 137,
-    "totalTitles": 641
+    "totalSeries": 140,
+    "totalTitles": 649
   }
 }
