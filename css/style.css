@@ -130,7 +130,7 @@ body {
 }
 
 /* ─── NAVIGATION ─── */
-nav {
+#mainNav {
     position: fixed;
     top: 0;
     left: 0;
@@ -266,12 +266,15 @@ nav {
 /* ─── HERO SECTION ─── */
 .hero {
     position: relative;
-    min-height: 85vh;
+    min-height: 580px;
+    height: 78vh;
+    max-height: 720px;
     display: flex;
-    align-items: flex-end;
-    padding: 0 5% 64px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 85px 5% 40px;
     overflow: hidden;
-    padding-top: 80px;
+    gap: 40px;
 }
 
 .hero-bg {
@@ -801,29 +804,39 @@ section {
 
 .trending-rank-number {
     position: absolute;
-    bottom: -6px;
-    left: -8px;
+    bottom: 4px;
+    left: 6px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 76px;
+    font-size: 58px;
     font-weight: 900;
-    line-height: 0.78;
+    line-height: 0.8;
     color: #050810;
-    -webkit-text-stroke: 2.2px #5bc4f5;
+    -webkit-text-stroke: 1.8px #5bc4f5;
     text-shadow: 0 4px 18px rgba(91, 196, 245, 0.45), 0 0 25px rgba(91, 196, 245, 0.25);
-    z-index: 10;
+    z-index: 5;
     pointer-events: none;
     user-select: none;
     transition: transform 0.3s;
 }
 
+@media (max-width: 768px) {
+    .trending-rank-number {
+        font-size: 42px;
+        -webkit-text-stroke: 1.4px #5bc4f5;
+        bottom: -2px;
+        left: 2px;
+    }
+}
+
 .trending-section .movie-info {
-    padding-left: 36px;
+    padding: 10px 12px 12px;
 }
 
 .trending-section .card-pill-stack {
     left: auto;
-    right: 8px;
-    align-items: flex-end;
+    right: 6px;
+    bottom: 6px;
+    justify-content: flex-end;
 }
 
 .movie-card:hover .trending-rank-number {
@@ -1624,7 +1637,7 @@ body.light-theme .request-card {
     z-index: 3;
     width: min(42vw, 520px);
     align-self: center;
-    margin-top: 68px;
+    margin-top: 0;
 }
 
 .hero-slider-head {
@@ -1965,7 +1978,7 @@ body.light-theme .slide-overlay span {
 }
 
 @media (max-width: 980px) {
-    nav {
+    #mainNav {
         padding: 0 4%;
     }
 
@@ -1985,7 +1998,7 @@ body.light-theme .slide-overlay span {
 }
 
 @media (max-width: 768px) {
-    nav {
+    #mainNav {
         height: 62px;
     }
 
@@ -2508,8 +2521,10 @@ body.light-theme .slide-overlay span {
     position: absolute;
     bottom: 8px;
     left: 8px;
+    right: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 4px;
     z-index: 2;
     pointer-events: none;
@@ -2864,28 +2879,33 @@ body.light-theme .slide-overlay span {
 
 /* ─── MOBILE BOTTOM APP NAVIGATION ─── */
 .mobile-bottom-nav {
-    display: none;
+    display: none !important;
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
 }
 
 @media (max-width: 768px) {
 
     /* Fixed bottom navigation for app-like UX */
     .mobile-bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 62px;
-        background: rgba(11, 15, 26, 0.94);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border-top: 1px solid rgba(255, 255, 255, 0.09);
-        z-index: 9990;
-        justify-content: space-around;
-        align-items: center;
-        padding-bottom: env(safe-area-inset-bottom, 0);
-        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+        display: flex !important;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 60px !important;
+        background: rgba(8, 12, 22, 0.96) !important;
+        backdrop-filter: blur(24px) !important;
+        -webkit-backdrop-filter: blur(24px) !important;
+        border-top: 1px solid rgba(91, 196, 245, 0.18) !important;
+        border-bottom: none !important;
+        z-index: 9999 !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        padding-bottom: env(safe-area-inset-bottom, 0) !important;
+        box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6) !important;
     }
 
     .bottom-nav-item {
@@ -2957,11 +2977,13 @@ body.light-theme .slide-overlay span {
 
     .hero-actions .btn-primary,
     .hero-actions .btn-secondary-main {
-        flex: 1 1 calc(50% - 10px);
-        min-height: 48px;
-        font-size: 13.5px;
+        flex: 1 1 calc(50% - 30px);
+        min-height: 44px;
+        padding: 10px 12px;
+        font-size: 12.5px;
         justify-content: center;
         text-align: center;
+        white-space: nowrap;
     }
 
     .hero-actions #heroWatchlistBtn {

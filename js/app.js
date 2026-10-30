@@ -801,12 +801,9 @@ function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
         pills.push('<span class="card-pill card-pill-4k">4K UHD</span>');
     } else if (isBluRay) {
         pills.push('<span class="card-pill card-pill-source">BluRay</span>');
-    } else {
-        pills.push('<span class="card-pill card-pill-source">WEB-DL</span>');
     }
-    pills.push('<span class="card-pill card-pill-codec">HEVC</span>');
     if (isDual) pills.push('<span class="card-pill card-pill-dual">Dual Audio</span>');
-    if (hasTorrent) pills.push('<span class="card-pill card-pill-torrent">🧲 Torrent</span>');
+    if (hasTorrent && pills.length < 2) pills.push('<span class="card-pill card-pill-torrent">🧲 Torrent</span>');
 
     const pillStack = pills.length ? `<div class="card-pill-stack">${pills.join('')}</div>` : '';
     const rankEl = rankNumber ? `<div class="trending-rank-number">${rankNumber}</div>` : '';
@@ -816,8 +813,8 @@ function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
         : '';
 
     return `<div class="movie-card" data-id="${m.id}">
-        ${rankEl}
         <div class="movie-poster">
+            ${rankEl}
             <div class="poster-ph">${img}</div>
             <div class="card-hover-overlay">
                 <div class="card-play-btn"><span class="play-ico"></span></div>
