@@ -3818,3 +3818,42 @@ body.light-theme .search-modal-box {
 body.light-theme .modal-search-input {
     color: #09121f !important;
 }
+
+/* ─── REAL-TIME VIEWS SYSTEM (SUBTLE & UN-HIGHLIGHTED) ─── */
+.subtle-live-viewers {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.subtle-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    display: inline-block;
+    opacity: 0.85;
+}
+
+.subtle-views-count {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.meta-sep {
+    color: var(--muted);
+    opacity: 0.45;
+    margin: 0 2px;
+}
+
+.meta-pill.meta-views {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--muted);
+}

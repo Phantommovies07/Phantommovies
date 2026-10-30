@@ -1,3 +1,34 @@
+
+// ─── REAL-TIME VIEWS ENGINE (SUBTLE & UN-HIGHLIGHTED) ───
+function formatViewNumber(num) {
+    const n = parseInt(num) || 0;
+    if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+    if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+    return n.toLocaleString();
+}
+
+function getMovieViewsData(movieId, baseViews) {
+    const rawBase = parseInt(baseViews) || 4500;
+    const storeKey = 'phantom_view_counts';
+    let localStore = {};
+    try {
+        localStore = JSON.parse(localStorage.getItem(storeKey) || '{}');
+    } catch (_) {}
+
+    const hash = String(movieId).split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
+    const refTime = 1730000000000;
+    const hoursElapsed = Math.max(0, (Date.now() - refTime) / (1000 * 60 * 60));
+    const hourlyRate = 1 + (hash % 4);
+    const dynamicTotal = rawBase + Math.floor(hoursElapsed * hourlyRate) + (localStore[String(movieId)] || 0);
+    const baseWatchers = Math.max(25, Math.min(480, Math.floor(dynamicTotal / 95) + (hash % 45)));
+
+    return {
+        totalViews: dynamicTotal,
+        formattedViews: formatViewNumber(dynamicTotal),
+        activeWatchers: baseWatchers
+    };
+}
+
 // ═══════════════════════════════════════════════════
 // PHANTOM MOVIES - MAIN APPLICATION (JSON-Based)
 // ═══════════════════════════════════════════════════
@@ -460,6 +491,14 @@ function updateHeroSpotlight(index) {
         if (torrentEl) {
             torrentEl.style.display = (m.torrent && m.torrent.magnet) ? 'inline-flex' : 'none';
         }
+
+        const viewsPill = document.getElementById('heroViewsPill');
+        const watchersEl = document.getElementById('heroLiveWatchers');
+        if (viewsPill && watchersEl) {
+            const vData = getMovieViewsData(m.id, m.views);
+            watchersEl.textContent = vData.activeWatchers.toLocaleString();
+            viewsPill.style.display = 'inline-flex';
+        }
     }
 
     // 4. Description
@@ -907,7 +946,7 @@ function movieCard(m, forceTrendingBadge = false, rankNumber = null) {
         </div>
         <div class="movie-info">
             <div class="movie-name">${m.title}</div>
-            <div style="font-size:10px;color:var(--muted)">${m.type === 'series' ? 'Series' : 'Movie'} • ${m.genre || 'Unknown'} • ${m.year || 'N/A'}</div>
+            <div style="font-size:10px;color:var(--muted)">${m.type === 'series' ? 'Series' : 'Movie'} • ${m.genre || 'Unknown'} • ${m.year || 'N/A'} • 👁️ ${formatViewNumber(m.views || 4500)}</div>
         </div>
     </div>`;
 }

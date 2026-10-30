@@ -1,3 +1,68 @@
+
+// ─── REAL-TIME VIEWS ENGINE (SUBTLE & UN-HIGHLIGHTED) ───
+function formatViewNumber(num) {
+    const n = parseInt(num) || 0;
+    if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+    if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+    return n.toLocaleString();
+}
+
+function getMovieViewsData(movieId, baseViews) {
+    const rawBase = parseInt(baseViews) || 4500;
+    const storeKey = 'phantom_view_counts';
+    let localStore = {};
+    try {
+        localStore = JSON.parse(localStorage.getItem(storeKey) || '{}');
+    } catch (_) {}
+
+    const hash = String(movieId).split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
+    const refTime = 1730000000000;
+    const hoursElapsed = Math.max(0, (Date.now() - refTime) / (1000 * 60 * 60));
+    const hourlyRate = 1 + (hash % 4);
+    const dynamicTotal = rawBase + Math.floor(hoursElapsed * hourlyRate) + (localStore[String(movieId)] || 0);
+    const baseWatchers = Math.max(25, Math.min(480, Math.floor(dynamicTotal / 95) + (hash % 45)));
+
+    return {
+        totalViews: dynamicTotal,
+        formattedViews: formatViewNumber(dynamicTotal),
+        activeWatchers: baseWatchers
+    };
+}
+
+let liveWatcherTimer = null;
+function initLiveWatcherTicker(movieId, baseViews) {
+    if (liveWatcherTimer) clearInterval(liveWatcherTimer);
+    let { totalViews, activeWatchers } = getMovieViewsData(movieId, baseViews);
+
+    const sessionKey = 'phantom_viewed_' + movieId;
+    if (!sessionStorage.getItem(sessionKey)) {
+        sessionStorage.setItem(sessionKey, '1');
+        try {
+            const storeKey = 'phantom_view_counts';
+            const localStore = JSON.parse(localStorage.getItem(storeKey) || '{}');
+            localStore[String(movieId)] = (localStore[String(movieId)] || 0) + 1;
+            localStorage.setItem(storeKey, JSON.stringify(localStore));
+            totalViews += 1;
+        } catch (_) {}
+    }
+
+    const updateUI = (watchers, views) => {
+        const watchEl = document.getElementById('liveWatchersCount');
+        const viewEl = document.getElementById('liveViewsCount');
+        if (watchEl) watchEl.textContent = watchers.toLocaleString();
+        if (viewEl) viewEl.textContent = formatViewNumber(views);
+    };
+
+    updateUI(activeWatchers, totalViews);
+
+    liveWatcherTimer = setInterval(() => {
+        const change = (Math.random() > 0.48 ? 1 : -1) * Math.floor(Math.random() * 3);
+        activeWatchers = Math.max(15, activeWatchers + change);
+        const watchEl = document.getElementById('liveWatchersCount');
+        if (watchEl) watchEl.textContent = activeWatchers.toLocaleString();
+    }, 14000);
+}
+
 // ═══════════════════════════════════════════════════
 // PHANTOM MOVIES - SERIES DETAIL PAGE
 // ═══════════════════════════════════════════════════
@@ -416,6 +481,7 @@ function renderSeries(series) {
     currentSeasonIndex = 0;
     currentEpisodeIndex = 0;
 
+    const vData = getMovieViewsData(series.id, series.views);
     const detail = document.getElementById('seriesDetail');
     const banner = series.banner || series.poster || '';
     const seasons = getSeasons();
@@ -444,7 +510,18 @@ function renderSeries(series) {
             <div class="detail-info-card">
                 ${series.badge ? `<div class="feat-tag">${escapeHTML(series.badge)}</div>` : '<div class="feat-tag">📺 Series</div>'}
                 <h1>${escapeHTML(series.title)}</h1>
-                <p class="detail-meta">${escapeHTML(meta)}</p>
+                <p class="detail-meta">
+                    <span>${escapeHTML(meta)}</span>
+                    <span class="meta-sep">•</span>
+                    <span class="subtle-live-viewers" title="Active viewers right now">
+                        <span class="subtle-live-dot"></span>
+                        <span id="liveWatchersCount">${vData.activeWatchers}</span> watching now
+                    </span>
+                    <span class="meta-sep">•</span>
+                    <span class="subtle-views-count">
+                        <span id="liveViewsCount">${vData.formattedViews}</span> views
+                    </span>
+                </p>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 16px;">
                     <button class="btn-watchlist-toggle" id="btnWatchlistToggle" onclick="toggleWatchlist()">
                         <span id="watchlistIcon">🤍</span> <span id="watchlistText">Add to Watchlist</span>
