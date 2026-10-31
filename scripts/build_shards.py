@@ -89,3 +89,4 @@ if __name__ == '__main__':
         data = json.load(f)
 
     build_catalog_shards(data, data_dir)
+

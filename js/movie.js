@@ -181,7 +181,7 @@ function playerMarkup(movie, streamUrl) {
     if (streamLink) {
         // Complete Sandbox Elimination: Removing sandbox completely resolves 'Please disable the sandbox' across all providers
         // while the page-level Anti-Hijack Guard protects the parent window from rogue ad redirects.
-        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-popups allow-popups-to-escape-sandbox"></iframe>`;
+        return `<iframe class="stream-frame" src="${escapeHTML(streamLink)}" title="${escapeHTML(movie.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
     }
 
     if (trailerEmbed) {
