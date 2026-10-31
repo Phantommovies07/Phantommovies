@@ -34,6 +34,8 @@ self.addEventListener('fetch', (event) => {
   // Network-only for live content, analytics, and embeds
   if (
     url.pathname.includes('content.json') ||
+    url.pathname.includes('index.json') ||
+    url.pathname.includes('/items/') ||
     url.pathname.includes('google-analytics') ||
     url.pathname.includes('googletagmanager') ||
     event.request.method !== 'GET'

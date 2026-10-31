@@ -33,8 +33,11 @@
       }
     } catch (_) {}
 
-    const res = await fetch('data/content.json');
-    if (!res.ok) return null;
+    let res = await fetch('data/index.json?v=' + Date.now()).catch(() => null);
+    if (!res || !res.ok) {
+      res = await fetch('data/content.json?v=' + Date.now()).catch(() => null);
+    }
+    if (!res || !res.ok) return null;
     const data = await res.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {

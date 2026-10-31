@@ -647,16 +647,28 @@ async function enrichPage() {
 
     // 2. Fetch catalog details
     try {
-        const catalogData = await getContentData();
-        const movies = catalogData?.movies || [];
-        const settings = catalogData?.settings || {};
-
         if (params.id) {
-            currentMovie = movies.find(m => String(m.id) === String(params.id));
+            // Sharded Fetch: Try loading isolated item JSON shard (~1.5 KB, instant!)
+            try {
+                const itemResp = await fetch(`data/items/${encodeURIComponent(params.id)}.json?v=${Date.now()}`);
+                if (itemResp.ok) {
+                    currentMovie = await itemResp.json();
+                }
+            } catch (_) {}
         }
-        if (!currentMovie && params.title) {
-            const lowT = params.title.toLowerCase().trim();
-            currentMovie = movies.find(m => (m.title || '').toLowerCase().trim() === lowT);
+
+        if (!currentMovie) {
+            const catalogData = await getContentData();
+            const movies = catalogData?.movies || [];
+            const settings = catalogData?.settings || {};
+
+            if (params.id) {
+                currentMovie = movies.find(m => String(m.id) === String(params.id));
+            }
+            if (!currentMovie && params.title) {
+                const lowT = params.title.toLowerCase().trim();
+                currentMovie = movies.find(m => (m.title || '').toLowerCase().trim() === lowT);
+            }
         }
 
         if (currentMovie) {

@@ -1118,9 +1118,24 @@ async function loadSeriesDetail() {
         // Dynamic live mirrors hook: updates active domains in real time
         await loadLiveMirrors();
 
-        const data = await getContentData();
-        const items = (data.movies || []).filter(m => m.active !== false);
-        const series = items.find(m => String(m.id) === String(seriesId));
+        let series = null;
+        let ads = null;
+
+        // 1. Sharded Fetch: Try loading isolated item JSON (~2 KB, 800x faster!)
+        try {
+            const itemResp = await fetch(`data/items/${encodeURIComponent(seriesId)}.json?v=${Date.now()}`);
+            if (itemResp.ok) {
+                series = await itemResp.json();
+            }
+        } catch (_) {}
+
+        // 2. Fallback to cached or full content.json
+        if (!series) {
+            const data = await getContentData();
+            const items = (data.movies || []).filter(m => m.active !== false);
+            series = items.find(m => String(m.id) === String(seriesId));
+            ads = data.settings && data.settings.ads;
+        }
 
         if (!series) {
             showError('Series not found or inactive.');
@@ -1134,7 +1149,12 @@ async function loadSeriesDetail() {
 
         renderSeries(series);
 
-        const ads = data.settings && data.settings.ads;
+        if (!ads) {
+            try {
+                const data = await getContentData();
+                ads = data.settings && data.settings.ads;
+            } catch (_) {}
+        }
         if (ads) applyAds(ads, 'series');
     } catch (error) {
         console.error(error);

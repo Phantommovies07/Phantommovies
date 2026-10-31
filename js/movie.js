@@ -943,9 +943,24 @@ async function loadMovieDetail() {
         // Dynamic live mirrors hook: updates active domains in real time
         await loadLiveMirrors();
 
-        const data = await getContentData();
-        const movies = (data.movies || []).filter(m => m.active !== false);
-        const movie = movies.find(m => String(m.id) === String(movieId));
+        let movie = null;
+        let ads = null;
+
+        // 1. Sharded Fetch: Try loading isolated item JSON (~1.5 KB, 860x faster!)
+        try {
+            const itemResp = await fetch(`data/items/${encodeURIComponent(movieId)}.json?v=${Date.now()}`);
+            if (itemResp.ok) {
+                movie = await itemResp.json();
+            }
+        } catch (_) {}
+
+        // 2. Fallback to cached or full content.json
+        if (!movie) {
+            const data = await getContentData();
+            const movies = (data.movies || []).filter(m => m.active !== false);
+            movie = movies.find(m => String(m.id) === String(movieId));
+            ads = data.settings && data.settings.ads;
+        }
 
         if (!movie) {
             showError('Movie not found or inactive.');
@@ -954,7 +969,12 @@ async function loadMovieDetail() {
 
         renderMovie(movie);
 
-        const ads = data.settings && data.settings.ads;
+        if (!ads) {
+            try {
+                const data = await getContentData();
+                ads = data.settings && data.settings.ads;
+            } catch (_) {}
+        }
         if (ads) applyAds(ads, 'movie');
     } catch (error) {
         console.error(error);

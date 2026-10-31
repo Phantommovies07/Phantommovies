@@ -526,6 +526,17 @@ def save_content(data: Dict, path: str = CONTENT_FILE) -> bool:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+
+        # Automatically rebuild catalog shards (data/index.json and data/items/*.json)
+        try:
+            try:
+                from scripts.build_shards import build_catalog_shards
+            except ImportError:
+                from build_shards import build_catalog_shards
+            build_catalog_shards(data, os.path.dirname(path))
+        except Exception as se:
+            print(f"[Warning] Failed to build catalog shards: {se}")
+
         return True
     except Exception as e:
         print(f"[Error] Failed to save {path}: {e}")

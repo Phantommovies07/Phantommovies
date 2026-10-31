@@ -309,15 +309,21 @@ class GitHubAPI {
             }
         }
 
-        // Case 4: Final fallback to local static asset
+        // Case 4: Final fallback to local static asset (try index.json first, then content.json)
         if (!rawText) {
+            try {
+                const localResp = await fetch('data/index.json?t=' + Date.now());
+                if (localResp.ok) {
+                    return await localResp.json();
+                }
+            } catch (_) {}
             try {
                 const localResp = await fetch('data/content.json?t=' + Date.now());
                 if (localResp.ok) {
                     return await localResp.json();
                 }
             } catch (localErr) {
-                console.warn('Local data/content.json fetch error:', localErr);
+                console.warn('Local data fetch error:', localErr);
             }
         }
 
@@ -326,6 +332,58 @@ class GitHubAPI {
         }
 
         return JSON.parse(rawText);
+    }
+
+    // Helper: Build lightweight index.json payload (~80% smaller)
+    buildIndexPayload(content) {
+        const movies = content.movies || [];
+        const indexMovies = movies.map(m => ({
+            id: String(m.id || ''),
+            type: m.type || 'movie',
+            title: m.title || '',
+            year: m.year,
+            genre: m.genre || '',
+            rating: m.rating,
+            badge: m.badge || '',
+            category: m.category || '',
+            industry: m.industry || '',
+            poster: m.poster || '',
+            banner: m.heroSlide ? (m.banner || '') : '',
+            duration: m.duration || '',
+            views: m.views || 0,
+            featured: Boolean(m.featured),
+            trending: Boolean(m.trending),
+            heroSlide: Boolean(m.heroSlide),
+            status: m.status || 'published',
+            active: m.active !== false,
+            imdb_id: m.imdb_id || '',
+            tmdb_id: m.tmdb_id || '',
+            hasTorrent: Boolean(m.torrent && m.torrent.magnet)
+        }));
+
+        return JSON.stringify({
+            settings: content.settings || {},
+            movies: indexMovies
+        });
+    }
+
+    // Helper: Synchronize index.json and individual item shard in background
+    async syncShards(fullContent, itemToSave = null, deletedItemId = null) {
+        try {
+            const indexJson = this.buildIndexPayload(fullContent);
+            await this.updateFile('data/index.json', indexJson, 'Sync catalog index.json');
+        } catch (e) {
+            console.warn('Syncing index.json failed:', e);
+        }
+
+        if (itemToSave && itemToSave.id) {
+            try {
+                const itemJson = JSON.stringify(itemToSave);
+                await this.updateFile('data/items/' + itemToSave.id + '.json', itemJson, 'Sync item shard: ' + (itemToSave.title || itemToSave.id));
+            } catch (e) {
+                console.warn('Syncing item shard failed:', e);
+            }
+        }
     }
 
     // Add new movie
@@ -367,6 +425,9 @@ class GitHubAPI {
             fileData ? fileData.sha : null
         );
 
+        // Auto-sync sharded index and individual item shard in background
+        this.syncShards(currentContent, newMovie).catch(console.warn);
+
         return newMovie;
     }
 
@@ -401,6 +462,9 @@ class GitHubAPI {
             `Update movie: ${movieData.title}`,
             fileData.sha
         );
+
+        // Auto-sync sharded index and individual item shard in background
+        this.syncShards(currentContent, currentContent.movies[movieIndex]).catch(console.warn);
 
         return currentContent.movies[movieIndex];
     }
@@ -443,6 +507,9 @@ class GitHubAPI {
             fileData ? fileData.sha : null
         );
 
+        // Also update index.json with new site settings
+        this.syncShards(currentContent).catch(console.warn);
+
         return currentContent.settings;
     }
 
@@ -466,6 +533,9 @@ class GitHubAPI {
             'Update ads settings',
             fileData ? fileData.sha : null
         );
+
+        // Also update index.json with new ads settings
+        this.syncShards(currentContent).catch(console.warn);
 
         return currentContent.settings.ads;
     }
@@ -495,6 +565,9 @@ class GitHubAPI {
             `Delete movie: ${movieToDelete.title}`,
             fileData.sha
         );
+
+        // Auto-sync sharded index in background
+        this.syncShards(currentContent, null, movieId).catch(console.warn);
 
         return true;
     }

@@ -1226,7 +1226,7 @@ async function searchTMDB() {
 
             return `
                 <div class="tmdb-card" onclick="selectTMDBResult(${r.id}, '${r.media_type}')">
-                    <img src="${poster || 'data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'180\\' height=\\'270\\' fill=\\'%23111\\'%3E%3Crect width=\\'180\\' height=\\'270\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%235bc4f5\\' font-size=\\'12\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\'%3ENo Poster%3C/text%3E%3C/svg%3E'}" alt="${escapeAttr(title)}" loading="lazy">
+                    <img src="${poster || 'data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22180%22 height=%22270%22><rect fill=%22%23111%22 width=%22180%22 height=%22270%22/><text fill=%22%235bc4f5%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2212%22>No Poster</text></svg>'}" alt="${escapeAttr(title)}" loading="lazy">
                     <div class="tmdb-card-info">
                         <strong>${escapeAttr(title)}</strong>
                         <span>${isMovie ? 'Movie' : 'TV Series'} ${year ? '• ' + year : ''}</span>
