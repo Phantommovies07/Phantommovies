@@ -117,6 +117,64 @@
               "downloads": []
             }
           ]
+        },
+        {
+          "seasonNumber": 3,
+          "title": "Season 3",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt36458668?s=3&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt36458668&season=3&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt36458668-3-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt36458668&s=3&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/4KUwocbpM9ElVfzSGnuj1s3sh",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 5,
+          "title": "Season 5",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt36458668?s=5&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt36458668&season=5&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt36458668-5-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt36458668&s=5&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
         }
       ],
       "trailerLink": "https://www.youtube.com/results?search_query=Dead-End+Job+2026+trailer",
@@ -132,7 +190,1158 @@
       "imdb_id": "tt36458668",
       "tmdb_id": "",
       "createdAt": "2026-10-30T15:03:19.458340+00:00",
-      "updatedAt": "2026-10-31T10:04:51.039307+00:00"
+      "updatedAt": "2026-10-31T16:36:59.112189+00:00"
+    },
+    {
+      "id": "1793464624191",
+      "type": "series",
+      "title": "Mirzapur: The Movie",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhlYWY1NWUtYjU4Zi00MDg4LWE2N2MtYjQzMjBkMjgwOWI5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjhlYWY1NWUtYjU4Zi00MDg4LWE2N2MtYjQzMjBkMjgwOWI5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "750MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2780039390",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2942963731",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt34339725-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt34339725&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "750MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.2GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/2780039390",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/2942963731",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 81,
+              "title": "Episode 81",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=81"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=2&episode=81"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt34339725-2-81"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt34339725&s=2&e=81"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "1.8GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmJvaGNuTEVQa0RHVmwxSkdKbVM2YWswMUVWQlNSME81ckozdXorZDFpa0k9",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Episode 5",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=5"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=2&episode=5"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt34339725-2-5"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt34339725&s=2&e=5"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p Full HD",
+                  "size": "4.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhVMXdNOG16ODY3VERmRDVUOUVlWDJGT0tKaTY0K1AyQVBqUGJxME5YaWc9",
+                  "color": "#10b981"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt34339725?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt34339725-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt34339725&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "750MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/2780039390",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.7GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/2941714560",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mirzapur:+The+Movie+2026+trailer",
+      "description": "Mirzapur: The Movie (2026) starring Ali Fazal, Pankaj Tripathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 29681,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt34339725",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T16:36:57.842322+00:00",
+      "updatedAt": "2026-10-31T16:36:57.842322+00:00"
+    },
+    {
+      "id": "1793464618735",
+      "type": "movie",
+      "title": "Prayagraj Ki Love Story",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "0h 45m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2Q3NDljNDQtYjU1OC00Nzc2LThiYzItMDBiYmY1NzNmNzk5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BM2Q3NDljNDQtYjU1OC00Nzc2LThiYzItMDBiYmY1NzNmNzk5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt39320590?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt39320590?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt39320590"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt39320590"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "480p SD",
+          "size": "360MB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlBDMSs0Y1J3ZlpUUTU0T2xBalI3RzFnWlkxSXA3RWVibkJybTZvQkttZkE9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "670MB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlQ2OFlEVmQyVDc5bnV0TEFiZXdMSVo5ZURMM0Y4cWFJT1FPbXBpVzdTbWc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.9GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlVrOGlsZkIwVlV2dFJXVjR6NjVGS2RFRnYrTTVlT2VHWG1LNG9JK3ROUlE9",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Prayagraj+Ki+Love+Story+2026+trailer",
+      "description": "Prayagraj Ki Love Story (2026) starring Manish Wadhwa, Pavitra Punia.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 13079,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39320590",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T16:36:55.426280+00:00",
+      "updatedAt": "2026-10-31T16:36:55.426280+00:00"
+    },
+    {
+      "id": "series_the_great_indian_kapil_show",
+      "type": "series",
+      "title": "The Great Indian Kapil Show",
+      "genre": "Comedy",
+      "year": 2024,
+      "rating": 8.4,
+      "badge": "TRENDING",
+      "trending": true,
+      "views": 98450,
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
+      "description": "Comedian Kapil Sharma hosts this laugh-out-loud variety talk show with celebrity guests, hilarious antics, and his signature supporting cast.",
+      "imdb_id": "tt30003786",
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Ranbir Kapoor, Neetu Kapoor & Riddhima",
+              "duration": "54m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-1"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Rohit Sharma & Shreyas Iyer",
+              "duration": "52m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=2"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=2"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-2"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=2"
+            },
+            {
+              "episodeNumber": 3,
+              "title": "Diljit Dosanjh, Parineeti Chopra & Imtiaz Ali",
+              "duration": "56m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=3"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=3"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-3"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=3"
+            },
+            {
+              "episodeNumber": 4,
+              "title": "Vicky Kaushal & Sunny Kaushal",
+              "duration": "50m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=4"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=4"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-4"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=4"
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Aamir Khan Special",
+              "duration": "61m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=5"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=5"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-5"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=5"
+            },
+            {
+              "episodeNumber": 6,
+              "title": "Sunny Deol & Bobby Deol",
+              "duration": "53m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=6"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=6"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-6"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=6"
+            },
+            {
+              "episodeNumber": 7,
+              "title": "Heeramandi Cast Special",
+              "duration": "55m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=7"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=7"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-7"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=7"
+            },
+            {
+              "episodeNumber": 8,
+              "title": "Ed Sheeran in India",
+              "duration": "48m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=8"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=8"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-8"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=8"
+            },
+            {
+              "episodeNumber": 9,
+              "title": "Farah Khan & Anil Kapoor",
+              "duration": "53m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=9"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=9"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-9"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=9"
+            },
+            {
+              "episodeNumber": 10,
+              "title": "Janhvi Kapoor & Rajkummar Rao",
+              "duration": "52m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=10"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=10"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-10"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=10"
+            },
+            {
+              "episodeNumber": 11,
+              "title": "Sania Mirza, Saina Nehwal & Mary Kom",
+              "duration": "54m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=11"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=11"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-11"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=11"
+            },
+            {
+              "episodeNumber": 12,
+              "title": "Badshah & Divine",
+              "duration": "51m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=12"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=12"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-12"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=12"
+            },
+            {
+              "episodeNumber": 13,
+              "title": "Kartik Aaryan & Vidya Balan (Season 1 Finale)",
+              "duration": "58m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=13"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=13"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-13"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=13"
+            }
+          ],
+          "downloads": [],
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247769/1/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt30003786&s=1&e=1"
+            }
+          ],
+          "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Jigra Special: Alia Bhatt, Karan Johar & Vedang",
+              "duration": "56m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-1"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Devara Cast: Jr NTR, Saif Ali Khan & Janhvi",
+              "duration": "55m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=2"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=2"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-2"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=2"
+            },
+            {
+              "episodeNumber": 3,
+              "title": "Champions Special: Rohit Sharma & Surya",
+              "duration": "58m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=3"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=3"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-3"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=3"
+            },
+            {
+              "episodeNumber": 4,
+              "title": "Kareena Kapoor Khan & Karisma Kapoor",
+              "duration": "54m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=4"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=4"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-4"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=4"
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Fabulous Lives vs Bollywood Wives",
+              "duration": "52m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=5"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=5"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-5"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=5"
+            },
+            {
+              "episodeNumber": 6,
+              "title": "Do Patti Cast: Kajol, Kriti Sanon & Shaheer Sheikh",
+              "duration": "53m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=6"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=6"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-6"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=6"
+            },
+            {
+              "episodeNumber": 7,
+              "title": "Bhool Bhulaiyaa 3: Kartik Aaryan, Vidya & Triptii",
+              "duration": "57m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=7"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=7"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-7"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=7"
+            },
+            {
+              "episodeNumber": 8,
+              "title": "Narayana Murthy & Sudha Murty Special",
+              "duration": "55m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=8"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=8"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-8"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=8"
+            },
+            {
+              "episodeNumber": 9,
+              "title": "Navjot Singh Sidhu Returns",
+              "duration": "59m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=9"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=9"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-9"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=9"
+            },
+            {
+              "episodeNumber": 10,
+              "title": "Shalini Passi & Delhi Royalty",
+              "duration": "51m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=10"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=10"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-10"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=10"
+            },
+            {
+              "episodeNumber": 11,
+              "title": "Pushpa 2 Cast: Allu Arjun & Rashmika Mandanna",
+              "duration": "60m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=11"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=11"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-11"
+                }
+              ],
+              "downloads": [],
+              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=11"
+            }
+          ],
+          "downloads": [],
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247769/2/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt30003786&s=2&e=1"
+            }
+          ],
+          "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
+        },
+        {
+          "seasonNumber": 3,
+          "title": "Season 3",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247769?s=3&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247769/3/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt30003786&s=3&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": [],
+          "streamLink": "https://cinesrc.st/embed/tv/247769?s=3&e=1"
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247769?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247769/4/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt30003786&s=4&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": [],
+          "streamLink": "https://cinesrc.st/embed/tv/247769?s=4&e=1"
+        },
+        {
+          "seasonNumber": 5,
+          "title": "Season 5",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247769?s=5&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247769/5/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt30003786&s=5&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": [],
+          "streamLink": "https://cinesrc.st/embed/tv/247769?s=5&e=1"
+        }
+      ],
+      "updatedAt": "2026-10-31T16:36:54.840497+00:00",
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlNYbWZmZnUrMlhKeFdQd2x1SERvanlXRWR2Q0c4VUJIemZvRUFwOXZuS2s9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnUwTlR0VS9PYmphdSsyM3cvTXFqdzZUUGNxS3dLcXNIZ1RoUmNaeGJtYW89",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRrT2lXS2Z1SUxlbmc3NmR5V3hqS20wTGxsWGtBRlJQY0ZUMmorcXIxZUE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "tmdb_id": "247769",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidlink.pro/tv/247769/1/1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://www.2embed.cc/embedtv/tt30003786&s=1&e=1"
+        }
+      ],
+      "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=1",
+      "torrent": {
+        "name": "The Great Indian Kapil Show S05E03 1080p WEB h264-EDITH",
+        "seeders": 34,
+        "size": "2.6 GB",
+        "magnet": "magnet:?xt=urn:btih:351AFE91DAB9D7BF8F855EAD37EB7A75C00011AD&dn=The%20Great%20Indian%20Kapil%20Show%20S05E03%201080p%20WEB%20h264-EDITH&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//open.demonii.com%3A1337/announce&tr=udp%3A//open.stealth.si%3A80/announce&tr=udp%3A//tracker.torrent.eu.org%3A451/announce&tr=udp%3A//explodie.org%3A6969/announce&tr=udp%3A//tracker.coppersurfer.tk%3A6969/announce&tr=udp%3A//p4p.arenabg.com%3A1337/announce",
+        "info_hash": "351AFE91DAB9D7BF8F855EAD37EB7A75C00011AD"
+      }
+    },
+    {
+      "id": "1793464621710",
+      "type": "movie",
+      "title": "Zombeid",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjIwMzMwMmQtZTFhYS00ZTBjLWI3ODQtYjZhNzlmYTdhZjFjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMjIwMzMwMmQtZTFhYS00ZTBjLWI3ODQtYjZhNzlmYTdhZjFjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt41616836?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt41616836?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt41616836"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt41616836"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "480p SD",
+          "size": "380MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/ZY14rkEgtYCwJfcjEnL9D9hGn",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "940MB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qjd5VDQyTVZVVVZ4RDkwU3kwT1lTRVJrMndGbFd4SnJ0Z1pCZnhjR0VQOU09",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjdEOXVrTENRUUZoOHc1Q21JRTJGbmJZc1J3YVk1VjErSXNqYzJMMlZlZGc9",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Zombeid+2026+trailer",
+      "description": "Zombeid (2026) starring Fahad Mustafa, Mehwish Hayat.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12840,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt41616836",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T16:36:54.650268+00:00",
+      "updatedAt": "2026-10-31T16:36:54.650268+00:00"
+    },
+    {
+      "id": "1793464619491",
+      "type": "series",
+      "title": "Dark Matter",
+      "genre": "Tv Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2U4YWMyZTMtMmEzMy00Yzk0LThiNTctNjE0YTc5ZDZhZTk5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BN2U4YWMyZTMtMmEzMy00Yzk0LThiNTctNjE0YTc5ZDZhZTk5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt19231492?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt19231492&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt19231492-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt19231492&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dark+Matter+2024+trailer",
+      "description": "Dark Matter (2024) starring Joel Edgerton, Jennifer Connelly.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 28334,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt19231492",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T16:36:54.290823+00:00",
+      "updatedAt": "2026-10-31T16:36:54.290823+00:00"
     },
     {
       "id": "1793441096797",
@@ -5239,7 +6448,36 @@
           "url": "https://autoembed.co/movie/imdb/tt0112553"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/xW1dagCgeVSJFyq4mGSA4o8c9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qko0ZEJFazVmbmtHUTB1anVscGRDdFBPeC83ek9rY2xVMzFDSStGVnkzS0U9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlpFbHJOSHhwd3dlQlcrTnRSNkFwM2ZHaXV3SUNZSkxMZHVLQWI2N3lpcm89",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Bombay+1995+trailer",
       "description": "Bombay (1995) starring Arvind Swamy, Manisha Koirala.",
@@ -5291,7 +6529,22 @@
           "url": "https://autoembed.co/movie/imdb/tt0124932"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1874599611",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=20/20+1978+trailer",
       "description": "20/20 (1978) starring David Muir, Amy Robach.",
@@ -5343,7 +6596,36 @@
           "url": "https://autoembed.co/movie/imdb/tt38961362"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/9MMF8HZzd6elgTc9aGjoR4dIR",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "690MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2263277199",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjFGUGkrS2haQmVuYzhUVXdrdG9jRTdKTHpLdk5TTXV5d0R6UlhpU3pCbmM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Aryabhatt+Ka+Zero+2026+trailer",
       "description": "Aryabhatt Ka Zero (2026) starring Himansh Kohli, Ravi Kishan.",
@@ -5465,7 +6747,36 @@
           "url": "https://autoembed.co/movie/imdb/tt40855841"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/QmLBgP948V4SYZyhFEWMcN1UF",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "780MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2150707324",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1854617014",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Nayi+Naveli+2026+trailer",
       "description": "Nayi Naveli (2026) starring Yami Gautam, Sunita Rajwar.",
@@ -5639,7 +6950,36 @@
           "url": "https://www.2embed.cc/embedtv/tt37180305&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmNZdTRpVWllMzk2YzdqUmJRaVpyZnl4ZUdRNWNvVnVHK1FaYzlQdFBFbWM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnRaN3lwM1IwSVhvdDBvalVOek1CSGRQQzVKaGVHZUxsZFNwMEw4Q1lqaWM9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "5.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmF4RWh4MU1zQS82Y1BkczhQM0RXVk5PTlVXUVBGdWlOcE9VQkNjTytkZFE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -5714,7 +7054,36 @@
           "url": "https://autoembed.co/movie/imdb/tt44734409"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "490MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2107031077",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "840MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2140522595",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkQ5Q3RBMUhzSUc2cVdLanNLcUhpMFdKMU9DMzFQVGJlalR2NXJJOExhV0E9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Oye+Chill+Maar+2026+trailer",
       "description": "Oye Chill Maar (2026) starring Sshrey Pareek, Tejas Dev.",
@@ -5759,7 +7128,36 @@
           "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "550MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmozc0dueUFMOXpnMHVIZkJGcjZmbUZTSHEzMWZxRHhualJzbjNKT1RXMU09",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm80ZG9oQ3VOa1JKMitMUDBUM2lIZi8wRkE5dEFXeWVoaEcrUW12SWFNdVk9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkdGZ0xvM0w4OExaanRTbWtmckdNK05TSmtiNVFRTUVlUnZxWWJ5M2MyeTA9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -5834,7 +7232,36 @@
           "url": "https://autoembed.co/movie/imdb/tt38672588"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "430MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/VVUZ9eZZE5sIvRWLOIKG4J1mS",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "830MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2588279170",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnZUOTNjYUY2bzlQL2xkSTRXWVZqVkE1UFVnNGdpR21qVVM4Szg2azhZZ1U9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Masterplan+2026+trailer",
       "description": "Masterplan (2026) starring Stanley Tucci, Victor Belmondo.",
@@ -5955,7 +7382,36 @@
           "url": "https://autoembed.co/movie/imdb/tt12913686"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/C6mbR3E90TU5Zrb5a8CIvOTPC",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "810MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2225826895",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qng1Y1F0V3FuSFBYNzdHUmZoMjR5NUJiYWoyMldVeXVuRE5RNUhpT1ZDck09",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Jeet+Ki+Zid+2021+trailer",
       "description": "Jeet Ki Zid (2021) starring Amit Sadh, Amrita Puri.",
@@ -6007,7 +7463,36 @@
           "url": "https://autoembed.co/movie/imdb/tt37894980"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "460MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/nsdTm8R1STTjdTU2unlgGi07I",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "930MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2431129839",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmd1cWJCQXVTOXdhSldIc2dKUkpOZVRVdDRKREt6V2FsbndMOGxnRER0RlU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Aasha+2026+trailer",
       "description": "Aasha (2026) starring Ajayan Adat, Bhagyalakshmi.",
@@ -6059,7 +7544,36 @@
           "url": "https://www.2embed.cc/embedtv/tt17491088&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/jD5UDfwLBf32KWnKvbZPpeqwb",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "780MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcloud.ist/drive/sgtqqqvo7sqljl0",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcloud.ist/drive/0m33ez1e0wwvv1m",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -6262,7 +7776,36 @@
           "url": "https://autoembed.co/movie/imdb/tt26654655"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "430MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZlV0IyV3VZS0o2YkNicFBFMWNTdUhjMWlYZ25wL1NoanJIOVhqMXdZWk09",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "890MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjdGVVNaaXRmcEZ6RlUrdGtsMy9zajR2am91YVdNaFJUSHZVRDlxWDVwMG89",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk8xMTFDK0l3SE5iUFAvNk1UM1ZJck1tNnlmRStZUjdDTnNGeXhvVzZYL3c9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Charukesi+2026+trailer",
       "description": "Charukesi (2026) starring Madhuvanti Arun, Raj Ayappa.",
@@ -6376,7 +7919,36 @@
           "url": "https://autoembed.co/movie/imdb/tt23112594"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjRpZkgxSDJtMlNsWXRxMllIdlJuQm12Ykh2ZmhDMjVESkZVV08xQzFvdFU9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlcvbFFVZXBxeEkwamdldXVsdVlPT08vNmRqK1RLbk45VFJyYVNrenhRSDg9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjZOMTUreWxTdlpKTGpuOTl6c3JmcjNvcHp0KzlpSmdKQnkxUmFVVU02VGc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=VisionQuest+2026+trailer",
       "description": "VisionQuest (2026) starring Paul Bettany, James Spader.",
@@ -6428,7 +8000,36 @@
           "url": "https://autoembed.co/movie/imdb/tt2719848"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnNlQUduNmtQMjRsV2xVZTFQemt6MzQrUnYrSXRoeFJpNHJhbU9Kbkp3OXM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm1BZFl3QndiUTRhTktnQkhVaFAzY0grUFQzbmZoSmZhMGZQVDBCR3JHQWc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Everest+2015+trailer",
       "description": "Everest (2015) starring Jason Clarke, Ang Phula Sherpa.",
@@ -6549,7 +8150,36 @@
           "url": "https://autoembed.co/movie/imdb/tt4934950"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/SaIdeJM4I5WMxFXtIbTD0CD1R",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "770MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1919391543",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlNGZWZCbDIrOTNJemdpb3JMM1h3NlRjL0ZDcjVnVExUYnVQd0lSekxDT2s9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Talvar+2015+trailer",
       "description": "Talvar (2015) starring Irrfan Khan, Konkona Sen Sharma.",
@@ -6671,7 +8301,36 @@
           "url": "https://autoembed.co/movie/imdb/tt3678782"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "426MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QldUNlFxdThLVXJmZ2wwRjVzaU02dDdkQmlIZTQ4bUl2RjNJZEZtWnE0dmM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.25GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmtaWUtWN0pocVZoVXhMektIZVViRktwb0FlbTF0Qk5NcmtFT2VOeHlydzQ9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.25GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjFTQ2IxaDd5a1dkS0cyK21qRGhZbU1wb1ZiRXJ2ZmZkalV6K3V5WThGUnc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Badlapur+2015+trailer",
       "description": "Badlapur (2015) starring Varun Dhawan, Nawazuddin Siddiqui.",
@@ -6693,663 +8352,6 @@
         "size": "",
         "magnet": "magnet:?xt=urn:btih:D20A33EBA36829509964C7982FDDAD1CC086AB93&dn=Badlapur.%5B2015%5D.1080p.DS4K.10bit.%5B60FPS%5D.WEBRIP.x265.Hindi.DDP.5.1.Esub.%5B-%3D&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//open.demonii.com%3A1337/announce&tr=udp%3A//open.stealth.si%3A80/announce&tr=udp%3A//tracker.torrent.eu.org%3A451/announce&tr=udp%3A//explodie.org%3A6969/announce&tr=udp%3A//tracker.coppersurfer.tk%3A6969/announce&tr=udp%3A//p4p.arenabg.com%3A1337/announce",
         "info_hash": "D20A33EBA36829509964C7982FDDAD1CC086AB93"
-      }
-    },
-    {
-      "id": "series_the_great_indian_kapil_show",
-      "type": "series",
-      "title": "The Great Indian Kapil Show",
-      "genre": "Comedy",
-      "year": 2024,
-      "rating": 8.4,
-      "badge": "TRENDING",
-      "trending": true,
-      "views": 98450,
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg",
-      "description": "Comedian Kapil Sharma hosts this laugh-out-loud variety talk show with celebrity guests, hilarious antics, and his signature supporting cast.",
-      "imdb_id": "tt30003786",
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "episodes": [
-            {
-              "episodeNumber": 1,
-              "title": "Ranbir Kapoor, Neetu Kapoor & Riddhima",
-              "duration": "54m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=1"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-1"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
-            },
-            {
-              "episodeNumber": 2,
-              "title": "Rohit Sharma & Shreyas Iyer",
-              "duration": "52m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=2"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=2"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-2"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=2"
-            },
-            {
-              "episodeNumber": 3,
-              "title": "Diljit Dosanjh, Parineeti Chopra & Imtiaz Ali",
-              "duration": "56m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=3"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=3"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-3"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=3"
-            },
-            {
-              "episodeNumber": 4,
-              "title": "Vicky Kaushal & Sunny Kaushal",
-              "duration": "50m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=4"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=4"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-4"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=4"
-            },
-            {
-              "episodeNumber": 5,
-              "title": "Aamir Khan Special",
-              "duration": "61m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=5"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=5"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-5"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=5"
-            },
-            {
-              "episodeNumber": 6,
-              "title": "Sunny Deol & Bobby Deol",
-              "duration": "53m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=6"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=6"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-6"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=6"
-            },
-            {
-              "episodeNumber": 7,
-              "title": "Heeramandi Cast Special",
-              "duration": "55m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=7"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=7"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-7"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=7"
-            },
-            {
-              "episodeNumber": 8,
-              "title": "Ed Sheeran in India",
-              "duration": "48m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=8"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=8"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-8"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=8"
-            },
-            {
-              "episodeNumber": 9,
-              "title": "Farah Khan & Anil Kapoor",
-              "duration": "53m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=9"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=9"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-9"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=9"
-            },
-            {
-              "episodeNumber": 10,
-              "title": "Janhvi Kapoor & Rajkummar Rao",
-              "duration": "52m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=10"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=10"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-10"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=10"
-            },
-            {
-              "episodeNumber": 11,
-              "title": "Sania Mirza, Saina Nehwal & Mary Kom",
-              "duration": "54m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=11"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=11"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-11"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=11"
-            },
-            {
-              "episodeNumber": 12,
-              "title": "Badshah & Divine",
-              "duration": "51m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=12"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=12"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-12"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=12"
-            },
-            {
-              "episodeNumber": 13,
-              "title": "Kartik Aaryan & Vidya Balan (Season 1 Finale)",
-              "duration": "58m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=1&e=13"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=1&episode=13"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-1-13"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=13"
-            }
-          ],
-          "downloads": [],
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247769/1/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt30003786&s=1&e=1"
-            }
-          ],
-          "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "episodes": [
-            {
-              "episodeNumber": 1,
-              "title": "Jigra Special: Alia Bhatt, Karan Johar & Vedang",
-              "duration": "56m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=1"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-1"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
-            },
-            {
-              "episodeNumber": 2,
-              "title": "Devara Cast: Jr NTR, Saif Ali Khan & Janhvi",
-              "duration": "55m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=2"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=2"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-2"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=2"
-            },
-            {
-              "episodeNumber": 3,
-              "title": "Champions Special: Rohit Sharma & Surya",
-              "duration": "58m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=3"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=3"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-3"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=3"
-            },
-            {
-              "episodeNumber": 4,
-              "title": "Kareena Kapoor Khan & Karisma Kapoor",
-              "duration": "54m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=4"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=4"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-4"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=4"
-            },
-            {
-              "episodeNumber": 5,
-              "title": "Fabulous Lives vs Bollywood Wives",
-              "duration": "52m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=5"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=5"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-5"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=5"
-            },
-            {
-              "episodeNumber": 6,
-              "title": "Do Patti Cast: Kajol, Kriti Sanon & Shaheer Sheikh",
-              "duration": "53m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=6"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=6"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-6"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=6"
-            },
-            {
-              "episodeNumber": 7,
-              "title": "Bhool Bhulaiyaa 3: Kartik Aaryan, Vidya & Triptii",
-              "duration": "57m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=7"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=7"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-7"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=7"
-            },
-            {
-              "episodeNumber": 8,
-              "title": "Narayana Murthy & Sudha Murty Special",
-              "duration": "55m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=8"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=8"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-8"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=8"
-            },
-            {
-              "episodeNumber": 9,
-              "title": "Navjot Singh Sidhu Returns",
-              "duration": "59m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=9"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=9"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-9"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=9"
-            },
-            {
-              "episodeNumber": 10,
-              "title": "Shalini Passi & Delhi Royalty",
-              "duration": "51m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=10"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=10"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-10"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=10"
-            },
-            {
-              "episodeNumber": 11,
-              "title": "Pushpa 2 Cast: Allu Arjun & Rashmika Mandanna",
-              "duration": "60m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/247769?s=2&e=11"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=247769&season=2&episode=11"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt30003786-2-11"
-                }
-              ],
-              "downloads": [],
-              "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=11"
-            }
-          ],
-          "downloads": [],
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247769/2/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt30003786&s=2&e=1"
-            }
-          ],
-          "streamLink": "https://cinesrc.st/embed/tv/247769?s=2&e=1"
-        },
-        {
-          "seasonNumber": 3,
-          "title": "Season 3",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247769?s=3&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247769/3/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt30003786&s=3&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [],
-          "streamLink": "https://cinesrc.st/embed/tv/247769?s=3&e=1"
-        },
-        {
-          "seasonNumber": 4,
-          "title": "Season 4",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247769?s=4&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247769/4/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt30003786&s=4&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [],
-          "streamLink": "https://cinesrc.st/embed/tv/247769?s=4&e=1"
-        },
-        {
-          "seasonNumber": 5,
-          "title": "Season 5",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247769?s=5&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247769/5/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt30003786&s=5&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [],
-          "streamLink": "https://cinesrc.st/embed/tv/247769?s=5&e=1"
-        }
-      ],
-      "updatedAt": "2026-10-13T15:27:35.277097+00:00",
-      "downloads": [],
-      "tmdb_id": "247769",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/247769?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidlink.pro/tv/247769/1/1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://www.2embed.cc/embedtv/tt30003786&s=1&e=1"
-        }
-      ],
-      "streamLink": "https://cinesrc.st/embed/tv/247769?s=1&e=1",
-      "torrent": {
-        "name": "The Great Indian Kapil Show S05E03 1080p WEB h264-EDITH",
-        "seeders": 34,
-        "size": "2.6 GB",
-        "magnet": "magnet:?xt=urn:btih:351AFE91DAB9D7BF8F855EAD37EB7A75C00011AD&dn=The%20Great%20Indian%20Kapil%20Show%20S05E03%201080p%20WEB%20h264-EDITH&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//open.demonii.com%3A1337/announce&tr=udp%3A//open.stealth.si%3A80/announce&tr=udp%3A//tracker.torrent.eu.org%3A451/announce&tr=udp%3A//explodie.org%3A6969/announce&tr=udp%3A//tracker.coppersurfer.tk%3A6969/announce&tr=udp%3A//p4p.arenabg.com%3A1337/announce",
-        "info_hash": "351AFE91DAB9D7BF8F855EAD37EB7A75C00011AD"
       }
     },
     {
@@ -7380,7 +8382,36 @@
           "url": "https://www.2embed.cc/embedtv/tt36470958&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkpoOW5GNnFhOEZOTTlWUGxUSlZnQjY1VFlBU1BLT2lOSnhiNTNuejVHY1k9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.8GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qkp5cjlDTlRZKzFUdGtJY0d5aHhiOU9ZVDJHeEVENGFzMzdOQ01FWEhCcTA9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "5.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmo2UldPWlYrbjZReWRrNm9BYU9nTmZ4WUduMWlJencrOUQ3OXlDVFNuMXc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -7455,7 +8486,36 @@
           "url": "https://autoembed.co/movie/imdb/tt19838634"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "460MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/t8xj84rdU8wqPgDnx7ipVi4Rp",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "810MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlRMWUNwa1R3dU95Y25kRmVncUZUUzRJc1RteWloWm9GWkU2OGNMV1VrVXc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnhCMnhCY2ZWY1pmSWhHR09vTHM1UDZDL0JKSDB1bGhqemhlc291dUh1VXM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Ulajh+2024+trailer",
       "description": "Ulajh (2024) starring Janhvi Kapoor, Arun Malik.",
@@ -7507,7 +8567,36 @@
           "url": "https://autoembed.co/movie/imdb/tt4387040"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkhqQWcrUWVhc0c0VlNIQzhKVTExZGhzMTAxODF6dnJVS2RJWWVGN1RieVk9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmFlaW8vbCt4elFNM3FHOUV3d2RHRm5hN2xxNFRmWnNzZnZHQ3orWllTdmM9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhONjNWTXJIZEtrNE55OXFnOFBGd2VBdlZzM3Y4MWR2bk9EUTkxSWlxOUU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Airlift+2016+trailer",
       "description": "Airlift (2016) starring Akshay Kumar, Nimrat Kaur.",
@@ -7559,7 +8648,36 @@
           "url": "https://autoembed.co/movie/imdb/tt22436062"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "410MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/eqS8nAYfZXj0jwXIUNC6GnWBo",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "720MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjNkeXVYN1JRd1RiRXp2RVBBUllodWVVbElHek5XZ3I3QUR3bXY0cVB0ODQ9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk04NXZCamdpWGlMVExhcktkLzBrcWtjUzJvSysxZG5ZSnBTbC9LUktQNlE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dhoomam+2023+trailer",
       "description": "Dhoomam (2023) starring Fahadh Faasil, Aparna Balamurali.",
@@ -7604,7 +8722,36 @@
           "url": "https://autoembed.co/movie/imdb/tt26659814"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/SlyCC2Exf2uRHi7qpUH5V0tBq",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "770MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmNHWllVZXg4Z2dHR0FKSGIzNnRNaW8xRHlvV1pGWW9mZTlVSzN4VTRyMDg9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm9ucVlWZVJESUZSMy9qbkg2UXUzSUdNTFdLZXhZaC9XZmtKVjBPTlhVMkU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Auron+Mein+Kahan+Dum+Tha+2024+trailer",
       "description": "Auron Mein Kahan Dum Tha (2024) starring Ajay Devgn, Tabu.",
@@ -35182,8 +36329,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 491,
-    "lastUpdated": "2026-10-31T10:05:17.365877+00:00",
+    "totalMovies": 493,
+    "lastUpdated": "2026-10-31T16:37:23.889184+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -35215,8 +36362,8 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 123,
-    "totalTitles": 614,
+    "totalSeries": 125,
+    "totalTitles": 618,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
