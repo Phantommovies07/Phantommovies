@@ -1,6 +1,1150 @@
 {
   "movies": [
     {
+      "id": "1793372602795",
+      "type": "series",
+      "title": "Dead-End Job",
+      "genre": "Tv Mini-Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzRiOWExZWItOTlmOS00N2FjLWFiOWQtYTdkNGY4NjBjMGJiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzRiOWExZWItOTlmOS00N2FjLWFiOWQtYTdkNGY4NjBjMGJiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "18.9GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.bar/file/18020595839",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt36458668?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt36458668-1-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36458668/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p Full HD",
+              "size": "18.9GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/18020595839",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt36458668?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt36458668-2-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt36458668/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkhaY2xUekd3SnhzeFY3dENnNTR6Uk4xUTZ4OVAvTDJCRU55dnVwQmZGclU9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.9GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjBSSGNDTEkvQVVUV21BWlJHNDJIU1JHR0hBZ1NFYThkbkllN0dUa3lzY3c9",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 2,
+              "title": "Episode 2",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/1793372602795?s=2&e=2"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=1793372602795&season=2&episode=2"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt36458668-2-2"
+                }
+              ],
+              "downloads": []
+            }
+          ]
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dead-End+Job+2026+trailer",
+      "description": "Dead-End Job (2026) starring Lee Jae-wook, Go Min-si.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9581,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36458668",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T15:03:19.458340+00:00",
+      "updatedAt": "2026-10-31T10:04:51.039307+00:00"
+    },
+    {
+      "id": "1793441096797",
+      "type": "series",
+      "title": "Mirzapur: The Movie",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhlYWY1NWUtYjU4Zi00MDg4LWE2N2MtYjQzMjBkMjgwOWI5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjhlYWY1NWUtYjU4Zi00MDg4LWE2N2MtYjQzMjBkMjgwOWI5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "750MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2780039390",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2942963731",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt34339725-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt34339725&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "750MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.2GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/2780039390",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.bar/file/2942963731",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 81,
+              "title": "Episode 81",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=81"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=2&episode=81"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt34339725-2-81"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt34339725&s=2&e=81"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "1.8GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmJvaGNuTEVQa0RHVmwxSkdKbVM2YWswMUVWQlNSME81ckozdXorZDFpa0k9",
+                  "color": "#06b6d4"
+                }
+              ]
+            },
+            {
+              "episodeNumber": 5,
+              "title": "Episode 5",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt34339725?s=2&e=5"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=2&episode=5"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt34339725-2-5"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt34339725&s=2&e=5"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p Full HD",
+                  "size": "4.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhVMXdNOG16ODY3VERmRDVUOUVlWDJGT0tKaTY0K1AyQVBqUGJxME5YaWc9",
+                  "color": "#10b981"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt34339725?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt34339725&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt34339725-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt34339725&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "750MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.2GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/2780039390",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.7GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/2941714560",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Mirzapur:+The+Movie+2026+trailer",
+      "description": "Mirzapur: The Movie (2026) starring Ali Fazal, Pankaj Tripathi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8534,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt34339725",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T10:04:49.975329+00:00",
+      "updatedAt": "2026-10-31T10:04:49.975329+00:00"
+    },
+    {
+      "id": "1793441088828",
+      "type": "series",
+      "title": "Make Me Tingle",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTc0MDcwNDYtYWQwOS00YmY0LWIxOTMtZWMxYjQwOTJmNDQ1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTc0MDcwNDYtYWQwOS00YmY0LWIxOTMtZWMxYjQwOTJmNDQ1XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmdhQ0lSZEtidjdhU0ZxZEhuYWg4cHRLSXJ6S3k2RVAxRlNqWEd5bUtSMm89",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk5KYkptTjh5MGc4Qi9GM3FnM3RUYkk0eUdneDNXSkJjckdLSWtiVlN5N0E9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmF2K042UTVqOHFOUEhJWW5IMFB3YVB6VlA2UkMzQTFCUE5ZSnV4R0o2a2M9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 0,
+          "title": "Season 0",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt47661704?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt47661704&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt47661704-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt47661704&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmdhQ0lSZEtidjdhU0ZxZEhuYWg4cHRLSXJ6S3k2RVAxRlNqWEd5bUtSMm89",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk5KYkptTjh5MGc4Qi9GM3FnM3RUYkk0eUdneDNXSkJjckdLSWtiVlN5N0E9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmF2K042UTVqOHFOUEhJWW5IMFB3YVB6VlA2UkMzQTFCUE5ZSnV4R0o2a2M9",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt47661704?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt47661704&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt47661704-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt47661704&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt47661704?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt47661704&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt47661704-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt47661704&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmdhQ0lSZEtidjdhU0ZxZEhuYWg4cHRLSXJ6S3k2RVAxRlNqWEd5bUtSMm89",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk5KYkptTjh5MGc4Qi9GM3FnM3RUYkk0eUdneDNXSkJjckdLSWtiVlN5N0E9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmF2K042UTVqOHFOUEhJWW5IMFB3YVB6VlA2UkMzQTFCUE5ZSnV4R0o2a2M9",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Make+Me+Tingle+2026+trailer",
+      "description": "Make Me Tingle (2026) starring Lee Chang-min, Jeong Ji-in.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 11869,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt47661704",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T10:04:47.521354+00:00",
+      "updatedAt": "2026-10-31T10:04:47.521354+00:00"
+    },
+    {
+      "id": "1793441090944",
+      "type": "movie",
+      "title": "Cold Call",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjg0ZTIyMTctZGJiOC00ODcxLTg2MGUtZjMyMDg5OTVjNDVjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjg0ZTIyMTctZGJiOC00ODcxLTg2MGUtZjMyMDg5OTVjNDVjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt38349121?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt38349121?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt38349121"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt38349121"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "480p SD",
+          "size": "510MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/ZY14rkEgtYCwJfcjEnL9D9hGn",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm5DOG42a0d6aTNGdUZOenliUjU2dGNXVGRXMzdtZjZrMVM3RDNoWGxIeXc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.7GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnJNakhqaHl6RmNzZGdwZ0JySy9DZlZmLzRBL1lvUU5iNFlOdFF2SU5LamM9",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Cold+Call+2026+trailer",
+      "description": "Cold Call (2026) starring Krishna Vijay, Shree Vaishnav.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19287,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt38349121",
+      "tmdb_id": "",
+      "createdAt": "2026-10-31T10:04:47.045295+00:00",
+      "updatedAt": "2026-10-31T10:04:47.045295+00:00"
+    },
+    {
+      "id": "1791627574973",
+      "type": "series",
+      "title": "MobLand",
+      "genre": "Tv Series",
+      "year": 2025,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDc4MmYxNTAtM2ViYy00YWQ4LThjZWUtNDZjNTZjNDFhNzBjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZDc4MmYxNTAtM2ViYy00YWQ4LThjZWUtNDZjNTZjNDFhNzBjXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/247718?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/247718?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidlink.pro/tv/247718/1/1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://www.2embed.cc/embedtv/tt31510819&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmtSL3FnMlJDMEFVT29ic0dpdDJpS2t1dTNick8rS3hoWDErUHdjQjJreWM9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjhKSUtqTGNmYXJzZDY0eUtVMU1uUFVvWFFiQVJ5YS9aUjFUQ3BzWTJRZDA9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjB1bklKZFJaT1hta2J2b0x0RWxZTXpwQzV4V2Jzc09KUG9MYzRLWEdOZHc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247718?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247718/1/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt31510819&s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": [],
+          "streamLink": "https://cinesrc.st/embed/tv/247718?s=1&e=1"
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/247718?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/247718/2/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt31510819&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": [],
+          "streamLink": "https://cinesrc.st/embed/tv/247718?s=2&e=1"
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=MobLand+2025+trailer",
+      "description": "MobLand (2025) starring Tom Hardy, Pierce Brosnan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14902,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt31510819",
+      "tmdb_id": "247718",
+      "createdAt": "2026-10-10T10:19:32.445970+00:00",
+      "updatedAt": "2026-10-31T10:04:46.744974+00:00"
+    },
+    {
+      "id": "1793381537818",
+      "type": "series",
+      "title": "Bigg Boss",
+      "genre": "Tv Series",
+      "year": 2006,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTk3OTllYzYtMzUyYi00ZDY5LTk4MDktYzQ3ODdiYmU1YWZmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTk3OTllYzYtMzUyYi00ZDY5LTk4MDktYzQ3ODdiYmU1YWZmXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk02cEZjdXdmOEtxTjd6NlUyVEsvVHpwb2tyZHArUkI0VXJoRUYvSERVMlk9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkQ4dUMyd1pXWWFsU3hQektkVnNXWHZYQXg3SkVpbUtJbjF5MVV3aDlLQ2M9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlJNc0haZXZ4dXNiaGUwaHpzcXN4UmZHSk5VMTZ0cHhQZUNGK3YraXRkN1k9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt1281973?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt1281973-1-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt1281973/1/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt1281973?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt1281973-2-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt1281973/2/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 3,
+          "title": "Season 3",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt1281973?s=3&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt1281973-3-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt1281973/3/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 5,
+          "title": "Season 5",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt1281973?s=5&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt1281973-5-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt1281973/5/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 20,
+          "title": "Season 20",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt1281973?s=20&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt1281973-20-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt1281973/20/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 63,
+          "title": "Season 63",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt1281973?s=63&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt1281973-63-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt1281973/63/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Bigg+Boss+2006+trailer",
+      "description": "Bigg Boss (2006) starring Salman Khan, Atul Kapoor.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23525,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1281973",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T17:32:09.993463+00:00",
+      "updatedAt": "2026-10-31T10:04:46.533987+00:00"
+    },
+    {
+      "id": "1793381537829",
+      "type": "series",
+      "title": "Akka",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODQ2NmJiMjktMWU4ZS00YTA1LWIxZGUtYmE1ZDE4MmFhZjQyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BODQ2NmJiMjktMWU4ZS00YTA1LWIxZGUtYmE1ZDE4MmFhZjQyXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "",
+      "streams": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "10.3GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.bar/file/4237020442",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt29625288?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt29625288-1-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt29625288/1/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p Full HD",
+              "size": "10.3GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/4237020442",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.bar/file/1856082650",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt29625288?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt29625288-2-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt29625288/2/1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "660MB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRla3o2ektFaFhld2Y4NWhJZTgvZzZLNTZaN2lndkpMNTJWcXBONzFDdjg9",
+              "color": "#ffd70f"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 9,
+              "title": "Episode 9",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/1793381537829?s=2&e=9"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=1793381537829&season=2&episode=9"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt29625288-2-9"
+                }
+              ],
+              "downloads": []
+            },
+            {
+              "episodeNumber": 0,
+              "title": "Episode 0",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/1793381537829?s=2&e=2"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=1793381537829&season=2&episode=2"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt29625288-2-2"
+                }
+              ],
+              "downloads": []
+            }
+          ]
+        },
+        {
+          "seasonNumber": 6,
+          "title": "Season 6",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt29625288?s=6&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://autoembed.co/tv/imdb/tt29625288-6-1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://player.autoembed.cc/embed/tv/tt29625288/6/1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Akka+2026+trailer",
+      "description": "Akka (2026) starring Keerthy Suresh, Radhika Apte.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22544,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt29625288",
+      "tmdb_id": "",
+      "createdAt": "2026-10-30T17:32:08.515985+00:00",
+      "updatedAt": "2026-10-31T10:04:46.330298+00:00"
+    },
+    {
       "id": "1793417425067",
       "type": "series",
       "title": "Mirzapur: The Movie",
@@ -1139,318 +2283,6 @@
       "updatedAt": "2026-10-30T17:32:13.251738+00:00"
     },
     {
-      "id": "1793381537818",
-      "type": "series",
-      "title": "Bigg Boss",
-      "genre": "Tv Series",
-      "year": 2006,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTk3OTllYzYtMzUyYi00ZDY5LTk4MDktYzQ3ODdiYmU1YWZmXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BNTk3OTllYzYtMzUyYi00ZDY5LTk4MDktYzQ3ODdiYmU1YWZmXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "",
-      "streams": [],
-      "downloads": [],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt1281973?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt1281973-1-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt1281973/1/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt1281973?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt1281973-2-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt1281973/2/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 3,
-          "title": "Season 3",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt1281973?s=3&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt1281973-3-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt1281973/3/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 5,
-          "title": "Season 5",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt1281973?s=5&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt1281973-5-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt1281973/5/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 20,
-          "title": "Season 20",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt1281973?s=20&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt1281973-20-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt1281973/20/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 63,
-          "title": "Season 63",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt1281973?s=63&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt1281973-63-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt1281973/63/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Bigg+Boss+2006+trailer",
-      "description": "Bigg Boss (2006) starring Salman Khan, Atul Kapoor.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 23525,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt1281973",
-      "tmdb_id": "",
-      "createdAt": "2026-10-30T17:32:09.993463+00:00",
-      "updatedAt": "2026-10-30T17:32:09.993463+00:00"
-    },
-    {
-      "id": "1793381537829",
-      "type": "series",
-      "title": "Akka",
-      "genre": "Tv Series",
-      "year": 2026,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODQ2NmJiMjktMWU4ZS00YTA1LWIxZGUtYmE1ZDE4MmFhZjQyXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BODQ2NmJiMjktMWU4ZS00YTA1LWIxZGUtYmE1ZDE4MmFhZjQyXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "",
-      "streams": [],
-      "downloads": [
-        {
-          "quality": "1080p Full HD",
-          "size": "10.3GB",
-          "server": "Fast Cloud",
-          "url": "https://hubdrive.bar/file/4237020442",
-          "color": "#10b981"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt29625288?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt29625288-1-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt29625288/1/1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "1080p Full HD",
-              "size": "10.3GB",
-              "server": "Fast Cloud",
-              "url": "https://hubdrive.bar/file/4237020442",
-              "color": "#10b981"
-            }
-          ],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": false,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt29625288?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt29625288-2-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt29625288/2/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [
-            {
-              "episodeNumber": 9,
-              "title": "Episode 9",
-              "duration": "45m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/1793381537829?s=2&e=9"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=1793381537829&season=2&episode=9"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt29625288-2-9"
-                }
-              ],
-              "downloads": []
-            },
-            {
-              "episodeNumber": 0,
-              "title": "Episode 0",
-              "duration": "45m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/1793381537829?s=2&e=2"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=1793381537829&season=2&episode=2"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt29625288-2-2"
-                }
-              ],
-              "downloads": []
-            }
-          ]
-        },
-        {
-          "seasonNumber": 6,
-          "title": "Season 6",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt29625288?s=6&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt29625288-6-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt29625288/6/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Akka+2026+trailer",
-      "description": "Akka (2026) starring Keerthy Suresh, Radhika Apte.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 22544,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt29625288",
-      "tmdb_id": "",
-      "createdAt": "2026-10-30T17:32:08.515985+00:00",
-      "updatedAt": "2026-10-30T17:32:08.515985+00:00"
-    },
-    {
       "id": "1793381530052",
       "type": "movie",
       "title": "Nakhrewaalii",
@@ -1638,118 +2470,6 @@
       "updatedAt": "2026-10-30T15:03:23.202025+00:00"
     },
     {
-      "id": "1793372602795",
-      "type": "series",
-      "title": "Dead-End Job",
-      "genre": "Tv Mini-Series",
-      "year": 2026,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzRiOWExZWItOTlmOS00N2FjLWFiOWQtYTdkNGY4NjBjMGJiXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BMzRiOWExZWItOTlmOS00N2FjLWFiOWQtYTdkNGY4NjBjMGJiXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "",
-      "streams": [],
-      "downloads": [
-        {
-          "quality": "1080p Full HD",
-          "size": "18.9GB",
-          "server": "Fast Cloud",
-          "url": "https://hubdrive.bar/file/18020595839",
-          "color": "#10b981"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt36458668?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt36458668-1-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt36458668/1/1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "1080p Full HD",
-              "size": "18.9GB",
-              "server": "Fast Cloud",
-              "url": "https://hubdrive.bar/file/18020595839",
-              "color": "#10b981"
-            }
-          ],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": false,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt36458668?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://autoembed.co/tv/imdb/tt36458668-2-1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://player.autoembed.cc/embed/tv/tt36458668/2/1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [
-            {
-              "episodeNumber": 2,
-              "title": "Episode 2",
-              "duration": "45m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/1793372602795?s=2&e=2"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=1793372602795&season=2&episode=2"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt36458668-2-2"
-                }
-              ],
-              "downloads": []
-            }
-          ]
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Dead-End+Job+2026+trailer",
-      "description": "Dead-End Job (2026) starring Lee Jae-wook, Go Min-si.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 9581,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt36458668",
-      "tmdb_id": "",
-      "createdAt": "2026-10-30T15:03:19.458340+00:00",
-      "updatedAt": "2026-10-30T15:03:19.458340+00:00"
-    },
-    {
       "id": "1793372474214",
       "type": "movie",
       "title": "Goodachari",
@@ -1920,7 +2640,36 @@
           "url": "https://autoembed.co/movie/imdb/tt0062622"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkVpR3poRE0xS0VvcVFnUENFNzR4SXRmY09id1dQUnRWeHlQTG9mMk5TSTg9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "850MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjU4UkZ2R3RvY3VXUUFkOGcxRDVyOVQzYlViTXRZeGdHUFRDdnhDZlFtMVU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=2001:+A+Space+Odyssey+1968+trailer",
       "description": "2001: A Space Odyssey (1968) starring Keir Dullea, Gary Lockwood.",
@@ -1965,7 +2714,36 @@
           "url": "https://www.2embed.cc/embedtv/tt5675620&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZZeE5hMmsrVXdZUFRpWEZIKzIxdThYWHMrRWVGekhLREJkR1lkUWs3aTQ9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "4.9GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1894669605",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkxlL2c4OUxCdzNPYUZCT0FLbkpUZlp1M1VMbEJELytROGRGajFaVnlHTTQ9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -2062,7 +2840,36 @@
           "url": "https://www.2embed.cc/embedtv/tt37626694&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/XXTdGz0zUqKyfNU00GhT7biLf",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "900MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1961729132",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QldyYk52SmIrQTVXK3NwNTFSMWxwZFBOOXNpNEowWEFYWkpsblRqZHQzTjA9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -2449,7 +3256,36 @@
           "url": "https://autoembed.co/movie/imdb/tt46065968"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/oxVcLSZiFu31T9jqsRoeTFmVF",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QldHSlBhT2k1WWc2S3ljSjVFT0ZRSXJqVEMydUhFNGd2WDEzRHBMYnc1TE09",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjQ0Q2VUTU1laVNYRC9LTjNwamM2R0RGKzFXM3AyeW9PT0RuVlZiSEtvLzg9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Pehla+Pyaar+Doosri+Baar+2026+trailer",
       "description": "Pehla Pyaar Doosri Baar (2026) starring Alisha Chopra, Sparsh Walia.",
@@ -2501,7 +3337,36 @@
           "url": "https://autoembed.co/movie/imdb/tt14173636"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "440MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/48A1jOqvUFg5FR1jmjWxraRWE",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "860MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2400827088",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnQ2UTV2am1jK1ZieS9CcHkwOFBQNklwZGVvL2NnaFBJY3l2ZFVTMmtkd289",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Invite+2026+trailer",
       "description": "The Invite (2026) starring Seth Rogen, Olivia Wilde.",
@@ -2807,7 +3672,36 @@
           "url": "https://autoembed.co/movie/imdb/tt42362291"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "430MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkNhend4TlptZGcyRklRR1UrejU1MHlkUzRYWWc5dERLeUVTQUVSMEVxdms9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRNMzVIOE9kWnRTTkNLQlYwNElYVDlpL0dFdHpNMmlOVTkrM2Q2eU5tRWs9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm16cXFIR2J6eU9YenA1Tms4anVNRzA4SEtsVUV6UDk2cFZKejdUc25kSWM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Jeena+Dil+Se+2026+trailer",
       "description": "Jeena Dil Se (2026) starring Ruma Sharma, Lakshya Handa.",
@@ -2852,7 +3746,15 @@
           "url": "https://autoembed.co/movie/imdb/tt1195478"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Five-Year+Engagement+2012+trailer",
       "description": "The Five-Year Engagement (2012) starring Jason Segel, Emily Blunt.",
@@ -2904,7 +3806,36 @@
           "url": "https://autoembed.co/movie/imdb/tt28650488"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "390MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/pHFRMuDjWCloVNpJLJRALLBAB",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "750MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2023248994",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qk9UejRqWHJxVGhSNFh6SlBLU0pUZ3ErVzd3WW9sK2FpNmlja2g5RjlZM0E9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Super+Mario+Galaxy+Movie+2026+trailer",
       "description": "The Super Mario Galaxy Movie (2026) starring Brie Larson, Virginia Dare Jelenic.",
@@ -3010,7 +3941,29 @@
           "url": "https://autoembed.co/movie/imdb/tt37818327"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkZxT1g4ZjF3Z0FYSTRqMmdrMWhoN2xwUDRzTW9GUVlnSlhqMkgvVjQ4WDQ9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmpCMmZGR0ZTdFAyeXFFVVhQbVlEOEx2LzhYcWcrbEVpaXJ1OWxJS0V4OVE9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Sun+Never+Sets+2026+trailer",
       "description": "The Sun Never Sets (2026) starring Dakota Fanning, Debby Ryan.",
@@ -3062,7 +4015,36 @@
           "url": "https://autoembed.co/movie/imdb/tt10794054"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmI0OVBLUHB3SnV6RXRVUWdFcnZLUXIwaFcvUE4ySzQ2cXNTbmk4RzNxYTA9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "950MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm5ZMERaU25uRllEaFVycXZkYWJPU2l4S0VHQTJjanpab2RwWnE4VXhhUGs9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Weight+2026+trailer",
       "description": "The Weight (2026) starring Ethan Hawke, Russell Crowe.",
@@ -3114,7 +4096,36 @@
           "url": "https://autoembed.co/movie/imdb/tt36307021"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "480MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmxQQXpWVEU2b0UvNUJxZ2hmNXNNenEyZkJXMGVMT2dhYmdZYVZ2OU9oa2s9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkhHS29sYXM2bGZhL0NzSVUrcHp3M3hYQmNMRnZkR0duS1BpeVhFaXQvQnc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJibU9zOUlaeFFHbGw1c1ZUcUZsbmZIRmJSQXlTZkxub1VlNzRHTHpXa0E9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Hadestown:+The+Musical+2026+trailer",
       "description": "Hadestown: The Musical (2026) starring Reeve Carney, André De Shields.",
@@ -3166,7 +4177,36 @@
           "url": "https://autoembed.co/movie/imdb/tt0361411"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmMvaURuK3BYVXp1d3BkMVVvMkFsbm5Hbjl5UU1JcDEzSFNXcW9sd3A0Rm89",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "900MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmtNQURCTDZYd2lLV1N2K2JHaHVZVXZ2SGp6eHNKTDc2bGZ6M3ptSGdUT2M9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bktuWUlaTkl5alVOY01rRXh1WmJpNnBMYkVFN0xOdnNVNytQa29JQWNoUEE9PQ==",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Bride+&+Prejudice+2004+trailer",
       "description": "Bride & Prejudice (2004) starring Martin Henderson, Aishwarya Rai Bachchan.",
@@ -3287,7 +4327,36 @@
           "url": "https://autoembed.co/movie/imdb/tt37892322"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "840MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qjd2a3I4ZE8zSzRqMU5Xa0xiS0VpQjMrMVp4Ym40NzdvS3hweE9zOTloZDQ9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.7GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnpMYW1IQThsci80L1hoOEZhV3ZCazRUMnFjbFJHR0d6c0pCWDlwN01leFU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qkh2TmpTNStJdU8wU2w4bDVPSFVUb1BrNU16Q2puandFTEZpamUyanlwbUE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=No+More+Cocoons+2026+trailer",
       "description": "No More Cocoons (2026) starring Sky Bison, Henry Hunter Hall.",
@@ -3339,7 +4408,36 @@
           "url": "https://autoembed.co/movie/imdb/tt39100759"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "520MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/2nunw0JfwVRNCfBhkUCbvzTLc",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "840MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2359226412",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjlOd1VqQ3Z3azcvdnVibEhvSVkyUUlQOFZzNVc2WkVEUGc0TkpsWXF2M1E9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Super+Hit+2026+trailer",
       "description": "Super Hit (2026) starring Gilli Nata, Gourav Shetty.",
@@ -3574,7 +4672,36 @@
           "url": "https://autoembed.co/movie/imdb/tt9000310"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/awgrulmA1iluYhMAggZgX82Lv",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "790MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2183857554",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkE5WW1pZ2Y0bUdnd3hrWFFENG5aYUNSUzNHV3ZXMmk3dUNpQXBPdGo2UlU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Ghost+in+the+Cell+2026+trailer",
       "description": "Ghost in the Cell (2026) starring Abimana Aryasatya, Almanzo Konoralma.",
@@ -3626,7 +4753,36 @@
           "url": "https://autoembed.co/movie/imdb/tt27541205"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "260MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnNxRzR5R3R0dy91bUorY3BFVm1lMXk3MVhjY0wwYkM4elpIWHhaYytDT3M9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "760MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmdDYUhrU0xucVNLOGROM3BmbXZTMmpNbHI4UFNROFNJMFdHcHI3ajVXNmc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnNSdW5FZWk2TE41b200cDZiL3ZLbTVBTXA5T0xVWGc0UHJQR3M3M3pKdWM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Queen+at+Sea+2026+trailer",
       "description": "Queen at Sea (2026) starring Juliette Binoche, Tom Courtenay.",
@@ -3678,7 +4834,36 @@
           "url": "https://autoembed.co/movie/imdb/tt29714073"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/fBs2U8vdXeHED304KLi71iIhk",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "790MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/1805089962",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjcrZURFa1lYQzRBb1VSQ1Jqa0RoTTFhUnI1N1NuK3RwUHcrSGR2UEIxdWM9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Bad+Apples+2025+trailer",
       "description": "Bad Apples (2025) starring Eddie Waller, Sean Gilder.",
@@ -3730,7 +4915,36 @@
           "url": "https://autoembed.co/movie/imdb/tt14526318"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "690MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/KC33hlDfYuZFYTPQzkUIGniKD",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.bar/file/2550289224",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnJwME54bzhRRnA0NW8raDNZYjVNc0dOb3lscGhBQjNFTjBlcUlXQ25HYVk9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Sardar+2022+trailer",
       "description": "Sardar (2022) starring Karthi, Raashi Khanna.",
@@ -3782,7 +4996,36 @@
           "url": "https://autoembed.co/movie/imdb/tt37263154"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "460MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/64HwmZUrRBskZjZ4NsCd2Zphf",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "760MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qkc1dW1zRGliRTZFdm8za2hRTFBWSWdDRnNvTGYwa0ZIUy9vb2p3K0l6T3c9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjBFd3FqS0t6ZUl3UitOZ25ZZFJQNU4xYnNQVDRac1FqMXpsaTBaVmpqSEU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Merry+Christmas,+Ted+Cooper!+2025+trailer",
       "description": "Merry Christmas, Ted Cooper! (2025) starring Robert Buckley, Kimberley Sustad.",
@@ -3834,7 +5077,36 @@
           "url": "https://autoembed.co/movie/imdb/tt0422091"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "500MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/xAiL88GGIix0SRYRvym7dKlN4",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "890MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcloud.ist/drive/search-recover.php?from_ac=W0qDCNlqr8YwyVctJRTPdR77q5jWyTRrkjLrYtSzSs-PaXfO&q=RGhvb20gRGhhYW0gMjAyNCA3MjBw",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkE5SlNJQWlGbit2VEdvN3BrUlh3MkRrek93UlFoR05ybEY1LzJEVU10OEk9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dhoom+2004+trailer",
       "description": "Dhoom (2004) starring Abhishek Bachchan, John Abraham.",
@@ -3886,7 +5158,36 @@
           "url": "https://autoembed.co/movie/imdb/tt0116630"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlNYbWZmZnUrMlhKeFdQd2x1SERvanlXRWR2Q0c4VUJIemZvRUFwOXZuS2s9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnUwTlR0VS9PYmphdSsyM3cvTXFqdzZUUGNxS3dLcXNIZ1RoUmNaeGJtYW89",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRrT2lXS2Z1SUxlbmc3NmR5V3hqS20wTGxsWGtBRlJQY0ZUMmorcXIxZUE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Indian+1996+trailer",
       "description": "Indian (1996) starring Kamal Haasan, Sukanya.",
@@ -15675,96 +16976,6 @@
       "tmdb_id": "44040",
       "createdAt": "2026-10-10T20:08:48.851514+00:00",
       "updatedAt": "2026-10-10T20:08:48.851514+00:00"
-    },
-    {
-      "id": "1791627574973",
-      "type": "series",
-      "title": "MobLand",
-      "genre": "Tv Series",
-      "year": 2025,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDc4MmYxNTAtM2ViYy00YWQ4LThjZWUtNDZjNTZjNDFhNzBjXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BZDc4MmYxNTAtM2ViYy00YWQ4LThjZWUtNDZjNTZjNDFhNzBjXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/247718?s=1&e=1",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/247718?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidlink.pro/tv/247718/1/1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://www.2embed.cc/embedtv/tt31510819&s=1&e=1"
-        }
-      ],
-      "downloads": [],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247718?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247718/1/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt31510819&s=1&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [],
-          "streamLink": "https://cinesrc.st/embed/tv/247718?s=1&e=1"
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/247718?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/247718/2/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt31510819&s=2&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [],
-          "streamLink": "https://cinesrc.st/embed/tv/247718?s=2&e=1"
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=MobLand+2025+trailer",
-      "description": "MobLand (2025) starring Tom Hardy, Pierce Brosnan.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 14902,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt31510819",
-      "tmdb_id": "247718",
-      "createdAt": "2026-10-10T10:19:32.445970+00:00",
-      "updatedAt": "2026-10-10T20:08:02.732677+00:00"
     },
     {
       "id": "1791396202621",
@@ -33971,8 +35182,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 490,
-    "lastUpdated": "2026-10-31T03:30:54.347449+00:00",
+    "totalMovies": 491,
+    "lastUpdated": "2026-10-31T10:05:17.365877+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -34004,8 +35215,8 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 121,
-    "totalTitles": 611,
+    "totalSeries": 123,
+    "totalTitles": 614,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
