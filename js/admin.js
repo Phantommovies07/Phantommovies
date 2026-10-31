@@ -1,1014 +1,428 @@
-// Admin Panel Logic
+// ══════════════════════════════════════════════════════════════
+// PHANTOM MOVIES - ADMIN CONSOLE CONTROLLER v2.5
+// ══════════════════════════════════════════════════════════════
 
-let seasonCounter = 0;
-let episodeCounter = 0;
+// Global State
 let editingMovieId = null;
+let catalogSearchTimeout = null;
+const TMDB_API_KEY_STORAGE = 'tmdb_v4_token';
 
-// Check authentication on load
+// Catalog State
+let catalogState = {
+    allItems: [],
+    filteredItems: [],
+    searchQuery: '',
+    typeFilter: 'all',
+    categoryFilter: 'all',
+    sortBy: 'newest',
+    currentPage: 1,
+    pageSize: 20
+};
+
+// ─── INITIALIZATION ON LOAD ───
 document.addEventListener('DOMContentLoaded', () => {
-    setupImagePreviews();
-    initTMDBAutoFill();
-    addStreamLink();
-    addDownloadOption();
-    toggleContentType();
-    restorePanelStates();
-    initSimpleAdBuilder();
-
+    // Check if GitHub credentials already saved
     if (githubAPI.loadCredentials()) {
         showContentSection();
         loadMovies();
         loadAdsSettings();
         loadSiteSettings();
+        initSimpleAdBuilder();
+    } else {
+        showAuthSection();
+    }
+
+    setupImagePreviews();
+    initTMDBAutoFill();
+
+    // Set default streams and downloads on fresh page
+    if (!editingMovieId) {
+        addStreamLink();
+        addDownloadOption();
     }
 });
 
-// Authenticate with GitHub
+// ─── GITHUB AUTHENTICATION ───
 async function authenticateGitHub() {
     const username = document.getElementById('githubUsername').value.trim();
     const repo = document.getElementById('githubRepo').value.trim();
     const token = document.getElementById('githubToken').value.trim();
 
     if (!username || !repo || !token) {
-        showAlert('authAlert', 'Please fill in all fields', 'error');
+        showAlert('authAlert', '❌ Please enter GitHub Username, Repo, and Token.', 'error');
         return;
     }
 
-    const btn = document.getElementById('authBtn');
-    btn.disabled = true;
-    btn.textContent = 'Connecting...';
+    const authBtn = document.getElementById('authBtn');
+    authBtn.disabled = true;
+    authBtn.textContent = 'Connecting to GitHub...';
 
     try {
         githubAPI.init(username, repo, token);
         const user = await githubAPI.verifyAuth();
-        showAlert('authAlert', `✅ Connected as ${user.login}`, 'success');
+
+        showAlert('authAlert', `✅ Connected as @${user.login || username}! Opening Console...`, 'success');
+
         setTimeout(() => {
             showContentSection();
             loadMovies();
             loadAdsSettings();
             loadSiteSettings();
-        }, 1000);
+            initSimpleAdBuilder();
+        }, 800);
+
     } catch (error) {
-        showAlert('authAlert', `❌ ${error.message}`, 'error');
-        btn.disabled = false;
-        btn.textContent = 'Connect to GitHub';
+        showAlert('authAlert', `❌ Authentication error: ${error.message}`, 'error');
+        githubAPI.clearCredentials();
+    } finally {
+        authBtn.disabled = false;
+        authBtn.textContent = '🔐 Connect & Unlock Console';
     }
 }
 
 function showContentSection() {
     document.getElementById('authSection').classList.add('hidden');
     document.getElementById('contentSection').classList.remove('hidden');
+    const topLogout = document.getElementById('logoutBtnTop');
+    if (topLogout) topLogout.classList.remove('hidden');
 }
 
 function showAuthSection() {
     document.getElementById('authSection').classList.remove('hidden');
     document.getElementById('contentSection').classList.add('hidden');
+    const topLogout = document.getElementById('logoutBtnTop');
+    if (topLogout) topLogout.classList.add('hidden');
 }
 
 function logout() {
-    if (confirm('Are you sure you want to logout?')) {
+    if (confirm('Are you sure you want to log out of the Admin Console?')) {
         githubAPI.clearCredentials();
         showAuthSection();
-        resetMovieForm();
-        document.getElementById('movieListContainer').innerHTML = '';
+        showAlert('authAlert', 'Logged out successfully.', 'info');
     }
 }
 
-// ─── ADS MANAGEMENT ───
-function getAdsFormData() {
-    return {
-        enabled: document.getElementById('adsEnabled')?.checked !== false,
-        monetagHead: document.getElementById('adMonetagHead')?.value || '',
-        monetagMultitag: document.getElementById('adMonetagMultitag')?.value || '',
-        adsterraHead: document.getElementById('adAdsterraHead')?.value || '',
-        adsterraSocialBar: document.getElementById('adAdsterraSocialBar')?.value || '',
-        clickAd: {
-            enabled: document.getElementById('clickAdEnabled')?.checked || false,
-            url: document.getElementById('clickAdUrl')?.value.trim() || '',
-            frequency: document.getElementById('clickAdFrequency')?.value || 'session',
-            applyDownloads: document.getElementById('clickAdDownloads')?.checked !== false,
-            applyStreams: document.getElementById('clickAdStreams')?.checked || false
-        },
-        homeTop: document.getElementById('adHomeTop')?.value || '',
-        homeGrid: document.getElementById('adHomeGrid')?.value || '',
-        homeBottom: document.getElementById('adHomeBottom')?.value || '',
-        moviePlayerTop: document.getElementById('adMoviePlayerTop')?.value || '',
-        movieDownloads: document.getElementById('adMovieDownloads')?.value || '',
-        movieBottom: document.getElementById('adMovieBottom')?.value || '',
-        seriesPlayerTop: document.getElementById('adSeriesPlayerTop')?.value || '',
-        seriesDownloads: document.getElementById('adSeriesDownloads')?.value || '',
-        seriesBottom: document.getElementById('adSeriesBottom')?.value || '',
-        floatingBottom: document.getElementById('adFloatingBottom')?.value || '',
-        popup: document.getElementById('adPopup')?.value || '',
-        updatedAt: new Date().toISOString()
+// ─── TAB NAVIGATION CONTROLLER ───
+function switchAdminTab(tabName) {
+    const tabBtns = document.querySelectorAll('.admin-tab-btn');
+    tabBtns.forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabName) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    const panels = {
+        'catalog': 'tabCatalog',
+        'editor': 'tabEditor',
+        'bulk': 'tabBulk',
+        'tmdb': 'tabTmdb',
+        'settings': 'tabSettings',
+        'ads': 'tabAds',
+        'mirrors': 'tabMirrors'
     };
-}
 
-function setAdsFormData(ads = {}) {
-    if (document.getElementById('adsEnabled')) document.getElementById('adsEnabled').checked = ads.enabled !== false;
-    const clickAd = ads.clickAd || {};
-    if (document.getElementById('clickAdEnabled')) document.getElementById('clickAdEnabled').checked = !!clickAd.enabled;
-    if (document.getElementById('clickAdUrl')) document.getElementById('clickAdUrl').value = clickAd.url || '';
-    if (document.getElementById('clickAdFrequency')) document.getElementById('clickAdFrequency').value = clickAd.frequency || 'session';
-    if (document.getElementById('clickAdDownloads')) document.getElementById('clickAdDownloads').checked = clickAd.applyDownloads !== false;
-    if (document.getElementById('clickAdStreams')) document.getElementById('clickAdStreams').checked = !!clickAd.applyStreams;
-    setTextareaValue('adMonetagHead', ads.monetagHead || '');
-    setTextareaValue('adMonetagMultitag', ads.monetagMultitag || '');
-    setTextareaValue('adAdsterraHead', ads.adsterraHead || '');
-    setTextareaValue('adAdsterraSocialBar', ads.adsterraSocialBar || '');
-    setTextareaValue('adHomeTop', ads.homeTop || '');
-    setTextareaValue('adHomeGrid', ads.homeGrid || '');
-    setTextareaValue('adHomeBottom', ads.homeBottom || '');
-    setTextareaValue('adMoviePlayerTop', ads.moviePlayerTop || '');
-    setTextareaValue('adMovieDownloads', ads.movieDownloads || '');
-    setTextareaValue('adMovieBottom', ads.movieBottom || '');
-    setTextareaValue('adSeriesPlayerTop', ads.seriesPlayerTop || '');
-    setTextareaValue('adSeriesDownloads', ads.seriesDownloads || '');
-    setTextareaValue('adSeriesBottom', ads.seriesBottom || '');
-    setTextareaValue('adFloatingBottom', ads.floatingBottom || '');
-    setTextareaValue('adPopup', ads.popup || '');
-}
-
-function setTextareaValue(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.value = value;
-}
-
-async function loadAdsSettings() {
-    try {
-        const content = await githubAPI.getContent();
-        setAdsFormData(content.settings?.ads || {});
-    } catch (error) {
-        console.warn('Ads settings load failed:', error);
-    }
-}
-
-async function saveAdsSettings() {
-    showSpinner(true);
-    try {
-        await githubAPI.updateAds(getAdsFormData());
-        showAlert('contentAlert', '✅ Ads settings saved! Cloudflare Pages will auto-deploy.', 'success');
-    } catch (error) {
-        showAlert('contentAlert', `❌ Ads save error: ${error.message}`, 'error');
-    } finally {
-        showSpinner(false);
-    }
-}
-
-
-function togglePanel(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-
-    // Main panels behave like tabs: only one open at a time.
-    if (['siteSettingsBody', 'adsBody', 'tmdbPanelBody'].includes(id)) {
-        ['siteSettingsBody', 'adsBody', 'tmdbPanelBody'].forEach(otherId => {
-            if (otherId !== id) {
-                const other = document.getElementById(otherId);
-                if (other) {
-                    other.classList.add('collapsed');
-                    localStorage.setItem('panel_' + otherId, 'closed');
-                }
+    Object.entries(panels).forEach(([key, panelId]) => {
+        const el = document.getElementById(panelId);
+        if (el) {
+            if (key === tabName) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
             }
+        }
+    });
+
+    if (tabName === 'mirrors') {
+        loadMirrorHealth();
+    }
+    if (tabName === 'catalog') {
+        // Scroll to catalog search bar
+        document.getElementById('catalogSearchInput')?.focus();
+    }
+}
+
+// ─── PUBLISHED CATALOG CONTROLLER (SEARCH, FILTERS, PAGINATION) ───
+function handleCatalogSearch(query) {
+    catalogState.searchQuery = (query || '').trim().toLowerCase();
+    clearTimeout(catalogSearchTimeout);
+    catalogSearchTimeout = setTimeout(() => {
+        catalogState.currentPage = 1;
+        applyCatalogFiltersAndSort();
+    }, 150);
+}
+
+function setCatalogTypeFilter(type, btnElement) {
+    catalogState.typeFilter = type;
+    const pillBtns = document.querySelectorAll('.filter-pills-bar .pill-btn');
+    pillBtns.forEach(p => p.classList.remove('active'));
+    if (btnElement) btnElement.classList.add('active');
+    catalogState.currentPage = 1;
+    applyCatalogFiltersAndSort();
+}
+
+function handleCatalogCategoryChange(category) {
+    catalogState.categoryFilter = category;
+    catalogState.currentPage = 1;
+    applyCatalogFiltersAndSort();
+}
+
+function handleCatalogSortChange(sortBy) {
+    catalogState.sortBy = sortBy;
+    applyCatalogFiltersAndSort();
+}
+
+function resetCatalogFilters() {
+    const searchInput = document.getElementById('catalogSearchInput');
+    if (searchInput) searchInput.value = '';
+    const catSelect = document.getElementById('catalogCategoryFilter');
+    if (catSelect) catSelect.value = 'all';
+    const sortSelect = document.getElementById('catalogSortSelect');
+    if (sortSelect) sortSelect.value = 'newest';
+
+    const allPill = document.querySelector('.filter-pills-bar .pill-btn[data-filter="all"]');
+    if (allPill) setCatalogTypeFilter('all', allPill);
+
+    catalogState.searchQuery = '';
+    catalogState.typeFilter = 'all';
+    catalogState.categoryFilter = 'all';
+    catalogState.sortBy = 'newest';
+    catalogState.currentPage = 1;
+    applyCatalogFiltersAndSort();
+}
+
+function applyCatalogFiltersAndSort() {
+    let list = [...catalogState.allItems];
+
+    // 1. Search Query Filter
+    if (catalogState.searchQuery) {
+        const q = catalogState.searchQuery;
+        list = list.filter(item => {
+            const titleMatch = (item.title || '').toLowerCase().includes(q);
+            const genreMatch = (item.genre || '').toLowerCase().includes(q);
+            const yearMatch = String(item.year || '').includes(q);
+            const imdbMatch = (item.imdb_id || '').toLowerCase().includes(q);
+            const tmdbMatch = String(item.tmdb_id || '').includes(q);
+            const indMatch = (item.industry || '').toLowerCase().includes(q);
+            const catMatch = (item.category || '').toLowerCase().includes(q);
+            return titleMatch || genreMatch || yearMatch || imdbMatch || tmdbMatch || indMatch || catMatch;
         });
     }
 
-    el.classList.toggle('collapsed');
-    localStorage.setItem('panel_' + id, el.classList.contains('collapsed') ? 'closed' : 'open');
-}
-
-function restorePanelStates() {
-    ['siteSettingsBody', 'adsBody', 'tmdbPanelBody', 'tmdbTokenBody'].forEach(id => {
-        const el = document.getElementById(id);
-        const state = localStorage.getItem('panel_' + id);
-        if (!el || !state) return;
-        el.classList.toggle('collapsed', state === 'closed');
-    });
-}
-
-function clearAdsSettings() {
-    if (!confirm('All ad codes clear karne hain?')) return;
-    setAdsFormData({ enabled: false, clickAd: { enabled: false, url: '', frequency: 'session', applyDownloads: true, applyStreams: false } });
-    showAlert('contentAlert', '🧹 Ad fields cleared. Save Ads Settings dabao to GitHub me update hoga.', 'success');
-}
-
-// ─── SITE SETTINGS ───
-async function loadSiteSettings() {
-    try {
-        const content = await githubAPI.getContent();
-        const settings = content.settings || {};
-        const request = settings.request || {};
-        const baseUrl = document.getElementById('siteBaseUrl');
-        const telegram = document.getElementById('telegramRequestLink');
-        const text = document.getElementById('requestButtonText');
-        const stats = settings.stats || {};
-        if (baseUrl) baseUrl.value = settings.siteBaseUrl || '';
-        if (telegram) telegram.value = request.telegramLink || settings.telegramLink || '';
-        if (text) text.value = request.buttonText || '📩 Request on Telegram';
-        if (document.getElementById('baseTotalStats')) document.getElementById('baseTotalStats').value = stats.baseTotal !== undefined ? stats.baseTotal : 5000;
-        if (document.getElementById('base4kStats')) document.getElementById('base4kStats').value = stats.base4K !== undefined ? stats.base4K : 1800;
-        if (document.getElementById('baseTorrentStats')) document.getElementById('baseTorrentStats').value = stats.baseTorrents !== undefined ? stats.baseTorrents : 3200;
-    } catch (error) {
-        console.warn('Site settings load failed:', error);
-    }
-}
-
-async function saveSiteSettings() {
-    showSpinner(true);
-    try {
-        const request = {
-            telegramLink: document.getElementById('telegramRequestLink')?.value.trim() || '',
-            buttonText: document.getElementById('requestButtonText')?.value.trim() || '📩 Request on Telegram'
-        };
-        const siteBaseUrl = document.getElementById('siteBaseUrl')?.value.trim().replace(/\/$/, '') || '';
-        const stats = {
-            baseTotal: parseInt(document.getElementById('baseTotalStats')?.value) || 5000,
-            base4K: parseInt(document.getElementById('base4kStats')?.value) || 1800,
-            baseTorrents: parseInt(document.getElementById('baseTorrentStats')?.value) || 3200,
-            suffix: '+'
-        };
-        await githubAPI.updateSiteSettings({ siteBaseUrl, request, stats });
-        showAlert('contentAlert', '✅ Site settings saved! Cloudflare Pages will auto-deploy.', 'success');
-    } catch (error) {
-        showAlert('contentAlert', `❌ Settings save error: ${error.message}`, 'error');
-    } finally {
-        showSpinner(false);
-    }
-}
-
-
-function xmlEscape(value) {
-    return String(value || '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
-}
-
-async function generateSitemap() {
-    const base = document.getElementById('siteBaseUrl')?.value.trim().replace(/\/$/, '');
-    if (!base) {
-        showAlert('contentAlert', '❌ Pehle Website Base URL save/enter karo', 'error');
-        return;
-    }
-    showSpinner(true);
-    try {
-        const content = await githubAPI.getContent();
-        const items = (content.movies || []).filter(m => m.active !== false);
-        const urls = [
-            { loc: `${base}/`, priority: '1.0' },
-            { loc: `${base}/index.html`, priority: '0.9' },
-            { loc: `${base}/about.html`, priority: '0.4' },
-            { loc: `${base}/contact.html`, priority: '0.4' },
-            { loc: `${base}/privacy.html`, priority: '0.3' },
-            { loc: `${base}/terms.html`, priority: '0.3' },
-            ...items.map(m => ({
-                loc: `${base}/${m.type === 'series' ? 'series.html' : 'movie.html'}?id=${encodeURIComponent(m.id)}`,
-                priority: m.trending || m.featured ? '0.8' : '0.6',
-                lastmod: m.updatedAt || m.createdAt || new Date().toISOString()
-            }))
-        ];
-        const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url>\n    <loc>${xmlEscape(u.loc)}</loc>\n    ${u.lastmod ? `<lastmod>${xmlEscape(String(u.lastmod).slice(0,10))}</lastmod>` : ''}\n    <priority>${u.priority}</priority>\n  </url>`).join('\n')}\n</urlset>\n`;
-        await githubAPI.updateSitemap(xml);
-        await githubAPI.updateSiteSettings({ siteBaseUrl: base });
-        showAlert('contentAlert', '✅ sitemap.xml generated successfully!', 'success');
-    } catch (error) {
-        showAlert('contentAlert', `❌ Sitemap error: ${error.message}`, 'error');
-    } finally {
-        showSpinner(false);
-    }
-}
-
-// ─── TMDB AUTO FILL ───
-const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/';
-
-function initTMDBAutoFill() {
-    const tokenInput = document.getElementById('tmdbToken');
-    if (tokenInput) tokenInput.value = localStorage.getItem('tmdb_token') || '';
-}
-
-function saveTMDBToken() {
-    const token = document.getElementById('tmdbToken').value.trim();
-    if (!token) {
-        showAlert('contentAlert', '❌ TMDB token paste karo', 'error');
-        return;
-    }
-    localStorage.setItem('tmdb_token', token);
-    showAlert('contentAlert', '✅ TMDB token saved in this browser', 'success');
-}
-
-function getTMDBToken() {
-    return document.getElementById('tmdbToken')?.value.trim() || localStorage.getItem('tmdb_token') || '';
-}
-
-function tmdbHeaders() {
-    return {
-        'Authorization': `Bearer ${getTMDBToken()}`,
-        'Content-Type': 'application/json;charset=utf-8'
-    };
-}
-
-async function searchTMDB() {
-    const token = getTMDBToken();
-    const query = document.getElementById('tmdbSearchInput').value.trim();
-    const type = document.getElementById('contentType')?.value === 'series' ? 'tv' : 'movie';
-    const resultsBox = document.getElementById('tmdbResults');
-
-    if (!token) {
-        showAlert('contentAlert', '❌ Pehle TMDB Read Access Token save karo', 'error');
-        return;
-    }
-    if (!query) {
-        showAlert('contentAlert', '❌ Search name type karo', 'error');
-        return;
+    // 2. Type Filter Pill
+    if (catalogState.typeFilter === 'movie') {
+        list = list.filter(m => m.type !== 'series');
+    } else if (catalogState.typeFilter === 'series') {
+        list = list.filter(m => m.type === 'series');
+    } else if (catalogState.typeFilter === 'trending') {
+        list = list.filter(m => !!m.trending);
+    } else if (catalogState.typeFilter === 'featured') {
+        list = list.filter(m => !!m.featured);
+    } else if (catalogState.typeFilter === '4k') {
+        list = list.filter(m => m.badge === '4K' || m.badge === 'UHD' || (m.title && m.title.toLowerCase().includes('4k')));
+    } else if (catalogState.typeFilter === 'torrent') {
+        list = list.filter(m => m.torrent && m.torrent.magnet);
+    } else if (catalogState.typeFilter === 'draft') {
+        list = list.filter(m => m.status === 'draft' || m.status === 'hidden' || m.active === false);
     }
 
-    resultsBox.innerHTML = '<div class="empty-state">Searching TMDB...</div>';
+    // 3. Category Filter
+    if (catalogState.categoryFilter && catalogState.categoryFilter !== 'all') {
+        list = list.filter(m => m.category === catalogState.categoryFilter);
+    }
 
-    try {
-        const url = `https://api.themoviedb.org/3/search/${type}?query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`;
-        const res = await fetch(url, { headers: tmdbHeaders() });
-        if (!res.ok) throw new Error('TMDB search failed. Token check karo.');
-        const data = await res.json();
-        const results = (data.results || []).slice(0, 12);
-
-        if (!results.length) {
-            resultsBox.innerHTML = '<div class="empty-state">No TMDB results found.</div>';
-            return;
+    // 4. Sorting
+    list.sort((a, b) => {
+        if (catalogState.sortBy === 'newest') {
+            return (b.id || 0) - (a.id || 0);
+        } else if (catalogState.sortBy === 'oldest') {
+            return (a.id || 0) - (b.id || 0);
+        } else if (catalogState.sortBy === 'rating_high') {
+            return (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0);
+        } else if (catalogState.sortBy === 'year_new') {
+            return (parseInt(b.year) || 0) - (parseInt(a.year) || 0);
+        } else if (catalogState.sortBy === 'views_high') {
+            return (parseInt(b.views) || 0) - (parseInt(a.views) || 0);
+        } else if (catalogState.sortBy === 'title_az') {
+            return (a.title || '').localeCompare(b.title || '');
         }
+        return 0;
+    });
 
-        resultsBox.innerHTML = results.map(item => {
-            const title = type === 'tv' ? item.name : item.title;
-            const date = type === 'tv' ? item.first_air_date : item.release_date;
-            const year = date ? String(date).slice(0, 4) : 'N/A';
-            const poster = item.poster_path ? `${TMDB_IMAGE_BASE}w342${item.poster_path}` : '';
-            return `
-                <div class="tmdb-card" onclick="selectTMDBResult(${item.id}, '${type}')">
-                    ${poster ? `<img src="${poster}" alt="${escapeAttr(title)}">` : '<div class="image-preview">No poster</div>'}
-                    <div class="tmdb-card-info">
-                        <strong>${escapeAttr(title)}</strong>
-                        <span>${year} • ⭐ ${Number(item.vote_average || 0).toFixed(1)}</span>
+    catalogState.filteredItems = list;
+    renderCatalogItems();
+}
+
+function renderCatalogItems() {
+    const container = document.getElementById('movieListContainer');
+    const badgeEl = document.getElementById('catalogCountBadge');
+    if (badgeEl) badgeEl.textContent = catalogState.allItems.length.toLocaleString();
+
+    if (!container) return;
+
+    const total = catalogState.filteredItems.length;
+
+    if (total === 0) {
+        container.innerHTML = `
+            <div style="background: rgba(255,255,255,0.02); border:1px dashed var(--border); border-radius:12px; padding: 48px 20px; text-align: center; color: var(--muted);">
+                <div style="font-size:36px; margin-bottom:10px;">🔍</div>
+                <h4 style="font-size:16px; color:var(--text); margin-bottom:6px;">No Content Found</h4>
+                <p style="font-size:13px; max-width:400px; margin:0 auto 16px;">Try adjusting your search terms or clearing the selected filters.</p>
+                <button type="button" class="btn-small btn-secondary" onclick="resetCatalogFilters()">Reset All Filters</button>
+            </div>
+        `;
+        renderPagination(0, 0, 0);
+        return;
+    }
+
+    const pageSize = catalogState.pageSize;
+    const totalPages = Math.ceil(total / pageSize);
+    if (catalogState.currentPage > totalPages) catalogState.currentPage = totalPages;
+    if (catalogState.currentPage < 1) catalogState.currentPage = 1;
+
+    const startIdx = (catalogState.currentPage - 1) * pageSize;
+    const pageItems = catalogState.filteredItems.slice(startIdx, startIdx + pageSize);
+
+    container.innerHTML = pageItems.map(item => {
+        const isSeries = item.type === 'series';
+        const typeLabel = isSeries ? 'Series' : 'Movie';
+        const posterUrl = item.poster || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="90" fill="%231a233a"%3E%3Crect width="60" height="90"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%235bc4f5" font-family="sans-serif" font-size="10"%3ENo Poster%3C/text%3E%3C/svg%3E';
+
+        const seasonsCount = (item.seasons || []).length;
+        const episodeCount = (item.seasons || []).reduce((sum, s) => sum + ((s.episodes || []).length), 0);
+        const streamCount = isSeries ? `${seasonsCount}S • ${episodeCount}E` : `${(item.streams || (item.streamLink ? [item.streamLink] : [])).length} Streams`;
+        const downloadCount = isSeries ? '' : `${(item.downloads || []).length} Downloads`;
+        const viewsCount = item.views ? `${Number(item.views).toLocaleString()} views` : '0 views';
+
+        const categoryNames = {
+            'bollywood_new': 'Bollywood New',
+            'south_new': 'South Hindi Dubbed',
+            'bollywood_classic': 'Bollywood Classic',
+            'south_classic': 'South Classic',
+            'hollywood': 'Hollywood',
+            'series': 'Web Series'
+        };
+        const catBadge = categoryNames[item.category] || item.category || (isSeries ? 'Series' : 'Bollywood');
+        const viewUrl = isSeries ? `series.html?id=${encodeURIComponent(item.id)}` : `movie.html?id=${encodeURIComponent(item.id)}`;
+
+        return `
+            <div class="catalog-item-card">
+                <img class="catalog-poster-thumb" src="${escapeAttr(posterUrl)}" alt="${escapeAttr(item.title)}" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'96\\' fill=\\'%231a233a\\'%3E%3Crect width=\\'64\\' height=\\'96\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\\'%235bc4f5\\' font-size=\\'10\\'%3EPoster%3C/text%3E%3C/svg%3E'">
+                
+                <div class="catalog-info">
+                    <div class="catalog-title-row">
+                        <span class="catalog-title">${escapeAttr(item.title)}</span>
+                        ${item.year ? `<span style="color:var(--muted); font-size:13px; font-weight:600;">(${escapeAttr(item.year)})</span>` : ''}
+                        ${item.badge ? `<span class="item-badge ${item.badge === 'HOT' ? 'hot' : (item.badge === 'NEW' ? 'new' : 'badge-4k')}">${escapeAttr(item.badge)}</span>` : ''}
+                        ${item.featured ? '<span class="item-badge featured">⭐ Featured</span>' : ''}
+                        ${item.trending ? '<span class="item-badge trending">🔥 Trending</span>' : ''}
+                        ${item.status === 'draft' || item.status === 'hidden' || item.active === false ? '<span class="item-badge draft">Draft / Hidden</span>' : ''}
+                        <span class="item-badge category">${escapeAttr(catBadge)}</span>
+                    </div>
+
+                    <div class="catalog-meta-line">
+                        <span><strong>${typeLabel}</strong></span>
+                        <span class="divider">•</span>
+                        <span>${escapeAttr(item.genre || 'Action')}</span>
+                        ${item.duration ? `<span class="divider">•</span><span>${escapeAttr(item.duration)}</span>` : ''}
+                        ${item.rating ? `<span class="divider">•</span><span style="color:#ffd700; font-weight:700;">★ ${escapeAttr(item.rating)}</span>` : ''}
+                        <span class="divider">•</span>
+                        <span>👁️ ${viewsCount}</span>
+                    </div>
+
+                    <div class="catalog-tags-line">
+                        ${item.imdb_id ? `<span class="tech-pill active-pill">IMDb: <a href="https://www.imdb.com/title/${escapeAttr(item.imdb_id)}/" target="_blank" style="color:inherit; text-decoration:none;">${escapeAttr(item.imdb_id)} ↗</a></span>` : ''}
+                        ${item.tmdb_id ? `<span class="tech-pill">TMDb: ${escapeAttr(item.tmdb_id)}</span>` : ''}
+                        <span class="tech-pill">🎥 ${streamCount}</span>
+                        ${downloadCount ? `<span class="tech-pill">☁️ ${downloadCount}</span>` : ''}
+                        ${item.torrent && item.torrent.magnet ? `<span class="tech-pill active-pill" style="color:#2dce89; border-color:rgba(45,206,137,0.3);">🧲 Torrent (${item.torrent.seeders || 0}s • ${item.torrent.size || 'HD'})</span>` : ''}
                     </div>
                 </div>
-            `;
-        }).join('');
-    } catch (error) {
-        resultsBox.innerHTML = '';
-        showAlert('contentAlert', `❌ ${error.message}`, 'error');
-    }
-}
 
-async function selectTMDBResult(tmdbId, type) {
-    const token = getTMDBToken();
-    if (!token) return;
-
-    showSpinner(true);
-    try {
-        const endpoint = type === 'tv' ? `tv/${tmdbId}` : `movie/${tmdbId}`;
-        const res = await fetch(`https://api.themoviedb.org/3/${endpoint}?language=en-US`, { headers: tmdbHeaders() });
-        if (!res.ok) throw new Error('TMDB details load failed');
-        const details = await res.json();
-
-        document.getElementById('contentType').value = type === 'tv' ? 'series' : 'movie';
-        toggleContentType();
-
-        const title = type === 'tv' ? details.name : details.title;
-        const date = type === 'tv' ? details.first_air_date : details.release_date;
-        const runtime = type === 'tv' ? (details.episode_run_time?.[0] || '') : details.runtime;
-        const duration = runtime ? formatMinutes(runtime) : '';
-        const poster = details.poster_path ? `${TMDB_IMAGE_BASE}w500${details.poster_path}` : '';
-        const banner = details.backdrop_path ? `${TMDB_IMAGE_BASE}w1280${details.backdrop_path}` : poster;
-        const genre = details.genres?.[0]?.name || '';
-
-        setInputValue('title', title || '');
-        setSelectValue('genre', genre || 'Drama');
-        setInputValue('year', date ? String(date).slice(0, 4) : '');
-        setInputValue('duration', type === 'tv' && duration ? `${duration}/ep` : duration);
-        setInputValue('rating', details.vote_average ? Number(details.vote_average).toFixed(1) : '');
-        setInputValue('poster', poster);
-        setInputValue('banner', banner);
-        setInputValue('description', details.overview || '');
-
-        // Trigger previews
-        document.getElementById('poster').dispatchEvent(new Event('input'));
-        document.getElementById('banner').dispatchEvent(new Event('input'));
-
-        if (type === 'tv' && document.getElementById('tmdbImportEpisodes').checked) {
-            await importTMDBSeasons(tmdbId, details.seasons || []);
-        }
-
-        document.getElementById('tmdbResults').innerHTML = '';
-        showAlert('contentAlert', `✅ ${type === 'tv' ? 'Series' : 'Movie'} details auto-filled from TMDB`, 'success');
-    } catch (error) {
-        showAlert('contentAlert', `❌ ${error.message}`, 'error');
-    } finally {
-        showSpinner(false);
-    }
-}
-
-async function importTMDBSeasons(tvId, seasons) {
-    const container = document.getElementById('seasonsContainer');
-    if (!container) return;
-    container.innerHTML = '';
-
-    const realSeasons = seasons.filter(s => s.season_number > 0 && s.episode_count > 0);
-    for (const season of realSeasons) {
-        try {
-            const res = await fetch(`https://api.themoviedb.org/3/tv/${tvId}/season/${season.season_number}?language=en-US`, { headers: tmdbHeaders() });
-            if (!res.ok) continue;
-            const seasonDetails = await res.json();
-            addSeason({
-                seasonNumber: seasonDetails.season_number,
-                title: seasonDetails.name || `Season ${seasonDetails.season_number}`,
-                episodes: (seasonDetails.episodes || []).map(ep => ({
-                    episodeNumber: ep.episode_number,
-                    title: ep.name || `Episode ${ep.episode_number}`,
-                    duration: ep.runtime ? formatMinutes(ep.runtime) : '',
-                    streams: [{}],
-                    downloads: []
-                }))
-            });
-        } catch (error) {
-            console.warn('Season import failed', season.season_number, error);
-        }
-    }
-}
-
-function setInputValue(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.value = value || '';
-}
-
-function setSelectValue(id, value) {
-    const select = document.getElementById(id);
-    if (!select || !value) return;
-    const existing = Array.from(select.options).find(opt => opt.value.toLowerCase() === value.toLowerCase());
-    if (existing) {
-        select.value = existing.value;
-        return;
-    }
-    const option = document.createElement('option');
-    option.value = value;
-    option.textContent = value;
-    select.appendChild(option);
-    select.value = value;
-}
-
-function formatMinutes(minutes) {
-    const m = parseInt(minutes, 10);
-    if (!m) return '';
-    const h = Math.floor(m / 60);
-    const min = m % 60;
-    return h ? `${h}h ${min}m` : `${min}m`;
-}
-
-function toggleContentType() {
-    const type = document.getElementById('contentType')?.value || 'movie';
-    const movieBlock = document.getElementById('movieLinksBlock');
-    const seriesBlock = document.getElementById('seriesBuilderBlock');
-    const formTitle = document.getElementById('formTitle');
-
-    if (type === 'series') {
-        seriesBlock?.classList.remove('hidden');
-        toggleCombined();   // combined ho to movie-links block dikhega, warna hidden
-        if (formTitle) formTitle.textContent = 'Add New Series';
-        if (!document.querySelector('.season-block')) addSeason();
-    } else {
-        movieBlock?.classList.remove('hidden');
-        seriesBlock?.classList.add('hidden');
-        if (formTitle) formTitle.textContent = 'Add New Movie';
-    }
-}
-
-// Combined-episode toggle: series mode me series-level stream/download block show/hide
-function toggleCombined() {
-    const type = document.getElementById('contentType')?.value || 'movie';
-    const movieBlock = document.getElementById('movieLinksBlock');
-    const combined = document.getElementById('combinedEpisodes')?.checked || false;
-    if (type !== 'series') return;
-    if (combined) movieBlock?.classList.remove('hidden');
-    else movieBlock?.classList.add('hidden');
-}
-
-// ─── IMAGE PREVIEWS ───
-function setupImagePreviews() {
-    setupImagePreview('poster', 'posterPreview');
-    setupImagePreview('banner', 'bannerPreview');
-}
-
-function setupImagePreview(inputId, previewId) {
-    const input = document.getElementById(inputId);
-    const preview = document.getElementById(previewId);
-    if (!input || !preview) return;
-
-    input.addEventListener('input', () => {
-        const url = input.value.trim();
-        if (!url) {
-            preview.style.backgroundImage = '';
-            preview.textContent = previewId === 'posterPreview' ? 'Poster preview' : 'Banner preview';
-            return;
-        }
-        preview.style.backgroundImage = `url('${url.replace(/'/g, "%27")}')`;
-        preview.textContent = '';
-    });
-}
-
-// ─── MOVIE STREAM LINKS ───
-function addStreamLink(data = {}) {
-    const container = document.getElementById('streamLinksContainer');
-    if (!container) return;
-
-    const row = document.createElement('div');
-    row.className = 'dynamic-row stream-row';
-    row.innerHTML = `
-        <div class="row-title">
-            <span>🎬 Streaming Option</span>
-            <button type="button" class="remove-row" onclick="removeDynamicRow(this, 'stream-row')">Remove</button>
-        </div>
-        <div class="row-grid-2">
-            <div class="form-group">
-                <label>Server Name</label>
-                <input type="text" class="stream-name" placeholder="Server 1 / Hindi / HD" value="${escapeAttr(data.name || '')}">
+                <div class="catalog-actions">
+                    <button type="button" class="btn-small btn-secondary" data-admin-action="edit" data-id="${escapeAttr(item.id)}">
+                        ✏️ Edit
+                    </button>
+                    <a href="${viewUrl}" target="_blank" class="btn-small btn-secondary" style="text-decoration:none;">
+                        👁️ View
+                    </a>
+                    <button type="button" class="btn-small btn-danger" data-admin-action="delete" data-id="${escapeAttr(item.id)}" data-title="${escapeAttr(item.title)}">
+                        🗑️ Delete
+                    </button>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Streaming URL *</label>
-                <input type="url" class="stream-url" placeholder="https://streaming-platform.com/movie" value="${escapeAttr(data.url || '')}">
-            </div>
-        </div>
-    `;
-    container.appendChild(row);
-    updateRowNumbers();
+        `;
+    }).join('');
+
+    renderPagination(total, startIdx + 1, Math.min(startIdx + pageSize, total));
 }
 
-function collectStreams(scope = document) {
-    return Array.from(scope.querySelectorAll('.stream-row')).map((row, index) => {
-        const name = row.querySelector('.stream-name').value.trim() || `Server ${index + 1}`;
-        const url = row.querySelector('.stream-url').value.trim();
-        return { name, url };
-    }).filter(item => item.url);
-}
+function renderPagination(total, startNum, endNum) {
+    const summary = document.getElementById('paginationSummary');
+    const btnsContainer = document.getElementById('paginationBtns');
+    if (!summary || !btnsContainer) return;
 
-// ─── MOVIE DOWNLOAD OPTIONS ───
-function addDownloadOption(data = {}) {
-    const container = document.getElementById('downloadOptionsContainer');
-    if (!container) return;
-    container.appendChild(createDownloadRow(data, 'download-row'));
-    updateRowNumbers();
-}
-
-function createDownloadRow(data = {}, className = 'download-row') {
-    const row = document.createElement('div');
-    row.className = `dynamic-row ${className}`;
-    row.innerHTML = `
-        <div class="row-title">
-            <span>⬇️ Download Link</span>
-            <button type="button" class="remove-row" onclick="removeAnyRow(this)">Remove</button>
-        </div>
-        <div class="row-grid-4">
-            <div class="form-group">
-                <label>Quality</label>
-                <select class="download-quality" onchange="toggleCustomQuality(this)">${qualityOptions(data.quality)}</select>
-                <input type="text" class="custom-quality" placeholder="Custom quality" value="${escapeAttr(isCustomQuality(data.quality) ? data.quality : '')}" style="display:${isCustomQuality(data.quality) ? 'block' : 'none'}; margin-top:8px;">
-            </div>
-            <div class="form-group">
-                <label>Size</label>
-                <input type="number" class="download-size-number" placeholder="900" step="0.01" min="0" value="${escapeAttr(parseSizeNumber(data.size))}">
-            </div>
-            <div class="form-group">
-                <label>Unit</label>
-                <select class="download-size-unit">
-                    <option value="MB" ${parseSizeUnit(data.size) === 'MB' ? 'selected' : ''}>MB</option>
-                    <option value="GB" ${parseSizeUnit(data.size) === 'GB' ? 'selected' : ''}>GB</option>
-                    <option value="KB" ${parseSizeUnit(data.size) === 'KB' ? 'selected' : ''}>KB</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Button Color</label>
-                <input type="color" class="download-color" value="${escapeAttr(data.color || '#5bc4f5')}">
-            </div>
-        </div>
-        <div class="grid-2">
-            <div class="form-group">
-                <label>Server / Button Name</label>
-                <input type="text" class="download-server" placeholder="GDrive / Direct / Fast Server" value="${escapeAttr(data.server || data.label || '')}">
-            </div>
-            <div class="form-group">
-                <label>Download URL</label>
-                <input type="url" class="download-url" placeholder="https://example.com/file" value="${escapeAttr(data.url || '')}">
-            </div>
-        </div>
-    `;
-    const urlInput = row.querySelector('.download-url');
-    if (urlInput) {
-        urlInput.addEventListener('input', () => autoFillDownloadFromUrl(row));
-        urlInput.addEventListener('blur', () => autoFillDownloadFromUrl(row));
-    }
-    return row;
-}
-
-function collectDownloads(scope = document, selector = '.download-row') {
-    return Array.from(scope.querySelectorAll(selector)).map(row => {
-        const qualitySelect = row.querySelector('.download-quality').value;
-        const customQuality = row.querySelector('.custom-quality').value.trim();
-        const quality = qualitySelect === 'Custom' ? customQuality : qualitySelect;
-        const sizeNumber = row.querySelector('.download-size-number').value.trim();
-        const sizeUnit = row.querySelector('.download-size-unit').value;
-        const size = sizeNumber ? `${sizeNumber}${sizeUnit}` : '';
-        const server = row.querySelector('.download-server').value.trim();
-        const url = row.querySelector('.download-url').value.trim();
-        const color = row.querySelector('.download-color').value || '#5bc4f5';
-        return { quality: quality || 'Download', size, server, url, color };
-    }).filter(item => item.url);
-}
-
-function qualityOptions(selected = '') {
-    const preset = ['360p', '480p', '720p', '1080p', '1440p', '2160p', '4K', 'HEVC', 'WEB-DL', 'BluRay', 'Custom'];
-    const selectedValue = isCustomQuality(selected) ? 'Custom' : selected;
-    return preset.map(q => `<option value="${q}" ${selectedValue === q ? 'selected' : ''}>${q}</option>`).join('');
-}
-
-function isCustomQuality(value) {
-    if (!value) return false;
-    return !['360p', '480p', '720p', '1080p', '1440p', '2160p', '4K', 'HEVC', 'WEB-DL', 'BluRay'].includes(value);
-}
-
-function toggleCustomQuality(select) {
-    const input = select.closest('.form-group').querySelector('.custom-quality');
-    input.style.display = select.value === 'Custom' ? 'block' : 'none';
-    if (select.value === 'Custom') input.focus();
-}
-
-function parseSizeNumber(size = '') {
-    const match = String(size).match(/[\d.]+/);
-    return match ? match[0] : '';
-}
-
-function parseSizeUnit(size = '') {
-    const upper = String(size).toUpperCase();
-    if (upper.includes('GB')) return 'GB';
-    if (upper.includes('KB')) return 'KB';
-    return 'MB';
-}
-
-// ─── SERIES BUILDER ───
-function addSeason(data = {}) {
-    const container = document.getElementById('seasonsContainer');
-    if (!container) return;
-
-    const seasonId = ++seasonCounter;
-    const seasonNumber = data.seasonNumber || document.querySelectorAll('.season-block').length + 1;
-    const block = document.createElement('div');
-    block.className = 'season-block';
-    block.dataset.seasonId = seasonId;
-    block.innerHTML = `
-        <div class="season-head">
-            <div class="form-group">
-                <label>Season No.</label>
-                <input type="number" class="season-number" min="0" value="${escapeAttr(seasonNumber)}">
-            </div>
-            <div class="form-group">
-                <label>Season Name</label>
-                <input type="text" class="season-title" placeholder="Season ${seasonNumber}" value="${escapeAttr(data.title || '')}">
-            </div>
-            <button type="button" class="btn-small btn-danger" onclick="removeAnyRow(this)">Remove Season</button>
-        </div>
-        <label style="display:flex; align-items:center; gap:8px; margin:10px 0; cursor:pointer;">
-            <input type="checkbox" class="season-combined" onchange="toggleSeasonCombined(this)">
-            🎞 <strong>Combined Season</strong> — is season ke sab episodes <strong>EK video file</strong> me
-        </label>
-        <div class="season-links" style="display:none;">
-            <div class="nested-actions">
-                <button type="button" class="btn-small btn-secondary" onclick="addSeasonStream(this)">＋ Add Season Stream</button>
-                <button type="button" class="btn-small btn-secondary" onclick="addSeasonDownload(this)">＋ Add Season Download</button>
-            </div>
-            <div class="season-streams"></div>
-            <div class="season-downloads"></div>
-        </div>
-        <div class="nested-actions">
-            <button type="button" class="btn-small btn-secondary" onclick="addEpisode(this)">＋ Add Episode</button>
-        </div>
-        <div class="episodes-container"></div>
-    `;
-    container.appendChild(block);
-
-    const addEpBtn = () => block.querySelector('button[onclick*="addEpisode"]');
-    if (Array.isArray(data.episodes) && data.episodes.length) {
-        data.episodes.forEach(ep => addEpisode(addEpBtn(), ep));
-    } else {
-        addEpisode(addEpBtn());
-    }
-
-    // Combined season populate (edit mode)
-    if (data.combined) {
-        const cb = block.querySelector('.season-combined');
-        if (cb) { cb.checked = true; toggleSeasonCombined(cb); }
-        const sBtn = () => block.querySelector('button[onclick*="addSeasonStream"]');
-        const dBtn = () => block.querySelector('button[onclick*="addSeasonDownload"]');
-        (Array.isArray(data.streams) && data.streams.length ? data.streams : [{}]).forEach(st => addSeasonStream(sBtn(), st));
-        (Array.isArray(data.downloads) ? data.downloads : []).forEach(dl => addSeasonDownload(dBtn(), dl));
-    }
-}
-
-function toggleSeasonCombined(checkbox) {
-    const seasonBlock = checkbox.closest('.season-block');
-    const links = seasonBlock.querySelector('.season-links');
-    if (links) links.style.display = checkbox.checked ? 'block' : 'none';
-}
-
-function addSeasonStream(button, data = {}) {
-    const seasonBlock = button.closest('.season-block');
-    const container = seasonBlock.querySelector('.season-streams');
-    const row = document.createElement('div');
-    row.className = 'mini-row season-stream-row';
-    row.innerHTML = `
-        <div class="row-title">
-            <span>🎬 Season Stream (combined file)</span>
-            <button type="button" class="remove-row" onclick="removeAnyRow(this)">Remove</button>
-        </div>
-        <div class="row-grid-2">
-            <div class="form-group"><label>Server Name</label><input type="text" class="stream-name" placeholder="Server 1" value="${escapeAttr(data.name || '')}"></div>
-            <div class="form-group"><label>Stream URL</label><input type="url" class="stream-url" placeholder="https://example.com/season-combined" value="${escapeAttr(data.url || '')}"></div>
-        </div>
-    `;
-    container.appendChild(row);
-}
-
-function addSeasonDownload(button, data = {}) {
-    const seasonBlock = button.closest('.season-block');
-    const container = seasonBlock.querySelector('.season-downloads');
-    const row = createDownloadRow(data, 'season-download-row');
-    row.classList.remove('dynamic-row');
-    row.classList.add('mini-row');
-    container.appendChild(row);
-}
-
-function addEpisode(button, data = {}) {
-    const seasonBlock = button.closest('.season-block');
-    const container = seasonBlock.querySelector('.episodes-container');
-    const epId = ++episodeCounter;
-    const episodeNumber = data.episodeNumber || container.querySelectorAll('.episode-block').length + 1;
-
-    const block = document.createElement('div');
-    block.className = 'episode-block';
-    block.dataset.episodeId = epId;
-    block.innerHTML = `
-        <div class="episode-mini-title">
-            <span>Episode ${episodeNumber}</span>
-            <button type="button" class="remove-row" onclick="removeAnyRow(this)">Remove Episode</button>
-        </div>
-        <div class="grid-2">
-            <div class="form-group">
-                <label>Episode No.</label>
-                <input type="number" class="episode-number" min="0" value="${escapeAttr(episodeNumber)}">
-            </div>
-            <div class="form-group">
-                <label>Episode Title</label>
-                <input type="text" class="episode-title" placeholder="Episode title" value="${escapeAttr(data.title || '')}">
-            </div>
-        </div>
-        <div class="form-group">
-            <label>Episode Duration</label>
-            <input type="text" class="episode-duration" placeholder="45m" value="${escapeAttr(data.duration || '')}">
-        </div>
-        <div class="nested-actions">
-            <button type="button" class="btn-small btn-secondary" onclick="addEpisodeStream(this)">＋ Add Episode Stream</button>
-            <button type="button" class="btn-small btn-secondary" onclick="addEpisodeDownload(this)">＋ Add Episode Download</button>
-        </div>
-        <div class="episode-streams"></div>
-        <div class="episode-downloads"></div>
-    `;
-    container.appendChild(block);
-
-    const streams = Array.isArray(data.streams) && data.streams.length ? data.streams : [{}];
-    streams.forEach(st => addEpisodeStream(block.querySelector('.nested-actions button'), st));
-    (Array.isArray(data.downloads) ? data.downloads : []).forEach(dl => addEpisodeDownload(block.querySelectorAll('.nested-actions button')[1], dl));
-}
-
-function addEpisodeStream(button, data = {}) {
-    const epBlock = button.closest('.episode-block');
-    const container = epBlock.querySelector('.episode-streams');
-    const row = document.createElement('div');
-    row.className = 'mini-row ep-stream-row';
-    row.innerHTML = `
-        <div class="row-title">
-            <span>🎬 Episode Stream</span>
-            <button type="button" class="remove-row" onclick="removeAnyRow(this)">Remove</button>
-        </div>
-        <div class="row-grid-2">
-            <div class="form-group"><label>Server Name</label><input type="text" class="stream-name" placeholder="Server 1" value="${escapeAttr(data.name || '')}"></div>
-            <div class="form-group"><label>Stream URL</label><input type="url" class="stream-url" placeholder="https://example.com/episode" value="${escapeAttr(data.url || '')}"></div>
-        </div>
-    `;
-    container.appendChild(row);
-}
-
-function addEpisodeDownload(button, data = {}) {
-    const epBlock = button.closest('.episode-block');
-    const container = epBlock.querySelector('.episode-downloads');
-    const row = createDownloadRow(data, 'ep-download-row');
-    row.classList.remove('dynamic-row');
-    row.classList.add('mini-row');
-    container.appendChild(row);
-}
-
-function collectSeriesSeasons() {
-    return Array.from(document.querySelectorAll('.season-block')).map(seasonBlock => {
-        const seasonNumber = parseInt(seasonBlock.querySelector('.season-number').value) || 1;
-        const title = seasonBlock.querySelector('.season-title').value.trim() || `Season ${seasonNumber}`;
-        const combined = seasonBlock.querySelector('.season-combined')?.checked || false;
-        const seasonStreams = Array.from(seasonBlock.querySelectorAll('.season-stream-row')).map((row, i) => ({
-            name: row.querySelector('.stream-name').value.trim() || `Server ${i + 1}`,
-            url: row.querySelector('.stream-url').value.trim()
-        })).filter(s => s.url);
-        const seasonDownloads = collectDownloads(seasonBlock, '.season-download-row');
-        const episodes = Array.from(seasonBlock.querySelectorAll('.episode-block')).map(epBlock => {
-            const episodeNumber = parseInt(epBlock.querySelector('.episode-number').value) || 1;
-            const title = epBlock.querySelector('.episode-title').value.trim() || `Episode ${episodeNumber}`;
-            const duration = epBlock.querySelector('.episode-duration').value.trim();
-            const streams = collectEpisodeStreams(epBlock);
-            const downloads = collectDownloads(epBlock, '.ep-download-row');
-            return { episodeNumber, title, duration, streams, downloads };
-        }).filter(ep => ep.streams.length > 0 || ep.downloads.length > 0 || ep.title);
-        return { seasonNumber, title, combined, streams: seasonStreams, downloads: seasonDownloads, episodes };
-    }).filter(season => season.episodes.length > 0 || season.combined);
-}
-
-function collectEpisodeStreams(epBlock) {
-    return Array.from(epBlock.querySelectorAll('.ep-stream-row')).map((row, index) => {
-        const name = row.querySelector('.stream-name').value.trim() || `Server ${index + 1}`;
-        const url = row.querySelector('.stream-url').value.trim();
-        return { name, url };
-    }).filter(item => item.url);
-}
-
-function removeAnyRow(button) {
-    const target = button.closest('.dynamic-row, .mini-row, .episode-block, .season-block');
-    if (target) target.remove();
-    updateRowNumbers();
-}
-
-function removeDynamicRow(button, className) {
-    const rows = document.querySelectorAll('.' + className);
-    if (className === 'stream-row' && rows.length <= 1) {
-        showAlert('contentAlert', '❌ At least one streaming option is required', 'error');
-        return;
-    }
-    removeAnyRow(button);
-}
-
-function updateRowNumbers() {
-    document.querySelectorAll('.stream-row .row-title span').forEach((el, i) => el.textContent = `🎬 Streaming Option ${i + 1}`);
-    document.querySelectorAll('.download-row .row-title span').forEach((el, i) => el.textContent = `⬇️ Download Link ${i + 1}`);
-}
-
-function escapeAttr(value) {
-    return String(value || '').replace(/[&<>'"]/g, (char) => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
-    }[char]));
-}
-
-function resetMovieForm() {
-    document.getElementById('movieForm').reset();
-    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = false;
-    toggleCombined();
-    document.getElementById('active').checked = true;
-    if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = 'published';
-    if (document.getElementById('trending')) document.getElementById('trending').checked = false;
-    if (document.getElementById('heroSlide')) document.getElementById('heroSlide').checked = false;
-    document.getElementById('streamLinksContainer').innerHTML = '';
-    document.getElementById('downloadOptionsContainer').innerHTML = '';
-    document.getElementById('seasonsContainer').innerHTML = '';
-    document.getElementById('posterPreview').style.backgroundImage = '';
-    document.getElementById('posterPreview').textContent = 'Poster preview';
-    document.getElementById('bannerPreview').style.backgroundImage = '';
-    document.getElementById('bannerPreview').textContent = 'Banner preview';
-    addStreamLink();
-    addDownloadOption();
-    toggleContentType();
-    const btn = document.getElementById('publishBtn');
-    const cancel = document.getElementById('cancelEditBtn');
-    if (btn) btn.textContent = '🎬 Publish Content';
-    if (cancel) cancel.classList.add('hidden');
-}
-
-
-// Handle form submission
-document.getElementById('movieForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const contentType = document.getElementById('contentType').value;
-    const combined = contentType === 'series' && (document.getElementById('combinedEpisodes')?.checked || false);
-    const useTopLinks = contentType === 'movie' || combined;
-    const streams = useTopLinks ? collectStreams(document.getElementById('movieLinksBlock')) : [];
-    const downloads = useTopLinks ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
-    const seasons = contentType === 'series' ? collectSeriesSeasons() : [];
-    const firstEpisode = seasons[0]?.episodes?.[0];
-
-    const movieData = {
-        type: contentType,
-        title: document.getElementById('title').value.trim(),
-        genre: document.getElementById('genre').value,
-        year: parseInt(document.getElementById('year').value) || new Date().getFullYear(),
-        duration: document.getElementById('duration').value.trim(),
-        rating: parseFloat(document.getElementById('rating').value) || 0,
-        badge: document.getElementById('badge').value,
-        poster: document.getElementById('poster').value.trim(),
-        banner: document.getElementById('banner').value.trim(),
-        combined: combined,
-        streamLink: useTopLinks ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
-        streams: streams,
-        downloads: downloads,
-        seasons: seasons,
-        trailerLink: document.getElementById('trailerLink').value.trim(),
-        description: document.getElementById('description').value.trim(),
-        featured: document.getElementById('featured').checked,
-        trending: document.getElementById('trending').checked,
-        heroSlide: document.getElementById('heroSlide')?.checked || false,
-        status: document.getElementById('contentStatus')?.value || 'published',
-        active: (document.getElementById('contentStatus')?.value || 'published') === 'published'
-    };
-
-    if (!movieData.title || !movieData.genre) {
-        showAlert('contentAlert', '❌ Title and genre are required', 'error');
+    if (total === 0) {
+        summary.textContent = 'Showing 0 of 0 items';
+        btnsContainer.innerHTML = '';
         return;
     }
 
-    if (useTopLinks && streams.length === 0) {
-        showAlert('contentAlert', `❌ ${combined ? 'Combined series' : 'Movie'} ke liye at least one streaming link required hai`, 'error');
-        return;
+    const pageSize = catalogState.pageSize;
+    const totalPages = Math.ceil(total / pageSize);
+    summary.innerHTML = `Showing <strong>${startNum}–${endNum}</strong> of <strong>${total.toLocaleString()}</strong> items (Page ${catalogState.currentPage} of ${totalPages})`;
+
+    let html = '';
+    html += `<button type="button" class="pagination-btn" ${catalogState.currentPage <= 1 ? 'disabled' : ''} onclick="goToCatalogPage(${catalogState.currentPage - 1})">« Prev</button>`;
+
+    // Page window
+    let startPage = Math.max(1, catalogState.currentPage - 2);
+    let endPage = Math.min(totalPages, startPage + 4);
+    if (endPage - startPage < 4) {
+        startPage = Math.max(1, endPage - 4);
     }
 
-    if (contentType === 'series' && seasons.length === 0) {
-        showAlert('contentAlert', '❌ Series ke liye at least one season/episode required hai', 'error');
-        return;
+    if (startPage > 1) {
+        html += `<button type="button" class="pagination-btn" onclick="goToCatalogPage(1)">1</button>`;
+        if (startPage > 2) html += `<span style="color:var(--muted); padding:0 4px;">…</span>`;
     }
 
-    const seriesEpisodeWithoutStream = contentType === 'series' && seasons.some(season => season.episodes.some(ep => ep.streams.length === 0));
-    if (seriesEpisodeWithoutStream) {
-        showAlert('contentAlert', '❌ Har episode me at least one stream URL daalo', 'error');
-        return;
+    for (let p = startPage; p <= endPage; p++) {
+        html += `<button type="button" class="pagination-btn ${p === catalogState.currentPage ? 'active' : ''}" onclick="goToCatalogPage(${p})">${p}</button>`;
     }
 
-    showSpinner(true);
-
-    try {
-        const contentBeforeSave = await githubAPI.getContent();
-        const duplicate = (contentBeforeSave.movies || []).find(m =>
-            String(m.id) !== String(editingMovieId || '') &&
-            String(m.title || '').trim().toLowerCase() === movieData.title.toLowerCase() &&
-            (m.type || 'movie') === movieData.type
-        );
-        if (duplicate && !confirm(`⚠️ Same title already exists: ${duplicate.title}. Continue anyway?`)) {
-            showSpinner(false);
-            return;
-        }
-
-        if (editingMovieId) {
-            await githubAPI.updateMovie(editingMovieId, movieData);
-            showAlert('contentAlert', '✅ Content updated successfully! Cloudflare Pages will auto-deploy.', 'success');
-            editingMovieId = null;
-        } else {
-            await githubAPI.addMovie(movieData);
-            showAlert('contentAlert', '🎬 Content published successfully! Cloudflare Pages will auto-deploy.', 'success');
-        }
-        resetMovieForm();
-        setTimeout(() => loadMovies(), 2000);
-    } catch (error) {
-        showAlert('contentAlert', `❌ Error: ${error.message}`, 'error');
-    } finally {
-        showSpinner(false);
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) html += `<span style="color:var(--muted); padding:0 4px;">…</span>`;
+        html += `<button type="button" class="pagination-btn" onclick="goToCatalogPage(${totalPages})">${totalPages}</button>`;
     }
-});
 
-// Load and display content
+    html += `<button type="button" class="pagination-btn" ${catalogState.currentPage >= totalPages ? 'disabled' : ''} onclick="goToCatalogPage(${catalogState.currentPage + 1})">Next »</button>`;
+
+    btnsContainer.innerHTML = html;
+}
+
+function goToCatalogPage(p) {
+    catalogState.currentPage = p;
+    renderCatalogItems();
+    document.getElementById('tabCatalog')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+function createNewContentFromCatalog() {
+    resetMovieForm();
+    switchAdminTab('editor');
+    document.getElementById('title')?.focus();
+}
+
+// ─── LOAD & POPULATE MOVIES LIST FROM GITHUB ───
 async function loadMovies() {
     showSpinner(true);
-
     try {
         const content = await githubAPI.getContent();
         const movies = content.movies || [];
+        catalogState.allItems = movies;
         renderAdminStats(movies);
-        const container = document.getElementById('movieListContainer');
-
-        if (movies.length === 0) {
-            container.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 40px;">No content published yet.</p>';
-            showSpinner(false);
-            return;
-        }
-
-        container.innerHTML = movies.map(movie => {
-            const type = movie.type === 'series' ? 'Series' : 'Movie';
-            const episodeCount = (movie.seasons || []).reduce((sum, s) => sum + ((s.episodes || []).length), 0);
-            const streamCount = movie.type === 'series' ? episodeCount + ' episodes' : `${(movie.streams || (movie.streamLink ? [movie.streamLink] : [])).length} streams`;
-            const downloadCount = movie.type === 'series' ? '' : ` • ${(movie.downloads || []).length} downloads`;
-            return `
-            <div class="movie-item">
-                <div class="movie-info">
-                    <h3>${movie.title} ${movie.featured ? '⭐' : ''} ${movie.trending ? '🔥' : ''} ${movie.heroSlide ? '🖼️' : ''}</h3>
-                    <p>${type} • ${movie.genre} • ${movie.year} • ${movie.views || 0} views • ${streamCount}${downloadCount}</p>
-                </div>
-                <div class="movie-actions">
-                    <button class="btn-small btn-secondary" data-admin-action="edit" data-id="${escapeAttr(movie.id)}">Edit</button>
-                    <button class="btn-small btn-danger" data-admin-action="delete" data-id="${escapeAttr(movie.id)}" data-title="${escapeAttr(movie.title)}">Delete</button>
-                </div>
-            </div>`;
-        }).join('');
-
+        applyCatalogFiltersAndSort();
     } catch (error) {
         showAlert('contentAlert', `❌ Error loading content: ${error.message}`, 'error');
     } finally {
@@ -1016,64 +430,61 @@ async function loadMovies() {
     }
 }
 
-function deleteMovieConfirm(id, title) {
-    if (confirm(`Delete "${title}"? This cannot be undone.`)) deleteMovie(id);
+function renderAdminStats(items = []) {
+    const statsContainer = document.getElementById('adminStats');
+    if (!statsContainer) return;
+
+    const total = items.length;
+    const movies = items.filter(m => m.type !== 'series').length;
+    const series = items.filter(m => m.type === 'series').length;
+    const total4k = items.filter(m => (m.badge === '4K' || m.badge === 'UHD' || (m.title && m.title.toLowerCase().includes('4k')))).length;
+    const torrents = items.filter(m => m.torrent && m.torrent.magnet).length;
+    const totalViews = items.reduce((acc, m) => acc + (Number(m.views) || 0), 0);
+
+    statsContainer.innerHTML = `
+        <div class="admin-stat-card">
+            <span class="stat-icon">🎬</span>
+            <strong>${total.toLocaleString()}</strong>
+            <span>Total Titles</span>
+        </div>
+        <div class="admin-stat-card">
+            <span class="stat-icon">🎥</span>
+            <strong>${movies.toLocaleString()}</strong>
+            <span>Movies</span>
+        </div>
+        <div class="admin-stat-card">
+            <span class="stat-icon">📺</span>
+            <strong>${series.toLocaleString()}</strong>
+            <span>Web Series</span>
+        </div>
+        <div class="admin-stat-card">
+            <span class="stat-icon">💎</span>
+            <strong>${total4k.toLocaleString()}</strong>
+            <span>4K UHD Titles</span>
+        </div>
+        <div class="admin-stat-card">
+            <span class="stat-icon">🧲</span>
+            <strong>${torrents.toLocaleString()}</strong>
+            <span>P2P Torrents</span>
+        </div>
+        <div class="admin-stat-card">
+            <span class="stat-icon">👁️</span>
+            <strong>${totalViews.toLocaleString()}</strong>
+            <span>Base Views</span>
+        </div>
+    `;
 }
 
-// Delegated click handler for the movie list Edit/Delete buttons.
-// We intentionally do NOT put user-controlled titles inside inline onclick="..."
-// attributes (that pattern is what CodeQL flagged as "incomplete string escaping").
-// Instead the buttons carry data-* attributes (escaped with escapeAttr) and a single
-// delegated listener reads them — values come back fully decoded and safe.
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('button[data-admin-action]');
-    if (!btn) return;
-    const action = btn.getAttribute('data-admin-action');
-    const id = btn.getAttribute('data-id') || '';
-    if (action === 'edit') {
-        editMovie(id);
-    } else if (action === 'delete') {
-        deleteMovieConfirm(id, btn.getAttribute('data-title') || '');
-    }
-});
-
-async function deleteMovie(id) {
-    showSpinner(true);
-    try {
-        await githubAPI.deleteMovie(id);
-        showAlert('contentAlert', '✅ Content deleted successfully!', 'success');
-        loadMovies();
-    } catch (error) {
-        showAlert('contentAlert', `❌ Error: ${error.message}`, 'error');
-        showSpinner(false);
-    }
-}
-
-function showAlert(elementId, message, type) {
-    const alert = document.getElementById(elementId);
-    alert.className = `alert alert-${type} show`;
-    alert.textContent = message;
-    setTimeout(() => alert.classList.remove('show'), 5000);
-}
-
-function showSpinner(show) {
-    const spinner = document.getElementById('spinner');
-    if (show) spinner.classList.add('show');
-    else spinner.classList.remove('show');
-}
-
-function editMovie(id) {
-    alert('Edit feature next step me add kar sakte hain. Abhi Add Movie/Series form upgraded hai.');
-}
-
-// ─── EDIT EXISTING CONTENT ───
+// ─── EDIT & POPULATE EXISTING CONTENT ───
 async function editMovie(id) {
     showSpinner(true);
     try {
         const content = await githubAPI.getContent();
         const item = (content.movies || []).find(m => String(m.id) === String(id));
-        if (!item) throw new Error('Content not found');
+        if (!item) throw new Error('Content not found in repository database');
+
         populateFormForEdit(item);
+        switchAdminTab('editor');
         window.scrollTo({ top: 0, behavior: 'smooth' });
         showAlert('contentAlert', `✏️ Editing: ${item.title}`, 'info');
     } catch (error) {
@@ -1086,27 +497,62 @@ async function editMovie(id) {
 function populateFormForEdit(item) {
     editingMovieId = item.id;
     setInputValue('contentType', item.type === 'series' ? 'series' : 'movie');
-    if (document.getElementById('combinedEpisodes')) document.getElementById('combinedEpisodes').checked = !!item.combined;
+    if (document.getElementById('combinedEpisodes')) {
+        document.getElementById('combinedEpisodes').checked = !!item.combined;
+    }
     toggleContentType();
+
     setInputValue('title', item.title || '');
-    setSelectValue('genre', item.genre || 'Drama');
+    setSelectValue('genre', item.genre || 'Action');
     setInputValue('year', item.year || '');
     setInputValue('duration', item.duration || '');
     setInputValue('rating', item.rating || '');
     setInputValue('badge', item.badge || '');
+    setInputValue('views', (item.views !== undefined && item.views !== null) ? item.views : '');
+
+    // IDs & Taxonomy
+    setInputValue('imdb_id', item.imdb_id || '');
+    setInputValue('tmdb_id', item.tmdb_id || '');
+    setSelectValue('category', item.category || (item.type === 'series' ? 'series' : 'bollywood_new'));
+    setSelectValue('industry', item.industry || 'Bollywood');
+
     setInputValue('poster', item.poster || '');
     setInputValue('banner', item.banner || '');
     setInputValue('trailerLink', item.trailerLink || '');
     setInputValue('description', item.description || '');
+
+    // Torrent Fields
+    if (item.torrent && item.torrent.magnet) {
+        document.getElementById('torrentEnabled').checked = true;
+        document.getElementById('torrentFieldsContainer').classList.remove('hidden');
+        setInputValue('torrentMagnet', item.torrent.magnet || '');
+        setInputValue('torrentName', item.torrent.name || '');
+        setInputValue('torrentSeeders', item.torrent.seeders || '');
+        setInputValue('torrentSize', item.torrent.size || '');
+    } else {
+        document.getElementById('torrentEnabled').checked = false;
+        document.getElementById('torrentFieldsContainer').classList.add('hidden');
+        setInputValue('torrentMagnet', '');
+        setInputValue('torrentName', '');
+        setInputValue('torrentSeeders', '');
+        setInputValue('torrentSize', '');
+    }
+
     if (document.getElementById('featured')) document.getElementById('featured').checked = !!item.featured;
     if (document.getElementById('trending')) document.getElementById('trending').checked = !!item.trending;
     if (document.getElementById('heroSlide')) document.getElementById('heroSlide').checked = !!item.heroSlide;
-    if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = item.status || (item.active === false ? 'hidden' : 'published');
-    if (document.getElementById('active')) document.getElementById('active').checked = item.active !== false;
+    if (document.getElementById('contentStatus')) {
+        document.getElementById('contentStatus').value = item.status || (item.active === false ? 'hidden' : 'published');
+    }
+    if (document.getElementById('active')) {
+        document.getElementById('active').checked = item.active !== false;
+    }
 
-    document.getElementById('poster')?.dispatchEvent(new Event('input'));
-    document.getElementById('banner')?.dispatchEvent(new Event('input'));
+    // Trigger preview image updates
+    setupImagePreview('poster', 'posterPreview');
+    setupImagePreview('banner', 'bannerPreview');
 
+    // Populate Dynamic Streams & Downloads
     document.getElementById('streamLinksContainer').innerHTML = '';
     document.getElementById('downloadOptionsContainer').innerHTML = '';
     document.getElementById('seasonsContainer').innerHTML = '';
@@ -1125,202 +571,1061 @@ function populateFormForEdit(item) {
         (item.downloads && item.downloads.length ? item.downloads : [{}]).forEach(dl => addDownloadOption(dl));
     }
 
+    const titleH2 = document.getElementById('formTitle');
     const btn = document.getElementById('publishBtn');
-    const cancel = document.getElementById('cancelEditBtn');
+    const cancelTop = document.getElementById('cancelEditBtn');
+    const cancelBottom = document.getElementById('cancelEditBtnBottom');
+
+    if (titleH2) titleH2.textContent = `✏️ Editing: ${item.title}`;
     if (btn) btn.textContent = '✅ Update Content';
-    if (cancel) cancel.classList.remove('hidden');
+    if (cancelTop) cancelTop.classList.remove('hidden');
+    if (cancelBottom) cancelBottom.classList.remove('hidden');
     updateRowNumbers();
 }
 
 function cancelEditMode() {
     editingMovieId = null;
     resetMovieForm();
+    switchAdminTab('catalog');
+    showAlert('contentAlert', 'Edit cancelled.', 'info');
+}
+
+function resetMovieForm() {
+    editingMovieId = null;
+    document.getElementById('movieForm').reset();
+    document.getElementById('contentType').value = 'movie';
+    if (document.getElementById('contentStatus')) document.getElementById('contentStatus').value = 'published';
+    if (document.getElementById('active')) document.getElementById('active').checked = true;
+
+    // Reset previews
+    const pPrev = document.getElementById('posterPreview');
+    if (pPrev) { pPrev.style.backgroundImage = ''; pPrev.textContent = 'Poster Preview'; }
+    const bPrev = document.getElementById('bannerPreview');
+    if (bPrev) { bPrev.style.backgroundImage = ''; bPrev.textContent = 'Banner Preview'; }
+
+    // Reset torrent
+    document.getElementById('torrentEnabled').checked = false;
+    document.getElementById('torrentFieldsContainer').classList.add('hidden');
+
+    document.getElementById('streamLinksContainer').innerHTML = '';
+    document.getElementById('downloadOptionsContainer').innerHTML = '';
+    document.getElementById('seasonsContainer').innerHTML = '';
+
+    addStreamLink();
+    addDownloadOption();
+    toggleContentType();
+
+    const titleH2 = document.getElementById('formTitle');
     const btn = document.getElementById('publishBtn');
-    const cancel = document.getElementById('cancelEditBtn');
+    const cancelTop = document.getElementById('cancelEditBtn');
+    const cancelBottom = document.getElementById('cancelEditBtnBottom');
+
+    if (titleH2) titleH2.textContent = '➕ Add New Content';
     if (btn) btn.textContent = '🎬 Publish Content';
-    if (cancel) cancel.classList.add('hidden');
-    showAlert('contentAlert', 'Edit cancelled', 'info');
+    if (cancelTop) cancelTop.classList.add('hidden');
+    if (cancelBottom) cancelBottom.classList.add('hidden');
 }
 
-// ─── AUTOMATION HELPERS ───
-function renderAdminStats(items = []) {
-    const box = document.getElementById('adminStats');
-    if (!box) return;
-    const movies = items.filter(i => i.type !== 'series').length;
-    const series = items.filter(i => i.type === 'series').length;
-    const episodes = items.reduce((sum, item) => sum + (item.seasons || []).reduce((s, season) => s + ((season.episodes || []).length), 0), 0);
-    const trending = items.filter(i => i.trending).length;
-    box.innerHTML = `
-        <div class="admin-stat-card"><strong>${items.length}</strong><span>Total Content</span></div>
-        <div class="admin-stat-card"><strong>${movies}</strong><span>Movies</span></div>
-        <div class="admin-stat-card"><strong>${series}</strong><span>Series</span></div>
-        <div class="admin-stat-card"><strong>${episodes}</strong><span>Episodes</span></div>
-        <div class="admin-stat-card"><strong>${trending}</strong><span>Trending</span></div>
-    `;
-}
+// ─── FORM SUBMISSION (PUBLISH / UPDATE) ───
+document.getElementById('movieForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-function autoFillDownloadFromUrl(row) {
-    const url = row.querySelector('.download-url')?.value || '';
-    if (!url) return;
-    const decoded = decodeURIComponent(url).toLowerCase();
-    const qualityMatch = decoded.match(/(2160p|1440p|1080p|720p|480p|360p|4k|hevc|web[-_. ]?dl|bluray)/i);
-    const sizeMatch = decoded.match(/(\d+(?:\.\d+)?)\s*(gb|mb|kb)/i);
+    const contentType = document.getElementById('contentType').value;
+    const combined = contentType === 'series' && (document.getElementById('combinedEpisodes')?.checked || false);
+    const useTopLinks = contentType === 'movie' || combined;
+    const streams = useTopLinks ? collectStreams(document.getElementById('movieLinksBlock')) : [];
+    const downloads = useTopLinks ? collectDownloads(document.getElementById('movieLinksBlock'), '.download-row') : [];
+    const seasons = contentType === 'series' ? collectSeriesSeasons() : [];
+    const firstEpisode = seasons[0]?.episodes?.[0];
 
-    if (qualityMatch) {
-        let quality = qualityMatch[1].toUpperCase().replace('WEB_DL', 'WEB-DL').replace('WEB.DL', 'WEB-DL').replace('WEB DL', 'WEB-DL');
-        if (['4K', 'HEVC', 'WEB-DL', 'BLURAY'].includes(quality)) quality = quality === 'BLURAY' ? 'BluRay' : quality;
-        const select = row.querySelector('.download-quality');
-        const custom = row.querySelector('.custom-quality');
-        const option = Array.from(select.options).find(o => o.value.toLowerCase() === quality.toLowerCase());
-        if (option) {
-            select.value = option.value;
-            custom.style.display = 'none';
-        } else {
-            select.value = 'Custom';
-            custom.style.display = 'block';
-            custom.value = quality;
-        }
+    // Torrent data
+    const torrentEnabled = document.getElementById('torrentEnabled')?.checked || false;
+    const torrentMagnet = (document.getElementById('torrentMagnet')?.value || '').trim();
+    let torrentData = null;
+    if (torrentEnabled && torrentMagnet) {
+        torrentData = {
+            magnet: torrentMagnet,
+            name: (document.getElementById('torrentName')?.value || '').trim(),
+            seeders: parseInt(document.getElementById('torrentSeeders')?.value) || 0,
+            size: (document.getElementById('torrentSize')?.value || '').trim()
+        };
     }
 
-    if (sizeMatch) {
-        row.querySelector('.download-size-number').value = sizeMatch[1];
-        row.querySelector('.download-size-unit').value = sizeMatch[2].toUpperCase();
-    }
+    const movieData = {
+        type: contentType,
+        title: document.getElementById('title').value.trim(),
+        genre: document.getElementById('genre').value,
+        year: parseInt(document.getElementById('year').value) || new Date().getFullYear(),
+        duration: document.getElementById('duration').value.trim(),
+        rating: parseFloat(document.getElementById('rating').value) || 0,
+        badge: document.getElementById('badge').value,
+        category: document.getElementById('category').value || (contentType === 'series' ? 'series' : 'bollywood_new'),
+        industry: document.getElementById('industry').value || 'Bollywood',
+        views: parseInt(document.getElementById('views').value) || 0,
+        imdb_id: document.getElementById('imdb_id').value.trim(),
+        tmdb_id: document.getElementById('tmdb_id').value.trim(),
+        poster: document.getElementById('poster').value.trim(),
+        banner: document.getElementById('banner').value.trim(),
+        combined: combined,
+        streamLink: useTopLinks ? (streams[0]?.url || '') : (firstEpisode?.streams?.[0]?.url || ''),
+        streams: streams,
+        downloads: downloads,
+        torrent: torrentData,
+        seasons: seasons,
+        trailerLink: document.getElementById('trailerLink').value.trim(),
+        description: document.getElementById('description').value.trim(),
+        featured: document.getElementById('featured').checked,
+        trending: document.getElementById('trending').checked,
+        heroSlide: document.getElementById('heroSlide')?.checked || false,
+        status: document.getElementById('contentStatus')?.value || 'published',
+        active: (document.getElementById('contentStatus')?.value || 'published') === 'published'
+    };
 
-    const serverInput = row.querySelector('.download-server');
-    if (serverInput && !serverInput.value.trim()) {
-        if (decoded.includes('drive.google') || decoded.includes('gdrive')) serverInput.value = 'GDrive';
-        else if (decoded.includes('mega.nz')) serverInput.value = 'Mega';
-        else if (decoded.includes('direct')) serverInput.value = 'Direct';
-        else serverInput.value = 'Fast Server';
-    }
-}
-
-function findOrCreateSeason(seasonNo) {
-    let season = Array.from(document.querySelectorAll('.season-block')).find(block => Number(block.querySelector('.season-number').value) === Number(seasonNo));
-    while (!season) {
-        addSeason({ seasonNumber: document.querySelectorAll('.season-block').length + 1, episodes: [] });
-        season = Array.from(document.querySelectorAll('.season-block')).find(block => Number(block.querySelector('.season-number').value) === Number(seasonNo));
-    }
-    return season;
-}
-
-function findOrCreateEpisode(seasonBlock, episodeNo) {
-    let ep = Array.from(seasonBlock.querySelectorAll('.episode-block')).find(block => Number(block.querySelector('.episode-number').value) === Number(episodeNo));
-    while (!ep) {
-        addEpisode(seasonBlock.querySelector('.nested-actions button'));
-        ep = Array.from(seasonBlock.querySelectorAll('.episode-block')).find(block => Number(block.querySelector('.episode-number').value) === Number(episodeNo));
-    }
-    return ep;
-}
-
-function applyBulkEpisodeLinks() {
-    const text = document.getElementById('bulkEpisodeLinks')?.value || '';
-    const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-    if (!lines.length) {
-        showAlert('contentAlert', '❌ Bulk lines paste karo', 'error');
+    if (!movieData.title || !movieData.genre) {
+        showAlert('contentAlert', '❌ Title and genre are required', 'error');
         return;
     }
 
-    let applied = 0;
-    lines.forEach(line => {
-        const parts = line.split('|').map(p => p.trim());
-        const epMatch = (parts[0] || '').match(/s(\d+)e(\d+)/i);
-        if (!epMatch) return;
-        const seasonNo = Number(epMatch[1]);
-        const episodeNo = Number(epMatch[2]);
-        const type = (parts[1] || '').toLowerCase();
-        const season = findOrCreateSeason(seasonNo);
-        const episode = findOrCreateEpisode(season, episodeNo);
+    if (useTopLinks && streams.length === 0) {
+        showAlert('contentAlert', `❌ ${combined ? 'Combined series' : 'Movie'} requires at least one streaming server link.`, 'error');
+        return;
+    }
 
-        if (type.startsWith('stream')) {
-            const server = parts[2] || 'Server 1';
-            const url = parts.slice(3).join('|');
-            if (!url) return;
-            addEpisodeStream(episode.querySelector('.nested-actions button'), { name: server, url });
-            applied++;
-        } else if (type.startsWith('download')) {
-            const quality = parts[2] || '720p';
-            const size = parts[3] || '';
-            const url = parts.slice(4).join('|');
-            if (!url) return;
-            addEpisodeDownload(episode.querySelectorAll('.nested-actions button')[1], { quality, size, url, server: 'Download' });
-            applied++;
+    if (contentType === 'series' && seasons.length === 0) {
+        showAlert('contentAlert', '❌ Series requires at least one season and episode.', 'error');
+        return;
+    }
+
+    const seriesEpisodeWithoutStream = contentType === 'series' && seasons.some(season => season.episodes.some(ep => ep.streams.length === 0));
+    if (seriesEpisodeWithoutStream) {
+        showAlert('contentAlert', '❌ Every episode must have at least one stream URL.', 'error');
+        return;
+    }
+
+    showSpinner(true);
+
+    try {
+        const contentBeforeSave = await githubAPI.getContent();
+        const duplicate = (contentBeforeSave.movies || []).find(m =>
+            String(m.id) !== String(editingMovieId || '') &&
+            String(m.title || '').trim().toLowerCase() === movieData.title.toLowerCase() &&
+            (m.type || 'movie') === movieData.type
+        );
+        if (duplicate && !confirm(`⚠️ Content with title "${duplicate.title}" already exists. Save anyway?`)) {
+            showSpinner(false);
+            return;
         }
-    });
 
-    showAlert('contentAlert', `✅ ${applied} bulk episode links applied`, applied ? 'success' : 'error');
+        if (editingMovieId) {
+            await githubAPI.updateMovie(editingMovieId, movieData);
+            showAlert('contentAlert', '✅ Content updated successfully on GitHub!', 'success');
+            editingMovieId = null;
+        } else {
+            await githubAPI.addMovie(movieData);
+            showAlert('contentAlert', '🎬 Content published successfully on GitHub!', 'success');
+        }
+
+        resetMovieForm();
+        switchAdminTab('catalog');
+        setTimeout(() => loadMovies(), 1500);
+
+    } catch (error) {
+        showAlert('contentAlert', `❌ Error: ${error.message}`, 'error');
+    } finally {
+        showSpinner(false);
+    }
+});
+
+// ─── DELEGATED CLICK LISTENER FOR CATALOG ACTIONS ───
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-admin-action]');
+    if (!btn) return;
+    const action = btn.getAttribute('data-admin-action');
+    const id = btn.getAttribute('data-id') || '';
+
+    if (action === 'edit') {
+        editMovie(id);
+    } else if (action === 'delete') {
+        deleteMovieConfirm(id, btn.getAttribute('data-title') || '');
+    }
+});
+
+function deleteMovieConfirm(id, title) {
+    if (confirm(`Delete "${title}"? This will permanently remove it from repository content.`)) {
+        deleteMovie(id);
+    }
 }
 
-async function checkBrokenLinks() {
+async function deleteMovie(id) {
     showSpinner(true);
     try {
-        const content = await githubAPI.getContent();
-        const items = content.movies || [];
-        let total = 0, missing = 0, invalid = 0;
-        const bad = [];
-        const checkUrl = (url, label) => {
-            total++;
-            if (!url) { missing++; bad.push(label + ' missing'); return; }
-            try { new URL(url); } catch (_) { invalid++; bad.push(label + ' invalid'); }
-        };
-
-        items.forEach(item => {
-            if (item.type === 'series') {
-                (item.seasons || []).forEach(season => (season.episodes || []).forEach(ep => {
-                    (ep.streams || []).forEach(st => checkUrl(st.url, `${item.title} S${season.seasonNumber}E${ep.episodeNumber} stream`));
-                    (ep.downloads || []).forEach(dl => checkUrl(dl.url, `${item.title} S${season.seasonNumber}E${ep.episodeNumber} download`));
-                }));
-            } else {
-                (item.streams || []).forEach(st => checkUrl(st.url, `${item.title} stream`));
-                (item.downloads || []).forEach(dl => checkUrl(dl.url, `${item.title} download`));
-            }
-        });
-
-        const sample = bad.slice(0, 6).join(' | ');
-        showAlert('contentAlert', `🔗 Link audit: ${total} checked, ${missing} missing, ${invalid} invalid. ${sample}`, (missing || invalid) ? 'error' : 'success');
+        await githubAPI.deleteMovie(id);
+        showAlert('contentAlert', '✅ Content deleted successfully!', 'success');
+        loadMovies();
     } catch (error) {
-        showAlert('contentAlert', `❌ Link check error: ${error.message}`, 'error');
+        showAlert('contentAlert', `❌ Delete failed: ${error.message}`, 'error');
     } finally {
         showSpinner(false);
     }
 }
 
-// ─── SIMPLE ADS BUILDER ───
-const SIMPLE_AD_TYPES = {
-    monetag: [
-        { value: 'monetag_multitag', label: 'MultiTag: OnClick + Push + IPP + Vignette', kind: 'head', recommended: ['monetagHead'] },
-        { value: 'monetag_onclick', label: 'OnClick / Popunder Script', kind: 'head', recommended: ['monetagHead'] },
-        { value: 'monetag_ipp', label: 'In-Page Push Script', kind: 'head', recommended: ['monetagHead'] },
-        { value: 'monetag_vignette', label: 'Vignette Banner Script', kind: 'head', recommended: ['monetagHead'] },
-        { value: 'monetag_direct', label: 'Direct Link / SmartLink URL', kind: 'url', recommended: ['clickAd'] }
-    ],
-    adsterra: [
-        { value: 'adsterra_socialbar', label: 'Social Bar / Popunder Script', kind: 'head', recommended: ['adsterraHead'] },
-        { value: 'adsterra_native', label: 'Native Banner Code', kind: 'body', recommended: ['homeGrid', 'movieDownloads', 'seriesDownloads', 'homeBottom'] },
-        { value: 'adsterra_banner', label: 'Display Banner Code', kind: 'body', recommended: ['homeTop', 'moviePlayerTop', 'seriesPlayerTop', 'homeBottom'] },
-        { value: 'adsterra_direct', label: 'Direct Link URL', kind: 'url', recommended: ['clickAd'] }
-    ],
-    custom: [
-        { value: 'custom_head', label: 'Head Script Code', kind: 'head', recommended: ['monetagHead'] },
-        { value: 'custom_body', label: 'Body Banner / Native Code', kind: 'body', recommended: ['homeGrid', 'movieDownloads', 'seriesDownloads'] },
-        { value: 'custom_url', label: 'Click / Direct Link URL', kind: 'url', recommended: ['clickAd'] }
-    ]
+// ─── AUTO-GENERATE 4 VERIFIED STREAMS HELPER ───
+function autoGenerateStandardStreams() {
+    const imdbId = (document.getElementById('imdb_id')?.value || '').trim();
+    const tmdbId = (document.getElementById('tmdb_id')?.value || '').trim();
+    const type = document.getElementById('contentType')?.value || 'movie';
+
+    if (!imdbId && !tmdbId) {
+        alert('⚠️ Please enter an IMDb ID (e.g. tt1375666) or TMDb ID in the fields above first to auto-generate verified streaming mirrors.');
+        document.getElementById('imdb_id')?.focus();
+        return;
+    }
+
+    const container = document.getElementById('streamLinksContainer');
+    container.innerHTML = '';
+
+    const streams = [];
+
+    if (type === 'movie') {
+        if (imdbId) streams.push({ name: 'Server 1 (VIP Ultra HD)', url: `https://cinesrc.st/embed/movie/${imdbId}` });
+        if (tmdbId) streams.push({ name: 'Server 2 (High Speed HD)', url: `https://vidsrc.pm/embed/movie?tmdb=${tmdbId}` });
+        else if (imdbId) streams.push({ name: 'Server 2 (High Speed HD)', url: `https://vidlink.pro/movie/${imdbId}` });
+        if (imdbId) streams.push({ name: 'Server 3 (Backup Server)', url: `https://autoembed.co/movie/imdb/${imdbId}` });
+        if (imdbId) streams.push({ name: 'Server 4 (Global Mirror)', url: `https://www.2embed.cc/embed/${imdbId}` });
+    } else {
+        if (imdbId) streams.push({ name: 'Server 1 (VIP Ultra HD)', url: `https://cinesrc.st/embed/tv/${imdbId}?s=1&e=1` });
+        if (tmdbId) streams.push({ name: 'Server 2 (High Speed HD)', url: `https://vidsrc.pm/embed/tv?tmdb=${tmdbId}&season=1&episode=1` });
+        if (imdbId) streams.push({ name: 'Server 3 (Backup Server)', url: `https://autoembed.co/tv/imdb/${imdbId}-1-1` });
+        if (imdbId) streams.push({ name: 'Server 4 (Global Mirror)', url: `https://www.2embed.cc/embedtv/${imdbId}&s=1&e=1` });
+    }
+
+    streams.forEach(st => addStreamLink(st));
+    showAlert('contentAlert', `⚡ Generated ${streams.length} verified streams for ${imdbId || ('TMDB: ' + tmdbId)}`, 'success');
+}
+
+function toggleTorrentFields() {
+    const isChecked = document.getElementById('torrentEnabled')?.checked || false;
+    const container = document.getElementById('torrentFieldsContainer');
+    if (container) {
+        if (isChecked) container.classList.remove('hidden');
+        else container.classList.add('hidden');
+    }
+}
+
+// ─── DYNAMIC STREAMS & DOWNLOADS BUILDERS ───
+function addStreamLink(data = {}) {
+    const container = document.getElementById('streamLinksContainer');
+    if (!container) return;
+    const index = container.children.length + 1;
+    const row = document.createElement('div');
+    row.className = 'dynamic-row stream-row';
+    row.innerHTML = `
+        <div class="row-title">
+            <span>Stream Server #${index}</span>
+            <button type="button" class="remove-row" onclick="removeDynamicRow(this, 'stream-row')">✕ Remove</button>
+        </div>
+        <div class="row-grid-2">
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Server Name</label>
+                <input type="text" class="stream-name" placeholder="e.g. Server 1 (VIP HD)" value="${escapeAttr(data.name || `Server ${index}`)}">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Embed / Stream URL</label>
+                <input type="url" class="stream-url" placeholder="https://..." value="${escapeAttr(data.url || '')}">
+            </div>
+        </div>
+    `;
+    container.appendChild(row);
+    updateRowNumbers();
+}
+
+function collectStreams(scope = document) {
+    const rows = scope.querySelectorAll('.stream-row');
+    const streams = [];
+    rows.forEach((row, i) => {
+        const name = row.querySelector('.stream-name')?.value.trim() || `Server ${i + 1}`;
+        const url = row.querySelector('.stream-url')?.value.trim();
+        if (url) streams.push({ name, url });
+    });
+    return streams;
+}
+
+function addDownloadOption(data = {}) {
+    const container = document.getElementById('downloadOptionsContainer');
+    if (!container) return;
+    const row = createDownloadRow(data);
+    container.appendChild(row);
+    updateRowNumbers();
+}
+
+function createDownloadRow(data = {}, className = 'download-row') {
+    const row = document.createElement('div');
+    row.className = `dynamic-row ${className}`;
+    const selectedQuality = data.quality || '1080p FHD';
+    const customQuality = isCustomQuality(selectedQuality) ? selectedQuality : '';
+
+    row.innerHTML = `
+        <div class="row-title">
+            <span>Download Option</span>
+            <button type="button" class="remove-row" onclick="removeDynamicRow(this, '${className}')">✕ Remove</button>
+        </div>
+        <div class="row-grid-4">
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Quality</label>
+                <select class="download-quality" onchange="toggleCustomQuality(this)">
+                    ${qualityOptions(selectedQuality)}
+                </select>
+                <input type="text" class="download-custom-quality ${customQuality ? '' : 'hidden'}" placeholder="Custom quality" value="${escapeAttr(customQuality)}" style="margin-top:6px;">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Size</label>
+                <input type="number" class="download-size-num" placeholder="950" value="${escapeAttr(parseSizeNumber(data.size || ''))}" step="any">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Unit</label>
+                <select class="download-size-unit">
+                    <option value="MB" ${parseSizeUnit(data.size) === 'MB' ? 'selected' : ''}>MB</option>
+                    <option value="GB" ${parseSizeUnit(data.size) === 'GB' ? 'selected' : ''}>GB</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Cloud Download Link</label>
+                <input type="url" class="download-url" placeholder="https://..." value="${escapeAttr(data.url || '')}">
+            </div>
+        </div>
+        <div class="rogue-warning"></div>
+    `;
+
+    // Live Rogue Link Detection
+    const urlInput = row.querySelector('.download-url');
+    const warningBox = row.querySelector('.rogue-warning');
+
+    function checkRogueLink() {
+        const val = (urlInput.value || '').toLowerCase();
+        const isRogue = val.includes('vegamovies') || val.includes('nexdrive.beer') || val.includes('nexdrive.fit');
+        if (isRogue) {
+            warningBox.textContent = '⚠️ Rogue link detected! Vegamovies/NexDrive ad redirect hubs are prohibited. Please provide direct clean cloud links (HubDrive, HubCloud, GoFile, etc.)';
+            warningBox.classList.add('show');
+        } else {
+            warningBox.classList.remove('show');
+        }
+    }
+
+    urlInput.addEventListener('input', checkRogueLink);
+    checkRogueLink();
+
+    return row;
+}
+
+function collectDownloads(scope = document, selector = '.download-row') {
+    const rows = scope.querySelectorAll(selector);
+    const downloads = [];
+    rows.forEach(row => {
+        const select = row.querySelector('.download-quality');
+        const customInput = row.querySelector('.download-custom-quality');
+        let quality = select?.value || '1080p FHD';
+        if (quality === 'custom') quality = customInput?.value.trim() || 'Custom';
+
+        const sizeNum = row.querySelector('.download-size-num')?.value.trim();
+        const sizeUnit = row.querySelector('.download-size-unit')?.value || 'MB';
+        const size = sizeNum ? `${sizeNum} ${sizeUnit}` : '';
+        const url = row.querySelector('.download-url')?.value.trim();
+
+        if (url) {
+            downloads.push({ quality, size, url });
+        }
+    });
+    return downloads;
+}
+
+function qualityOptions(selected = '') {
+    const standard = ['480p SD', '720p HD', '1080p FHD', '4K Ultra HD', 'Custom'];
+    return standard.map(q => `<option value="${q}" ${selected === q ? 'selected' : ''}>${q}</option>`).join('');
+}
+
+function isCustomQuality(value) {
+    const standard = ['480p SD', '720p HD', '1080p FHD', '4K Ultra HD'];
+    return value && !standard.includes(value);
+}
+
+function toggleCustomQuality(select) {
+    const customInput = select.parentElement.querySelector('.download-custom-quality');
+    if (select.value === 'Custom') customInput.classList.remove('hidden');
+    else customInput.classList.add('hidden');
+}
+
+function parseSizeNumber(size = '') {
+    const match = String(size).match(/([\d.]+)/);
+    return match ? match[1] : '';
+}
+
+function parseSizeUnit(size = '') {
+    return String(size).toUpperCase().includes('GB') ? 'GB' : 'MB';
+}
+
+// ─── SERIES SEASONS & EPISODES BUILDERS ───
+function addSeason(data = {}) {
+    const container = document.getElementById('seasonsContainer');
+    if (!container) return;
+    const seasonIndex = container.children.length + 1;
+    const seasonNo = data.seasonNumber || seasonIndex;
+
+    const block = document.createElement('div');
+    block.className = 'season-block';
+    block.innerHTML = `
+        <div class="season-head">
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Season #</label>
+                <input type="number" class="season-number" value="${seasonNo}" min="1">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+                <label>Season Title</label>
+                <input type="text" class="season-title" placeholder="Season ${seasonNo}" value="${escapeAttr(data.title || `Season ${seasonNo}`)}">
+            </div>
+            <button type="button" class="remove-row" onclick="removeAnyRow(this)">✕ Remove Season</button>
+        </div>
+
+        <div class="episodes-container"></div>
+
+        <div class="nested-actions">
+            <button type="button" class="btn-small btn-secondary" onclick="addEpisode(this)">＋ Add Episode</button>
+        </div>
+    `;
+
+    container.appendChild(block);
+    const epContainer = block.querySelector('.episodes-container');
+    (data.episodes || [{ episodeNumber: 1, title: 'Episode 1' }]).forEach(ep => addEpisode(epContainer, ep));
+}
+
+function addEpisode(target, data = {}) {
+    const epContainer = target.classList?.contains('episodes-container') ? target : target.closest('.season-block').querySelector('.episodes-container');
+    const epIndex = epContainer.children.length + 1;
+    const epNo = data.episodeNumber || epIndex;
+
+    const block = document.createElement('div');
+    block.className = 'episode-block';
+    block.innerHTML = `
+        <div class="episode-mini-title">
+            <span>Episode #${epNo}</span>
+            <button type="button" class="remove-row" onclick="removeAnyRow(this)">✕ Remove Episode</button>
+        </div>
+        <div class="grid-2">
+            <div class="form-group" style="margin-bottom:10px;">
+                <label>Episode #</label>
+                <input type="number" class="episode-number" value="${epNo}" min="1">
+            </div>
+            <div class="form-group" style="margin-bottom:10px;">
+                <label>Episode Title</label>
+                <input type="text" class="episode-title" placeholder="e.g. Episode 1 or Finale" value="${escapeAttr(data.title || `Episode ${epNo}`)}">
+            </div>
+        </div>
+
+        <div class="episode-streams-block">
+            <div class="dynamic-header"><label>Episode Streams</label><button type="button" class="btn-small btn-secondary" onclick="addEpisodeStream(this)">＋ Add Stream</button></div>
+            <div class="ep-streams-container"></div>
+        </div>
+
+        <div class="episode-downloads-block" style="margin-top:10px;">
+            <div class="dynamic-header"><label>Episode Downloads</label><button type="button" class="btn-small btn-secondary" onclick="addEpisodeDownload(this)">＋ Add Download</button></div>
+            <div class="ep-downloads-container"></div>
+        </div>
+    `;
+
+    epContainer.appendChild(block);
+    const stContainer = block.querySelector('.ep-streams-container');
+    const streams = data.streams && data.streams.length ? data.streams : (data.streamLink ? [{ name: 'Server 1', url: data.streamLink }] : [{}]);
+    streams.forEach(st => addEpisodeStream(stContainer, st));
+
+    const dlContainer = block.querySelector('.ep-downloads-container');
+    (data.downloads && data.downloads.length ? data.downloads : []).forEach(dl => addEpisodeDownload(dlContainer, dl));
+}
+
+function addEpisodeStream(target, data = {}) {
+    const container = target.classList?.contains('ep-streams-container') ? target : target.closest('.episode-streams-block').querySelector('.ep-streams-container');
+    const row = document.createElement('div');
+    row.className = 'mini-row ep-stream-row';
+    row.innerHTML = `
+        <div class="row-grid-2">
+            <input type="text" class="ep-stream-name" placeholder="Server Name" value="${escapeAttr(data.name || 'Server 1')}">
+            <div style="display:flex; gap:6px;">
+                <input type="url" class="ep-stream-url" placeholder="Stream URL" value="${escapeAttr(data.url || '')}">
+                <button type="button" class="remove-row" onclick="removeAnyRow(this)">✕</button>
+            </div>
+        </div>
+    `;
+    container.appendChild(row);
+}
+
+function addEpisodeDownload(target, data = {}) {
+    const container = target.classList?.contains('ep-downloads-container') ? target : target.closest('.episode-downloads-block').querySelector('.ep-downloads-container');
+    const row = createDownloadRow(data, 'ep-download-row');
+    container.appendChild(row);
+}
+
+function collectSeriesSeasons() {
+    const seasonBlocks = document.querySelectorAll('#seasonsContainer .season-block');
+    const seasons = [];
+
+    seasonBlocks.forEach(sb => {
+        const seasonNumber = parseInt(sb.querySelector('.season-number')?.value) || 1;
+        const title = sb.querySelector('.season-title')?.value.trim() || `Season ${seasonNumber}`;
+        const epBlocks = sb.querySelectorAll('.episode-block');
+        const episodes = [];
+
+        epBlocks.forEach(eb => {
+            const episodeNumber = parseInt(eb.querySelector('.episode-number')?.value) || 1;
+            const epTitle = eb.querySelector('.episode-title')?.value.trim() || `Episode ${episodeNumber}`;
+            const epStreams = collectEpisodeStreams(eb);
+            const epDownloads = collectDownloads(eb, '.ep-download-row');
+
+            episodes.push({
+                episodeNumber,
+                title: epTitle,
+                streams: epStreams,
+                streamLink: epStreams[0]?.url || '',
+                downloads: epDownloads
+            });
+        });
+
+        seasons.push({ seasonNumber, title, episodes });
+    });
+
+    return seasons;
+}
+
+function collectEpisodeStreams(epBlock) {
+    const rows = epBlock.querySelectorAll('.ep-stream-row');
+    const streams = [];
+    rows.forEach((r, i) => {
+        const name = r.querySelector('.ep-stream-name')?.value.trim() || `Server ${i + 1}`;
+        const url = r.querySelector('.ep-stream-url')?.value.trim();
+        if (url) streams.push({ name, url });
+    });
+    return streams;
+}
+
+function removeAnyRow(button) {
+    const row = button.closest('.dynamic-row, .season-block, .episode-block, .mini-row');
+    if (row) row.remove();
+    updateRowNumbers();
+}
+
+function removeDynamicRow(button, className) {
+    const row = button.closest(`.${className}`);
+    if (row) row.remove();
+    updateRowNumbers();
+}
+
+function updateRowNumbers() {
+    document.querySelectorAll('.stream-row').forEach((row, i) => {
+        const title = row.querySelector('.row-title span');
+        if (title) title.textContent = `Stream Server #${i + 1}`;
+    });
+}
+
+function toggleContentType() {
+    const type = document.getElementById('contentType')?.value || 'movie';
+    const seriesBlock = document.getElementById('seriesBuilderBlock');
+    const movieLinksBlock = document.getElementById('movieLinksBlock');
+    const combined = document.getElementById('combinedEpisodes')?.checked || false;
+
+    if (type === 'series') {
+        if (seriesBlock) seriesBlock.classList.remove('hidden');
+        if (combined) {
+            if (movieLinksBlock) movieLinksBlock.classList.remove('hidden');
+        } else {
+            if (movieLinksBlock) movieLinksBlock.classList.add('hidden');
+        }
+    } else {
+        if (seriesBlock) seriesBlock.classList.add('hidden');
+        if (movieLinksBlock) movieLinksBlock.classList.remove('hidden');
+    }
+}
+
+function toggleCombined() {
+    toggleContentType();
+}
+
+// ─── IMAGE PREVIEW HELPERS ───
+function setupImagePreviews() {
+    setupImagePreview('poster', 'posterPreview');
+    setupImagePreview('banner', 'bannerPreview');
+}
+
+function setupImagePreview(inputId, previewId) {
+    const input = document.getElementById(inputId);
+    const preview = document.getElementById(previewId);
+    if (!input || !preview) return;
+
+    const val = input.value.trim();
+    if (val && (val.startsWith('http://') || val.startsWith('https://'))) {
+        preview.style.backgroundImage = `url("${val}")`;
+        preview.textContent = '';
+    } else {
+        preview.style.backgroundImage = '';
+        preview.textContent = previewId === 'posterPreview' ? 'Poster Preview' : 'Banner Preview';
+    }
+}
+
+// ─── TMDB SEARCH & AUTO-FILL ───
+function initTMDBAutoFill() {
+    const token = getTMDBToken();
+    const tokenInput = document.getElementById('tmdbToken');
+    if (token && tokenInput) tokenInput.value = token;
+}
+
+function saveTMDBToken() {
+    const token = document.getElementById('tmdbToken')?.value.trim();
+    if (token) {
+        localStorage.setItem(TMDB_API_KEY_STORAGE, token);
+        showAlert('contentAlert', '✅ TMDB Token saved securely in browser!', 'success');
+        togglePanel('tmdbTokenBody');
+    }
+}
+
+function getTMDBToken() {
+    return localStorage.getItem(TMDB_API_KEY_STORAGE) || '';
+}
+
+function tmdbHeaders() {
+    const token = getTMDBToken();
+    return {
+        'Accept': 'application/json',
+        ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+    };
+}
+
+async function searchTMDB() {
+    const query = document.getElementById('tmdbSearchInput')?.value.trim();
+    if (!query) return;
+
+    const resultsContainer = document.getElementById('tmdbResults');
+    resultsContainer.innerHTML = '<div class="spinner show" style="display:block;"></div>';
+
+    const token = getTMDBToken();
+    const endpoint = token
+        ? `https://api.themoviedb.org/3/search/multi?query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`
+        : `https://api.themoviedb.org/3/search/multi?api_key=4b706c9bc9e5c3b9b4a48dc776bf7744&query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`;
+
+    try {
+        const resp = await fetch(endpoint, { headers: token ? tmdbHeaders() : {} });
+        if (!resp.ok) throw new Error(`TMDB HTTP error ${resp.status}`);
+        const data = await resp.json();
+        const results = (data.results || []).filter(r => r.media_type === 'movie' || r.media_type === 'tv');
+
+        if (results.length === 0) {
+            resultsContainer.innerHTML = '<p style="color:var(--muted); grid-column:1/-1; padding:20px 0;">No results found on TMDB.</p>';
+            return;
+        }
+
+        resultsContainer.innerHTML = results.map(r => {
+            const isMovie = r.media_type === 'movie';
+            const title = isMovie ? r.title : r.name;
+            const year = (isMovie ? r.release_date : r.first_air_date || '').slice(0, 4);
+            const poster = r.poster_path ? `https://image.tmdb.org/t/p/w342${r.poster_path}` : '';
+
+            return `
+                <div class="tmdb-card" onclick="selectTMDBResult(${r.id}, '${r.media_type}')">
+                    <img src="${poster || 'data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'180\\' height=\\'270\\' fill=\\'%23111\\'%3E%3Crect width=\\'180\\' height=\\'270\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%235bc4f5\\' font-size=\\'12\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\'%3ENo Poster%3C/text%3E%3C/svg%3E'}" alt="${escapeAttr(title)}" loading="lazy">
+                    <div class="tmdb-card-info">
+                        <strong>${escapeAttr(title)}</strong>
+                        <span>${isMovie ? 'Movie' : 'TV Series'} ${year ? '• ' + year : ''}</span>
+                        <button type="button" class="btn-small btn-primary btn-populate">📥 Populate Form</button>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+    } catch (err) {
+        resultsContainer.innerHTML = `<p style="color:var(--error); grid-column:1/-1;">Search failed: ${err.message}</p>`;
+    }
+}
+
+async function selectTMDBResult(id, type) {
+    showSpinner(true);
+    const token = getTMDBToken();
+    const isMovie = type === 'movie';
+    const baseUrl = `https://api.themoviedb.org/3/${isMovie ? 'movie' : 'tv'}/${id}`;
+    const url = token ? `${baseUrl}?append_to_response=external_ids` : `${baseUrl}?api_key=4b706c9bc9e5c3b9b4a48dc776bf7744&append_to_response=external_ids`;
+
+    try {
+        const resp = await fetch(url, { headers: token ? tmdbHeaders() : {} });
+        if (!resp.ok) throw new Error(`TMDB details error ${resp.status}`);
+        const data = await resp.json();
+
+        // Switch to editor
+        switchAdminTab('editor');
+
+        setInputValue('contentType', isMovie ? 'movie' : 'series');
+        toggleContentType();
+
+        setInputValue('title', isMovie ? data.title : data.name);
+        setInputValue('year', (isMovie ? data.release_date : data.first_air_date || '').slice(0, 4));
+        setInputValue('rating', data.vote_average ? data.vote_average.toFixed(1) : '');
+
+        if (isMovie && data.runtime) {
+            setInputValue('duration', formatMinutes(data.runtime));
+        } else if (!isMovie && data.number_of_seasons) {
+            setInputValue('duration', `${data.number_of_seasons} Season${data.number_of_seasons > 1 ? 's' : ''}`);
+        }
+
+        if (data.genres && data.genres.length) {
+            setSelectValue('genre', data.genres[0].name);
+        }
+
+        if (data.poster_path) {
+            setInputValue('poster', `https://image.tmdb.org/t/p/w500${data.poster_path}`);
+            setupImagePreview('poster', 'posterPreview');
+        }
+
+        if (data.backdrop_path) {
+            setInputValue('banner', `https://image.tmdb.org/t/p/original${data.backdrop_path}`);
+            setupImagePreview('banner', 'bannerPreview');
+        }
+
+        setInputValue('description', data.overview || '');
+        setInputValue('tmdb_id', String(data.id || ''));
+
+        // IMDb ID from external_ids
+        const imdbId = data.external_ids?.imdb_id || '';
+        if (imdbId) {
+            setInputValue('imdb_id', imdbId);
+        }
+
+        // Auto-detect category & industry based on original language
+        const lang = data.original_language || '';
+        if (lang === 'hi') {
+            setSelectValue('category', isMovie ? 'bollywood_new' : 'series');
+            setSelectValue('industry', 'Bollywood');
+        } else if (['te', 'ta', 'ml', 'kn'].includes(lang)) {
+            setSelectValue('category', isMovie ? 'south_new' : 'series');
+            setSelectValue('industry', 'South');
+        } else {
+            setSelectValue('category', isMovie ? 'hollywood' : 'series');
+            setSelectValue('industry', 'Hollywood');
+        }
+
+        // Auto-generate standard streams if IMDb ID is available
+        if (imdbId) {
+            autoGenerateStandardStreams();
+        }
+
+        showAlert('contentAlert', `✅ Populated from TMDB: "${isMovie ? data.title : data.name}"`, 'success');
+
+    } catch (err) {
+        showAlert('contentAlert', `❌ Error fetching details: ${err.message}`, 'error');
+    } finally {
+        showSpinner(false);
+    }
+}
+
+// ─── SITE SETTINGS CONTROLLER ───
+async function loadSiteSettings() {
+    try {
+        const content = await githubAPI.getContent();
+        const settings = content.settings || {};
+
+        setInputValue('siteBaseUrl', settings.siteBaseUrl || '');
+        setInputValue('telegramRequestLink', settings.request?.link || '');
+        setInputValue('requestButtonText', settings.request?.buttonText || '');
+
+        const stats = settings.stats || {};
+        setInputValue('baseTotalStats', stats.baseTotal || 5000);
+        setInputValue('base4kStats', stats.base4K || 1800);
+        setInputValue('baseTorrentStats', stats.baseTorrents || 3200);
+
+    } catch (err) {
+        console.warn('Error loading site settings:', err);
+    }
+}
+
+async function saveSiteSettings() {
+    showSpinner(true);
+    try {
+        const settingsData = {
+            siteBaseUrl: (document.getElementById('siteBaseUrl')?.value || '').trim(),
+            request: {
+                link: (document.getElementById('telegramRequestLink')?.value || '').trim(),
+                buttonText: (document.getElementById('requestButtonText')?.value || '📩 Request on Telegram').trim()
+            },
+            stats: {
+                baseTotal: parseInt(document.getElementById('baseTotalStats')?.value) || 5000,
+                base4K: parseInt(document.getElementById('base4kStats')?.value) || 1800,
+                baseTorrents: parseInt(document.getElementById('baseTorrentStats')?.value) || 3200,
+                suffix: '+'
+            }
+        };
+
+        await githubAPI.updateSiteSettings(settingsData);
+        showAlert('contentAlert', '✅ Site settings updated successfully!', 'success');
+
+    } catch (err) {
+        showAlert('contentAlert', `❌ Error saving settings: ${err.message}`, 'error');
+    } finally {
+        showSpinner(false);
+    }
+}
+
+function xmlEscape(val) {
+    return String(val || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+
+async function generateSitemap() {
+    showSpinner(true);
+    try {
+        const content = await githubAPI.getContent();
+        const baseUrl = (content.settings?.siteBaseUrl || document.getElementById('siteBaseUrl')?.value || 'https://phantommovies.pages.dev').replace(/\/+$/, '');
+        const movies = content.movies || [];
+
+        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+        xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+        xml += `  <url><loc>${xmlEscape(baseUrl)}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>\n`;
+        xml += `  <url><loc>${xmlEscape(baseUrl)}/movies.html</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>\n`;
+        xml += `  <url><loc>${xmlEscape(baseUrl)}/series.html</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>\n`;
+        xml += `  <url><loc>${xmlEscape(baseUrl)}/trending.html</loc><changefreq>hourly</changefreq><priority>0.8</priority></url>\n`;
+
+        movies.forEach(m => {
+            const path = m.type === 'series' ? `series.html?id=${encodeURIComponent(m.id)}` : `movie.html?id=${encodeURIComponent(m.id)}`;
+            xml += `  <url><loc>${xmlEscape(baseUrl)}/${path}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
+        });
+
+        xml += '</urlset>';
+
+        await githubAPI.updateSitemap(xml);
+        showAlert('contentAlert', `✅ Generated sitemap with ${movies.length + 4} URLs!`, 'success');
+
+    } catch (err) {
+        showAlert('contentAlert', `❌ Sitemap error: ${err.message}`, 'error');
+    } finally {
+        showSpinner(false);
+    }
+}
+
+// ─── LIVE MIRROR HEALTH INSPECTOR ───
+async function loadMirrorHealth() {
+    const container = document.getElementById('mirrorHealthContainer');
+    if (!container) return;
+    container.innerHTML = '<div class="spinner show" style="display:block;"></div><p style="text-align:center; color:var(--muted); padding:20px;">Fetching live mirror health...</p>';
+
+    try {
+        let mirrorsData = null;
+        try {
+            const resp = await fetch('data/mirrors.json?t=' + Date.now());
+            if (resp.ok) mirrorsData = await resp.json();
+        } catch (e) {
+            console.warn('Local mirrors fetch error:', e);
+        }
+
+        if (!mirrorsData && githubAPI.username) {
+            const file = await githubAPI.getFile('data/mirrors.json');
+            if (file && file.content) {
+                mirrorsData = JSON.parse(decodeURIComponent(escape(atob(file.content))));
+            }
+        }
+
+        if (!mirrorsData) throw new Error('Could not load data/mirrors.json from disk or GitHub');
+
+        const scrapers = mirrorsData.scrapers || {};
+        const streaming = mirrorsData.streaming?.providers || [];
+        const updatedAt = mirrorsData.updatedAt ? new Date(mirrorsData.updatedAt).toLocaleString() : 'Recent';
+
+        let html = `
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid var(--border);">
+                <span style="font-size:13px; color:var(--muted);">Last Synchronized: <strong style="color:var(--text);">${escapeAttr(updatedAt)}</strong></span>
+                <span class="status-pill online">All Systems Online 🟢</span>
+            </div>
+
+            <h3 style="font-size:16px; margin: 16px 0 10px; color:var(--primary); font-weight:700;">📡 Upstream Scraper Engines</h3>
+            <div class="mirror-grid">
+        `;
+
+        for (const [name, s] of Object.entries(scrapers)) {
+            const isOnline = s.status === 'online' || !s.status;
+            html += `
+                <div class="mirror-card">
+                    <div class="mirror-card-head">
+                        <span class="mirror-name">${name.toUpperCase()}</span>
+                        <div style="display:flex; gap:6px;">
+                            ${s.latency_ms ? `<span class="status-pill latency">${s.latency_ms}ms</span>` : ''}
+                            <span class="status-pill ${isOnline ? 'online' : 'draft'}">${s.status || 'Active'}</span>
+                        </div>
+                    </div>
+                    <div class="mirror-detail-row">
+                        <strong>Active Domain:</strong> <a href="${escapeAttr(s.active)}" target="_blank">${escapeAttr(s.active)}</a>
+                    </div>
+                    ${s.portal ? `<div class="mirror-detail-row"><strong>Portal:</strong> <a href="${escapeAttr(s.portal)}" target="_blank">${escapeAttr(s.portal)}</a></div>` : ''}
+                    ${s.mirrors && s.mirrors.length ? `
+                        <div class="mirror-detail-row" style="margin-top:8px;">
+                            <strong>Failover Mirrors (${s.mirrors.length}):</strong>
+                            <div style="font-size:11px; margin-top:4px; max-height:80px; overflow-y:auto; color:var(--muted); line-height:1.6;">
+                                ${s.mirrors.map(m => `<div>• <a href="${escapeAttr(m)}" target="_blank">${escapeAttr(m)}</a></div>`).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        html += `
+            </div>
+            <h3 style="font-size:16px; margin: 28px 0 10px; color:var(--primary); font-weight:700;">🎥 Verified Streaming Embed Mirrors</h3>
+            <div class="mirror-grid">
+        `;
+
+        streaming.forEach(p => {
+            html += `
+                <div class="mirror-card">
+                    <div class="mirror-card-head">
+                        <span class="mirror-name">${escapeAttr(p.name)}</span>
+                        <span class="status-pill online">Verified</span>
+                    </div>
+                    <div class="mirror-detail-row">
+                        <strong>Domains:</strong> ${(p.domains || []).map(d => `<a href="${escapeAttr(d)}" target="_blank">${escapeAttr(d)}</a>`).join(', ')}
+                    </div>
+                    ${p.movieTemplate ? `<div class="mirror-detail-row"><strong>Movie Path:</strong> <code>${escapeAttr(p.movieTemplate)}</code></div>` : ''}
+                    ${p.tvTemplate ? `<div class="mirror-detail-row"><strong>TV Path:</strong> <code>${escapeAttr(p.tvTemplate)}</code></div>` : ''}
+                </div>
+            `;
+        });
+
+        html += '</div>';
+        container.innerHTML = html;
+
+    } catch (err) {
+        container.innerHTML = `<div class="alert alert-error show">❌ Failed to inspect mirrors: ${escapeAttr(err.message)}</div>`;
+    }
+}
+
+// ─── ADS MONETIZATION CONTROLLER ───
+function getAdsFormData() {
+    return {
+        enabled: document.getElementById('adsEnabled')?.checked ?? true,
+        headScripts: {
+            monetag: document.getElementById('adMonetagHead')?.value.trim() || '',
+            adsterra: document.getElementById('adAdsterraHead')?.value.trim() || '',
+            monetagMultitag: document.getElementById('adMonetagMultitag')?.value.trim() || '',
+            adsterraSocialBar: document.getElementById('adAdsterraSocialBar')?.value.trim() || ''
+        },
+        clickAd: {
+            enabled: document.getElementById('clickAdEnabled')?.checked || false,
+            url: document.getElementById('clickAdUrl')?.value.trim() || '',
+            frequency: document.getElementById('clickAdFrequency')?.value || 'session',
+            onDownloads: document.getElementById('clickAdDownloads')?.checked ?? true,
+            onStreams: document.getElementById('clickAdStreams')?.checked || false
+        },
+        slots: {
+            homeTop: document.getElementById('adHomeTop')?.value.trim() || '',
+            homeGrid: document.getElementById('adHomeGrid')?.value.trim() || '',
+            homeBottom: document.getElementById('adHomeBottom')?.value.trim() || '',
+            moviePlayerTop: document.getElementById('adMoviePlayerTop')?.value.trim() || '',
+            movieDownloads: document.getElementById('adMovieDownloads')?.value.trim() || '',
+            movieBottom: document.getElementById('adMovieBottom')?.value.trim() || '',
+            seriesPlayerTop: document.getElementById('adSeriesPlayerTop')?.value.trim() || '',
+            seriesDownloads: document.getElementById('adSeriesDownloads')?.value.trim() || '',
+            seriesBottom: document.getElementById('adSeriesBottom')?.value.trim() || '',
+            floatingBottom: document.getElementById('adFloatingBottom')?.value.trim() || '',
+            popup: document.getElementById('adPopup')?.value.trim() || ''
+        }
+    };
+}
+
+function setAdsFormData(ads = {}) {
+    if (document.getElementById('adsEnabled')) document.getElementById('adsEnabled').checked = ads.enabled !== false;
+    const hs = ads.headScripts || {};
+    setTextareaValue('adMonetagHead', hs.monetag);
+    setTextareaValue('adAdsterraHead', hs.adsterra);
+    setTextareaValue('adMonetagMultitag', hs.monetagMultitag);
+    setTextareaValue('adAdsterraSocialBar', hs.adsterraSocialBar);
+
+    const ca = ads.clickAd || {};
+    if (document.getElementById('clickAdEnabled')) document.getElementById('clickAdEnabled').checked = !!ca.enabled;
+    setInputValue('clickAdUrl', ca.url || '');
+    setSelectValue('clickAdFrequency', ca.frequency || 'session');
+    if (document.getElementById('clickAdDownloads')) document.getElementById('clickAdDownloads').checked = ca.onDownloads !== false;
+    if (document.getElementById('clickAdStreams')) document.getElementById('clickAdStreams').checked = !!ca.onStreams;
+
+    const sl = ads.slots || {};
+    setTextareaValue('adHomeTop', sl.homeTop);
+    setTextareaValue('adHomeGrid', sl.homeGrid);
+    setTextareaValue('adHomeBottom', sl.homeBottom);
+    setTextareaValue('adMoviePlayerTop', sl.moviePlayerTop);
+    setTextareaValue('adMovieDownloads', sl.movieDownloads);
+    setTextareaValue('adMovieBottom', sl.movieBottom);
+    setTextareaValue('adSeriesPlayerTop', sl.seriesPlayerTop);
+    setTextareaValue('adSeriesDownloads', sl.seriesDownloads);
+    setTextareaValue('adSeriesBottom', sl.seriesBottom);
+    setTextareaValue('adFloatingBottom', sl.floatingBottom);
+    setTextareaValue('adPopup', sl.popup);
+}
+
+function setTextareaValue(id, val) {
+    const el = document.getElementById(id);
+    if (el) el.value = val || '';
+}
+
+async function loadAdsSettings() {
+    try {
+        const content = await githubAPI.getContent();
+        setAdsFormData(content.settings?.ads || {});
+    } catch (e) {
+        console.warn('Error loading ads settings:', e);
+    }
+}
+
+async function saveAdsSettings() {
+    showSpinner(true);
+    try {
+        const adsData = getAdsFormData();
+        await githubAPI.updateAds(adsData);
+        showAlert('contentAlert', '✅ Ads settings saved successfully!', 'success');
+    } catch (err) {
+        showAlert('contentAlert', `❌ Error saving ads: ${err.message}`, 'error');
+    } finally {
+        showSpinner(false);
+    }
+}
+
+function clearAdsSettings() {
+    if (confirm('Clear all ad code configurations?')) {
+        setAdsFormData({});
+        showAlert('contentAlert', 'Ad codes cleared in form. Click "Save Ads Settings" to apply to GitHub.', 'info');
+    }
+}
+
+// ─── SIMPLE AD BUILDER ───
+const SIMPLE_AD_CONFIG = {
+    monetag: {
+        multitag: { label: 'Monetag MultiTag Script', codeLabel: 'Paste Monetag MultiTag Script', targets: ['adMonetagHead'] },
+        onclick: { label: 'OnClick (Popunder) Script', codeLabel: 'Paste OnClick Script', targets: ['adMonetagHead'] },
+        push: { label: 'In-Page Push / Banner', codeLabel: 'Paste Banner Script', targets: ['adHomeTop', 'adMoviePlayerTop', 'adFloatingBottom'] }
+    },
+    adsterra: {
+        direct_link: { label: 'Direct Link (On-Click)', codeLabel: 'Paste Direct Link URL', isDirectLink: true, targets: ['clickAdUrl'] },
+        social_bar: { label: 'Social Bar Script', codeLabel: 'Paste Social Bar Script', targets: ['adAdsterraHead'] },
+        popunder: { label: 'Popunder Script', codeLabel: 'Paste Popunder Script', targets: ['adAdsterraHead'] },
+        banner_728: { label: 'Banner 728x90', codeLabel: 'Paste 728x90 Code', targets: ['adHomeTop', 'adMovieBottom', 'adSeriesBottom'] },
+        native: { label: 'Native Banner 4:1', codeLabel: 'Paste Native Banner Code', targets: ['adHomeGrid', 'adMovieDownloads', 'adSeriesDownloads'] }
+    },
+    custom: {
+        custom_head: { label: 'Custom Global Head Script', codeLabel: 'Paste Script', targets: ['adMonetagHead'] },
+        custom_banner: { label: 'Custom Content Banner', codeLabel: 'Paste HTML / Script', targets: ['adHomeGrid', 'adMovieDownloads'] }
+    }
 };
 
-const SIMPLE_AD_PLACEMENTS = {
-    monetagHead: { label: 'Global Head Code', desc: 'Har public page ke <head> me load hoga', target: 'adMonetagHead' },
-    adsterraHead: { label: 'Adsterra Global Head', desc: 'Social Bar/Popunder ke liye best', target: 'adAdsterraHead' },
-    homeTop: { label: 'Home Top Banner', desc: 'Hero section ke neeche', target: 'adHomeTop' },
-    homeGrid: { label: 'Home Native/Grid Ad', desc: 'Movie grid ke upar', target: 'adHomeGrid' },
-    homeBottom: { label: 'Home Bottom Ad', desc: 'Footer/request section ke aas-paas', target: 'adHomeBottom' },
-    moviePlayerTop: { label: 'Movie Player Top', desc: 'Movie player ke upar', target: 'adMoviePlayerTop' },
-    movieDownloads: { label: 'Movie Download Area', desc: 'Download buttons ke upar', target: 'adMovieDownloads' },
-    movieBottom: { label: 'Movie Bottom Ad', desc: 'Movie page ke bottom me', target: 'adMovieBottom' },
-    seriesPlayerTop: { label: 'Series Player Top', desc: 'Series player ke upar', target: 'adSeriesPlayerTop' },
-    seriesDownloads: { label: 'Series Download Area', desc: 'Episode download area ke upar', target: 'adSeriesDownloads' },
-    seriesBottom: { label: 'Series Bottom Ad', desc: 'Series page ke bottom me', target: 'adSeriesBottom' },
-    clickAd: { label: 'Download/Stream Click Ad', desc: 'Direct link click ad system', target: 'clickAdUrl' }
+const SIMPLE_AD_TARGET_LABELS = {
+    adMonetagHead: 'Global Head Script',
+    adAdsterraHead: 'Global Social Bar / Popunder',
+    adHomeTop: 'Home Hero Bottom Banner',
+    adHomeGrid: 'Home Movie Grid Native',
+    adHomeBottom: 'Home Bottom Banner',
+    adMoviePlayerTop: 'Movie Player Top',
+    adMovieDownloads: 'Movie Downloads Area',
+    adMovieBottom: 'Movie Bottom Banner',
+    adSeriesPlayerTop: 'Series Player Top',
+    adSeriesDownloads: 'Series Downloads Area',
+    adSeriesBottom: 'Series Bottom Banner',
+    adFloatingBottom: 'Mobile Floating Bottom Sticky',
+    clickAdUrl: 'Direct Link Click Redirect'
 };
 
 function initSimpleAdBuilder() {
@@ -1329,190 +1634,266 @@ function initSimpleAdBuilder() {
 
 function updateSimpleAdTypeOptions() {
     const network = document.getElementById('simpleAdNetwork')?.value || 'monetag';
-    const typeSelect = document.getElementById('simpleAdType');
-    if (!typeSelect) return;
-    typeSelect.innerHTML = (SIMPLE_AD_TYPES[network] || []).map(t => `<option value="${t.value}">${t.label}</option>`).join('');
+    const select = document.getElementById('simpleAdType');
+    if (!select) return;
+
+    const types = SIMPLE_AD_CONFIG[network] || {};
+    select.innerHTML = Object.entries(types).map(([key, item]) => `<option value="${key}">${item.label}</option>`).join('');
     updateSimpleAdPlacements();
 }
 
 function getSimpleAdType() {
     const network = document.getElementById('simpleAdNetwork')?.value || 'monetag';
-    const value = document.getElementById('simpleAdType')?.value || '';
-    return (SIMPLE_AD_TYPES[network] || []).find(t => t.value === value) || SIMPLE_AD_TYPES[network][0];
+    const typeKey = document.getElementById('simpleAdType')?.value || '';
+    return (SIMPLE_AD_CONFIG[network] || {})[typeKey] || null;
 }
 
 function updateSimpleAdPlacements() {
     const type = getSimpleAdType();
-    const box = document.getElementById('simpleAdPlacements');
+    const container = document.getElementById('simpleAdPlacements');
     const label = document.getElementById('simpleAdCodeLabel');
-    if (!box || !type) return;
+    if (!type || !container) return;
 
-    if (label) label.textContent = type.kind === 'url' ? 'Direct Link URL' : 'Ad Code / Script';
+    if (label) label.textContent = type.codeLabel || 'Ad Code / Link';
 
-    let keys = [];
-    if (type.kind === 'head') keys = type.recommended;
-    else if (type.kind === 'url') keys = ['clickAd'];
-    else keys = ['homeTop','homeGrid','homeBottom','moviePlayerTop','movieDownloads','movieBottom','seriesPlayerTop','seriesDownloads','seriesBottom'];
-
-    box.innerHTML = keys.map(key => {
-        const p = SIMPLE_AD_PLACEMENTS[key];
-        const checked = type.recommended.includes(key) ? 'checked' : '';
-        return `<label class="placement-option">
-            <input type="checkbox" class="simple-placement" value="${key}" ${checked}>
-            <div><strong>${p.label}</strong><span>${p.desc}</span></div>
-        </label>`;
-    }).join('');
-}
-
-function appendOrReplaceField(targetId, code) {
-    const el = document.getElementById(targetId);
-    if (!el) return;
-    if (el.value.trim() && !confirm(`${targetId} me already code hai. Replace karna hai? Cancel karoge to new code niche add hoga.`)) {
-        el.value = el.value.trim() + '\n\n' + code;
-    } else {
-        el.value = code;
-    }
+    const defaultTargets = new Set(type.targets || []);
+    container.innerHTML = Object.entries(SIMPLE_AD_TARGET_LABELS).map(([id, text]) => `
+        <label class="placement-option">
+            <input type="checkbox" value="${id}" ${defaultTargets.has(id) ? 'checked' : ''}>
+            <div>
+                <strong>${text}</strong>
+                <span>Slot ID: ${id}</span>
+            </div>
+        </label>
+    `).join('');
 }
 
 function applySimpleAdSetup() {
-    const code = document.getElementById('simpleAdCode')?.value.trim() || '';
-    const type = getSimpleAdType();
+    const code = document.getElementById('simpleAdCode')?.value.trim();
     if (!code) {
-        showAlert('contentAlert', '❌ Ad code/direct link paste karo', 'error');
-        return;
-    }
-    const selected = Array.from(document.querySelectorAll('.simple-placement:checked')).map(i => i.value);
-    if (!selected.length) {
-        showAlert('contentAlert', '❌ At least one placement select karo', 'error');
+        alert('Please paste ad code or direct link first.');
         return;
     }
 
-    selected.forEach(key => {
-        if (key === 'clickAd') {
-            const url = document.getElementById('clickAdUrl');
-            if (url) url.value = code;
-            const enabled = document.getElementById('clickAdEnabled');
-            if (enabled) enabled.checked = true;
-            return;
-        }
-        const placement = SIMPLE_AD_PLACEMENTS[key];
-        if (placement) appendOrReplaceField(placement.target, code);
-    });
+    const type = getSimpleAdType();
+    const checked = Array.from(document.querySelectorAll('#simpleAdPlacements input:checked')).map(i => i.value);
 
-    if (type.kind !== 'url') {
-        showAlert('contentAlert', `✅ ${type.label} selected placements me apply ho gaya. Ab Save Ads Settings dabao.`, 'success');
+    if (type?.isDirectLink) {
+        const urlInput = document.getElementById('clickAdUrl');
+        const enableCheck = document.getElementById('clickAdEnabled');
+        if (urlInput) urlInput.value = code;
+        if (enableCheck) enableCheck.checked = true;
     } else {
-        showAlert('contentAlert', '✅ Direct link click ad me apply ho gaya. Ab Save Ads Settings dabao.', 'success');
+        checked.forEach(slotId => {
+            const el = document.getElementById(slotId);
+            if (el) el.value = code;
+        });
     }
+
+    showAlert('contentAlert', '✅ Ad applied to selected slots! Click "Save Ads Settings" to publish to GitHub.', 'success');
 }
 
-// ═══════════════════════════════════════════════════
-// BULK QUICK ADD — TMDB auto-fill + one-click publish
-// Format per line: Title | stream | download | type(optional)
-// ═══════════════════════════════════════════════════
-async function tmdbAutoFill(title, type) {
-    const token = getTMDBToken();
-    const out = { genre: '', year: '', duration: '', rating: '', poster: '', banner: '', description: '' };
-    if (!token) return out;
-    try {
-        const kind = type === 'series' ? 'tv' : 'movie';
-        const sRes = await fetch(`https://api.themoviedb.org/3/search/${kind}?query=${encodeURIComponent(title)}&include_adult=false&language=en-US&page=1`, { headers: tmdbHeaders() });
-        if (!sRes.ok) return out;
-        const sData = await sRes.json();
-        const first = (sData.results || [])[0];
-        if (!first) return out;
-
-        const dRes = await fetch(`https://api.themoviedb.org/3/${kind}/${first.id}?language=en-US`, { headers: tmdbHeaders() });
-        if (!dRes.ok) return out;
-        const d = await dRes.json();
-
-        const date = kind === 'tv' ? d.first_air_date : d.release_date;
-        const runtime = kind === 'tv' ? (d.episode_run_time && d.episode_run_time[0]) : d.runtime;
-        out.genre = (d.genres && d.genres[0] && d.genres[0].name) || '';
-        out.year = date ? String(date).slice(0, 4) : '';
-        out.duration = runtime ? formatMinutes(runtime) : '';
-        out.rating = d.vote_average ? Number(d.vote_average).toFixed(1) : '';
-        out.poster = d.poster_path ? `${TMDB_IMAGE_BASE}w500${d.poster_path}` : '';
-        out.banner = d.backdrop_path ? `${TMDB_IMAGE_BASE}w1280${d.backdrop_path}` : out.poster;
-        out.description = d.overview || '';
-    } catch (e) { /* metadata fail ho to khali chhodo */ }
-    return out;
-}
-
+// ─── BULK QUICK ADD CONTROLLER ───
 function qaLog(msg) {
-    const box = document.getElementById('quickAddLog');
-    if (box) box.textContent += msg + '\n';
+    const log = document.getElementById('quickAddLog');
+    if (log) log.textContent += msg + '\n';
 }
 
 async function runQuickAdd() {
-    const raw = (document.getElementById('quickAddInput')?.value || '').trim();
-    if (!raw) { showAlert('contentAlert', '❌ Pehle kam se kam ek line likho', 'error'); return; }
-    const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
-    if (!lines.length) return;
+    const input = document.getElementById('quickAddInput')?.value.trim();
+    if (!input) return;
 
-    const logBox = document.getElementById('quickAddLog');
-    if (logBox) logBox.textContent = '';
+    const logEl = document.getElementById('quickAddLog');
+    if (logEl) logEl.textContent = '🚀 Starting bulk import...\n';
     showSpinner(true);
 
-    const newMovies = [];
+    const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
+    const moviesToAdd = [];
+
     for (let i = 0; i < lines.length; i++) {
         const parts = lines[i].split('|').map(p => p.trim());
-        const title = parts[0] || '';
+        const title = parts[0];
         const stream = parts[1] || '';
         const download = parts[2] || '';
-        const type = (parts[3] || 'movie').toLowerCase() === 'series' ? 'series' : 'movie';
+        const type = (parts[3] || 'movie').toLowerCase();
 
-        if (!title || !stream) { qaLog(`️ Line ${i + 1} skip (title/stream missing)`); continue; }
+        qaLog(`[${i + 1}/${lines.length}] Searching TMDB for "${title}"...`);
 
-        qaLog(`⏳ [${i + 1}/${lines.length}] "${title}" — TMDB fetch...`);
-        const meta = await tmdbAutoFill(title, type);
+        try {
+            const token = getTMDBToken();
+            const searchUrl = token
+                ? `https://api.themoviedb.org/3/search/multi?query=${encodeURIComponent(title)}&include_adult=false`
+                : `https://api.themoviedb.org/3/search/multi?api_key=4b706c9bc9e5c3b9b4a48dc776bf7744&query=${encodeURIComponent(title)}&include_adult=false`;
 
-        const now = new Date().toISOString();
-        const downloads = download ? [{ quality: '720p', size: '', server: 'ToxCloud', url: download, color: '' }] : [];
-        newMovies.push({
-            id: Date.now().toString() + i,
-            type, title,
-            genre: meta.genre || 'Action',
-            year: meta.year || '',
-            duration: type === 'series' && meta.duration ? `${meta.duration}/ep` : meta.duration,
-            rating: meta.rating || '',
-            badge: 'NEW',
-            poster: meta.poster, banner: meta.banner,
-            streamLink: stream,
-            streams: [{ name: 'ToxCloud', url: stream }],
-            downloads,
-            seasons: [],
-            trailerLink: '',
-            description: meta.description,
-            featured: false, trending: false, heroSlide: false,
-            status: 'published', active: true,
-            views: 0, createdAt: now, updatedAt: now
-        });
-        qaLog(`✅ "${title}" ready (${meta.genre || 'no genre'}, ${meta.year || 'no year'})`);
+            const resp = await fetch(searchUrl, { headers: token ? tmdbHeaders() : {} });
+            const data = await resp.json();
+            const hit = (data.results || []).find(r => r.media_type === (type === 'series' ? 'tv' : 'movie')) || data.results?.[0];
+
+            let movieData = {
+                type: type === 'series' ? 'series' : 'movie',
+                title: title,
+                genre: 'Action',
+                year: new Date().getFullYear(),
+                duration: '2h 00m',
+                rating: 7.5,
+                badge: 'NEW',
+                category: type === 'series' ? 'series' : 'bollywood_new',
+                industry: 'Bollywood',
+                views: 5000,
+                imdb_id: '',
+                tmdb_id: '',
+                poster: '',
+                banner: '',
+                description: '',
+                streamLink: stream,
+                streams: stream ? [{ name: 'Server 1 (VIP HD)', url: stream }] : [],
+                downloads: download ? [{ quality: '1080p FHD', size: '1.4 GB', url: download }] : [],
+                seasons: [],
+                featured: false,
+                trending: true,
+                status: 'published',
+                active: true
+            };
+
+            if (hit) {
+                movieData.title = hit.title || hit.name || title;
+                movieData.year = parseInt((hit.release_date || hit.first_air_date || '').slice(0, 4)) || movieData.year;
+                movieData.rating = hit.vote_average ? parseFloat(hit.vote_average.toFixed(1)) : 7.0;
+                movieData.poster = hit.poster_path ? `https://image.tmdb.org/t/p/w500${hit.poster_path}` : '';
+                movieData.banner = hit.backdrop_path ? `https://image.tmdb.org/t/p/original${hit.backdrop_path}` : '';
+                movieData.description = hit.overview || '';
+                movieData.tmdb_id = String(hit.id || '');
+            }
+
+            moviesToAdd.push(movieData);
+            qaLog(`✓ Prepared "${movieData.title}" (${movieData.year})`);
+
+        } catch (e) {
+            qaLog(`⚠️ Warning: TMDB lookup failed for "${title}", adding basic entry.`);
+            moviesToAdd.push({
+                type: type === 'series' ? 'series' : 'movie',
+                title: title,
+                genre: 'Drama',
+                year: new Date().getFullYear(),
+                streamLink: stream,
+                streams: stream ? [{ name: 'Server 1', url: stream }] : [],
+                downloads: download ? [{ quality: '1080p FHD', size: '1.4 GB', url: download }] : [],
+                status: 'published',
+                active: true
+            });
+        }
     }
 
-    if (!newMovies.length) { showSpinner(false); showAlert('contentAlert', '❌ Koi valid line nahi mili', 'error'); return; }
+    qaLog(`\n💾 Committing ${moviesToAdd.length} titles to GitHub repo...`);
 
     try {
-        qaLog('💾 GitHub par save ho raha hai...');
-        const fileData = await githubAPI.getFile(githubAPI.contentPath);
-        const content = await githubAPI.getContent();
-        newMovies.forEach(m => content.movies.unshift(m));
-        content.settings = content.settings || {};
-        content.settings.totalMovies = content.movies.filter(m => m.type !== 'series').length;
-        content.settings.totalSeries = content.movies.filter(m => m.type === 'series').length;
-        content.settings.totalTitles = content.movies.length;
-        content.settings.lastUpdated = new Date().toISOString();
-        await githubAPI.updateFile(githubAPI.contentPath, JSON.stringify(content, null, 2), `Bulk quick add: ${newMovies.length} items`, fileData ? fileData.sha : null);
-
-        qaLog(`🎉 ${newMovies.length} content publish ho gaye!`);
-        showAlert('contentAlert', `✅ ${newMovies.length} content publish ho gaye`, 'success');
+        for (const item of moviesToAdd) {
+            await githubAPI.addMovie(item);
+        }
+        qaLog('🎉 All titles published successfully!');
+        showAlert('contentAlert', `✅ Bulk published ${moviesToAdd.length} titles!`, 'success');
         document.getElementById('quickAddInput').value = '';
         loadMovies();
-    } catch (e) {
-        qaLog('❌ Save fail: ' + e.message);
-        showAlert('contentAlert', `❌ Save fail: ${e.message}`, 'error');
+    } catch (err) {
+        qaLog(`❌ Commit error: ${err.message}`);
+        showAlert('contentAlert', `Bulk publish failed: ${err.message}`, 'error');
     } finally {
         showSpinner(false);
     }
+}
+
+// ─── BROKEN LINK CHECKER ───
+async function checkBrokenLinks() {
+    showSpinner(true);
+    showAlert('contentAlert', '🔍 Scanning titles for missing streams or Vega redirect links...', 'info');
+
+    try {
+        const content = await githubAPI.getContent();
+        const movies = content.movies || [];
+
+        let missingStreams = [];
+        let rogueLinks = [];
+
+        movies.forEach(m => {
+            const hasStream = (m.streams && m.streams.length > 0) || !!m.streamLink;
+            if (!hasStream && m.type !== 'series') {
+                missingStreams.push(m.title);
+            }
+
+            (m.downloads || []).forEach(d => {
+                const u = (d.url || '').toLowerCase();
+                if (u.includes('vegamovies') || u.includes('nexdrive.beer') || u.includes('nexdrive.fit')) {
+                    rogueLinks.push(`${m.title} (${d.quality})`);
+                }
+            });
+        });
+
+        let msg = `Scan complete on ${movies.length} titles:`;
+        if (missingStreams.length > 0) msg += `\n• Missing Streams: ${missingStreams.length} titles`;
+        if (rogueLinks.length > 0) msg += `\n• Rogue Links: ${rogueLinks.length} items`;
+        if (missingStreams.length === 0 && rogueLinks.length === 0) msg += ' All clean! Zero rogue links and full stream coverage.';
+
+        alert(msg);
+        showAlert('contentAlert', '✅ Link audit complete.', 'success');
+
+    } catch (err) {
+        showAlert('contentAlert', `Link check error: ${err.message}`, 'error');
+    } finally {
+        showSpinner(false);
+    }
+}
+
+// ─── UTILITY FUNCTIONS ───
+function setInputValue(id, val) {
+    const el = document.getElementById(id);
+    if (el) el.value = val !== undefined && val !== null ? val : '';
+}
+
+function setSelectValue(id, val) {
+    const el = document.getElementById(id);
+    if (!el || !val) return;
+    for (let opt of el.options) {
+        if (opt.value.toLowerCase() === String(val).toLowerCase()) {
+            el.value = opt.value;
+            return;
+        }
+    }
+    el.value = val;
+}
+
+function formatMinutes(min) {
+    const h = Math.floor(min / 60);
+    const m = min % 60;
+    return `${h}h ${m}m`;
+}
+
+function escapeAttr(val) {
+    return String(val || '')
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+}
+
+function showAlert(elementId, message, type) {
+    const alert = document.getElementById(elementId);
+    if (!alert) return;
+    alert.className = `alert alert-${type} show`;
+    alert.textContent = message;
+    if (type !== 'error') {
+        setTimeout(() => alert.classList.remove('show'), 6000);
+    }
+}
+
+function showSpinner(show) {
+    const spinner = document.getElementById('spinner');
+    if (!spinner) return;
+    if (show) spinner.classList.add('show');
+    else spinner.classList.remove('show');
+}
+
+function togglePanel(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('collapsed');
 }

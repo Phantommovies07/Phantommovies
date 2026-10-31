@@ -206,7 +206,7 @@ class GitHubAPI {
         const newMovie = {
             id: id,
             ...movieData,
-            views: 0,
+            views: (movieData.views !== undefined && movieData.views !== null && movieData.views !== '') ? Number(movieData.views) : 0,
             ratingCount: 0,
             ratingSum: 0,
             createdAt: new Date().toISOString(),
