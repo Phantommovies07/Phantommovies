@@ -220,7 +220,7 @@ function hideLoadingScreen() {
     }
 }
 
-function animateHeroCounter(elementId, targetValue, duration = 1200) {
+function animateHeroCounter(elementId, targetValue, duration = 1200, suffix = '+') {
     const el = document.getElementById(elementId);
     if (!el || typeof targetValue !== 'number') return;
     const startTime = performance.now();
@@ -229,18 +229,24 @@ function animateHeroCounter(elementId, targetValue, duration = 1200) {
         const progress = Math.min(elapsed / duration, 1);
         const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
         const current = Math.floor(easeOut * targetValue);
-        el.textContent = current.toLocaleString();
+        el.textContent = current.toLocaleString() + (progress >= 1 ? suffix : '');
         if (progress < 1) {
             requestAnimationFrame(step);
         } else {
-            el.textContent = targetValue.toLocaleString();
+            el.textContent = targetValue.toLocaleString() + suffix;
         }
     }
     requestAnimationFrame(step);
 }
 
 function updateHeroRealtimeStats() {
-    const totalCount = allMovies.length;
+    const statsCfg = siteSettings.stats || {};
+    const baseOffset = typeof statsCfg.baseTotal === 'number' ? statsCfg.baseTotal : 5000;
+    const base4kOffset = typeof statsCfg.base4K === 'number' ? statsCfg.base4K : 1800;
+    const baseTorrentOffset = typeof statsCfg.baseTorrents === 'number' ? statsCfg.baseTorrents : 3200;
+    const statSuffix = statsCfg.suffix !== undefined ? statsCfg.suffix : '+';
+
+    const rawTotal = allMovies.length;
     const movieCount = allMovies.filter(m => m.type !== 'series').length;
     const seriesCount = allMovies.filter(m => m.type === 'series').length;
     const fourKCount = allMovies.filter(m => 
@@ -250,13 +256,21 @@ function updateHeroRealtimeStats() {
     ).length;
     const torrentCount = allMovies.filter(m => Boolean(m.torrent && m.torrent.magnet)).length;
 
-    animateHeroCounter('heroTotalCount', totalCount, 1200);
-    animateHeroCounter('hero4KCount', fourKCount, 1200);
-    animateHeroCounter('heroTorrentCount', torrentCount, 1200);
+    // Display counts reflecting the full Telegram + Cloud library scale
+    const displayTotal = baseOffset + rawTotal;
+    const display4K = base4kOffset + fourKCount;
+    const displayTorrent = baseTorrentOffset + torrentCount;
+
+    const displayMovies = Math.floor(baseOffset * 0.78) + movieCount;
+    const displaySeries = Math.floor(baseOffset * 0.22) + seriesCount;
+
+    animateHeroCounter('heroTotalCount', displayTotal, 1200, statSuffix);
+    animateHeroCounter('hero4KCount', display4K, 1200, statSuffix);
+    animateHeroCounter('heroTorrentCount', displayTorrent, 1200, statSuffix);
 
     const labelEl = document.getElementById('heroTotalLabel');
     if (labelEl) {
-        labelEl.textContent = `Combined (${movieCount} Movies • ${seriesCount} Series)`;
+        labelEl.textContent = `Library (${displayMovies.toLocaleString()}+ Movies • ${displaySeries.toLocaleString()}+ Series)`;
     }
 }
 

@@ -200,9 +200,13 @@ async function loadSiteSettings() {
         const baseUrl = document.getElementById('siteBaseUrl');
         const telegram = document.getElementById('telegramRequestLink');
         const text = document.getElementById('requestButtonText');
+        const stats = settings.stats || {};
         if (baseUrl) baseUrl.value = settings.siteBaseUrl || '';
         if (telegram) telegram.value = request.telegramLink || settings.telegramLink || '';
         if (text) text.value = request.buttonText || '📩 Request on Telegram';
+        if (document.getElementById('baseTotalStats')) document.getElementById('baseTotalStats').value = stats.baseTotal !== undefined ? stats.baseTotal : 5000;
+        if (document.getElementById('base4kStats')) document.getElementById('base4kStats').value = stats.base4K !== undefined ? stats.base4K : 1800;
+        if (document.getElementById('baseTorrentStats')) document.getElementById('baseTorrentStats').value = stats.baseTorrents !== undefined ? stats.baseTorrents : 3200;
     } catch (error) {
         console.warn('Site settings load failed:', error);
     }
@@ -216,7 +220,13 @@ async function saveSiteSettings() {
             buttonText: document.getElementById('requestButtonText')?.value.trim() || '📩 Request on Telegram'
         };
         const siteBaseUrl = document.getElementById('siteBaseUrl')?.value.trim().replace(/\/$/, '') || '';
-        await githubAPI.updateSiteSettings({ siteBaseUrl, request });
+        const stats = {
+            baseTotal: parseInt(document.getElementById('baseTotalStats')?.value) || 5000,
+            base4K: parseInt(document.getElementById('base4kStats')?.value) || 1800,
+            baseTorrents: parseInt(document.getElementById('baseTorrentStats')?.value) || 3200,
+            suffix: '+'
+        };
+        await githubAPI.updateSiteSettings({ siteBaseUrl, request, stats });
         showAlert('contentAlert', '✅ Site settings saved! Cloudflare Pages will auto-deploy.', 'success');
     } catch (error) {
         showAlert('contentAlert', `❌ Settings save error: ${error.message}`, 'error');

@@ -34005,6 +34005,12 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 121,
-    "totalTitles": 611
+    "totalTitles": 611,
+    "stats": {
+      "baseTotal": 5000,
+      "base4K": 1800,
+      "baseTorrents": 3200,
+      "suffix": "+"
+    }
   }
 }
