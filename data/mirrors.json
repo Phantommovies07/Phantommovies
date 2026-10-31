@@ -40,14 +40,6 @@
   "streaming": {
     "providers": [
       {
-        "id": "vidlink",
-        "name": "Server 1 (VIP Ultra HD)",
-        "domains": [
-          "https://vidlink.pro"
-        ],
-        "movieTemplate": "/movie/{imdb}?primaryColor=0284c7&autoplay=false"
-      },
-      {
         "id": "cinesrc",
         "name": "Server 1 (VIP Ultra HD)",
         "domains": [
@@ -57,8 +49,16 @@
         "tvTemplate": "/embed/tv/{id}?s={s}&e={e}"
       },
       {
-        "id": "autoembed",
+        "id": "vidsrc_tv",
         "name": "Server 2 (High Speed HD)",
+        "domains": [
+          "https://vidsrc.pm"
+        ],
+        "tvTemplate": "/embed/tv?tmdb={tmdb}&season={s}&episode={e}"
+      },
+      {
+        "id": "autoembed",
+        "name": "Server 3 (Backup Server)",
         "domains": [
           "https://autoembed.co"
         ],
@@ -67,11 +67,19 @@
       },
       {
         "id": "2embed",
-        "name": "Server 3 (Backup Server)",
+        "name": "Server 4 (Global Mirror)",
         "domains": [
           "https://www.2embed.cc"
         ],
         "tvTemplate": "/embedtv/{imdb}&s={s}&e={e}"
+      },
+      {
+        "id": "vidlink",
+        "name": "Server 1 (VIP Ultra HD)",
+        "domains": [
+          "https://vidlink.pro"
+        ],
+        "movieTemplate": "/movie/{imdb}?primaryColor=0284c7&autoplay=false"
       }
     ]
   }

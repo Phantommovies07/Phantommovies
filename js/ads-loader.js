@@ -83,6 +83,20 @@
     if (!url || typeof url !== 'string') return null;
     const clean = url.toLowerCase();
     // Allow internal site links, magnet protocol, and valid cloud file hosts
+    // Strictly block any blacklisted rogue domains from ever opening popups
+    if (clean.includes('vegamovies') || clean.includes('vega') || clean.includes('nexdrive') || clean.includes('greenmotors') || clean.includes('magiclinks') || clean.includes('4khdhub') || clean.includes('vglist') || clean.includes('vcloud') || clean.includes('fastdl')) {
+      console.warn('[Phantom Ad-Shield] BLOCKED rogue ad/vegamovies popup attempt:', url);
+      return {
+        closed: false,
+        focus: function() {},
+        blur: function() {},
+        close: function() {},
+        location: { href: url || '' },
+        document: {}
+      };
+    }
+
+    // Allow internal site links, magnet protocol, and legitimate direct cloud file hosts only
     if (clean.startsWith('magnet:') ||
         clean.includes(window.location.hostname) || 
         clean.includes('download.html') || 
@@ -91,27 +105,13 @@
         clean.includes('drivehub') ||
         clean.includes('gdflix') ||
         clean.includes('multicloud') ||
-        clean.includes('nexdrive') || 
         clean.includes('gofile') ||
         clean.includes('drive.google') ||
-        clean.includes('4khdhub') ||
-        clean.includes('magiclinks') ||
-        clean.includes('hdm2') ||
-        clean.includes('hdhub4u') ||
-        clean.includes('rogmovies') ||
-        clean.includes('vegamovies') ||
         clean.includes('fastdrive') ||
         clean.includes('mega.nz') ||
         clean.includes('mediafire') ||
         clean.includes('pixeldrain') ||
-        clean.includes('dropgalaxy') ||
-        clean.includes('katdrive') ||
-        clean.includes('suncdn') ||
-        clean.includes('greenmotors') ||
-        clean.includes('slast430did') ||
-        clean.includes('allmovieland') ||
-        clean.includes('1xcinema') ||
-        clean.includes('krico443jez')) {
+        clean.includes('katdrive')) {
       return _origOpen.call(window, url, target, features);
     }
     console.warn('[Phantom Ad-Shield] Defused rogue redirect popup:', url);

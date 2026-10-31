@@ -82,7 +82,7 @@ def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[
     return primary_url, servers
 
 def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1) -> List[Dict]:
-    """Generates strictly 3 verified ad-free multi-server TV/web series streaming embed links (CineSrc & AutoEmbed verified)."""
+    """Generates verified TV/web series streaming embed links (CineSrc, VidSrc PM & AutoEmbed)."""
     s = season or 1
     e = episode or 1
     servers = []
@@ -95,17 +95,21 @@ def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1,
     elif t_imdb:
         servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/tv/{t_imdb}?s={s}&e={e}"})
 
-    # Server 2: AutoEmbed
-    if t_imdb:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
-    elif t_id:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/tv/imdb/{t_id}-{s}-{e}"})
+    # Server 2: VidSrc PM (Dedicated TV/Web Series & Multi-Audio CDN)
+    if t_id:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://vidsrc.pm/embed/tv?tmdb={t_id}&season={s}&episode={e}"})
+    elif t_imdb:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://vidsrc.pm/embed/tv?tmdb={t_imdb}&season={s}&episode={e}"})
 
-    # Server 3: 2Embed
+    # Server 3: AutoEmbed
     if t_imdb:
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://www.2embed.cc/embedtv/{t_imdb}&s={s}&e={e}"})
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
     elif t_id:
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://www.2embed.cc/embedtv/{t_id}&s={s}&e={e}"})
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/tv/imdb/{t_id}-{s}-{e}"})
+
+    # Server 4: 2Embed Backup
+    if t_imdb:
+        servers.append({"name": "Server 4 (Global Mirror)", "url": f"https://www.2embed.cc/embedtv/{t_imdb}&s={s}&e={e}"})
 
     return servers
 
@@ -774,7 +778,7 @@ def fetch_real_rogmovies_downloads(title: str) -> List[Dict]:
             text = a.get_text(strip=True)
             if not href.startswith('http') or any(x in href.lower() for x in ['rogmovies.one', 'category', 'tag', 'movies-by-quality', 'telegram', 'twitter', 'facebook']):
                 continue
-            is_dl_host = any(h in href.lower() for h in ['nexdrive', 'hubcloud', 'gofile', 'fastdl', 'drive'])
+            is_dl_host = any(h in href.lower() for h in ['hubcloud', 'hubdrive', 'gofile', 'drive.google', 'pixeldrain']) and not any(b in href.lower() for b in ['nexdrive', 'vega', 'fastdl', 'vcloud', 'greenmotors', 'magiclinks', 'azonahub'])
             if not is_dl_host:
                 continue
 
@@ -854,7 +858,7 @@ def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
         for a in soup_post.find_all('a', href=True):
             href = a['href']
             text = a.get_text(strip=True)
-            if ('magiclinks.lol' in href and re.search(r'/\d+-?\d*/?', href)) or 'short.azonahub' in href or 'gofile.io' in href or 'hubcloud' in href:
+            if ('gofile.io' in href or 'hubcloud' in href or 'hubdrive' in href) and not any(b in href.lower() for b in ['magiclinks', 'azonahub', 'vega', 'nexdrive']):
                 for q_key, q_label, color in QUALITY_ORDER:
                     if q_key in text.lower() and q_label not in seen:
                         size_match = re.search(r'(\d+(?:\.\d+)?\s*(?:GB|MB))', text, re.IGNORECASE)

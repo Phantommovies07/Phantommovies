@@ -390,11 +390,11 @@ function isStreamingUrl(url) {
 
 function isValidDownloadUrl(url) {
     if (!url || typeof url !== 'string') return false;
-    const clean = url.trim();
+    const clean = url.trim().toLowerCase();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
     if (clean.includes('/?s=') || clean.includes('/search/')) return false;
-    if (clean.includes('rogmovies.') || clean.includes('hdhub4u.') || clean.includes('kmmovies.') || clean.includes('vegamovies.')) return false;
+    if (clean.includes('rogmovies.') || clean.includes('hdhub4u.') || clean.includes('kmmovies.') || clean.includes('vegamovies.') || clean.includes('vega') || clean.includes('nexdrive.') || clean.includes('greenmotors.') || clean.includes('magiclinks.') || clean.includes('4khdhub.') || clean.includes('vglist.') || clean.includes('vcloud.') || clean.includes('fastdl.') || clean.includes('azonahub.')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
 }
@@ -724,30 +724,47 @@ async function enrichPage() {
 
             const qLabel = (params.quality || 'HD').toUpperCase();
 
-            // SERVER 1: Primary Direct Cloud Download
+            // SERVER 1: Primary Direct Cloud Download or P2P Magnet
+            const titleQuery = cleanTitleForQuery(params.title || currentMovie.title || '');
+            const torrentSearchUrl = `https://thepiratebay0.org/search/${encodeURIComponent(titleQuery)}/1/99/0`;
+
             if (primaryUrl) {
                 btn1.href = primaryUrl;
                 btn1.target = '_blank';
                 btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${qLabel})`;
+                btn1.querySelector('em').textContent = 'Download';
+            } else if (currentMovie.torrent && currentMovie.torrent.magnet) {
+                btn1.href = currentMovie.torrent.magnet;
+                btn1.target = '_self';
+                btn1.querySelector('span').textContent = `🧲 Direct P2P Torrent / Magnet (Client Launch - ${qLabel})`;
+                btn1.querySelector('em').textContent = 'Instant P2P';
             } else {
-                btn1.href = watchUrl;
-                btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Instant Download - ${qLabel})`;
+                btn1.href = torrentSearchUrl;
+                btn1.target = '_blank';
+                btn1.querySelector('span').textContent = `🔍 Verified Cloud Mirror Search (${qLabel} Direct)`;
+                btn1.querySelector('em').textContent = 'Search';
             }
 
-            // SERVER 2: Secondary Cloud Mirror or Direct Torrent Magnet
+            // SERVER 2: Secondary Cloud Mirror or Torrent Direct Search
             if (secondaryUrl) {
                 btn2.href = secondaryUrl;
                 btn2.target = '_blank';
                 btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
                 btn2.querySelector('em').textContent = 'Download';
-            } else if (currentMovie.torrent && currentMovie.torrent.magnet) {
+            } else if (currentMovie.torrent && currentMovie.torrent.magnet && primaryUrl) {
                 btn2.href = currentMovie.torrent.magnet;
                 btn2.target = '_self';
                 btn2.querySelector('span').textContent = '🧲 Direct P2P Torrent / Magnet (Zero Ads)';
                 btn2.querySelector('em').textContent = 'Instant P2P';
+            } else if (titleQuery) {
+                btn2.href = torrentSearchUrl;
+                btn2.target = '_blank';
+                btn2.querySelector('span').textContent = '⚡ Verified P2P Torrent Network (1337x / TPB)';
+                btn2.querySelector('em').textContent = 'Direct P2P';
             } else {
                 btn2.href = watchUrl;
-                btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Instant Play)';
+                btn2.target = '_self';
+                btn2.querySelector('span').textContent = '⚡ Watch Online in HD (Instant Play)';
                 btn2.querySelector('em').textContent = 'Play';
             }
 

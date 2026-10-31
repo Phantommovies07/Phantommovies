@@ -67,28 +67,47 @@ function initLiveWatcherTicker(movieId, baseViews) {
 // PHANTOM MOVIES - SERIES DETAIL PAGE
 // ═══════════════════════════════════════════════════
 
-// ─── PHANTOM ANTI-HIJACK & UBLOCK POPUNDER DEFENSE ENGINE ───
+// ─── PHANTOM ALWAYS-ACTIVE ANTI-HIJACK & POPUP SHIELD ───
+let isUserNavigatingPhantom = false;
+window.addEventListener('click', (e) => {
+    const navEl = e.target.closest('a, button, input, .nav-item, .search-box, .category-pill, .download-card, .btn-primary, .back-link, .episode-item, .season-btn');
+    if (navEl && !navEl.closest('.player-box')) {
+        isUserNavigatingPhantom = true;
+        setTimeout(() => { isUserNavigatingPhantom = false; }, 3500);
+    }
+}, true);
+
 window.addEventListener('beforeunload', (e) => {
-    if (document.activeElement && (document.activeElement.tagName === 'IFRAME' || document.activeElement.closest('.player-box'))) {
+    if ((typeof isSeriesPlaying !== 'undefined' && isSeriesPlaying && !isUserNavigatingPhantom) ||
+        (document.activeElement && (document.activeElement.tagName === 'IFRAME' || document.activeElement.closest('.player-box')))) {
         e.preventDefault();
         return (e.returnValue = '');
     }
 });
 
+function createMockWindow(url = '') {
+    return {
+        closed: false,
+        focus: function() {},
+        blur: function() {},
+        close: function() {},
+        location: { href: url || '' },
+        document: {}
+    };
+}
+
 // Defuse rogue window.open calls with uBlock Origin-style mock defuser
 const _originalWindowOpen = window.open;
 window.open = function(url, target, features) {
+    if (!url || typeof url !== 'string') return createMockWindow();
+    const clean = url.toLowerCase();
+    if (clean.includes('vegamovies') || clean.includes('vega') || clean.includes('nexdrive') || clean.includes('greenmotors') || clean.includes('magiclinks') || clean.includes('4khdhub') || clean.includes('vglist') || clean.includes('vcloud') || clean.includes('fastdl')) {
+        console.warn('[Phantom Ad-Shield] Neutralized blacklisted rogue popup:', url);
+        return createMockWindow(url);
+    }
     if (document.activeElement && (document.activeElement.tagName === 'IFRAME' || document.activeElement.closest('.player-box'))) {
         console.warn('[Phantom Ad-Shield] Defused unauthorized popup attempt from player embed:', url);
-        // Return dummy mock so anti-adblock check in player thinks popup succeeded!
-        return {
-            closed: false,
-            focus: function() {},
-            blur: function() {},
-            close: function() {},
-            location: { href: url || '' },
-            document: {}
-        };
+        return createMockWindow(url);
     }
     return _originalWindowOpen.call(window, url, target, features);
 };
@@ -98,7 +117,7 @@ window.addEventListener('blur', () => {
     if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
         setTimeout(() => {
             window.focus();
-        }, 120);
+        }, 40);
     }
 });
 
@@ -133,7 +152,7 @@ function playerMarkup(url, poster = '', title = '') {
     if (url) {
         // Complete Sandbox Elimination: Removing sandbox completely resolves 'Please disable the sandbox' across all providers
         // while the page-level Anti-Hijack Guard protects the parent window from rogue ad redirects.
-        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+        return `<iframe class="stream-frame" src="${escapeHTML(url)}" title="${escapeHTML(title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-popups allow-popups-to-escape-sandbox"></iframe>`;
     }
 
     return `<div class="stream-placeholder"><div>▶</div><p>Episode streaming link is not available.</p></div>`;
@@ -156,8 +175,9 @@ const SERVER_LABELS = [
 
 let DEFAULT_TV_PROVIDERS = [
     { id: "cinesrc", name: "Server 1 (VIP Ultra HD)", template: "https://cinesrc.st/embed/tv/{id}?s={s}&e={e}", requiresTmdb: false },
-    { id: "autoembed", name: "Server 2 (High Speed HD)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true },
-    { id: "2embed", name: "Server 3 (Backup Server)", template: "https://www.2embed.cc/embedtv/{imdb}&s={s}&e={e}", requiresImdb: true }
+    { id: "vidsrc", name: "Server 2 (High Speed HD)", template: "https://vidsrc.pm/embed/tv?tmdb={tmdb}&season={s}&episode={e}", requiresTmdb: false },
+    { id: "autoembed", name: "Server 3 (Backup Server)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true },
+    { id: "2embed", name: "Server 4 (Global Mirror)", template: "https://www.2embed.cc/embedtv/{imdb}&s={s}&e={e}", requiresImdb: true }
 ];
 
 async function loadLiveMirrors() {
@@ -207,19 +227,22 @@ function applyLiveMirrors(data) {
 
 function isAllowedStreamUrl(url) {
     if (!url) return false;
-    return /cinesrc\.st|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    return /cinesrc\.st|vidsrc\.pm|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index, url) {
     const combined = ((name || '') + ' ' + (url || '')).toLowerCase();
-    if (combined.includes('cinesrc') || (/server\s*1/i.test(name) && !combined.includes('autoembed') && !combined.includes('2embed')) || index === 0) {
+    if (combined.includes('cinesrc') || (/server\s*1/i.test(name) && !combined.includes('vidsrc') && !combined.includes('autoembed') && !combined.includes('2embed')) || index === 0) {
         return "Server 1 (VIP Ultra HD)";
     }
-    if (combined.includes('autoembed') || (/server\s*2/i.test(name) && !combined.includes('cinesrc') && !combined.includes('2embed')) || index === 1) {
+    if (combined.includes('vidsrc') || (/server\s*2/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed') && !combined.includes('2embed')) || index === 1) {
         return "Server 2 (High Speed HD)";
     }
-    if (combined.includes('2embed') || combined.includes('vidlink') || /server\s*3/i.test(name) || index === 2) {
+    if (combined.includes('autoembed') || (/server\s*3/i.test(name) && !combined.includes('cinesrc') && !combined.includes('vidsrc')) || index === 2) {
         return "Server 3 (Backup Server)";
+    }
+    if (combined.includes('2embed') || /server\s*4/i.test(name) || index === 3) {
+        return "Server 4 (Global Mirror)";
     }
     return SERVER_LABELS[index] || `Server ${index + 1}`;
 }
@@ -304,12 +327,10 @@ function isStreamingUrl(url) {
 
 function isValidDownloadUrl(url) {
     if (!url || typeof url !== 'string') return false;
-    const clean = url.trim();
+    const clean = url.trim().toLowerCase();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
-    if (clean.includes('kmmovies.') || clean.includes('vegamovies.')) return false;
-    if (clean.includes('magiclinks.lol/download/')) return false;
-    if (clean.includes('magiclinks.lol/series/') && clean.includes('?id=')) return false;
+    if (clean.includes('kmmovies.') || clean.includes('vegamovies.') || clean.includes('vega') || clean.includes('nexdrive.') || clean.includes('greenmotors.') || clean.includes('magiclinks.') || clean.includes('4khdhub.') || clean.includes('vglist.') || clean.includes('vcloud.') || clean.includes('fastdl.') || clean.includes('azonahub.')) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
 }
