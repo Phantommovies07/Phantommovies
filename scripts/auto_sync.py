@@ -82,26 +82,30 @@ def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[
     return primary_url, servers
 
 def generate_tv_stream_servers(imdb_id: str, tmdb_id: str = "", season: int = 1, episode: int = 1) -> List[Dict]:
-    """Generates strictly 3 verified ad-free multi-server TV/web series streaming embed links (VidLink prioritized)."""
+    """Generates strictly 3 verified ad-free multi-server TV/web series streaming embed links (CineSrc & AutoEmbed verified)."""
     s = season or 1
     e = episode or 1
     servers = []
     t_id = (tmdb_id or imdb_id or "").strip()
     t_imdb = (imdb_id or tmdb_id or "").strip()
 
-    # Server 1: VidLink
-    if t_imdb:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/tv/{t_imdb}/{s}/{e}?primaryColor=0284c7&autoplay=false"})
-    elif t_id:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/tv/{t_id}/{s}/{e}?primaryColor=0284c7&autoplay=false"})
-
-    # Server 2: CineSrc
+    # Server 1: CineSrc (High Speed & Indian/Asian series CDN)
     if t_id:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://cinesrc.st/embed/tv/{t_id}?s={s}&e={e}"})
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/tv/{t_id}?s={s}&e={e}"})
+    elif t_imdb:
+        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://cinesrc.st/embed/tv/{t_imdb}?s={s}&e={e}"})
 
-    # Server 3: AutoEmbed
+    # Server 2: AutoEmbed
     if t_imdb:
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/tv/imdb/{t_imdb}-{s}-{e}"})
+    elif t_id:
+        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://autoembed.co/tv/imdb/{t_id}-{s}-{e}"})
+
+    # Server 3: 2Embed
+    if t_imdb:
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://www.2embed.cc/embedtv/{t_imdb}&s={s}&e={e}"})
+    elif t_id:
+        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://www.2embed.cc/embedtv/{t_id}&s={s}&e={e}"})
 
     return servers
 

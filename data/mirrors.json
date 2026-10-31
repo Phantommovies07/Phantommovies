@@ -45,12 +45,11 @@
         "domains": [
           "https://vidlink.pro"
         ],
-        "movieTemplate": "/movie/{imdb}?primaryColor=0284c7&autoplay=false",
-        "tvTemplate": "/tv/{imdb}/{s}/{e}?primaryColor=0284c7&autoplay=false"
+        "movieTemplate": "/movie/{imdb}?primaryColor=0284c7&autoplay=false"
       },
       {
         "id": "cinesrc",
-        "name": "Server 2 (High Speed HD)",
+        "name": "Server 1 (VIP Ultra HD)",
         "domains": [
           "https://cinesrc.st"
         ],
@@ -59,13 +58,20 @@
       },
       {
         "id": "autoembed",
-        "name": "Server 3 (Backup Server)",
+        "name": "Server 2 (High Speed HD)",
         "domains": [
-          "https://autoembed.co",
-          "https://player.autoembed.cc"
+          "https://autoembed.co"
         ],
         "movieTemplate": "/movie/imdb/{imdb}",
         "tvTemplate": "/tv/imdb/{imdb}-{s}-{e}"
+      },
+      {
+        "id": "2embed",
+        "name": "Server 3 (Backup Server)",
+        "domains": [
+          "https://www.2embed.cc"
+        ],
+        "tvTemplate": "/embedtv/{imdb}&s={s}&e={e}"
       }
     ]
   }

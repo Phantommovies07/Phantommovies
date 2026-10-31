@@ -155,9 +155,9 @@ const SERVER_LABELS = [
 ];
 
 let DEFAULT_TV_PROVIDERS = [
-    { id: "vidlink", name: "Server 1 (VIP Ultra HD)", template: "https://vidlink.pro/tv/{imdb}/{s}/{e}?primaryColor=0284c7&autoplay=false", requiresImdb: true },
-    { id: "cinesrc", name: "Server 2 (High Speed HD)", template: "https://cinesrc.st/embed/tv/{id}?s={s}&e={e}", requiresTmdb: false },
-    { id: "autoembed", name: "Server 3 (Backup Server)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true }
+    { id: "cinesrc", name: "Server 1 (VIP Ultra HD)", template: "https://cinesrc.st/embed/tv/{id}?s={s}&e={e}", requiresTmdb: false },
+    { id: "autoembed", name: "Server 2 (High Speed HD)", template: "https://autoembed.co/tv/imdb/{imdb}-{s}-{e}", requiresImdb: true },
+    { id: "2embed", name: "Server 3 (Backup Server)", template: "https://www.2embed.cc/embedtv/{imdb}&s={s}&e={e}", requiresImdb: true }
 ];
 
 async function loadLiveMirrors() {
@@ -167,8 +167,8 @@ async function loadLiveMirrors() {
         return;
     }
     try {
-        const cached = sessionStorage.getItem('phantom_mirrors_cache_v2');
-        const cacheTime = sessionStorage.getItem('phantom_mirrors_time_v2');
+        const cached = sessionStorage.getItem('phantom_mirrors_cache_v3');
+        const cacheTime = sessionStorage.getItem('phantom_mirrors_time_v3');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             liveMirrorsConfig = JSON.parse(cached);
             window.PHANTOM_MIRRORS_CACHE = liveMirrorsConfig;
@@ -183,8 +183,8 @@ async function loadLiveMirrors() {
             const data = await resp.json();
             liveMirrorsConfig = data;
             window.PHANTOM_MIRRORS_CACHE = data;
-            sessionStorage.setItem('phantom_mirrors_cache_v2', JSON.stringify(data));
-            sessionStorage.setItem('phantom_mirrors_time_v2', String(Date.now()));
+            sessionStorage.setItem('phantom_mirrors_cache_v3', JSON.stringify(data));
+            sessionStorage.setItem('phantom_mirrors_time_v3', String(Date.now()));
             applyLiveMirrors(data);
         }
     } catch (err) {
@@ -212,13 +212,13 @@ function isAllowedStreamUrl(url) {
 
 function cleanServerLabel(name, index, url) {
     const combined = ((name || '') + ' ' + (url || '')).toLowerCase();
-    if (combined.includes('vidlink') || (/server\s*1/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed')) || index === 0) {
+    if (combined.includes('cinesrc') || (/server\s*1/i.test(name) && !combined.includes('autoembed') && !combined.includes('2embed')) || index === 0) {
         return "Server 1 (VIP Ultra HD)";
     }
-    if (combined.includes('cinesrc') || (/server\s*2/i.test(name) && !combined.includes('vidlink') && !combined.includes('autoembed')) || index === 1) {
+    if (combined.includes('autoembed') || (/server\s*2/i.test(name) && !combined.includes('cinesrc') && !combined.includes('2embed')) || index === 1) {
         return "Server 2 (High Speed HD)";
     }
-    if (combined.includes('autoembed') || combined.includes('2embed') || /server\s*3/i.test(name) || index === 2) {
+    if (combined.includes('2embed') || combined.includes('vidlink') || /server\s*3/i.test(name) || index === 2) {
         return "Server 3 (Backup Server)";
     }
     return SERVER_LABELS[index] || `Server ${index + 1}`;
@@ -709,6 +709,18 @@ function renderSeriesCurtain(episode, activeStream) {
 }
 
 function startSeriesPlayback() {
+    isSeriesPlaying = true;
+    const episode = getCurrentEpisode();
+    const season = getSeasons()[currentSeasonIndex];
+    const activeStream = currentStreams[currentSeriesStreamIndex] || currentStreams[0];
+    const player = document.getElementById('seriesPlayerBox');
+    if (player && activeStream) {
+        const title = (episode?.title) ||
+            (season?.combined ? (season.title || 'Season') + ' — Combined' : currentSeries?.title);
+        player.innerHTML = playerMarkup(activeStream.url, currentSeries?.banner || currentSeries?.poster || '', title);
+        startSeriesFailoverWatchdog(activeStream.url, activeStream.name);
+        updateSeriesFailoverStatus(getSeriesStreamStatusText(activeStream), false);
+    }
     playEpisode(currentEpisodeIndex, true);
 }
 
@@ -853,7 +865,6 @@ function renderEpisodes() {
 
 function playEpisode(index, autoStart = false) {
     currentEpisodeIndex = index;
-    currentSeriesStreamIndex = 0;
     const episode = getCurrentEpisode();
     const season = getSeasons()[currentSeasonIndex];
 
@@ -867,20 +878,23 @@ function playEpisode(index, autoStart = false) {
         currentStreams = normalizeStreams(episode);
     }
 
-    const activeStream = currentStreams[0] || null;
+    // Preserve user selected server index
+    if (currentSeriesStreamIndex >= currentStreams.length) {
+        currentSeriesStreamIndex = 0;
+    }
+    const activeStream = currentStreams[currentSeriesStreamIndex] || currentStreams[0] || null;
     const player = document.getElementById('seriesPlayerBox');
 
     if (autoStart) {
         isSeriesPlaying = true;
-        if (player) {
+        if (player && activeStream) {
             player.innerHTML = playerMarkup(
-                activeStream?.url || '',
+                activeStream.url || '',
                 currentSeries?.banner || currentSeries?.poster || '',
                 episode ? (episode.title || currentSeries.title) : ((season?.title || 'Season') + ' — Full Stream')
             );
-        }
-        if (activeStream) {
             startSeriesFailoverWatchdog(activeStream.url, activeStream.name);
+            updateSeriesFailoverStatus(getSeriesStreamStatusText(activeStream), false);
         }
     } else {
         isSeriesPlaying = false;
@@ -962,26 +976,25 @@ function renderStreamButtons() {
 }
 
 function switchSeriesStream(index, isFailover = false) {
+    if (!currentStreams || !currentStreams[index]) return;
     currentSeriesStreamIndex = index;
     const stream = currentStreams[index];
     const episode = getCurrentEpisode();
     const season = getSeasons()[currentSeasonIndex];
-    if (!stream) return;
+
+    // Immediately start playing the selected server
+    isSeriesPlaying = true;
 
     const player = document.getElementById('seriesPlayerBox');
-    if (isSeriesPlaying || isFailover) {
-        isSeriesPlaying = true;
+    if (player) {
         const title = (episode?.title) ||
             (season?.combined ? (season.title || 'Season') + ' — Combined' : currentSeries.title);
-        if (player) player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', title);
+        player.innerHTML = playerMarkup(stream.url, currentSeries.banner || currentSeries.poster || '', title);
         startSeriesFailoverWatchdog(stream.url, stream.name);
-    } else {
-        if (player) {
-            player.innerHTML = renderSeriesCurtain(episode, stream);
-        }
     }
 
     document.querySelectorAll('#seriesStreamButtons .stream-server-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
+    updateSeriesFailoverStatus(getSeriesStreamStatusText(stream), false);
 }
 
 function renderEpisodeDownloads() {

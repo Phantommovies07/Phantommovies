@@ -195,8 +195,8 @@ async function loadLiveMirrors() {
         return;
     }
     try {
-        const cached = sessionStorage.getItem('phantom_mirrors_cache_v2');
-        const cacheTime = sessionStorage.getItem('phantom_mirrors_time_v2');
+        const cached = sessionStorage.getItem('phantom_mirrors_cache_v3');
+        const cacheTime = sessionStorage.getItem('phantom_mirrors_time_v3');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             liveMirrorsConfig = JSON.parse(cached);
             window.PHANTOM_MIRRORS_CACHE = liveMirrorsConfig;
@@ -211,8 +211,8 @@ async function loadLiveMirrors() {
             const data = await resp.json();
             liveMirrorsConfig = data;
             window.PHANTOM_MIRRORS_CACHE = data;
-            sessionStorage.setItem('phantom_mirrors_cache_v2', JSON.stringify(data));
-            sessionStorage.setItem('phantom_mirrors_time_v2', String(Date.now()));
+            sessionStorage.setItem('phantom_mirrors_cache_v3', JSON.stringify(data));
+            sessionStorage.setItem('phantom_mirrors_time_v3', String(Date.now()));
             applyLiveMirrors(data);
         }
     } catch (err) {
@@ -501,25 +501,20 @@ document.addEventListener('keydown', (e) => {
 
 
 function switchStream(index, isFailover = false) {
-    if (!currentMovie || !currentStreams[index]) return;
+    if (!currentMovie || !currentStreams || !currentStreams[index]) return;
 
     currentStreamIndex = index;
     const stream = currentStreams[index];
 
+    // Immediately start playing the selected stream
+    isPlaybackStarted = true;
+
     const player = document.getElementById('playerBox');
-    if (isPlaybackStarted || isFailover) {
-        isPlaybackStarted = true;
-        if (player) {
-            player.innerHTML = playerMarkup(currentMovie, stream.url);
-        }
-        startFailoverWatchdog(stream.url, stream.name);
-        setWatchProgress(currentMovie.id, 35, { title: currentMovie.title, type: 'movie' });
-    } else {
-        // If not started yet, update curtain without autoplaying
-        if (player) {
-            player.innerHTML = renderMovieCurtain(currentMovie, stream);
-        }
+    if (player) {
+        player.innerHTML = playerMarkup(currentMovie, stream.url);
     }
+    startFailoverWatchdog(stream.url, stream.name);
+    setWatchProgress(currentMovie.id, 35, { title: currentMovie.title, type: 'movie' });
 
     document.querySelectorAll('.stream-server-btn').forEach((btn, i) => {
         btn.classList.toggle('active', i === index);
