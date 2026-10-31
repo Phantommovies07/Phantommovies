@@ -51,12 +51,15 @@ class GitHubAPI {
     // Classic PATs accept BOTH schemes, but fine-grained PATs return 403 when
     // sent with the 'token' scheme. Using 'Bearer' makes both token types work.
     getHeaders() {
-        return {
-            'Authorization': `Bearer ${this.token}`,
+        const headers = {
             'Content-Type': 'application/json',
             'Accept': 'application/vnd.github+json',
             'X-GitHub-Api-Version': '2022-11-28'
         };
+        if (this.token) {
+            headers['Authorization'] = `Bearer ${this.token}`;
+        }
+        return headers;
     }
 
     // Verify authentication.
@@ -113,7 +116,30 @@ class GitHubAPI {
         }
     }
 
-    // Get file content
+    // Helper: Safely encode UTF-8 to base64 (supports multibyte unicode and files > 1 MB)
+    utf8ToBase64(str) {
+        const bytes = new TextEncoder().encode(str);
+        let binary = '';
+        const len = bytes.byteLength;
+        const chunkSize = 0x8000; // 32KB chunks
+        for (let i = 0; i < len; i += chunkSize) {
+            binary += String.fromCharCode.apply(null, bytes.subarray(i, Math.min(i + chunkSize, len)));
+        }
+        return btoa(binary);
+    }
+
+    // Helper: Safely decode base64 to UTF-8 string (supports multibyte unicode and files > 1 MB)
+    base64ToUtf8(base64Str) {
+        const cleanB64 = (base64Str || '').replace(/\s/g, '');
+        const binary = atob(cleanB64);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        return new TextDecoder().decode(bytes);
+    }
+
+    // Get file metadata and content (with auto-resolution for files > 1 MB)
     async getFile(path) {
         try {
             const url = `${this.baseURL}/repos/${this.username}/${this.repo}/contents/${path}`;
@@ -123,17 +149,62 @@ class GitHubAPI {
 
             if (!response.ok) {
                 if (response.status === 404) {
-                    // File doesn't exist, return null
                     return null;
                 }
                 throw new Error(`Failed to get file: ${response.statusText}`);
             }
 
-            return await response.json();
+            const data = await response.json();
+
+            // When a file is > 1MB, GitHub Contents API returns content="" and encoding="none".
+            // Automatically fetch raw blob content via Git Blobs API (supports up to 100 MB!)
+            if ((!data.content || data.encoding === 'none') && data.sha) {
+                try {
+                    const blobUrl = `${this.baseURL}/repos/${this.username}/${this.repo}/git/blobs/${data.sha}`;
+                    const blobResp = await fetch(blobUrl, {
+                        headers: {
+                            ...this.getHeaders(),
+                            'Accept': 'application/vnd.github.raw'
+                        }
+                    });
+                    if (blobResp.ok) {
+                        data.rawContent = await blobResp.text();
+                    }
+                } catch (blobErr) {
+                    console.warn('Auto-fetching raw blob in getFile failed:', blobErr);
+                }
+            }
+
+            return data;
         } catch (error) {
             console.error('Error getting file:', error);
             throw error;
         }
+    }
+
+    // Helper: Read raw file text from repository
+    async getFileText(path) {
+        const fileData = await this.getFile(path);
+        if (!fileData) return null;
+        if (fileData.rawContent) return fileData.rawContent;
+        if (fileData.content && fileData.content.trim().length > 0) {
+            try {
+                return this.base64ToUtf8(fileData.content);
+            } catch (e) {
+                console.warn('base64ToUtf8 error in getFileText:', e);
+            }
+        }
+        if (fileData.download_url) {
+            try {
+                const dlResp = await fetch(fileData.download_url + '?t=' + Date.now(), {
+                    headers: this.token ? { 'Authorization': `Bearer ${this.token}` } : {}
+                });
+                if (dlResp.ok) return await dlResp.text();
+            } catch (e) {
+                console.warn('download_url error in getFileText:', e);
+            }
+        }
+        return null;
     }
 
     // Update or create file
@@ -141,15 +212,23 @@ class GitHubAPI {
         try {
             const url = `${this.baseURL}/repos/${this.username}/${this.repo}/contents/${path}`;
             
+            // If sha is not provided, fetch current sha
+            let targetSha = sha;
+            if (!targetSha) {
+                const currentFile = await this.getFile(path);
+                if (currentFile && currentFile.sha) {
+                    targetSha = currentFile.sha;
+                }
+            }
+
             const body = {
                 message: message,
-                content: btoa(unescape(encodeURIComponent(content))), // Encode to base64
+                content: this.utf8ToBase64(content),
                 branch: 'main'
             };
 
-            // If file exists, include SHA
-            if (sha) {
-                body.sha = sha;
+            if (targetSha) {
+                body.sha = targetSha;
             }
 
             const response = await fetch(url, {
@@ -170,12 +249,11 @@ class GitHubAPI {
         }
     }
 
-    // Get current content.json
+    // Get current content.json (handles files > 1 MB cleanly)
     async getContent() {
         const fileData = await this.getFile(this.contentPath);
         
         if (!fileData) {
-            // Return default structure if file doesn't exist
             return {
                 movies: [],
                 settings: {
@@ -189,9 +267,65 @@ class GitHubAPI {
             };
         }
 
-        // Decode base64 content
-        const content = decodeURIComponent(escape(atob(fileData.content)));
-        return JSON.parse(content);
+        let rawText = fileData.rawContent;
+
+        // Case 1: Try decoding base64 if present (for files <= 1MB)
+        if (!rawText && fileData.content && fileData.content.trim().length > 0) {
+            try {
+                rawText = this.base64ToUtf8(fileData.content);
+            } catch (decodeErr) {
+                console.warn('Direct base64 decode failed:', decodeErr);
+            }
+        }
+
+        // Case 2: Fetch raw blob via Git Blobs API if file was > 1MB
+        if (!rawText && fileData.sha) {
+            try {
+                const blobUrl = `${this.baseURL}/repos/${this.username}/${this.repo}/git/blobs/${fileData.sha}`;
+                const blobResp = await fetch(blobUrl, {
+                    headers: {
+                        ...this.getHeaders(),
+                        'Accept': 'application/vnd.github.raw'
+                    }
+                });
+                if (blobResp.ok) {
+                    rawText = await blobResp.text();
+                }
+            } catch (blobErr) {
+                console.warn('Git blobs API fetch error:', blobErr);
+            }
+        }
+
+        // Case 3: Fallback to download_url
+        if (!rawText && fileData.download_url) {
+            try {
+                // Note: raw.githubusercontent.com is a public CDN; do not send Authorization Bearer header as it causes 404
+                const dlResp = await fetch(fileData.download_url + '?t=' + Date.now());
+                if (dlResp.ok) {
+                    rawText = await dlResp.text();
+                }
+            } catch (dlErr) {
+                console.warn('download_url fetch error:', dlErr);
+            }
+        }
+
+        // Case 4: Final fallback to local static asset
+        if (!rawText) {
+            try {
+                const localResp = await fetch('data/content.json?t=' + Date.now());
+                if (localResp.ok) {
+                    return await localResp.json();
+                }
+            } catch (localErr) {
+                console.warn('Local data/content.json fetch error:', localErr);
+            }
+        }
+
+        if (!rawText || !rawText.trim()) {
+            throw new Error('Retrieved content is empty or unreadable.');
+        }
+
+        return JSON.parse(rawText);
     }
 
     // Add new movie

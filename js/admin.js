@@ -1417,9 +1417,9 @@ async function loadMirrorHealth() {
         }
 
         if (!mirrorsData && githubAPI.username) {
-            const file = await githubAPI.getFile('data/mirrors.json');
-            if (file && file.content) {
-                mirrorsData = JSON.parse(decodeURIComponent(escape(atob(file.content))));
+            const rawMirrors = await githubAPI.getFileText('data/mirrors.json');
+            if (rawMirrors) {
+                mirrorsData = JSON.parse(rawMirrors);
             }
         }
 
