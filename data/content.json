@@ -1,6 +1,228 @@
 {
   "movies": [
     {
+      "id": "1794196484382",
+      "type": "movie",
+      "title": "Awe!",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjRmNDI3M2UtNTNkYS00M2NkLWFjZjktN2M2YjVmOTVhOTYyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BZjRmNDI3M2UtNTNkYS00M2NkLWFjZjktN2M2YjVmOTVhOTYyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt7797658?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt7797658?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt7797658"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt7797658"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "340MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmVOTXFqS295dkJxTkwxSUxjMlVybC9laXhZcWo3VUtGc3VZV2xSd0JWM0k9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "940MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnV0VUVTVXVVTXFITzIxSHk0UFRkT3FZZHNiNGpUVVRaVU9EZHFxS1hXWDA9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmlQSitWcmE3SkVhdFNmTmRTMGV4QllDSUQ0NEJLL0VXV25LckdWaytveUE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Awe!+2018+trailer",
+      "description": "Awe! (2018) starring Kajal Aggarwal, Nithya Menen.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 19442,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt7797658",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T03:54:42.778255+00:00",
+      "updatedAt": "2026-11-09T03:54:42.778255+00:00"
+    },
+    {
+      "id": "1794196486793",
+      "type": "movie",
+      "title": "Raid 2",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTI4YWMzOGYtODkzYS00NTEyLWFmMzYtMzJkOGZmOWZlNThhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTI4YWMzOGYtODkzYS00NTEyLWFmMzYtMzJkOGZmOWZlNThhXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt28089700?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt28089700?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt28089700"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt28089700"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnFiQWlZYk5oRjdLb0FTRVBkSHp4b1RSVnlBWTdKUnR2L1dPTkd3RG5ENk09",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "940MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/2651706982",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "470MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/bbHFznbrr7OGsy9m7suwQVl0k",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Raid+2+2025+trailer",
+      "description": "Raid 2 (2025) starring Ajay Devgn, Riteish Deshmukh.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14674,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt28089700",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T03:54:39.993638+00:00",
+      "updatedAt": "2026-11-09T03:54:39.993638+00:00"
+    },
+    {
+      "id": "1794196466048",
+      "type": "movie",
+      "title": "2.0",
+      "genre": "Feature",
+      "year": 2018,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_classic",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt5080556?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt5080556?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt5080556"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt5080556"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "11.8GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmJlSUpDaTlPbmN2a2RMVmNkUWtOSnVJRGlsMlM4Q0l0U1RiVXpiUXUraUk9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "5.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmJOdDdIaENLZk1oSTcyQXhFMDdhYm1vR3J4OTdCcDZDRk02NHhoeDd1OUU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qnk5cmtKMHhYdDBFUFRCZDkwYnh5aExzZzg0ZHM4azhXSE5WU1dCZWJFSTQ9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=2.0+2018+trailer",
+      "description": "2.0 (2018) starring Rajinikanth, Akshay Kumar.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 10487,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5080556",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T03:54:19.779368+00:00",
+      "updatedAt": "2026-11-09T03:54:19.779368+00:00"
+    },
+    {
       "id": "1794180028341",
       "type": "series",
       "title": "Marshals",
@@ -56794,7 +57016,36 @@
           "url": "https://autoembed.co/movie/imdb/tt27540542"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "530MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/zMIL8xev9Yh6WOaggOriNIvuD",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "830MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/2054863923",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qi9WUC8ya0YyL2RDaHlNQm5JOGJlZjBnSWNLTnJrS3BWd1pYRmx0VUdpd3M9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Lucky+Baskhar+2024+trailer",
       "description": "Lucky Baskhar (2024) starring Dulquer Salmaan, Meenaakshi Chaudhary.",
@@ -56839,7 +57090,36 @@
           "url": "https://autoembed.co/movie/imdb/tt27118357"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "640MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjRsbmJvWVF5emhqNThsWXlrT05yNFlXS2IwaE1xajF3YnpxQmNVSHFzaHc9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/2374042152",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmpXaHFjc2pHYy9pK3JjcjhzSWhSV1ZrNDZzYklsR2ViWUM2MERFZnFZcG89",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Amaran+2024+trailer",
       "description": "Amaran (2024) starring Sivakarthikeyan, Sai Pallavi.",
@@ -56884,7 +57164,36 @@
           "url": "https://autoembed.co/movie/imdb/tt26758372"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "570MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/S1INYyYsYu5JAvaAQW5dLMW5N",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "940MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/1836836907",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlFSR0pKZVJFVldtSitYWlpYamhWRm1JNy9yTWdyVEhpcWo5YWtQVENMbVU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Meiyazhagan+2024+trailer",
       "description": "Meiyazhagan (2024) starring Karthi, Arvind Swamy.",
@@ -56929,7 +57238,36 @@
           "url": "https://autoembed.co/movie/imdb/tt23018924"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "550MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/i787aZKQGfwDS5yzHpZQgfAuD",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnhsSkNNdW9MSnFWRFdZUk0yYWVMTVB0bjI2ZzN0cTBSTW16QW8vTFE5ZUU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnBmSW45eUlVc2diS09GOUJnVUs5RVZwb0tnZnpra3RZYzV3dG9kQ2FBTEk9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Thangalaan+2024+trailer",
       "description": "Thangalaan (2024) starring Vikram, Parvathy Thiruvothu.",
@@ -56974,7 +57312,36 @@
           "url": "https://autoembed.co/movie/imdb/tt26233598"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "500MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/LziS1fMoyRl9be7G7OhOU8eiY",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "900MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkVTRXZWZTkzZ1pPWjlmRUZGZU15Z3BVbnZobFJsRGRxell6STZLYThZUm89",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlJJdGREb0diWUI4SWFrV0dEQXM2VjJaUm5mTi91alZxem90WUhWUTZZVGs9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Raayan+2024+trailer",
       "description": "Raayan (2024) starring Dhanush, Aparna Balamurali.",
@@ -57019,7 +57386,36 @@
           "url": "https://autoembed.co/movie/imdb/tt8066940"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnUwTlR0VS9PYmphdSsyM3cvTXFqdzZUUGNxS3dLcXNIZ1RoUmNaeGJtYW89",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://playdrive.vip/e/AQHJ0koAAkEJ5w/s-05/ep-01",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkRrT2lXS2Z1SUxlbmc3NmR5V3hqS20wTGxsWGtBRlJQY0ZUMmorcXIxZUE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Indian+2+2024+trailer",
       "description": "Indian 2 (2024) starring Kamal Haasan, Siddharth.",
@@ -57064,7 +57460,36 @@
           "url": "https://autoembed.co/movie/imdb/tt26548265"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "490MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/CNO52GqXMj3Vtiai1y0Twc8Dm",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "870MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/2148857444",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QklZemhYLy9nVkFJdDFQTUpFSVVISUFLRUFlM0haMFN5L2RZNXBoYmpYR1U9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Maharaja+2024+trailer",
       "description": "Maharaja (2024) starring Vijay Sethupathi, Anurag Kashyap.",
@@ -57109,7 +57534,36 @@
           "url": "https://autoembed.co/movie/imdb/tt1860353"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "550MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.wiki/file/qTCsWxKFStr7c6ckF7pLH9510",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "900MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlF1VWpkMTBRaVZJclVKSXIzNHcwMi8rUE9ta1ZVTmlGaFoycTVxN0lOa2s9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QitPT2lwaWlTY0hnZ1hDeW00SnlmQmdUQW1NMmhGbVowaC9YR3NQSGk3R3c9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Turbo+2013+trailer",
       "description": "Turbo (2013) starring Ryan Reynolds, Paul Giamatti.",
@@ -63184,8 +63638,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 517,
-    "lastUpdated": "2026-11-08T23:20:57.875018+00:00",
+    "totalMovies": 520,
+    "lastUpdated": "2026-11-09T03:54:45.362170+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -63218,7 +63672,7 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 213,
-    "totalTitles": 730,
+    "totalTitles": 733,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
