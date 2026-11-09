@@ -1,6 +1,242 @@
 {
   "movies": [
     {
+      "id": "1794268523602",
+      "type": "movie",
+      "title": "All the Pretty Horses",
+      "genre": "Feature",
+      "year": 2000,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWM2ZWVjMWUtODQzMy00MmEzLThjZDItMjUwMjgyNTAyYTYyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMWM2ZWVjMWUtODQzMy00MmEzLThjZDItMjUwMjgyNTAyYTYyXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt0149624?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt0149624?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt0149624"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt0149624"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "480p SD",
+          "size": "460MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/0BnVEoos5WT2GX35A8dqYijN7",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlBiV2pYQnlUTW1OQ3NnVXExazRrTmM1aHpDaWhvdnBkcVlUYXZTWHJQN0E9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.4GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmtGY056R3k5bHZJVDRTbUUvZ1JwK0lQdC9YeXlNdnBCMkd3dE9CYjN6cEE9",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=All+the+Pretty+Horses+2000+trailer",
+      "description": "All the Pretty Horses (2000) starring Matt Damon, Penélope Cruz.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12752,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0149624",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T23:55:18.027854+00:00",
+      "updatedAt": "2026-11-09T23:55:18.027854+00:00"
+    },
+    {
+      "id": "1794268522102",
+      "type": "movie",
+      "title": "The Good Lawyer",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjVhODFmODItMWRjNi00ZjNjLTg1YmQtMjdlZTZkYWFiNjJlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjVhODFmODItMWRjNi00ZjNjLTg1YmQtMjdlZTZkYWFiNjJlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt39453578?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt39453578?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt39453578"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt39453578"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "480p SD",
+          "size": "470MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/AuttheARRzjXfxwye4zlZ1Enw",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmd6dmhMbEFZYy9xVjhTSEY5MXpkVEFQOGpoRjdUZ2lXS1RuZU1DcjBHNVk9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnRVTCtZNjNCTjJNSmhjQ0pZakZ6eDgydG5HUElYS1cyQll4T2FOU1BqdFE9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "22.4GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/22063887771",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Good+Lawyer+2026+trailer",
+      "description": "The Good Lawyer (2026) starring Mélanie Laurent, Carole Bouquet.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 17314,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt39453578",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T23:55:17.400247+00:00",
+      "updatedAt": "2026-11-09T23:55:17.400247+00:00"
+    },
+    {
+      "id": "1794268521878",
+      "type": "movie",
+      "title": "Parasakthi",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjNiOWFlMGEtZjhmMC00NTkwLWIxNmUtMDUxOTM0NTE2ZDFjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNjNiOWFlMGEtZjhmMC00NTkwLWIxNmUtMDUxOTM0NTE2ZDFjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt35019998?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt35019998?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt35019998"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt35019998"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "480p SD",
+          "size": "630MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/pD9g9FRVqyGpNGwMYJ4aH1q0X",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2663868981",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/3705507637",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "6.9GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/6624918880",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Parasakthi+2026+trailer",
+      "description": "Parasakthi (2026) starring Sivakarthikeyan, Ravi Mohan.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 18506,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt35019998",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T23:55:15.549784+00:00",
+      "updatedAt": "2026-11-09T23:55:15.549784+00:00"
+    },
+    {
       "id": "1793720408191",
       "type": "series",
       "title": "Family Full House with Rohit Sharma.",
@@ -59148,7 +59384,36 @@
           "url": "https://www.2embed.cc/embedtv/tt9432978&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "870MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJoMk4ycXV6NDdsbWZIVFhPS3Z2VkxUOTlzQlRuRWtXaWdpdUkxQ0JVd009",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJDNmZjT2VlMGNoODJUbGs4RXlBd00yYkkvOWVlUmhGUS9Wc2tySGRkRGc9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDk5WmozZ2dOb3EvODJ1N1RXZ2N6alQxdk4wdlBLN0F3ZjUzUFNLZ3QzdmhkdkUxZEp1UkJ6UURWTDlNS1cydEtNcjZGRXZydnpiUjREbUd0RnZhQjk=",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59216,7 +59481,36 @@
           "url": "https://www.2embed.cc/embedtv/tt9680440&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qkhyd0JjTUx6a2thNlp5emRjWEtVOVFFMjlTbFVmK2VONTlTV1dBbThNTTA9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlMzbW5xalVNL2VDQS9HN2htUkd6b0dJMDluNWdjRFA5QWtGQ1BjZVlrcUU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlpxbEpSZHV4b2tDamVYcXFPRWI3UFpPYkJPZjEremtMTHlCaGxScHhtemc9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59284,7 +59578,36 @@
           "url": "https://www.2embed.cc/embedtv/tt12392504&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.6GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QitFdzZUTW1YZk83MTF4VVZucmtEQmhwaXhNTWxvb1d1eG1zQ2JmcGRZaU09",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNXRpK1hjaXRoUWNEeTVsQmtRUDBCVHd5WTZqdHcxM1psa1ZDZzZMbFlKRVdGcFdFR0tCdS8vME1GQkJ0Z3JTL1dobWI1UlpVRGl6bTM2WmZocllMNkU9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDk5WmozZ2dOb3EvODJ1N1RXZ2N6ajNHWnZFbEFrZEVzVFFYMlo5cFZMN3EzdkNqNmVTdkpYSC9NeE5BcklvSkU9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59352,7 +59675,36 @@
           "url": "https://www.2embed.cc/embedtv/tt12004706&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnRoNWxaRzhJVU5JQnZnTFo0VzFVTjBqSkpOT3RXUm16Vml2SVdIellMUFE9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.8GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlRxY2NHVEhyRE5RWTF6REJ4eFI0bFVCQ0YwaDZkamNmdWFpKzFYOHVhRjA9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59420,7 +59772,36 @@
           "url": "https://www.2embed.cc/embedtv/tt9544034&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnNGdG5TdlQrVEx2a2JIK3o4cXpCbFRzZTFHMm1NcDg3aHpNeHBrM1ZCT2s9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/3651472243",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59488,7 +59869,36 @@
           "url": "https://www.2embed.cc/embedtv/tt6077448&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnM5QVh5YkpZNHhTWjhCNW1QT0x3ZE5kZG0wYjBDUGFGSlpZaG1IejYzRzA9",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "3.5GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qmt2RnpUNTZvVGpMZWpITlZOQ0QzOW1ma0Q1VS9OSGlSUjkvY1NkUjVKSzQ9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZ0Vk9YeWFFd1VoWVZ6RFB0N1Z5M29uWXM2OXpBQVZLaS9HRWFoVVM0Zzg9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59556,7 +59966,36 @@
           "url": "https://www.2embed.cc/embedtv/tt6473300&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "750MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/JZ1g9Nmax0tgKnubILv9co6ZC",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/2180347772",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/1946831881",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -59624,7 +60063,36 @@
           "url": "https://www.2embed.cc/embedtv/tt5747326&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlJXQTc5dmZtSkUyREZwTFQ4VXFZc3lPNVhqVG0rT2x4aXMxRXcxeXZITW89",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QllmSEJYUkdZMmphWDQrOWJ1bE4yZVpXQkFHRjhpZFNHRmt2V3lTZ2xHVk09",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDk5WmozZ2dOb3EvODJ1N1RXZ2N6andzOE13YTYyRzFsTEdaYk1ZWHpNR004WUFlMFFWZHhaWDVDTy9ST0llSlk9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -64317,8 +64785,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 520,
-    "lastUpdated": "2026-11-09T19:57:08.163464+00:00",
+    "totalMovies": 523,
+    "lastUpdated": "2026-11-09T23:55:42.278143+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -64351,7 +64819,7 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 215,
-    "totalTitles": 735,
+    "totalTitles": 738,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
