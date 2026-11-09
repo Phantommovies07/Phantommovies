@@ -1838,9 +1838,14 @@ S1E1 | Download | 720p | 900MB | https://..."></textarea>
                             <h2>⚙️ Site Configuration & Scaled Stats</h2>
                             <p>Manage Telegram request links, base URL, sitemap, and live animated library statistics.</p>
                         </div>
-                        <button type="button" class="btn-small btn-secondary" onclick="checkBrokenLinks()">
-                            🔗 Scan Broken Links
-                        </button>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <button type="button" class="btn-small btn-secondary" onclick="checkBrokenLinks()">
+                                🔍 Scan Links
+                            </button>
+                            <button type="button" class="btn-small btn-primary" onclick="autoHealCatalogLinks()">
+                                🛡️ Auto-Heal Broken Links
+                            </button>
+                        </div>
                     </div>
 
                     <div class="grid-2">

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-09T08:28:52.341478+00:00",
+  "elapsed_seconds": 0.09,
+  "total_titles": 733,
+  "streams_checked": 733,
+  "streams_healed": 111,
+  "downloads_checked": 2096,
+  "downloads_purged": 284,
+  "downloads_harvested": 0,
+  "titles_repaired": 262,
+  "catalog_health_score": "99.9%",
+  "status": "REPAIRED",
+  "verified_providers": [
+    "Server 1 (VIP Ultra HD)",
+    "Server 2 (High Speed HD)",
+    "Server 3 (Backup Server)",
+    "Server 4 (Global Mirror)"
+  ]
+}

@@ -1,0 +1,61 @@
+name: 🛡️ Phantom Sentinel 24x7 Link Healer
+
+on:
+  schedule:
+    # Runs every 3 hours automatically (24x7 uninterrupted background surveillance)
+    - cron: '30 */3 * * *'
+  workflow_dispatch:
+    # Allows 1-click manual trigger anytime from GitHub Actions tab or Mobile App
+    inputs:
+      harvest_downloads:
+        description: 'Auto-harvest cloud download links for unenriched titles'
+        required: false
+        default: '15'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  link-sentinel:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Check out repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🛡️ Run Phantom Sentinel Link Health & Self-Healing Engine
+        run: |
+          LIMIT="${{ github.event.inputs.harvest_downloads }}"
+          if [ -z "$LIMIT" ]; then
+            LIMIT="15"
+          fi
+          echo "Starting 24x7 full catalog link audit with download harvest limit: $LIMIT..."
+          python scripts/link_sentinel.py --harvest-limit "$LIMIT"
+
+      - name: 🚀 Commit and Push Repaired Links to Main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/content.json data/index.json data/items/ data/health_report.json
+          
+          if git diff --staged --quiet; then
+            echo "✨ All links across full catalog are 100% healthy. No broken links found."
+          else
+            git commit -m "🏥 Phantom Sentinel: Auto-repaired broken links & updated catalog health [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main
+            echo "🎉 Successfully pushed self-healed catalog to GitHub Pages!"
+          fi
