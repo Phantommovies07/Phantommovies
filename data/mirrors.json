@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T17:32:40.613503+00:00",
+  "updatedAt": "2026-11-10T15:58:58.808183+00:00",
   "scrapers": {
     "hdhub4u": {
       "active": "https://new10.hdhub4u.cl",
@@ -15,7 +15,7 @@
       "status": "online"
     },
     "kmmovies": {
-      "active": "https://kmmovies.autos",
+      "active": "https://kmmovies.beer",
       "mirrors": [
         "https://kmmovies.baby",
         "https://kmmovies.pink",
