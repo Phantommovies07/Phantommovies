@@ -333,9 +333,25 @@ function isValidDownloadUrl(url) {
     const clean = url.trim().toLowerCase();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
-    if (clean.includes('kmmovies.') || clean.includes('vegamovies.') || clean.includes('vega') || clean.includes('nexdrive.') || clean.includes('greenmotors.') || clean.includes('magiclinks.') || clean.includes('4khdhub.') || clean.includes('vglist.') || clean.includes('vcloud.') || clean.includes('fastdl.') || clean.includes('azonahub.')) return false;
+    if (/kmmovies\.[a-z]+\/?$/i.test(clean) || /vegamovies\.[a-z]+\/?$/i.test(clean) || /category|genre|tag|disclaimer/i.test(clean)) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
+}
+
+function getQualityClass(quality = '') {
+    const q = quality.toLowerCase();
+    if (q.includes('4k') || q.includes('2160') || q.includes('uhd')) return 'q-4k';
+    if (q.includes('1080')) return 'q-1080p';
+    if (q.includes('720')) return 'q-720p';
+    return 'q-480p';
+}
+
+function getQualityAccent(quality = '') {
+    const q = quality.toLowerCase();
+    if (q.includes('4k') || q.includes('2160') || q.includes('uhd')) return { accent: '#c084fc', glow: 'rgba(168, 85, 247, 0.25)', label: '4K Ultra HD' };
+    if (q.includes('1080')) return { accent: '#34d399', glow: 'rgba(16, 185, 129, 0.25)', label: '1080p Full HD' };
+    if (q.includes('720')) return { accent: '#38bdf8', glow: 'rgba(14, 165, 233, 0.25)', label: '720p HD' };
+    return { accent: '#fbbf24', glow: 'rgba(245, 158, 11, 0.25)', label: '480p SD' };
 }
 
 function generateEpisodeFallbackDownloads(series, seasonNum = 1, epNum = 1) {
@@ -1035,21 +1051,45 @@ function renderEpisodeDownloads() {
 
     let cards = downloads.map((item, index) => {
         const quality = item.quality || item.label || `Option ${index + 1}`;
+        const qClass = getQualityClass(quality);
+        const qMeta = getQualityAccent(quality);
+        const size = item.size || 'Cloud Fast';
         const server = item.server || 'Fast Cloud';
-        const size = item.size || '';
-        const color = item.color || '#5bc4f5';
+        const codec = item.codec || (qClass === 'q-4k' ? '10-Bit HEVC x265 • Atmos 5.1' : (qClass === 'q-1080p' ? 'Full HD x264 • Dual Audio Hindi' : 'Standard WebRip • Fast Stream'));
+
         const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
+        const directUrl = item.direct_url || '';
+        const multiUrl = item.multi_url || rawUrl;
         const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
         const sNum = currentSeasonIndex + 1;
-        const targetUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series`;
 
-        return `<a class="download-card" href="${targetUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:${escapeHTML(color)}">
-            <div>
-                <strong>${escapeHTML(quality)}</strong>
-                <span>${escapeHTML([server, size].filter(Boolean).join(' • '))}</span>
+        // Button 1: Direct Download
+        const directDlLink = directUrl || `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=direct`;
+
+        // Button 2: Multi Download
+        const multiDlLink = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=multi`;
+
+        return `
+            <div class="dl-quality-card" style="--card-accent:${qMeta.accent}; --card-glow:${qMeta.glow};">
+                <div class="dl-card-header">
+                    <div class="dl-card-title-group">
+                        <span class="dl-quality-badge ${qClass}">💎 ${escapeHTML(quality)}</span>
+                        <span class="dl-size-tag">📦 ${escapeHTML(size)}</span>
+                    </div>
+                    <span class="dl-codec-info">${escapeHTML(codec)}</span>
+                </div>
+                <div class="dl-actions-row">
+                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" title="Direct Fast Download (Final Link)">
+                        <span>⚡</span>
+                        <span>Direct Download</span>
+                    </a>
+                    <a class="btn-dl-action btn-dl-multi" href="${multiDlLink}" target="_blank" rel="noopener noreferrer" title="Multi Cloud Mirrors (GDrive, HubCloud, Mega, Pixeldrain)">
+                        <span>🌐</span>
+                        <span>Multi Download</span>
+                    </a>
+                </div>
             </div>
-            <em>Download ⬇</em>
-        </a>`;
+        `;
     });
 
     if (currentSeries?.torrent && currentSeries.torrent.magnet) {
@@ -1057,24 +1097,30 @@ function renderEpisodeDownloads() {
         const seedersText = t.seeders ? `${t.seeders} Seeders Active` : 'High Speed P2P';
         const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
         const sNum = currentSeasonIndex + 1;
-        const targetUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=4K/1080p&size=${encodeURIComponent(t.size || '')}&ep=${epNum}&s=${sNum}&type=series`;
         cards.push(`
-            <a class="download-card" href="${targetUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:#8b5cf6; border-color:rgba(139,92,246,0.4); background:linear-gradient(135deg, rgba(139,92,246,0.15), rgba(99,102,241,0.08));">
-                <div>
-                    <strong>🧲 Direct Torrent & Magnet (4K / 1080p)</strong>
-                    <span>${escapeHTML([t.size, seedersText, 'P2P Instant Client'].filter(Boolean).join(' • '))}</span>
+            <div class="dl-quality-card" style="--card-accent:#a855f7; --card-glow:rgba(168, 85, 247, 0.3);">
+                <div class="dl-card-header">
+                    <div class="dl-card-title-group">
+                        <span class="dl-quality-badge q-4k">🧲 P2P TORRENT / MAGNET</span>
+                        <span class="dl-size-tag">📦 ${escapeHTML(t.size || 'Season Pack')}</span>
+                    </div>
+                    <span class="dl-codec-info">${escapeHTML(seedersText)} • Instant Client Launch</span>
                 </div>
-                <em>Magnet 🧲</em>
-            </a>
+                <div class="dl-actions-row">
+                    <a class="btn-dl-action btn-dl-direct q-4k" href="${escapeHTML(t.magnet)}" target="_self" title="Open in Torrent Client">
+                        <span>🧲</span>
+                        <span>Open Magnet</span>
+                    </a>
+                    <a class="btn-dl-action btn-dl-multi" href="download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || '')}&quality=Torrent&ep=${epNum}&s=${sNum}&type=series" target="_blank" title="Torrent Details & Trackers">
+                        <span>📋</span>
+                        <span>Copy / Mirrors</span>
+                    </a>
+                </div>
+            </div>
         `);
     }
 
     grid.innerHTML = cards.join('');
-
-    grid.querySelectorAll('.download-card').forEach(link => {
-        link.addEventListener('click', (event) => {
-        });
-    });
 }
 
 function showError(message) {

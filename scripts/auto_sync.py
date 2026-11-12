@@ -766,6 +766,49 @@ def fetch_real_hdhub4u_downloads(title: str) -> List[Dict]:
     except Exception:
         return []
 
+def fetch_rogmovies_playdrive_stream(title: str) -> Optional[str]:
+    """Finds PlayDrive (Multi-Audio VIP Hindi) streaming link from RogMovies for a title."""
+    if not title or not BeautifulSoup:
+        return None
+    try:
+        base_url = get_active_rog_mirror()
+        clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
+        clean_t = ' '.join(clean_t.split()[:3])
+        api_url = f"{base_url}/ts-search.php?q={requests.utils.quote(clean_t)}"
+        r = requests.get(api_url, headers=HEADERS, timeout=4)
+        post_url = None
+        if r.status_code == 200:
+            hits = r.json().get('hits', [])
+            if hits:
+                permalink = hits[0].get('document', {}).get('permalink', '')
+                if permalink:
+                    import urllib.parse
+                    post_url = urllib.parse.urljoin(base_url, permalink)
+
+        if not post_url:
+            s_url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
+            r = requests.get(s_url, headers=HEADERS, timeout=4)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                for a in soup.find_all('a', href=True):
+                    if clean_t.split()[0].lower() in a['href'].lower() and not any(x in a['href'] for x in ['category', 'tag']):
+                        post_url = a['href']
+                        break
+
+        if not post_url:
+            return None
+
+        r_post = requests.get(post_url, headers=HEADERS, timeout=5)
+        if r_post.status_code == 200:
+            psoup = BeautifulSoup(r_post.text, 'html.parser')
+            for a in psoup.find_all('a', href=True):
+                href = a['href']
+                if 'playdrive.vip/e/' in href:
+                    return href.strip()
+    except Exception:
+        pass
+    return None
+
 def fetch_real_rogmovies_downloads(title: str) -> List[Dict]:
     """Scrapes high-speed cloud download mirrors (NexDrive, HubCloud, etc.) via ROG Movies Typesense API."""
     if not title or not BeautifulSoup:
@@ -837,6 +880,49 @@ def fetch_real_rogmovies_downloads(title: str) -> List[Dict]:
         return downloads
     except Exception:
         return []
+
+def fetch_rogmovies_playdrive_stream(title: str) -> Optional[str]:
+    """Finds PlayDrive (Multi-Audio VIP Hindi) streaming link from RogMovies for a title."""
+    if not title or not BeautifulSoup:
+        return None
+    try:
+        base_url = get_active_rog_mirror()
+        clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
+        clean_t = ' '.join(clean_t.split()[:3])
+        api_url = f"{base_url}/ts-search.php?q={requests.utils.quote(clean_t)}"
+        r = requests.get(api_url, headers=HEADERS, timeout=4)
+        post_url = None
+        if r.status_code == 200:
+            hits = r.json().get('hits', [])
+            if hits:
+                permalink = hits[0].get('document', {}).get('permalink', '')
+                if permalink:
+                    import urllib.parse
+                    post_url = urllib.parse.urljoin(base_url, permalink)
+
+        if not post_url:
+            s_url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
+            r = requests.get(s_url, headers=HEADERS, timeout=4)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                for a in soup.find_all('a', href=True):
+                    if clean_t.split()[0].lower() in a['href'].lower() and not any(x in a['href'] for x in ['category', 'tag']):
+                        post_url = a['href']
+                        break
+
+        if not post_url:
+            return None
+
+        r_post = requests.get(post_url, headers=HEADERS, timeout=5)
+        if r_post.status_code == 200:
+            psoup = BeautifulSoup(r_post.text, 'html.parser')
+            for a in psoup.find_all('a', href=True):
+                href = a['href']
+                if 'playdrive.vip/e/' in href:
+                    return href.strip()
+    except Exception:
+        pass
+    return None
 
 def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
     """Tries to scrape real working cloud download links from KM Movies for the title."""

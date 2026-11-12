@@ -63324,12 +63324,44 @@
       ],
       "downloads": [
         {
+          "quality": "4K Ultra HD",
+          "size": "26520.76 GB",
+          "codec": "x265 HEVC",
+          "server": "Fast Cloud",
+          "direct_url": "https://w3.magiclinks.lol/08451793-2/",
+          "multi_url": "https://w3.magiclinks.lol/08451793-2/",
+          "url": "https://w3.magiclinks.lol/08451793-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.8GB",
+          "codec": "10-Bit",
+          "server": "Fast Cloud",
+          "direct_url": "https://one.kmcloud.lol/s/I4DivqNr",
+          "multi_url": "https://w3.magiclinks.lol/96118513467481-2/",
+          "url": "https://one.kmcloud.lol/s/I4DivqNr",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "10-Bit",
+          "server": "Fast Cloud",
+          "direct_url": "https://one.kmcloud.lol/s/FkzNrHJT",
+          "multi_url": "https://w3.magiclinks.lol/586763786491-2/",
+          "url": "https://one.kmcloud.lol/s/FkzNrHJT",
+          "color": "#38bdf8"
+        },
+        {
           "quality": "480p SD",
-          "size": "630MB",
-          "server": "Fast Direct Cloud",
-          "url": "https://hubcdn.club/file/xwSGUYExianZ4W8zTr7Fdkq8G",
-          "color": "#ffd70f",
-          "label": "Download (480p SD)"
+          "size": "533.9MB",
+          "codec": "WebRip Clean",
+          "server": "Fast Cloud",
+          "direct_url": "https://one.kmcloud.lol/s/5QivI5I5",
+          "multi_url": "https://one.kmcloud.lol/s/5QivI5I5",
+          "url": "https://one.kmcloud.lol/s/5QivI5I5",
+          "color": "#fbbf24"
         }
       ],
       "seasons": [],

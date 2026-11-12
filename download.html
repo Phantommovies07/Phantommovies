@@ -424,6 +424,22 @@ function revealDownloadLinks() {
 }
 
 function startCountdownTimer() {
+    const params = getParams();
+    const isDirect = params.mode === 'direct';
+
+    // Direct Download Mode: Instant bypass for true 1-click download experience
+    if (isDirect) {
+        revealDownloadLinks();
+        const autoLink = document.getElementById('btnServer1')?.href;
+        if (autoLink && autoLink.startsWith('http') && !autoLink.includes('download.html')) {
+            // Initiate direct stream/download immediately
+            setTimeout(() => {
+                window.location.href = autoLink;
+            }, 600);
+        }
+        return;
+    }
+
     const countEl = document.getElementById('countdownNum');
     const fillEl = document.getElementById('progressFill');
     const skipBtn = document.getElementById('skipTimerBtn');
@@ -448,10 +464,10 @@ function startCountdownTimer() {
         }
     }, 1000);
 
-    // Watchdog: Unconditionally guarantee reveal within 3.2 seconds max
+    // Watchdog: Unconditionally guarantee reveal within 2.8 seconds max
     setTimeout(() => {
         revealDownloadLinks();
-    }, 3200);
+    }, 2800);
 }
 
 // --- DATA ACCESS HELPERS ---
@@ -612,11 +628,20 @@ function applyInitialParams(params) {
     const btn3 = document.getElementById('btnServer3');
     const qLabel = (params.quality || 'HD').toUpperCase();
 
+    const isDirect = params.mode === 'direct';
+    const isMulti = params.mode === 'multi';
+
     if (isValidDownloadUrl(params.url)) {
         btn1.href = params.url;
-        btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${qLabel})`;
-        btn2.href = watchUrl;
-        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
+        if (isDirect) {
+            btn1.querySelector('span').textContent = `⚡ Direct Fast Download (Final Link - ${qLabel})`;
+            btn2.href = params.url;
+            btn2.querySelector('span').textContent = `🌐 Multi-Cloud Mirrors Hub (${qLabel})`;
+        } else {
+            btn1.querySelector('span').textContent = `🌐 Multi-Cloud Mirrors Hub (GDrive, HubCloud, Mega - ${qLabel})`;
+            btn2.href = params.url;
+            btn2.querySelector('span').textContent = `⚡ High Speed Cloud Mirror 2 (Direct Download)`;
+        }
         btn3.href = watchUrl;
         btn3.querySelector('span').textContent = '🎬 Watch Online in HD (Zero Ads • Instant Play)';
     } else {
