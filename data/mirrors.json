@@ -28,17 +28,26 @@
       ]
     },
     "rogmovies": {
-      "active": "https://rogmovies.im",
+      "active": "https://rogmovies.autos",
       "mirrors": [
-        "https://rogmovies.im",
-        "https://rogmovies.in"
+        "https://rogmovies.autos",
+        "https://rogmovies.in",
+        "https://rogmovies.im"
       ],
-      "latency_ms": 172,
+      "latency_ms": 115,
       "status": "online"
     }
   },
   "streaming": {
     "providers": [
+      {
+        "id": "playdrive",
+        "name": "Server 1 (Multi-Audio VIP Hindi)",
+        "domains": [
+          "https://playdrive.vip"
+        ],
+        "movieTemplate": "/e/{id}"
+      },
       {
         "id": "cinesrc",
         "name": "Server 1 (VIP Ultra HD)",

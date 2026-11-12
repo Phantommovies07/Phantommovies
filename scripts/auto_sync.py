@@ -54,29 +54,41 @@ def format_duration(runtime_minutes: int) -> str:
     mins = runtime_minutes % 60
     return f"{hours}h {mins:02d}m"
 
-def generate_stream_servers(imdb_id: str, tmdb_id: str = "") -> Tuple[str, List[Dict]]:
-    """Generates strictly 3 verified ad-free multi-server movie streaming embed links (VidLink clean player prioritized)."""
+def generate_stream_servers(imdb_id: str, tmdb_id: str = "", playdrive_url: str = "") -> Tuple[str, List[Dict]]:
+    """Generates verified ad-free multi-server movie streaming embed links (PlayDrive Multi-Audio VIP prioritized if present)."""
     servers = []
     t_id = (tmdb_id or imdb_id or "").strip()
     t_imdb = (imdb_id or tmdb_id or "").strip()
 
-    # Server 1: VidLink (Cleanest embed player, lowest ad profile)
-    if t_imdb:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/movie/{t_imdb}?primaryColor=0284c7&autoplay=false"})
-    elif t_id:
-        servers.append({"name": "Server 1 (VIP Ultra HD)", "url": f"https://vidlink.pro/movie/{t_id}?primaryColor=0284c7&autoplay=false"})
+    # Server 1: PlayDrive (Multi-Audio VIP Hindi - Zero ads, 5 audio tracks)
+    if playdrive_url and "playdrive.vip/e/" in playdrive_url:
+        servers.append({"name": "Server 1 (Multi-Audio VIP Hindi)", "url": playdrive_url.strip()})
 
-    # Server 2: CineSrc (High Speed HD)
+    # VidLink (Cleanest embed player, lowest ad profile)
+    s_vidlink = f"Server {len(servers) + 1} (VIP Ultra HD)"
+    if t_imdb:
+        servers.append({"name": s_vidlink, "url": f"https://vidlink.pro/movie/{t_imdb}?primaryColor=0284c7&autoplay=false"})
+    elif t_id:
+        servers.append({"name": s_vidlink, "url": f"https://vidlink.pro/movie/{t_id}?primaryColor=0284c7&autoplay=false"})
+
+    # CineSrc (High Speed HD)
+    s_cinesrc = f"Server {len(servers) + 1} (High Speed HD)"
     if t_id:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://cinesrc.st/embed/movie/{t_id}"})
+        servers.append({"name": s_cinesrc, "url": f"https://cinesrc.st/embed/movie/{t_id}"})
     elif t_imdb:
-        servers.append({"name": "Server 2 (High Speed HD)", "url": f"https://cinesrc.st/embed/movie/{t_imdb}"})
+        servers.append({"name": s_cinesrc, "url": f"https://cinesrc.st/embed/movie/{t_imdb}"})
 
-    # Server 3: AutoEmbed
+    # AutoEmbed (Backup Server)
+    s_autoembed = f"Server {len(servers) + 1} (Backup Server)"
     if t_imdb:
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/movie/imdb/{t_imdb}"})
+        servers.append({"name": s_autoembed, "url": f"https://autoembed.co/movie/imdb/{t_imdb}"})
     elif t_id:
-        servers.append({"name": "Server 3 (Backup Server)", "url": f"https://autoembed.co/movie/tmdb/{t_id}"})
+        servers.append({"name": s_autoembed, "url": f"https://autoembed.co/movie/tmdb/{t_id}"})
+
+    # 2Embed (Global Mirror)
+    if t_imdb:
+        s_2embed = f"Server {len(servers) + 1} (Global Mirror)"
+        servers.append({"name": s_2embed, "url": f"https://www.2embed.cc/embed/{t_imdb}"})
 
     primary_url = servers[0]["url"] if servers else ""
     return primary_url, servers
@@ -890,6 +902,49 @@ def fetch_real_kmmovies_downloads(title: str) -> List[Dict]:
     except Exception:
         return []
 
+def fetch_rogmovies_playdrive_stream(title: str) -> Optional[str]:
+    """Finds PlayDrive (Multi-Audio VIP Hindi) streaming link from RogMovies for a title."""
+    if not title or not BeautifulSoup:
+        return None
+    try:
+        base_url = get_active_rog_mirror()
+        clean_t = re.sub(r'[:\-–—\(\)\d]', ' ', title).strip()
+        clean_t = ' '.join(clean_t.split()[:3])
+        api_url = f"{base_url}/ts-search.php?q={requests.utils.quote(clean_t)}"
+        r = requests.get(api_url, headers=HEADERS, timeout=4)
+        post_url = None
+        if r.status_code == 200:
+            hits = r.json().get('hits', [])
+            if hits:
+                permalink = hits[0].get('document', {}).get('permalink', '')
+                if permalink:
+                    import urllib.parse
+                    post_url = urllib.parse.urljoin(base_url, permalink)
+
+        if not post_url:
+            s_url = f"{base_url}/?s={requests.utils.quote(clean_t)}"
+            r = requests.get(s_url, headers=HEADERS, timeout=4)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                for a in soup.find_all('a', href=True):
+                    if clean_t.split()[0].lower() in a['href'].lower() and not any(x in a['href'] for x in ['category', 'tag']):
+                        post_url = a['href']
+                        break
+
+        if not post_url:
+            return None
+
+        r_post = requests.get(post_url, headers=HEADERS, timeout=5)
+        if r_post.status_code == 200:
+            psoup = BeautifulSoup(r_post.text, 'html.parser')
+            for a in psoup.find_all('a', href=True):
+                href = a['href']
+                if 'playdrive.vip/e/' in href:
+                    return href.strip()
+    except Exception:
+        pass
+    return None
+
 def fetch_best_real_downloads(title: str) -> List[Dict]:
     """Tries HDHub4u first (fastest/best), then ROG Movies, then KM Movies."""
     dl = fetch_real_hdhub4u_downloads(title)
@@ -913,7 +968,14 @@ def format_phantom_movie(m: Dict, category: str = "", industry: str = "") -> Dic
     imdb_id = m.get("imdb_id", "")
     tmdb_id = m.get("tmdb_id", "")
 
-    primary_stream, stream_servers = generate_stream_servers(imdb_id, tmdb_id)
+    playdrive_url = m.get("playdrive_url") or (m.get("streamLink") if (m.get("streamLink") and "playdrive.vip" in m.get("streamLink")) else "")
+    if not playdrive_url and m.get("title"):
+        try:
+            playdrive_url = fetch_rogmovies_playdrive_stream(m.get("title", ""))
+        except Exception:
+            pass
+
+    primary_stream, stream_servers = generate_stream_servers(imdb_id, tmdb_id, playdrive_url=playdrive_url)
 
     duration = format_duration(m.get("runtime", 120))
     poster = m.get("poster", "")

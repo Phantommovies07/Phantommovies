@@ -414,11 +414,11 @@ function createNewContentFromCatalog() {
     document.getElementById('title')?.focus();
 }
 
-// ─── LOAD & POPULATE MOVIES LIST FROM GITHUB ───
+// ─── LOAD & POPULATE MOVIES LIST FROM GITHUB (Fast Lightweight Index) ───
 async function loadMovies() {
     showSpinner(true);
     try {
-        const content = await githubAPI.getContent();
+        const content = await githubAPI.getIndex();
         const movies = content.movies || [];
         catalogState.allItems = movies;
         renderAdminStats(movies);
@@ -475,12 +475,11 @@ function renderAdminStats(items = []) {
     `;
 }
 
-// ─── EDIT & POPULATE EXISTING CONTENT ───
+// ─── EDIT & POPULATE EXISTING CONTENT (Fast Shard Load) ───
 async function editMovie(id) {
     showSpinner(true);
     try {
-        const content = await githubAPI.getContent();
-        const item = (content.movies || []).find(m => String(m.id) === String(id));
+        const item = await githubAPI.getItem(id);
         if (!item) throw new Error('Content not found in repository database');
 
         populateFormForEdit(item);

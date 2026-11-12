@@ -227,24 +227,27 @@ function applyLiveMirrors(data) {
 
 function isAllowedStreamUrl(url) {
     if (!url) return false;
-    return /cinesrc\.st|vidsrc\.pm|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    return /playdrive\.vip|cinesrc\.st|vidsrc\.pm|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index, url) {
     const combined = ((name || '') + ' ' + (url || '')).toLowerCase();
-    if (combined.includes('cinesrc') || (/server\s*1/i.test(name) && !combined.includes('vidsrc') && !combined.includes('autoembed') && !combined.includes('2embed')) || index === 0) {
-        return "Server 1 (VIP Ultra HD)";
+    if (combined.includes('playdrive') || combined.includes('multi-audio')) {
+        return "Server 1 (Multi-Audio VIP Hindi)";
     }
-    if (combined.includes('vidsrc') || (/server\s*2/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed') && !combined.includes('2embed')) || index === 1) {
-        return "Server 2 (High Speed HD)";
+    if (combined.includes('cinesrc') || (/server\s*1/i.test(name) && !combined.includes('vidsrc') && !combined.includes('autoembed') && !combined.includes('2embed') && !combined.includes('playdrive'))) {
+        return "Server 2 (VIP Ultra HD)";
     }
-    if (combined.includes('autoembed') || (/server\s*3/i.test(name) && !combined.includes('cinesrc') && !combined.includes('vidsrc')) || index === 2) {
-        return "Server 3 (Backup Server)";
+    if (combined.includes('vidsrc') || (/server\s*2/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed') && !combined.includes('2embed'))) {
+        return "Server 3 (High Speed HD)";
     }
-    if (combined.includes('2embed') || /server\s*4/i.test(name) || index === 3) {
-        return "Server 4 (Global Mirror)";
+    if (combined.includes('autoembed') || (/server\s*3/i.test(name) && !combined.includes('cinesrc') && !combined.includes('vidsrc'))) {
+        return "Server 4 (Backup Server)";
     }
-    return SERVER_LABELS[index] || `Server ${index + 1}`;
+    if (combined.includes('2embed') || /server\s*4/i.test(name)) {
+        return "Server 5 (Global Mirror)";
+    }
+    return name || SERVER_LABELS[index] || `Server ${index + 1}`;
 }
 
 function seasonStreams(season) {

@@ -63299,19 +63299,27 @@
       "industry": "South",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjUwNzM2MmMtYjZmNS00N2QwLWJhYWUtODFkOTgzM2M2ZTc3XkEyXkFqcGc@._V1_.jpg",
       "banner": "https://m.media-amazon.com/images/M/MV5BZjUwNzM2MmMtYjZmNS00N2QwLWJhYWUtODFkOTgzM2M2ZTc3XkEyXkFqcGc@._V1_.jpg",
-      "streamLink": "https://vidlink.pro/movie/tt33318732?primaryColor=0284c7&autoplay=false",
+      "streamLink": "https://playdrive.vip/e/AQH8Z0wACVYgvg",
       "streams": [
         {
-          "name": "Server 1 (VIP Ultra HD)",
+          "name": "Server 1 (Multi-Audio VIP Hindi)",
+          "url": "https://playdrive.vip/e/AQH8Z0wACVYgvg"
+        },
+        {
+          "name": "Server 2 (VIP Ultra HD)",
           "url": "https://vidlink.pro/movie/tt33318732?primaryColor=0284c7&autoplay=false"
         },
         {
-          "name": "Server 2 (High Speed HD)",
+          "name": "Server 3 (High Speed HD)",
           "url": "https://cinesrc.st/embed/movie/1234139"
         },
         {
-          "name": "Server 3 (Backup Server)",
+          "name": "Server 4 (Backup Server)",
           "url": "https://autoembed.co/movie/imdb/tt33318732"
+        },
+        {
+          "name": "Server 5 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt33318732"
         }
       ],
       "downloads": [
@@ -63338,7 +63346,8 @@
       "imdb_id": "tt33318732",
       "tmdb_id": "1234139",
       "createdAt": "2026-10-07T18:06:09.425912+00:00",
-      "updatedAt": "2026-11-09T08:28:51.806317+00:00"
+      "updatedAt": "2026-11-09T08:28:51.806317+00:00",
+      "playdrive_url": "https://playdrive.vip/e/AQH8Z0wACVYgvg"
     },
     {
       "id": "1791396373450",

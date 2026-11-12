@@ -150,31 +150,42 @@ def is_url_dead(url: str, timeout: float = 3.5) -> bool:
     return False
 
 
-def build_verified_movie_streams(imdb_id: str, tmdb_id: str) -> Tuple[str, List[Dict[str, str]]]:
-    """Builds clean, verified streaming servers for a movie."""
+def build_verified_movie_streams(imdb_id: str, tmdb_id: str, playdrive_url: str = "") -> Tuple[str, List[Dict[str, str]]]:
+    """Builds clean, verified streaming servers for a movie (PlayDrive Multi-Audio VIP prioritized)."""
     imdb = (imdb_id or '').strip()
     tmdb = (tmdb_id or '').strip()
     active_id = tmdb if tmdb else imdb
     active_imdb = imdb if imdb else tmdb
 
     streams = []
-    if active_imdb:
+    # Server 1: PlayDrive (Multi-Audio VIP Hindi - Zero ads, 5 audio tracks)
+    if playdrive_url and "playdrive.vip/e/" in playdrive_url:
         streams.append({
-            'name': 'Server 1 (VIP Ultra HD)',
+            'name': 'Server 1 (Multi-Audio VIP Hindi)',
+            'url': playdrive_url.strip()
+        })
+
+    if active_imdb:
+        s_name = f"Server {len(streams) + 1} (VIP Ultra HD)"
+        streams.append({
+            'name': s_name,
             'url': f'https://vidlink.pro/movie/{active_imdb}?primaryColor=0284c7&autoplay=false'
         })
     if active_id:
+        s_name = f"Server {len(streams) + 1} (High Speed HD)"
         streams.append({
-            'name': 'Server 2 (High Speed HD)',
+            'name': s_name,
             'url': f'https://cinesrc.st/embed/movie/{active_id}'
         })
     if active_imdb:
+        s_name = f"Server {len(streams) + 1} (Backup Server)"
         streams.append({
-            'name': 'Server 3 (Backup Server)',
+            'name': s_name,
             'url': f'https://autoembed.co/movie/imdb/{active_imdb}'
         })
+        s_name = f"Server {len(streams) + 1} (Global Mirror)"
         streams.append({
-            'name': 'Server 4 (Global Mirror)',
+            'name': s_name,
             'url': f'https://www.2embed.cc/embed/{active_imdb}'
         })
 
@@ -281,14 +292,24 @@ class LinkSentinel:
                 self.stats['streams_checked'] += 1
 
                 if stream_needs_repair:
-                    new_primary, new_streams = build_verified_movie_streams(imdb_id, tmdb_id)
+                    # Detect if there was an existing healthy PlayDrive stream
+                    existing_pd = ""
+                    for s in streams:
+                        s_url = s.get('url', '')
+                        if 'playdrive.vip/e/' in s_url and not any(d in s_url.lower() for d in DEAD_DOMAINS_BLACKLIST):
+                            existing_pd = s_url
+                            break
+                    if not existing_pd and 'playdrive.vip/e/' in stream_link and not any(d in stream_link.lower() for d in DEAD_DOMAINS_BLACKLIST):
+                        existing_pd = stream_link
+
+                    new_primary, new_streams = build_verified_movie_streams(imdb_id, tmdb_id, playdrive_url=existing_pd)
                     if new_streams:
                         item['streamLink'] = new_primary
                         item['streams'] = new_streams
                         item_modified = True
                         catalog_modified = True
                         self.stats['streams_healed'] += 1
-                        print(f"  [Stream Healed] Movie '{title}' -> Replaced with {len(new_streams)} verified servers (VidLink/CineSrc/AutoEmbed/2Embed)")
+                        print(f"  [Stream Healed] Movie '{title}' -> Replaced with {len(new_streams)} verified servers (PlayDrive/VidLink/CineSrc/AutoEmbed/2Embed)")
 
             # ─────────────────────────────────────────────────────────────
             # 2. TV SERIES STREAM HEALTH CHECK & AUTO-HEALING
