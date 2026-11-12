@@ -189,6 +189,31 @@
               ]
             }
           ]
+        },
+        {
+          "seasonNumber": 5,
+          "title": "Season 5",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt35304338?s=5&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt35304338&season=5&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt35304338-5-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt35304338&s=5&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
         }
       ],
       "trailerLink": "https://www.youtube.com/results?search_query=Study+Group+2025+trailer",
@@ -204,7 +229,768 @@
       "imdb_id": "tt35304338",
       "tmdb_id": "",
       "createdAt": "2026-11-12T12:00:33.749426+00:00",
-      "updatedAt": "2026-11-12T12:02:03.097759+00:00"
+      "updatedAt": "2026-11-12T21:59:02.235810+00:00"
+    },
+    {
+      "id": "1794520740536",
+      "type": "series",
+      "title": "Trailer Park Boys: Jail",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDRlMWM2OTctYzE0OS00MzA1LWJhYjctNGU3NjJlOTc2NDQwXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDRlMWM2OTctYzE0OS00MzA1LWJhYjctNGU3NjJlOTc2NDQwXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt13732684?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt13732684?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt13732684&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt13732684-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt13732684&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "1.3GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnRvSk9mbFNKVlhDYmVxL2FZZjVuMTh6MVVqeVhvdXl6Y0RpaG5wNFBNdzQ9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.9GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qlp6Q0JWc3I0WVF3VkQzV25tTVU5L1htL01hd1d5T3dLUjcvbG1Jek9MZVk9",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt13732684?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt13732684&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt13732684-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt13732684&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "720p HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnRvSk9mbFNKVlhDYmVxL2FZZjVuMTh6MVVqeVhvdXl6Y0RpaG5wNFBNdzQ9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.9GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qlp6Q0JWc3I0WVF3VkQzV25tTVU5L1htL01hd1d5T3dLUjcvbG1Jek9MZVk9",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt13732684?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt13732684&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt13732684-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt13732684&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "640MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/rY9j0F9tGD6Z1Qy9kKoWyvfGx",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2370175369",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.2GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/3220249872",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 8,
+          "title": "Season 8",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt13732684?s=8&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt13732684&season=8&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt13732684-8-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt13732684&s=8&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "350MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhTU2wzck45V3FIWndmdDFuVlJCOUdFZEZoeHQ2aG1wOUgwNTRoU1ptd1E9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "950MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJvamNjWUVlOW93SzM2U1FuVGk0bzFvMXg1YnMzdUdSSjFuYkZML20vNjA9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 9,
+          "title": "Season 9",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt13732684?s=9&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt13732684&season=9&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt13732684-9-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt13732684&s=9&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "350MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhTU2wzck45V3FIWndmdDFuVlJCOUdFZEZoeHQ2aG1wOUgwNTRoU1ptd1E9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "950MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJvamNjWUVlOW93SzM2U1FuVGk0bzFvMXg1YnMzdUdSSjFuYkZML20vNjA9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 57,
+          "title": "Season 57",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt13732684?s=57&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt13732684&season=57&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt13732684-57-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt13732684&s=57&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "350MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmhTU2wzck45V3FIWndmdDFuVlJCOUdFZEZoeHQ2aG1wOUgwNTRoU1ptd1E9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "950MB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJvamNjWUVlOW93SzM2U1FuVGk0bzFvMXg1YnMzdUdSSjFuYkZML20vNjA9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bkxCdVhvMWlkaHo1ajJXQVRKUnUxM3ZyOStsY2ZXR3dUZ1JzTDBiZVFzN2c9PQ==",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Trailer+Park+Boys:+Jail+2021+trailer",
+      "description": "Trailer Park Boys: Jail (2021) starring John Paul Tremblay, Robb Wells.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 8209,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt13732684",
+      "tmdb_id": "",
+      "createdAt": "2026-11-12T21:59:00.034392+00:00",
+      "updatedAt": "2026-11-12T22:00:25.273846+00:00"
+    },
+    {
+      "id": "1794520748086",
+      "type": "series",
+      "title": "Parivarik ManuRanjan",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWMyMDY5ZjQtZDM1YS00ZmYyLTg5NTEtNGRkNjIzOWQxZjYyXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMWMyMDY5ZjQtZDM1YS00ZmYyLTg5NTEtNGRkNjIzOWQxZjYyXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt37200939?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt37200939?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt37200939&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt37200939-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt37200939&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZ3QjQ2emQyTnl2N2UxcFhOR1pSaXk4VUF5NHdxamJsaVZjTzRiQTZnYVk9",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "server": "Fast Cloud",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm5vNHV2N2ZMazdSTWREbi9oeWgzdW96ZUtROFZYWWRsS1NYNXpzVzdVN009",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt37200939?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt37200939&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt37200939-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt37200939&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "720p HD",
+              "size": "1GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QmZ3QjQ2emQyTnl2N2UxcFhOR1pSaXk4VUF5NHdxamJsaVZjTzRiQTZnYVk9",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.2GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm5vNHV2N2ZMazdSTWREbi9oeWgzdW96ZUtROFZYWWRsS1NYNXpzVzdVN009",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt37200939?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt37200939&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt37200939-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt37200939&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "410MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/oDFdUhETgLHRcw4ww84P6ja0J",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "670MB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2155775364",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "1.5GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2345655069",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Parivarik+ManuRanjan+2026+trailer",
+      "description": "Parivarik ManuRanjan (2026) starring Karan Chanana, Aklavya Chaudhary.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 20222,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt37200939",
+      "tmdb_id": "",
+      "createdAt": "2026-11-12T21:58:59.108847+00:00",
+      "updatedAt": "2026-11-12T22:00:25.273891+00:00"
+    },
+    {
+      "id": "1794520745831",
+      "type": "movie",
+      "title": "Daayra",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzI4Y2Y0OGMtMTA3Mi00ZTFkLWFjZjAtNGJmMTY3NDMxZGZmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYzI4Y2Y0OGMtMTA3Mi00ZTFkLWFjZjAtNGJmMTY3NDMxZGZmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt32634611?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt32634611?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt32634611"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt32634611"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt32634611"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2234966430",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "15.6GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/17844197176",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Daayra+2026+trailer",
+      "description": "Daayra (2026) starring Kareena Kapoor, Prithviraj Sukumaran.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 14631,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32634611",
+      "tmdb_id": "",
+      "createdAt": "2026-11-12T21:58:57.247819+00:00",
+      "updatedAt": "2026-11-12T21:58:57.247819+00:00"
+    },
+    {
+      "id": "1794520741769",
+      "type": "series",
+      "title": "Vibe de Dois",
+      "genre": "Tv Series",
+      "year": 2022,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTI0MjczZTgtOTE3ZC00OWViLWFiZjUtMTdmNjg3MWUwODM5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTI0MjczZTgtOTE3ZC00OWViLWFiZjUtMTdmNjg3MWUwODM5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt33377087?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt33377087?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt33377087&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt33377087-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt33377087&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "7.4GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/6449696060",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt33377087?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt33377087&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt33377087-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt33377087&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "7.4GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/6449696060",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Vibe+de+Dois+2022+trailer",
+      "description": "Vibe de Dois (2022) starring Anderson Morais, Ana Lara.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23200,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt33377087",
+      "tmdb_id": "",
+      "createdAt": "2026-11-12T21:58:56.896724+00:00",
+      "updatedAt": "2026-11-12T22:00:25.273928+00:00"
+    },
+    {
+      "id": "1794520744655",
+      "type": "series",
+      "title": "Ranabaali",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjI4MzdhOTctY2Q3Yi00OTJmLTg1N2ItOWJiMjUyMmQxMzE5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYjI4MzdhOTctY2Q3Yi00OTJmLTg1N2ItOWJiMjUyMmQxMzE5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt32324552?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt32324552?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt32324552&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt32324552-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt32324552&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "Fast Cloud",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "12.9GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/15459367018",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32324552?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32324552&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32324552-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32324552&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "12.9GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/15459367018",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Ranabaali+2026+trailer",
+      "description": "Ranabaali (2026) starring Vijay Deverakonda, Rashmika Mandanna.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 12300,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32324552",
+      "tmdb_id": "",
+      "createdAt": "2026-11-12T21:58:55.946573+00:00",
+      "updatedAt": "2026-11-12T22:00:25.273945+00:00"
     },
     {
       "id": "1794484839277",
@@ -63324,44 +64110,32 @@
       ],
       "downloads": [
         {
-          "quality": "4K Ultra HD",
-          "size": "26520.76 GB",
-          "codec": "x265 HEVC",
-          "server": "Fast Cloud",
-          "direct_url": "https://w3.magiclinks.lol/08451793-2/",
-          "multi_url": "https://w3.magiclinks.lol/08451793-2/",
-          "url": "https://w3.magiclinks.lol/08451793-2/",
-          "color": "#c084fc"
-        },
-        {
-          "quality": "1080p Full HD",
-          "size": "3.8GB",
-          "codec": "10-Bit",
-          "server": "Fast Cloud",
-          "direct_url": "https://one.kmcloud.lol/s/I4DivqNr",
-          "multi_url": "https://w3.magiclinks.lol/96118513467481-2/",
-          "url": "https://one.kmcloud.lol/s/I4DivqNr",
-          "color": "#34d399"
+          "quality": "480p SD",
+          "size": "640MB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubcdn.club/file/rY9j0F9tGD6Z1Qy9kKoWyvfGx",
+          "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "1.2GB",
-          "codec": "10-Bit",
-          "server": "Fast Cloud",
-          "direct_url": "https://one.kmcloud.lol/s/FkzNrHJT",
-          "multi_url": "https://w3.magiclinks.lol/586763786491-2/",
-          "url": "https://one.kmcloud.lol/s/FkzNrHJT",
-          "color": "#38bdf8"
+          "size": "1GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://hubdrive.blog/file/2370175369",
+          "color": "#06b6d4"
         },
         {
-          "quality": "480p SD",
-          "size": "533.9MB",
-          "codec": "WebRip Clean",
-          "server": "Fast Cloud",
-          "direct_url": "https://one.kmcloud.lol/s/5QivI5I5",
-          "multi_url": "https://one.kmcloud.lol/s/5QivI5I5",
-          "url": "https://one.kmcloud.lol/s/5QivI5I5",
-          "color": "#fbbf24"
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnRvSk9mbFNKVlhDYmVxL2FZZjVuMTh6MVVqeVhvdXl6Y0RpaG5wNFBNdzQ9",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "server": "HDHub4u Cloud Mirror",
+          "url": "https://4khdhub.one",
+          "color": "#8b5cf6"
         }
       ],
       "seasons": [],
@@ -68696,8 +69470,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 525,
-    "lastUpdated": "2026-11-12T12:02:03.107015+00:00",
+    "totalMovies": 526,
+    "lastUpdated": "2026-11-12T22:00:25.286178+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -68729,15 +69503,15 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 221,
-    "totalTitles": 746,
+    "totalSeries": 225,
+    "totalTitles": 751,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-12T12:02:03.107005+00:00",
+    "lastHealthAudit": "2026-11-12T22:00:25.286168+00:00",
     "catalogHealthScore": "99.9%"
   }
 }
