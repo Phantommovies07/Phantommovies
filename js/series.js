@@ -1066,11 +1066,23 @@ function renderEpisodeDownloads() {
         const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
         const sNum = currentSeasonIndex + 1;
 
-        // Button 1: Direct Download
-        const directDlLink = directUrl || `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=direct`;
+        // Generate pristine clean episode filename stripping any competitor branding (KatDrama, VegaMovies, KMMOVIES, HDHub4u, etc.)
+        const cleanFilename = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(item.filename || '', {
+            title: currentSeries.title,
+            year: currentSeries.year,
+            s: sNum,
+            ep: epNum,
+            quality: quality,
+            codec: codec
+        }) : `${currentSeries.title || 'Series'}.S0${sNum}E${epNum}.${quality}.mkv`;
+
+        const sanitizedDirectUrl = (directUrl && window.PhantomSanitizer) ? window.PhantomSanitizer.cleanUrl(directUrl, { filename: cleanFilename }) : directUrl;
+
+        // Button 1: Direct Download (with clean filename parameter & download attribute)
+        const directDlLink = sanitizedDirectUrl || `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=direct&filename=${encodeURIComponent(cleanFilename)}`;
 
         // Button 2: Multi Download
-        const multiDlLink = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=multi`;
+        const multiDlLink = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=multi&filename=${encodeURIComponent(cleanFilename)}`;
 
         return `
             <div class="dl-quality-card" style="--card-accent:${qMeta.accent}; --card-glow:${qMeta.glow};">
@@ -1082,7 +1094,7 @@ function renderEpisodeDownloads() {
                     <span class="dl-codec-info">${escapeHTML(codec)}</span>
                 </div>
                 <div class="dl-actions-row">
-                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" title="Direct Fast Download (Final Link)">
+                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" download="${escapeHTML(cleanFilename)}" data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
                         <span>⚡</span>
                         <span>Direct Download</span>
                     </a>

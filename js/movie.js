@@ -658,11 +658,21 @@ function renderDownloads(movie) {
         const directUrl = item.direct_url || '';
         const multiUrl = item.multi_url || rawUrl;
 
-        // Button 1: Direct Download (Last link direct path)
-        const directDlLink = directUrl || `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&mode=direct`;
+        // Generate pristine clean filename stripping any competitor branding (KatDrama, VegaMovies, KMMOVIES, HDHub4u, etc.)
+        const cleanFilename = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(item.filename || '', {
+            title: movie.title,
+            year: movie.year,
+            quality: quality,
+            codec: codec
+        }) : `${movie.title || 'Movie'}.${quality}.mkv`;
+
+        const sanitizedDirectUrl = (directUrl && window.PhantomSanitizer) ? window.PhantomSanitizer.cleanUrl(directUrl, { filename: cleanFilename }) : directUrl;
+
+        // Button 1: Direct Download (Last link direct path with clean filename parameter and download attribute)
+        const directDlLink = sanitizedDirectUrl || `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&mode=direct&filename=${encodeURIComponent(cleanFilename)}`;
 
         // Button 2: Multi Download (Mirror panel with HubCloud, GDrive, Mega, Pixeldrain)
-        const multiDlLink = `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&mode=multi`;
+        const multiDlLink = `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&mode=multi&filename=${encodeURIComponent(cleanFilename)}`;
 
         return `
             <div class="dl-quality-card" style="--card-accent:${qMeta.accent}; --card-glow:${qMeta.glow};">
@@ -674,7 +684,7 @@ function renderDownloads(movie) {
                     <span class="dl-codec-info">${escapeHTML(codec)}</span>
                 </div>
                 <div class="dl-actions-row">
-                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" title="Direct Fast Download (Final Link)">
+                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" download="${escapeHTML(cleanFilename)}" data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
                         <span>⚡</span>
                         <span>Direct Download</span>
                     </a>

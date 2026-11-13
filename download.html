@@ -342,6 +342,7 @@
     </div>
 </div>
 
+<script src="js/filename-sanitizer.js"></script>
 <script>
 // --- GLOBAL ACTIVE MIRRORS & STATE ---
 let currentMovie = null;
@@ -362,7 +363,9 @@ function getParams() {
         poster: p.get('poster') || '',
         ep: p.get('ep') || '',
         s: p.get('s') || '',
-        type: p.get('type') || ''
+        type: p.get('type') || '',
+        filename: p.get('filename') || '',
+        mode: p.get('mode') || ''
     };
 }
 
@@ -394,7 +397,8 @@ function isValidDownloadUrl(url) {
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
     if (clean.includes('/?s=') || clean.includes('/search/')) return false;
-    if (clean.includes('rogmovies.') || clean.includes('hdhub4u.') || clean.includes('kmmovies.') || clean.includes('vegamovies.') || clean.includes('vega') || clean.includes('nexdrive.') || clean.includes('greenmotors.') || clean.includes('magiclinks.') || clean.includes('4khdhub.') || clean.includes('vglist.') || clean.includes('vcloud.') || clean.includes('fastdl.') || clean.includes('azonahub.')) return false;
+    // Allow legitimate cloud download gateways while filtering out root blog and category landing pages
+    if (/kmmovies\.[a-z]+\/?$/i.test(clean) || /vegamovies\.[a-z]+\/?$/i.test(clean) || /category|genre|tag|disclaimer/i.test(clean)) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
 }
@@ -427,15 +431,27 @@ function startCountdownTimer() {
     const params = getParams();
     const isDirect = params.mode === 'direct';
 
+    const cleanFn = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(params.filename, {
+        title: params.title || '',
+        quality: params.quality,
+        s: params.s,
+        ep: params.ep,
+        type: params.type
+    }) : (params.filename || 'Movie.mkv');
+
     // Direct Download Mode: Instant bypass for true 1-click download experience
     if (isDirect) {
         revealDownloadLinks();
         const autoLink = document.getElementById('btnServer1')?.href;
         if (autoLink && autoLink.startsWith('http') && !autoLink.includes('download.html')) {
-            // Initiate direct stream/download immediately
+            // Initiate direct clean download immediately
             setTimeout(() => {
-                window.location.href = autoLink;
-            }, 600);
+                if (window.PhantomSanitizer) {
+                    window.PhantomSanitizer.triggerDirectDownload(autoLink, cleanFn);
+                } else {
+                    window.location.href = autoLink;
+                }
+            }, 500);
         }
         return;
     }
@@ -631,15 +647,32 @@ function applyInitialParams(params) {
     const isDirect = params.mode === 'direct';
     const isMulti = params.mode === 'multi';
 
+    const cleanFn = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(params.filename, {
+        title: params.title || '',
+        quality: params.quality,
+        s: params.s,
+        ep: params.ep,
+        type: params.type
+    }) : (params.filename || 'Movie.mkv');
+
     if (isValidDownloadUrl(params.url)) {
-        btn1.href = params.url;
+        let initialDlUrl = params.url;
+        if (window.PhantomSanitizer) {
+            initialDlUrl = window.PhantomSanitizer.cleanUrl(initialDlUrl, { filename: cleanFn });
+        }
+        btn1.href = initialDlUrl;
+        btn1.setAttribute('download', cleanFn);
+        btn1.setAttribute('data-filename', cleanFn);
+
         if (isDirect) {
             btn1.querySelector('span').textContent = `⚡ Direct Fast Download (Final Link - ${qLabel})`;
-            btn2.href = params.url;
+            btn2.href = initialDlUrl;
+            btn2.setAttribute('download', cleanFn);
             btn2.querySelector('span').textContent = `🌐 Multi-Cloud Mirrors Hub (${qLabel})`;
         } else {
             btn1.querySelector('span').textContent = `🌐 Multi-Cloud Mirrors Hub (GDrive, HubCloud, Mega - ${qLabel})`;
-            btn2.href = params.url;
+            btn2.href = initialDlUrl;
+            btn2.setAttribute('download', cleanFn);
             btn2.querySelector('span').textContent = `⚡ High Speed Cloud Mirror 2 (Direct Download)`;
         }
         btn3.href = watchUrl;
@@ -760,6 +793,21 @@ async function enrichPage() {
             }
 
             const qLabel = (params.quality || 'HD').toUpperCase();
+            const finalCleanFn = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(params.filename, {
+                title: currentMovie ? currentMovie.title : params.title,
+                year: currentMovie ? currentMovie.year : null,
+                quality: params.quality,
+                s: params.s,
+                ep: params.ep,
+                type: params.type || (currentMovie ? currentMovie.type : '')
+            }) : cleanFn;
+
+            if (primaryUrl && window.PhantomSanitizer) {
+                primaryUrl = window.PhantomSanitizer.cleanUrl(primaryUrl, { filename: finalCleanFn });
+            }
+            if (secondaryUrl && window.PhantomSanitizer) {
+                secondaryUrl = window.PhantomSanitizer.cleanUrl(secondaryUrl, { filename: finalCleanFn });
+            }
 
             // SERVER 1: Primary Direct Cloud Download or P2P Magnet
             const titleQuery = cleanTitleForQuery(params.title || currentMovie.title || '');
@@ -768,6 +816,8 @@ async function enrichPage() {
             if (primaryUrl) {
                 btn1.href = primaryUrl;
                 btn1.target = '_blank';
+                btn1.setAttribute('download', finalCleanFn);
+                btn1.setAttribute('data-filename', finalCleanFn);
                 btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${qLabel})`;
                 btn1.querySelector('em').textContent = 'Download';
             } else if (currentMovie.torrent && currentMovie.torrent.magnet) {
@@ -786,6 +836,8 @@ async function enrichPage() {
             if (secondaryUrl) {
                 btn2.href = secondaryUrl;
                 btn2.target = '_blank';
+                btn2.setAttribute('download', finalCleanFn);
+                btn2.setAttribute('data-filename', finalCleanFn);
                 btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
                 btn2.querySelector('em').textContent = 'Download';
             } else if (currentMovie.torrent && currentMovie.torrent.magnet && primaryUrl) {
