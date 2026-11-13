@@ -41,6 +41,16 @@
   "streaming": {
     "providers": [
       {
+        "id": "kmcloud",
+        "name": "Server 1 (KM Cloud Native Fast VIP)",
+        "domains": [
+          "https://one.kmcloud.lol",
+          "https://z1.kmphotos.cv",
+          "https://cdn-files.alcyone.so"
+        ],
+        "movieTemplate": "/d/{id}/watch_online"
+      },
+      {
         "id": "playdrive",
         "name": "Server 1 (Multi-Audio VIP Hindi)",
         "domains": [

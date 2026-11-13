@@ -137,7 +137,7 @@ function escapeHTML(value) {
 }
 
 function isDirectVideo(url) {
-    return /\.(mp4|webm|ogg)(\?|#|$)/i.test(url || '');
+    return /\.(mp4|webm|ogg|mkv)(\?|#|$)|alcyone\.so|r2\.dev/i.test(url || '');
 }
 
 function getYouTubeEmbed(url) {
@@ -255,15 +255,18 @@ function applyLiveMirrors(data) {
 function isAllowedStreamUrl(url) {
     if (!url) return false;
     // Check against standard verified domains and any live dynamic domains loaded from mirrors.json
-    return /playdrive\.vip|cinesrc\.st|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8)(\?|#|$)/i.test(url);
+    return /playdrive\.vip|kmphotos\.cv|kmcloud\.lol|alcyone\.so|r2\.dev|cinesrc\.st|autoembed\.co|autoembed\.cc|vidlink\.pro|vidlink\.online|2embed\.cc|allmovieland|1xcinema|\.(mp4|webm|m3u8|mkv)(\?|#|$)/i.test(url);
 }
 
 function cleanServerLabel(name, index, url) {
     const combined = ((name || '') + ' ' + (url || '')).toLowerCase();
+    if (combined.includes('kmphotos') || combined.includes('kmcloud') || combined.includes('alcyone') || combined.includes('r2.dev')) {
+        return "Server 1 (KM Cloud Native Fast VIP)";
+    }
     if (combined.includes('playdrive') || combined.includes('multi-audio')) {
         return "Server 1 (Multi-Audio VIP Hindi)";
     }
-    if (combined.includes('vidlink') || (/server\s*1/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed') && !combined.includes('playdrive'))) {
+    if (combined.includes('vidlink') || (/server\s*1/i.test(name) && !combined.includes('cinesrc') && !combined.includes('autoembed') && !combined.includes('playdrive') && !combined.includes('km'))) {
         return "Server 2 (VIP Ultra HD)";
     }
     if (combined.includes('cinesrc') || (/server\s*2/i.test(name) && !combined.includes('vidlink') && !combined.includes('autoembed'))) {
