@@ -48,8 +48,8 @@ let heroSlideTimer = null;
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v5');
-        const cacheTime = sessionStorage.getItem('phantom_content_time_v5');
+        const cached = sessionStorage.getItem('phantom_content_cache_v6');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v6');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 15 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
@@ -68,8 +68,8 @@ async function getContentData() {
             const data = await response.json();
             window.PHANTOM_CONTENT_CACHE = data;
             try {
-                sessionStorage.setItem('phantom_content_cache_v5', JSON.stringify(data));
-                sessionStorage.setItem('phantom_content_time_v5', String(Date.now()));
+                sessionStorage.setItem('phantom_content_cache_v6', JSON.stringify(data));
+                sessionStorage.setItem('phantom_content_time_v6', String(Date.now()));
             } catch (_) {}
             return data;
         }
@@ -84,8 +84,8 @@ async function getContentData() {
         const data = await response.json();
         window.PHANTOM_CONTENT_CACHE = data;
         try {
-            sessionStorage.setItem('phantom_content_cache_v5', JSON.stringify(data));
-            sessionStorage.setItem('phantom_content_time_v5', String(Date.now()));
+            sessionStorage.setItem('phantom_content_cache_v6', JSON.stringify(data));
+            sessionStorage.setItem('phantom_content_time_v6', String(Date.now()));
         } catch (_) {}
         return data;
     } catch (err) {

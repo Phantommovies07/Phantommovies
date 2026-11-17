@@ -342,7 +342,7 @@
     </div>
 </div>
 
-<script src="js/filename-sanitizer.js"></script>
+<script src="js/filename-sanitizer.js?v=20261117_v3"></script>
 <script>
 // --- GLOBAL ACTIVE MIRRORS & STATE ---
 let currentMovie = null;
@@ -516,7 +516,7 @@ async function fetchMirrorsConfig() {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache');
+        const cached = sessionStorage.getItem('phantom_content_cache_v6');
         if (cached) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
@@ -525,11 +525,11 @@ async function getContentData() {
     } catch (_) {}
 
     try {
-        const res = await fetch('data/content.json');
+        const res = await fetch('data/content.json?v=' + Date.now());
         if (res.ok) {
             const data = await res.json();
             window.PHANTOM_CONTENT_CACHE = data;
-            sessionStorage.setItem('phantom_content_cache', JSON.stringify(data));
+            sessionStorage.setItem('phantom_content_cache_v6', JSON.stringify(data));
             return data;
         }
     } catch (e) {
@@ -823,9 +823,13 @@ async function enrichPage() {
                 secondaryUrl = window.PhantomSanitizer.cleanUrl(secondaryUrl, { filename: finalCleanFn });
             }
 
-            // SERVER 1: Primary Direct Cloud Download or P2P Magnet
+            // SERVER 1: Primary Direct Cloud Download, P2P Magnet, or High-Speed Stream
             const titleQuery = cleanTitleForQuery(params.title || currentMovie.title || '');
             const torrentSearchUrl = `https://thepiratebay0.org/search/${encodeURIComponent(titleQuery)}/1/99/0`;
+
+            const stream1 = (currentMovie.streams && currentMovie.streams[0]) ? currentMovie.streams[0].url : (currentMovie.streamLink || '');
+            const stream2 = (currentMovie.streams && currentMovie.streams[1]) ? currentMovie.streams[1].url : '';
+            const stream3 = (currentMovie.streams && currentMovie.streams[2]) ? currentMovie.streams[2].url : '';
 
             if (primaryUrl) {
                 btn1.href = primaryUrl;
@@ -845,6 +849,12 @@ async function enrichPage() {
                 btn1.removeAttribute('download');
                 btn1.querySelector('span').textContent = `🧲 Direct P2P Torrent / Magnet (Client Launch - ${qLabel})`;
                 btn1.querySelector('em').textContent = 'Instant P2P';
+            } else if (stream1) {
+                btn1.href = stream1;
+                btn1.target = '_blank';
+                btn1.removeAttribute('download');
+                btn1.querySelector('span').textContent = `🚀 High Speed VIP Stream & Player (Server 1 - ${qLabel})`;
+                btn1.querySelector('em').textContent = 'Watch Stream';
             } else {
                 btn1.href = torrentSearchUrl;
                 btn1.target = '_blank';
@@ -853,7 +863,7 @@ async function enrichPage() {
                 btn1.querySelector('em').textContent = 'Search';
             }
 
-            // SERVER 2: Secondary Cloud Mirror or Torrent Direct Search
+            // SERVER 2: Secondary Cloud Mirror, Torrent Direct Search, or Stream 2
             if (secondaryUrl) {
                 btn2.href = secondaryUrl;
                 btn2.target = '_blank';
@@ -866,32 +876,48 @@ async function enrichPage() {
                 btn2.setAttribute('data-filename', finalCleanFn);
                 btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
                 btn2.querySelector('em').textContent = 'Download';
+            } else if (stream2) {
+                btn2.href = stream2;
+                btn2.target = '_blank';
+                btn2.removeAttribute('download');
+                btn2.querySelector('span').textContent = '⚡ Multi-Audio VIP CDN Mirror (Server 2)';
+                btn2.querySelector('em').textContent = 'Watch Stream';
             } else if (currentMovie.torrent && currentMovie.torrent.magnet && primaryUrl) {
                 btn2.href = currentMovie.torrent.magnet;
                 btn2.target = '_self';
+                btn2.removeAttribute('download');
                 btn2.querySelector('span').textContent = '🧲 Direct P2P Torrent / Magnet (Zero Ads)';
                 btn2.querySelector('em').textContent = 'Instant P2P';
             } else if (titleQuery) {
                 btn2.href = torrentSearchUrl;
                 btn2.target = '_blank';
+                btn2.removeAttribute('download');
                 btn2.querySelector('span').textContent = '⚡ Verified P2P Torrent Network (1337x / TPB)';
                 btn2.querySelector('em').textContent = 'Direct P2P';
             } else {
                 btn2.href = watchUrl;
                 btn2.target = '_self';
+                btn2.removeAttribute('download');
                 btn2.querySelector('span').textContent = '⚡ Watch Online in HD (Instant Play)';
                 btn2.querySelector('em').textContent = 'Play';
             }
 
-            // SERVER 3: Tertiary Cloud Mirror or In-App Online Stream
+            // SERVER 3: Tertiary Cloud Mirror, Stream 3, or In-App Online Stream
             if (tertiaryUrl) {
                 btn3.href = tertiaryUrl;
                 btn3.target = '_blank';
                 btn3.querySelector('span').textContent = '🌐 Ultra HD VIP Mirror 3 (Direct Download)';
                 btn3.querySelector('em').textContent = 'Download';
+            } else if (stream3) {
+                btn3.href = stream3;
+                btn3.target = '_blank';
+                btn3.removeAttribute('download');
+                btn3.querySelector('span').textContent = '🎬 Global Ultra HD Backup Stream (Server 3)';
+                btn3.querySelector('em').textContent = 'Watch HD';
             } else {
                 btn3.href = watchUrl;
                 btn3.target = '_self';
+                btn3.removeAttribute('download');
                 btn3.querySelector('span').textContent = '🎬 Watch Online in Full HD (Zero Ads • Instant Play)';
                 btn3.querySelector('em').textContent = 'Play HD';
             }

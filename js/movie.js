@@ -13,7 +13,7 @@ function getMovieViewsData(movieId, baseViews) {
     let localStore = {};
     try {
         localStore = JSON.parse(localStorage.getItem(storeKey) || '{}');
-    } catch (_) {}
+    } catch (_) { }
 
     const hash = String(movieId).split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
     const refTime = 1730000000000;
@@ -43,7 +43,7 @@ function initLiveWatcherTicker(movieId, baseViews) {
             localStore[String(movieId)] = (localStore[String(movieId)] || 0) + 1;
             localStorage.setItem(storeKey, JSON.stringify(localStore));
             totalViews += 1;
-        } catch (_) {}
+        } catch (_) { }
     }
 
     const updateUI = (watchers, views) => {
@@ -88,9 +88,9 @@ window.addEventListener('beforeunload', (e) => {
 function createMockWindow(url = '') {
     return {
         closed: false,
-        focus: function() {},
-        blur: function() {},
-        close: function() {},
+        focus: function () { },
+        blur: function () { },
+        close: function () { },
         location: { href: url || '' },
         document: {}
     };
@@ -98,7 +98,7 @@ function createMockWindow(url = '') {
 
 // Defuse rogue window.open calls with uBlock Origin-style mock defuser
 const _originalWindowOpen = window.open;
-window.open = function(url, target, features) {
+window.open = function (url, target, features) {
     if (!url || typeof url !== 'string') return createMockWindow();
     const clean = url.toLowerCase();
     if (clean.includes('vegamovies') || clean.includes('vega') || clean.includes('nexdrive') || clean.includes('greenmotors') || clean.includes('magiclinks') || clean.includes('4khdhub') || clean.includes('vglist') || clean.includes('vcloud') || clean.includes('fastdl')) {
@@ -222,7 +222,7 @@ async function loadLiveMirrors() {
             applyLiveMirrors(liveMirrorsConfig);
             return;
         }
-    } catch (_) {}
+    } catch (_) { }
 
     try {
         const resp = await fetch('data/mirrors.json?v=' + Date.now());
@@ -396,24 +396,24 @@ function renderStreamButtons() {
             </div>
             <div class="stream-server-row">
                 ${currentStreams.map((stream, index) => {
-                    const isP2P = /p2p|hdvb|mesh/i.test(stream.name);
-                    const isNoAds = /no ads/i.test(stream.name);
-                    const activeClass = index === currentStreamIndex ? 'active' : '';
-                    const extraClasses = [
-                        isP2P ? 'p2p' : '',
-                        isNoAds ? 'no-ads' : ''
-                    ].filter(Boolean).join(' ');
+        const isP2P = /p2p|hdvb|mesh/i.test(stream.name);
+        const isNoAds = /no ads/i.test(stream.name);
+        const activeClass = index === currentStreamIndex ? 'active' : '';
+        const extraClasses = [
+            isP2P ? 'p2p' : '',
+            isNoAds ? 'no-ads' : ''
+        ].filter(Boolean).join(' ');
 
-                    let icon = '▶';
-                    if (isP2P) icon = '⚡';
-                    else if (isNoAds) icon = '🛡️';
-                    else icon = '🚀';
+        let icon = '▶';
+        if (isP2P) icon = '⚡';
+        else if (isNoAds) icon = '🛡️';
+        else icon = '🚀';
 
-                    return `<button type="button" class="stream-server-btn ${activeClass} ${extraClasses}" onclick="switchStream(${index})" title="${isP2P ? 'Peer-to-Peer Accelerated (Buffer-free)' : escapeHTML(stream.name)}">
+        return `<button type="button" class="stream-server-btn ${activeClass} ${extraClasses}" onclick="switchStream(${index})" title="${isP2P ? 'Peer-to-Peer Accelerated (Buffer-free)' : escapeHTML(stream.name)}">
                         <span>${icon}</span>
                         <span>${escapeHTML(stream.name)}</span>
                     </button>`;
-                }).join('')}
+    }).join('')}
             </div>
         </div>
     `;
@@ -441,7 +441,7 @@ function setWatchProgress(id, progress, meta = {}) {
             ...meta
         };
         localStorage.setItem('phantom_watch_progress', JSON.stringify(store));
-    } catch (_) {}
+    } catch (_) { }
 }
 
 function renderMovieCurtain(movie, activeStream) {
@@ -490,7 +490,7 @@ setInterval(() => {
     }
 }, 20000);
 
-window.openTrailerModal = function(trailerUrl, title = 'Trailer') {
+window.openTrailerModal = function (trailerUrl, title = 'Trailer') {
     let embedUrl = getYouTubeEmbed(trailerUrl);
     if (!embedUrl) {
         embedUrl = `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(title + ' official trailer')}`;
@@ -507,7 +507,7 @@ window.openTrailerModal = function(trailerUrl, title = 'Trailer') {
     document.body.style.overflow = 'hidden';
 };
 
-window.closeTrailerModal = function() {
+window.closeTrailerModal = function () {
     const modal = document.getElementById('trailerModal');
     const wrap = document.getElementById('trailerVideoWrap');
     if (wrap) wrap.innerHTML = '';
@@ -571,14 +571,14 @@ function generateFallbackDownloads(movie) {
 function isStreamingUrl(url) {
     if (!url || typeof url !== 'string') return false;
     const lower = url.toLowerCase();
-    return lower.includes('embed') || 
-           lower.includes('stream') || 
-           lower.includes('vidsrc') || 
-           lower.includes('autoembed') || 
-           lower.includes('multiembed') || 
-           lower.includes('smashystream') || 
-           lower.includes('player.') || 
-           lower.includes('2embed');
+    return lower.includes('embed') ||
+        lower.includes('stream') ||
+        lower.includes('vidsrc') ||
+        lower.includes('autoembed') ||
+        lower.includes('multiembed') ||
+        lower.includes('smashystream') ||
+        lower.includes('player.') ||
+        lower.includes('2embed');
 }
 
 function isValidDownloadUrl(url) {
@@ -782,7 +782,7 @@ function renderCastChips(movie) {
 function renderMediaSpecs(movie) {
     const isDual = (movie.title && /dual|hindi/i.test(movie.title)) || (movie.industry === 'Bollywood' || movie.industry === 'South') || true;
     const is4K = (movie.badge && /4k/i.test(movie.badge)) || (movie.title && /4k|2160p/i.test(movie.title)) || (Array.isArray(movie.downloads) && movie.downloads.some(d => /4k/i.test(d.quality || '')));
-    
+
     const audioSpec = isDual ? "Hindi (Clean Master DDP 5.1) + English DD 5.1" : "Original Dual Audio (Dolby Digital Plus 5.1)";
     const videoSpec = is4K ? "4K UHD 2160p HEVC 10-Bit (HDR10+ / Dolby Vision)" : "1080p Full HD HEVC x265 (High Dynamic Bitrate)";
     const sourceSpec = is4K ? "Official 4K UHD Master Remux" : "Official Studio WEB-DL Master";
@@ -939,7 +939,7 @@ function trackMovieProgress(movie) {
             timestamp: Date.now()
         });
         localStorage.setItem('phantom_continue_watching', JSON.stringify(list.slice(0, 15)));
-    } catch (_) {}
+    } catch (_) { }
 }
 
 function toggleWatchlist() {
@@ -970,7 +970,7 @@ function toggleWatchlist() {
             showToast('Saved to Watchlist! ❤️');
         }
         localStorage.setItem('phantom_watchlist', JSON.stringify(list.slice(0, 30)));
-    } catch (_) {}
+    } catch (_) { }
 }
 
 function updateWatchlistButtonState() {
@@ -984,7 +984,7 @@ function updateWatchlistButtonState() {
         if (btn) btn.classList.toggle('active', exists);
         if (icon) icon.textContent = exists ? '❤️' : '🤍';
         if (text) text.textContent = exists ? 'In Watchlist' : 'Add to Watchlist';
-    } catch (_) {}
+    } catch (_) { }
 }
 
 
@@ -1001,23 +1001,23 @@ function showError(message) {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v4');
-        const cacheTime = sessionStorage.getItem('phantom_content_time_v4');
+        const cached = sessionStorage.getItem('phantom_content_cache_v6');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v6');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
             return parsed;
         }
-    } catch (_) {}
+    } catch (_) { }
 
     const response = await fetch('data/content.json?v=' + Date.now());
     if (!response.ok) throw new Error('Failed to load content.json');
     const data = await response.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {
-        sessionStorage.setItem('phantom_content_cache_v4', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time_v4', String(Date.now()));
-    } catch (_) {}
+        sessionStorage.setItem('phantom_content_cache_v6', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time_v6', String(Date.now()));
+    } catch (_) { }
     return data;
 }
 
@@ -1041,7 +1041,7 @@ async function loadMovieDetail() {
             if (itemResp.ok) {
                 movie = await itemResp.json();
             }
-        } catch (_) {}
+        } catch (_) { }
 
         // 2. Fallback to cached or full content.json
         if (!movie) {
@@ -1062,7 +1062,7 @@ async function loadMovieDetail() {
             try {
                 const data = await getContentData();
                 ads = data.settings && data.settings.ads;
-            } catch (_) {}
+            } catch (_) { }
         }
         if (ads) applyAds(ads, 'movie');
     } catch (error) {
