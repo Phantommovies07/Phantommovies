@@ -397,6 +397,8 @@ function isValidDownloadUrl(url) {
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
     if (clean.includes('/?s=') || clean.includes('/search/')) return false;
+    // Strictly block HDHub4u redirect traps and dead shorteners
+    if (clean.includes('4khdhub.one') || clean.includes('hdhub4u.') || clean.includes('greenmotors.') || clean.includes('azonahub.') || clean.includes('fastdl.')) return false;
     // Allow legitimate cloud download gateways while filtering out root blog and category landing pages
     if (/kmmovies\.[a-z]+\/?$/i.test(clean) || /vegamovies\.[a-z]+\/?$/i.test(clean) || /category|genre|tag|disclaimer/i.test(clean)) return false;
     if (isStreamingUrl(clean)) return false;
@@ -444,14 +446,13 @@ function startCountdownTimer() {
         revealDownloadLinks();
         const autoLink = document.getElementById('btnServer1')?.href;
         if (autoLink && autoLink.startsWith('http') && !autoLink.includes('download.html')) {
-            // Initiate direct clean download immediately
-            setTimeout(() => {
-                if (window.PhantomSanitizer) {
+            const isMedia = window.PhantomSanitizer?.isDirectMediaUrl(autoLink);
+            if (isMedia) {
+                // Initiate direct clean download immediately for actual media streams
+                setTimeout(() => {
                     window.PhantomSanitizer.triggerDirectDownload(autoLink, cleanFn);
-                } else {
-                    window.location.href = autoLink;
-                }
-            }, 500);
+                }, 400);
+            }
         }
         return;
     }
@@ -661,18 +662,31 @@ function applyInitialParams(params) {
             initialDlUrl = window.PhantomSanitizer.cleanUrl(initialDlUrl, { filename: cleanFn });
         }
         btn1.href = initialDlUrl;
-        btn1.setAttribute('download', cleanFn);
+        const isMedia = window.PhantomSanitizer ? window.PhantomSanitizer.isDirectMediaUrl(initialDlUrl) : false;
+        if (isMedia) {
+            btn1.setAttribute('download', cleanFn);
+        } else {
+            btn1.removeAttribute('download');
+        }
         btn1.setAttribute('data-filename', cleanFn);
 
         if (isDirect) {
             btn1.querySelector('span').textContent = `⚡ Direct Fast Download (Final Link - ${qLabel})`;
             btn2.href = initialDlUrl;
-            btn2.setAttribute('download', cleanFn);
+            if (isMedia) {
+                btn2.setAttribute('download', cleanFn);
+            } else {
+                btn2.removeAttribute('download');
+            }
             btn2.querySelector('span').textContent = `🌐 Multi-Cloud Mirrors Hub (${qLabel})`;
         } else {
             btn1.querySelector('span').textContent = `🌐 Multi-Cloud Mirrors Hub (GDrive, HubCloud, Mega - ${qLabel})`;
             btn2.href = initialDlUrl;
-            btn2.setAttribute('download', cleanFn);
+            if (isMedia) {
+                btn2.setAttribute('download', cleanFn);
+            } else {
+                btn2.removeAttribute('download');
+            }
             btn2.querySelector('span').textContent = `⚡ High Speed Cloud Mirror 2 (Direct Download)`;
         }
         btn3.href = watchUrl;
@@ -816,18 +830,25 @@ async function enrichPage() {
             if (primaryUrl) {
                 btn1.href = primaryUrl;
                 btn1.target = '_blank';
-                btn1.setAttribute('download', finalCleanFn);
+                const isMedia1 = window.PhantomSanitizer ? window.PhantomSanitizer.isDirectMediaUrl(primaryUrl) : false;
+                if (isMedia1) {
+                    btn1.setAttribute('download', finalCleanFn);
+                } else {
+                    btn1.removeAttribute('download');
+                }
                 btn1.setAttribute('data-filename', finalCleanFn);
                 btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Direct Download - ${qLabel})`;
                 btn1.querySelector('em').textContent = 'Download';
             } else if (currentMovie.torrent && currentMovie.torrent.magnet) {
                 btn1.href = currentMovie.torrent.magnet;
                 btn1.target = '_self';
+                btn1.removeAttribute('download');
                 btn1.querySelector('span').textContent = `🧲 Direct P2P Torrent / Magnet (Client Launch - ${qLabel})`;
                 btn1.querySelector('em').textContent = 'Instant P2P';
             } else {
                 btn1.href = torrentSearchUrl;
                 btn1.target = '_blank';
+                btn1.removeAttribute('download');
                 btn1.querySelector('span').textContent = `🔍 Verified Cloud Mirror Search (${qLabel} Direct)`;
                 btn1.querySelector('em').textContent = 'Search';
             }
@@ -836,7 +857,12 @@ async function enrichPage() {
             if (secondaryUrl) {
                 btn2.href = secondaryUrl;
                 btn2.target = '_blank';
-                btn2.setAttribute('download', finalCleanFn);
+                const isMedia2 = window.PhantomSanitizer ? window.PhantomSanitizer.isDirectMediaUrl(secondaryUrl) : false;
+                if (isMedia2) {
+                    btn2.setAttribute('download', finalCleanFn);
+                } else {
+                    btn2.removeAttribute('download');
+                }
                 btn2.setAttribute('data-filename', finalCleanFn);
                 btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Direct Download)';
                 btn2.querySelector('em').textContent = 'Download';

@@ -104,8 +104,25 @@
         return url;
     }
 
+    function isDirectMediaUrl(url) {
+        if (!url || typeof url !== 'string') return false;
+        const clean = url.trim().toLowerCase();
+        if (clean.includes('download.html') || clean.includes('/?s=') || clean.includes('/search/')) return false;
+        if (clean.includes('4khdhub.one') || clean.includes('hdhub4u') || clean.includes('greenmotors')) return false;
+        return /\.(mkv|mp4|avi|webm|m4v|ts)(\?|#|$)/i.test(clean) ||
+               clean.includes('cdn-files.alcyone.so') ||
+               clean.includes('r2.dev') ||
+               clean.includes('filename=');
+    }
+
     function triggerDirectDownload(url, filename) {
         if (!url) return;
+        // CRITICAL BUG FIX: Never attach download attribute to non-media HTML pages!
+        // Otherwise browsers download the HTML page source code as a .mkv file.
+        if (!isDirectMediaUrl(url)) {
+            window.location.href = url;
+            return;
+        }
         const cleanFn = filename || cleanFilename('', {});
         const finalUrl = cleanUrl(url, { filename: cleanFn });
 
@@ -123,7 +140,9 @@
         cleanFilename: cleanFilename,
         cleanUrl: cleanUrl,
         buildStandardFilename: buildStandardFilename,
+        isDirectMediaUrl: isDirectMediaUrl,
         triggerDirectDownload: triggerDirectDownload
     };
 
 })(typeof window !== 'undefined' ? window : this);
+

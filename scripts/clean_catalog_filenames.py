@@ -116,3 +116,4 @@ def process_catalog():
 
 if __name__ == '__main__':
     process_catalog()
+

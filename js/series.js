@@ -336,6 +336,9 @@ function isValidDownloadUrl(url) {
     const clean = url.trim().toLowerCase();
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
+    if (clean.includes('/?s=') || clean.includes('/search/')) return false;
+    // Strictly block HDHub4u redirect traps and dead shorteners
+    if (clean.includes('4khdhub.one') || clean.includes('hdhub4u.') || clean.includes('greenmotors.') || clean.includes('azonahub.') || clean.includes('fastdl.')) return false;
     if (/kmmovies\.[a-z]+\/?$/i.test(clean) || /vegamovies\.[a-z]+\/?$/i.test(clean) || /category|genre|tag|disclaimer/i.test(clean)) return false;
     if (isStreamingUrl(clean)) return false;
     return true;
@@ -1077,8 +1080,10 @@ function renderEpisodeDownloads() {
         }) : `${currentSeries.title || 'Series'}.S0${sNum}E${epNum}.${quality}.mkv`;
 
         const sanitizedDirectUrl = (directUrl && window.PhantomSanitizer) ? window.PhantomSanitizer.cleanUrl(directUrl, { filename: cleanFilename }) : directUrl;
+        const isRealMedia = Boolean(sanitizedDirectUrl && window.PhantomSanitizer?.isDirectMediaUrl(sanitizedDirectUrl));
+        const dlAttr = isRealMedia ? `download="${escapeHTML(cleanFilename)}"` : '';
 
-        // Button 1: Direct Download (with clean filename parameter & download attribute)
+        // Button 1: Direct Download (with clean filename parameter)
         const directDlLink = sanitizedDirectUrl || `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=direct&filename=${encodeURIComponent(cleanFilename)}`;
 
         // Button 2: Multi Download
@@ -1094,7 +1099,7 @@ function renderEpisodeDownloads() {
                     <span class="dl-codec-info">${escapeHTML(codec)}</span>
                 </div>
                 <div class="dl-actions-row">
-                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" download="${escapeHTML(cleanFilename)}" data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
+                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" ${dlAttr} data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
                         <span>⚡</span>
                         <span>Direct Download</span>
                     </a>
