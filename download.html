@@ -342,7 +342,7 @@
     </div>
 </div>
 
-<script src="js/filename-sanitizer.js?v=20261117_v3"></script>
+<script src="js/filename-sanitizer.js?v=20261118_v4"></script>
 <script>
 // --- GLOBAL ACTIVE MIRRORS & STATE ---
 let currentMovie = null;
@@ -516,7 +516,7 @@ async function fetchMirrorsConfig() {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v6');
+        const cached = sessionStorage.getItem('phantom_content_cache_v7');
         if (cached) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
@@ -529,7 +529,7 @@ async function getContentData() {
         if (res.ok) {
             const data = await res.json();
             window.PHANTOM_CONTENT_CACHE = data;
-            sessionStorage.setItem('phantom_content_cache_v6', JSON.stringify(data));
+            sessionStorage.setItem('phantom_content_cache_v7', JSON.stringify(data));
             return data;
         }
     } catch (e) {

@@ -88,7 +88,9 @@ DEAD_DOMAINS_BLACKLIST = [
     'netmirror',
     'slast430did',
     'gorri421kos',
-    'vegamovies',
+    '4khdhub.one',
+    'greenmotors.club',
+    'azonahub',
     'hubdrive.bar',
     'hubdrive.pics',
     'hubcloud.ist'
@@ -380,7 +382,7 @@ class LinkSentinel:
             # If item has 0 download links and harvest quota allows, fetch fresh cloud links
             if (not item.get('downloads')) and fetch_best_real_downloads and (downloads_harvested_count < max_harvest_downloads):
                 try:
-                    fresh_dls = fetch_best_real_downloads(title)
+                    fresh_dls = fetch_best_real_downloads(title, year=item.get('year'))
                     if fresh_dls:
                         item['downloads'] = fresh_dls
                         downloads_harvested_count += 1

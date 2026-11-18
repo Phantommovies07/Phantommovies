@@ -339,16 +339,84 @@ function getStreamStatusText(stream) {
     return `🚀 Active: ${escapeHTML(stream.name)} — High-Speed Stream`;
 }
 
+function showToast(message, type = 'info') {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.className = 'toast ' + type + ' show';
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3500);
+}
+
+function triggerPlayerInstantDownload() {
+    if (!currentMovie) return;
+    const activeStream = (currentStreams && currentStreams[currentStreamIndex]) || (currentStreams && currentStreams[0]) || {};
+    const streamUrl = activeStream.url || currentMovie.streamLink || '';
+
+    // Standard sanitized clean filename stripping competitor branding
+    const cleanFn = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename('', {
+        title: currentMovie.title,
+        year: currentMovie.year,
+        quality: '1080p',
+        codec: 'WEB-DL'
+    }) : `${(currentMovie.title || 'Movie')}.1080p.mkv`;
+
+    // 1. If playing direct video (native MP4/MKV or R2/Alcyone CDN)
+    if (isDirectVideo(streamUrl)) {
+        showToast(`⚡ Starting direct stream download: ${cleanFn}`);
+        if (window.PhantomSanitizer) {
+            window.PhantomSanitizer.triggerDirectDownload(streamUrl, cleanFn);
+        } else {
+            const a = document.createElement('a');
+            a.href = streamUrl;
+            a.download = cleanFn;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => a.remove(), 1000);
+        }
+        return;
+    }
+
+    // 2. Check if movie has verified downloads with a direct URL
+    const dls = normalizeDownloads(currentMovie);
+    let bestDl = dls.find(d => d.direct_url && !d.direct_url.includes('download.html') && isValidDownloadUrl(d.direct_url));
+    if (!bestDl) {
+        bestDl = dls.find(d => d.url && !d.url.includes('download.html') && isValidDownloadUrl(d.url));
+    }
+
+    if (bestDl && bestDl.direct_url && window.PhantomSanitizer?.isDirectMediaUrl(bestDl.direct_url)) {
+        showToast(`⚡ Starting 1-click VIP download: ${cleanFn}`);
+        window.PhantomSanitizer.triggerDirectDownload(bestDl.direct_url, cleanFn);
+        return;
+    }
+
+    // 3. Fallback: Launch high-speed direct download mirror
+    const targetUrl = bestDl ? (bestDl.direct_url || bestDl.url) : '';
+    const qParam = encodeURIComponent(bestDl?.quality || '1080p HD');
+    const sParam = encodeURIComponent(bestDl?.size || 'Cloud Fast');
+    const dlPageUrl = `download.html?id=${encodeURIComponent(currentMovie.id)}&title=${encodeURIComponent(currentMovie.title || '')}&poster=${encodeURIComponent(currentMovie.poster || '')}&quality=${qParam}&size=${sParam}&url=${encodeURIComponent(targetUrl)}&mode=direct&filename=${encodeURIComponent(cleanFn)}`;
+    
+    showToast(`⚡ Launching high-speed direct download mirror...`);
+    window.open(dlPageUrl, '_blank', 'noopener,noreferrer');
+}
+
 function renderFailoverBar() {
-    if (!currentStreams || currentStreams.length <= 1) return '';
-    const activeStream = currentStreams[currentStreamIndex] || currentStreams[0];
+    const activeStream = (currentStreams && currentStreams[currentStreamIndex]) || (currentStreams && currentStreams[0]);
     return `
         <div class="stream-failover-bar" id="streamFailoverBar">
             <div class="failover-status">
                 <span class="failover-dot online" id="failoverDot"></span>
                 <span id="failoverText">${getStreamStatusText(activeStream)}</span>
             </div>
-            <button type="button" class="failover-quick-btn" onclick="autoFailoverNext('manual')">Switch Server ↻</button>
+            <div class="failover-actions">
+                <button type="button" class="btn-player-quick-dl" id="btnPlayerQuickDl" onclick="triggerPlayerInstantDownload()" title="1-Click Direct Download Video (Clean filename, zero ads)">
+                    <span>⚡</span> <span>Download Video</span>
+                </button>
+                ${(currentStreams && currentStreams.length > 1) ? `<button type="button" class="failover-quick-btn" onclick="autoFailoverNext('manual')">Switch Server ↻</button>` : ''}
+            </div>
         </div>
     `;
 }
@@ -1001,8 +1069,8 @@ function showError(message) {
 async function getContentData() {
     if (window.PHANTOM_CONTENT_CACHE) return window.PHANTOM_CONTENT_CACHE;
     try {
-        const cached = sessionStorage.getItem('phantom_content_cache_v6');
-        const cacheTime = sessionStorage.getItem('phantom_content_time_v6');
+        const cached = sessionStorage.getItem('phantom_content_cache_v7');
+        const cacheTime = sessionStorage.getItem('phantom_content_time_v7');
         if (cached && cacheTime && (Date.now() - Number(cacheTime) < 5 * 60 * 1000)) {
             const parsed = JSON.parse(cached);
             window.PHANTOM_CONTENT_CACHE = parsed;
@@ -1015,8 +1083,8 @@ async function getContentData() {
     const data = await response.json();
     window.PHANTOM_CONTENT_CACHE = data;
     try {
-        sessionStorage.setItem('phantom_content_cache_v6', JSON.stringify(data));
-        sessionStorage.setItem('phantom_content_time_v6', String(Date.now()));
+        sessionStorage.setItem('phantom_content_cache_v7', JSON.stringify(data));
+        sessionStorage.setItem('phantom_content_time_v7', String(Date.now()));
     } catch (_) { }
     return data;
 }

@@ -1031,15 +1031,33 @@ def fetch_rogmovies_playdrive_stream(title: str) -> Optional[str]:
         pass
     return None
 
-def fetch_best_real_downloads(title: str) -> List[Dict]:
-    """Tries HDHub4u first (fastest/best), then ROG Movies, then KM Movies."""
-    dl = fetch_real_hdhub4u_downloads(title)
+def fetch_best_real_downloads(title: str, year: Optional[int] = None) -> List[Dict]:
+    """Tries KM Movies first (fastest/direct R2), then Vegamovies (V-Cloud/FastDL), then ROG Movies."""
+    try:
+        from scrapers.kmmovies_engine import KMMoviesEngine
+        km = KMMoviesEngine()
+        km_dls, _ = km.search_movie_downloads(title, year=year)
+        if km_dls:
+            return km_dls
+    except Exception:
+        pass
+
+    try:
+        from scrapers.vegamovies_engine import VegamoviesEngine
+        vm = VegamoviesEngine()
+        vm_dls, _ = vm.search_movie_downloads(title, year=year)
+        if vm_dls:
+            return vm_dls
+    except Exception:
+        pass
+
+    dl = fetch_real_kmmovies_downloads(title)
     if dl:
         return dl
     dl = fetch_real_rogmovies_downloads(title)
     if dl:
         return dl
-    return fetch_real_kmmovies_downloads(title)
+    return []
 
 def generate_movie_downloads(title: str, year: int, item_id: str) -> List[Dict]:
     return fetch_best_real_downloads(title)

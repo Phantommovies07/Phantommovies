@@ -49,7 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/content.json data/index.json data/items/ data/health_report.json
+          git add data/content.json data/index.json data/items/ data/health_report.json data/mirrors.json
           
           if git diff --staged --quiet; then
             echo "✨ All links across full catalog are 100% healthy. No broken links found."

@@ -36,6 +36,19 @@
       ],
       "latency_ms": 115,
       "status": "online"
+    },
+    "vegamovies": {
+      "active": "https://vegamovies.lease",
+      "portal": "https://vegamovies.is",
+      "mirrors": [
+        "https://vegamovies.lease",
+        "https://vegamovies.free",
+        "https://vegamovies.ph",
+        "https://vegamovies.fun",
+        "https://vegamovies.is"
+      ],
+      "latency_ms": 120,
+      "status": "online"
     }
   },
   "streaming": {
