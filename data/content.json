@@ -1,6 +1,909 @@
 {
   "movies": [
     {
+      "id": "1795020669685",
+      "type": "series",
+      "title": "Campus Diaries",
+      "genre": "Tv Series",
+      "year": 2022,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmRkYmFhZmYtYjEyMC00MWVhLThlNzktOTg0YmNlMmMyZThkXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYmRkYmFhZmYtYjEyMC00MWVhLThlNzktOTg0YmNlMmMyZThkXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt15295490?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt15295490?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt15295490-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt15295490&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "15.4GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/3289636863",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 0,
+          "title": "Season 0",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt15295490?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt15295490-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt15295490&s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt15295490?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt15295490-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt15295490&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.8GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2053969229",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "26GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/23867399506",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt15295490?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt15295490-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt15295490&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "15.4GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/3289636863",
+              "color": "#10b981"
+            },
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnlYc01rZDdTcGtZdVpzU1hNZ2l5bXJjYzVybTlBZzRrVlZrQzhETTgyZEk9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.4GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2491595005",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 7,
+          "title": "Season 7",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt15295490?s=7&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=7&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt15295490-7-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt15295490&s=7&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 9,
+          "title": "Season 9",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt15295490?s=9&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=9&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt15295490-9-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt15295490&s=9&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "480p SD",
+              "size": "1.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnlYc01rZDdTcGtZdVpzU1hNZ2l5bXJjYzVybTlBZzRrVlZrQzhETTgyZEk9",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "2.4GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://hubdrive.blog/file/2491595005",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "3.5GB",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjNmUWlhck14cUM2N0FvTE96OXhraktxck55aTNJVHVkbEZiRnNjNFh0VjQ9",
+              "color": "#10b981"
+            },
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "HDHub4u Cloud Mirror",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 61,
+          "title": "Season 61",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt15295490?s=61&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=61&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt15295490-61-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt15295490&s=61&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Campus+Diaries+2022+trailer",
+      "description": "Campus Diaries (2022) starring Harsh Beniwal, Ritvik Sahore.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27596,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt15295490",
+      "tmdb_id": "",
+      "createdAt": "2026-11-18T16:51:04.140477+00:00",
+      "updatedAt": "2026-11-19T12:22:11.927980+00:00"
+    },
+    {
+      "id": "1793720400953",
+      "type": "series",
+      "title": "Love in Disguise",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWY3ZjliZTUtYjc5Yy00YTEzLWE2NDQtMWUxNGU1NDgyMjRiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNWY3ZjliZTUtYjc5Yy00YTEzLWE2NDQtMWUxNGU1NDgyMjRiXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt45246384?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt45246384?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt45246384-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt45246384&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "850MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=xfgbGI8LhBw3020F6P70hUltg",
+          "multi_url": "https://nexdrive.beer/genxfm784776515146/",
+          "url": "https://fastdl.beer/embed.php?download=xfgbGI8LhBw3020F6P70hUltg",
+          "color": "#34d399",
+          "filename": "Love.in.Disguise.1080p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "300MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=wt2hu3CVMk4wcoNTFZ2dkGu8n",
+          "multi_url": "https://nexdrive.beer/genxfm784776515150/",
+          "url": "https://fastdl.beer/embed.php?download=wt2hu3CVMk4wcoNTFZ2dkGu8n",
+          "color": "#38bdf8",
+          "filename": "Love.in.Disguise.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt45246384?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt45246384-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt45246384&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt45246384?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt45246384-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt45246384&s=2&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt45246384?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt45246384-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt45246384&s=4&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 91,
+          "title": "Season 91",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt45246384?s=91&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=91&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt45246384-91-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt45246384&s=91&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Love+in+Disguise+2026+trailer",
+      "description": "Love in Disguise (2026) starring Yim Si-wan, Seol In-ah.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 22348,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt45246384",
+      "tmdb_id": "",
+      "createdAt": "2026-11-03T15:39:57.701822+00:00",
+      "updatedAt": "2026-11-19T12:22:11.482992+00:00"
+    },
+    {
+      "id": "1795090932306",
+      "type": "series",
+      "title": "Cult Massacre: One Day in Jonestown",
+      "genre": "Tv Mini-Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt32421513-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt32421513&s=1&e=1"
+        }
+      ],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "720p HD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlBlRHJCRzExR2tTajk1dURPZnZXSkNqUjNESStrSVRDYWMxdnRwUW82dTA9",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Episode 1",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p Full HD",
+                  "size": "3.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm02b2NReGVLRzRSOUNqMjJDcjFpcVI0WlIzS0d5eE1IdzZEMEFYY1lkTGM9",
+                  "color": "#10b981"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32421513?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32421513-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32421513&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "590MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/rablDjHqM32vwVjv8DOvx7Nwk",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "940MB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/1919909826",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.1GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2395028272",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Cult+Massacre:+One+Day+in+Jonestown+2024+trailer",
+      "description": "Cult Massacre: One Day in Jonestown (2024) starring Stephan Jones, Charles A. Krause.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15050,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32421513",
+      "tmdb_id": "",
+      "createdAt": "2026-11-19T12:22:10.896972+00:00",
+      "updatedAt": "2026-11-19T12:23:46.628680+00:00"
+    },
+    {
+      "id": "1794227020621",
+      "type": "series",
+      "title": "Dark",
+      "genre": "Tv Series",
+      "year": 2017,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTUzNjQ2MTY5NV5BMl5BanBnXkFtZTgwOTAzNTQxNDM@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMTUzNjQ2MTY5NV5BMl5BanBnXkFtZTgwOTAzNTQxNDM@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt5753856?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt5753856?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt5753856&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt5753856-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt5753856&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=Xfb44Cf3PON7xOMWnF8w6vWSI",
+          "multi_url": "https://nexdrive.beer/genxfm784776123365/",
+          "url": "https://fastdl.beer/embed.php?download=Xfb44Cf3PON7xOMWnF8w6vWSI",
+          "color": "#34d399",
+          "filename": "Dark.1080p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "650MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=rIF8MQGa7MHyzV19FbvwbH7SW",
+          "multi_url": "https://nexdrive.beer/genxfm784776123362/",
+          "url": "https://fastdl.beer/embed.php?download=rIF8MQGa7MHyzV19FbvwbH7SW",
+          "color": "#38bdf8",
+          "filename": "Dark.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=56qmda3Bjo9gum9PDuKa8IUpp",
+          "multi_url": "https://nexdrive.beer/genxfm784776123356/",
+          "url": "https://fastdl.beer/embed.php?download=56qmda3Bjo9gum9PDuKa8IUpp",
+          "color": "#fbbf24",
+          "filename": "Dark.480p.Clean.WEB.DL.mkv"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt5753856?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt5753856&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt5753856-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt5753856&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dark+2017+trailer",
+      "description": "Dark (2017) starring Louis Hofmann, Karoline Eichhorn.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 21510,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt5753856",
+      "tmdb_id": "",
+      "createdAt": "2026-11-09T12:23:31.029107+00:00",
+      "updatedAt": "2026-11-19T12:22:10.065640+00:00"
+    },
+    {
+      "id": "1795090931814",
+      "type": "movie",
+      "title": "Zip Wire",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzhlMDIyYTQtZjFlMi00MDgwLWI5MTQtYzY2NjE2YmRkZDBlXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMzhlMDIyYTQtZjFlMi00MDgwLWI5MTQtYzY2NjE2YmRkZDBlXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt36980377?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt36980377?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt36980377"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt36980377"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt36980377"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Zip+Wire+2026+trailer",
+      "description": "Zip Wire (2026) starring MyAnna Buring, Saffron Burrows.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 7506,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt36980377",
+      "tmdb_id": "",
+      "createdAt": "2026-11-19T12:22:09.065220+00:00",
+      "updatedAt": "2026-11-19T12:23:46.628752+00:00"
+    },
+    {
+      "id": "1795090931121",
+      "type": "movie",
+      "title": "Marked Men",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTlhNjFjYjktZDM3MS00OTRhLWFlMWEtNWIxZDY0NmMyNDM0XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTlhNjFjYjktZDM3MS00OTRhLWFlMWEtNWIxZDY0NmMyNDM0XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt26452781?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt26452781?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt26452781"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt26452781"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt26452781"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Marked+Men+2025+trailer",
+      "description": "Marked Men (2025) starring Alexander Ludwig, Natalie Alyn Lind.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16661,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt26452781",
+      "tmdb_id": "",
+      "createdAt": "2026-11-19T12:22:05.298978+00:00",
+      "updatedAt": "2026-11-19T12:23:46.628782+00:00"
+    },
+    {
+      "id": "1795090929933",
+      "type": "movie",
+      "title": "Madden",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGQ0YzA4ZTAtZjlmYS00ZGU3LTg2MGItYmI2MzQ5MDY4YWE3XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGQ0YzA4ZTAtZjlmYS00ZGU3LTg2MGItYmI2MzQ5MDY4YWE3XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt24818230?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt24818230?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt24818230"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt24818230"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt24818230"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Madden+2026+trailer",
+      "description": "Madden (2026) starring Nicolas Cage, Christian Bale.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16141,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt24818230",
+      "tmdb_id": "",
+      "createdAt": "2026-11-19T12:22:02.642383+00:00",
+      "updatedAt": "2026-11-19T12:23:46.628811+00:00"
+    },
+    {
       "id": "1795052152612",
       "type": "series",
       "title": "Pradhama Drishtiya Kuttakkar",
@@ -622,158 +1525,6 @@
       "tmdb_id": "",
       "createdAt": "2026-11-18T16:51:06.205112+00:00",
       "updatedAt": "2026-11-18T21:27:32.622927+00:00"
-    },
-    {
-      "id": "1795020669685",
-      "type": "series",
-      "title": "Campus Diaries",
-      "genre": "Tv Series",
-      "year": 2022,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmRkYmFhZmYtYjEyMC00MWVhLThlNzktOTg0YmNlMmMyZThkXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BYmRkYmFhZmYtYjEyMC00MWVhLThlNzktOTg0YmNlMmMyZThkXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/tt15295490?s=1&e=1",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/tt15295490?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=1&episode=1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://autoembed.co/tv/imdb/tt15295490-1-1"
-        },
-        {
-          "name": "Server 4 (Global Mirror)",
-          "url": "https://www.2embed.cc/embedtv/tt15295490&s=1&e=1"
-        }
-      ],
-      "downloads": [
-        {
-          "quality": "1080p Full HD",
-          "size": "15.4GB",
-          "server": "Fast Cloud",
-          "url": "https://hubdrive.blog/file/3289636863",
-          "color": "#10b981"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt15295490?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=2&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt15295490-2-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt15295490&s=2&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "4K Ultra HD",
-              "size": "",
-              "server": "Fast Cloud",
-              "url": "https://4khdhub.one",
-              "color": "#8b5cf6"
-            },
-            {
-              "quality": "1080p Full HD",
-              "size": "15.4GB",
-              "server": "Fast Cloud",
-              "url": "https://hubdrive.blog/file/3289636863",
-              "color": "#10b981"
-            }
-          ],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 9,
-          "title": "Season 9",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt15295490?s=9&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt15295490&season=9&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt15295490-9-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt15295490&s=9&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "480p SD",
-              "size": "1.4GB",
-              "server": "HDHub4u Cloud Mirror",
-              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QnlYc01rZDdTcGtZdVpzU1hNZ2l5bXJjYzVybTlBZzRrVlZrQzhETTgyZEk9",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "720p HD",
-              "size": "2.4GB",
-              "server": "HDHub4u Cloud Mirror",
-              "url": "https://hubdrive.blog/file/2491595005",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "1080p Full HD",
-              "size": "3.5GB",
-              "server": "HDHub4u Cloud Mirror",
-              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QjNmUWlhck14cUM2N0FvTE96OXhraktxck55aTNJVHVkbEZiRnNjNFh0VjQ9",
-              "color": "#10b981"
-            },
-            {
-              "quality": "4K Ultra HD",
-              "size": "",
-              "server": "HDHub4u Cloud Mirror",
-              "url": "https://4khdhub.one",
-              "color": "#8b5cf6"
-            }
-          ],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Campus+Diaries+2022+trailer",
-      "description": "Campus Diaries (2022) starring Harsh Beniwal, Ritvik Sahore.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 27596,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt15295490",
-      "tmdb_id": "",
-      "createdAt": "2026-11-18T16:51:04.140477+00:00",
-      "updatedAt": "2026-11-18T21:27:32.623102+00:00"
     },
     {
       "id": "1794397323213",
@@ -2740,162 +3491,6 @@
       ],
       "streamLink": "https://cinesrc.st/embed/tv/262838?s=1&e=1",
       "updatedAt": "2026-11-18T21:27:32.624500+00:00"
-    },
-    {
-      "id": "1793720400953",
-      "type": "series",
-      "title": "Love in Disguise",
-      "genre": "Tv Series",
-      "year": 2026,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWY3ZjliZTUtYjc5Yy00YTEzLWE2NDQtMWUxNGU1NDgyMjRiXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BNWY3ZjliZTUtYjc5Yy00YTEzLWE2NDQtMWUxNGU1NDgyMjRiXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/tt45246384?s=1&e=1",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/tt45246384?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=1&episode=1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://autoembed.co/tv/imdb/tt45246384-1-1"
-        },
-        {
-          "name": "Server 4 (Global Mirror)",
-          "url": "https://www.2embed.cc/embedtv/tt45246384&s=1&e=1"
-        }
-      ],
-      "downloads": [
-        {
-          "quality": "1080p Full HD",
-          "size": "850MB",
-          "codec": "x265 HEVC • Dual Audio Hindi",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed.php?download=xfgbGI8LhBw3020F6P70hUltg",
-          "multi_url": "https://nexdrive.beer/genxfm784776515146/",
-          "url": "https://fastdl.beer/embed.php?download=xfgbGI8LhBw3020F6P70hUltg",
-          "color": "#34d399",
-          "filename": "Love.in.Disguise.1080p.x265.HEVC.Dual.Audio.Hindi.mkv"
-        },
-        {
-          "quality": "720p HD",
-          "size": "300MB",
-          "codec": "x265 HEVC • Dual Audio Hindi",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed.php?download=wt2hu3CVMk4wcoNTFZ2dkGu8n",
-          "multi_url": "https://nexdrive.beer/genxfm784776515150/",
-          "url": "https://fastdl.beer/embed.php?download=wt2hu3CVMk4wcoNTFZ2dkGu8n",
-          "color": "#38bdf8",
-          "filename": "Love.in.Disguise.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt45246384?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=1&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt45246384-1-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt45246384&s=1&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "4K Ultra HD",
-              "size": "",
-              "server": "Fast Cloud",
-              "url": "https://4khdhub.one",
-              "color": "#8b5cf6"
-            }
-          ],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt45246384?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=2&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt45246384-2-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt45246384&s=2&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        },
-        {
-          "seasonNumber": 4,
-          "title": "Season 4",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt45246384?s=4&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt45246384&season=4&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt45246384-4-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt45246384&s=4&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Love+in+Disguise+2026+trailer",
-      "description": "Love in Disguise (2026) starring Yim Si-wan, Seol In-ah.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 22348,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt45246384",
-      "tmdb_id": "",
-      "createdAt": "2026-11-03T15:39:57.701822+00:00",
-      "updatedAt": "2026-11-18T21:27:32.624602+00:00"
     },
     {
       "id": "1793381537818",
@@ -11501,115 +12096,6 @@
       "tmdb_id": "",
       "createdAt": "2026-11-09T12:23:31.819210+00:00",
       "updatedAt": "2026-11-09T12:24:50.697334+00:00"
-    },
-    {
-      "id": "1794227020621",
-      "type": "series",
-      "title": "Dark",
-      "genre": "Tv Series",
-      "year": 2017,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTUzNjQ2MTY5NV5BMl5BanBnXkFtZTgwOTAzNTQxNDM@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BMTUzNjQ2MTY5NV5BMl5BanBnXkFtZTgwOTAzNTQxNDM@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/tt5753856?s=1&e=1",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/tt5753856?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidsrc.pm/embed/tv?tmdb=tt5753856&season=1&episode=1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://autoembed.co/tv/imdb/tt5753856-1-1"
-        },
-        {
-          "name": "Server 4 (Global Mirror)",
-          "url": "https://www.2embed.cc/embedtv/tt5753856&s=1&e=1"
-        }
-      ],
-      "downloads": [
-        {
-          "quality": "1080p Full HD",
-          "size": "1.7GB",
-          "codec": "Clean WEB-DL",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed.php?download=Xfb44Cf3PON7xOMWnF8w6vWSI",
-          "multi_url": "https://nexdrive.beer/genxfm784776123365/",
-          "url": "https://fastdl.beer/embed.php?download=Xfb44Cf3PON7xOMWnF8w6vWSI",
-          "color": "#34d399",
-          "filename": "Dark.1080p.Clean.WEB.DL.mkv"
-        },
-        {
-          "quality": "720p HD",
-          "size": "650MB",
-          "codec": "Clean WEB-DL",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed.php?download=rIF8MQGa7MHyzV19FbvwbH7SW",
-          "multi_url": "https://nexdrive.beer/genxfm784776123362/",
-          "url": "https://fastdl.beer/embed.php?download=rIF8MQGa7MHyzV19FbvwbH7SW",
-          "color": "#38bdf8",
-          "filename": "Dark.720p.Clean.WEB.DL.mkv"
-        },
-        {
-          "quality": "480p SD",
-          "size": "300MB",
-          "codec": "Clean WEB-DL",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed.php?download=56qmda3Bjo9gum9PDuKa8IUpp",
-          "multi_url": "https://nexdrive.beer/genxfm784776123356/",
-          "url": "https://fastdl.beer/embed.php?download=56qmda3Bjo9gum9PDuKa8IUpp",
-          "color": "#fbbf24",
-          "filename": "Dark.480p.Clean.WEB.DL.mkv"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt5753856?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt5753856&season=1&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt5753856-1-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt5753856&s=1&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Dark+2017+trailer",
-      "description": "Dark (2017) starring Louis Hofmann, Karoline Eichhorn.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 21510,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt5753856",
-      "tmdb_id": "",
-      "createdAt": "2026-11-09T12:23:31.029107+00:00",
-      "updatedAt": "2026-11-18T21:27:32.629544+00:00"
     },
     {
       "id": "1794196484382",
@@ -28809,7 +29295,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0479651"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/33ge7dgxub3byy7",
+          "multi_url": "https://nexdrive.beer/genxfm784776139574/",
+          "url": "https://vcloud.my/33ge7dgxub3byy7",
+          "color": "#34d399",
+          "filename": "Dasavatharam.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.5GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/bmmia9cia9mb9aw",
+          "multi_url": "https://nexdrive.beer/genxfm784776139573/",
+          "url": "https://vcloud.my/bmmia9cia9mb9aw",
+          "color": "#38bdf8",
+          "filename": "Dasavatharam.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "600MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=mN06229eTG4XIJhL0f3OwLqtr",
+          "multi_url": "https://nexdrive.beer/genxfm784776139572/",
+          "url": "https://fastdl.beer/embed?download=mN06229eTG4XIJhL0f3OwLqtr",
+          "color": "#fbbf24",
+          "filename": "Dasavatharam.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dasavatharam+2008+trailer",
       "description": "Dasavatharam (2008) starring Kamal Haasan, Asin.",
@@ -28854,7 +29374,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0062622"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3.5GB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=Ohe5iXIXkAjCJXvxs0st8Xc4R",
+          "multi_url": "https://nexdrive.beer/genxfm784776303020/",
+          "url": "https://fastdl.beer/embed?download=Ohe5iXIXkAjCJXvxs0st8Xc4R",
+          "color": "#34d399",
+          "filename": "2001.A.Space.Odyssey.1080p.x264.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=ALSE5HUg5t6qqxcx2zC0zqcep",
+          "multi_url": "https://nexdrive.beer/genxfm784776303019/",
+          "url": "https://fastdl.beer/embed?download=ALSE5HUg5t6qqxcx2zC0zqcep",
+          "color": "#38bdf8",
+          "filename": "2001.A.Space.Odyssey.720p.x264.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=bjEi7TwNxr5qKN7zQctbDT4Y5",
+          "multi_url": "https://nexdrive.beer/genxfm784776303018/",
+          "url": "https://fastdl.beer/embed?download=bjEi7TwNxr5qKN7zQctbDT4Y5",
+          "color": "#fbbf24",
+          "filename": "2001.A.Space.Odyssey.480p.x264.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=2001:+A+Space+Odyssey+1968+trailer",
       "description": "2001: A Space Odyssey (1968) starring Keir Dullea, Gary Lockwood.",
@@ -29783,7 +30337,41 @@
           "url": "https://autoembed.co/movie/imdb/tt1195478"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=dTvcIi3H1bV0hbi7anMCkHUck",
+          "multi_url": "https://nexdrive.beer/genxfm784776238755/",
+          "url": "https://fastdl.beer/embed?download=dTvcIi3H1bV0hbi7anMCkHUck",
+          "color": "#34d399",
+          "filename": "The.Five.Year.Engagement.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=ntsNneTUf91bBwQ4nBzm6E7l1",
+          "multi_url": "https://nexdrive.beer/genxfm784776238754/",
+          "url": "https://fastdl.beer/embed?download=ntsNneTUf91bBwQ4nBzm6E7l1",
+          "color": "#38bdf8",
+          "filename": "The.Five.Year.Engagement.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=ODtZspMdX33bSDjN7arrpHFHX",
+          "multi_url": "https://nexdrive.beer/genxfm784776238753/",
+          "url": "https://fastdl.beer/embed?download=ODtZspMdX33bSDjN7arrpHFHX",
+          "color": "#fbbf24",
+          "filename": "The.Five.Year.Engagement.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Five-Year+Engagement+2012+trailer",
       "description": "The Five-Year Engagement (2012) starring Jason Segel, Emily Blunt.",
@@ -29949,7 +30537,41 @@
           "url": "https://autoembed.co/movie/imdb/tt37818327"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/hx1xc4r_nq0_cyz",
+          "multi_url": "https://nexdrive.beer/genxfm784776207486/",
+          "url": "https://vcloud.my/hx1xc4r_nq0_cyz",
+          "color": "#34d399",
+          "filename": "The.Sun.Never.Sets.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=77SOtTfFuQwUGf3xipfxqwndA",
+          "multi_url": "https://nexdrive.beer/genxfm784776207485/",
+          "url": "https://fastdl.beer/embed?download=77SOtTfFuQwUGf3xipfxqwndA",
+          "color": "#38bdf8",
+          "filename": "The.Sun.Never.Sets.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=RFzjK15LxALN08vXQaMRsDjmS",
+          "multi_url": "https://nexdrive.beer/genxfm784776207484/",
+          "url": "https://fastdl.beer/embed?download=RFzjK15LxALN08vXQaMRsDjmS",
+          "color": "#fbbf24",
+          "filename": "The.Sun.Never.Sets.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Sun+Never+Sets+2026+trailer",
       "description": "The Sun Never Sets (2026) starring Dakota Fanning, Debby Ryan.",
@@ -30001,7 +30623,30 @@
           "url": "https://autoembed.co/movie/imdb/tt10794054"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=8voPy4Wg7YpDs7zoWcNIfeWu6",
+          "multi_url": "https://nexdrive.beer/genxfm784776515588/",
+          "url": "https://fastdl.beer/embed.php?download=8voPy4Wg7YpDs7zoWcNIfeWu6",
+          "color": "#34d399",
+          "filename": "The.Weight.1080p.x264.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "910MB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=JRhujepJm3yNuylahX0tH2XD4",
+          "multi_url": "https://nexdrive.beer/genxfm784776515587/",
+          "url": "https://fastdl.beer/embed.php?download=JRhujepJm3yNuylahX0tH2XD4",
+          "color": "#38bdf8",
+          "filename": "The.Weight.720p.x264.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Weight+2026+trailer",
       "description": "The Weight (2026) starring Ethan Hawke, Russell Crowe.",
@@ -30053,7 +30698,41 @@
           "url": "https://autoembed.co/movie/imdb/tt36307021"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.7GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/actamexmsjaj2e1",
+          "multi_url": "https://nexdrive.beer/genxfm784776504600/",
+          "url": "https://vcloud.my/actamexmsjaj2e1",
+          "color": "#34d399",
+          "filename": "Hadestown.The.Musical.1080p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=R1Vfs3Mrm6u4ucYuw4jKlrZLt",
+          "multi_url": "https://nexdrive.beer/genxfm784776504599/",
+          "url": "https://fastdl.beer/embed.php?download=R1Vfs3Mrm6u4ucYuw4jKlrZLt",
+          "color": "#38bdf8",
+          "filename": "Hadestown.The.Musical.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=hZFXRzQAZ6PCIHyyc4d1DCL7Q",
+          "multi_url": "https://nexdrive.beer/genxfm784776504598/",
+          "url": "https://fastdl.beer/embed.php?download=hZFXRzQAZ6PCIHyyc4d1DCL7Q",
+          "color": "#fbbf24",
+          "filename": "Hadestown.The.Musical.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Hadestown:+The+Musical+2026+trailer",
       "description": "Hadestown: The Musical (2026) starring Reeve Carney, André De Shields.",
@@ -30105,7 +30784,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0361411"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=7a1ivxzq14hQi4kYsSfE4z9nq",
+          "multi_url": "https://nexdrive.beer/genxfm784776515472/",
+          "url": "https://fastdl.beer/embed.php?download=7a1ivxzq14hQi4kYsSfE4z9nq",
+          "color": "#34d399",
+          "filename": "Bride.Prejudice.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=wxYlj9aOp9symrNGkubTABsyZ",
+          "multi_url": "https://nexdrive.beer/genxfm784776515470/",
+          "url": "https://fastdl.beer/embed.php?download=wxYlj9aOp9symrNGkubTABsyZ",
+          "color": "#38bdf8",
+          "filename": "Bride.Prejudice.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "370MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=ZlkeGSwWaXipq9qtpN81UaMc9",
+          "multi_url": "https://nexdrive.beer/genxfm784776515468/",
+          "url": "https://fastdl.beer/embed.php?download=ZlkeGSwWaXipq9qtpN81UaMc9",
+          "color": "#fbbf24",
+          "filename": "Bride.Prejudice.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Bride+&+Prejudice+2004+trailer",
       "description": "Bride & Prejudice (2004) starring Martin Henderson, Aishwarya Rai Bachchan.",
@@ -30218,7 +30931,41 @@
           "url": "https://autoembed.co/movie/imdb/tt37892322"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3.9GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=hp9dXzc7WLW3cI0XcNLvLWnuO",
+          "multi_url": "https://nexdrive.beer/genxfm784776516558/",
+          "url": "https://fastdl.beer/embed.php?download=hp9dXzc7WLW3cI0XcNLvLWnuO",
+          "color": "#34d399",
+          "filename": "No.More.Cocoons.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=c5yDAG4Q5hdkRHosBZFhmirdT",
+          "multi_url": "https://nexdrive.beer/genxfm784776516557/",
+          "url": "https://fastdl.beer/embed.php?download=c5yDAG4Q5hdkRHosBZFhmirdT",
+          "color": "#38bdf8",
+          "filename": "No.More.Cocoons.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "680MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=hdR7BhwwurgtN3ssi0Dz9naD3",
+          "multi_url": "https://nexdrive.beer/genxfm784776516556/",
+          "url": "https://fastdl.beer/embed.php?download=hdR7BhwwurgtN3ssi0Dz9naD3",
+          "color": "#fbbf24",
+          "filename": "No.More.Cocoons.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=No+More+Cocoons+2026+trailer",
       "description": "No More Cocoons (2026) starring Sky Bison, Henry Hunter Hall.",
@@ -30556,7 +31303,41 @@
           "url": "https://autoembed.co/movie/imdb/tt27541205"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/abt5ht05agjaj1m",
+          "multi_url": "https://nexdrive.beer/genxfm784776511589/",
+          "url": "https://vcloud.my/abt5ht05agjaj1m",
+          "color": "#34d399",
+          "filename": "Queen.at.Sea.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "400MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=WBKDyQJDt8ZTFdpl1H7cFyIkO",
+          "multi_url": "https://nexdrive.beer/genxfm784776511558/",
+          "url": "https://fastdl.beer/embed.php?download=WBKDyQJDt8ZTFdpl1H7cFyIkO",
+          "color": "#38bdf8",
+          "filename": "Queen.at.Sea.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "180MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=5sFak8aseRmgGEhOktgrjB3GJ",
+          "multi_url": "https://nexdrive.beer/genxfm784776511564/",
+          "url": "https://fastdl.beer/embed.php?download=5sFak8aseRmgGEhOktgrjB3GJ",
+          "color": "#fbbf24",
+          "filename": "Queen.at.Sea.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Queen+at+Sea+2026+trailer",
       "description": "Queen at Sea (2026) starring Juliette Binoche, Tom Courtenay.",
@@ -30848,7 +31629,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0116630"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "6.7GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/we7w1b7du7faatm",
+          "multi_url": "https://nexdrive.beer/genxfm784776295254/",
+          "url": "https://vcloud.my/we7w1b7du7faatm",
+          "color": "#34d399",
+          "filename": "Indian.1080p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "2GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=COb6JPvsveQj9UouQc6KfythS",
+          "multi_url": "https://nexdrive.beer/genxfm784776295253/",
+          "url": "https://fastdl.beer/embed?download=COb6JPvsveQj9UouQc6KfythS",
+          "color": "#38bdf8",
+          "filename": "Indian.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "750MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=zkbOywvJ6d1mnruIPxDECSxMc",
+          "multi_url": "https://nexdrive.beer/genxfm784776295255/",
+          "url": "https://fastdl.beer/embed?download=zkbOywvJ6d1mnruIPxDECSxMc",
+          "color": "#fbbf24",
+          "filename": "Indian.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Indian+1996+trailer",
       "description": "Indian (1996) starring Kamal Haasan, Sukanya.",
@@ -30960,7 +31775,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0124932"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.7GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=OfFZUSmMrgQJcD8o3OOmz1Jnf",
+          "multi_url": "https://nexdrive.beer/genxfm784776515552/",
+          "url": "https://fastdl.beer/embed.php?download=OfFZUSmMrgQJcD8o3OOmz1Jnf",
+          "color": "#34d399",
+          "filename": "20.20.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "820MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=Ng48L25WmbDAAycgoDxl73Tji",
+          "multi_url": "https://nexdrive.beer/genxfm784776515551/",
+          "url": "https://fastdl.beer/embed.php?download=Ng48L25WmbDAAycgoDxl73Tji",
+          "color": "#38bdf8",
+          "filename": "20.20.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=Ocq1egI7ojtFe8YDww0QGHd7f",
+          "multi_url": "https://nexdrive.beer/genxfm784776515550/",
+          "url": "https://fastdl.beer/embed.php?download=Ocq1egI7ojtFe8YDww0QGHd7f",
+          "color": "#fbbf24",
+          "filename": "20.20.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=20/20+1978+trailer",
       "description": "20/20 (1978) starring David Muir, Amy Robach.",
@@ -61742,8 +62591,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 539,
-    "lastUpdated": "2026-11-19T11:56:54.823579+00:00",
+    "totalMovies": 542,
+    "lastUpdated": "2026-11-19T12:23:46.640152+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -61775,15 +62624,15 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 265,
-    "totalTitles": 804,
+    "totalSeries": 266,
+    "totalTitles": 808,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-19T11:56:54.823568+00:00",
-    "catalogHealthScore": "100.0%"
+    "lastHealthAudit": "2026-11-19T12:23:46.640143+00:00",
+    "catalogHealthScore": "99.9%"
   }
 }
