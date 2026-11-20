@@ -1,208 +1,75 @@
 {
   "movies": [
     {
-      "id": "1795151155614",
-      "type": "series",
-      "title": "Cult Massacre: One Day in Jonestown",
-      "genre": "Tv Mini-Series",
-      "year": 2024,
-      "duration": "",
+      "id": "1795192384813",
+      "type": "movie",
+      "title": "Our Girls",
+      "genre": "Feature",
+      "year": 2025,
+      "duration": "2h 00m",
       "rating": 7.5,
       "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2ZkOGJiNzItOTk2MS00ZmMyLWI1NWQtN2ExZWRmZDk4NzRiXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BY2ZkOGJiNzItOTk2MS00ZmMyLWI1NWQtN2ExZWRmZDk4NzRiXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt36474012?primaryColor=0284c7&autoplay=false",
       "streams": [
         {
           "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1"
+          "url": "https://vidlink.pro/movie/tt36474012?primaryColor=0284c7&autoplay=false"
         },
         {
           "name": "Server 2 (High Speed HD)",
-          "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=1&episode=1"
+          "url": "https://cinesrc.st/embed/movie/tt36474012"
         },
         {
           "name": "Server 3 (Backup Server)",
-          "url": "https://autoembed.co/tv/imdb/tt32421513-1-1"
+          "url": "https://autoembed.co/movie/imdb/tt36474012"
         },
         {
           "name": "Server 4 (Global Mirror)",
-          "url": "https://www.2embed.cc/embedtv/tt32421513&s=1&e=1"
+          "url": "https://www.2embed.cc/embed/tt36474012"
         }
       ],
       "downloads": [
         {
-          "quality": "1080p Full HD",
-          "size": "2GB",
-          "codec": "Clean WEB-DL",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed?download=l0xIMv82pBOZ6hPbyWQE99NdQ",
-          "multi_url": "https://nexdrive.beer/genxfm784776351403/",
-          "url": "https://fastdl.beer/embed?download=l0xIMv82pBOZ6hPbyWQE99NdQ",
-          "color": "#34d399",
-          "filename": "Cult.Massacre.One.Day.in.Jonestown.2024.1080p.Clean.WEB.DL.mkv"
+          "quality": "480p SD",
+          "size": "405MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/rjKClLUI14vIaizUr9EZZzLCT",
+          "color": "#ffd70f"
         },
         {
           "quality": "720p HD",
-          "size": "850MB",
-          "codec": "Clean WEB-DL",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed?download=dFyTYhABMC5aKxXwajhjPZ7L6",
-          "multi_url": "https://nexdrive.beer/genxfm784776351402/",
-          "url": "https://fastdl.beer/embed?download=dFyTYhABMC5aKxXwajhjPZ7L6",
-          "color": "#38bdf8",
-          "filename": "Cult.Massacre.One.Day.in.Jonestown.2024.720p.Clean.WEB.DL.mkv"
+          "size": "770MB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2527108166",
+          "color": "#06b6d4"
         },
         {
-          "quality": "480p SD",
-          "size": "300MB",
-          "codec": "Clean WEB-DL",
-          "server": "V-Cloud Direct",
-          "direct_url": "https://fastdl.beer/embed?download=RW818AQttAWPNI8u65x4l65XW",
-          "multi_url": "https://nexdrive.beer/genxfm784776351404/",
-          "url": "https://fastdl.beer/embed?download=RW818AQttAWPNI8u65x4l65XW",
-          "color": "#fbbf24",
-          "filename": "Cult.Massacre.One.Day.in.Jonestown.2024.480p.Clean.WEB.DL.mkv"
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2263013855",
+          "color": "#10b981"
         }
       ],
-      "seasons": [
-        {
-          "seasonNumber": 2,
-          "title": "Season 2",
-          "combined": false,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "720p HD",
-              "size": "1.4GB",
-              "server": "Fast Cloud",
-              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlBlRHJCRzExR2tTajk1dURPZnZXSkNqUjNESStrSVRDYWMxdnRwUW82dTA9",
-              "color": "#06b6d4"
-            }
-          ],
-          "episodes": [
-            {
-              "episodeNumber": 1,
-              "title": "Episode 1",
-              "duration": "45m",
-              "streams": [
-                {
-                  "name": "Server 1 (VIP Ultra HD)",
-                  "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
-                },
-                {
-                  "name": "Server 2 (High Speed HD)",
-                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
-                },
-                {
-                  "name": "Server 3 (Backup Server)",
-                  "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
-                },
-                {
-                  "name": "Server 4 (Global Mirror)",
-                  "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
-                }
-              ],
-              "downloads": [
-                {
-                  "quality": "1080p Full HD",
-                  "size": "3.1GB",
-                  "server": "Fast Cloud",
-                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm02b2NReGVLRzRSOUNqMjJDcjFpcVI0WlIzS0d5eE1IdzZEMEFYY1lkTGM9",
-                  "color": "#10b981"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "seasonNumber": 4,
-          "title": "Season 4",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt32421513?s=4&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=4&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt32421513-4-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt32421513&s=4&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "4K Ultra HD",
-              "size": "",
-              "server": "Fast Cloud",
-              "url": "https://4khdhub.one",
-              "color": "#8b5cf6"
-            },
-            {
-              "quality": "480p SD",
-              "size": "590MB",
-              "server": "Fast Cloud",
-              "url": "https://hubcdn.club/file/rablDjHqM32vwVjv8DOvx7Nwk",
-              "color": "#ffd70f"
-            },
-            {
-              "quality": "720p HD",
-              "size": "940MB",
-              "server": "Fast Cloud",
-              "url": "https://hubdrive.blog/file/1919909826",
-              "color": "#06b6d4"
-            },
-            {
-              "quality": "1080p Full HD",
-              "size": "2.1GB",
-              "server": "Fast Cloud",
-              "url": "https://hubdrive.blog/file/2395028272",
-              "color": "#10b981"
-            }
-          ],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Cult+Massacre:+One+Day+in+Jonestown+2024+trailer",
-      "description": "Cult Massacre: One Day in Jonestown (2024) starring Stephan Jones, Charles A. Krause.",
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Our+Girls+2025+trailer",
+      "description": "Our Girls (2025) starring Thekla Reuten, Fedja van Huêt.",
       "featured": false,
       "trending": false,
       "heroSlide": false,
       "status": "published",
       "active": true,
-      "views": 27592,
+      "views": 11699,
       "ratingCount": 0,
       "ratingSum": 0,
-      "imdb_id": "tt32421513",
+      "imdb_id": "tt36474012",
       "tmdb_id": "",
-      "createdAt": "2026-11-20T05:05:48.232614+00:00",
-      "updatedAt": "2026-11-20T11:57:40.005529+00:00"
+      "createdAt": "2026-11-20T16:32:57.299730+00:00",
+      "updatedAt": "2026-11-20T16:36:09.231804+00:00"
     },
     {
       "id": "1795128659730",
@@ -282,6 +149,13 @@
               "server": "Fast Cloud",
               "url": "https://hubdrive.blog/file/2944311752",
               "color": "#10b981"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.3GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/3097503280",
+              "color": "#06b6d4"
             }
           ],
           "episodes": []
@@ -500,7 +374,680 @@
       "imdb_id": "tt50943841",
       "tmdb_id": "",
       "createdAt": "2026-11-19T22:50:53.437239+00:00",
-      "updatedAt": "2026-11-20T05:08:34.624883+00:00"
+      "updatedAt": "2026-11-20T16:32:56.748932+00:00"
+    },
+    {
+      "id": "1795192376585",
+      "type": "movie",
+      "title": "Perfect Liars",
+      "genre": "Feature",
+      "year": 2026,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTM4ZWUwODYtMDVlNC00Njc3LThkZDAtZDA4NTU5YzliYWZjXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTM4ZWUwODYtMDVlNC00Njc3LThkZDAtZDA4NTU5YzliYWZjXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt18351090?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt18351090?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt18351090"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt18351090"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt18351090"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "480p SD",
+          "size": "420MB",
+          "server": "Fast Cloud",
+          "url": "https://hubcdn.club/file/ADiojYh82wfhzoXQ4Ep4VmuDL",
+          "color": "#ffd70f"
+        },
+        {
+          "quality": "720p HD",
+          "size": "820MB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2013948133",
+          "color": "#06b6d4"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.8GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2298561935",
+          "color": "#10b981"
+        },
+        {
+          "quality": "4K Ultra HD",
+          "size": "13.4GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/6893096214",
+          "color": "#8b5cf6"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=Perfect+Liars+2026+trailer",
+      "description": "Perfect Liars (2026) starring Irene Balmes, Gleb Abrosimov.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 9478,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt18351090",
+      "tmdb_id": "",
+      "createdAt": "2026-11-20T16:32:54.902793+00:00",
+      "updatedAt": "2026-11-20T16:36:09.231946+00:00"
+    },
+    {
+      "id": "1795192372437",
+      "type": "movie",
+      "title": "The Raid: Redemption",
+      "genre": "Feature",
+      "year": 2011,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "bollywood_new",
+      "industry": "Bollywood",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGUxM2Q0MzItZDRmYy00ZWY1LWFiNzctNmY3Njg2ODJjZWNmXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOGUxM2Q0MzItZDRmYy00ZWY1LWFiNzctNmY3Njg2ODJjZWNmXkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://vidlink.pro/movie/tt1899353?primaryColor=0284c7&autoplay=false",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt1899353?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt1899353"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt1899353"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt1899353"
+        }
+      ],
+      "downloads": [],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Raid:+Redemption+2011+trailer",
+      "description": "The Raid: Redemption (2011) starring Iko Uwais, Ananda George.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 16549,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt1899353",
+      "tmdb_id": "",
+      "createdAt": "2026-11-20T16:32:50.398323+00:00",
+      "updatedAt": "2026-11-20T16:36:09.231973+00:00"
+    },
+    {
+      "id": "1795192372025",
+      "type": "series",
+      "title": "The Blue Road",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTE2YjI4MDctMTY3YS00ODYyLTgwOTMtZmVkZDljZGQ3OWI1XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BYTE2YjI4MDctMTY3YS00ODYyLTgwOTMtZmVkZDljZGQ3OWI1XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt38336631?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt38336631?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt38336631&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt38336631-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt38336631&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "26.3GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/packs/knfpsbnw",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt38336631?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt38336631&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt38336631-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt38336631&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "26.3GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/packs/knfpsbnw",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Blue+Road+2026+trailer",
+      "description": "The Blue Road (2026) starring Son Sukku, Eita Nagayama.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 28303,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt38336631",
+      "tmdb_id": "",
+      "createdAt": "2026-11-20T16:32:49.849199+00:00",
+      "updatedAt": "2026-11-20T16:36:09.232002+00:00"
+    },
+    {
+      "id": "1791493032507",
+      "type": "series",
+      "title": "Dhindora",
+      "genre": "Tv Series",
+      "year": 2021,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/275204?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidlink.pro/tv/275204/1/1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://www.2embed.cc/embedtv/tt14650074&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "200MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/r71lf44rxr4go41",
+          "multi_url": "https://nexdrive.beer/genxfm784776144072/",
+          "url": "https://vcloud.my/r71lf44rxr4go41",
+          "color": "#38bdf8",
+          "filename": "Dhindora.720p.Clean.WEB.DL.mkv"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 0,
+          "title": "Season 0",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=275204&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt14650074-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt14650074&s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidlink.pro/tv/275204/1/1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://www.2embed.cc/embedtv/tt14650074&s=1&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": [],
+          "streamLink": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/275204?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=275204&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt14650074-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt14650074&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "720p HD",
+              "size": "1.6GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2390194041",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "3.8GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/3689622826",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Episode 1",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/275204?s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=275204&season=2&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt14650074-2-1"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt14650074&s=2&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "480p SD",
+                  "size": "870MB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlA1dldYNmNFWE1QZU8rdE5FUnN2T2NtSk9jWGswZC9Ud0hDV2FxelpSR2M9",
+                  "color": "#ffd70f"
+                }
+              ],
+              "streamLink": "https://cinesrc.st/embed/tv/275204?s=2&e=1"
+            },
+            {
+              "episodeNumber": 0,
+              "title": "Episode 0",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/275204?s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=275204&season=2&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt14650074-2-1"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt14650074&s=2&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "2.2GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlNoL1ZPaDU3d0FYQ3E0bituNkFSck1OMHUybCtrdloxakFSTzJyL25qNzg9",
+                  "color": "#06b6d4"
+                }
+              ],
+              "streamLink": "https://cinesrc.st/embed/tv/275204?s=2&e=1"
+            }
+          ]
+        },
+        {
+          "seasonNumber": 8,
+          "title": "Season 8",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/275204?s=8&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=275204&season=8&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt14650074-8-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt14650074&s=8&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Dhindora+2021+trailer",
+      "description": "Dhindora (2021) starring Bhuvan Bam, Gayatri Bhardwaj.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 15143,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt14650074",
+      "tmdb_id": "275204",
+      "createdAt": "2026-10-08T20:57:11.870423+00:00",
+      "updatedAt": "2026-11-20T16:36:09.232047+00:00"
+    },
+    {
+      "id": "1795151155614",
+      "type": "series",
+      "title": "Cult Massacre: One Day in Jonestown",
+      "genre": "Tv Mini-Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt32421513-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt32421513&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=l0xIMv82pBOZ6hPbyWQE99NdQ",
+          "multi_url": "https://nexdrive.beer/genxfm784776351403/",
+          "url": "https://fastdl.beer/embed?download=l0xIMv82pBOZ6hPbyWQE99NdQ",
+          "color": "#34d399",
+          "filename": "Cult.Massacre.One.Day.in.Jonestown.2024.1080p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "850MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=dFyTYhABMC5aKxXwajhjPZ7L6",
+          "multi_url": "https://nexdrive.beer/genxfm784776351402/",
+          "url": "https://fastdl.beer/embed?download=dFyTYhABMC5aKxXwajhjPZ7L6",
+          "color": "#38bdf8",
+          "filename": "Cult.Massacre.One.Day.in.Jonestown.2024.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=RW818AQttAWPNI8u65x4l65XW",
+          "multi_url": "https://nexdrive.beer/genxfm784776351404/",
+          "url": "https://fastdl.beer/embed?download=RW818AQttAWPNI8u65x4l65XW",
+          "color": "#fbbf24",
+          "filename": "Cult.Massacre.One.Day.in.Jonestown.2024.480p.Clean.WEB.DL.mkv"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "720p HD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlBlRHJCRzExR2tTajk1dURPZnZXSkNqUjNESStrSVRDYWMxdnRwUW82dTA9",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Episode 1",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p Full HD",
+                  "size": "3.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm02b2NReGVLRzRSOUNqMjJDcjFpcVI0WlIzS0d5eE1IdzZEMEFYY1lkTGM9",
+                  "color": "#10b981"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32421513?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32421513-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32421513&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "590MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/rablDjHqM32vwVjv8DOvx7Nwk",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "940MB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/1919909826",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.1GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2395028272",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Cult+Massacre:+One+Day+in+Jonestown+2024+trailer",
+      "description": "Cult Massacre: One Day in Jonestown (2024) starring Stephan Jones, Charles A. Krause.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27592,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32421513",
+      "tmdb_id": "",
+      "createdAt": "2026-11-20T05:05:48.232614+00:00",
+      "updatedAt": "2026-11-20T11:57:40.005529+00:00"
     },
     {
       "id": "1795128663606",
@@ -52519,74 +53066,6 @@
       "updatedAt": "2026-10-08T20:57:12.748878+00:00"
     },
     {
-      "id": "1791493032507",
-      "type": "series",
-      "title": "Dhindora",
-      "genre": "Tv Series",
-      "year": 2021,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/275204?s=1&e=1",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidlink.pro/tv/275204/1/1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://www.2embed.cc/embedtv/tt14650074&s=1&e=1"
-        }
-      ],
-      "downloads": [],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidlink.pro/tv/275204/1/1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://www.2embed.cc/embedtv/tt14650074&s=1&e=1"
-            }
-          ],
-          "downloads": [],
-          "episodes": [],
-          "streamLink": "https://cinesrc.st/embed/tv/275204?s=1&e=1"
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Dhindora+2021+trailer",
-      "description": "Dhindora (2021) starring Bhuvan Bam, Gayatri Bhardwaj.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 15143,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt14650074",
-      "tmdb_id": "275204",
-      "createdAt": "2026-10-08T20:57:11.870423+00:00",
-      "updatedAt": "2026-10-08T20:57:11.870423+00:00"
-    },
-    {
       "id": "1791493022145",
       "type": "movie",
       "title": "Epic - First Semester",
@@ -65883,8 +66362,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 549,
-    "lastUpdated": "2026-11-20T12:01:32.885281+00:00",
+    "totalMovies": 552,
+    "lastUpdated": "2026-11-20T16:36:09.242484+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -65916,15 +66395,15 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 271,
-    "totalTitles": 820,
+    "totalSeries": 272,
+    "totalTitles": 824,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-20T12:01:32.885270+00:00",
-    "catalogHealthScore": "100.0%"
+    "lastHealthAudit": "2026-11-20T16:36:09.242468+00:00",
+    "catalogHealthScore": "99.9%"
   }
 }
