@@ -1,6 +1,474 @@
 {
   "movies": [
     {
+      "id": "1795151155614",
+      "type": "series",
+      "title": "Cult Massacre: One Day in Jonestown",
+      "genre": "Tv Mini-Series",
+      "year": 2024,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BMDgxYjE1YTMtZmFmYS00YzY4LThhYTQtOWQ2ODQ0MTE0OTVhXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt32421513?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt32421513-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt32421513&s=1&e=1"
+        }
+      ],
+      "downloads": [],
+      "seasons": [
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "720p HD",
+              "size": "1.4GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QlBlRHJCRzExR2tTajk1dURPZnZXSkNqUjNESStrSVRDYWMxdnRwUW82dTA9",
+              "color": "#06b6d4"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Episode 1",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt32421513?s=2&e=1"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=2&episode=1"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt32421513-2-1"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt32421513&s=2&e=1"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "1080p Full HD",
+                  "size": "3.1GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm02b2NReGVLRzRSOUNqMjJDcjFpcVI0WlIzS0d5eE1IdzZEMEFYY1lkTGM9",
+                  "color": "#10b981"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "seasonNumber": 4,
+          "title": "Season 4",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt32421513?s=4&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt32421513&season=4&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt32421513-4-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt32421513&s=4&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "480p SD",
+              "size": "590MB",
+              "server": "Fast Cloud",
+              "url": "https://hubcdn.club/file/rablDjHqM32vwVjv8DOvx7Nwk",
+              "color": "#ffd70f"
+            },
+            {
+              "quality": "720p HD",
+              "size": "940MB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/1919909826",
+              "color": "#06b6d4"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.1GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2395028272",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Cult+Massacre:+One+Day+in+Jonestown+2024+trailer",
+      "description": "Cult Massacre: One Day in Jonestown (2024) starring Stephan Jones, Charles A. Krause.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 27592,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt32421513",
+      "tmdb_id": "",
+      "createdAt": "2026-11-20T05:05:48.232614+00:00",
+      "updatedAt": "2026-11-20T05:08:34.624801+00:00"
+    },
+    {
+      "id": "1795128659730",
+      "type": "series",
+      "title": "Teen Tigada",
+      "genre": "Tv Series",
+      "year": 2026,
+      "duration": "",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "series",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTA2ODlmNGQtMzRlMy00NGQwLWJhZWQtMjc1NWEzYmI1YWQzXkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BOTA2ODlmNGQtMzRlMy00NGQwLWJhZWQtMjc1NWEzYmI1YWQzXkEyXkFqcGc@._V1_.jpg",
+      "combined": false,
+      "streamLink": "https://cinesrc.st/embed/tv/tt50943841?s=1&e=1",
+      "streams": [
+        {
+          "name": "Server 1 (VIP Ultra HD)",
+          "url": "https://cinesrc.st/embed/tv/tt50943841?s=1&e=1"
+        },
+        {
+          "name": "Server 2 (High Speed HD)",
+          "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=1&episode=1"
+        },
+        {
+          "name": "Server 3 (Backup Server)",
+          "url": "https://autoembed.co/tv/imdb/tt50943841-1-1"
+        },
+        {
+          "name": "Server 4 (Global Mirror)",
+          "url": "https://www.2embed.cc/embedtv/tt50943841&s=1&e=1"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "server": "Fast Cloud",
+          "url": "https://hubdrive.blog/file/2944311752",
+          "color": "#10b981"
+        }
+      ],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "title": "Season 1",
+          "combined": true,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt50943841?s=1&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=1&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt50943841-1-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt50943841&s=1&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "4K Ultra HD",
+              "size": "",
+              "server": "Fast Cloud",
+              "url": "https://4khdhub.one",
+              "color": "#8b5cf6"
+            },
+            {
+              "quality": "1080p Full HD",
+              "size": "2.6GB",
+              "server": "Fast Cloud",
+              "url": "https://hubdrive.blog/file/2944311752",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 2,
+          "title": "Season 2",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt50943841?s=2&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=2&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt50943841-2-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt50943841&s=2&e=1"
+            }
+          ],
+          "downloads": [
+            {
+              "quality": "1080p Full HD",
+              "size": "4.3GB",
+              "server": "Fast Cloud",
+              "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qno5alRsQUtTeFVRZzN1ejBZMjAzWXB6SUtiSmkwS1BURm9YYzhlbHBOaHM9",
+              "color": "#10b981"
+            }
+          ],
+          "episodes": [
+            {
+              "episodeNumber": 2,
+              "title": "Episode 2",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt50943841?s=2&e=2"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=2&episode=2"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt50943841-2-2"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt50943841&s=2&e=2"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "480p SD",
+                  "size": "770MB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2QkJnUmZZZVFQQ3hqVjl1RFk2UTlXdW1ZMlFTWEZueENMSnNQZ0E2S1hQSWc9",
+                  "color": "#ffd70f"
+                }
+              ],
+              "streamLink": "https://cinesrc.st/embed/tv/tt50943841?s=2&e=2"
+            },
+            {
+              "episodeNumber": 9,
+              "title": "Episode 9",
+              "duration": "45m",
+              "streams": [
+                {
+                  "name": "Server 1 (VIP Ultra HD)",
+                  "url": "https://cinesrc.st/embed/tv/tt50943841?s=2&e=9"
+                },
+                {
+                  "name": "Server 2 (High Speed HD)",
+                  "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=2&episode=9"
+                },
+                {
+                  "name": "Server 3 (Backup Server)",
+                  "url": "https://autoembed.co/tv/imdb/tt50943841-2-9"
+                },
+                {
+                  "name": "Server 4 (Global Mirror)",
+                  "url": "https://www.2embed.cc/embedtv/tt50943841&s=2&e=9"
+                }
+              ],
+              "downloads": [
+                {
+                  "quality": "720p HD",
+                  "size": "1.9GB",
+                  "server": "Fast Cloud",
+                  "url": "https://greenmotors.club/?id=cUk4cEpVbFU1NW8yUVR1ZVFUM3phNm5QS2Z3TTdCSkVpS1pqdjdkTHQ5bDlqUGNSMTVIWDk5d05BZDVIa3R2Qm9zaXFUWDZEYU5CTjJSM043RlJsV2gzd2ZxL3Boc0ZpQkJkb2I3VGhWckE9",
+                  "color": "#06b6d4"
+                }
+              ],
+              "streamLink": "https://cinesrc.st/embed/tv/tt50943841?s=2&e=9"
+            }
+          ]
+        },
+        {
+          "seasonNumber": 6,
+          "title": "Season 6",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt50943841?s=6&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=6&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt50943841-6-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt50943841&s=6&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 7,
+          "title": "Season 7",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt50943841?s=7&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=7&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt50943841-7-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt50943841&s=7&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 9,
+          "title": "Season 9",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt50943841?s=9&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=9&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt50943841-9-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt50943841&s=9&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        },
+        {
+          "seasonNumber": 47,
+          "title": "Season 47",
+          "combined": false,
+          "streams": [
+            {
+              "name": "Server 1 (VIP Ultra HD)",
+              "url": "https://cinesrc.st/embed/tv/tt50943841?s=47&e=1"
+            },
+            {
+              "name": "Server 2 (High Speed HD)",
+              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=47&episode=1"
+            },
+            {
+              "name": "Server 3 (Backup Server)",
+              "url": "https://autoembed.co/tv/imdb/tt50943841-47-1"
+            },
+            {
+              "name": "Server 4 (Global Mirror)",
+              "url": "https://www.2embed.cc/embedtv/tt50943841&s=47&e=1"
+            }
+          ],
+          "downloads": [],
+          "episodes": []
+        }
+      ],
+      "trailerLink": "https://www.youtube.com/results?search_query=Teen+Tigada+2026+trailer",
+      "description": "Teen Tigada (2026) starring Prasanna Bisht, Danesh Razvi.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23241,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt50943841",
+      "tmdb_id": "",
+      "createdAt": "2026-11-19T22:50:53.437239+00:00",
+      "updatedAt": "2026-11-20T05:08:34.624883+00:00"
+    },
+    {
       "id": "1795128663606",
       "type": "series",
       "title": "3 Body Problem",
@@ -826,104 +1294,6 @@
       "tmdb_id": "",
       "createdAt": "2026-11-19T22:50:53.639051+00:00",
       "updatedAt": "2026-11-19T22:53:39.373720+00:00"
-    },
-    {
-      "id": "1795128659730",
-      "type": "series",
-      "title": "Teen Tigada",
-      "genre": "Tv Series",
-      "year": 2026,
-      "duration": "",
-      "rating": 7.5,
-      "badge": "HD",
-      "category": "series",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTA2ODlmNGQtMzRlMy00NGQwLWJhZWQtMjc1NWEzYmI1YWQzXkEyXkFqcGc@._V1_.jpg",
-      "banner": "https://m.media-amazon.com/images/M/MV5BOTA2ODlmNGQtMzRlMy00NGQwLWJhZWQtMjc1NWEzYmI1YWQzXkEyXkFqcGc@._V1_.jpg",
-      "combined": false,
-      "streamLink": "https://cinesrc.st/embed/tv/tt50943841?s=1&e=1",
-      "streams": [
-        {
-          "name": "Server 1 (VIP Ultra HD)",
-          "url": "https://cinesrc.st/embed/tv/tt50943841?s=1&e=1"
-        },
-        {
-          "name": "Server 2 (High Speed HD)",
-          "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=1&episode=1"
-        },
-        {
-          "name": "Server 3 (Backup Server)",
-          "url": "https://autoembed.co/tv/imdb/tt50943841-1-1"
-        },
-        {
-          "name": "Server 4 (Global Mirror)",
-          "url": "https://www.2embed.cc/embedtv/tt50943841&s=1&e=1"
-        }
-      ],
-      "downloads": [
-        {
-          "quality": "1080p Full HD",
-          "size": "2.6GB",
-          "server": "Fast Cloud",
-          "url": "https://hubdrive.blog/file/2944311752",
-          "color": "#10b981"
-        }
-      ],
-      "seasons": [
-        {
-          "seasonNumber": 1,
-          "title": "Season 1",
-          "combined": true,
-          "streams": [
-            {
-              "name": "Server 1 (VIP Ultra HD)",
-              "url": "https://cinesrc.st/embed/tv/tt50943841?s=1&e=1"
-            },
-            {
-              "name": "Server 2 (High Speed HD)",
-              "url": "https://vidsrc.pm/embed/tv?tmdb=tt50943841&season=1&episode=1"
-            },
-            {
-              "name": "Server 3 (Backup Server)",
-              "url": "https://autoembed.co/tv/imdb/tt50943841-1-1"
-            },
-            {
-              "name": "Server 4 (Global Mirror)",
-              "url": "https://www.2embed.cc/embedtv/tt50943841&s=1&e=1"
-            }
-          ],
-          "downloads": [
-            {
-              "quality": "4K Ultra HD",
-              "size": "",
-              "server": "Fast Cloud",
-              "url": "https://4khdhub.one",
-              "color": "#8b5cf6"
-            },
-            {
-              "quality": "1080p Full HD",
-              "size": "2.6GB",
-              "server": "Fast Cloud",
-              "url": "https://hubdrive.blog/file/2944311752",
-              "color": "#10b981"
-            }
-          ],
-          "episodes": []
-        }
-      ],
-      "trailerLink": "https://www.youtube.com/results?search_query=Teen+Tigada+2026+trailer",
-      "description": "Teen Tigada (2026) starring Prasanna Bisht, Danesh Razvi.",
-      "featured": false,
-      "trending": false,
-      "heroSlide": false,
-      "status": "published",
-      "active": true,
-      "views": 23241,
-      "ratingCount": 0,
-      "ratingSum": 0,
-      "imdb_id": "tt50943841",
-      "tmdb_id": "",
-      "createdAt": "2026-11-19T22:50:53.437239+00:00",
-      "updatedAt": "2026-11-19T22:53:39.373735+00:00"
     },
     {
       "id": "1795128656655",
@@ -65037,7 +65407,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 549,
-    "lastUpdated": "2026-11-20T02:32:02.441596+00:00",
+    "lastUpdated": "2026-11-20T05:08:34.637011+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -65069,15 +65439,15 @@
       "telegramLink": "https://t.me/+RiHbn8NTbuZhMDE1",
       "buttonText": "📩 Request on Telegram"
     },
-    "totalSeries": 270,
-    "totalTitles": 819,
+    "totalSeries": 271,
+    "totalTitles": 820,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-20T02:32:02.441588+00:00",
-    "catalogHealthScore": "100.0%"
+    "lastHealthAudit": "2026-11-20T05:08:34.637002+00:00",
+    "catalogHealthScore": "99.9%"
   }
 }
