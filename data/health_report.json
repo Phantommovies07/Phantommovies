@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-21T02:43:48.359128+00:00",
-  "elapsed_seconds": 484.73,
+  "timestamp": "2026-11-21T11:35:21.916084+00:00",
+  "elapsed_seconds": 399.6,
   "total_titles": 824,
   "streams_checked": 824,
   "streams_healed": 0,
-  "downloads_checked": 959,
+  "downloads_checked": 1000,
   "downloads_purged": 0,
   "downloads_harvested": 15,
   "titles_repaired": 15,
