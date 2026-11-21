@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-11-21T18:41:02.386463+00:00",
-  "elapsed_seconds": 0.03,
+  "timestamp": "2026-11-21T19:50:07.031883+00:00",
+  "elapsed_seconds": 998.64,
   "total_titles": 824,
   "streams_checked": 824,
   "streams_healed": 0,
   "downloads_checked": 1038,
   "downloads_purged": 0,
-  "downloads_harvested": 0,
-  "titles_repaired": 0,
+  "downloads_harvested": 15,
+  "titles_repaired": 15,
   "catalog_health_score": "100.0%",
   "status": "HEALTHY",
   "verified_providers": [
