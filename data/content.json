@@ -63971,7 +63971,41 @@
           "url": "https://www.2embed.cc/embedtv/tt12004706&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "500MB",
+          "codec": "10-Bit • x265 HEVC",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=XwI5WGVDLC6ztzZJ1ESFwMwwl",
+          "multi_url": "https://nexdrive.beer/genxfm784776200538/",
+          "url": "https://fastdl.beer/embed?download=XwI5WGVDLC6ztzZJ1ESFwMwwl",
+          "color": "#34d399",
+          "filename": "Panchayat.2020.1080p.10.Bit.x265.HEVC.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "170MB",
+          "codec": "10-Bit • x265 HEVC",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=OOBjPxsaKh0BPgmgGW5e5Y2E1",
+          "multi_url": "https://nexdrive.beer/genxfm784776200528/",
+          "url": "https://fastdl.beer/embed?download=OOBjPxsaKh0BPgmgGW5e5Y2E1",
+          "color": "#38bdf8",
+          "filename": "Panchayat.2020.720p.10.Bit.x265.HEVC.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "90MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=fXA9eYs8qPl4OfhGupkX4yGwl",
+          "multi_url": "https://nexdrive.beer/genxfm78477680617/",
+          "url": "https://fastdl.beer/embed?download=fXA9eYs8qPl4OfhGupkX4yGwl",
+          "color": "#fbbf24",
+          "filename": "Panchayat.2020.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -64009,7 +64043,7 @@
       "imdb_id": "tt12004706",
       "tmdb_id": "101352",
       "createdAt": "2026-10-07T18:07:55.282847+00:00",
-      "updatedAt": "2026-10-07T18:07:55.282847+00:00"
+      "updatedAt": "2026-11-22T20:11:09.830091+00:00"
     },
     {
       "id": "1791396479113",
@@ -64115,7 +64149,41 @@
           "url": "https://www.2embed.cc/embedtv/tt6077448&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3.9GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/bwj71_iyhl7wdc_",
+          "multi_url": "https://nexdrive.beer/genxfm784776419263/",
+          "url": "https://vcloud.my/bwj71_iyhl7wdc_",
+          "color": "#34d399",
+          "filename": "Sacred.Games.2018.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=pSlYYcgIxsv8v9JMdi4u7cQXY",
+          "multi_url": "https://nexdrive.beer/genxfm784776419262/",
+          "url": "https://fastdl.beer/embed?download=pSlYYcgIxsv8v9JMdi4u7cQXY",
+          "color": "#38bdf8",
+          "filename": "Sacred.Games.2018.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "500MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=vwFraEevk83aplJXiVRZOcn1j",
+          "multi_url": "https://nexdrive.beer/genxfm784776419261/",
+          "url": "https://fastdl.beer/embed?download=vwFraEevk83aplJXiVRZOcn1j",
+          "color": "#fbbf24",
+          "filename": "Sacred.Games.2018.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -64153,7 +64221,7 @@
       "imdb_id": "tt6077448",
       "tmdb_id": "79352",
       "createdAt": "2026-10-07T18:07:53.789764+00:00",
-      "updatedAt": "2026-10-07T18:07:53.789764+00:00"
+      "updatedAt": "2026-11-22T20:11:24.854407+00:00"
     },
     {
       "id": "1791396473427",
@@ -64273,7 +64341,30 @@
           "url": "https://www.2embed.cc/embedtv/tt5747326&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "750MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=yVZQSYNUCkXHV4K6JhIJel7Jz",
+          "multi_url": "https://nexdrive.beer/genxfm784776208863/",
+          "url": "https://fastdl.beer/embed?download=yVZQSYNUCkXHV4K6JhIJel7Jz",
+          "color": "#38bdf8",
+          "filename": "The.Kapil.Sharma.Show.2016.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=z8WcJTsvbDlpJ3qtoY18GTe3n",
+          "multi_url": "https://nexdrive.beer/genxfm784776208861/",
+          "url": "https://fastdl.beer/embed?download=z8WcJTsvbDlpJ3qtoY18GTe3n",
+          "color": "#fbbf24",
+          "filename": "The.Kapil.Sharma.Show.2016.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -64311,7 +64402,7 @@
       "imdb_id": "tt5747326",
       "tmdb_id": "66465",
       "createdAt": "2026-10-07T18:07:52.357170+00:00",
-      "updatedAt": "2026-10-07T18:07:52.357170+00:00"
+      "updatedAt": "2026-11-22T20:11:27.389161+00:00"
     },
     {
       "id": "1791396458589",
@@ -64386,7 +64477,41 @@
           "url": "https://autoembed.co/movie/imdb/tt2258337"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/ipwuu7yzo1zi3pw",
+          "multi_url": "https://nexdrive.beer/genxfm784776187386/",
+          "url": "https://vcloud.my/ipwuu7yzo1zi3pw",
+          "color": "#34d399",
+          "filename": "Eega.2012.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=KJ5fVpOpa4ALtjOoca1GHiVeq",
+          "multi_url": "https://nexdrive.beer/genxfm784776187385/",
+          "url": "https://fastdl.beer/embed?download=KJ5fVpOpa4ALtjOoca1GHiVeq",
+          "color": "#38bdf8",
+          "filename": "Eega.2012.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=aLH8NyIIEVLBmHCOsxkKdcMqR",
+          "multi_url": "https://nexdrive.beer/genxfm784776187387/",
+          "url": "https://fastdl.beer/embed?download=aLH8NyIIEVLBmHCOsxkKdcMqR",
+          "color": "#fbbf24",
+          "filename": "Eega.2012.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Eega+2012+trailer",
       "description": "Eega (2012) starring Sudeep, Nani.",
@@ -64401,7 +64526,7 @@
       "imdb_id": "tt2258337",
       "tmdb_id": "148265",
       "createdAt": "2026-10-07T18:07:31.182651+00:00",
-      "updatedAt": "2026-11-10T03:40:42.953474+00:00"
+      "updatedAt": "2026-11-22T20:11:43.287523+00:00"
     },
     {
       "id": "1791396451939",
@@ -64582,7 +64707,41 @@
           "url": "https://autoembed.co/movie/imdb/tt24082438"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=XeR0wCxMUV7miPEQuKRaB93O8",
+          "multi_url": "https://nexdrive.beer/genxfm784776291503/",
+          "url": "https://fastdl.beer/embed?download=XeR0wCxMUV7miPEQuKRaB93O8",
+          "color": "#34d399",
+          "filename": "20.Days.in.Mariupol.2023.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=nd2N6dEuaiou484QKRwCQk3yp",
+          "multi_url": "https://nexdrive.beer/genxfm784776291502/",
+          "url": "https://fastdl.beer/embed?download=nd2N6dEuaiou484QKRwCQk3yp",
+          "color": "#38bdf8",
+          "filename": "20.Days.in.Mariupol.2023.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=a3XUA3ysd6C2bnRSW5bMIuhIM",
+          "multi_url": "https://nexdrive.beer/genxfm784776291501/",
+          "url": "https://fastdl.beer/embed?download=a3XUA3ysd6C2bnRSW5bMIuhIM",
+          "color": "#fbbf24",
+          "filename": "20.Days.in.Mariupol.2023.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=20+Days+in+Mariupol+2023+trailer",
       "description": "20 Days in Mariupol (2023) starring Liudmyla Amelkina, Mstyslav Chernov.",
@@ -64597,7 +64756,7 @@
       "imdb_id": "tt24082438",
       "tmdb_id": "1058616",
       "createdAt": "2026-10-07T18:07:26.353350+00:00",
-      "updatedAt": "2026-11-10T03:40:46.247468+00:00"
+      "updatedAt": "2026-11-22T20:12:02.209317+00:00"
     },
     {
       "id": "1791396447076",
@@ -64687,7 +64846,41 @@
           "url": "https://autoembed.co/movie/imdb/tt4849438"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.8GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/jvpi8te1opet1pn",
+          "multi_url": "https://nexdrive.beer/genxfm784776127796/",
+          "url": "https://vcloud.my/jvpi8te1opet1pn",
+          "color": "#34d399",
+          "filename": "Baahubali.2.The.Conclusion.2017.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.4GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=pciaxcgJpfRWAR6OYwlSeTH06",
+          "multi_url": "https://nexdrive.beer/genxfm784776127795/",
+          "url": "https://fastdl.beer/embed?download=pciaxcgJpfRWAR6OYwlSeTH06",
+          "color": "#38bdf8",
+          "filename": "Baahubali.2.The.Conclusion.2017.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "550MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=RWmxAAzDZvo3NB2Fb9dHoNPRq",
+          "multi_url": "https://nexdrive.beer/genxfm784776127794/",
+          "url": "https://fastdl.beer/embed?download=RWmxAAzDZvo3NB2Fb9dHoNPRq",
+          "color": "#fbbf24",
+          "filename": "Baahubali.2.The.Conclusion.2017.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Baahubali+2:+The+Conclusion+2017+trailer",
       "description": "Baahubali 2: The Conclusion (2017) starring Prabhas, Rana Daggubati.",
@@ -64702,7 +64895,7 @@
       "imdb_id": "tt4849438",
       "tmdb_id": "350312",
       "createdAt": "2026-10-07T18:07:24.137206+00:00",
-      "updatedAt": "2026-11-10T03:40:47.564365+00:00"
+      "updatedAt": "2026-11-22T20:12:09.846978+00:00"
     },
     {
       "id": "1791396447401",
@@ -64732,7 +64925,41 @@
           "url": "https://autoembed.co/movie/imdb/tt2631186"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.8GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/jvpi8te1opet1pn",
+          "multi_url": "https://nexdrive.beer/genxfm784776127796/",
+          "url": "https://vcloud.my/jvpi8te1opet1pn",
+          "color": "#34d399",
+          "filename": "Baahubali.The.Beginning.2015.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.4GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=pciaxcgJpfRWAR6OYwlSeTH06",
+          "multi_url": "https://nexdrive.beer/genxfm784776127795/",
+          "url": "https://fastdl.beer/embed?download=pciaxcgJpfRWAR6OYwlSeTH06",
+          "color": "#38bdf8",
+          "filename": "Baahubali.The.Beginning.2015.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "550MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=RWmxAAzDZvo3NB2Fb9dHoNPRq",
+          "multi_url": "https://nexdrive.beer/genxfm784776127794/",
+          "url": "https://fastdl.beer/embed?download=RWmxAAzDZvo3NB2Fb9dHoNPRq",
+          "color": "#fbbf24",
+          "filename": "Baahubali.The.Beginning.2015.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Baahubali:+The+Beginning+2015+trailer",
       "description": "Baahubali: The Beginning (2015) starring Prabhas, Rana Daggubati.",
@@ -64747,7 +64974,7 @@
       "imdb_id": "tt2631186",
       "tmdb_id": "256040",
       "createdAt": "2026-10-07T18:07:23.336394+00:00",
-      "updatedAt": "2026-11-10T03:40:48.277078+00:00"
+      "updatedAt": "2026-11-22T20:12:11.187660+00:00"
     },
     {
       "id": "1791396411125",
@@ -64822,7 +65049,30 @@
           "url": "https://autoembed.co/movie/imdb/tt1562872"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "1.7GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=9jVRBOB2mzIKuoM3TkXGns2D4",
+          "multi_url": "https://nexdrive.beer/genxfm784776190827/",
+          "url": "https://fastdl.beer/embed?download=9jVRBOB2mzIKuoM3TkXGns2D4",
+          "color": "#38bdf8",
+          "filename": "Zindagi.Na.Milegi.Dobara.2011.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "900MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=N5r0hMWDZTJ70fHTvqqyPRN1C",
+          "multi_url": "https://nexdrive.beer/genxfm784776190828/",
+          "url": "https://fastdl.beer/embed?download=N5r0hMWDZTJ70fHTvqqyPRN1C",
+          "color": "#fbbf24",
+          "filename": "Zindagi.Na.Milegi.Dobara.2011.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Zindagi+Na+Milegi+Dobara+2011+trailer",
       "description": "Zindagi Na Milegi Dobara (2011) starring Hrithik Roshan, Farhan Akhtar.",
@@ -64837,7 +65087,7 @@
       "imdb_id": "tt1562872",
       "tmdb_id": "61202",
       "createdAt": "2026-10-07T18:06:40.333110+00:00",
-      "updatedAt": "2026-11-10T03:40:49.574702+00:00"
+      "updatedAt": "2026-11-22T20:12:22.458851+00:00"
     },
     {
       "id": "1791396404134",
@@ -64867,7 +65117,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0871510"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.7GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=mb7yctZz6v0jEPfZjn75Pdrz4",
+          "multi_url": "https://nexdrive.beer/genxfm784776424052/",
+          "url": "https://fastdl.beer/embed?download=mb7yctZz6v0jEPfZjn75Pdrz4",
+          "color": "#34d399",
+          "filename": "Chak.De.India.2007.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "800MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=eMX00F7w55YItKiESutmtcDrw",
+          "multi_url": "https://nexdrive.beer/genxfm784776424050/",
+          "url": "https://fastdl.beer/embed?download=eMX00F7w55YItKiESutmtcDrw",
+          "color": "#38bdf8",
+          "filename": "Chak.De.India.2007.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "270MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=DLYGVzgI5SyUm7FYgwE0my67v",
+          "multi_url": "https://nexdrive.beer/genxfm784776424036/",
+          "url": "https://fastdl.beer/embed?download=DLYGVzgI5SyUm7FYgwE0my67v",
+          "color": "#fbbf24",
+          "filename": "Chak.De.India.2007.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Chak+De!+India+2007+trailer",
       "description": "Chak De! India (2007) starring Shah Rukh Khan, Vidya Malvade.",
@@ -64882,7 +65166,7 @@
       "imdb_id": "tt0871510",
       "tmdb_id": "14163",
       "createdAt": "2026-10-07T18:06:38.807009+00:00",
-      "updatedAt": "2026-11-10T03:40:50.461550+00:00"
+      "updatedAt": "2026-11-22T20:12:27.330332+00:00"
     },
     {
       "id": "1791396404738",
@@ -65108,7 +65392,19 @@
           "url": "https://autoembed.co/movie/imdb/tt1187043"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "250MB",
+          "codec": "10-Bit • x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=zg1l1YAtF9Q7ePhwNXvcciI8I",
+          "multi_url": "https://nexdrive.beer/genxfm784776516094/",
+          "url": "https://fastdl.beer/embed.php?download=zg1l1YAtF9Q7ePhwNXvcciI8I",
+          "color": "#34d399",
+          "filename": "3.Idiots.2009.1080p.10.Bit.x265.HEVC.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=3+Idiots+2009+trailer",
       "description": "3 Idiots (2009) starring Aamir Khan, Madhavan.",
@@ -65123,7 +65419,7 @@
       "imdb_id": "tt1187043",
       "tmdb_id": "20453",
       "createdAt": "2026-10-07T18:06:33.079289+00:00",
-      "updatedAt": "2026-10-07T18:06:33.079289+00:00"
+      "updatedAt": "2026-11-22T20:12:49.642355+00:00"
     },
     {
       "id": "1791396398092",
@@ -65258,7 +65554,52 @@
           "url": "https://autoembed.co/movie/imdb/tt10698680"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "13GB",
+          "codec": "UHD Remux • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/jav9jj4edavjvv7",
+          "multi_url": "https://nexdrive.beer/genxfm784776203360/",
+          "url": "https://vcloud.my/jav9jj4edavjvv7",
+          "color": "#c084fc",
+          "filename": "K.G.F.Chapter.2.2022.2160p.UHD.Remux.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.2GB",
+          "codec": "10-Bit • x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=uexErmpGPoSFkS8WntrtMMM3a",
+          "multi_url": "https://nexdrive.beer/genxfm784776203363/",
+          "url": "https://fastdl.beer/embed?download=uexErmpGPoSFkS8WntrtMMM3a",
+          "color": "#34d399",
+          "filename": "K.G.F.Chapter.2.2022.1080p.10.Bit.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "870MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=yYrHBZ3l90cjKqwHSxy3YKdQX",
+          "multi_url": "https://nexdrive.beer/genxfm784776203218/",
+          "url": "https://fastdl.beer/embed?download=yYrHBZ3l90cjKqwHSxy3YKdQX",
+          "color": "#38bdf8",
+          "filename": "K.G.F.Chapter.2.2022.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "560MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=neQlvZp5dD0XQAQCUz5iq1P3l",
+          "multi_url": "https://nexdrive.beer/genxfm784776203205/",
+          "url": "https://fastdl.beer/embed?download=neQlvZp5dD0XQAQCUz5iq1P3l",
+          "color": "#fbbf24",
+          "filename": "K.G.F.Chapter.2.2022.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=K.G.F:+Chapter+2+2022+trailer",
       "description": "K.G.F: Chapter 2 (2022) starring Yash, Sanjay Dutt.",
@@ -65273,7 +65614,7 @@
       "imdb_id": "tt10698680",
       "tmdb_id": "587412",
       "createdAt": "2026-10-07T18:06:11.168371+00:00",
-      "updatedAt": "2026-10-07T18:06:11.168371+00:00"
+      "updatedAt": "2026-11-22T20:12:59.714104+00:00"
     },
     {
       "id": "1791396376009",
@@ -65303,7 +65644,41 @@
           "url": "https://autoembed.co/movie/imdb/tt8178634"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=wCIzQWHCbUdlct8SbfUMkauXr",
+          "multi_url": "https://nexdrive.beer/genxfm784776164072/",
+          "url": "https://fastdl.beer/embed?download=wCIzQWHCbUdlct8SbfUMkauXr",
+          "color": "#34d399",
+          "filename": "RRR.2022.1080p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "950MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=jtw2Fy08rN5uZ3zbuat8ESQXI",
+          "multi_url": "https://nexdrive.beer/genxfm784776164071/",
+          "url": "https://fastdl.beer/embed?download=jtw2Fy08rN5uZ3zbuat8ESQXI",
+          "color": "#38bdf8",
+          "filename": "RRR.2022.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=UKdHzsZ7hci989nEM0W5986Vh",
+          "multi_url": "https://nexdrive.beer/genxfm784776164070/",
+          "url": "https://fastdl.beer/embed?download=UKdHzsZ7hci989nEM0W5986Vh",
+          "color": "#fbbf24",
+          "filename": "RRR.2022.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=RRR+2022+trailer",
       "description": "RRR (2022) starring N.T. Rama Rao Jr., Ram Charan.",
@@ -65318,7 +65693,7 @@
       "imdb_id": "tt8178634",
       "tmdb_id": "579974",
       "createdAt": "2026-10-07T18:06:10.247581+00:00",
-      "updatedAt": "2026-10-07T18:06:10.247581+00:00"
+      "updatedAt": "2026-11-22T20:13:05.610329+00:00"
     },
     {
       "id": "1791396378447",
@@ -65524,7 +65899,30 @@
           "url": "https://autoembed.co/movie/imdb/tt15433956"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "1.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=PDzN0zqbeqMApVdpszcZ2eZyD",
+          "multi_url": "https://nexdrive.beer/genxfm784776373865/",
+          "url": "https://fastdl.beer/embed?download=PDzN0zqbeqMApVdpszcZ2eZyD",
+          "color": "#38bdf8",
+          "filename": "Hanu.Man.2024.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "360MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=eLSTm3uVeynmEmRSgwRltUDa8",
+          "multi_url": "https://nexdrive.beer/genxfm784776373864/",
+          "url": "https://fastdl.beer/embed?download=eLSTm3uVeynmEmRSgwRltUDa8",
+          "color": "#fbbf24",
+          "filename": "Hanu.Man.2024.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Hanu+Man+2024+trailer",
       "description": "Hanu Man (2024) starring Teja Sajja, Amritha Aiyer.",
@@ -65539,7 +65937,7 @@
       "imdb_id": "tt15433956",
       "tmdb_id": "869760",
       "createdAt": "2026-10-07T18:06:06.228861+00:00",
-      "updatedAt": "2026-10-07T18:06:06.228861+00:00"
+      "updatedAt": "2026-11-22T20:13:13.622414+00:00"
     },
     {
       "id": "1791396372758",
@@ -65915,7 +66313,41 @@
           "url": "https://autoembed.co/movie/imdb/tt38218082"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "8GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/ury45rcceenn4of",
+          "multi_url": "https://nexdrive.beer/genxfm784776507339/",
+          "url": "https://vcloud.my/ury45rcceenn4of",
+          "color": "#34d399",
+          "filename": "Crew.Girl.2026.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "3.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/gh9qm3wbbhmvlnq",
+          "multi_url": "https://nexdrive.beer/genxfm784776507338/",
+          "url": "https://vcloud.my/gh9qm3wbbhmvlnq",
+          "color": "#38bdf8",
+          "filename": "Crew.Girl.2026.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "1.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/441eme8ej1ucu4k",
+          "multi_url": "https://nexdrive.beer/genxfm784776507337/",
+          "url": "https://vcloud.my/441eme8ej1ucu4k",
+          "color": "#fbbf24",
+          "filename": "Crew.Girl.2026.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Crew+Girl+2026+trailer",
       "description": "Crew Girl (2026) starring Miku Martineau, Samuel Braun.",
@@ -65930,7 +66362,7 @@
       "imdb_id": "tt38218082",
       "tmdb_id": "300507",
       "createdAt": "2026-10-07T18:04:53.535039+00:00",
-      "updatedAt": "2026-11-10T15:05:39.915366+00:00"
+      "updatedAt": "2026-11-22T20:13:50.695717+00:00"
     },
     {
       "id": "1791396300360",
@@ -66058,7 +66490,41 @@
           "url": "https://autoembed.co/movie/imdb/tt35726020"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=GN7fk4Cp5No8cBH1tda1vdJf1",
+          "multi_url": "https://nexdrive.beer/genxfm784776518267/",
+          "url": "https://fastdl.beer/embed.php?download=GN7fk4Cp5No8cBH1tda1vdJf1",
+          "color": "#34d399",
+          "filename": "Kill.Jackie.2026.1080p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "690MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=Whj9yPQY1G2N8fh6S1whImW0k",
+          "multi_url": "https://nexdrive.beer/genxfm784776518265/",
+          "url": "https://fastdl.beer/embed.php?download=Whj9yPQY1G2N8fh6S1whImW0k",
+          "color": "#38bdf8",
+          "filename": "Kill.Jackie.2026.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "220MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=DELIt0F2s9bNoqWN2EaRI1lCd",
+          "multi_url": "https://nexdrive.beer/genxfm784776518266/",
+          "url": "https://fastdl.beer/embed.php?download=DELIt0F2s9bNoqWN2EaRI1lCd",
+          "color": "#fbbf24",
+          "filename": "Kill.Jackie.2026.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Kill+Jackie+2026+trailer",
       "description": "Kill Jackie (2026) starring Catherine Zeta-Jones, Sidse Babett Knudsen.",
@@ -66073,7 +66539,7 @@
       "imdb_id": "tt35726020",
       "tmdb_id": "",
       "createdAt": "2026-10-07T18:04:49.657263+00:00",
-      "updatedAt": "2026-11-10T15:05:42.273762+00:00"
+      "updatedAt": "2026-11-22T20:14:06.763860+00:00"
     },
     {
       "id": "1791396293716",
@@ -69192,7 +69658,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 552,
-    "lastUpdated": "2026-11-22T11:53:04.955336+00:00",
+    "lastUpdated": "2026-11-22T20:14:06.764442+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -69232,7 +69698,7 @@
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-22T11:53:04.955329+00:00",
+    "lastHealthAudit": "2026-11-22T20:14:06.764435+00:00",
     "catalogHealthScore": "100.0%"
   }
 }
