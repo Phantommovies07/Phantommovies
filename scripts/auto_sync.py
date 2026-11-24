@@ -1602,13 +1602,17 @@ def run_auto_sync(category: str = "all", target_new_count: int = 10, tmdb_key: s
                 if not existing:
                     meta = imdb.search(clean_title, prefer_series=True)
                     if meta:
-                        seasons_dict = crawler.extract_series_content(post_url, detected_seasons) or {1: {"seasonNumber": 1, "title": "Season 1", "downloads": [], "episodes": []}}
-                        series_obj = format_phantom_series(meta, seasons_dict, category="series")
-                        catalog.insert(0, series_obj)
-                        dedup.register(series_obj)
-                        newly_added.append(series_obj)
-                        print(f"  📺 [Live Ingest] Added Series: '{series_obj['title']}' ({series_obj['year']})")
-                continue
+                        # If IMDb confirms this is a Feature Movie (not a tvSeries), route to movie pipeline
+                        if not meta.get("is_series", False):
+                            print(f"  🎬 [Auto-Correct] '{clean_title}' is a Feature Film. Routing to Movie pipeline.")
+                        else:
+                            seasons_dict = crawler.extract_series_content(post_url, detected_seasons) or {1: {"seasonNumber": 1, "title": "Season 1", "downloads": [], "episodes": []}}
+                            series_obj = format_phantom_series(meta, seasons_dict, category="series")
+                            catalog.insert(0, series_obj)
+                            dedup.register(series_obj)
+                            newly_added.append(series_obj)
+                            print(f"  📺 [Live Ingest] Added Series: '{series_obj['title']}' ({series_obj['year']})")
+                            continue
 
             # Case B: Feature Movie
             if existing:
@@ -1684,10 +1688,10 @@ def run_auto_sync(category: str = "all", target_new_count: int = 10, tmdb_key: s
             # Determine industry tag
             industry = "South" if "south" in cat else "Bollywood"
 
-            if is_series_cat:
+            if is_series_cat and meta.get("is_series", False):
                 new_item = format_phantom_series(meta, category="series")
             else:
-                new_item = format_phantom_movie(meta, category=cat, industry=industry)
+                new_item = format_phantom_movie(meta, category="movie" if is_series_cat else cat, industry=industry)
 
             catalog.insert(0, new_item)
             dedup.register(new_item)

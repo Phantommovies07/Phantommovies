@@ -101,7 +101,8 @@ const _originalWindowOpen = window.open;
 window.open = function (url, target, features) {
     if (!url || typeof url !== 'string') return createMockWindow();
     const clean = url.toLowerCase();
-    if (clean.includes('vegamovies') || clean.includes('vega') || clean.includes('nexdrive') || clean.includes('greenmotors') || clean.includes('magiclinks') || clean.includes('4khdhub') || clean.includes('vglist') || clean.includes('vcloud') || clean.includes('fastdl')) {
+    // Neutralize known rogue ad redirect networks
+    if (clean.includes('greenmotors') || clean.includes('4khdhub.one') || clean.includes('azonahub') || clean.includes('magiclinks') || clean.includes('inventoryidea') || clean.includes('bonuscaf')) {
         console.warn('[Phantom Ad-Shield] Neutralized blacklisted rogue popup:', url);
         return createMockWindow(url);
     }
@@ -387,20 +388,31 @@ function triggerPlayerInstantDownload() {
         bestDl = dls.find(d => d.url && !d.url.includes('download.html') && isValidDownloadUrl(d.url));
     }
 
-    if (bestDl && bestDl.direct_url && window.PhantomSanitizer?.isDirectMediaUrl(bestDl.direct_url)) {
-        showToast(`⚡ Starting 1-click VIP download: ${cleanFn}`);
-        window.PhantomSanitizer.triggerDirectDownload(bestDl.direct_url, cleanFn);
+    if (bestDl) {
+        const targetUrl = bestDl.direct_url || bestDl.url;
+        if (targetUrl) {
+            if (window.PhantomSanitizer?.isDirectMediaUrl(targetUrl)) {
+                showToast(`⚡ Starting 1-click VIP download: ${cleanFn}`);
+                window.PhantomSanitizer.triggerDirectDownload(targetUrl, cleanFn);
+                return;
+            } else {
+                showToast(`⚡ Opening verified VIP cloud download server...`);
+                window.open(targetUrl, '_blank', 'noopener,noreferrer');
+                return;
+            }
+        }
+    }
+
+    // 3. Fallback: Launch magnet client directly if available
+    if (currentMovie.torrent && currentMovie.torrent.magnet) {
+        showToast(`🧲 Opening high-speed torrent client...`);
+        window.location.href = currentMovie.torrent.magnet;
         return;
     }
 
-    // 3. Fallback: Launch high-speed direct download mirror
-    const targetUrl = bestDl ? (bestDl.direct_url || bestDl.url) : '';
-    const qParam = encodeURIComponent(bestDl?.quality || '1080p HD');
-    const sParam = encodeURIComponent(bestDl?.size || 'Cloud Fast');
-    const dlPageUrl = `download.html?id=${encodeURIComponent(currentMovie.id)}&title=${encodeURIComponent(currentMovie.title || '')}&poster=${encodeURIComponent(currentMovie.poster || '')}&quality=${qParam}&size=${sParam}&url=${encodeURIComponent(targetUrl)}&mode=direct&filename=${encodeURIComponent(cleanFn)}`;
-    
-    showToast(`⚡ Launching high-speed direct download mirror...`);
-    window.open(dlPageUrl, '_blank', 'noopener,noreferrer');
+    // 4. Smooth scroll to streaming player (never bounce to download.html)
+    showToast(`🎬 Streaming in HD above. Cloud file currently synchronizing.`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function renderFailoverBar() {
@@ -625,15 +637,16 @@ function switchStream(index, isFailover = false) {
 }
 
 
-function generateFallbackDownloads(movie) {
-    const qTitle = encodeURIComponent(movie?.title || '');
-    const mId = encodeURIComponent(movie?.id || '');
-    return [
-        { quality: '480p SD', size: '450 MB', server: 'Fast Cloud Mirror', url: `download.html?id=${mId}&quality=480p&size=450+MB&title=${qTitle}`, color: '#ffd70f' },
-        { quality: '720p HD', size: '1.2 GB', server: 'High Speed Cloud', url: `download.html?id=${mId}&quality=720p&size=1.2+GB&title=${qTitle}`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '2.6 GB', server: 'VIP Direct Cloud', url: `download.html?id=${mId}&quality=1080p&size=2.6+GB&title=${qTitle}`, color: '#10b981' },
-        { quality: '4K Ultra HD', size: '6.4 GB', server: 'Ultra HD Master Cloud', url: `download.html?id=${mId}&quality=4K&size=6.4+GB&title=${qTitle}`, color: '#ec4899' }
-    ];
+function cleanServerLabel(serverName) {
+    if (!serverName) return 'Fast Cloud';
+    return String(serverName)
+        .replace(/HDHub4u(?:\s*Cloud\s*Mirror)?/gi, 'Fast Cloud Mirror')
+        .replace(/KatDrama(?:\s*VIP)?/gi, 'VIP Direct Cloud')
+        .replace(/VegaMovies(?:\s*Fast\s*Cloud)?/gi, 'V-Cloud Fast')
+        .replace(/KMMOVIES(?:\s*Cloud\s*Fast)?/gi, 'High Speed Cloud')
+        .replace(/Rogmovies/gi, 'Ultra Cloud')
+        .replace(/BollyFlix/gi, 'Direct Cloud')
+        .trim() || 'Fast Cloud';
 }
 
 function isStreamingUrl(url) {
@@ -655,8 +668,8 @@ function isValidDownloadUrl(url) {
     if (!clean || clean === '#' || clean.startsWith('javascript:')) return false;
     if (clean.includes('download.html')) return false;
     if (clean.includes('/?s=') || clean.includes('/search/')) return false;
-    // Strictly block HDHub4u redirect traps and dead shorteners
-    if (clean.includes('4khdhub.one') || clean.includes('hdhub4u.') || clean.includes('greenmotors.') || clean.includes('azonahub.') || clean.includes('fastdl.')) return false;
+    // Strictly block redirect traps and dead shorteners
+    if (clean.includes('4khdhub.one') || clean.includes('hdhub4u.') || clean.includes('greenmotors.') || clean.includes('azonahub.')) return false;
     // Filter out top-level blog landing/category pages while preserving legitimate cloud download gateways
     if (/kmmovies\.[a-z]+\/?$/i.test(clean) || /vegamovies\.[a-z]+\/?$/i.test(clean) || /category|genre|tag|disclaimer/i.test(clean)) return false;
     if (isStreamingUrl(clean)) return false;
@@ -679,23 +692,6 @@ function getQualityAccent(quality = '') {
     return { accent: '#fbbf24', glow: 'rgba(245, 158, 11, 0.25)', label: '480p SD' };
 }
 
-function sanitizeDownloadUrl(url, movie, quality, size) {
-    if (!url || !isValidDownloadUrl(url)) return '';
-    return url;
-}
-
-function generateMovieFallbackDownloads(movie) {
-    const title = movie?.title || 'Movie';
-    const mId = encodeURIComponent(movie?.id || '');
-    const qTitle = encodeURIComponent(title);
-    return [
-        { quality: '4K Ultra HD', size: '4.8 GB', server: 'KM Cloud Fast', codec: '10-Bit HEVC x265 • Atmos', url: `download.html?id=${mId}&quality=4k&size=4.8+GB&title=${qTitle}&type=movie`, color: '#c084fc' },
-        { quality: '1080p Full HD', size: '1.4 GB', server: 'KM Cloud Fast', codec: 'Full HD x264 • Dual Audio Hindi', url: `download.html?id=${mId}&quality=1080p&size=1.4+GB&title=${qTitle}&type=movie`, color: '#34d399' },
-        { quality: '720p HD', size: '850 MB', server: 'KM Cloud Fast', codec: '10-Bit WebRip • Dual Audio', url: `download.html?id=${mId}&quality=720p&size=850+MB&title=${qTitle}&type=movie`, color: '#38bdf8' },
-        { quality: '480p SD', size: '450 MB', server: 'KM Cloud Fast', codec: 'Standard WebRip Clean', url: `download.html?id=${mId}&quality=480p&size=450+MB&title=${qTitle}&type=movie`, color: '#fbbf24' }
-    ];
-}
-
 function normalizeDownloads(movie) {
     if (!movie) return [];
     let pool = [];
@@ -713,14 +709,13 @@ function normalizeDownloads(movie) {
     const seen = new Set();
     const valid = [];
     for (const item of pool) {
-        if (!item || !item.url || !isValidDownloadUrl(item.url)) continue;
+        if (!item) continue;
+        const u = item.direct_url || item.url || '';
+        if (!u || !isValidDownloadUrl(u)) continue;
         const qKey = (item.quality || '').toLowerCase().replace(/[^a-z0-9]/g, '');
         if (seen.has(qKey)) continue;
         seen.add(qKey);
-        valid.push({ ...item, url: item.url });
-    }
-    if (!valid.length) {
-        return generateMovieFallbackDownloads(movie);
+        valid.push({ ...item, url: item.url || u });
     }
     return valid;
 }
@@ -729,7 +724,22 @@ function renderDownloads(movie) {
     const downloads = normalizeDownloads(movie);
 
     if (!downloads.length && !movie.torrent) {
-        return `<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct cloud download links are currently refreshing for this title.<br><span style="color: #2dce89; font-weight:600;">Please use the HD streaming servers above to watch online instantly without waiting.</span></div>`;
+        const titleQ = cleanTitleForQuery(movie.title || '');
+        return `
+            <div class="download-empty" style="text-align:center; padding: 24px 16px; color: #94a3b8; font-size: 14px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.15); line-height: 1.6;">
+                <div style="font-size: 26px; margin-bottom: 6px;">🎬</div>
+                <strong style="color: #f8fafc; font-size: 15px;">Ultra HD Streaming is Live Above</strong><br>
+                Direct cloud file mirrors are currently synchronizing for this title.<br>
+                <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#mainNav" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" class="btn-dl-action btn-dl-direct q-1080p" style="max-width:240px; padding: 10px 18px; text-decoration: none;">
+                        <span>▶</span><span>Watch Online in HD</span>
+                    </a>
+                    <a href="https://thepiratebay0.org/search/${encodeURIComponent(titleQ)}/1/99/0" target="_blank" rel="noopener noreferrer" class="btn-dl-action btn-dl-multi" style="max-width:240px; padding: 10px 18px; text-decoration: none;">
+                        <span>🔍</span><span>Search Verified P2P</span>
+                    </a>
+                </div>
+            </div>
+        `;
     }
 
     let cards = downloads.map((item, index) => {
@@ -737,14 +747,14 @@ function renderDownloads(movie) {
         const qClass = getQualityClass(quality);
         const qMeta = getQualityAccent(quality);
         const size = item.size || 'Cloud Fast';
-        const server = item.server || 'Fast Cloud';
+        const server = cleanServerLabel(item.server || 'Fast Cloud');
         const codec = item.codec || (qClass === 'q-4k' ? '10-Bit HEVC x265 • Atmos 5.1' : (qClass === 'q-1080p' ? 'Full HD x264 • Dual Audio Hindi' : 'Standard WebRip • Fast Stream'));
 
-        const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
-        const directUrl = item.direct_url || '';
-        const multiUrl = item.multi_url || rawUrl;
+        const rawUrl = (item.url && !item.url.includes('download.html') && isValidDownloadUrl(item.url)) ? item.url : '';
+        const directUrl = (item.direct_url && !item.direct_url.includes('download.html') && isValidDownloadUrl(item.direct_url)) ? item.direct_url : '';
+        const multiUrl = (item.multi_url && !item.multi_url.includes('download.html') && isValidDownloadUrl(item.multi_url)) ? item.multi_url : rawUrl;
 
-        // Generate pristine clean filename stripping any competitor branding (KatDrama, VegaMovies, KMMOVIES, HDHub4u, etc.)
+        // Generate pristine clean filename stripping competitor branding (KatDrama, VegaMovies, KMMOVIES, HDHub4u, etc.)
         const cleanFilename = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(item.filename || '', {
             title: movie.title,
             year: movie.year,
@@ -752,15 +762,34 @@ function renderDownloads(movie) {
             codec: codec
         }) : `${movie.title || 'Movie'}.${quality}.mkv`;
 
-        const sanitizedDirectUrl = (directUrl && window.PhantomSanitizer) ? window.PhantomSanitizer.cleanUrl(directUrl, { filename: cleanFilename }) : directUrl;
-        const isRealMedia = Boolean(sanitizedDirectUrl && window.PhantomSanitizer?.isDirectMediaUrl(sanitizedDirectUrl));
+        // Direct Download Link Resolution
+        let finalDirectUrl = directUrl || rawUrl;
+        if (finalDirectUrl && window.PhantomSanitizer) {
+            finalDirectUrl = window.PhantomSanitizer.cleanUrl(finalDirectUrl, { filename: cleanFilename });
+        }
+        const isRealMedia = Boolean(finalDirectUrl && window.PhantomSanitizer?.isDirectMediaUrl(finalDirectUrl));
         const dlAttr = isRealMedia ? `download="${escapeHTML(cleanFilename)}"` : '';
 
-        // Button 1: Direct Download (Last link direct path with clean filename parameter)
-        const directDlLink = sanitizedDirectUrl || `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&mode=direct&filename=${encodeURIComponent(cleanFilename)}`;
+        let directLinkHref = finalDirectUrl;
+        let directTarget = '_blank';
+        let directOnClick = '';
 
-        // Button 2: Multi Download (Mirror panel with HubCloud, GDrive, Mega, Pixeldrain)
-        const multiDlLink = `download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || movie.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&mode=multi&filename=${encodeURIComponent(cleanFilename)}`;
+        if (!directLinkHref) {
+            if (movie.torrent && movie.torrent.magnet) {
+                directLinkHref = movie.torrent.magnet;
+                directTarget = '_self';
+            } else {
+                directLinkHref = '#mainNav';
+                directOnClick = `onclick="window.scrollTo({top:0, behavior:'smooth'}); showToast('🎬 High-speed player stream active above'); return false;"`;
+            }
+        }
+
+        // Multi Download Link Resolution
+        let finalMultiUrl = multiUrl || finalDirectUrl;
+        if (!finalMultiUrl) {
+            const titleQ = cleanTitleForQuery(movie.title || '');
+            finalMultiUrl = `https://thepiratebay0.org/search/${encodeURIComponent(titleQ)}/1/99/0`;
+        }
 
         return `
             <div class="dl-quality-card" style="--card-accent:${qMeta.accent}; --card-glow:${qMeta.glow};">
@@ -772,11 +801,11 @@ function renderDownloads(movie) {
                     <span class="dl-codec-info">${escapeHTML(codec)}</span>
                 </div>
                 <div class="dl-actions-row">
-                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" ${dlAttr} data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
+                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directLinkHref}" target="${directTarget}" rel="noopener noreferrer" ${dlAttr} ${directOnClick} data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
                         <span>⚡</span>
                         <span>Direct Download</span>
                     </a>
-                    <a class="btn-dl-action btn-dl-multi" href="${multiDlLink}" target="_blank" rel="noopener noreferrer" title="Multi Cloud Mirrors (GDrive, HubCloud, Mega, Pixeldrain)">
+                    <a class="btn-dl-action btn-dl-multi" href="${finalMultiUrl}" target="_blank" rel="noopener noreferrer" title="Multi Cloud Mirrors Hub (GDrive, HubCloud, Mega, Pixeldrain)">
                         <span>🌐</span>
                         <span>Multi Download</span>
                     </a>
@@ -788,6 +817,7 @@ function renderDownloads(movie) {
     if (movie.torrent && movie.torrent.magnet) {
         const t = movie.torrent;
         const seedersText = t.seeders ? `${t.seeders} Seeders Active` : 'High Speed P2P';
+        const titleQ = cleanTitleForQuery(movie.title || '');
         cards.push(`
             <div class="dl-quality-card" style="--card-accent:#a855f7; --card-glow:rgba(168, 85, 247, 0.3);">
                 <div class="dl-card-header">
@@ -802,9 +832,9 @@ function renderDownloads(movie) {
                         <span>🧲</span>
                         <span>Open Magnet</span>
                     </a>
-                    <a class="btn-dl-action btn-dl-multi" href="download.html?id=${encodeURIComponent(movie.id)}&title=${encodeURIComponent(movie.title || '')}&poster=${encodeURIComponent(movie.poster || '')}&quality=Torrent" target="_blank" title="Torrent Details & Trackers">
+                    <a class="btn-dl-action btn-dl-multi" href="https://thepiratebay0.org/search/${encodeURIComponent(titleQ)}/1/99/0" target="_blank" rel="noopener noreferrer" title="Torrent Details & Trackers">
                         <span>📋</span>
-                        <span>Copy / Mirrors</span>
+                        <span>Search Trackers</span>
                     </a>
                 </div>
             </div>
@@ -1116,11 +1146,23 @@ async function loadMovieDetail() {
             const data = await getContentData();
             const movies = (data.movies || []).filter(m => m.active !== false);
             movie = movies.find(m => String(m.id) === String(movieId));
+            if (!movie) {
+                const titleParam = new URLSearchParams(window.location.search).get('title');
+                if (titleParam) {
+                    const lowT = titleParam.toLowerCase().trim();
+                    movie = movies.find(m => (m.title || '').toLowerCase().trim() === lowT);
+                }
+            }
             ads = data.settings && data.settings.ads;
         }
 
         if (!movie) {
             showError('Movie not found or inactive.');
+            return;
+        }
+
+        if (movie.type === 'series') {
+            window.location.replace(`series.html?id=${encodeURIComponent(movie.id)}`);
             return;
         }
 

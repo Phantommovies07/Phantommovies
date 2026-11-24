@@ -101,7 +101,8 @@ const _originalWindowOpen = window.open;
 window.open = function(url, target, features) {
     if (!url || typeof url !== 'string') return createMockWindow();
     const clean = url.toLowerCase();
-    if (clean.includes('vegamovies') || clean.includes('vega') || clean.includes('nexdrive') || clean.includes('greenmotors') || clean.includes('magiclinks') || clean.includes('4khdhub') || clean.includes('vglist') || clean.includes('vcloud') || clean.includes('fastdl')) {
+    // Neutralize known rogue ad redirect networks
+    if (clean.includes('greenmotors') || clean.includes('4khdhub.one') || clean.includes('azonahub') || clean.includes('magiclinks') || clean.includes('inventoryidea') || clean.includes('bonuscaf')) {
         console.warn('[Phantom Ad-Shield] Neutralized blacklisted rogue popup:', url);
         return createMockWindow(url);
     }
@@ -360,35 +361,36 @@ function getQualityAccent(quality = '') {
     return { accent: '#fbbf24', glow: 'rgba(245, 158, 11, 0.25)', label: '480p SD' };
 }
 
-function generateEpisodeFallbackDownloads(series, seasonNum = 1, epNum = 1) {
-    const title = series?.title || 'Series';
-    const sId = encodeURIComponent(series?.id || '');
-    const qTitle = encodeURIComponent(`${title} S0${seasonNum} EP ${epNum}`);
-    return [
-        { quality: '480p SD', size: '180 MB', server: 'Fast Cloud Mirror', url: `download.html?id=${sId}&quality=480p&size=180+MB&title=${qTitle}&s=${seasonNum}&ep=${epNum}&type=series`, color: '#ffd70f' },
-        { quality: '720p HD', size: '450 MB', server: 'High Speed Cloud', url: `download.html?id=${sId}&quality=720p&size=450+MB&title=${qTitle}&s=${seasonNum}&ep=${epNum}&type=series`, color: '#06b6d4' },
-        { quality: '1080p Full HD', size: '950 MB', server: 'VIP Direct Cloud', url: `download.html?id=${sId}&quality=1080p&size=950+MB&title=${qTitle}&s=${seasonNum}&ep=${epNum}&type=series`, color: '#10b981' }
-    ];
+function cleanServerLabel(serverName) {
+    if (!serverName) return 'Fast Cloud';
+    return String(serverName)
+        .replace(/HDHub4u(?:\s*Cloud\s*Mirror)?/gi, 'Fast Cloud Mirror')
+        .replace(/KatDrama(?:\s*VIP)?/gi, 'VIP Direct Cloud')
+        .replace(/VegaMovies(?:\s*Fast\s*Cloud)?/gi, 'V-Cloud Fast')
+        .replace(/KMMOVIES(?:\s*Cloud\s*Fast)?/gi, 'High Speed Cloud')
+        .replace(/Rogmovies/gi, 'Ultra Cloud')
+        .replace(/BollyFlix/gi, 'Direct Cloud')
+        .trim() || 'Fast Cloud';
 }
 
 function normalizeDownloads(episode) {
     const season = getSeasons()[currentSeasonIndex];
     if (episode && Array.isArray(episode.downloads) && episode.downloads.length) {
         const valid = episode.downloads
-            .filter(d => d && d.url && isValidDownloadUrl(d.url));
+            .filter(d => d && (d.direct_url || d.url) && isValidDownloadUrl(d.direct_url || d.url));
         if (valid.length) return valid;
     }
     if (season && Array.isArray(season.downloads) && season.downloads.length) {
         const valid = season.downloads
-            .filter(d => d && d.url && isValidDownloadUrl(d.url));
+            .filter(d => d && (d.direct_url || d.url) && isValidDownloadUrl(d.direct_url || d.url));
         if (valid.length) return valid;
     }
     if (currentSeries && Array.isArray(currentSeries.downloads) && currentSeries.downloads.length) {
         const valid = currentSeries.downloads
-            .filter(d => d && d.url && isValidDownloadUrl(d.url));
+            .filter(d => d && (d.direct_url || d.url) && isValidDownloadUrl(d.direct_url || d.url));
         if (valid.length) return valid;
     }
-    return generateEpisodeFallbackDownloads(currentSeries, currentSeasonIndex + 1, currentEpisodeIndex + 1);
+    return [];
 }
 
 
@@ -498,9 +500,21 @@ function renderSeasonBatchPack(series, seasonIndex) {
             </div>
             <div class="batch-grid">
                 ${batchOptions.map(opt => {
-                    const dlUrl = `download.html?id=${encodeURIComponent(series.id)}&title=${encodeURIComponent(series.title || '')}&poster=${encodeURIComponent(series.poster || series.banner || '')}&quality=${encodeURIComponent(opt.quality)}&size=${encodeURIComponent(opt.size)}&url=&s=${sNum}&type=series`;
+                    const season = getSeasons()[seasonIndex];
+                    const seasonDl = (season?.downloads || []).find(d => (d.quality || '').toLowerCase().includes(opt.quality.toLowerCase()));
+                    let dlUrl = seasonDl ? (seasonDl.direct_url || seasonDl.url) : '';
+                    let dlTarget = '_blank';
+                    if (!dlUrl) {
+                        if (series.torrent && series.torrent.magnet) {
+                            dlUrl = series.torrent.magnet;
+                            dlTarget = '_self';
+                        } else {
+                            const qT = cleanTitleForQuery(series.title || '') + ' S0' + sNum;
+                            dlUrl = `https://thepiratebay0.org/search/${encodeURIComponent(qT)}/1/99/0`;
+                        }
+                    }
                     return `
-                        <a class="download-card batch-dl-btn" href="${dlUrl}" target="_blank" rel="noopener noreferrer" style="--download-color:${opt.color}">
+                        <a class="download-card batch-dl-btn" href="${dlUrl}" target="${dlTarget}" rel="noopener noreferrer" style="--download-color:${opt.color}">
                             <div>
                                 <strong>📦 ${escapeHTML(opt.quality)}</strong>
                                 <span>${escapeHTML(opt.server)} • ${escapeHTML(opt.size)}</span>
@@ -686,20 +700,31 @@ function triggerSeriesPlayerInstantDownload() {
         bestDl = dls.find(d => d.url && !d.url.includes('download.html') && isValidDownloadUrl(d.url));
     }
 
-    if (bestDl && bestDl.direct_url && window.PhantomSanitizer?.isDirectMediaUrl(bestDl.direct_url)) {
-        showToast(`⚡ Starting 1-click VIP episode download: ${cleanFn}`);
-        window.PhantomSanitizer.triggerDirectDownload(bestDl.direct_url, cleanFn);
+    if (bestDl) {
+        const targetUrl = bestDl.direct_url || bestDl.url;
+        if (targetUrl) {
+            if (window.PhantomSanitizer?.isDirectMediaUrl(targetUrl)) {
+                showToast(`⚡ Starting 1-click VIP episode download: ${cleanFn}`);
+                window.PhantomSanitizer.triggerDirectDownload(targetUrl, cleanFn);
+                return;
+            } else {
+                showToast(`⚡ Opening verified VIP cloud download server...`);
+                window.open(targetUrl, '_blank', 'noopener,noreferrer');
+                return;
+            }
+        }
+    }
+
+    // 3. Fallback: Launch magnet client directly if available
+    if (currentSeries.torrent && currentSeries.torrent.magnet) {
+        showToast(`🧲 Opening high-speed torrent client...`);
+        window.location.href = currentSeries.torrent.magnet;
         return;
     }
 
-    // 3. Fallback: Launch direct mode in download.html
-    const targetUrl = bestDl ? (bestDl.direct_url || bestDl.url) : '';
-    const qParam = encodeURIComponent(bestDl?.quality || '1080p HD');
-    const sParam = encodeURIComponent(bestDl?.size || 'Cloud Fast');
-    const dlPageUrl = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || '')}&quality=${qParam}&size=${sParam}&url=${encodeURIComponent(targetUrl)}&mode=direct&filename=${encodeURIComponent(cleanFn)}&type=series&season=${sNum}&episode=${epNum}`;
-    
-    showToast(`⚡ Launching high-speed direct download mirror...`);
-    window.open(dlPageUrl, '_blank', 'noopener,noreferrer');
+    // 4. Smooth scroll to streaming player (never bounce to download.html)
+    showToast(`🎬 Streaming in HD above. Episode cloud file currently synchronizing.`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function renderSeriesFailoverBar() {
@@ -1118,11 +1143,28 @@ function renderEpisodeDownloads() {
     const grid = document.getElementById('episodeDownloads');
     const episode = getCurrentEpisode();
     const downloads = normalizeDownloads(episode);
+    const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
+    const sNum = currentSeasonIndex + 1;
+    const titleQ = cleanTitleForQuery(currentSeries?.title || '') + ' S0' + sNum;
 
     if (!grid) return;
 
-    if (!downloads.length) {
-        grid.innerHTML = '<div class="download-empty" style="text-align:center; padding: 18px 12px; color: #94a3b8; font-size: 13px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12); line-height: 1.5;">⚡ Direct cloud download links are currently refreshing for this episode.<br><span style="color: #2dce89; font-weight:600;">Please use the HD streaming servers above to watch online instantly without waiting.</span></div>';
+    if (!downloads.length && !currentSeries?.torrent) {
+        grid.innerHTML = `
+            <div class="download-empty" style="text-align:center; padding: 22px 16px; color: #94a3b8; font-size: 14px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.15); line-height: 1.6;">
+                <div style="font-size: 26px; margin-bottom: 6px;">📺</div>
+                <strong style="color: #f8fafc; font-size: 15px;">Ultra HD Episode Stream Active Above</strong><br>
+                Direct cloud file mirrors for Season ${sNum} Episode ${epNum} are currently synchronizing.<br>
+                <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#seriesPlayerBox" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" class="btn-dl-action btn-dl-direct q-1080p" style="max-width:240px; padding: 10px 18px; text-decoration: none;">
+                        <span>▶</span><span>Watch Online in HD</span>
+                    </a>
+                    <a href="https://thepiratebay0.org/search/${encodeURIComponent(titleQ)}/1/99/0" target="_blank" rel="noopener noreferrer" class="btn-dl-action btn-dl-multi" style="max-width:240px; padding: 10px 18px; text-decoration: none;">
+                        <span>🔍</span><span>Search Verified P2P</span>
+                    </a>
+                </div>
+            </div>
+        `;
         return;
     }
 
@@ -1131,16 +1173,14 @@ function renderEpisodeDownloads() {
         const qClass = getQualityClass(quality);
         const qMeta = getQualityAccent(quality);
         const size = item.size || 'Cloud Fast';
-        const server = item.server || 'Fast Cloud';
+        const server = cleanServerLabel(item.server || 'Fast Cloud');
         const codec = item.codec || (qClass === 'q-4k' ? '10-Bit HEVC x265 • Atmos 5.1' : (qClass === 'q-1080p' ? 'Full HD x264 • Dual Audio Hindi' : 'Standard WebRip • Fast Stream'));
 
-        const rawUrl = (item.url && !item.url.includes('download.html')) ? item.url : '';
-        const directUrl = item.direct_url || '';
-        const multiUrl = item.multi_url || rawUrl;
-        const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
-        const sNum = currentSeasonIndex + 1;
+        const rawUrl = (item.url && !item.url.includes('download.html') && isValidDownloadUrl(item.url)) ? item.url : '';
+        const directUrl = (item.direct_url && !item.direct_url.includes('download.html') && isValidDownloadUrl(item.direct_url)) ? item.direct_url : '';
+        const multiUrl = (item.multi_url && !item.multi_url.includes('download.html') && isValidDownloadUrl(item.multi_url)) ? item.multi_url : rawUrl;
 
-        // Generate pristine clean episode filename stripping any competitor branding (KatDrama, VegaMovies, KMMOVIES, HDHub4u, etc.)
+        // Generate pristine clean episode filename stripping competitor branding
         const cleanFilename = window.PhantomSanitizer ? window.PhantomSanitizer.cleanFilename(item.filename || '', {
             title: currentSeries.title,
             year: currentSeries.year,
@@ -1150,15 +1190,33 @@ function renderEpisodeDownloads() {
             codec: codec
         }) : `${currentSeries.title || 'Series'}.S0${sNum}E${epNum}.${quality}.mkv`;
 
-        const sanitizedDirectUrl = (directUrl && window.PhantomSanitizer) ? window.PhantomSanitizer.cleanUrl(directUrl, { filename: cleanFilename }) : directUrl;
-        const isRealMedia = Boolean(sanitizedDirectUrl && window.PhantomSanitizer?.isDirectMediaUrl(sanitizedDirectUrl));
+        // Direct Download Link Resolution
+        let finalDirectUrl = directUrl || rawUrl;
+        if (finalDirectUrl && window.PhantomSanitizer) {
+            finalDirectUrl = window.PhantomSanitizer.cleanUrl(finalDirectUrl, { filename: cleanFilename });
+        }
+        const isRealMedia = Boolean(finalDirectUrl && window.PhantomSanitizer?.isDirectMediaUrl(finalDirectUrl));
         const dlAttr = isRealMedia ? `download="${escapeHTML(cleanFilename)}"` : '';
 
-        // Button 1: Direct Download (with clean filename parameter)
-        const directDlLink = sanitizedDirectUrl || `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(rawUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=direct&filename=${encodeURIComponent(cleanFilename)}`;
+        let directLinkHref = finalDirectUrl;
+        let directTarget = '_blank';
+        let directOnClick = '';
 
-        // Button 2: Multi Download
-        const multiDlLink = `download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || currentSeries.banner || '')}&quality=${encodeURIComponent(quality)}&size=${encodeURIComponent(size)}&url=${encodeURIComponent(multiUrl)}&ep=${epNum}&s=${sNum}&type=series&mode=multi&filename=${encodeURIComponent(cleanFilename)}`;
+        if (!directLinkHref) {
+            if (currentSeries.torrent && currentSeries.torrent.magnet) {
+                directLinkHref = currentSeries.torrent.magnet;
+                directTarget = '_self';
+            } else {
+                directLinkHref = '#seriesPlayerBox';
+                directOnClick = `onclick="window.scrollTo({top:0, behavior:'smooth'}); showToast('🎬 High-speed episode player stream active above'); return false;"`;
+            }
+        }
+
+        // Multi Download Link Resolution
+        let finalMultiUrl = multiUrl || finalDirectUrl;
+        if (!finalMultiUrl) {
+            finalMultiUrl = `https://thepiratebay0.org/search/${encodeURIComponent(titleQ)}/1/99/0`;
+        }
 
         return `
             <div class="dl-quality-card" style="--card-accent:${qMeta.accent}; --card-glow:${qMeta.glow};">
@@ -1170,11 +1228,11 @@ function renderEpisodeDownloads() {
                     <span class="dl-codec-info">${escapeHTML(codec)}</span>
                 </div>
                 <div class="dl-actions-row">
-                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directDlLink}" target="_blank" rel="noopener noreferrer" ${dlAttr} data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
+                    <a class="btn-dl-action btn-dl-direct ${qClass}" href="${directLinkHref}" target="${directTarget}" rel="noopener noreferrer" ${dlAttr} ${directOnClick} data-filename="${escapeHTML(cleanFilename)}" title="Direct Fast Download (${escapeHTML(cleanFilename)})">
                         <span>⚡</span>
                         <span>Direct Download</span>
                     </a>
-                    <a class="btn-dl-action btn-dl-multi" href="${multiDlLink}" target="_blank" rel="noopener noreferrer" title="Multi Cloud Mirrors (GDrive, HubCloud, Mega, Pixeldrain)">
+                    <a class="btn-dl-action btn-dl-multi" href="${finalMultiUrl}" target="_blank" rel="noopener noreferrer" title="Multi Cloud Mirrors Hub (GDrive, HubCloud, Mega, Pixeldrain)">
                         <span>🌐</span>
                         <span>Multi Download</span>
                     </a>
@@ -1186,8 +1244,6 @@ function renderEpisodeDownloads() {
     if (currentSeries?.torrent && currentSeries.torrent.magnet) {
         const t = currentSeries.torrent;
         const seedersText = t.seeders ? `${t.seeders} Seeders Active` : 'High Speed P2P';
-        const epNum = episode?.episodeNumber || (currentEpisodeIndex + 1);
-        const sNum = currentSeasonIndex + 1;
         cards.push(`
             <div class="dl-quality-card" style="--card-accent:#a855f7; --card-glow:rgba(168, 85, 247, 0.3);">
                 <div class="dl-card-header">
@@ -1202,9 +1258,9 @@ function renderEpisodeDownloads() {
                         <span>🧲</span>
                         <span>Open Magnet</span>
                     </a>
-                    <a class="btn-dl-action btn-dl-multi" href="download.html?id=${encodeURIComponent(currentSeries.id)}&title=${encodeURIComponent(currentSeries.title || '')}&poster=${encodeURIComponent(currentSeries.poster || '')}&quality=Torrent&ep=${epNum}&s=${sNum}&type=series" target="_blank" title="Torrent Details & Trackers">
+                    <a class="btn-dl-action btn-dl-multi" href="https://thepiratebay0.org/search/${encodeURIComponent(titleQ)}/1/99/0" target="_blank" rel="noopener noreferrer" title="Torrent Details & Trackers">
                         <span>📋</span>
-                        <span>Copy / Mirrors</span>
+                        <span>Search Trackers</span>
                     </a>
                 </div>
             </div>
@@ -1274,6 +1330,13 @@ async function loadSeriesDetail() {
             const data = await getContentData();
             const items = (data.movies || []).filter(m => m.active !== false);
             series = items.find(m => String(m.id) === String(seriesId));
+            if (!series) {
+                const titleParam = new URLSearchParams(window.location.search).get('title');
+                if (titleParam) {
+                    const lowT = titleParam.toLowerCase().trim();
+                    series = items.find(m => (m.title || '').toLowerCase().trim() === lowT);
+                }
+            }
             ads = data.settings && data.settings.ads;
         }
 
@@ -1282,8 +1345,9 @@ async function loadSeriesDetail() {
             return;
         }
 
+        // Seamless auto-redirection: If item is actually a movie (e.g. from an old link or misclassified bookmark), redirect immediately to movie.html
         if (series.type !== 'series') {
-            showError('This content is not a series.');
+            window.location.replace(`movie.html?id=${encodeURIComponent(series.id)}`);
             return;
         }
 

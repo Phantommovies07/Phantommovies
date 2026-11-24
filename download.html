@@ -692,12 +692,27 @@ function applyInitialParams(params) {
         btn3.href = watchUrl;
         btn3.querySelector('span').textContent = '🎬 Watch Online in HD (Zero Ads • Instant Play)';
     } else {
+        const rawTitle = params.title || params.id || '';
+        const titleQuery = cleanTitleForQuery(rawTitle);
+        const torrentSearchUrl = `https://thepiratebay0.org/search/${encodeURIComponent(titleQuery)}/1/99/0`;
+
         btn1.href = watchUrl;
-        btn1.querySelector('span').textContent = `🚀 Fast Cloud Server 1 (Instant Download - ${qLabel})`;
-        btn2.href = watchUrl;
-        btn2.querySelector('span').textContent = '⚡ High Speed Cloud Mirror 2 (Instant Play)';
+        btn1.target = '_self';
+        btn1.removeAttribute('download');
+        btn1.querySelector('span').textContent = `🎬 Watch Online in Full HD (Zero Ads • Instant Play)`;
+        btn1.querySelector('em').textContent = 'Play HD';
+
+        btn2.href = torrentSearchUrl;
+        btn2.target = '_blank';
+        btn2.removeAttribute('download');
+        btn2.querySelector('span').textContent = `🧲 Search Verified Torrent & P2P Mirrors (${qLabel})`;
+        btn2.querySelector('em').textContent = 'Direct P2P';
+
         btn3.href = watchUrl;
-        btn3.querySelector('span').textContent = '🎬 Watch Online in HD (Zero Ads • Instant Play)';
+        btn3.target = '_self';
+        btn3.removeAttribute('download');
+        btn3.querySelector('span').textContent = (params.type === 'series') ? '← Return to Series Episodes' : '← Return to Movie Details';
+        btn3.querySelector('em').textContent = 'Return';
     }
 
     setupTorrentBox(null, params);
