@@ -1,6 +1,93 @@
 {
   "movies": [
     {
+      "id": "1795547705725",
+      "type": "movie",
+      "title": "The Eagle Has Landed",
+      "genre": "Feature",
+      "year": 1976,
+      "duration": "2h 00m",
+      "rating": 7.5,
+      "badge": "HD",
+      "category": "south_new",
+      "industry": "South",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNTE0MjMwMTEtYzZjOS00OWJiLTliNTItMjhhYmJhYjAxYzM5XkEyXkFqcGc@._V1_.jpg",
+      "banner": "https://m.media-amazon.com/images/M/MV5BNTE0MjMwMTEtYzZjOS00OWJiLTliNTItMjhhYmJhYjAxYzM5XkEyXkFqcGc@._V1_.jpg",
+      "streamLink": "https://playdrive.vip/e/AQHJ0koACRXv_Q",
+      "streams": [
+        {
+          "name": "Server 1 (Multi-Audio VIP Hindi)",
+          "url": "https://playdrive.vip/e/AQHJ0koACRXv_Q"
+        },
+        {
+          "name": "Server 2 (VIP Ultra HD)",
+          "url": "https://vidlink.pro/movie/tt0074452?primaryColor=0284c7&autoplay=false"
+        },
+        {
+          "name": "Server 3 (High Speed HD)",
+          "url": "https://cinesrc.st/embed/movie/tt0074452"
+        },
+        {
+          "name": "Server 4 (Backup Server)",
+          "url": "https://autoembed.co/movie/imdb/tt0074452"
+        },
+        {
+          "name": "Server 5 (Global Mirror)",
+          "url": "https://www.2embed.cc/embed/tt0074452"
+        }
+      ],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=R3MSGu3vMUGphrp8Fjx7KxAzq",
+          "multi_url": "https://nexdrive.beer/genxfm784776243546/",
+          "url": "https://fastdl.beer/embed?download=R3MSGu3vMUGphrp8Fjx7KxAzq",
+          "color": "#34d399",
+          "filename": "The.Eagle.Has.Landed.1080p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "550MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=EMbIBTNqcWMkZRpZSQMCK8U2G",
+          "multi_url": "https://nexdrive.beer/genxfm784776243545/",
+          "url": "https://fastdl.beer/embed?download=EMbIBTNqcWMkZRpZSQMCK8U2G",
+          "color": "#38bdf8",
+          "filename": "The.Eagle.Has.Landed.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "200MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=G08gEJqEhcflrethx4o4SqtC8",
+          "multi_url": "https://nexdrive.beer/genxfm784776243544/",
+          "url": "https://fastdl.beer/embed?download=G08gEJqEhcflrethx4o4SqtC8",
+          "color": "#fbbf24",
+          "filename": "The.Eagle.Has.Landed.480p.Clean.WEB.DL.mkv"
+        }
+      ],
+      "seasons": [],
+      "trailerLink": "https://www.youtube.com/results?search_query=The+Eagle+Has+Landed+1976+trailer",
+      "description": "The Eagle Has Landed (1976) starring Michael Caine, Donald Sutherland.",
+      "featured": false,
+      "trending": false,
+      "heroSlide": false,
+      "status": "published",
+      "active": true,
+      "views": 23661,
+      "ratingCount": 0,
+      "ratingSum": 0,
+      "imdb_id": "tt0074452",
+      "tmdb_id": "",
+      "createdAt": "2026-11-24T19:14:58.793218+00:00",
+      "updatedAt": "2026-11-24T19:14:58.793218+00:00"
+    },
+    {
       "id": "1794919193078",
       "type": "movie",
       "title": "Pradhama Drishtiya Kuttakkar",
@@ -736,7 +823,30 @@
           "url": "https://www.2embed.cc/embedtv/tt46182660&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "800MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=Y8fqUk75CodEylsg6YG4v7ROY",
+          "multi_url": "https://nexdrive.beer/genxfm784776153461/",
+          "url": "https://fastdl.beer/embed?download=Y8fqUk75CodEylsg6YG4v7ROY",
+          "color": "#38bdf8",
+          "filename": "Family.Full.House.with.Rohit.Sharma.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=YapST615EHUq4XmFWDQqzDW5C",
+          "multi_url": "https://nexdrive.beer/genxfm784776153459/",
+          "url": "https://fastdl.beer/embed?download=YapST615EHUq4XmFWDQqzDW5C",
+          "color": "#fbbf24",
+          "filename": "Family.Full.House.with.Rohit.Sharma.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -1887,7 +1997,41 @@
           "episodes": []
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=WPZytv1qdQy3n5lAuv9bP21CW",
+          "multi_url": "https://nexdrive.beer/genxfm784776447530/",
+          "url": "https://fastdl.beer/embed?download=WPZytv1qdQy3n5lAuv9bP21CW",
+          "color": "#34d399",
+          "filename": "India.s.Got.Latent.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "950MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=Dqj4f3OutG3jXqU0RS45L3noC",
+          "multi_url": "https://nexdrive.beer/genxfm7847768412/",
+          "url": "https://fastdl.beer/embed?download=Dqj4f3OutG3jXqU0RS45L3noC",
+          "color": "#38bdf8",
+          "filename": "India.s.Got.Latent.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "350MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=8k6VyhGEK3zwHr0aGvca5Af9h",
+          "multi_url": "https://nexdrive.beer/genxfm7847768411/",
+          "url": "https://fastdl.beer/embed?download=8k6VyhGEK3zwHr0aGvca5Af9h",
+          "color": "#fbbf24",
+          "filename": "India.s.Got.Latent.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "tmdb_id": "262838",
       "streams": [
         {
@@ -1938,7 +2082,30 @@
           "url": "https://www.2embed.cc/embedtv/tt45246384&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "850MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=xfgbGI8LhBw3020F6P70hUltg",
+          "multi_url": "https://nexdrive.beer/genxfm784776515146/",
+          "url": "https://fastdl.beer/embed.php?download=xfgbGI8LhBw3020F6P70hUltg",
+          "color": "#34d399",
+          "filename": "Love.in.Disguise.1080p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "300MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=wt2hu3CVMk4wcoNTFZ2dkGu8n",
+          "multi_url": "https://nexdrive.beer/genxfm784776515150/",
+          "url": "https://fastdl.beer/embed.php?download=wt2hu3CVMk4wcoNTFZ2dkGu8n",
+          "color": "#38bdf8",
+          "filename": "Love.in.Disguise.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -2489,7 +2656,38 @@
           "url": "https://www.2embed.cc/embed/tt10309906"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/5738306412-2/",
+          "multi_url": "https://w3.magiclinks.lol/5738306412-2/",
+          "url": "https://w3.magiclinks.lol/5738306412-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "591.5MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/999860016997380-2/",
+          "multi_url": "https://w3.magiclinks.lol/999860016997380-2/",
+          "url": "https://w3.magiclinks.lol/999860016997380-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "385.8MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/246891656812934-2/",
+          "multi_url": "https://w3.magiclinks.lol/246891656812934-2/",
+          "url": "https://w3.magiclinks.lol/246891656812934-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Shubh+Mangal+Zyada+Saavdhan+2020+trailer",
       "description": "Shubh Mangal Zyada Saavdhan (2020) starring Ayushmann Khurrana, Jitendra Kumar.",
@@ -4469,7 +4667,48 @@
           "url": "https://www.2embed.cc/embedtv/tt5753856&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "32.30 GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/583901008317-2/",
+          "multi_url": "https://w3.magiclinks.lol/583901008317-2/",
+          "url": "https://w3.magiclinks.lol/583901008317-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "6.7GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/mXyvoKEo",
+          "multi_url": "https://w3.magiclinks.lol/30049338810-2/",
+          "url": "https://one.kmcloud.lol/s/mXyvoKEo",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.7GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/GQlsfZpK",
+          "multi_url": "https://one.kmcloud.lol/s/GQlsfZpK",
+          "url": "https://one.kmcloud.lol/s/GQlsfZpK",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "1.1GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/ccGs1Ona",
+          "multi_url": "https://one.kmcloud.lol/s/ccGs1Ona",
+          "url": "https://one.kmcloud.lol/s/ccGs1Ona",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -4540,7 +4779,38 @@
           "url": "https://autoembed.co/movie/imdb/tt7797658"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/952544781-2/",
+          "multi_url": "https://w3.magiclinks.lol/3113114148159-2/",
+          "url": "https://w3.magiclinks.lol/952544781-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "697.8MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/8313654-2/",
+          "multi_url": "https://w3.magiclinks.lol/8313654-2/",
+          "url": "https://w3.magiclinks.lol/8313654-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "414.7MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/01056142000-2/",
+          "multi_url": "https://w3.magiclinks.lol/01056142000-2/",
+          "url": "https://w3.magiclinks.lol/01056142000-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Awe!+2018+trailer",
       "description": "Awe! (2018) starring Kajal Aggarwal, Nithya Menen.",
@@ -4956,7 +5226,41 @@
           "url": "https://www.2embed.cc/embedtv/tt19231492&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.5GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=Q8VEUOY9Q8QmusROTraEC7Nkf",
+          "multi_url": "https://nexdrive.beer/genxfm784776481184/",
+          "url": "https://fastdl.beer/embed.php?download=Q8VEUOY9Q8QmusROTraEC7Nkf",
+          "color": "#34d399",
+          "filename": "Dark.Matter.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "700MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=J0b6cmkWn3aTwdNSqpmH8XyGf",
+          "multi_url": "https://nexdrive.beer/genxfm784776481191/",
+          "url": "https://fastdl.beer/embed.php?download=J0b6cmkWn3aTwdNSqpmH8XyGf",
+          "color": "#38bdf8",
+          "filename": "Dark.Matter.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "380MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=ceu523WiKNV59KVCsN82UVKLF",
+          "multi_url": "https://nexdrive.beer/genxfm784776481183/",
+          "url": "https://fastdl.beer/embed.php?download=ceu523WiKNV59KVCsN82UVKLF",
+          "color": "#fbbf24",
+          "filename": "Dark.Matter.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -5277,7 +5581,30 @@
           "url": "https://www.2embed.cc/embedtv/tt26768224&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "800MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=70mqb4nvZK3fEsb5pr46sJ0YB",
+          "multi_url": "https://nexdrive.beer/genxfm784776342523/",
+          "url": "https://fastdl.beer/embed?download=70mqb4nvZK3fEsb5pr46sJ0YB",
+          "color": "#34d399",
+          "filename": "The.Pressure.Game.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "400MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=0SG95Z85KmTtdJAtQ3nA3hEqP",
+          "multi_url": "https://nexdrive.beer/genxfm784776342515/",
+          "url": "https://fastdl.beer/embed?download=0SG95Z85KmTtdJAtQ3nA3hEqP",
+          "color": "#38bdf8",
+          "filename": "The.Pressure.Game.720p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 2,
@@ -5481,7 +5808,48 @@
           "url": "https://www.2embed.cc/embedtv/tt27995113&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "5GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/7547170-2/",
+          "multi_url": "https://w3.magiclinks.lol/7547170-2/",
+          "url": "https://w3.magiclinks.lol/7547170-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.1GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/jOn4lGRV",
+          "multi_url": "https://one.kmcloud.lol/s/jOn4lGRV",
+          "url": "https://one.kmcloud.lol/s/jOn4lGRV",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "250MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/WTlIlIDU",
+          "multi_url": "https://one.kmcloud.lol/s/WTlIlIDU",
+          "url": "https://one.kmcloud.lol/s/WTlIlIDU",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "200MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/DbJgT6iE",
+          "multi_url": "https://one.kmcloud.lol/s/DbJgT6iE",
+          "url": "https://one.kmcloud.lol/s/DbJgT6iE",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 2,
@@ -5785,7 +6153,38 @@
           "url": "https://www.2embed.cc/embedtv/tt2661044&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/kmnqOMxv",
+          "multi_url": "https://one.kmcloud.lol/s/kmnqOMxv",
+          "url": "https://one.kmcloud.lol/s/kmnqOMxv",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "840.2MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/GUd91wIZ",
+          "multi_url": "https://one.kmcloud.lol/s/GUd91wIZ",
+          "url": "https://one.kmcloud.lol/s/GUd91wIZ",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "462.9MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/RjUm0mHV",
+          "multi_url": "https://one.kmcloud.lol/s/RjUm0mHV",
+          "url": "https://one.kmcloud.lol/s/RjUm0mHV",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -5990,7 +6389,41 @@
           "url": "https://www.2embed.cc/embedtv/tt47661704&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "650MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=bmwZDF2uJMrPzhxlyqWDC7F3e",
+          "multi_url": "https://nexdrive.beer/genxfm784776514544/",
+          "url": "https://fastdl.beer/embed.php?download=bmwZDF2uJMrPzhxlyqWDC7F3e",
+          "color": "#34d399",
+          "filename": "Make.Me.Tingle.1080p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "250MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=efZNSdlLnbykUFjYBoz6fSCI5",
+          "multi_url": "https://nexdrive.beer/genxfm784776514527/",
+          "url": "https://fastdl.beer/embed.php?download=efZNSdlLnbykUFjYBoz6fSCI5",
+          "color": "#38bdf8",
+          "filename": "Make.Me.Tingle.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "180MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=nztMz2IJOAM0kBJm7a1ocbpTl",
+          "multi_url": "https://nexdrive.beer/genxfm784776514500/",
+          "url": "https://fastdl.beer/embed.php?download=nztMz2IJOAM0kBJm7a1ocbpTl",
+          "color": "#fbbf24",
+          "filename": "Make.Me.Tingle.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 0,
@@ -6827,7 +7260,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0199974"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "5.2GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/z4z4--x9xgdz441",
+          "multi_url": "https://nexdrive.beer/genxfm784776479992/",
+          "url": "https://vcloud.my/z4z4--x9xgdz441",
+          "color": "#34d399",
+          "filename": "The.Prophet.s.Game.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.7GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=mSbZmssBhRr4wauZUamMNqlHT",
+          "multi_url": "https://nexdrive.beer/genxfm784776479991/",
+          "url": "https://fastdl.beer/embed.php?download=mSbZmssBhRr4wauZUamMNqlHT",
+          "color": "#38bdf8",
+          "filename": "The.Prophet.s.Game.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "725MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=gpPzHU1YaWqRWA3Aw3Ul0FUs0",
+          "multi_url": "https://nexdrive.beer/genxfm784776479990/",
+          "url": "https://fastdl.beer/embed.php?download=gpPzHU1YaWqRWA3Aw3Ul0FUs0",
+          "color": "#fbbf24",
+          "filename": "The.Prophet.s.Game.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Prophet's+Game+2000+trailer",
       "description": "The Prophet's Game (2000) starring Dennis Hopper, Stephanie Zimbalist.",
@@ -6926,7 +7393,48 @@
           "url": "https://autoembed.co/movie/imdb/tt50107649"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "26510.52 GB",
+          "codec": "x265 HEVC",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/192910523198-2/",
+          "multi_url": "https://w3.magiclinks.lol/192910523198-2/",
+          "url": "https://w3.magiclinks.lol/192910523198-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/MJe8pWRf",
+          "multi_url": "https://w3.magiclinks.lol/855026764812520-2/",
+          "url": "https://one.kmcloud.lol/s/MJe8pWRf",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "375.7MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/Z9Xunz8o",
+          "multi_url": "https://w3.magiclinks.lol/0422395861-2/",
+          "url": "https://one.kmcloud.lol/s/Z9Xunz8o",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "224.1MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/tBmQePOR",
+          "multi_url": "https://one.kmcloud.lol/s/tBmQePOR",
+          "url": "https://one.kmcloud.lol/s/tBmQePOR",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dilwali+Diwali+2026+trailer",
       "description": "Dilwali Diwali (2026) starring Mihir Ahuja, Aurra Bhatnagar Badoni.",
@@ -7687,7 +8195,30 @@
           "url": "https://www.2embed.cc/embedtv/tt45859537&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "650MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=I6bA5J8TB6xvsk6SOy8WferPg",
+          "multi_url": "https://nexdrive.beer/genxfm784776512192/",
+          "url": "https://fastdl.beer/embed.php?download=I6bA5J8TB6xvsk6SOy8WferPg",
+          "color": "#34d399",
+          "filename": "How.to.Ruin.Diwali.1080p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "300MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=d52WF98rAJTH6IJ1iHDd0cTX8",
+          "multi_url": "https://nexdrive.beer/genxfm784776511831/",
+          "url": "https://fastdl.beer/embed.php?download=d52WF98rAJTH6IJ1iHDd0cTX8",
+          "color": "#38bdf8",
+          "filename": "How.to.Ruin.Diwali.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -7946,7 +8477,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0092455"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/h1hh519rx1xb1ne",
+          "multi_url": "https://nexdrive.beer/genxfm784776498842/",
+          "url": "https://vcloud.my/h1hh519rx1xb1ne",
+          "color": "#34d399",
+          "filename": "Star.Trek.The.Next.Generation.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "450MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=yiSYFZxZQ1ecpDooYWAUzBBi6",
+          "multi_url": "https://nexdrive.beer/genxfm784776498838/",
+          "url": "https://fastdl.beer/embed.php?download=yiSYFZxZQ1ecpDooYWAUzBBi6",
+          "color": "#38bdf8",
+          "filename": "Star.Trek.The.Next.Generation.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "250MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=eJBIweC2cgMiJG1HsMyCswTMZ",
+          "multi_url": "https://nexdrive.beer/genxfm784776498835/",
+          "url": "https://fastdl.beer/embed.php?download=eJBIweC2cgMiJG1HsMyCswTMZ",
+          "color": "#fbbf24",
+          "filename": "Star.Trek.The.Next.Generation.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Star+Trek:+The+Next+Generation+1987+trailer",
       "description": "Star Trek: The Next Generation (1987) starring Patrick Stewart, Brent Spiner.",
@@ -7991,7 +8556,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0063522"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=8zmVz55faT3V8efMLMFulvWV8",
+          "multi_url": "https://nexdrive.beer/genxfm784776236421/",
+          "url": "https://fastdl.beer/embed?download=8zmVz55faT3V8efMLMFulvWV8",
+          "color": "#34d399",
+          "filename": "Rosemary.s.Baby.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=Ow6qE7RpYTf6hmkg97DezftX8",
+          "multi_url": "https://nexdrive.beer/genxfm78477662818/",
+          "url": "https://fastdl.beer/embed?download=Ow6qE7RpYTf6hmkg97DezftX8",
+          "color": "#38bdf8",
+          "filename": "Rosemary.s.Baby.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=mzUK13PTUiJgePFc72OOoBI4y",
+          "multi_url": "https://nexdrive.beer/genxfm78477662813/",
+          "url": "https://fastdl.beer/embed?download=mzUK13PTUiJgePFc72OOoBI4y",
+          "color": "#fbbf24",
+          "filename": "Rosemary.s.Baby.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Rosemary's+Baby+1968+trailer",
       "description": "Rosemary's Baby (1968) starring Mia Farrow, John Cassavetes.",
@@ -8036,7 +8635,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0120694"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=LryYU6T4AKmmjfozayU62X7Ai",
+          "multi_url": "https://nexdrive.beer/genxfm784776293685/",
+          "url": "https://fastdl.beer/embed?download=LryYU6T4AKmmjfozayU62X7Ai",
+          "color": "#34d399",
+          "filename": "Halloween.H20.20.Years.Later.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "650MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=zRHPg2sJlAOfbw9L2hsUmoRd1",
+          "multi_url": "https://nexdrive.beer/genxfm784776293683/",
+          "url": "https://fastdl.beer/embed?download=zRHPg2sJlAOfbw9L2hsUmoRd1",
+          "color": "#38bdf8",
+          "filename": "Halloween.H20.20.Years.Later.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "300MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=XkoNuP66i0GG1ABab6pmtBzUm",
+          "multi_url": "https://nexdrive.beer/genxfm784776293682/",
+          "url": "https://fastdl.beer/embed?download=XkoNuP66i0GG1ABab6pmtBzUm",
+          "color": "#fbbf24",
+          "filename": "Halloween.H20.20.Years.Later.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Halloween+H20:+20+Years+Later+1998+trailer",
       "description": "Halloween H20: 20 Years Later (1998) starring Jamie Lee Curtis, Josh Hartnett.",
@@ -8085,7 +8718,38 @@
           "url": "https://www.2embed.cc/embedtv/tt43736405&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.4GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-1080p/",
+          "multi_url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-1080p/",
+          "url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-1080p/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "300MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-720p/",
+          "multi_url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-720p/",
+          "url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-720p/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "150MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-480p/",
+          "multi_url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-480p/",
+          "url": "https://episodes.magiclinks.lol/series/a-love-other-than-yours-s01-480p/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -8194,7 +8858,38 @@
           "url": "https://www.2embed.cc/embedtv/tt47743462&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/8z2k9oJc",
+          "multi_url": "https://one.kmcloud.lol/s/8z2k9oJc",
+          "url": "https://one.kmcloud.lol/s/8z2k9oJc",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "350MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/kCVXCmOH",
+          "multi_url": "https://one.kmcloud.lol/s/kCVXCmOH",
+          "url": "https://one.kmcloud.lol/s/kCVXCmOH",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "200MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/Ca2Q29tI",
+          "multi_url": "https://one.kmcloud.lol/s/Ca2Q29tI",
+          "url": "https://one.kmcloud.lol/s/Ca2Q29tI",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -8501,7 +9196,41 @@
           "url": "https://www.2embed.cc/embedtv/tt36458668&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "900MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=NasY5PZpE747STlJidi7Nbrnw",
+          "multi_url": "https://nexdrive.beer/genxfm784776517494/",
+          "url": "https://fastdl.beer/embed.php?download=NasY5PZpE747STlJidi7Nbrnw",
+          "color": "#34d399",
+          "filename": "Dead.End.Job.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "300MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=CVoMQpJLnGCz2nbFDPM2fFrLq",
+          "multi_url": "https://nexdrive.beer/genxfm784776517482/",
+          "url": "https://fastdl.beer/embed.php?download=CVoMQpJLnGCz2nbFDPM2fFrLq",
+          "color": "#38bdf8",
+          "filename": "Dead.End.Job.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "160MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=F1W3J9iyrGA8wkuFroURbMBA3",
+          "multi_url": "https://nexdrive.beer/genxfm784776517502/",
+          "url": "https://fastdl.beer/embed.php?download=F1W3J9iyrGA8wkuFroURbMBA3",
+          "color": "#fbbf24",
+          "filename": "Dead.End.Job.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -9757,7 +10486,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0479651"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/33ge7dgxub3byy7",
+          "multi_url": "https://nexdrive.beer/genxfm784776139574/",
+          "url": "https://vcloud.my/33ge7dgxub3byy7",
+          "color": "#34d399",
+          "filename": "Dasavatharam.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.5GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/bmmia9cia9mb9aw",
+          "multi_url": "https://nexdrive.beer/genxfm784776139573/",
+          "url": "https://vcloud.my/bmmia9cia9mb9aw",
+          "color": "#38bdf8",
+          "filename": "Dasavatharam.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "600MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=mN06229eTG4XIJhL0f3OwLqtr",
+          "multi_url": "https://nexdrive.beer/genxfm784776139572/",
+          "url": "https://fastdl.beer/embed?download=mN06229eTG4XIJhL0f3OwLqtr",
+          "color": "#fbbf24",
+          "filename": "Dasavatharam.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Dasavatharam+2008+trailer",
       "description": "Dasavatharam (2008) starring Kamal Haasan, Asin.",
@@ -42874,8 +43637,8 @@
   "settings": {
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
-    "totalMovies": 543,
-    "lastUpdated": "2026-11-24T14:15:30.186222+00:00",
+    "totalMovies": 544,
+    "lastUpdated": "2026-11-24T19:15:12.879881+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -42908,7 +43671,7 @@
       "buttonText": "📩 Request on Telegram"
     },
     "totalSeries": 144,
-    "totalTitles": 801,
+    "totalTitles": 688,
     "stats": {
       "baseTotal": 5000,
       "base4K": 1800,
