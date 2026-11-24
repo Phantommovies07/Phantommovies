@@ -10565,7 +10565,41 @@
           "url": "https://autoembed.co/movie/imdb/tt0062622"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3.5GB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=Ohe5iXIXkAjCJXvxs0st8Xc4R",
+          "multi_url": "https://nexdrive.beer/genxfm784776303020/",
+          "url": "https://fastdl.beer/embed?download=Ohe5iXIXkAjCJXvxs0st8Xc4R",
+          "color": "#34d399",
+          "filename": "2001.A.Space.Odyssey.1968.1080p.x264.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=ALSE5HUg5t6qqxcx2zC0zqcep",
+          "multi_url": "https://nexdrive.beer/genxfm784776303019/",
+          "url": "https://fastdl.beer/embed?download=ALSE5HUg5t6qqxcx2zC0zqcep",
+          "color": "#38bdf8",
+          "filename": "2001.A.Space.Odyssey.1968.720p.x264.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "450MB",
+          "codec": "x264",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=bjEi7TwNxr5qKN7zQctbDT4Y5",
+          "multi_url": "https://nexdrive.beer/genxfm784776303018/",
+          "url": "https://fastdl.beer/embed?download=bjEi7TwNxr5qKN7zQctbDT4Y5",
+          "color": "#fbbf24",
+          "filename": "2001.A.Space.Odyssey.1968.480p.x264.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=2001:+A+Space+Odyssey+1968+trailer",
       "description": "2001: A Space Odyssey (1968) starring Keir Dullea, Gary Lockwood.",
@@ -10580,7 +10614,7 @@
       "imdb_id": "tt0062622",
       "tmdb_id": "",
       "createdAt": "2026-10-30T14:55:47.479741+00:00",
-      "updatedAt": "2026-11-18T21:27:32.639582+00:00"
+      "updatedAt": "2026-11-24T23:58:37.293945+00:00"
     },
     {
       "id": "1792918274916",
@@ -11464,7 +11498,48 @@
           "url": "https://autoembed.co/movie/imdb/tt42362291"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://km1.kmmovies.bond/last-dinner-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.6GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/667073505956412-2/",
+          "multi_url": "https://w3.magiclinks.lol/667073505956412-2/",
+          "url": "https://w3.magiclinks.lol/667073505956412-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "752.6MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/138732018967-2/",
+          "multi_url": "https://w3.magiclinks.lol/138732018967-2/",
+          "url": "https://w3.magiclinks.lol/138732018967-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "660.6MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/83033633527068-2/",
+          "multi_url": "https://w3.magiclinks.lol/83033633527068-2/",
+          "url": "https://w3.magiclinks.lol/83033633527068-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Jeena+Dil+Se+2026+trailer",
       "description": "Jeena Dil Se (2026) starring Ruma Sharma, Lakshya Handa.",
@@ -11479,7 +11554,7 @@
       "imdb_id": "tt42362291",
       "tmdb_id": "1713546",
       "createdAt": "2026-10-22T22:53:38.830987+00:00",
-      "updatedAt": "2026-11-18T21:27:32.639996+00:00"
+      "updatedAt": "2026-11-24T23:58:37.882093+00:00"
     },
     {
       "id": "1792686179115",
@@ -11509,7 +11584,41 @@
           "url": "https://autoembed.co/movie/imdb/tt1195478"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=dTvcIi3H1bV0hbi7anMCkHUck",
+          "multi_url": "https://nexdrive.beer/genxfm784776238755/",
+          "url": "https://fastdl.beer/embed?download=dTvcIi3H1bV0hbi7anMCkHUck",
+          "color": "#34d399",
+          "filename": "The.Five.Year.Engagement.2012.1080p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=ntsNneTUf91bBwQ4nBzm6E7l1",
+          "multi_url": "https://nexdrive.beer/genxfm784776238754/",
+          "url": "https://fastdl.beer/embed?download=ntsNneTUf91bBwQ4nBzm6E7l1",
+          "color": "#38bdf8",
+          "filename": "The.Five.Year.Engagement.2012.720p.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=ODtZspMdX33bSDjN7arrpHFHX",
+          "multi_url": "https://nexdrive.beer/genxfm784776238753/",
+          "url": "https://fastdl.beer/embed?download=ODtZspMdX33bSDjN7arrpHFHX",
+          "color": "#fbbf24",
+          "filename": "The.Five.Year.Engagement.2012.480p.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Five-Year+Engagement+2012+trailer",
       "description": "The Five-Year Engagement (2012) starring Jason Segel, Emily Blunt.",
@@ -11524,7 +11633,7 @@
       "imdb_id": "tt1195478",
       "tmdb_id": "66238",
       "createdAt": "2026-10-22T16:22:57.663993+00:00",
-      "updatedAt": "2026-10-22T16:22:57.663993+00:00",
+      "updatedAt": "2026-11-24T23:58:43.713570+00:00",
       "torrent": {
         "name": "The.Office.US.S05.1080p.BluRay.x264-decibeL [Season 5 Five]",
         "seeders": 182,
@@ -11677,7 +11786,48 @@
           "url": "https://autoembed.co/movie/imdb/tt37818327"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://km1.kmmovies.bond/the-lovely-bones-2009-dual-audio-hindi-english-download-1080p-bluray/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.72 GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/15529409-2/",
+          "multi_url": "https://w3.magiclinks.lol/15529409-2/",
+          "url": "https://w3.magiclinks.lol/15529409-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "760 MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/054182797762-2/",
+          "multi_url": "https://w3.magiclinks.lol/054182797762-2/",
+          "url": "https://w3.magiclinks.lol/054182797762-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "309 MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/9677918-2/",
+          "multi_url": "https://w3.magiclinks.lol/9677918-2/",
+          "url": "https://w3.magiclinks.lol/9677918-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Sun+Never+Sets+2026+trailer",
       "description": "The Sun Never Sets (2026) starring Dakota Fanning, Debby Ryan.",
@@ -11692,7 +11842,7 @@
       "imdb_id": "tt37818327",
       "tmdb_id": "1490214",
       "createdAt": "2026-10-22T09:03:58.059388+00:00",
-      "updatedAt": "2026-10-22T09:03:58.059388+00:00",
+      "updatedAt": "2026-11-24T23:58:44.599521+00:00",
       "torrent": {
         "name": "The Sun Never Sets 2026 1080p WEB-DL HEVC x265-RMTeam",
         "seeders": 9,
@@ -11729,7 +11879,48 @@
           "url": "https://autoembed.co/movie/imdb/tt10794054"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://km1.kmmovies.bond/anbil-avan-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.55 GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/3552463991859-2/",
+          "multi_url": "https://w3.magiclinks.lol/3552463991859-2/",
+          "url": "https://w3.magiclinks.lol/3552463991859-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "814 MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/4759648923-2/",
+          "multi_url": "https://w3.magiclinks.lol/4759648923-2/",
+          "url": "https://w3.magiclinks.lol/4759648923-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "337 MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/8231041257-2/",
+          "multi_url": "https://w3.magiclinks.lol/8231041257-2/",
+          "url": "https://w3.magiclinks.lol/8231041257-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=The+Weight+2026+trailer",
       "description": "The Weight (2026) starring Ethan Hawke, Russell Crowe.",
@@ -11744,7 +11935,7 @@
       "imdb_id": "tt10794054",
       "tmdb_id": "648579",
       "createdAt": "2026-10-22T09:03:55.567865+00:00",
-      "updatedAt": "2026-10-22T09:03:55.567865+00:00",
+      "updatedAt": "2026-11-24T23:58:45.305405+00:00",
       "torrent": {
         "name": "The.Weight.2026.1080p.SCREENER.WEB-DL.H264.AAC-II",
         "seeders": 677,
@@ -11781,7 +11972,48 @@
           "url": "https://autoembed.co/movie/imdb/tt36307021"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://km1.kmmovies.bond/the-lovely-bones-2009-dual-audio-hindi-english-download-1080p-bluray/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.47 GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w1.skydrop.sbs/download.php?id=1eaWAtIDzGlekMKzVLO3WdFDd9Sch0cxQQCNn7PoER3V2gU81WhR4AJITZMOS3L1_XbJdTk-4WeK1gmG084yjopQhTT1BtVmEmbfkyEIsv4osN3FRyhAlZiTs2ijeFxyQsc-ysLu2QYxMNrFlfFBZOMe18PYwCpe38fnax_c0d9weUTHKY2A3OaBbny_U2Fyr75kd_PT_6-u1bmfOLC0c9SDkMPGtp_FFLMdeyeO2LZS_2c_C7TvbGyHWqY_9iiF-eo3jDwL51ii3WRaKiESYL0crw3pbyyxnK1uFZ-GqX8",
+          "multi_url": "https://w1.skydrop.sbs/download.php?id=1eaWAtIDzGlekMKzVLO3WdFDd9Sch0cxQQCNn7PoER3V2gU81WhR4AJITZMOS3L1_XbJdTk-4WeK1gmG084yjopQhTT1BtVmEmbfkyEIsv4osN3FRyhAlZiTs2ijeFxyQsc-ysLu2QYxMNrFlfFBZOMe18PYwCpe38fnax_c0d9weUTHKY2A3OaBbny_U2Fyr75kd_PT_6-u1bmfOLC0c9SDkMPGtp_FFLMdeyeO2LZS_2c_C7TvbGyHWqY_9iiF-eo3jDwL51ii3WRaKiESYL0crw3pbyyxnK1uFZ-GqX8",
+          "url": "https://w1.skydrop.sbs/download.php?id=1eaWAtIDzGlekMKzVLO3WdFDd9Sch0cxQQCNn7PoER3V2gU81WhR4AJITZMOS3L1_XbJdTk-4WeK1gmG084yjopQhTT1BtVmEmbfkyEIsv4osN3FRyhAlZiTs2ijeFxyQsc-ysLu2QYxMNrFlfFBZOMe18PYwCpe38fnax_c0d9weUTHKY2A3OaBbny_U2Fyr75kd_PT_6-u1bmfOLC0c9SDkMPGtp_FFLMdeyeO2LZS_2c_C7TvbGyHWqY_9iiF-eo3jDwL51ii3WRaKiESYL0crw3pbyyxnK1uFZ-GqX8",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.11 GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w1.skydrop.sbs/download.php?id=4ufQtBnhKjLsFhWKxeGqmUeH50Rmo4cec5oUEdMJJyNWZ0C1MFr5V08CyaQc5PQNXGoR2FCmcVlV-ilYHlfj8Wyh2ZNatEBFbCUsKo0O5nXMU6leXmxjnbL7SfGdkWCu_9XqHoPaNcHT300DlIHjT-Gt87xfHFRB7tr3N0f8eO8MrADww7XF8nyXKBy6I6lA-gPe5zQ6wscNIBKVVLPE4cShFYhP07hdnEjYlam_CaQdcZe8uBo0tzHFplzZ2BnG60_2VKFyVI-pC64fFc7TrxAZ7_8m4i93Syoxde70Xjg",
+          "multi_url": "https://w1.skydrop.sbs/download.php?id=RR3LMib07mXYrSHi4eLGkAUZ0jhNjCKb6cOZ2v_WgbTNNuT5LRg95VbOPnymQJ2vpdFjEKWjPvWm-RMhdICKK0NGq-tjm6DdJnG4bCMEaCcMkRmxzHkjPyZJ4tcWGboyLKBqCFJGp-B7Hud0ITjLNfCuVAvuWzKX-c9ZNETaWG_UYxUtPfZwW5yKTjZfGFxAq5WG6xs2byd3VtHeYQ6nR1_Z954cUP45A-WzF9IiRIqFsAJXftWmt-9FJHtT9omFOu2dLnrtN1U1lJqTyPfbU1tp0q1P5jcZJ-wT-jYq09Q",
+          "url": "https://w1.skydrop.sbs/download.php?id=4ufQtBnhKjLsFhWKxeGqmUeH50Rmo4cec5oUEdMJJyNWZ0C1MFr5V08CyaQc5PQNXGoR2FCmcVlV-ilYHlfj8Wyh2ZNatEBFbCUsKo0O5nXMU6leXmxjnbL7SfGdkWCu_9XqHoPaNcHT300DlIHjT-Gt87xfHFRB7tr3N0f8eO8MrADww7XF8nyXKBy6I6lA-gPe5zQ6wscNIBKVVLPE4cShFYhP07hdnEjYlam_CaQdcZe8uBo0tzHFplzZ2BnG60_2VKFyVI-pC64fFc7TrxAZ7_8m4i93Syoxde70Xjg",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "423 MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w1.skydrop.sbs/download.php?id=uw1-SD2Bm6wh5YdQNCqZDYC3l4X_rf1jTIy4BOMlBA--VMlTg9VBEKjz3Bb8cqw0inGGGhzxv_lw4nuXdM4dYCCXIRLEpDsL9O5Y3cQ0rsJb9jHceDbmITuxB9nPyCasMBTjiNxta7ty-OGCTSSkzABfW1FDs75ilSDFVABqgI7-8EN9dpK3mj4imJbC_uHmgNWCpb239bWGsvBDNjNpE0fmY4pfsYY-uYdHR37At6gXJ2cId1HsHurP0c8wswYp17EBN61-3T9gDY0USRQN5T8DHfpyuTpj6bfioT0IvHo",
+          "multi_url": "https://w1.skydrop.sbs/download.php?id=uw1-SD2Bm6wh5YdQNCqZDYC3l4X_rf1jTIy4BOMlBA--VMlTg9VBEKjz3Bb8cqw0inGGGhzxv_lw4nuXdM4dYCCXIRLEpDsL9O5Y3cQ0rsJb9jHceDbmITuxB9nPyCasMBTjiNxta7ty-OGCTSSkzABfW1FDs75ilSDFVABqgI7-8EN9dpK3mj4imJbC_uHmgNWCpb239bWGsvBDNjNpE0fmY4pfsYY-uYdHR37At6gXJ2cId1HsHurP0c8wswYp17EBN61-3T9gDY0USRQN5T8DHfpyuTpj6bfioT0IvHo",
+          "url": "https://w1.skydrop.sbs/download.php?id=uw1-SD2Bm6wh5YdQNCqZDYC3l4X_rf1jTIy4BOMlBA--VMlTg9VBEKjz3Bb8cqw0inGGGhzxv_lw4nuXdM4dYCCXIRLEpDsL9O5Y3cQ0rsJb9jHceDbmITuxB9nPyCasMBTjiNxta7ty-OGCTSSkzABfW1FDs75ilSDFVABqgI7-8EN9dpK3mj4imJbC_uHmgNWCpb239bWGsvBDNjNpE0fmY4pfsYY-uYdHR37At6gXJ2cId1HsHurP0c8wswYp17EBN61-3T9gDY0USRQN5T8DHfpyuTpj6bfioT0IvHo",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Hadestown:+The+Musical+2026+trailer",
       "description": "Hadestown: The Musical (2026) starring Reeve Carney, André De Shields.",
@@ -11796,7 +12028,7 @@
       "imdb_id": "tt36307021",
       "tmdb_id": "1439808",
       "createdAt": "2026-10-22T09:03:54.631450+00:00",
-      "updatedAt": "2026-10-22T09:03:54.631450+00:00",
+      "updatedAt": "2026-11-24T23:58:46.304162+00:00",
       "torrent": {
         "name": "Hadestown The Musical (2026) 1080p WEBRip 5.1-LAMA",
         "seeders": 335,
@@ -11833,7 +12065,38 @@
           "url": "https://autoembed.co/movie/imdb/tt0361411"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.97 GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/62847300-2/",
+          "multi_url": "https://w3.magiclinks.lol/62847300-2/",
+          "url": "https://w3.magiclinks.lol/62847300-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "771 MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/191373833135397-2/",
+          "multi_url": "https://w3.magiclinks.lol/191373833135397-2/",
+          "url": "https://w3.magiclinks.lol/191373833135397-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "376 MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/3583405847465-2/",
+          "multi_url": "https://w3.magiclinks.lol/3583405847465-2/",
+          "url": "https://w3.magiclinks.lol/3583405847465-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Bride+&+Prejudice+2004+trailer",
       "description": "Bride & Prejudice (2004) starring Martin Henderson, Aishwarya Rai Bachchan.",
@@ -11848,7 +12111,7 @@
       "imdb_id": "tt0361411",
       "tmdb_id": "57825",
       "createdAt": "2026-10-22T09:03:53.513642+00:00",
-      "updatedAt": "2026-10-22T09:03:53.513642+00:00",
+      "updatedAt": "2026-11-24T23:58:47.172889+00:00",
       "torrent": {
         "name": "Bride and Prejudice 2004 1080p WEB-DL HEVC x265 5.1 BONE",
         "seeders": 16,
@@ -11947,7 +12210,30 @@
           "url": "https://autoembed.co/movie/imdb/tt37892322"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "560MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/jy4xhg-b6zuayls",
+          "multi_url": "https://nexdrive.beer/genxfm784776505947/",
+          "url": "https://vcloud.my/jy4xhg-b6zuayls",
+          "color": "#34d399",
+          "filename": "No.More.Cocoons.2026.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "270MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://vcloud.my/bcq3u1cuqcbsyk-",
+          "multi_url": "https://nexdrive.beer/genxfm784776505946/",
+          "url": "https://vcloud.my/bcq3u1cuqcbsyk-",
+          "color": "#38bdf8",
+          "filename": "No.More.Cocoons.2026.720p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=No+More+Cocoons+2026+trailer",
       "description": "No More Cocoons (2026) starring Sky Bison, Henry Hunter Hall.",
@@ -11962,7 +12248,7 @@
       "imdb_id": "tt37892322",
       "tmdb_id": "",
       "createdAt": "2026-10-22T09:03:46.284883+00:00",
-      "updatedAt": "2026-10-22T09:03:46.284883+00:00",
+      "updatedAt": "2026-11-24T23:58:52.255472+00:00",
       "torrent": {
         "name": "Animated Cartoon - Amy's Big Wish Doe No More! (AgentRedGirl) 2025 WEB-DL 1080p",
         "seeders": 20,
@@ -12289,7 +12575,48 @@
           "url": "https://autoembed.co/movie/imdb/tt27541205"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://km1.kmmovies.bond/perfect-liars-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-1080p/",
+          "multi_url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-1080p/",
+          "url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-1080p/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "600MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-720p/",
+          "multi_url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-720p/",
+          "url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-720p/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "230MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-480p/",
+          "multi_url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-480p/",
+          "url": "https://episodes.magiclinks.lol/series/confidence-queen-s01-480p/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Queen+at+Sea+2026+trailer",
       "description": "Queen at Sea (2026) starring Juliette Binoche, Tom Courtenay.",
@@ -12304,7 +12631,7 @@
       "imdb_id": "tt27541205",
       "tmdb_id": "1021848",
       "createdAt": "2026-10-19T09:28:39.487165+00:00",
-      "updatedAt": "2026-10-19T09:28:39.487165+00:00",
+      "updatedAt": "2026-11-24T23:58:53.315574+00:00",
       "torrent": {
         "name": "Queen At Sea 2026 1080p WEB-DL HEVC x265 5.1 BONE",
         "seeders": 7,
@@ -12585,7 +12912,38 @@
           "url": "https://autoembed.co/movie/imdb/tt0116630"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/6939148-2/",
+          "multi_url": "https://w3.magiclinks.lol/82874962938630-2/",
+          "url": "https://w3.magiclinks.lol/6939148-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "400MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/21113424-2/",
+          "multi_url": "https://w3.magiclinks.lol/8741415-2/",
+          "url": "https://w3.magiclinks.lol/21113424-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "250MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/4826338416-2/",
+          "multi_url": "https://w3.magiclinks.lol/5772843823291-2/",
+          "url": "https://w3.magiclinks.lol/4826338416-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Indian+1996+trailer",
       "description": "Indian (1996) starring Kamal Haasan, Sukanya.",
@@ -12600,7 +12958,7 @@
       "imdb_id": "tt0116630",
       "tmdb_id": "31521",
       "createdAt": "2026-10-19T02:38:23.064296+00:00",
-      "updatedAt": "2026-10-19T02:38:23.064296+00:00",
+      "updatedAt": "2026-11-24T23:58:54.414698+00:00",
       "torrent": {
         "name": "The Indian in The Cupboard 1995 1080p BluRay x264-CiNEFiLE",
         "seeders": 63,
@@ -12698,7 +13056,48 @@
           "url": "https://autoembed.co/movie/imdb/tt0124932"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://km1.kmmovies.bond/perfect-liars-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.5GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/sb3BEx8A",
+          "multi_url": "https://one.kmcloud.lol/s/sb3BEx8A",
+          "url": "https://one.kmcloud.lol/s/sb3BEx8A",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "680.5MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/u2hdsvvl",
+          "multi_url": "https://one.kmcloud.lol/s/u2hdsvvl",
+          "url": "https://one.kmcloud.lol/s/u2hdsvvl",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "305.8MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://one.kmcloud.lol/s/wiQTGBUS",
+          "multi_url": "https://one.kmcloud.lol/s/wiQTGBUS",
+          "url": "https://one.kmcloud.lol/s/wiQTGBUS",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=20/20+1978+trailer",
       "description": "20/20 (1978) starring David Muir, Amy Robach.",
@@ -12713,7 +13112,7 @@
       "imdb_id": "tt0124932",
       "tmdb_id": "89180",
       "createdAt": "2026-10-19T02:38:08.856145+00:00",
-      "updatedAt": "2026-11-09T08:28:51.790105+00:00",
+      "updatedAt": "2026-11-24T23:58:55.585461+00:00",
       "torrent": {
         "name": "The Daily Show 2026 10 20 Death Cab for Cutie 1080p WEB h264-EDITH",
         "seeders": 266,
@@ -12982,7 +13381,48 @@
           "url": "https://autoembed.co/movie/imdb/tt32268992"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "16.81 GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/88243881-2/",
+          "multi_url": "https://w3.magiclinks.lol/88243881-2/",
+          "url": "https://w3.magiclinks.lol/88243881-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.3GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/41272051-2/",
+          "multi_url": "https://w3.magiclinks.lol/6992502791132-2/",
+          "url": "https://w3.magiclinks.lol/41272051-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "685.3MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/3933567761496-2/",
+          "multi_url": "https://w3.magiclinks.lol/3933567761496-2/",
+          "url": "https://w3.magiclinks.lol/3933567761496-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "417.9MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/5994414562-2/",
+          "multi_url": "https://w3.magiclinks.lol/5994414562-2/",
+          "url": "https://w3.magiclinks.lol/5994414562-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Sacrifice+2025+trailer",
       "description": "Sacrifice (2025) starring Chris Evans, Anya Taylor-Joy.",
@@ -12997,7 +13437,7 @@
       "imdb_id": "tt32268992",
       "tmdb_id": "137948",
       "createdAt": "2026-10-16T19:09:44.049817+00:00",
-      "updatedAt": "2026-10-16T19:09:44.049817+00:00",
+      "updatedAt": "2026-11-24T23:58:56.459861+00:00",
       "torrent": {
         "name": "Sacrifice.2025.Okko.1080p.WEB-DL.x264",
         "seeders": 70,
@@ -13034,7 +13474,48 @@
           "url": "https://www.2embed.cc/embedtv/tt37180305&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "6GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/5510458099720-2/",
+          "multi_url": "https://w3.magiclinks.lol/5510458099720-2/",
+          "url": "https://w3.magiclinks.lol/5510458099720-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.2GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/490899729-2/",
+          "multi_url": "https://w3.magiclinks.lol/05071359930178-2/",
+          "url": "https://w3.magiclinks.lol/490899729-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "350MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/510645763-2/",
+          "multi_url": "https://w3.magiclinks.lol/0039319025-2/",
+          "url": "https://w3.magiclinks.lol/510645763-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "150MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/76424464976-2/",
+          "multi_url": "https://w3.magiclinks.lol/237708945520-2/",
+          "url": "https://w3.magiclinks.lol/76424464976-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -13072,7 +13553,7 @@
       "imdb_id": "tt37180305",
       "tmdb_id": "298550",
       "createdAt": "2026-10-16T15:51:36.779659+00:00",
-      "updatedAt": "2026-10-16T19:09:43.330567+00:00",
+      "updatedAt": "2026-11-24T23:58:57.301046+00:00",
       "torrent": {
         "name": "Friends Sex and Games S01E01 1080p WEB h264-EDITH",
         "seeders": 53,
@@ -13109,7 +13590,38 @@
           "url": "https://autoembed.co/movie/imdb/tt44734409"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "4.1GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/746422885-2/",
+          "multi_url": "https://w3.magiclinks.lol/746422885-2/",
+          "url": "https://w3.magiclinks.lol/746422885-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "997.5MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/877065959-2/",
+          "multi_url": "https://w3.magiclinks.lol/877065959-2/",
+          "url": "https://w3.magiclinks.lol/877065959-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "423.8MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/688857064-2/",
+          "multi_url": "https://w3.magiclinks.lol/688857064-2/",
+          "url": "https://w3.magiclinks.lol/688857064-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Oye+Chill+Maar+2026+trailer",
       "description": "Oye Chill Maar (2026) starring Sshrey Pareek, Tejas Dev.",
@@ -13124,7 +13636,7 @@
       "imdb_id": "tt44734409",
       "tmdb_id": "1798313",
       "createdAt": "2026-10-16T15:51:35.440962+00:00",
-      "updatedAt": "2026-11-09T08:28:51.790105+00:00"
+      "updatedAt": "2026-11-24T23:58:58.648901+00:00"
     },
     {
       "id": "1792080209759",
@@ -13154,7 +13666,19 @@
           "url": "https://www.2embed.cc/embedtv/tt5722298&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "330MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=xvbXG4pHoPRHrXIWPg6KMTpn6",
+          "multi_url": "https://nexdrive.beer/genxfm784776521636/",
+          "url": "https://fastdl.beer/embed.php?download=xvbXG4pHoPRHrXIWPg6KMTpn6",
+          "color": "#38bdf8",
+          "filename": "Private.Eyes.2016.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -13192,7 +13716,7 @@
       "imdb_id": "tt5722298",
       "tmdb_id": "13762",
       "createdAt": "2026-10-15T16:03:22.039570+00:00",
-      "updatedAt": "2026-10-15T16:03:22.039570+00:00",
+      "updatedAt": "2026-11-24T23:59:01.941059+00:00",
       "torrent": {
         "name": "Private Eyes West Coast S01E01 1080p HEVC x265-MeGusta",
         "seeders": 94,
@@ -43638,7 +44162,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 544,
-    "lastUpdated": "2026-11-24T19:15:12.879881+00:00",
+    "lastUpdated": "2026-11-24T23:59:01.946821+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -43678,7 +44202,7 @@
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-24T14:15:30.186187+00:00",
+    "lastHealthAudit": "2026-11-24T23:59:01.946810+00:00",
     "catalogHealthScore": "100.0%"
   }
 }
