@@ -23627,7 +23627,18 @@
           "url": "https://www.2embed.cc/embedtv/tt32832648&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/the-child-2026/",
+          "color": "#c084fc"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -23665,7 +23676,7 @@
       "imdb_id": "tt32832648",
       "tmdb_id": "258035",
       "createdAt": "2026-10-10T20:25:12.752955+00:00",
-      "updatedAt": "2026-11-27T23:38:05.756959+00:00",
+      "updatedAt": "2026-11-28T08:11:40.713598+00:00",
       "torrent": {
         "name": "Tribhuvan Mishra CA Topper S01E05 1080p HEVC x265-MeGusta",
         "seeders": 6,
@@ -36482,7 +36493,48 @@
           "url": "https://autoembed.co/movie/imdb/tt13131232"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/the-child-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.6GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/209980455-2/",
+          "multi_url": "https://w3.magiclinks.lol/209980455-2/",
+          "url": "https://w3.magiclinks.lol/209980455-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "666.1MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/2587530531128-2/",
+          "multi_url": "https://w3.magiclinks.lol/2587530531128-2/",
+          "url": "https://w3.magiclinks.lol/2587530531128-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "411.5MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/9703828-2/",
+          "multi_url": "https://w3.magiclinks.lol/9703828-2/",
+          "url": "https://w3.magiclinks.lol/9703828-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Mission+Majnu+2023+trailer",
       "description": "Mission Majnu (2023) starring Sidharth Malhotra, Rashmika Mandanna.",
@@ -36497,7 +36549,7 @@
       "imdb_id": "tt13131232",
       "tmdb_id": "778946",
       "createdAt": "2026-10-08T04:31:04.644093+00:00",
-      "updatedAt": "2026-10-08T04:31:04.644093+00:00"
+      "updatedAt": "2026-11-28T08:15:25.581660+00:00"
     },
     {
       "id": "1791433865704",
@@ -36527,7 +36579,41 @@
           "url": "https://www.2embed.cc/embedtv/tt8809646&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "3.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=1h57veYZq99lJG6NM8dIQQCMS",
+          "multi_url": "https://nexdrive.beer/genxfm784776498914/",
+          "url": "https://fastdl.beer/embed.php?download=1h57veYZq99lJG6NM8dIQQCMS",
+          "color": "#34d399",
+          "filename": "College.Romance.2018.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=YPUlLWurhoOBC5NEusJg4UWQz",
+          "multi_url": "https://nexdrive.beer/genxfm784776498913/",
+          "url": "https://fastdl.beer/embed.php?download=YPUlLWurhoOBC5NEusJg4UWQz",
+          "color": "#38bdf8",
+          "filename": "College.Romance.2018.720p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed.php?download=vEZOUjhwfDopKsfVxjkBHkoxO",
+          "multi_url": "https://nexdrive.beer/genxfm784776498912/",
+          "url": "https://fastdl.beer/embed.php?download=vEZOUjhwfDopKsfVxjkBHkoxO",
+          "color": "#fbbf24",
+          "filename": "College.Romance.2018.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -36565,7 +36651,7 @@
       "imdb_id": "tt8809646",
       "tmdb_id": "84150",
       "createdAt": "2026-10-08T04:31:04.083537+00:00",
-      "updatedAt": "2026-10-08T04:31:04.083537+00:00"
+      "updatedAt": "2026-11-28T08:15:31.835329+00:00"
     },
     {
       "id": "1791433867719",
@@ -36595,7 +36681,48 @@
           "url": "https://autoembed.co/movie/imdb/tt0843328"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/adarsha-kutumbam-house-no-47-ak47-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.1GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/6731870-2/",
+          "multi_url": "https://w3.magiclinks.lol/6731870-2/",
+          "url": "https://w3.magiclinks.lol/6731870-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/301715318421243-2/",
+          "multi_url": "https://w3.magiclinks.lol/301715318421243-2/",
+          "url": "https://w3.magiclinks.lol/301715318421243-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "657.2MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/9307283607-2/",
+          "multi_url": "https://w3.magiclinks.lol/9307283607-2/",
+          "url": "https://w3.magiclinks.lol/9307283607-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Chatrapathi+2005+trailer",
       "description": "Chatrapathi (2005) starring Prabhas, Bhanupriya.",
@@ -36610,7 +36737,7 @@
       "imdb_id": "tt0843328",
       "tmdb_id": "79210",
       "createdAt": "2026-10-08T04:31:03.352409+00:00",
-      "updatedAt": "2026-10-08T04:31:03.352409+00:00"
+      "updatedAt": "2026-11-28T08:15:33.150171+00:00"
     },
     {
       "id": "1791433865461",
@@ -36640,7 +36767,48 @@
           "url": "https://autoembed.co/movie/imdb/tt15387190"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "5.8GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/55214471-2/",
+          "multi_url": "https://w3.magiclinks.lol/55214471-2/",
+          "url": "https://w3.magiclinks.lol/55214471-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.3GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/26286687714143-2/",
+          "multi_url": "https://w3.magiclinks.lol/26286687714143-2/",
+          "url": "https://w3.magiclinks.lol/26286687714143-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "938.6MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/3760384362562-2/",
+          "multi_url": "https://w3.magiclinks.lol/3760384362562-2/",
+          "url": "https://w3.magiclinks.lol/3760384362562-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "569.5MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/83830290455455-2/",
+          "multi_url": "https://w3.magiclinks.lol/83830290455455-2/",
+          "url": "https://w3.magiclinks.lol/83830290455455-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Veera+Simha+Reddy+2023+trailer",
       "description": "Veera Simha Reddy (2023) starring Nandamuri Balakrishna, Shruti Haasan.",
@@ -36655,7 +36823,7 @@
       "imdb_id": "tt15387190",
       "tmdb_id": "896669",
       "createdAt": "2026-10-08T04:31:03.223587+00:00",
-      "updatedAt": "2026-10-08T04:31:03.223587+00:00"
+      "updatedAt": "2026-11-28T08:15:34.205586+00:00"
     },
     {
       "id": "1791433868110",
@@ -36685,7 +36853,48 @@
           "url": "https://autoembed.co/movie/imdb/tt15281704"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/drishyam-the-conclusion-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.1GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-12131/",
+          "multi_url": "https://new.magiclinks.lol/download-links-12131/",
+          "url": "https://new.magiclinks.lol/download-links-12131/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1002.0MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-12132/",
+          "multi_url": "https://new.magiclinks.lol/download-links-12132/",
+          "url": "https://new.magiclinks.lol/download-links-12132/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "292.1MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-12133/",
+          "multi_url": "https://new.magiclinks.lol/download-links-12133/",
+          "url": "https://new.magiclinks.lol/download-links-12133/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Kuttey+2023+trailer",
       "description": "Kuttey (2023) starring Tabu, Arjun Kapoor.",
@@ -36700,7 +36909,7 @@
       "imdb_id": "tt15281704",
       "tmdb_id": "864573",
       "createdAt": "2026-10-08T04:31:02.716338+00:00",
-      "updatedAt": "2026-10-08T04:31:02.716338+00:00"
+      "updatedAt": "2026-11-28T08:15:35.712046+00:00"
     },
     {
       "id": "1791433867554",
@@ -36730,7 +36939,30 @@
           "url": "https://www.2embed.cc/embedtv/tt6005644&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "250MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=7sD6awwICvPkCCl2ZlwSH0cPe",
+          "multi_url": "https://nexdrive.beer/genxfm78477683500/",
+          "url": "https://fastdl.beer/embed?download=7sD6awwICvPkCCl2ZlwSH0cPe",
+          "color": "#38bdf8",
+          "filename": "TVF.Tripling.2016.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "80MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=SZTLwUODNJ0cy6PbrP0J6htGS",
+          "multi_url": "https://nexdrive.beer/genxfm78477683496/",
+          "url": "https://fastdl.beer/embed?download=SZTLwUODNJ0cy6PbrP0J6htGS",
+          "color": "#fbbf24",
+          "filename": "TVF.Tripling.2016.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -36768,7 +37000,7 @@
       "imdb_id": "tt6005644",
       "tmdb_id": "69710",
       "createdAt": "2026-10-08T04:31:02.053422+00:00",
-      "updatedAt": "2026-10-08T04:31:02.053422+00:00"
+      "updatedAt": "2026-11-28T08:15:40.403787+00:00"
     },
     {
       "id": "1791433863845",
@@ -36843,7 +37075,48 @@
           "url": "https://autoembed.co/movie/imdb/tt15281402"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "14.43GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/4801025480901-2/",
+          "multi_url": "https://w3.magiclinks.lol/4801025480901-2/",
+          "url": "https://w3.magiclinks.lol/4801025480901-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.7GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/330992062017483-2/",
+          "multi_url": "https://w3.magiclinks.lol/330992062017483-2/",
+          "url": "https://w3.magiclinks.lol/330992062017483-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "943.9MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/084007017402564-2/",
+          "multi_url": "https://w3.magiclinks.lol/084007017402564-2/",
+          "url": "https://w3.magiclinks.lol/084007017402564-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "480.1MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/1045876643-2/",
+          "multi_url": "https://w3.magiclinks.lol/1045876643-2/",
+          "url": "https://w3.magiclinks.lol/1045876643-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Waltair+Veerayya+2023+trailer",
       "description": "Waltair Veerayya (2023) starring Chiranjeevi, Ravi Teja.",
@@ -36858,7 +37131,7 @@
       "imdb_id": "tt15281402",
       "tmdb_id": "989017",
       "createdAt": "2026-10-08T04:31:00.942907+00:00",
-      "updatedAt": "2026-10-08T04:31:00.942907+00:00"
+      "updatedAt": "2026-11-28T08:15:50.348649+00:00"
     },
     {
       "id": "1791433862444",
@@ -36942,7 +37215,30 @@
           "url": "https://www.2embed.cc/embedtv/tt4742876&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "720p HD",
+          "size": "250MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=7sD6awwICvPkCCl2ZlwSH0cPe",
+          "multi_url": "https://nexdrive.beer/genxfm78477683500/",
+          "url": "https://fastdl.beer/embed?download=7sD6awwICvPkCCl2ZlwSH0cPe",
+          "color": "#38bdf8",
+          "filename": "TVF.Pitchers.2015.720p.Clean.WEB.DL.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "80MB",
+          "codec": "Clean WEB-DL",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=SZTLwUODNJ0cy6PbrP0J6htGS",
+          "multi_url": "https://nexdrive.beer/genxfm78477683496/",
+          "url": "https://fastdl.beer/embed?download=SZTLwUODNJ0cy6PbrP0J6htGS",
+          "color": "#fbbf24",
+          "filename": "TVF.Pitchers.2015.480p.Clean.WEB.DL.mkv"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -36980,7 +37276,7 @@
       "imdb_id": "tt4742876",
       "tmdb_id": "63180",
       "createdAt": "2026-10-08T04:30:59.770056+00:00",
-      "updatedAt": "2026-10-08T04:30:59.770056+00:00"
+      "updatedAt": "2026-11-28T08:15:53.442585+00:00"
     },
     {
       "id": "1791433861156",
@@ -37109,7 +37405,48 @@
           "url": "https://autoembed.co/movie/imdb/tt15163652"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "12.79GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/867956400528160-2/",
+          "multi_url": "https://w3.magiclinks.lol/867956400528160-2/",
+          "url": "https://w3.magiclinks.lol/867956400528160-2/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "1.9GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/542411841710886-2/",
+          "multi_url": "https://w3.magiclinks.lol/542411841710886-2/",
+          "url": "https://w3.magiclinks.lol/542411841710886-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "827.5MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/2051650669002-2/",
+          "multi_url": "https://w3.magiclinks.lol/2051650669002-2/",
+          "url": "https://w3.magiclinks.lol/2051650669002-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "520.1MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/547991584964-2/",
+          "multi_url": "https://w3.magiclinks.lol/547991584964-2/",
+          "url": "https://w3.magiclinks.lol/547991584964-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Thunivu+2023+trailer",
       "description": "Thunivu (2023) starring Ajith Kumar, Manju Warrier.",
@@ -37124,7 +37461,7 @@
       "imdb_id": "tt15163652",
       "tmdb_id": "904557",
       "createdAt": "2026-10-08T04:30:57.952939+00:00",
-      "updatedAt": "2026-10-08T04:30:57.952939+00:00"
+      "updatedAt": "2026-11-28T08:16:01.682121+00:00"
     },
     {
       "id": "1791417455655",
@@ -37154,7 +37491,48 @@
           "url": "https://autoembed.co/movie/imdb/tt15600222"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/clashing-through-the-snow-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "3.7GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-8808/",
+          "multi_url": "https://new.magiclinks.lol/download-links-8808/",
+          "url": "https://new.magiclinks.lol/download-links-8808/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.2GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-8809/",
+          "multi_url": "https://new.magiclinks.lol/download-links-8809/",
+          "url": "https://new.magiclinks.lol/download-links-8809/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "344.4MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-8810/",
+          "multi_url": "https://new.magiclinks.lol/download-links-8810/",
+          "url": "https://new.magiclinks.lol/download-links-8810/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=An+Action+Hero+2022+trailer",
       "description": "An Action Hero (2022) starring Ayushmann Khurrana, Jaideep Ahlawat.",
@@ -37169,7 +37547,7 @@
       "imdb_id": "tt15600222",
       "tmdb_id": "882826",
       "createdAt": "2026-10-07T23:57:29.979155+00:00",
-      "updatedAt": "2026-10-07T23:57:29.979155+00:00"
+      "updatedAt": "2026-11-28T08:16:02.946233+00:00"
     },
     {
       "id": "1791417454032",
@@ -37199,7 +37577,48 @@
           "url": "https://www.2embed.cc/embedtv/tt8595766&s=1&e=1"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/the-mosquito-bowl-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "8.8GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-13118/",
+          "multi_url": "https://new.magiclinks.lol/download-links-13118/",
+          "url": "https://new.magiclinks.lol/download-links-13118/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "1.1GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-13117/",
+          "multi_url": "https://new.magiclinks.lol/download-links-13117/",
+          "url": "https://new.magiclinks.lol/download-links-13117/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "605.3MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-13116/",
+          "multi_url": "https://new.magiclinks.lol/download-links-13116/",
+          "url": "https://new.magiclinks.lol/download-links-13116/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [
         {
           "seasonNumber": 1,
@@ -37237,7 +37656,7 @@
       "imdb_id": "tt8595766",
       "tmdb_id": "81166",
       "createdAt": "2026-10-07T23:57:29.280255+00:00",
-      "updatedAt": "2026-11-09T08:28:51.802113+00:00"
+      "updatedAt": "2026-11-28T08:16:04.522204+00:00"
     },
     {
       "id": "1791417452329",
@@ -37420,7 +37839,41 @@
           "url": "https://autoembed.co/movie/imdb/tt14428598"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "1080p Full HD",
+          "size": "2.3GB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=RL2UZlNYLpBJCEO7NEMNoirmq",
+          "multi_url": "https://nexdrive.beer/genxfm784776252994/",
+          "url": "https://fastdl.beer/embed?download=RL2UZlNYLpBJCEO7NEMNoirmq",
+          "color": "#34d399",
+          "filename": "Qala.2022.1080p.x264.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "720p HD",
+          "size": "600MB",
+          "codec": "x265 HEVC • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=mdqgl3wbo6oV0UlC3y1qAMxML",
+          "multi_url": "https://nexdrive.beer/genxfm784776253009/",
+          "url": "https://fastdl.beer/embed?download=mdqgl3wbo6oV0UlC3y1qAMxML",
+          "color": "#38bdf8",
+          "filename": "Qala.2022.720p.x265.HEVC.Dual.Audio.Hindi.mkv"
+        },
+        {
+          "quality": "480p SD",
+          "size": "400MB",
+          "codec": "x264 • Dual Audio Hindi",
+          "server": "V-Cloud Direct",
+          "direct_url": "https://fastdl.beer/embed?download=3FfgCkAXo5RgmxPzY6PlmUi54",
+          "multi_url": "https://nexdrive.beer/genxfm784776253004/",
+          "url": "https://fastdl.beer/embed?download=3FfgCkAXo5RgmxPzY6PlmUi54",
+          "color": "#fbbf24",
+          "filename": "Qala.2022.480p.x264.Dual.Audio.Hindi.mkv"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Qala+2022+trailer",
       "description": "Qala (2022) starring Triptii Dimri, Babil Khan.",
@@ -37435,7 +37888,7 @@
       "imdb_id": "tt14428598",
       "tmdb_id": "934419",
       "createdAt": "2026-10-07T23:57:27.226892+00:00",
-      "updatedAt": "2026-10-07T23:57:27.226892+00:00"
+      "updatedAt": "2026-11-28T08:16:18.948069+00:00"
     },
     {
       "id": "1791417448040",
@@ -37465,7 +37918,48 @@
           "url": "https://autoembed.co/movie/imdb/tt7392212"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/the-hunchback-soul-of-paris-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.4GB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/9140079792619-2/",
+          "multi_url": "https://w3.magiclinks.lol/9140079792619-2/",
+          "url": "https://w3.magiclinks.lol/9140079792619-2/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "962.2MB",
+          "codec": "10-Bit",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/723289695325520-2/",
+          "multi_url": "https://w3.magiclinks.lol/723289695325520-2/",
+          "url": "https://w3.magiclinks.lol/723289695325520-2/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "583.2MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://w3.magiclinks.lol/163316376920324-2/",
+          "multi_url": "https://w3.magiclinks.lol/163316376920324-2/",
+          "url": "https://w3.magiclinks.lol/163316376920324-2/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Rangasthalam+2018+trailer",
       "description": "Rangasthalam (2018) starring Ram Charan, Samantha Ruth Prabhu.",
@@ -37480,7 +37974,7 @@
       "imdb_id": "tt7392212",
       "tmdb_id": "461126",
       "createdAt": "2026-10-07T23:57:26.058466+00:00",
-      "updatedAt": "2026-11-09T08:28:51.802113+00:00"
+      "updatedAt": "2026-11-28T08:16:20.177864+00:00"
     },
     {
       "id": "1791417454625",
@@ -37510,7 +38004,48 @@
           "url": "https://autoembed.co/movie/imdb/tt0093578"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "quality": "4K Ultra HD",
+          "size": "",
+          "codec": "Dual Audio",
+          "server": "KM Cloud Fast",
+          "direct_url": "",
+          "multi_url": "",
+          "url": "https://zm1.kmmovies.bond/spider-man-brand-new-day-2026/",
+          "color": "#c084fc"
+        },
+        {
+          "quality": "1080p Full HD",
+          "size": "2.9GB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-12134/",
+          "multi_url": "https://new.magiclinks.lol/download-links-12134/",
+          "url": "https://new.magiclinks.lol/download-links-12134/",
+          "color": "#34d399"
+        },
+        {
+          "quality": "720p HD",
+          "size": "990.7MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-12135/",
+          "multi_url": "https://new.magiclinks.lol/download-links-12135/",
+          "url": "https://new.magiclinks.lol/download-links-12135/",
+          "color": "#38bdf8"
+        },
+        {
+          "quality": "480p SD",
+          "size": "287.4MB",
+          "codec": "WebRip Clean",
+          "server": "KM Cloud Fast",
+          "direct_url": "https://new.magiclinks.lol/download-links-12136/",
+          "multi_url": "https://new.magiclinks.lol/download-links-12136/",
+          "url": "https://new.magiclinks.lol/download-links-12136/",
+          "color": "#fbbf24"
+        }
+      ],
       "seasons": [],
       "trailerLink": "https://www.youtube.com/results?search_query=Mr.+India+1987+trailer",
       "description": "Mr. India (1987) starring Anil Kapoor, Sridevi.",
@@ -37525,7 +38060,7 @@
       "imdb_id": "tt0093578",
       "tmdb_id": "41903",
       "createdAt": "2026-10-07T23:57:25.529407+00:00",
-      "updatedAt": "2026-10-07T23:57:25.529407+00:00"
+      "updatedAt": "2026-11-28T08:16:21.323685+00:00"
     },
     {
       "id": "1791417453386",
@@ -48998,7 +49533,7 @@
     "siteName": "Phantom Movies",
     "siteDescription": "Stream unlimited movies & shows",
     "totalMovies": 545,
-    "lastUpdated": "2026-11-27T23:42:52.496926+00:00",
+    "lastUpdated": "2026-11-28T08:16:21.325534+00:00",
     "ads": {
       "enabled": false,
       "monetagHead": "",
@@ -49038,7 +49573,7 @@
       "baseTorrents": 3200,
       "suffix": "+"
     },
-    "lastHealthAudit": "2026-11-27T23:42:52.496920+00:00",
+    "lastHealthAudit": "2026-11-28T08:16:21.325524+00:00",
     "catalogHealthScore": "100.0%"
   }
 }
